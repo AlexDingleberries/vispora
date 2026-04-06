@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vispora</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script src="js/storage.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/cloak.js"></script>
+</head>
+<body>
+  <div class="launcher-bg-lines" aria-hidden="true"></div>
+
+  <main class="launcher-page page-enter" role="main">
+    <div class="launcher-logo" data-text="VISPORA" aria-label="Vispora">VISPORA</div>
+    <p class="launcher-tagline">Your games. Your rules.</p>
+
+    <button class="launcher-launch-btn" id="launch-btn" aria-label="Launch Vispora">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <polygon points="5 3 19 12 5 21 5 3"/>
+      </svg>
+      LAUNCH
+    </button>
+
+    <div class="launcher-settings-panel" role="region" aria-label="Launch settings">
+      <div class="launcher-settings-title">LAUNCH SETTINGS</div>
+
+      <div class="settings-row">
+        <div>
+          <div class="settings-label">Cloaking Mode</div>
+          <div class="settings-label-desc">Tab disguise when launched</div>
+        </div>
+        <select class="settings-select" id="cloak-mode-select" aria-label="Select cloaking mode">
+          <option value="none">No Redirect</option>
+          <option value="google">Google Drive</option>
+          <option value="custom">Custom URL</option>
+        </select>
+      </div>
+
+      <div class="settings-row" id="custom-url-row" style="display:none">
+        <div style="flex:1">
+          <div class="settings-label">Custom URL</div>
+          <input type="url" class="settings-input" id="custom-url-input" placeholder="https://example.com" aria-label="Custom cloak URL">
+        </div>
+      </div>
+
+      <div class="settings-row">
+        <div>
+          <div class="settings-label">Auto-Cloak on Load</div>
+          <div class="settings-label-desc">Immediately disguise tab title</div>
+        </div>
+        <label class="toggle-wrap" aria-label="Auto-cloak on load">
+          <input type="checkbox" class="toggle-input" id="auto-cloak-toggle">
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+
+      <div class="settings-row">
+        <div>
+          <div class="settings-label">Panic Key</div>
+          <div class="settings-label-desc">Press to instantly cloak/redirect</div>
+        </div>
+        <div class="panic-key-display" id="panic-key-btn" role="button" tabindex="0" aria-label="Set panic key">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
+          <span id="panic-key-label">ESC</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="toast-container" role="status" aria-live="polite"></div>
+
+  <script>
+    // Apply saved settings
+    const savedMode = VStorage.getCloakMode();
+    const savedUrl  = VStorage.getCloakUrl();
+    const savedAuto = VStorage.getAutoCloak();
+    const savedKey  = VStorage.getPanicKey();
+
+    const modeSelect   = document.getElementById('cloak-mode-select');
+    const customUrlRow = document.getElementById('custom-url-row');
+    const customUrlIn  = document.getElementById('custom-url-input');
+    const autoCloakTog = document.getElementById('auto-cloak-toggle');
+    const panicKeyBtn  = document.getElementById('panic-key-btn');
+    const panicKeyLbl  = document.getElementById('panic-key-label');
+
+    modeSelect.value      = savedMode;
+    customUrlIn.value     = savedUrl || '';
+    autoCloakTog.checked  = savedAuto;
+    customUrlRow.style.display = savedMode === 'custom' ? '' : 'none';
+    panicKeyLbl.textContent = savedKey === 'Escape' ? 'ESC' : savedKey.replace('Key','');
+
+    modeSelect.addEventListener('change', () => {
+      const v = modeSelect.value;
+      VStorage.setCloakMode(v);
+      customUrlRow.style.display = v === 'custom' ? '' : 'none';
+    });
+
+    customUrlIn.addEventListener('input', () => {
+      VStorage.setCloakUrl(customUrlIn.value);
+    });
+
+    autoCloakTog.addEventListener('change', () => {
+      VStorage.setAutoCloak(autoCloakTog.checked);
+    });
+
+    // Panic key assignment
+    let listeningForKey = false;
+    panicKeyBtn.addEventListener('click', startListening);
+    panicKeyBtn.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') startListening(); });
+
+    function startListening() {
+      if (listeningForKey) return;
+      listeningForKey = true;
+      panicKeyBtn.classList.add('listening');
+      panicKeyLbl.textContent = 'Press key…';
+
+      function onKey(e) {
+        e.preventDefault();
+        if (e.code === 'Escape') {
+          // Cancel
+          panicKeyBtn.classList.remove('listening');
+          panicKeyLbl.textContent = 'ESC';
+          listeningForKey = false;
+          document.removeEventListener('keydown', onKey);
+          return;
+        }
+        const key = e.code;
+        VStorage.setPanicKey(key);
+        panicKeyBtn.classList.remove('listening');
+        panicKeyLbl.textContent = key.replace('Key','');
+        listeningForKey = false;
+        document.removeEventListener('keydown', onKey);
+        VApp && VApp.showToast('Panic key set!');
+      }
+      document.addEventListener('keydown', onKey);
+    }
+
+    // Launch button
+    document.getElementById('launch-btn').addEventListener('click', () => {
+      window.open('home.html', '_blank');
+    });
+
+    // Init cloak on launcher itself
+    VCloak.initCloak();
+  </script>
+  <script src="js/app.js"></script>
+</body>
+</html>

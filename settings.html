@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings — Vispora</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script src="js/storage.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/cloak.js"></script>
+  <script src="js/app.js"></script>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <main class="settings-page page-enter container" role="main">
+    <h1 class="settings-page-title">SETTINGS</h1>
+
+    <div class="settings-max">
+
+      <!-- Display -->
+      <div class="settings-section" role="region" aria-labelledby="display-title">
+        <div class="settings-section-title" id="display-title">Display</div>
+
+        <div class="settings-row">
+          <div>
+            <div class="settings-label">Theme</div>
+            <div class="settings-label-desc">Switch between dark and light mode</div>
+          </div>
+          <label class="toggle-wrap" aria-label="Toggle dark/light theme">
+            <input type="checkbox" class="toggle-input" id="theme-toggle" aria-label="Dark mode">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+
+        <div class="settings-row">
+          <div>
+            <div class="settings-label">Accent Color</div>
+            <div class="settings-label-desc">Personalize the highlight color</div>
+          </div>
+          <div class="accent-swatches" id="accent-swatches" role="radiogroup" aria-label="Choose accent color">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <div class="settings-row">
+          <div>
+            <div class="settings-label">Font Size</div>
+            <div class="settings-label-desc">Adjust text size across the app</div>
+          </div>
+          <div class="fontsize-controls" role="radiogroup" aria-label="Font size">
+            <button class="fontsize-btn" data-size="small" aria-pressed="false">S</button>
+            <button class="fontsize-btn" data-size="medium" aria-pressed="true">M</button>
+            <button class="fontsize-btn" data-size="large" aria-pressed="false">L</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab Cloaking -->
+      <div class="settings-section" role="region" aria-labelledby="cloak-title">
+        <div class="settings-section-title" id="cloak-title">Tab Cloaking</div>
+
+        <div class="settings-row">
+          <div>
+            <div class="settings-label">Cloaking Mode</div>
+            <div class="settings-label-desc">How to disguise this tab</div>
+          </div>
+          <select class="settings-select" id="cloak-mode" aria-label="Select cloaking mode">
+            <option value="none">None</option>
+            <option value="google">Google Drive</option>
+            <option value="custom">Custom URL</option>
+          </select>
+        </div>
+
+        <div class="settings-row" id="custom-url-row" style="display:none">
+          <div style="flex:1">
+            <div class="settings-label">Custom URL</div>
+            <div class="settings-label-desc">Tab will appear to be this site</div>
+            <input type="url" class="settings-input" id="custom-url" placeholder="https://classroom.google.com" aria-label="Custom cloak URL">
+          </div>
+        </div>
+
+        <div class="settings-row" id="cloak-preview-row">
+          <div style="flex:1">
+            <div class="settings-label">Preview</div>
+            <div class="cloak-preview" id="cloak-preview" aria-label="Cloaked tab preview">
+              <div class="cloak-preview-favicon" id="preview-favicon">G</div>
+              <span id="preview-title">My Drive – Google Drive</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-row">
+          <div>
+            <div class="settings-label">Auto-Cloak on Launch</div>
+            <div class="settings-label-desc">Apply cloaking immediately when opening</div>
+          </div>
+          <label class="toggle-wrap" aria-label="Auto-cloak on launch">
+            <input type="checkbox" class="toggle-input" id="auto-cloak">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+
+        <div class="settings-row">
+          <div>
+            <div class="settings-label">Panic Key</div>
+            <div class="settings-label-desc">Press to instantly redirect/cloak tab</div>
+          </div>
+          <div class="panic-key-display" id="panic-key-btn" role="button" tabindex="0" aria-label="Click to reassign panic key">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
+            <span id="panic-key-label">—</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Statistics -->
+      <div class="settings-section" role="region" aria-labelledby="stats-title">
+        <div class="settings-section-title" id="stats-title">Statistics</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px" id="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value" id="s-total-time">—</div>
+            <div class="stat-label">Total Playtime</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="s-games-played">—</div>
+            <div class="stat-label">Games Played</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="s-favorites">—</div>
+            <div class="stat-label">Favorites</div>
+          </div>
+        </div>
+        <!-- Top 5 -->
+        <div class="settings-section-title" style="margin-top:4px">Top Games by Playtime</div>
+        <div id="top-games-list" style="display:flex;flex-direction:column;gap:8px;margin-top:12px"></div>
+      </div>
+
+      <!-- Data Management -->
+      <div class="settings-section" role="region" aria-labelledby="data-title">
+        <div class="settings-section-title" id="data-title">Data Management</div>
+
+        <div class="settings-row">
+          <div>
+            <div class="settings-label">Export Data</div>
+            <div class="settings-label-desc">Download your favorites, history & settings as JSON</div>
+          </div>
+          <button class="btn btn-secondary" id="btn-export" aria-label="Export data">Export</button>
+        </div>
+
+        <div class="settings-row">
+          <div>
+            <div class="settings-label">Import Data</div>
+            <div class="settings-label-desc">Restore from a previously exported JSON file</div>
+          </div>
+          <button class="btn btn-secondary" id="btn-import" aria-label="Import data">Import</button>
+          <input type="file" id="import-file" accept=".json" style="display:none" aria-label="Choose import file">
+        </div>
+
+        <div class="settings-row">
+          <div>
+            <div class="settings-label">Clear History</div>
+            <div class="settings-label-desc">Remove all recently played game history</div>
+          </div>
+          <button class="btn btn-danger" id="btn-clear-history" aria-label="Clear history">Clear</button>
+        </div>
+
+        <div class="settings-row">
+          <div>
+            <div class="settings-label">Reset to Defaults</div>
+            <div class="settings-label-desc">Wipe all settings, favorites, and history</div>
+          </div>
+          <button class="btn btn-danger" id="btn-reset" aria-label="Reset all settings">Reset All</button>
+        </div>
+      </div>
+
+      <!-- About -->
+      <div class="settings-section" role="region" aria-labelledby="about-title">
+        <div class="settings-section-title" id="about-title">About</div>
+        <div class="settings-row">
+          <div>
+            <div class="settings-label">Vispora</div>
+            <div class="settings-label-desc">Your personal gaming platform</div>
+          </div>
+          <span class="about-version">v1.0.0</span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <div id="toast-container" role="status" aria-live="polite"></div>
+
+  <script>
+    document.getElementById('nav-placeholder').innerHTML = VApp.navHTML('settings');
+    VCloak.initCloak();
+    VApp.initPanicBtn();
+    const dtEl = document.getElementById('nav-datetime');
+    if (dtEl) VApp.startDatetime(dtEl);
+
+    // ---- Theme toggle ----
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.checked = VStorage.getTheme() === 'light';
+    themeToggle.addEventListener('change', () => {
+      const next = themeToggle.checked ? 'light' : 'dark';
+      VStorage.setTheme(next);
+      VTheme.applyTheme(next);
+      VApp.showToast(`Switched to ${next} mode`);
+    });
+
+    // ---- Accent swatches ----
+    const swatchContainer = document.getElementById('accent-swatches');
+    const currentAccent = VStorage.getAccent();
+
+    VTheme.ACCENT_PRESETS.forEach(preset => {
+      const btn = document.createElement('button');
+      btn.className = `accent-swatch${preset.hex === currentAccent ? ' active' : ''}`;
+      btn.style.background = preset.hex;
+      btn.title = preset.label;
+      btn.setAttribute('aria-label', `${preset.label} accent color`);
+      btn.setAttribute('role', 'radio');
+      btn.setAttribute('aria-checked', preset.hex === currentAccent);
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.accent-swatch').forEach(s => {
+          s.classList.remove('active');
+          s.setAttribute('aria-checked', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-checked', 'true');
+        VStorage.setAccent(preset.hex);
+        VTheme.applyAccent(preset.hex);
+        VApp.showToast(`Accent: ${preset.label}`);
+      });
+      swatchContainer.appendChild(btn);
+    });
+
+    // Custom color
+    const customWrap = document.createElement('div');
+    customWrap.className = 'accent-custom';
+    customWrap.title = 'Custom color';
+    customWrap.setAttribute('role', 'radio');
+    customWrap.setAttribute('aria-label', 'Custom accent color');
+    customWrap.innerHTML = `+<input type="color" id="custom-accent" value="${currentAccent}" aria-label="Pick custom accent color">`;
+    customWrap.addEventListener('click', () => customWrap.querySelector('input').click());
+    customWrap.querySelector('input').addEventListener('input', (e) => {
+      const hex = e.target.value;
+      document.querySelectorAll('.accent-swatch').forEach(s => {
+        s.classList.remove('active');
+        s.setAttribute('aria-checked', 'false');
+      });
+      VStorage.setAccent(hex);
+      VTheme.applyAccent(hex);
+    });
+    swatchContainer.appendChild(customWrap);
+
+    // ---- Font size ----
+    const currentSize = VStorage.getFontSize();
+    document.querySelectorAll('.fontsize-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.size === currentSize);
+      btn.setAttribute('aria-pressed', btn.dataset.size === currentSize);
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.fontsize-btn').forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-pressed', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
+        VStorage.setFontSize(btn.dataset.size);
+        VTheme.applyFontSize(btn.dataset.size);
+        VApp.showToast(`Font size: ${btn.dataset.size}`);
+      });
+    });
+
+    // ---- Cloak settings ----
+    const cloakMode   = document.getElementById('cloak-mode');
+    const customUrlRow = document.getElementById('custom-url-row');
+    const customUrl   = document.getElementById('custom-url');
+    const autoCloak   = document.getElementById('auto-cloak');
+    const previewTitle = document.getElementById('preview-title');
+    const previewFavicon = document.getElementById('preview-favicon');
+
+    cloakMode.value  = VStorage.getCloakMode();
+    customUrl.value  = VStorage.getCloakUrl() || '';
+    autoCloak.checked = VStorage.getAutoCloak();
+    updateCloakPreview();
+
+    cloakMode.addEventListener('change', () => {
+      VStorage.setCloakMode(cloakMode.value);
+      customUrlRow.style.display = cloakMode.value === 'custom' ? '' : 'none';
+      updateCloakPreview();
+    });
+
+    customUrl.addEventListener('input', () => {
+      VStorage.setCloakUrl(customUrl.value);
+      updateCloakPreview();
+    });
+
+    autoCloak.addEventListener('change', () => {
+      VStorage.setAutoCloak(autoCloak.checked);
+    });
+
+    function updateCloakPreview() {
+      const mode = cloakMode.value;
+      customUrlRow.style.display = mode === 'custom' ? '' : 'none';
+
+      if (mode === 'google') {
+        previewTitle.textContent = 'My Drive – Google Drive';
+        previewFavicon.textContent = 'G';
+        previewFavicon.style.background = '#4285f4';
+      } else if (mode === 'custom' && customUrl.value) {
+        try {
+          const u = new URL(customUrl.value);
+          previewTitle.textContent = u.hostname.replace('www.','');
+          previewFavicon.textContent = u.hostname[0].toUpperCase();
+          previewFavicon.style.background = 'var(--bg4)';
+        } catch {
+          previewTitle.textContent = customUrl.value || '—';
+          previewFavicon.textContent = '?';
+        }
+      } else {
+        previewTitle.textContent = 'No cloaking active';
+        previewFavicon.textContent = 'V';
+        previewFavicon.style.background = 'var(--accent)';
+      }
+    }
+
+    // ---- Panic key ----
+    const panicKeyBtn = document.getElementById('panic-key-btn');
+    const panicKeyLbl = document.getElementById('panic-key-label');
+    const savedKey    = VStorage.getPanicKey();
+    panicKeyLbl.textContent = savedKey.replace('Key','');
+    let listenForKey = false;
+
+    panicKeyBtn.addEventListener('click', startKeyListen);
+    panicKeyBtn.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') startKeyListen(); });
+
+    function startKeyListen() {
+      if (listenForKey) return;
+      listenForKey = true;
+      panicKeyBtn.classList.add('listening');
+      panicKeyLbl.textContent = 'Press…';
+      function onKey(e) {
+        e.preventDefault();
+        const key = e.code;
+        VStorage.setPanicKey(key);
+        panicKeyBtn.classList.remove('listening');
+        panicKeyLbl.textContent = key.replace('Key','');
+        listenForKey = false;
+        document.removeEventListener('keydown', onKey);
+        VApp.showToast('Panic key updated!');
+      }
+      document.addEventListener('keydown', onKey);
+    }
+
+    // ---- Statistics ----
+    async function loadStats() {
+      const history = VStorage.getHistory();
+      const playtimes = VStorage.getAllPlaytime();
+      const totalMs = Object.values(playtimes).reduce((a,b) => a+b, 0);
+
+      document.getElementById('s-total-time').textContent = VStorage.formatTime(totalMs) || '0m';
+      document.getElementById('s-games-played').textContent = history.length;
+      document.getElementById('s-favorites').textContent = VStorage.getFavorites().length;
+
+      // Top 5
+      const topList = document.getElementById('top-games-list');
+      const sorted = Object.entries(playtimes)
+        .sort((a,b) => b[1]-a[1])
+        .slice(0,5);
+
+      if (!sorted.length) {
+        topList.innerHTML = '<p style="color:var(--text-secondary);font-size:0.85rem">Play some games to see stats!</p>';
+        return;
+      }
+
+      const allGames = await VApp.loadGames();
+      topList.innerHTML = sorted.map(([id, ms], i) => {
+        const g = allGames.find(g => String(g.id) === id) || history.find(h => String(h.id) === id);
+        const name = g ? (g.name || `Game ${id}`) : `Game ${id}`;
+        const pct  = Math.round((ms / (sorted[0][1] || 1)) * 100);
+        return `
+          <div style="display:flex;align-items:center;gap:12px;padding:8px 0">
+            <span style="font-family:var(--font-display);font-size:0.7rem;color:var(--text-dim);width:16px;text-align:right">${i+1}</span>
+            <div style="flex:1">
+              <div style="font-family:var(--font-ui);font-size:0.85rem;font-weight:600">${VApp.escHtml(name)}</div>
+              <div style="height:4px;background:var(--bg4);border-radius:2px;margin-top:4px">
+                <div style="height:4px;width:${pct}%;background:var(--accent);border-radius:2px;transition:width 0.5s var(--ease)"></div>
+              </div>
+            </div>
+            <span style="font-family:var(--font-display);font-size:0.72rem;color:var(--accent);white-space:nowrap">${VStorage.formatTime(ms)}</span>
+          </div>
+        `;
+      }).join('');
+    }
+    loadStats();
+
+    // ---- Export ----
+    document.getElementById('btn-export').addEventListener('click', () => {
+      const data = VStorage.exportData();
+      const blob = new Blob([data], { type: 'application/json' });
+      const url  = URL.createObjectURL(blob);
+      const a    = document.createElement('a');
+      a.href     = url;
+      a.download = `vispora-data-${Date.now()}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+      VApp.showToast('Data exported!', 'success');
+    });
+
+    // ---- Import ----
+    document.getElementById('btn-import').addEventListener('click', () => {
+      document.getElementById('import-file').click();
+    });
+
+    document.getElementById('import-file').addEventListener('change', async (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      try {
+        const text = await file.text();
+        VStorage.importData(text);
+        VTheme.initTheme();
+        VApp.showToast('Data imported! Refreshing…', 'success');
+        setTimeout(() => window.location.reload(), 1200);
+      } catch (err) {
+        VApp.showToast('Import failed: invalid file', 'error');
+      }
+      e.target.value = '';
+    });
+
+    // ---- Clear history ----
+    document.getElementById('btn-clear-history').addEventListener('click', async () => {
+      const ok = await VApp.showModal({
+        title: 'Clear History',
+        message: 'This will remove all recently played game history. Favorites and settings are kept.',
+        confirmText: 'Clear History',
+        dangerous: true,
+      });
+      if (ok) {
+        VStorage.set(VStorage.KEYS.HISTORY, []);
+        VStorage.set(VStorage.KEYS.PLAYTIME, {});
+        VApp.showToast('History cleared', 'success');
+        loadStats();
+      }
+    });
+
+    // ---- Reset ----
+    document.getElementById('btn-reset').addEventListener('click', async () => {
+      const ok = await VApp.showModal({
+        title: 'Reset Everything',
+        message: 'This will permanently delete ALL your data: settings, favorites, history, and playtime. This cannot be undone.',
+        confirmText: 'Reset Everything',
+        dangerous: true,
+      });
+      if (ok) {
+        VStorage.clearAll();
+        VApp.showToast('All data cleared. Reloading…', 'success');
+        setTimeout(() => window.location.reload(), 1000);
+      }
+    });
+  </script>
+</body>
+</html>

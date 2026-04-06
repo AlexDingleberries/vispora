@@ -2,8 +2,8 @@
   {
     "id": 0,
     "name": "Bowmasters",
-    "cover": "{COVER_URL}/0.png",
-    "url": "{HTML_URL}/0.html",
+    "cover": "covers/0.png",
+    "url": "html/0.html",
     "author": "Azur Games, Playgendary",
     "genres": [
       "action",
@@ -17,8 +17,8 @@
   {
     "id": 1,
     "name": "OvO",
-    "cover": "{COVER_URL}/1.png",
-    "url": "{HTML_URL}/1-fde.html",
+    "cover": "covers/1.png",
+    "url": "html/1-fde.html",
     "author": "Dedra Games",
     "genres": [
       "action",
@@ -34,8 +34,8 @@
   {
     "id": 2,
     "name": "OvO 2",
-    "cover": "{COVER_URL}/2.png",
-    "url": "{HTML_URL}/2e.html",
+    "cover": "covers/2.png",
+    "url": "html/2e.html",
     "author": "Dedra Games",
     "genres": [
       "action",
@@ -51,8 +51,8 @@
   {
     "id": 3,
     "name": "OvO 3 Dimensions",
-    "cover": "{COVER_URL}/3.png",
-    "url": "{HTML_URL}/3.html",
+    "cover": "covers/3.png",
+    "url": "html/3.html",
     "author": "Dedra Games",
     "genres": [
       "action",
@@ -68,8 +68,8 @@
   {
     "id": 4,
     "name": "Gladihoppers",
-    "cover": "{COVER_URL}/4.png",
-    "url": "{HTML_URL}/4.html",
+    "cover": "covers/4.png",
+    "url": "html/4.html",
     "author": "Dreamon Studios",
     "genres": [
       "action",
@@ -83,8 +83,8 @@
   {
     "id": 5,
     "name": "Ice Dodo",
-    "cover": "{COVER_URL}/5.png",
-    "url": "{HTML_URL}/5.html",
+    "cover": "covers/5.png",
+    "url": "html/5.html",
     "author": "Onionfist Studio",
     "genres": [
       "action",
@@ -99,8 +99,8 @@
   {
     "id": 6,
     "name": "Block Blast",
-    "cover": "{COVER_URL}/6.png",
-    "url": "{HTML_URL}/6.html",
+    "cover": "covers/6.png",
+    "url": "html/6.html",
     "author": "reunbozdo",
     "genres": [
       "strategy",
@@ -113,8 +113,8 @@
   {
     "id": 7,
     "name": "Jetpack Joyride",
-    "cover": "{COVER_URL}/7.png",
-    "url": "{HTML_URL}/7.html",
+    "cover": "covers/7.png",
+    "url": "html/7.html",
     "author": "Halfbrick Studios",
     "genres": [
       "action",
@@ -128,8 +128,8 @@
   {
     "id": 8,
     "name": "Friday Night Funkin",
-    "cover": "{COVER_URL}/8.png",
-    "url": "{HTML_URL}/8-wow.html",
+    "cover": "covers/8.png",
+    "url": "html/8-wow.html",
     "author": "ninja-muffin24",
     "genres": [
       "action",
@@ -142,8 +142,8 @@
   {
     "id": 9,
     "name": "Sprunki",
-    "cover": "{COVER_URL}/9.png",
-    "url": "{HTML_URL}/9.html",
+    "cover": "covers/9.png",
+    "url": "html/9.html",
     "author": "NyankoBfLol",
     "genres": [
       "action",
@@ -157,8 +157,8 @@
   {
     "id": 10,
     "name": "Temple Run 2",
-    "cover": "{COVER_URL}/10.png",
-    "url": "{HTML_URL}/10.html",
+    "cover": "covers/10.png",
+    "url": "html/10.html",
     "author": "Imangi STUDIOS",
     "genres": [
       "action",
@@ -173,8 +173,8 @@
   {
     "id": 11,
     "name": "Stickman Hook",
-    "cover": "{COVER_URL}/11.png",
-    "url": "{HTML_URL}/11.html",
+    "cover": "covers/11.png",
+    "url": "html/11.html",
     "author": "Madbox",
     "genres": [
       "action",
@@ -189,8 +189,8 @@
   {
     "id": 13,
     "name": "Attack Hole",
-    "cover": "{COVER_URL}/13.png",
-    "url": "{HTML_URL}/13.html",
+    "cover": "covers/13.png",
+    "url": "html/13.html",
     "author": "Homa Games",
     "genres": [
       "action",
@@ -204,8 +204,8 @@
   {
     "id": 14,
     "name": "Bridge Race",
-    "cover": "{COVER_URL}/14.png",
-    "url": "{HTML_URL}/14.html",
+    "cover": "covers/14.png",
+    "url": "html/14.html",
     "author": "QubicGames",
     "genres": [
       "action",
@@ -220,8 +220,8 @@
   {
     "id": 15,
     "name": "Color Water Sort 3D",
-    "cover": "{COVER_URL}/15.png",
-    "url": "{HTML_URL}/15.html",
+    "cover": "covers/15.png",
+    "url": "html/15.html",
     "author": "Tapnation",
     "genres": [
       "3d",
@@ -235,8 +235,8 @@
   {
     "id": 16,
     "name": "Hide N Seek",
-    "cover": "{COVER_URL}/16.png",
-    "url": "{HTML_URL}/16.html",
+    "cover": "covers/16.png",
+    "url": "html/16.html",
     "author": "Supersonic Studios LTD",
     "genres": [
       "action",
@@ -250,8 +250,8 @@
   {
     "id": 17,
     "name": "Magic Tiles 3",
-    "cover": "{COVER_URL}/17.png",
-    "url": "{HTML_URL}/17.html",
+    "cover": "covers/17.png",
+    "url": "html/17.html",
     "author": "AmaNotes",
     "genres": [
       "action",
@@ -264,8 +264,8 @@
   {
     "id": 18,
     "name": "Stacky Dash",
-    "cover": "{COVER_URL}/18.png",
-    "url": "{HTML_URL}/18.html",
+    "cover": "covers/18.png",
+    "url": "html/18.html",
     "author": "Supersonic Studios LTD",
     "genres": [
       "action",
@@ -279,8 +279,8 @@
   {
     "id": 19,
     "name": "Supreme Duelist",
-    "cover": "{COVER_URL}/19.png",
-    "url": "{HTML_URL}/19.html",
+    "cover": "covers/19.png",
+    "url": "html/19.html",
     "author": "Neron's Brother",
     "genres": [
       "action",
@@ -293,8 +293,8 @@
   {
     "id": 20,
     "name": "Tall Man Run",
-    "cover": "{COVER_URL}/20.png",
-    "url": "{HTML_URL}/20a.html",
+    "cover": "covers/20.png",
+    "url": "html/20a.html",
     "author": "Supersonic Studios LTD",
     "genres": [
       "action",
@@ -309,8 +309,8 @@
   {
     "id": 21,
     "name": "Turbo Stars",
-    "cover": "{COVER_URL}/21.png",
-    "url": "{HTML_URL}/21.html",
+    "cover": "covers/21.png",
+    "url": "html/21.html",
     "author": "https://play.google.com/store/apps/details?id=com.turbo.stars",
     "genres": [
       "action",
@@ -325,8 +325,8 @@
   {
     "id": 22,
     "name": "Mob Control HTML5",
-    "cover": "{COVER_URL}/22.png",
-    "url": "{HTML_URL}/22.html",
+    "cover": "covers/22.png",
+    "url": "html/22.html",
     "author": "Voodoo",
     "genres": [
       "action",
@@ -340,8 +340,8 @@
   {
     "id": 23,
     "name": "Pou",
-    "cover": "{COVER_URL}/23.png",
-    "url": "{HTML_URL}/23.html",
+    "cover": "covers/23.png",
+    "url": "html/23.html",
     "author": "Zakeh",
     "genres": [
       "adventure",
@@ -354,8 +354,8 @@
   {
     "id": 24,
     "name": "Crossy Road",
-    "cover": "{COVER_URL}/24.png",
-    "url": "{HTML_URL}/24.html",
+    "cover": "covers/24.png",
+    "url": "html/24.html",
     "author": "Hipster Whale",
     "genres": [
       "action",
@@ -370,8 +370,8 @@
   {
     "id": 25,
     "name": "Basket Battle",
-    "cover": "{COVER_URL}/25.png",
-    "url": "{HTML_URL}/25.html",
+    "cover": "covers/25.png",
+    "url": "html/25.html",
     "author": "Supersonic Studios LTD",
     "genres": [
       "action",
@@ -386,8 +386,8 @@
   {
     "id": 26,
     "name": "Amaze",
-    "cover": "{COVER_URL}/26.png",
-    "url": "{HTML_URL}/26.html",
+    "cover": "covers/26.png",
+    "url": "html/26.html",
     "author": "CrazyLabs",
     "genres": [
       "3d",
@@ -401,8 +401,8 @@
   {
     "id": 27,
     "name": "Geometry Dash Lite (REMAKE)",
-    "cover": "{COVER_URL}/27.png",
-    "url": "{HTML_URL}/27-f.html",
+    "cover": "covers/27.png",
+    "url": "html/27-f.html",
     "author": "RobTop Games",
     "genres": [
       "action",
@@ -416,8 +416,8 @@
   {
     "id": 28,
     "name": "Basketball Frvr",
-    "cover": "{COVER_URL}/28.png",
-    "url": "{HTML_URL}/28.html",
+    "cover": "covers/28.png",
+    "url": "html/28.html",
     "author": "FRVR",
     "genres": [
       "sports",
@@ -430,8 +430,8 @@
   {
     "id": 29,
     "name": "Bazooka Boy",
-    "cover": "{COVER_URL}/29.png",
-    "url": "{HTML_URL}/29.html",
+    "cover": "covers/29.png",
+    "url": "html/29.html",
     "author": "Supersonic Studios LTD",
     "genres": [
       "action",
@@ -446,8 +446,8 @@
   {
     "id": 30,
     "name": "Bottle Jump 3D",
-    "cover": "{COVER_URL}/30.png",
-    "url": "{HTML_URL}/30.html",
+    "cover": "covers/30.png",
+    "url": "html/30.html",
     "author": "CASUAL AZUR GAMES",
     "genres": [
       "action",
@@ -461,8 +461,8 @@
   {
     "id": 31,
     "name": "Color Match",
-    "cover": "{COVER_URL}/31.png",
-    "url": "{HTML_URL}/31.html",
+    "cover": "covers/31.png",
+    "url": "html/31.html",
     "author": "Supersonic Studios LTD",
     "genres": [
       "3d",
@@ -476,8 +476,8 @@
   {
     "id": 32,
     "name": "Dig Deep",
-    "cover": "{COVER_URL}/32.png",
-    "url": "{HTML_URL}/32.html",
+    "cover": "covers/32.png",
+    "url": "html/32.html",
     "author": "CrazyLabs LTD",
     "genres": [
       "3d",
@@ -490,8 +490,8 @@
   {
     "id": 33,
     "name": "Retro Bowl",
-    "cover": "{COVER_URL}/33.png",
-    "url": "{HTML_URL}/33.html",
+    "cover": "covers/33.png",
+    "url": "html/33.html",
     "author": "New Star Games",
     "genres": [
       "strategy",
@@ -505,8 +505,8 @@
   {
     "id": 34,
     "name": "Retro Bowl College",
-    "cover": "{COVER_URL}/34.png",
-    "url": "{HTML_URL}/34-fixed.html",
+    "cover": "covers/34.png",
+    "url": "html/34-fixed.html",
     "author": "New Star Games",
     "genres": [
       "strategy",
@@ -520,8 +520,8 @@
   {
     "id": 36,
     "name": "Monster Tracks",
-    "cover": "{COVER_URL}/36.png",
-    "url": "{HTML_URL}/36.html",
+    "cover": "covers/36.png",
+    "url": "html/36.html",
     "author": "Fancade",
     "genres": [
       "3d",
@@ -535,8 +535,8 @@
   {
     "id": 37,
     "name": "Gobble",
-    "cover": "{COVER_URL}/37.png",
-    "url": "{HTML_URL}/37.html",
+    "cover": "covers/37.png",
+    "url": "html/37.html",
     "author": "Fancade",
     "genres": [
       "action",
@@ -550,8 +550,8 @@
   {
     "id": 38,
     "name": "Five Nights at Freddy's",
-    "cover": "{COVER_URL}/38.png",
-    "url": "{HTML_URL}/38.html",
+    "cover": "covers/38.png",
+    "url": "html/38.html",
     "author": "Scott Cawthon",
     "genres": [
       "3d",
@@ -565,8 +565,8 @@
   {
     "id": 39,
     "name": "Five Nights at Freddy's 2",
-    "cover": "{COVER_URL}/39.png",
-    "url": "{HTML_URL}/39.html",
+    "cover": "covers/39.png",
+    "url": "html/39.html",
     "author": "Scott Cawthon",
     "genres": [
       "3d",
@@ -580,8 +580,8 @@
   {
     "id": 40,
     "name": "Five Nights at Freddy's 3",
-    "cover": "{COVER_URL}/40.png",
-    "url": "{HTML_URL}/40.html",
+    "cover": "covers/40.png",
+    "url": "html/40.html",
     "author": "Scott Cawthon",
     "genres": [
       "3d",
@@ -595,8 +595,8 @@
   {
     "id": 41,
     "name": "Five Nights at Freddy's 4",
-    "cover": "{COVER_URL}/41.png",
-    "url": "{HTML_URL}/41.html",
+    "cover": "covers/41.png",
+    "url": "html/41.html",
     "author": "Scott Cawthon",
     "genres": [
       "3d",
@@ -610,8 +610,8 @@
   {
     "id": 42,
     "name": "Road of Fury",
-    "cover": "{COVER_URL}/42.png",
-    "url": "{HTML_URL}/42.html",
+    "cover": "covers/42.png",
+    "url": "html/42.html",
     "author": "IriySoft",
     "genres": [
       "action",
@@ -625,8 +625,8 @@
   {
     "id": 43,
     "name": "Driven Wild",
-    "cover": "{COVER_URL}/43.png",
-    "url": "{HTML_URL}/43.html",
+    "cover": "covers/43.png",
+    "url": "html/43.html",
     "author": "KilledByAPixel",
     "genres": [
       "3d",
@@ -640,8 +640,8 @@
   {
     "id": 44,
     "name": "Ragdoll Hit",
-    "cover": "{COVER_URL}/44.png",
-    "url": "{HTML_URL}/44-fix.html",
+    "cover": "covers/44.png",
+    "url": "html/44-fix.html",
     "author": "Kids Games LLC",
     "genres": [
       "action",
@@ -654,8 +654,8 @@
   {
     "id": 45,
     "name": "Vex 1",
-    "cover": "{COVER_URL}/45.png",
-    "url": "{HTML_URL}/45.html",
+    "cover": "covers/45.png",
+    "url": "html/45.html",
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
@@ -670,8 +670,8 @@
   {
     "id": 46,
     "name": "Vex 2",
-    "cover": "{COVER_URL}/46.png",
-    "url": "{HTML_URL}/46.html",
+    "cover": "covers/46.png",
+    "url": "html/46.html",
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
@@ -686,8 +686,8 @@
   {
     "id": 47,
     "name": "Vex 3",
-    "cover": "{COVER_URL}/47.png",
-    "url": "{HTML_URL}/47.html",
+    "cover": "covers/47.png",
+    "url": "html/47.html",
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
@@ -702,8 +702,8 @@
   {
     "id": 48,
     "name": "Vex 3 XMAS",
-    "cover": "{COVER_URL}/48.png",
-    "url": "{HTML_URL}/48.html",
+    "cover": "covers/48.png",
+    "url": "html/48.html",
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
@@ -718,8 +718,8 @@
   {
     "id": 49,
     "name": "Vex 4",
-    "cover": "{COVER_URL}/49.png",
-    "url": "{HTML_URL}/49.html",
+    "cover": "covers/49.png",
+    "url": "html/49.html",
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
@@ -734,8 +734,8 @@
   {
     "id": 50,
     "name": "Vex 5",
-    "cover": "{COVER_URL}/50.png",
-    "url": "{HTML_URL}/50.html",
+    "cover": "covers/50.png",
+    "url": "html/50.html",
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
@@ -750,8 +750,8 @@
   {
     "id": 51,
     "name": "Vex 6",
-    "cover": "{COVER_URL}/51.png",
-    "url": "{HTML_URL}/51.html",
+    "cover": "covers/51.png",
+    "url": "html/51.html",
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
@@ -766,8 +766,8 @@
   {
     "id": 52,
     "name": "Vex 7",
-    "cover": "{COVER_URL}/52.png",
-    "url": "{HTML_URL}/52.html",
+    "cover": "covers/52.png",
+    "url": "html/52.html",
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
@@ -782,8 +782,8 @@
   {
     "id": 53,
     "name": "Vex 8",
-    "cover": "{COVER_URL}/53.png",
-    "url": "{HTML_URL}/53.html",
+    "cover": "covers/53.png",
+    "url": "html/53.html",
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
@@ -798,8 +798,8 @@
   {
     "id": 54,
     "name": "Vex Challenges",
-    "cover": "{COVER_URL}/54.png",
-    "url": "{HTML_URL}/54.html",
+    "cover": "covers/54.png",
+    "url": "html/54.html",
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
@@ -814,8 +814,8 @@
   {
     "id": 55,
     "name": "Vex X3M",
-    "cover": "{COVER_URL}/55.png",
-    "url": "{HTML_URL}/55.html",
+    "cover": "covers/55.png",
+    "url": "html/55.html",
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
@@ -830,8 +830,8 @@
   {
     "id": 56,
     "name": "Vex X3M 2",
-    "cover": "{COVER_URL}/56.png",
-    "url": "{HTML_URL}/56.html",
+    "cover": "covers/56.png",
+    "url": "html/56.html",
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
@@ -846,8 +846,8 @@
   {
     "id": 58,
     "name": "1v1.LoL",
-    "cover": "{COVER_URL}/58.png",
-    "url": "{HTML_URL}/58.html",
+    "cover": "covers/58.png",
+    "url": "html/58.html",
     "author": "JustPlay.LOL",
     "genres": [
       "action",
@@ -860,8 +860,8 @@
   {
     "id": 59,
     "name": "A Dance of Fire and Ice",
-    "cover": "{COVER_URL}/59.png",
-    "url": "{HTML_URL}/59.html",
+    "cover": "covers/59.png",
+    "url": "html/59.html",
     "author": "fizzd",
     "genres": [
       "action",
@@ -874,8 +874,8 @@
   {
     "id": 60,
     "name": "Achievement Unlocked",
-    "cover": "{COVER_URL}/60.png",
-    "url": "{HTML_URL}/60.html",
+    "cover": "covers/60.png",
+    "url": "html/60.html",
     "author": "jmtb02",
     "genres": [
       "action",
@@ -888,8 +888,8 @@
   {
     "id": 61,
     "name": "Achievement Unlocked 2",
-    "cover": "{COVER_URL}/61.png",
-    "url": "{HTML_URL}/61.html",
+    "cover": "covers/61.png",
+    "url": "html/61.html",
     "author": "jmtb02",
     "genres": [
       "action",
@@ -902,8 +902,8 @@
   {
     "id": 62,
     "name": "Achievement Unlocked 3",
-    "cover": "{COVER_URL}/62.png",
-    "url": "{HTML_URL}/62.html",
+    "cover": "covers/62.png",
+    "url": "html/62.html",
     "author": "jmtb02",
     "genres": [
       "action",
@@ -916,8 +916,8 @@
   {
     "id": 63,
     "name": "Angry Birds",
-    "cover": "{COVER_URL}/63.png",
-    "url": "{HTML_URL}/63.html",
+    "cover": "covers/63.png",
+    "url": "html/63.html",
     "author": "Rovio Entertainment",
     "genres": [
       "action",
@@ -931,8 +931,8 @@
   {
     "id": 64,
     "name": "Backrooms",
-    "cover": "{COVER_URL}/64.png",
-    "url": "{HTML_URL}/64-fix.html",
+    "cover": "covers/64.png",
+    "url": "html/64-fix.html",
     "author": "Esyverse",
     "genres": [
       "action",
@@ -945,8 +945,8 @@
   {
     "id": 65,
     "name": "Baldi's Basics",
-    "cover": "{COVER_URL}/65.png",
-    "url": "{HTML_URL}/65-fixed.html",
+    "cover": "covers/65.png",
+    "url": "html/65-fixed.html",
     "author": "Basically Games",
     "genres": [
       "action",
@@ -959,8 +959,8 @@
   {
     "id": 66,
     "name": "Basket Random",
-    "cover": "{COVER_URL}/66.png",
-    "url": "{HTML_URL}/66.html",
+    "cover": "covers/66.png",
+    "url": "html/66.html",
     "author": "RHM Interactive OÜ",
     "genres": [
       "action",
@@ -973,8 +973,8 @@
   {
     "id": 67,
     "name": "Big Tower Tiny Square",
-    "cover": "{COVER_URL}/67.png",
-    "url": "{HTML_URL}/67-f.html",
+    "cover": "covers/67.png",
+    "url": "html/67-f.html",
     "author": "EvilObjective",
     "genres": [
       "action",
@@ -987,8 +987,8 @@
   {
     "id": 68,
     "name": "Big NEON Tower Tiny Square",
-    "cover": "{COVER_URL}/68.png",
-    "url": "{HTML_URL}/68.html",
+    "cover": "covers/68.png",
+    "url": "html/68.html",
     "author": "EvilObjective",
     "genres": [
       "action",
@@ -1001,8 +1001,8 @@
   {
     "id": 69,
     "name": "Big ICE Tower Tiny Square",
-    "cover": "{COVER_URL}/69.png",
-    "url": "{HTML_URL}/69.html",
+    "cover": "covers/69.png",
+    "url": "html/69.html",
     "author": "EvilObjective",
     "genres": [
       "action",
@@ -1015,8 +1015,8 @@
   {
     "id": 70,
     "name": "BitLife",
-    "cover": "{COVER_URL}/70.png",
-    "url": "{HTML_URL}/70.html",
+    "cover": "covers/70.png",
+    "url": "html/70.html",
     "author": "Candywriter",
     "genres": [
       "action",
@@ -1029,8 +1029,8 @@
   {
     "id": 71,
     "name": "Bloons TD",
-    "cover": "{COVER_URL}/71.png",
-    "url": "{HTML_URL}/71.html",
+    "cover": "covers/71.png",
+    "url": "html/71.html",
     "author": "Ninja Kiwi",
     "genres": [
       "action",
@@ -1043,8 +1043,8 @@
   {
     "id": 72,
     "name": "Bloons TD 2",
-    "cover": "{COVER_URL}/72.png",
-    "url": "{HTML_URL}/72.html",
+    "cover": "covers/72.png",
+    "url": "html/72.html",
     "author": "Ninja Kiwi",
     "genres": [
       "action",
@@ -1057,8 +1057,8 @@
   {
     "id": 73,
     "name": "Bloons TD 3",
-    "cover": "{COVER_URL}/73.png",
-    "url": "{HTML_URL}/73.html",
+    "cover": "covers/73.png",
+    "url": "html/73.html",
     "author": "Ninja Kiwi",
     "genres": [
       "action",
@@ -1071,8 +1071,8 @@
   {
     "id": 74,
     "name": "Bloons TD 4",
-    "cover": "{COVER_URL}/74.png",
-    "url": "{HTML_URL}/74.html",
+    "cover": "covers/74.png",
+    "url": "html/74.html",
     "author": "Ninja Kiwi",
     "genres": [
       "action",
@@ -1085,8 +1085,8 @@
   {
     "id": 75,
     "name": "Bloons TD 5",
-    "cover": "{COVER_URL}/75.png",
-    "url": "{HTML_URL}/75-fix.html",
+    "cover": "covers/75.png",
+    "url": "html/75-fix.html",
     "author": "Ninja Kiwi",
     "genres": [
       "action",
@@ -1099,8 +1099,8 @@
   {
     "id": 76,
     "name": "Bob The Robber 2",
-    "cover": "{COVER_URL}/76.png",
-    "url": "{HTML_URL}/76-fix.html",
+    "cover": "covers/76.png",
+    "url": "html/76-fix.html",
     "author": "Meow Beast",
     "genres": [
       "action",
@@ -1113,8 +1113,8 @@
   {
     "id": 77,
     "name": "Boxing Random",
-    "cover": "{COVER_URL}/77.png",
-    "url": "{HTML_URL}/77.html",
+    "cover": "covers/77.png",
+    "url": "html/77.html",
     "author": "RHM Interactive",
     "genres": [
       "action",
@@ -1127,8 +1127,8 @@
   {
     "id": 78,
     "name": "Burrito Bison: Launcha Libre",
-    "cover": "{COVER_URL}/78.png",
-    "url": "{HTML_URL}/78.html",
+    "cover": "covers/78.png",
+    "url": "html/78.html",
     "author": "Juicy Beast",
     "genres": [
       "action",
@@ -1141,8 +1141,8 @@
   {
     "id": 79,
     "name": "Cannon Basketball",
-    "cover": "{COVER_URL}/79.png",
-    "url": "{HTML_URL}/79.html",
+    "cover": "covers/79.png",
+    "url": "html/79.html",
     "author": "Oleh \"qzix13\" Kuzyk",
     "genres": [
       "action",
@@ -1155,8 +1155,8 @@
   {
     "id": 80,
     "name": "Cannon Basketball 2",
-    "cover": "{COVER_URL}/80.png",
-    "url": "{HTML_URL}/80.html",
+    "cover": "covers/80.png",
+    "url": "html/80.html",
     "author": "Oleh \"qzix13\" Kuzyk",
     "genres": [
       "action",
@@ -1169,8 +1169,8 @@
   {
     "id": 81,
     "name": "Cluster Rush",
-    "cover": "{COVER_URL}/81.png",
-    "url": "{HTML_URL}/81.html",
+    "cover": "covers/81.png",
+    "url": "html/81.html",
     "author": "Landfall",
     "genres": [
       "action",
@@ -1183,8 +1183,8 @@
   {
     "id": 82,
     "name": "Cookie Clicker",
-    "cover": "{COVER_URL}/82.png",
-    "url": "{HTML_URL}/82-u.html",
+    "cover": "covers/82.png",
+    "url": "html/82-u.html",
     "author": "Orteil",
     "genres": [
       "idle"
@@ -1196,8 +1196,8 @@
   {
     "id": 83,
     "name": "Coreball",
-    "cover": "{COVER_URL}/83.png",
-    "url": "{HTML_URL}/83.html",
+    "cover": "covers/83.png",
+    "url": "html/83.html",
     "author": "Ben Vinegar",
     "genres": [
       "action",
@@ -1210,8 +1210,8 @@
   {
     "id": 84,
     "name": "Cubefield",
-    "cover": "{COVER_URL}/84.png",
-    "url": "{HTML_URL}/84.html",
+    "cover": "covers/84.png",
+    "url": "html/84.html",
     "author": "Max Abernethy",
     "genres": [
       "action",
@@ -1224,8 +1224,8 @@
   {
     "id": 85,
     "name": "Cut the Rope",
-    "cover": "{COVER_URL}/85.png",
-    "url": "{HTML_URL}/85-f.html",
+    "cover": "covers/85.png",
+    "url": "html/85-f.html",
     "author": "ZeptoLab",
     "genres": [
       "strategy",
@@ -1238,8 +1238,8 @@
   {
     "id": 86,
     "name": "Draw Climber",
-    "cover": "{COVER_URL}/86.png",
-    "url": "{HTML_URL}/86.html",
+    "cover": "covers/86.png",
+    "url": "html/86.html",
     "author": "VOODOO",
     "genres": [
       "action",
@@ -1252,8 +1252,8 @@
   {
     "id": 87,
     "name": "Emulator.JS",
-    "cover": "{COVER_URL}/87.png",
-    "url": "{HTML_URL}/87.html",
+    "cover": "covers/87.png",
+    "url": "html/87.html",
     "author": "Ethan O'Brien",
     "genres": [
       "action",
@@ -1267,8 +1267,8 @@
   {
     "id": 88,
     "name": "Fireboy and Watergirl 2",
-    "cover": "{COVER_URL}/88.png",
-    "url": "{HTML_URL}/88.html",
+    "cover": "covers/88.png",
+    "url": "html/88.html",
     "author": "Oslo Albet",
     "genres": [
       "action",
@@ -1281,8 +1281,8 @@
   {
     "id": 89,
     "name": "Fireboy and Watergirl 3",
-    "cover": "{COVER_URL}/89.png",
-    "url": "{HTML_URL}/89.html",
+    "cover": "covers/89.png",
+    "url": "html/89.html",
     "author": "Oslo Albet",
     "genres": [
       "action",
@@ -1295,8 +1295,8 @@
   {
     "id": 90,
     "name": "Granny",
-    "cover": "{COVER_URL}/90.png",
-    "url": "{HTML_URL}/90-fix2.html",
+    "cover": "covers/90.png",
+    "url": "html/90-fix2.html",
     "author": "DVloper",
     "genres": [
       "action",
@@ -1309,8 +1309,8 @@
   {
     "id": 91,
     "name": "Gunspin",
-    "cover": "{COVER_URL}/91.png",
-    "url": "{HTML_URL}/91.html",
+    "cover": "covers/91.png",
+    "url": "html/91.html",
     "author": "minijuegos.com",
     "genres": [
       "action",
@@ -1323,8 +1323,8 @@
   {
     "id": 92,
     "name": "Highway Racer 2",
-    "cover": "{COVER_URL}/92.png",
-    "url": "{HTML_URL}/92.html",
+    "cover": "covers/92.png",
+    "url": "html/92.html",
     "author": "Bone Cracker Games",
     "genres": [
       "action",
@@ -1337,8 +1337,8 @@
   {
     "id": 93,
     "name": "Johnny Trigger",
-    "cover": "{COVER_URL}/93.png",
-    "url": "{HTML_URL}/93.html",
+    "cover": "covers/93.png",
+    "url": "html/93.html",
     "author": "SayGames",
     "genres": [
       "action",
@@ -1351,8 +1351,8 @@
   {
     "id": 94,
     "name": "Journey Downhill",
-    "cover": "{COVER_URL}/94.png",
-    "url": "{HTML_URL}/94.html",
+    "cover": "covers/94.png",
+    "url": "html/94.html",
     "author": "Megagon Industries",
     "genres": [
       "action",
@@ -1365,8 +1365,8 @@
   {
     "id": 95,
     "name": "Line Rider",
-    "cover": "{COVER_URL}/95.png",
-    "url": "{HTML_URL}/95.html",
+    "cover": "covers/95.png",
+    "url": "html/95.html",
     "author": "Boštjan Čadež",
     "genres": [
       "action",
@@ -1379,8 +1379,8 @@
   {
     "id": 96,
     "name": "Moto X3M",
-    "cover": "{COVER_URL}/96.png",
-    "url": "{HTML_URL}/96.html",
+    "cover": "covers/96.png",
+    "url": "html/96.html",
     "author": "MadPuffers",
     "genres": [
       "racing"
@@ -1392,8 +1392,8 @@
   {
     "id": 97,
     "name": "Moto X3M 2",
-    "cover": "{COVER_URL}/97.png",
-    "url": "{HTML_URL}/97.html",
+    "cover": "covers/97.png",
+    "url": "html/97.html",
     "author": "MadPuffers",
     "genres": [
       "racing"
@@ -1405,8 +1405,8 @@
   {
     "id": 98,
     "name": "Moto X3M 3",
-    "cover": "{COVER_URL}/98.png",
-    "url": "{HTML_URL}/98.html",
+    "cover": "covers/98.png",
+    "url": "html/98.html",
     "author": "MadPuffers",
     "genres": [
       "racing"
@@ -1418,8 +1418,8 @@
   {
     "id": 99,
     "name": "Moto X3M Spooky",
-    "cover": "{COVER_URL}/99.png",
-    "url": "{HTML_URL}/99.html",
+    "cover": "covers/99.png",
+    "url": "html/99.html",
     "author": "MadPuffers",
     "genres": [
       "racing"
@@ -1431,8 +1431,8 @@
   {
     "id": 100,
     "name": "Moto X3M Winter",
-    "cover": "{COVER_URL}/100.png",
-    "url": "{HTML_URL}/100-f.html",
+    "cover": "covers/100.png",
+    "url": "html/100-f.html",
     "author": "MadPuffers",
     "genres": [
       "racing"
@@ -1444,8 +1444,8 @@
   {
     "id": 101,
     "name": "Ninja vs EvilCorp",
-    "cover": "{COVER_URL}/101.png",
-    "url": "{HTML_URL}/101.html",
+    "cover": "covers/101.png",
+    "url": "html/101.html",
     "author": "Rémi Vansteelandt",
     "genres": [
       "action",
@@ -1458,8 +1458,8 @@
   {
     "id": 102,
     "name": "Paper.io 2",
-    "cover": "{COVER_URL}/102.png",
-    "url": "{HTML_URL}/102.html",
+    "cover": "covers/102.png",
+    "url": "html/102.html",
     "author": "VOODOO",
     "genres": [
       "action",
@@ -1473,8 +1473,8 @@
   {
     "id": 103,
     "name": "The World's Hardest Game",
-    "cover": "{COVER_URL}/103.png",
-    "url": "{HTML_URL}/103.html",
+    "cover": "covers/103.png",
+    "url": "html/103.html",
     "author": "Stevie Critoph",
     "genres": [
       "action",
@@ -1487,8 +1487,8 @@
   {
     "id": 104,
     "name": "The World's Hardest Game 3",
-    "cover": "{COVER_URL}/104.png",
-    "url": "{HTML_URL}/104.html",
+    "cover": "covers/104.png",
+    "url": "html/104.html",
     "author": "Stevie Critoph",
     "genres": [
       "action",
@@ -1501,8 +1501,8 @@
   {
     "id": 105,
     "name": "The World's Hardest Game 4",
-    "cover": "{COVER_URL}/105.png",
-    "url": "{HTML_URL}/105.html",
+    "cover": "covers/105.png",
+    "url": "html/105.html",
     "author": "Stevie Critoph",
     "genres": [
       "action",
@@ -1515,8 +1515,8 @@
   {
     "id": 106,
     "name": "This Is The Only Level",
-    "cover": "{COVER_URL}/106.png",
-    "url": "{HTML_URL}/106.html",
+    "cover": "covers/106.png",
+    "url": "html/106.html",
     "author": "jmtb02",
     "genres": [
       "action",
@@ -1529,8 +1529,8 @@
   {
     "id": 107,
     "name": "This Is The Only Level 2",
-    "cover": "{COVER_URL}/107.png",
-    "url": "{HTML_URL}/107.html",
+    "cover": "covers/107.png",
+    "url": "html/107.html",
     "author": "jmtb02",
     "genres": [
       "action",
@@ -1543,8 +1543,8 @@
   {
     "id": 108,
     "name": "Tiny Fishing",
-    "cover": "{COVER_URL}/108.png",
-    "url": "{HTML_URL}/108.html",
+    "cover": "covers/108.png",
+    "url": "html/108.html",
     "author": "Winter Studio",
     "genres": [
       "action",
@@ -1557,8 +1557,8 @@
   {
     "id": 109,
     "name": "Tomb Of The Mask",
-    "cover": "{COVER_URL}/109.png",
-    "url": "{HTML_URL}/109.html",
+    "cover": "covers/109.png",
+    "url": "html/109.html",
     "author": "Happymagenta UAB",
     "genres": [
       "action",
@@ -1571,8 +1571,8 @@
   {
     "id": 110,
     "name": "Toss The Turtle",
-    "cover": "{COVER_URL}/110.png",
-    "url": "{HTML_URL}/110-f.html",
+    "cover": "covers/110.png",
+    "url": "html/110-f.html",
     "author": "GonzoSSM",
     "genres": [
       "action",
@@ -1585,8 +1585,8 @@
   {
     "id": 111,
     "name": "Tube Jumpers",
-    "cover": "{COVER_URL}/111.png",
-    "url": "{HTML_URL}/111.html",
+    "cover": "covers/111.png",
+    "url": "html/111.html",
     "author": "New Eich Games",
     "genres": [
       "action",
@@ -1599,8 +1599,8 @@
   {
     "id": 112,
     "name": "Wordle",
-    "cover": "{COVER_URL}/112.png",
-    "url": "{HTML_URL}/112-fix.html",
+    "cover": "covers/112.png",
+    "url": "html/112-fix.html",
     "author": "New York Times",
     "genres": [
       "action",
@@ -1613,8 +1613,8 @@
   {
     "id": 113,
     "name": "Ruffle",
-    "cover": "{COVER_URL}/113.png",
-    "url": "{HTML_URL}/113.html",
+    "cover": "covers/113.png",
+    "url": "html/113.html",
     "author": "Mike Welsh",
     "genres": [
       "action",
@@ -1628,8 +1628,8 @@
   {
     "id": 114,
     "name": "2048",
-    "cover": "{COVER_URL}/114.png",
-    "url": "{HTML_URL}/114-f.html",
+    "cover": "covers/114.png",
+    "url": "html/114-f.html",
     "author": "Gabriele Cirulli",
     "genres": [
       "strategy",
@@ -1642,8 +1642,8 @@
   {
     "id": 115,
     "name": "8 Ball Pool",
-    "cover": "{COVER_URL}/115.png",
-    "url": "{HTML_URL}/115.html",
+    "cover": "covers/115.png",
+    "url": "html/115.html",
     "author": "Miniclip.com",
     "genres": [
       "action",
@@ -1656,8 +1656,8 @@
   {
     "id": 116,
     "name": "Offroad Mountain Bike",
-    "cover": "{COVER_URL}/116.png",
-    "url": "{HTML_URL}/116.html",
+    "cover": "covers/116.png",
+    "url": "html/116.html",
     "author": "RHM Interactive OÜ",
     "genres": [
       "racing"
@@ -1669,8 +1669,8 @@
   {
     "id": 117,
     "name": "Space Waves",
-    "cover": "{COVER_URL}/117.png",
-    "url": "{HTML_URL}/117-fix.html",
+    "cover": "covers/117.png",
+    "url": "html/117-fix.html",
     "author": "do.games",
     "genres": [
       "action",
@@ -1683,8 +1683,8 @@
   {
     "id": 118,
     "name": "Solar Smash",
-    "cover": "{COVER_URL}/118.png",
-    "url": "{HTML_URL}/118.html",
+    "cover": "covers/118.png",
+    "url": "html/118.html",
     "author": "Paradyme Games",
     "genres": [
       "action",
@@ -1697,8 +1697,8 @@
   {
     "id": 119,
     "name": "Snow Rider 3D",
-    "cover": "{COVER_URL}/119.png",
-    "url": "{HTML_URL}/119.html",
+    "cover": "covers/119.png",
+    "url": "html/119.html",
     "author": "gamebiz",
     "genres": [
       "3d"
@@ -1710,8 +1710,8 @@
   {
     "id": 120,
     "name": "Fortzone Battle Royale",
-    "cover": "{COVER_URL}/120.png",
-    "url": "{HTML_URL}/120.html",
+    "cover": "covers/120.png",
+    "url": "html/120.html",
     "author": "Mirra Games",
     "genres": [
       "action"
@@ -1723,8 +1723,8 @@
   {
     "id": 121,
     "name": "Brawl Guys.io",
-    "cover": "{COVER_URL}/121.png",
-    "url": "{HTML_URL}/121.html",
+    "cover": "covers/121.png",
+    "url": "html/121.html",
     "author": "Lagged",
     "genres": [
       ".io"
@@ -1736,8 +1736,8 @@
   {
     "id": 122,
     "name": "Survival Race",
-    "cover": "{COVER_URL}/122.png",
-    "url": "{HTML_URL}/122.html",
+    "cover": "covers/122.png",
+    "url": "html/122.html",
     "author": "Brain Massage",
     "genres": [
       "action",
@@ -1750,8 +1750,8 @@
   {
     "id": 123,
     "name": "Poly Track",
-    "cover": "{COVER_URL}/123.png",
-    "url": "{HTML_URL}/123-win.html",
+    "cover": "covers/123.png",
+    "url": "html/123-win.html",
     "author": "Kodub",
     "genres": [
       "action",
@@ -1764,8 +1764,8 @@
   {
     "id": 124,
     "name": "Moto X3M Pool Party",
-    "cover": "{COVER_URL}/124.png",
-    "url": "{HTML_URL}/124.html",
+    "cover": "covers/124.png",
+    "url": "html/124.html",
     "author": "MadPuffers",
     "genres": [
       "racing"
@@ -1777,8 +1777,8 @@
   {
     "id": 125,
     "name": "Granny 2",
-    "cover": "{COVER_URL}/125.png",
-    "url": "{HTML_URL}/125.html",
+    "cover": "covers/125.png",
+    "url": "html/125.html",
     "author": "DVloper",
     "genres": [
       "action",
@@ -1791,8 +1791,8 @@
   {
     "id": 126,
     "name": "Granny 3",
-    "cover": "{COVER_URL}/126.png",
-    "url": "{HTML_URL}/126.html",
+    "cover": "covers/126.png",
+    "url": "html/126.html",
     "author": "DVloper",
     "genres": [
       "action",
@@ -1805,8 +1805,8 @@
   {
     "id": 127,
     "name": "Fashion Battle",
-    "cover": "{COVER_URL}/127.png",
-    "url": "{HTML_URL}/127.html",
+    "cover": "covers/127.png",
+    "url": "html/127.html",
     "author": "Apps Mobile Games",
     "genres": [
       "action"
@@ -1818,8 +1818,8 @@
   {
     "id": 128,
     "name": "Slice it All",
-    "cover": "{COVER_URL}/128.png",
-    "url": "{HTML_URL}/128.html",
+    "cover": "covers/128.png",
+    "url": "html/128.html",
     "author": "VOODOO",
     "genres": [
       "action",
@@ -1832,8 +1832,8 @@
   {
     "id": 129,
     "name": "Flappy Bird",
-    "cover": "{COVER_URL}/129.png",
-    "url": "{HTML_URL}/129.html",
+    "cover": "covers/129.png",
+    "url": "html/129.html",
     "author": "Dong Nguyen",
     "genres": [
       "action",
@@ -1846,8 +1846,8 @@
   {
     "id": 130,
     "name": "osu!",
-    "cover": "{COVER_URL}/130.png",
-    "url": "{HTML_URL}/130.html",
+    "cover": "covers/130.png",
+    "url": "html/130.html",
     "author": "ppy",
     "genres": [
       "action",
@@ -1860,8 +1860,8 @@
   {
     "id": 146,
     "name": "8 Ball Classic",
-    "cover": "{COVER_URL}/146.png",
-    "url": "{HTML_URL}/146.html",
+    "cover": "covers/146.png",
+    "url": "html/146.html",
     "author": "Famobi",
     "genres": [
       "skill"
@@ -1873,8 +1873,8 @@
   {
     "id": 147,
     "name": "Angry Birds Showdown",
-    "cover": "{COVER_URL}/147.png",
-    "url": "{HTML_URL}/147.html",
+    "cover": "covers/147.png",
+    "url": "html/147.html",
     "author": "Rovio Entertainment",
     "genres": [
       "action",
@@ -1888,8 +1888,8 @@
   {
     "id": 148,
     "name": "Archery World Tour",
-    "cover": "{COVER_URL}/148.png",
-    "url": "{HTML_URL}/148.html",
+    "cover": "covers/148.png",
+    "url": "html/148.html",
     "author": "Famobi",
     "genres": [
       "action",
@@ -1902,8 +1902,8 @@
   {
     "id": 149,
     "name": "Ball Blast",
-    "cover": "{COVER_URL}/149.png",
-    "url": "{HTML_URL}/149.html",
+    "cover": "covers/149.png",
+    "url": "html/149.html",
     "author": "Voodoo",
     "genres": [
       "action",
@@ -1916,8 +1916,8 @@
   {
     "id": 150,
     "name": "Cannon Balls 3D",
-    "cover": "{COVER_URL}/150.png",
-    "url": "{HTML_URL}/150.html",
+    "cover": "covers/150.png",
+    "url": "html/150.html",
     "author": "Famobi",
     "genres": [
       "3d"
@@ -1929,8 +1929,8 @@
   {
     "id": 151,
     "name": "Chess Classic",
-    "cover": "{COVER_URL}/151.png",
-    "url": "{HTML_URL}/151.html",
+    "cover": "covers/151.png",
+    "url": "html/151.html",
     "author": "Famobi",
     "genres": [
       "strategy",
@@ -1943,8 +1943,8 @@
   {
     "id": 152,
     "name": "Draw the Line",
-    "cover": "{COVER_URL}/152.png",
-    "url": "{HTML_URL}/152.html",
+    "cover": "covers/152.png",
+    "url": "html/152.html",
     "author": "Supersonic Studios LTD",
     "genres": [
       "action",
@@ -1957,8 +1957,8 @@
   {
     "id": 153,
     "name": "Flappy Dunk",
-    "cover": "{COVER_URL}/153.png",
-    "url": "{HTML_URL}/153.html",
+    "cover": "covers/153.png",
+    "url": "html/153.html",
     "author": "Voodoo",
     "genres": [
       "action",
@@ -1971,8 +1971,8 @@
   {
     "id": 154,
     "name": "Fork n Sausage",
-    "cover": "{COVER_URL}/154.png",
-    "url": "{HTML_URL}/154.html",
+    "cover": "covers/154.png",
+    "url": "html/154.html",
     "author": "SayGames",
     "genres": [
       "action",
@@ -1985,8 +1985,8 @@
   {
     "id": 155,
     "name": "Guess Their Answer",
-    "cover": "{COVER_URL}/155.png",
-    "url": "{HTML_URL}/155.html",
+    "cover": "covers/155.png",
+    "url": "html/155.html",
     "author": "TapNation",
     "genres": [
       "action",
@@ -1999,8 +1999,8 @@
   {
     "id": 156,
     "name": "Harvest.io",
-    "cover": "{COVER_URL}/156.png",
-    "url": "{HTML_URL}/156.html",
+    "cover": "covers/156.png",
+    "url": "html/156.html",
     "author": "CASUAL AZUR GAMES",
     "genres": [
       ".io"
@@ -2012,8 +2012,8 @@
   {
     "id": 157,
     "name": "Hill Climb Racing Lite",
-    "cover": "{COVER_URL}/157.png",
-    "url": "{HTML_URL}/157.html",
+    "cover": "covers/157.png",
+    "url": "html/157.html",
     "author": "Fingersoft",
     "genres": [
       "racing"
@@ -2025,8 +2025,8 @@
   {
     "id": 158,
     "name": "Pac-Man Superfast",
-    "cover": "{COVER_URL}/158.png",
-    "url": "{HTML_URL}/158.html",
+    "cover": "covers/158.png",
+    "url": "html/158.html",
     "author": "RedFox Games",
     "genres": [
       "action",
@@ -2039,8 +2039,8 @@
   {
     "id": 159,
     "name": "Parking Rush",
-    "cover": "{COVER_URL}/159.png",
-    "url": "{HTML_URL}/159.html",
+    "cover": "covers/159.png",
+    "url": "html/159.html",
     "author": "Nine&Nine",
     "genres": [
       "action",
@@ -2053,8 +2053,8 @@
   {
     "id": 160,
     "name": "Race Master 3D",
-    "cover": "{COVER_URL}/160.png",
-    "url": "{HTML_URL}/160.html",
+    "cover": "covers/160.png",
+    "url": "html/160.html",
     "author": "Beresnev Games",
     "genres": [
       "3d"
@@ -2066,8 +2066,8 @@
   {
     "id": 161,
     "name": "State.io",
-    "cover": "{COVER_URL}/161.png",
-    "url": "{HTML_URL}/161.html",
+    "cover": "covers/161.png",
+    "url": "html/161.html",
     "author": "CASUAL AZUR GAMES",
     "genres": [
       ".io"
@@ -2079,8 +2079,8 @@
   {
     "id": 162,
     "name": "Tower Crash 3D",
-    "cover": "{COVER_URL}/162.png",
-    "url": "{HTML_URL}/162.html",
+    "cover": "covers/162.png",
+    "url": "html/162.html",
     "author": "Famobi",
     "genres": [
       "3d"
@@ -2092,8 +2092,8 @@
   {
     "id": 163,
     "name": "Trivia Crack",
-    "cover": "{COVER_URL}/163.png",
-    "url": "{HTML_URL}/163.html",
+    "cover": "covers/163.png",
+    "url": "html/163.html",
     "author": "etermax",
     "genres": [
       "strategy"
@@ -2105,8 +2105,8 @@
   {
     "id": 164,
     "name": "Crazy Cattle 3D",
-    "cover": "{COVER_URL}/164.png",
-    "url": "{HTML_URL}/164-temp2.html",
+    "cover": "covers/164.png",
+    "url": "html/164-temp2.html",
     "author": "4nn4t4t",
     "genres": [
       "3d"
@@ -2118,8 +2118,8 @@
   {
     "id": 165,
     "name": "Cheese Chompers 3D",
-    "cover": "{COVER_URL}/165.png",
-    "url": "{HTML_URL}/165.html",
+    "cover": "covers/165.png",
+    "url": "html/165.html",
     "author": "NavaNoid",
     "genres": [
       "3d"
@@ -2131,8 +2131,8 @@
   {
     "id": 166,
     "name": "Bad Parenting 1",
-    "cover": "{COVER_URL}/166.png",
-    "url": "{HTML_URL}/166.html",
+    "cover": "covers/166.png",
+    "url": "html/166.html",
     "author": "98corbins",
     "genres": [
       "action",
@@ -2145,8 +2145,8 @@
   {
     "id": 167,
     "name": "Blade Ball",
-    "cover": "{COVER_URL}/167.png",
-    "url": "{HTML_URL}/167.html",
+    "cover": "covers/167.png",
+    "url": "html/167.html",
     "author": "??",
     "genres": [
       "action",
@@ -2159,8 +2159,8 @@
   {
     "id": 168,
     "name": "Blocky Snakes",
-    "cover": "{COVER_URL}/168.png",
-    "url": "{HTML_URL}/168.html",
+    "cover": "covers/168.png",
+    "url": "html/168.html",
     "author": "Beedo Games",
     "genres": [
       "action",
@@ -2173,8 +2173,8 @@
   {
     "id": 169,
     "name": "Bloxorz",
-    "cover": "{COVER_URL}/169.png",
-    "url": "{HTML_URL}/169.html",
+    "cover": "covers/169.png",
+    "url": "html/169.html",
     "author": "Damien Clarke",
     "genres": [
       "action",
@@ -2187,8 +2187,8 @@
   {
     "id": 170,
     "name": "Big Tower Tiny Square 2",
-    "cover": "{COVER_URL}/170.png",
-    "url": "{HTML_URL}/170.html",
+    "cover": "covers/170.png",
+    "url": "html/170.html",
     "author": "EO Interactive",
     "genres": [
       "action",
@@ -2201,8 +2201,8 @@
   {
     "id": 171,
     "name": "Candy Crush",
-    "cover": "{COVER_URL}/171.png",
-    "url": "{HTML_URL}/171.html",
+    "cover": "covers/171.png",
+    "url": "html/171.html",
     "author": "King.com",
     "genres": [
       "strategy",
@@ -2215,8 +2215,8 @@
   {
     "id": 172,
     "name": "Melon Playground",
-    "cover": "{COVER_URL}/172.png",
-    "url": "{HTML_URL}/172.html",
+    "cover": "covers/172.png",
+    "url": "html/172.html",
     "author": "playducky.com",
     "genres": [
       "action",
@@ -2229,8 +2229,8 @@
   {
     "id": 173,
     "name": "Drift Hunters",
-    "cover": "{COVER_URL}/173.png",
-    "url": "{HTML_URL}/173.html",
+    "cover": "covers/173.png",
+    "url": "html/173.html",
     "author": "Illia Kaminetskyi",
     "genres": [
       "action",
@@ -2243,8 +2243,8 @@
   {
     "id": 174,
     "name": "World Box",
-    "cover": "{COVER_URL}/174.png",
-    "url": "{HTML_URL}/174.html",
+    "cover": "covers/174.png",
+    "url": "html/174.html",
     "author": "Kendja",
     "genres": [
       "action",
@@ -2257,8 +2257,8 @@
   {
     "id": 175,
     "name": "Run 1",
-    "cover": "{COVER_URL}/175.png",
-    "url": "{HTML_URL}/175.html",
+    "cover": "covers/175.png",
+    "url": "html/175.html",
     "author": "Joseph Cloutier",
     "genres": [
       "action",
@@ -2271,8 +2271,8 @@
   {
     "id": 176,
     "name": "Run 2",
-    "cover": "{COVER_URL}/176.png",
-    "url": "{HTML_URL}/176.html",
+    "cover": "covers/176.png",
+    "url": "html/176.html",
     "author": "Joseph Cloutier",
     "genres": [
       "action",
@@ -2285,8 +2285,8 @@
   {
     "id": 177,
     "name": "Run 3",
-    "cover": "{COVER_URL}/177.png",
-    "url": "{HTML_URL}/177.html",
+    "cover": "covers/177.png",
+    "url": "html/177.html",
     "author": "Joseph Cloutier",
     "genres": [
       "action",
@@ -2301,8 +2301,8 @@
   {
     "id": 178,
     "name": "Swords and Souls",
-    "cover": "{COVER_URL}/178.png",
-    "url": "{HTML_URL}/178.html",
+    "cover": "covers/178.png",
+    "url": "html/178.html",
     "author": "Armor Games",
     "genres": [
       "action",
@@ -2315,8 +2315,8 @@
   {
     "id": 180,
     "name": "n-gon",
-    "cover": "{COVER_URL}/180.png",
-    "url": "{HTML_URL}/180.html",
+    "cover": "covers/180.png",
+    "url": "html/180.html",
     "author": "landgreen",
     "genres": [
       "action",
@@ -2329,8 +2329,8 @@
   {
     "id": 181,
     "name": "Minecraft 1.8.8",
-    "cover": "{COVER_URL}/181.png",
-    "url": "{HTML_URL}/181.html",
+    "cover": "covers/181.png",
+    "url": "html/181.html",
     "author": "lax1dude",
     "genres": [
       "adventure",
@@ -2344,8 +2344,8 @@
   {
     "id": 185,
     "name": "Five Nights at Freddy's: Sister Location",
-    "cover": "{COVER_URL}/185.png",
-    "url": "{HTML_URL}/185.html",
+    "cover": "covers/185.png",
+    "url": "html/185.html",
     "author": "Scott Cawthon",
     "genres": [
       "3d",
@@ -2359,8 +2359,8 @@
   {
     "id": 186,
     "name": "Ragdoll Archers",
-    "cover": "{COVER_URL}/186.png",
-    "url": "{HTML_URL}/186.html",
+    "cover": "covers/186.png",
+    "url": "html/186.html",
     "author": "Ericetto",
     "genres": [
       "action",
@@ -2373,8 +2373,8 @@
   {
     "id": 187,
     "name": "Papers, Please",
-    "cover": "{COVER_URL}/187.png",
-    "url": "{HTML_URL}/187.html",
+    "cover": "covers/187.png",
+    "url": "html/187.html",
     "author": "Lucas Pope",
     "genres": [
       "action",
@@ -2387,8 +2387,8 @@
   {
     "id": 188,
     "name": "Scrap Metal 3",
-    "cover": "{COVER_URL}/188.png",
-    "url": "{HTML_URL}/188e.html",
+    "cover": "covers/188.png",
+    "url": "html/188e.html",
     "author": "Ciorbyn",
     "genres": [
       "action",
@@ -2401,8 +2401,8 @@
   {
     "id": 190,
     "name": "Five Nights at Freddy's: World",
-    "cover": "{COVER_URL}/190.png",
-    "url": "{HTML_URL}/190.html",
+    "cover": "covers/190.png",
+    "url": "html/190.html",
     "author": "Scott Cawthon",
     "genres": [
       "3d",
@@ -2416,8 +2416,8 @@
   {
     "id": 191,
     "name": "Five Nights at Freddy's: Pizza Simulator",
-    "cover": "{COVER_URL}/191.png",
-    "url": "{HTML_URL}/191.html",
+    "cover": "covers/191.png",
+    "url": "html/191.html",
     "author": "Scott Cawthon",
     "genres": [
       "3d",
@@ -2431,8 +2431,8 @@
   {
     "id": 192,
     "name": "Five Nights at Freddy's: Ultimate Custom Night",
-    "cover": "{COVER_URL}/192.png",
-    "url": "{HTML_URL}/192.html",
+    "cover": "covers/192.png",
+    "url": "html/192.html",
     "author": "Scott Cawthon",
     "genres": [
       "3d",
@@ -2446,8 +2446,8 @@
   {
     "id": 193,
     "name": "Do NOT Take This Cat Home",
-    "cover": "{COVER_URL}/193.png",
-    "url": "{HTML_URL}/193.html",
+    "cover": "covers/193.png",
+    "url": "html/193.html",
     "author": "Pixelliminal",
     "genres": [
       "action",
@@ -2460,8 +2460,8 @@
   {
     "id": 194,
     "name": "People Playground",
-    "cover": "{COVER_URL}/194-m.png",
-    "url": "{HTML_URL}/194-a.html",
+    "cover": "covers/194-m.png",
+    "url": "html/194-a.html",
     "author": "Studio Minus, 98corbins",
     "genres": [
       "action",
@@ -2474,8 +2474,8 @@
   {
     "id": 195,
     "name": "R.E.P.O",
-    "cover": "{COVER_URL}/195.png",
-    "url": "{HTML_URL}/195.html",
+    "cover": "covers/195.png",
+    "url": "html/195.html",
     "author": "semiwork, 98corbins",
     "genres": [
       "action",
@@ -2488,8 +2488,8 @@
   {
     "id": 196,
     "name": "ULTRAKILL",
-    "cover": "{COVER_URL}/196.png",
-    "url": "{HTML_URL}/196-fixed.html",
+    "cover": "covers/196.png",
+    "url": "html/196-fixed.html",
     "author": "New Blood Interactive, Cake Logic",
     "genres": [
       "action",
@@ -2502,8 +2502,8 @@
   {
     "id": 197,
     "name": "Elastic Man",
-    "cover": "{COVER_URL}/197.png",
-    "url": "{HTML_URL}/197.html",
+    "cover": "covers/197.png",
+    "url": "html/197.html",
     "author": "David Li",
     "genres": [
       "action",
@@ -2516,8 +2516,8 @@
   {
     "id": 198,
     "name": "Slope",
-    "cover": "{COVER_URL}/198.png",
-    "url": "{HTML_URL}/198.html",
+    "cover": "covers/198.png",
+    "url": "html/198.html",
     "author": "coweggs",
     "genres": [
       "action",
@@ -2531,8 +2531,8 @@
   {
     "id": 199,
     "name": "Time Shooter 1",
-    "cover": "{COVER_URL}/199.png",
-    "url": "{HTML_URL}/199.html",
+    "cover": "covers/199.png",
+    "url": "html/199.html",
     "author": "g80g",
     "genres": [
       "shooter"
@@ -2544,8 +2544,8 @@
   {
     "id": 200,
     "name": "Time Shooter 2",
-    "cover": "{COVER_URL}/200.png",
-    "url": "{HTML_URL}/200.html",
+    "cover": "covers/200.png",
+    "url": "html/200.html",
     "author": "g80g",
     "genres": [
       "shooter"
@@ -2557,8 +2557,8 @@
   {
     "id": 201,
     "name": "Time Shooter 3: SWAT",
-    "cover": "{COVER_URL}/201.png",
-    "url": "{HTML_URL}/201.html",
+    "cover": "covers/201.png",
+    "url": "html/201.html",
     "author": "g80g",
     "genres": [
       "shooter"
@@ -2570,8 +2570,8 @@
   {
     "id": 202,
     "name": "Carrom Clash",
-    "cover": "{COVER_URL}/202.png",
-    "url": "{HTML_URL}/202.html",
+    "cover": "covers/202.png",
+    "url": "html/202.html",
     "author": "GameSnacks",
     "genres": [
       "racing"
@@ -2583,8 +2583,8 @@
   {
     "id": 203,
     "name": "DOOM",
-    "cover": "{COVER_URL}/203.png",
-    "url": "{HTML_URL}/203-a.html",
+    "cover": "covers/203.png",
+    "url": "html/203-a.html",
     "author": "Id Software",
     "genres": [
       "action",
@@ -2597,8 +2597,8 @@
   {
     "id": 204,
     "name": "Five Nights at Winston's",
-    "cover": "{COVER_URL}/204.png",
-    "url": "{HTML_URL}/204-a.html",
+    "cover": "covers/204.png",
+    "url": "html/204-a.html",
     "author": "lax1dude",
     "genres": [
       "action",
@@ -2611,8 +2611,8 @@
   {
     "id": 205,
     "name": "Buckshot Roulette",
-    "cover": "{COVER_URL}/205.png",
-    "url": "{HTML_URL}/205-f.html",
+    "cover": "covers/205.png",
+    "url": "html/205-f.html",
     "author": "Mike Klubnika",
     "genres": [
       "action",
@@ -2625,8 +2625,8 @@
   {
     "id": 206,
     "name": "Tunnel Rush",
-    "cover": "{COVER_URL}/206.png",
-    "url": "{HTML_URL}/206.html",
+    "cover": "covers/206.png",
+    "url": "html/206.html",
     "author": "Deer Cat Games",
     "genres": [
       "action",
@@ -2640,8 +2640,8 @@
   {
     "id": 207,
     "name": "Snowbattle.io",
-    "cover": "{COVER_URL}/207.png",
-    "url": "{HTML_URL}/207.html",
+    "cover": "covers/207.png",
+    "url": "html/207.html",
     "author": "Royalec/Tokyo",
     "genres": [
       "action",
@@ -2654,8 +2654,8 @@
   {
     "id": 208,
     "name": "Rolly Vortex",
-    "cover": "{COVER_URL}/208.png",
-    "url": "{HTML_URL}/208.html",
+    "cover": "covers/208.png",
+    "url": "html/208.html",
     "author": "Voodoo",
     "genres": [
       "action",
@@ -2668,8 +2668,8 @@
   {
     "id": 209,
     "name": "Draw the Hill",
-    "cover": "{COVER_URL}/209.png",
-    "url": "{HTML_URL}/209.html",
+    "cover": "covers/209.png",
+    "url": "html/209.html",
     "author": "Stelennnn",
     "genres": [
       "action",
@@ -2682,8 +2682,8 @@
   {
     "id": 210,
     "name": "Dragon vs Bricks",
-    "cover": "{COVER_URL}/210.png",
-    "url": "{HTML_URL}/210.html",
+    "cover": "covers/210.png",
+    "url": "html/210.html",
     "author": "Voodoo",
     "genres": [
       "action",
@@ -2696,8 +2696,8 @@
   {
     "id": 211,
     "name": "Death Run 3D",
-    "cover": "{COVER_URL}/211.png",
-    "url": "{HTML_URL}/211.html",
+    "cover": "covers/211.png",
+    "url": "html/211.html",
     "author": "kevin.wang",
     "genres": [
       "action",
@@ -2712,8 +2712,8 @@
   {
     "id": 212,
     "name": "Cut the Rope",
-    "cover": "{COVER_URL}/212.png",
-    "url": "{HTML_URL}/212-f.html",
+    "cover": "covers/212.png",
+    "url": "html/212-f.html",
     "author": "ZeptoLab",
     "genres": [
       "strategy",
@@ -2726,8 +2726,8 @@
   {
     "id": 213,
     "name": "Cut the Rope: Time Travel",
-    "cover": "{COVER_URL}/213.png",
-    "url": "{HTML_URL}/213-f.html",
+    "cover": "covers/213.png",
+    "url": "html/213-f.html",
     "author": "ZeptoLab",
     "genres": [
       "strategy",
@@ -2740,8 +2740,8 @@
   {
     "id": 214,
     "name": "Cut the Rope: Holiday Gift",
-    "cover": "{COVER_URL}/214.png",
-    "url": "{HTML_URL}/214-fi.html",
+    "cover": "covers/214.png",
+    "url": "html/214-fi.html",
     "author": "ZeptoLab",
     "genres": [
       "strategy",
@@ -2754,8 +2754,8 @@
   {
     "id": 215,
     "name": "Bendy and the Ink Machine",
-    "cover": "{COVER_URL}/215.png",
-    "url": "{HTML_URL}/215.html",
+    "cover": "covers/215.png",
+    "url": "html/215.html",
     "author": "Joey Drew Studios",
     "genres": [
       "action",
@@ -2768,8 +2768,8 @@
   {
     "id": 216,
     "name": "That's Not My Neighbor",
-    "cover": "{COVER_URL}/216.png",
-    "url": "{HTML_URL}/216.html",
+    "cover": "covers/216.png",
+    "url": "html/216.html",
     "author": "Nacho Games",
     "genres": [
       "action",
@@ -2782,8 +2782,8 @@
   {
     "id": 217,
     "name": "Hotline Miami",
-    "cover": "{COVER_URL}/217.png",
-    "url": "{HTML_URL}/217-c.html",
+    "cover": "covers/217.png",
+    "url": "html/217-c.html",
     "author": "Dennaton Games",
     "genres": [
       "action",
@@ -2796,8 +2796,8 @@
   {
     "id": 218,
     "name": "Papa's Bakeria",
-    "cover": "{COVER_URL}/218.png",
-    "url": "{HTML_URL}/218.html",
+    "cover": "covers/218.png",
+    "url": "html/218.html",
     "author": "Flipline Studios",
     "genres": [
       "action",
@@ -2810,8 +2810,8 @@
   {
     "id": 219,
     "name": "Papa's Burgeria",
-    "cover": "{COVER_URL}/219.png",
-    "url": "{HTML_URL}/219.html",
+    "cover": "covers/219.png",
+    "url": "html/219.html",
     "author": "Flipline Studios",
     "genres": [
       "action",
@@ -2824,8 +2824,8 @@
   {
     "id": 220,
     "name": "Papa's Cheeseria",
-    "cover": "{COVER_URL}/220.png",
-    "url": "{HTML_URL}/220.html",
+    "cover": "covers/220.png",
+    "url": "html/220.html",
     "author": "Flipline Studios",
     "genres": [
       "action",
@@ -2838,8 +2838,8 @@
   {
     "id": 221,
     "name": "Papa's Cupcakeria",
-    "cover": "{COVER_URL}/221.png",
-    "url": "{HTML_URL}/221.html",
+    "cover": "covers/221.png",
+    "url": "html/221.html",
     "author": "Flipline Studios",
     "genres": [
       "action",
@@ -2852,8 +2852,8 @@
   {
     "id": 222,
     "name": "Papa's Donuteria",
-    "cover": "{COVER_URL}/222.png",
-    "url": "{HTML_URL}/222.html",
+    "cover": "covers/222.png",
+    "url": "html/222.html",
     "author": "Flipline Studios",
     "genres": [
       "action",
@@ -2866,8 +2866,8 @@
   {
     "id": 223,
     "name": "Papa's Freezeria",
-    "cover": "{COVER_URL}/223.png",
-    "url": "{HTML_URL}/223.html",
+    "cover": "covers/223.png",
+    "url": "html/223.html",
     "author": "Flipline Studios",
     "genres": [
       "action",
@@ -2880,8 +2880,8 @@
   {
     "id": 224,
     "name": "Papa's Hot Doggeria",
-    "cover": "{COVER_URL}/224.png",
-    "url": "{HTML_URL}/224.html",
+    "cover": "covers/224.png",
+    "url": "html/224.html",
     "author": "Flipline Studios",
     "genres": [
       "action",
@@ -2894,8 +2894,8 @@
   {
     "id": 225,
     "name": "Papa's Pancakeria",
-    "cover": "{COVER_URL}/225.png",
-    "url": "{HTML_URL}/225.html",
+    "cover": "covers/225.png",
+    "url": "html/225.html",
     "author": "Flipline Studios",
     "genres": [
       "action",
@@ -2908,8 +2908,8 @@
   {
     "id": 226,
     "name": "Papa's Pastaria",
-    "cover": "{COVER_URL}/226.png",
-    "url": "{HTML_URL}/226.html",
+    "cover": "covers/226.png",
+    "url": "html/226.html",
     "author": "Flipline Studios",
     "genres": [
       "action",
@@ -2922,8 +2922,8 @@
   {
     "id": 227,
     "name": "Papa's Pizeria",
-    "cover": "{COVER_URL}/227.png",
-    "url": "{HTML_URL}/227.html",
+    "cover": "covers/227.png",
+    "url": "html/227.html",
     "author": "Flipline Studios",
     "genres": [
       "action",
@@ -2936,8 +2936,8 @@
   {
     "id": 228,
     "name": "Papa's Scooperia",
-    "cover": "{COVER_URL}/228.png",
-    "url": "{HTML_URL}/228.html",
+    "cover": "covers/228.png",
+    "url": "html/228.html",
     "author": "Flipline Studios",
     "genres": [
       "action",
@@ -2950,8 +2950,8 @@
   {
     "id": 229,
     "name": "Papa's Sushiria",
-    "cover": "{COVER_URL}/229.png",
-    "url": "{HTML_URL}/229.html",
+    "cover": "covers/229.png",
+    "url": "html/229.html",
     "author": "Flipline Studios",
     "genres": [
       "action",
@@ -2964,8 +2964,8 @@
   {
     "id": 230,
     "name": "Papa's Taco Mia",
-    "cover": "{COVER_URL}/230.png",
-    "url": "{HTML_URL}/230.html",
+    "cover": "covers/230.png",
+    "url": "html/230.html",
     "author": "Flipline Studios",
     "genres": [
       "action",
@@ -2978,8 +2978,8 @@
   {
     "id": 231,
     "name": "Papa's Wingeria",
-    "cover": "{COVER_URL}/231.png",
-    "url": "{HTML_URL}/231.html",
+    "cover": "covers/231.png",
+    "url": "html/231.html",
     "author": "Flipline Studios",
     "genres": [
       "action",
@@ -2992,8 +2992,8 @@
   {
     "id": 232,
     "name": "Plants vs Zombies",
-    "cover": "{COVER_URL}/232.png",
-    "url": "{HTML_URL}/232.html",
+    "cover": "covers/232.png",
+    "url": "html/232.html",
     "author": "PopCap Games",
     "genres": [
       "action",
@@ -3007,8 +3007,8 @@
   {
     "id": 233,
     "name": "Superhot",
-    "cover": "{COVER_URL}/233.png",
-    "url": "{HTML_URL}/233.html",
+    "cover": "covers/233.png",
+    "url": "html/233.html",
     "author": "Superhot Team",
     "genres": [
       "action",
@@ -3021,8 +3021,8 @@
   {
     "id": 234,
     "name": "Duck Life",
-    "cover": "{COVER_URL}/234.png",
-    "url": "{HTML_URL}/234.html",
+    "cover": "covers/234.png",
+    "url": "html/234.html",
     "author": "Mad.com",
     "genres": [
       "action",
@@ -3035,8 +3035,8 @@
   {
     "id": 235,
     "name": "Duck Life 2",
-    "cover": "{COVER_URL}/235.png",
-    "url": "{HTML_URL}/235.html",
+    "cover": "covers/235.png",
+    "url": "html/235.html",
     "author": "Mad.com",
     "genres": [
       "action",
@@ -3049,8 +3049,8 @@
   {
     "id": 236,
     "name": "Duck Life 3",
-    "cover": "{COVER_URL}/236.png",
-    "url": "{HTML_URL}/236.html",
+    "cover": "covers/236.png",
+    "url": "html/236.html",
     "author": "Mad.com",
     "genres": [
       "action",
@@ -3063,8 +3063,8 @@
   {
     "id": 237,
     "name": "Duck Life 4",
-    "cover": "{COVER_URL}/237.png",
-    "url": "{HTML_URL}/237.html",
+    "cover": "covers/237.png",
+    "url": "html/237.html",
     "author": "Mad.com",
     "genres": [
       "action",
@@ -3077,8 +3077,8 @@
   {
     "id": 238,
     "name": "Duck Life 5",
-    "cover": "{COVER_URL}/238.png",
-    "url": "{HTML_URL}/238.html",
+    "cover": "covers/238.png",
+    "url": "html/238.html",
     "author": "Mad.com",
     "genres": [
       "action",
@@ -3091,8 +3091,8 @@
   {
     "id": 239,
     "name": "Red Ball",
-    "cover": "{COVER_URL}/239.png",
-    "url": "{HTML_URL}/239.html",
+    "cover": "covers/239.png",
+    "url": "html/239.html",
     "author": "Yohoho Games",
     "genres": [
       "action",
@@ -3105,8 +3105,8 @@
   {
     "id": 240,
     "name": "Red Ball 2",
-    "cover": "{COVER_URL}/240.png",
-    "url": "{HTML_URL}/240.html",
+    "cover": "covers/240.png",
+    "url": "html/240.html",
     "author": "Yohoho Games",
     "genres": [
       "action",
@@ -3119,8 +3119,8 @@
   {
     "id": 241,
     "name": "Red Ball 3",
-    "cover": "{COVER_URL}/241.png",
-    "url": "{HTML_URL}/241.html",
+    "cover": "covers/241.png",
+    "url": "html/241.html",
     "author": "Yohoho Games",
     "genres": [
       "action",
@@ -3133,8 +3133,8 @@
   {
     "id": 242,
     "name": "Red Ball 4",
-    "cover": "{COVER_URL}/242.png",
-    "url": "{HTML_URL}/242.html",
+    "cover": "covers/242.png",
+    "url": "html/242.html",
     "author": "Yohoho Games",
     "genres": [
       "action",
@@ -3147,8 +3147,8 @@
   {
     "id": 243,
     "name": "Red Ball 4 Vol. 2",
-    "cover": "{COVER_URL}/243.png",
-    "url": "{HTML_URL}/243.html",
+    "cover": "covers/243.png",
+    "url": "html/243.html",
     "author": "Yohoho Games",
     "genres": [
       "action",
@@ -3161,8 +3161,8 @@
   {
     "id": 244,
     "name": "Red Ball 4 Vol. 3",
-    "cover": "{COVER_URL}/244.png",
-    "url": "{HTML_URL}/244.html",
+    "cover": "covers/244.png",
+    "url": "html/244.html",
     "author": "Yohoho Games",
     "genres": [
       "action",
@@ -3175,8 +3175,8 @@
   {
     "id": 245,
     "name": "Wheely",
-    "cover": "{COVER_URL}/245.png",
-    "url": "{HTML_URL}/245.html",
+    "cover": "covers/245.png",
+    "url": "html/245.html",
     "author": "Pegas Games",
     "genres": [
       "action",
@@ -3189,8 +3189,8 @@
   {
     "id": 246,
     "name": "Wheely 2",
-    "cover": "{COVER_URL}/246.png",
-    "url": "{HTML_URL}/246.html",
+    "cover": "covers/246.png",
+    "url": "html/246.html",
     "author": "Pegas Games",
     "genres": [
       "action",
@@ -3203,8 +3203,8 @@
   {
     "id": 247,
     "name": "Wheely 3",
-    "cover": "{COVER_URL}/247.png",
-    "url": "{HTML_URL}/247.html",
+    "cover": "covers/247.png",
+    "url": "html/247.html",
     "author": "Pegas Games",
     "genres": [
       "action",
@@ -3217,8 +3217,8 @@
   {
     "id": 248,
     "name": "Wheely 4",
-    "cover": "{COVER_URL}/248.png",
-    "url": "{HTML_URL}/248.html",
+    "cover": "covers/248.png",
+    "url": "html/248.html",
     "author": "Pegas Games",
     "genres": [
       "action",
@@ -3231,8 +3231,8 @@
   {
     "id": 249,
     "name": "Wheely 5",
-    "cover": "{COVER_URL}/249.png",
-    "url": "{HTML_URL}/249.html",
+    "cover": "covers/249.png",
+    "url": "html/249.html",
     "author": "Pegas Games",
     "genres": [
       "action",
@@ -3245,8 +3245,8 @@
   {
     "id": 250,
     "name": "Wheely 6",
-    "cover": "{COVER_URL}/250.png",
-    "url": "{HTML_URL}/250.html",
+    "cover": "covers/250.png",
+    "url": "html/250.html",
     "author": "Pegas Games",
     "genres": [
       "action",
@@ -3259,8 +3259,8 @@
   {
     "id": 251,
     "name": "Wheely 7",
-    "cover": "{COVER_URL}/251.png",
-    "url": "{HTML_URL}/251.html",
+    "cover": "covers/251.png",
+    "url": "html/251.html",
     "author": "Pegas Games",
     "genres": [
       "action",
@@ -3273,8 +3273,8 @@
   {
     "id": 252,
     "name": "Wheely 8",
-    "cover": "{COVER_URL}/252.png",
-    "url": "{HTML_URL}/252.html",
+    "cover": "covers/252.png",
+    "url": "html/252.html",
     "author": "Pegas Games",
     "genres": [
       "action",
@@ -3287,8 +3287,8 @@
   {
     "id": 255,
     "name": "Crazy Chicken 3D",
-    "cover": "{COVER_URL}/255.png",
-    "url": "{HTML_URL}/255.html",
+    "cover": "covers/255.png",
+    "url": "html/255.html",
     "author": "Teasle",
     "genres": [
       "3d"
@@ -3300,8 +3300,8 @@
   {
     "id": 256,
     "name": "Crazy Kitty 3D",
-    "cover": "{COVER_URL}/256.png",
-    "url": "{HTML_URL}/256.html",
+    "cover": "covers/256.png",
+    "url": "html/256.html",
     "author": "Teasle",
     "genres": [
       "3d"
@@ -3313,8 +3313,8 @@
   {
     "id": 257,
     "name": "Google Baseball",
-    "cover": "{COVER_URL}/257.png",
-    "url": "{HTML_URL}/257.html",
+    "cover": "covers/257.png",
+    "url": "html/257.html",
     "author": "Google",
     "genres": [
       "action",
@@ -3327,8 +3327,8 @@
   {
     "id": 258,
     "name": "A Bite at Freddy's",
-    "cover": "{COVER_URL}/258.png",
-    "url": "{HTML_URL}/258.html",
+    "cover": "covers/258.png",
+    "url": "html/258.html",
     "author": "Garrett McKay",
     "genres": [
       "action",
@@ -3341,8 +3341,8 @@
   {
     "id": 259,
     "name": "Class of '09",
-    "cover": "{COVER_URL}/259.png",
-    "url": "{HTML_URL}/259.html",
+    "cover": "covers/259.png",
+    "url": "html/259.html",
     "author": "sbn3",
     "genres": [
       "action",
@@ -3355,8 +3355,8 @@
   {
     "id": 260,
     "name": "RE:RUN",
-    "cover": "{COVER_URL}/260.png",
-    "url": "{HTML_URL}/260.html",
+    "cover": "covers/260.png",
+    "url": "html/260.html",
     "author": "DaniDev",
     "genres": [
       "action",
@@ -3369,8 +3369,8 @@
   {
     "id": 261,
     "name": "Fruit Ninja",
-    "cover": "{COVER_URL}/261.png",
-    "url": "{HTML_URL}/261.html",
+    "cover": "covers/261.png",
+    "url": "html/261.html",
     "author": "Halfbrick Studios",
     "genres": [
       "action",
@@ -3383,8 +3383,8 @@
   {
     "id": 262,
     "name": "Half Life",
-    "cover": "{COVER_URL}/262.png",
-    "url": "{HTML_URL}/262.html",
+    "cover": "covers/262.png",
+    "url": "html/262.html",
     "author": "Valve",
     "genres": [
       "action",
@@ -3397,8 +3397,8 @@
   {
     "id": 263,
     "name": "Quake III Arena",
-    "cover": "{COVER_URL}/263.png",
-    "url": "{HTML_URL}/263.html",
+    "cover": "covers/263.png",
+    "url": "html/263.html",
     "author": "Id Software",
     "genres": [
       "action",
@@ -3411,8 +3411,8 @@
   {
     "id": 264,
     "name": "Escape Road",
-    "cover": "{COVER_URL}/264.png",
-    "url": "{HTML_URL}/264.html",
+    "cover": "covers/264.png",
+    "url": "html/264.html",
     "author": "AzGames",
     "genres": [
       "action",
@@ -3425,8 +3425,8 @@
   {
     "id": 265,
     "name": "Escape Road 2",
-    "cover": "{COVER_URL}/265.png",
-    "url": "{HTML_URL}/265-fix.html",
+    "cover": "covers/265.png",
+    "url": "html/265-fix.html",
     "author": "AzGames",
     "genres": [
       "action",
@@ -3439,8 +3439,8 @@
   {
     "id": 266,
     "name": "Speed Stars",
-    "cover": "{COVER_URL}/266.png",
-    "url": "{HTML_URL}/266-a.html",
+    "cover": "covers/266.png",
+    "url": "html/266-a.html",
     "author": "Luke Doukakis",
     "genres": [
       "action",
@@ -3453,8 +3453,8 @@
   {
     "id": 267,
     "name": "Pizza Tower",
-    "cover": "{COVER_URL}/267.png",
-    "url": "{HTML_URL}/267.html",
+    "cover": "covers/267.png",
+    "url": "html/267.html",
     "author": "Tour De Pizza, BurnedPopcorn",
     "genres": [
       "action",
@@ -3467,8 +3467,8 @@
   {
     "id": 268,
     "name": "Bacon May Die",
-    "cover": "{COVER_URL}/268.png",
-    "url": "{HTML_URL}/268.html",
+    "cover": "covers/268.png",
+    "url": "html/268.html",
     "author": "SnoutUp",
     "genres": [
       "action",
@@ -3481,8 +3481,8 @@
   {
     "id": 269,
     "name": "Bad Ice Cream",
-    "cover": "{COVER_URL}/269.png",
-    "url": "{HTML_URL}/269.html",
+    "cover": "covers/269.png",
+    "url": "html/269.html",
     "author": "Nitrome",
     "genres": [
       "action",
@@ -3495,8 +3495,8 @@
   {
     "id": 270,
     "name": "Bad Ice Cream 2",
-    "cover": "{COVER_URL}/270.png",
-    "url": "{HTML_URL}/270.html",
+    "cover": "covers/270.png",
+    "url": "html/270.html",
     "author": "Nitrome",
     "genres": [
       "action",
@@ -3509,8 +3509,8 @@
   {
     "id": 271,
     "name": "Bad Ice Cream 3",
-    "cover": "{COVER_URL}/271.png",
-    "url": "{HTML_URL}/271.html",
+    "cover": "covers/271.png",
+    "url": "html/271.html",
     "author": "Nitrome",
     "genres": [
       "action",
@@ -3523,8 +3523,8 @@
   {
     "id": 272,
     "name": "Basketball Stars",
-    "cover": "{COVER_URL}/272.png",
-    "url": "{HTML_URL}/272.html",
+    "cover": "covers/272.png",
+    "url": "html/272.html",
     "author": "MadPuffers",
     "genres": [
       "action",
@@ -3537,8 +3537,8 @@
   {
     "id": 273,
     "name": "BlockPost",
-    "cover": "{COVER_URL}/273.png",
-    "url": "{HTML_URL}/273.html",
+    "cover": "covers/273.png",
+    "url": "html/273.html",
     "author": "SkullCap Studios",
     "genres": [
       "action",
@@ -3551,8 +3551,8 @@
   {
     "id": 274,
     "name": "CircloO",
-    "cover": "{COVER_URL}/274.png",
-    "url": "{HTML_URL}/274.html",
+    "cover": "covers/274.png",
+    "url": "html/274.html",
     "author": "Florian van Strien",
     "genres": [
       "action",
@@ -3565,8 +3565,8 @@
   {
     "id": 275,
     "name": "CircloO 2",
-    "cover": "{COVER_URL}/275.png",
-    "url": "{HTML_URL}/275.html",
+    "cover": "covers/275.png",
+    "url": "html/275.html",
     "author": "Florian van Strien",
     "genres": [
       "action",
@@ -3579,8 +3579,8 @@
   {
     "id": 276,
     "name": "Drift Boss",
-    "cover": "{COVER_URL}/276.png",
-    "url": "{HTML_URL}/276.html",
+    "cover": "covers/276.png",
+    "url": "html/276.html",
     "author": "marketjs",
     "genres": [
       "action",
@@ -3593,8 +3593,8 @@
   {
     "id": 277,
     "name": "Evil Glitch",
-    "cover": "{COVER_URL}/277.png",
-    "url": "{HTML_URL}/277.html",
+    "cover": "covers/277.png",
+    "url": "html/277.html",
     "author": "agar3s",
     "genres": [
       "action",
@@ -3607,8 +3607,8 @@
   {
     "id": 278,
     "name": "Madalin Stunt Cars 2",
-    "cover": "{COVER_URL}/278.png",
-    "url": "{HTML_URL}/278.html",
+    "cover": "covers/278.png",
+    "url": "html/278.html",
     "author": "Madalin Games",
     "genres": [
       "racing"
@@ -3620,8 +3620,8 @@
   {
     "id": 279,
     "name": "Madalin Stunt Cars 3",
-    "cover": "{COVER_URL}/279.png",
-    "url": "{HTML_URL}/279.html",
+    "cover": "covers/279.png",
+    "url": "html/279.html",
     "author": "Madalin Games",
     "genres": [
       "racing"
@@ -3633,8 +3633,8 @@
   {
     "id": 280,
     "name": "Papery Planes",
-    "cover": "{COVER_URL}/280.png",
-    "url": "{HTML_URL}/280.html",
+    "cover": "covers/280.png",
+    "url": "html/280.html",
     "author": "Akos Makovics",
     "genres": [
       "action",
@@ -3647,8 +3647,8 @@
   {
     "id": 281,
     "name": "Pixel Gun Survival",
-    "cover": "{COVER_URL}/281.png",
-    "url": "{HTML_URL}/281.html",
+    "cover": "covers/281.png",
+    "url": "html/281.html",
     "author": "Mentolatux",
     "genres": [
       "action",
@@ -3661,8 +3661,8 @@
   {
     "id": 282,
     "name": "Protektor",
-    "cover": "{COVER_URL}/282.png",
-    "url": "{HTML_URL}/282.html",
+    "cover": "covers/282.png",
+    "url": "html/282.html",
     "author": "rujogames",
     "genres": [
       "action",
@@ -3675,8 +3675,8 @@
   {
     "id": 283,
     "name": "Rooftop Snipers",
-    "cover": "{COVER_URL}/283.png",
-    "url": "{HTML_URL}/283.html",
+    "cover": "covers/283.png",
+    "url": "html/283.html",
     "author": "New Eich Games",
     "genres": [
       "action",
@@ -3689,8 +3689,8 @@
   {
     "id": 284,
     "name": "War The Knights",
-    "cover": "{COVER_URL}/284.png",
-    "url": "{HTML_URL}/284.html",
+    "cover": "covers/284.png",
+    "url": "html/284.html",
     "author": "BANZAI",
     "genres": [
       "action",
@@ -3703,8 +3703,8 @@
   {
     "id": 285,
     "name": "Basket Bros",
-    "cover": "{COVER_URL}/285.png",
-    "url": "{HTML_URL}/285.html",
+    "cover": "covers/285.png",
+    "url": "html/285.html",
     "author": "Blue Wizard Digital",
     "genres": [
       "action",
@@ -3717,8 +3717,8 @@
   {
     "id": 286,
     "name": "Endoparasitic",
-    "cover": "{COVER_URL}/286.png",
-    "url": "{HTML_URL}/286.html",
+    "cover": "covers/286.png",
+    "url": "html/286.html",
     "author": "Deep Root Interactive",
     "genres": [
       "action",
@@ -3731,8 +3731,8 @@
   {
     "id": 287,
     "name": "Riddle School",
-    "cover": "{COVER_URL}/287.png",
-    "url": "{HTML_URL}/287.html",
+    "cover": "covers/287.png",
+    "url": "html/287.html",
     "author": "JonBro",
     "genres": [
       "action",
@@ -3745,8 +3745,8 @@
   {
     "id": 288,
     "name": "Riddle School 2",
-    "cover": "{COVER_URL}/288.png",
-    "url": "{HTML_URL}/288.html",
+    "cover": "covers/288.png",
+    "url": "html/288.html",
     "author": "JonBro",
     "genres": [
       "action",
@@ -3759,8 +3759,8 @@
   {
     "id": 289,
     "name": "Riddle School 3",
-    "cover": "{COVER_URL}/289.png",
-    "url": "{HTML_URL}/289.html",
+    "cover": "covers/289.png",
+    "url": "html/289.html",
     "author": "JonBro",
     "genres": [
       "action",
@@ -3773,8 +3773,8 @@
   {
     "id": 290,
     "name": "Riddle School 4",
-    "cover": "{COVER_URL}/290.png",
-    "url": "{HTML_URL}/290.html",
+    "cover": "covers/290.png",
+    "url": "html/290.html",
     "author": "JonBro",
     "genres": [
       "action",
@@ -3787,8 +3787,8 @@
   {
     "id": 291,
     "name": "Riddle School 5",
-    "cover": "{COVER_URL}/291.png",
-    "url": "{HTML_URL}/291.html",
+    "cover": "covers/291.png",
+    "url": "html/291.html",
     "author": "JonBro",
     "genres": [
       "action",
@@ -3801,8 +3801,8 @@
   {
     "id": 292,
     "name": "Riddle Transfer",
-    "cover": "{COVER_URL}/292.png",
-    "url": "{HTML_URL}/292.html",
+    "cover": "covers/292.png",
+    "url": "html/292.html",
     "author": "JonBro",
     "genres": [
       "action",
@@ -3815,8 +3815,8 @@
   {
     "id": 293,
     "name": "Riddle Transfer 2",
-    "cover": "{COVER_URL}/293.png",
-    "url": "{HTML_URL}/293.html",
+    "cover": "covers/293.png",
+    "url": "html/293.html",
     "author": "JonBro",
     "genres": [
       "action",
@@ -3829,8 +3829,8 @@
   {
     "id": 294,
     "name": "Idle Dice",
-    "cover": "{COVER_URL}/294.png",
-    "url": "{HTML_URL}/294.html",
+    "cover": "covers/294.png",
+    "url": "html/294.html",
     "author": "Lutz Schönfelder",
     "genres": [
       "strategy",
@@ -3843,8 +3843,8 @@
   {
     "id": 295,
     "name": "12 Mini Battles",
-    "cover": "{COVER_URL}/295.png",
-    "url": "{HTML_URL}/295.html",
+    "cover": "covers/295.png",
+    "url": "html/295.html",
     "author": "Shared Dreams Studio",
     "genres": [
       "action"
@@ -3856,8 +3856,8 @@
   {
     "id": 297,
     "name": "Minecraft 1.5.2",
-    "cover": "{COVER_URL}/297.png",
-    "url": "{HTML_URL}/297.html",
+    "cover": "covers/297.png",
+    "url": "html/297.html",
     "author": "lax1dude",
     "genres": [
       "adventure",
@@ -3871,8 +3871,8 @@
   {
     "id": 298,
     "name": "Minecraft Alpha 1.2.6",
-    "cover": "{COVER_URL}/298.png",
-    "url": "{HTML_URL}/298.html",
+    "cover": "covers/298.png",
+    "url": "html/298.html",
     "author": "lax1dude",
     "genres": [
       "adventure",
@@ -3886,8 +3886,8 @@
   {
     "id": 299,
     "name": "Minecraft Beta 1.3",
-    "cover": "{COVER_URL}/299.png",
-    "url": "{HTML_URL}/299.html",
+    "cover": "covers/299.png",
+    "url": "html/299.html",
     "author": "lax1dude",
     "genres": [
       "adventure",
@@ -3901,8 +3901,8 @@
   {
     "id": 300,
     "name": "Minecraft Beta 1.7.3",
-    "cover": "{COVER_URL}/300.png",
-    "url": "{HTML_URL}/300.html",
+    "cover": "covers/300.png",
+    "url": "html/300.html",
     "author": "lax1dude",
     "genres": [
       "adventure",
@@ -3916,8 +3916,8 @@
   {
     "id": 301,
     "name": "Minecraft Indev",
-    "cover": "{COVER_URL}/301.png",
-    "url": "{HTML_URL}/301.html",
+    "cover": "covers/301.png",
+    "url": "html/301.html",
     "author": "lax1dude",
     "genres": [
       "adventure",
@@ -3931,8 +3931,8 @@
   {
     "id": 302,
     "name": "Little Runmo",
-    "cover": "{COVER_URL}/302.png",
-    "url": "{HTML_URL}/302.html",
+    "cover": "covers/302.png",
+    "url": "html/302.html",
     "author": "juhosprite, gooseworx",
     "genres": [
       "action",
@@ -3945,8 +3945,8 @@
   {
     "id": 303,
     "name": "Territorial.io",
-    "cover": "{COVER_URL}/303.png",
-    "url": "{HTML_URL}/303.html",
+    "cover": "covers/303.png",
+    "url": "html/303.html",
     "author": "TTCreator",
     "genres": [
       ".io"
@@ -3958,8 +3958,8 @@
   {
     "id": 304,
     "name": "Alien Hominid",
-    "cover": "{COVER_URL}/304.png",
-    "url": "{HTML_URL}/304.html",
+    "cover": "covers/304.png",
+    "url": "html/304.html",
     "author": "Tom Fulp, Dan Paladin",
     "genres": [
       "action",
@@ -3972,8 +3972,8 @@
   {
     "id": 305,
     "name": "Tanuki Sunset",
-    "cover": "{COVER_URL}/305.png",
-    "url": "{HTML_URL}/305.html",
+    "cover": "covers/305.png",
+    "url": "html/305.html",
     "author": "Rewind Games",
     "genres": [
       "action",
@@ -3986,8 +3986,8 @@
   {
     "id": 306,
     "name": "Shipo.io",
-    "cover": "{COVER_URL}/306.png",
-    "url": "{HTML_URL}/306.html",
+    "cover": "covers/306.png",
+    "url": "html/306.html",
     "author": "OnRush Studio",
     "genres": [
       ".io"
@@ -3999,8 +3999,8 @@
   {
     "id": 307,
     "name": "Rainbow Obby",
-    "cover": "{COVER_URL}/307.png",
-    "url": "{HTML_URL}/307.html",
+    "cover": "covers/307.png",
+    "url": "html/307.html",
     "author": "emolingo games",
     "genres": [
       "action",
@@ -4013,8 +4013,8 @@
   {
     "id": 308,
     "name": "Nazi Zombies: Portable",
-    "cover": "{COVER_URL}/308.png",
-    "url": "{HTML_URL}/308.html",
+    "cover": "covers/308.png",
+    "url": "html/308.html",
     "author": "nzp team",
     "genres": [
       "action",
@@ -4027,8 +4027,8 @@
   {
     "id": 309,
     "name": "Sandboxels",
-    "cover": "{COVER_URL}/309.png",
-    "url": "{HTML_URL}/309.html",
+    "cover": "covers/309.png",
+    "url": "html/309.html",
     "author": "R74N",
     "genres": [
       "action",
@@ -4041,8 +4041,8 @@
   {
     "id": 310,
     "name": "Dreadhead Parkour",
-    "cover": "{COVER_URL}/310.png",
-    "url": "{HTML_URL}/310.html",
+    "cover": "covers/310.png",
+    "url": "html/310.html",
     "author": "GameTornado",
     "genres": [
       "action",
@@ -4055,8 +4055,8 @@
   {
     "id": 311,
     "name": "Sandtris",
-    "cover": "{COVER_URL}/311.png",
-    "url": "{HTML_URL}/311.html",
+    "cover": "covers/311.png",
+    "url": "html/311.html",
     "author": "FRANCO MIRANDA",
     "genres": [
       "action",
@@ -4069,8 +4069,8 @@
   {
     "id": 312,
     "name": "BlackJack",
-    "cover": "{COVER_URL}/312.png",
-    "url": "{HTML_URL}/312.html",
+    "cover": "covers/312.png",
+    "url": "html/312.html",
     "author": "Synic-dx",
     "genres": [
       "action",
@@ -4083,8 +4083,8 @@
   {
     "id": 313,
     "name": "Minesweeper Mania",
-    "cover": "{COVER_URL}/313.png",
-    "url": "{HTML_URL}/313.html",
+    "cover": "covers/313.png",
+    "url": "html/313.html",
     "author": "gamesnacks",
     "genres": [
       "action",
@@ -4097,8 +4097,8 @@
   {
     "id": 314,
     "name": "Super Mario 63",
-    "cover": "{COVER_URL}/314.png",
-    "url": "{HTML_URL}/314.html",
+    "cover": "covers/314.png",
+    "url": "html/314.html",
     "author": "Runouw",
     "genres": [
       "action",
@@ -4112,8 +4112,8 @@
   {
     "id": 315,
     "name": "Jelly Mario",
-    "cover": "{COVER_URL}/315.png",
-    "url": "{HTML_URL}/315.html",
+    "cover": "covers/315.png",
+    "url": "html/315.html",
     "author": "Schteppe",
     "genres": [
       "action",
@@ -4127,8 +4127,8 @@
   {
     "id": 316,
     "name": "Angry Birds Chrome",
-    "cover": "{COVER_URL}/316.png",
-    "url": "{HTML_URL}/316.html",
+    "cover": "covers/316.png",
+    "url": "html/316.html",
     "author": "Rovio",
     "genres": [
       "action",
@@ -4142,8 +4142,8 @@
   {
     "id": 317,
     "name": "sandspiel",
-    "cover": "{COVER_URL}/317.png",
-    "url": "{HTML_URL}/317.html",
+    "cover": "covers/317.png",
+    "url": "html/317.html",
     "author": "maxbittker",
     "genres": [
       "action",
@@ -4156,8 +4156,8 @@
   {
     "id": 318,
     "name": "Side Effects",
-    "cover": "{COVER_URL}/318.png",
-    "url": "{HTML_URL}/318.html",
+    "cover": "covers/318.png",
+    "url": "html/318.html",
     "author": "hi rohun, Mr.Pootsley, Jaybooty",
     "genres": [
       "action",
@@ -4170,8 +4170,8 @@
   {
     "id": 319,
     "name": "Build a Queen",
-    "cover": "{COVER_URL}/319.png",
-    "url": "{HTML_URL}/319.html",
+    "cover": "covers/319.png",
+    "url": "html/319.html",
     "author": "Supersonic Studios LTD",
     "genres": [
       "action",
@@ -4184,8 +4184,8 @@
   {
     "id": 320,
     "name": "3D Bowling",
-    "cover": "{COVER_URL}/320.png",
-    "url": "{HTML_URL}/320.html",
+    "cover": "covers/320.png",
+    "url": "html/320.html",
     "author": "Italic Games",
     "genres": [
       "3d"
@@ -4197,8 +4197,8 @@
   {
     "id": 321,
     "name": "Room Sort",
-    "cover": "{COVER_URL}/321.png",
-    "url": "{HTML_URL}/321.html",
+    "cover": "covers/321.png",
+    "url": "html/321.html",
     "author": "Gamincat",
     "genres": [
       "action",
@@ -4211,8 +4211,8 @@
   {
     "id": 322,
     "name": "Sushi Roll",
-    "cover": "{COVER_URL}/322.png",
-    "url": "{HTML_URL}/322.html",
+    "cover": "covers/322.png",
+    "url": "html/322.html",
     "author": "Famobi",
     "genres": [
       "action",
@@ -4225,8 +4225,8 @@
   {
     "id": 323,
     "name": "Find the Alien",
-    "cover": "{COVER_URL}/323.png",
-    "url": "{HTML_URL}/323.html",
+    "cover": "covers/323.png",
+    "url": "html/323.html",
     "author": "MOONEE PUBLISHING LTD",
     "genres": [
       "action",
@@ -4239,8 +4239,8 @@
   {
     "id": 324,
     "name": "Maze Speedrun",
-    "cover": "{COVER_URL}/324.png",
-    "url": "{HTML_URL}/324.html",
+    "cover": "covers/324.png",
+    "url": "html/324.html",
     "author": "Raval Matic",
     "genres": [
       "action",
@@ -4253,8 +4253,8 @@
   {
     "id": 325,
     "name": "Kitchen Bazar",
-    "cover": "{COVER_URL}/325.png",
-    "url": "{HTML_URL}/325.html",
+    "cover": "covers/325.png",
+    "url": "html/325.html",
     "author": "Gameloft",
     "genres": [
       "action",
@@ -4267,8 +4267,8 @@
   {
     "id": 326,
     "name": "Pokey Ball",
-    "cover": "{COVER_URL}/326.png",
-    "url": "{HTML_URL}/326.html",
+    "cover": "covers/326.png",
+    "url": "html/326.html",
     "author": "Voodoo",
     "genres": [
       "action",
@@ -4281,8 +4281,8 @@
   {
     "id": 327,
     "name": "Slime.io",
-    "cover": "{COVER_URL}/327.png",
-    "url": "{HTML_URL}/327.html",
+    "cover": "covers/327.png",
+    "url": "html/327.html",
     "author": "GameSnacks",
     "genres": [
       ".io"
@@ -4294,8 +4294,8 @@
   {
     "id": 328,
     "name": "Om Nom Run",
-    "cover": "{COVER_URL}/328.png",
-    "url": "{HTML_URL}/328.html",
+    "cover": "covers/328.png",
+    "url": "html/328.html",
     "author": "ZeptoLab",
     "genres": [
       "action",
@@ -4308,8 +4308,8 @@
   {
     "id": 329,
     "name": "TileTopia",
-    "cover": "{COVER_URL}/329.png",
-    "url": "{HTML_URL}/329a.html",
+    "cover": "covers/329.png",
+    "url": "html/329a.html",
     "author": "GameSnacks",
     "genres": [
       "action",
@@ -4322,8 +4322,8 @@
   {
     "id": 330,
     "name": "BitPlanes",
-    "cover": "{COVER_URL}/330.png",
-    "url": "{HTML_URL}/330.html",
+    "cover": "covers/330.png",
+    "url": "html/330.html",
     "author": "Anton Medvedev",
     "genres": [
       "action",
@@ -4336,8 +4336,8 @@
   {
     "id": 331,
     "name": "Crazy Cars",
-    "cover": "{COVER_URL}/331.png",
-    "url": "{HTML_URL}/331.html",
+    "cover": "covers/331.png",
+    "url": "html/331.html",
     "author": "No Pressure Studios",
     "genres": [
       "racing"
@@ -4349,8 +4349,8 @@
   {
     "id": 333,
     "name": "Fancy Pants Adventure",
-    "cover": "{COVER_URL}/333.png",
-    "url": "{HTML_URL}/333.html",
+    "cover": "covers/333.png",
+    "url": "html/333.html",
     "author": "Brad Borne",
     "genres": [
       "adventure"
@@ -4362,8 +4362,8 @@
   {
     "id": 334,
     "name": "Fancy Pants Adventure 2",
-    "cover": "{COVER_URL}/334.png",
-    "url": "{HTML_URL}/334.html",
+    "cover": "covers/334.png",
+    "url": "html/334.html",
     "author": "Brad Borne",
     "genres": [
       "adventure"
@@ -4375,8 +4375,8 @@
   {
     "id": 335,
     "name": "Fancy Pants Adventure 3",
-    "cover": "{COVER_URL}/335.png",
-    "url": "{HTML_URL}/335.html",
+    "cover": "covers/335.png",
+    "url": "html/335.html",
     "author": "Brad Borne",
     "genres": [
       "adventure"
@@ -4388,8 +4388,8 @@
   {
     "id": 336,
     "name": "Fancy Pants Adventure 4 Part 1",
-    "cover": "{COVER_URL}/336.png",
-    "url": "{HTML_URL}/336.html",
+    "cover": "covers/336.png",
+    "url": "html/336.html",
     "author": "Brad Borne",
     "genres": [
       "adventure"
@@ -4401,8 +4401,8 @@
   {
     "id": 337,
     "name": "Fancy Pants Adventure 4 Part 2",
-    "cover": "{COVER_URL}/337.png",
-    "url": "{HTML_URL}/337.html",
+    "cover": "covers/337.png",
+    "url": "html/337.html",
     "author": "Brad Borne",
     "genres": [
       "adventure"
@@ -4414,8 +4414,8 @@
   {
     "id": 338,
     "name": "Getaway Shootout",
-    "cover": "{COVER_URL}/338.png",
-    "url": "{HTML_URL}/338.html",
+    "cover": "covers/338.png",
+    "url": "html/338.html",
     "author": "New Eich Games",
     "genres": [
       "shooter"
@@ -4427,8 +4427,8 @@
   {
     "id": 339,
     "name": "House of Hazards",
-    "cover": "{COVER_URL}/339.png",
-    "url": "{HTML_URL}/339.html",
+    "cover": "covers/339.png",
+    "url": "html/339.html",
     "author": "New Eich Games",
     "genres": [
       "action",
@@ -4441,8 +4441,8 @@
   {
     "id": 340,
     "name": "Learn to Fly",
-    "cover": "{COVER_URL}/340.png",
-    "url": "{HTML_URL}/340.html",
+    "cover": "covers/340.png",
+    "url": "html/340.html",
     "author": "Light Bringer Games",
     "genres": [
       "action",
@@ -4455,8 +4455,8 @@
   {
     "id": 341,
     "name": "Learn to Fly 2",
-    "cover": "{COVER_URL}/341.png",
-    "url": "{HTML_URL}/341.html",
+    "cover": "covers/341.png",
+    "url": "html/341.html",
     "author": "Light Bringer Games",
     "genres": [
       "action",
@@ -4469,8 +4469,8 @@
   {
     "id": 342,
     "name": "Learn to Fly 3",
-    "cover": "{COVER_URL}/342.png",
-    "url": "{HTML_URL}/342.html",
+    "cover": "covers/342.png",
+    "url": "html/342.html",
     "author": "Light Bringer Games",
     "genres": [
       "action",
@@ -4483,8 +4483,8 @@
   {
     "id": 343,
     "name": "Learn to Fly Idle",
-    "cover": "{COVER_URL}/343.png",
-    "url": "{HTML_URL}/343.html",
+    "cover": "covers/343.png",
+    "url": "html/343.html",
     "author": "Light Bringer Games",
     "genres": [
       "idle"
@@ -4496,8 +4496,8 @@
   {
     "id": 344,
     "name": "Raft Wars",
-    "cover": "{COVER_URL}/344.png",
-    "url": "{HTML_URL}/344.html",
+    "cover": "covers/344.png",
+    "url": "html/344.html",
     "author": "GaZZer Game",
     "genres": [
       "action",
@@ -4510,8 +4510,8 @@
   {
     "id": 345,
     "name": "Raft Wars 2",
-    "cover": "{COVER_URL}/345.png",
-    "url": "{HTML_URL}/345.html",
+    "cover": "covers/345.png",
+    "url": "html/345.html",
     "author": "GaZZer Game",
     "genres": [
       "action",
@@ -4524,8 +4524,8 @@
   {
     "id": 346,
     "name": "Sort the Court",
-    "cover": "{COVER_URL}/346.png",
-    "url": "{HTML_URL}/346.html",
+    "cover": "covers/346.png",
+    "url": "html/346.html",
     "author": "graebor",
     "genres": [
       "action",
@@ -4538,8 +4538,8 @@
   {
     "id": 347,
     "name": "SpiderDoll",
-    "cover": "{COVER_URL}/347.png",
-    "url": "{HTML_URL}/347.html",
+    "cover": "covers/347.png",
+    "url": "html/347.html",
     "author": "Ysopprod",
     "genres": [
       "action",
@@ -4552,8 +4552,8 @@
   {
     "id": 348,
     "name": "They Are Coming",
-    "cover": "{COVER_URL}/348.png",
-    "url": "{HTML_URL}/348.html",
+    "cover": "covers/348.png",
+    "url": "html/348.html",
     "author": "OnHit Developments",
     "genres": [
       "action",
@@ -4566,8 +4566,8 @@
   {
     "id": 349,
     "name": "Spiral Roll",
-    "cover": "{COVER_URL}/349.png",
-    "url": "{HTML_URL}/349.html",
+    "cover": "covers/349.png",
+    "url": "html/349.html",
     "author": "Voodoo",
     "genres": [
       "action",
@@ -4580,8 +4580,8 @@
   {
     "id": 350,
     "name": "Binding of Issac: Wrath of the Lamb",
-    "cover": "{COVER_URL}/350.png",
-    "url": "{HTML_URL}/350.html",
+    "cover": "covers/350.png",
+    "url": "html/350.html",
     "author": "Edmund McMillen",
     "genres": [
       "action",
@@ -4594,8 +4594,8 @@
   {
     "id": 351,
     "name": "Happy Sheepies",
-    "cover": "{COVER_URL}/351.png",
-    "url": "{HTML_URL}/351.html",
+    "cover": "covers/351.png",
+    "url": "html/351.html",
     "author": "Berker Games",
     "genres": [
       "action",
@@ -4608,8 +4608,8 @@
   {
     "id": 353,
     "name": "Blumgi Rocket",
-    "cover": "{COVER_URL}/353.png",
-    "url": "{HTML_URL}/353.html",
+    "cover": "covers/353.png",
+    "url": "html/353.html",
     "author": "Blumgi",
     "genres": [
       "action",
@@ -4622,8 +4622,8 @@
   {
     "id": 354,
     "name": "Adventure Capatalist",
-    "cover": "{COVER_URL}/354.png",
-    "url": "{HTML_URL}/354-a.html",
+    "cover": "covers/354.png",
+    "url": "html/354-a.html",
     "author": "Hyper Hippo Games",
     "genres": [
       "adventure"
@@ -4635,8 +4635,8 @@
   {
     "id": 355,
     "name": "Dadish 2",
-    "cover": "{COVER_URL}/355.png",
-    "url": "{HTML_URL}/355.html",
+    "cover": "covers/355.png",
+    "url": "html/355.html",
     "author": "Thomas K. Young",
     "genres": [
       "action",
@@ -4649,8 +4649,8 @@
   {
     "id": 356,
     "name": "Dadish 3",
-    "cover": "{COVER_URL}/356.png",
-    "url": "{HTML_URL}/356.html",
+    "cover": "covers/356.png",
+    "url": "html/356.html",
     "author": "Thomas K. Young",
     "genres": [
       "action",
@@ -4663,8 +4663,8 @@
   {
     "id": 357,
     "name": "Dadish",
-    "cover": "{COVER_URL}/357.png",
-    "url": "{HTML_URL}/357.html",
+    "cover": "covers/357.png",
+    "url": "html/357.html",
     "author": "Thomas K. Young",
     "genres": [
       "action",
@@ -4677,8 +4677,8 @@
   {
     "id": 358,
     "name": "Dadish 3D",
-    "cover": "{COVER_URL}/358.png",
-    "url": "{HTML_URL}/358.html",
+    "cover": "covers/358.png",
+    "url": "html/358.html",
     "author": "Thomas K. Young",
     "genres": [
       "3d"
@@ -4690,8 +4690,8 @@
   {
     "id": 359,
     "name": "Daily Dadish",
-    "cover": "{COVER_URL}/359.png",
-    "url": "{HTML_URL}/359.html",
+    "cover": "covers/359.png",
+    "url": "html/359.html",
     "author": "Thomas K. Young",
     "genres": [
       "action",
@@ -4704,8 +4704,8 @@
   {
     "id": 360,
     "name": "EvoWars.io",
-    "cover": "{COVER_URL}/360.png",
-    "url": "{HTML_URL}/360.html",
+    "cover": "covers/360.png",
+    "url": "html/360.html",
     "author": "Night Steed S.C.",
     "genres": [
       "action",
@@ -4719,8 +4719,8 @@
   {
     "id": 361,
     "name": "Google Feud",
-    "cover": "{COVER_URL}/361.png",
-    "url": "{HTML_URL}/361.html",
+    "cover": "covers/361.png",
+    "url": "html/361.html",
     "author": "Justin Hook",
     "genres": [
       "action",
@@ -4733,8 +4733,8 @@
   {
     "id": 362,
     "name": "Idle Breakout",
-    "cover": "{COVER_URL}/362.png",
-    "url": "{HTML_URL}/362.html",
+    "cover": "covers/362.png",
+    "url": "html/362.html",
     "author": "Kodiqi",
     "genres": [
       "idle"
@@ -4746,8 +4746,8 @@
   {
     "id": 363,
     "name": "Idle Lumber Inc",
-    "cover": "{COVER_URL}/363.png",
-    "url": "{HTML_URL}/363.html",
+    "cover": "covers/363.png",
+    "url": "html/363.html",
     "author": "NoPowerUp",
     "genres": [
       "idle"
@@ -4759,8 +4759,8 @@
   {
     "id": 364,
     "name": "Idle Mining Empire",
-    "cover": "{COVER_URL}/364.png",
-    "url": "{HTML_URL}/364.html",
+    "cover": "covers/364.png",
+    "url": "html/364.html",
     "author": "marketjs",
     "genres": [
       "idle"
@@ -4772,8 +4772,8 @@
   {
     "id": 365,
     "name": "JustFall.lol",
-    "cover": "{COVER_URL}/365.png",
-    "url": "{HTML_URL}/365.html",
+    "cover": "covers/365.png",
+    "url": "html/365.html",
     "author": "JustPlay.LOL",
     "genres": [
       "action",
@@ -4786,8 +4786,8 @@
   {
     "id": 366,
     "name": "Merge Harvest",
-    "cover": "{COVER_URL}/366.png",
-    "url": "{HTML_URL}/366.html",
+    "cover": "covers/366.png",
+    "url": "html/366.html",
     "author": "idfk",
     "genres": [
       "strategy",
@@ -4800,8 +4800,8 @@
   {
     "id": 367,
     "name": "Parking Fury 3D",
-    "cover": "{COVER_URL}/367.png",
-    "url": "{HTML_URL}/367.html",
+    "cover": "covers/367.png",
+    "url": "html/367.html",
     "author": "Brain Software",
     "genres": [
       "3d"
@@ -4813,8 +4813,8 @@
   {
     "id": 368,
     "name": "Slope 2",
-    "cover": "{COVER_URL}/368.png",
-    "url": "{HTML_URL}/368.html",
+    "cover": "covers/368.png",
+    "url": "html/368.html",
     "author": "idfk",
     "genres": [
       "action",
@@ -4828,8 +4828,8 @@
   {
     "id": 369,
     "name": "Slowroads",
-    "cover": "{COVER_URL}/369.png",
-    "url": "{HTML_URL}/369.html",
+    "cover": "covers/369.png",
+    "url": "html/369.html",
     "author": "Topograph Interactive",
     "genres": [
       "action",
@@ -4842,8 +4842,8 @@
   {
     "id": 370,
     "name": "Smash Karts",
-    "cover": "{COVER_URL}/370.png",
-    "url": "{HTML_URL}/370-f.html",
+    "cover": "covers/370.png",
+    "url": "html/370-f.html",
     "author": "Tall Team",
     "genres": [
       "action",
@@ -4856,8 +4856,8 @@
   {
     "id": 371,
     "name": "Stickman Fight Ragdoll",
-    "cover": "{COVER_URL}/371.png",
-    "url": "{HTML_URL}/371e.html",
+    "cover": "covers/371.png",
+    "url": "html/371e.html",
     "author": "Vanorium",
     "genres": [
       "action"
@@ -4869,8 +4869,8 @@
   {
     "id": 372,
     "name": "Stickman Boost",
-    "cover": "{COVER_URL}/372.png",
-    "url": "{HTML_URL}/372.html",
+    "cover": "covers/372.png",
+    "url": "html/372.html",
     "author": "y8",
     "genres": [
       "action"
@@ -4882,8 +4882,8 @@
   {
     "id": 373,
     "name": "Stickman Climb",
-    "cover": "{COVER_URL}/373.png",
-    "url": "{HTML_URL}/373.html",
+    "cover": "covers/373.png",
+    "url": "html/373.html",
     "author": "No Pressure Studios",
     "genres": [
       "action"
@@ -4895,8 +4895,8 @@
   {
     "id": 374,
     "name": "Stickman Golf",
-    "cover": "{COVER_URL}/374.png",
-    "url": "{HTML_URL}/374e.html",
+    "cover": "covers/374.png",
+    "url": "html/374e.html",
     "author": "NoodleCake",
     "genres": [
       "action"
@@ -4908,8 +4908,8 @@
   {
     "id": 375,
     "name": "2048 Merge Run",
-    "cover": "{COVER_URL}/375.png",
-    "url": "{HTML_URL}/375.html",
+    "cover": "covers/375.png",
+    "url": "html/375.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -4924,8 +4924,8 @@
   {
     "id": 376,
     "name": "Build a Big Army",
-    "cover": "{COVER_URL}/376.png",
-    "url": "{HTML_URL}/376.html",
+    "cover": "covers/376.png",
+    "url": "html/376.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -4938,8 +4938,8 @@
   {
     "id": 377,
     "name": "Build a Plane",
-    "cover": "{COVER_URL}/377.png",
-    "url": "{HTML_URL}/377.html",
+    "cover": "covers/377.png",
+    "url": "html/377.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -4952,8 +4952,8 @@
   {
     "id": 378,
     "name": "Camouflage and Sniper",
-    "cover": "{COVER_URL}/378.png",
-    "url": "{HTML_URL}/378.html",
+    "cover": "covers/378.png",
+    "url": "html/378.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -4966,8 +4966,8 @@
   {
     "id": 379,
     "name": "Car Survival 3D",
-    "cover": "{COVER_URL}/379.png",
-    "url": "{HTML_URL}/379.html",
+    "cover": "covers/379.png",
+    "url": "html/379.html",
     "author": "Yandex",
     "genres": [
       "3d",
@@ -4980,8 +4980,8 @@
   {
     "id": 380,
     "name": "City Defense",
-    "cover": "{COVER_URL}/380.png",
-    "url": "{HTML_URL}/380.html",
+    "cover": "covers/380.png",
+    "url": "html/380.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -4994,8 +4994,8 @@
   {
     "id": 381,
     "name": "Clothing Shop 3D",
-    "cover": "{COVER_URL}/381.png",
-    "url": "{HTML_URL}/381.html",
+    "cover": "covers/381.png",
+    "url": "html/381.html",
     "author": "Yandex",
     "genres": [
       "3d"
@@ -5007,8 +5007,8 @@
   {
     "id": 382,
     "name": "Cool Cars Run 3D",
-    "cover": "{COVER_URL}/382.png",
-    "url": "{HTML_URL}/382.html",
+    "cover": "covers/382.png",
+    "url": "html/382.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5024,8 +5024,8 @@
   {
     "id": 383,
     "name": "Crush Cars 3D",
-    "cover": "{COVER_URL}/383.png",
-    "url": "{HTML_URL}/383.html",
+    "cover": "covers/383.png",
+    "url": "html/383.html",
     "author": "Yandex",
     "genres": [
       "3d",
@@ -5038,8 +5038,8 @@
   {
     "id": 384,
     "name": "Destiny Run 3D",
-    "cover": "{COVER_URL}/384.png",
-    "url": "{HTML_URL}/384.html",
+    "cover": "covers/384.png",
+    "url": "html/384.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5054,8 +5054,8 @@
   {
     "id": 385,
     "name": "Destroy The Car 3D",
-    "cover": "{COVER_URL}/385.png",
-    "url": "{HTML_URL}/385.html",
+    "cover": "covers/385.png",
+    "url": "html/385.html",
     "author": "Yandex",
     "genres": [
       "3d",
@@ -5068,8 +5068,8 @@
   {
     "id": 386,
     "name": "Diamond Seeker",
-    "cover": "{COVER_URL}/386.png",
-    "url": "{HTML_URL}/386.html",
+    "cover": "covers/386.png",
+    "url": "html/386.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5082,8 +5082,8 @@
   {
     "id": 387,
     "name": "Draw Joust",
-    "cover": "{COVER_URL}/387.png",
-    "url": "{HTML_URL}/387.html",
+    "cover": "covers/387.png",
+    "url": "html/387.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5096,8 +5096,8 @@
   {
     "id": 388,
     "name": "Evolving Bombs 3D",
-    "cover": "{COVER_URL}/388.png",
-    "url": "{HTML_URL}/388.html",
+    "cover": "covers/388.png",
+    "url": "html/388.html",
     "author": "Yandex",
     "genres": [
       "3d"
@@ -5109,8 +5109,8 @@
   {
     "id": 389,
     "name": "Fire and Frost Master",
-    "cover": "{COVER_URL}/389.png",
-    "url": "{HTML_URL}/389.html",
+    "cover": "covers/389.png",
+    "url": "html/389.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5123,8 +5123,8 @@
   {
     "id": 390,
     "name": "Fitness Empire",
-    "cover": "{COVER_URL}/390.png",
-    "url": "{HTML_URL}/390.html",
+    "cover": "covers/390.png",
+    "url": "html/390.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5137,8 +5137,8 @@
   {
     "id": 391,
     "name": "Flick Goal",
-    "cover": "{COVER_URL}/391.png",
-    "url": "{HTML_URL}/391.html",
+    "cover": "covers/391.png",
+    "url": "html/391.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5151,8 +5151,8 @@
   {
     "id": 392,
     "name": "Flip Master",
-    "cover": "{COVER_URL}/392.png",
-    "url": "{HTML_URL}/392.html",
+    "cover": "covers/392.png",
+    "url": "html/392.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5165,8 +5165,8 @@
   {
     "id": 393,
     "name": "Giant Wanted",
-    "cover": "{COVER_URL}/393.png",
-    "url": "{HTML_URL}/393.html",
+    "cover": "covers/393.png",
+    "url": "html/393.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5179,8 +5179,8 @@
   {
     "id": 394,
     "name": "Gun Clone",
-    "cover": "{COVER_URL}/394.png",
-    "url": "{HTML_URL}/394.html",
+    "cover": "covers/394.png",
+    "url": "html/394.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5193,8 +5193,8 @@
   {
     "id": 395,
     "name": "Gun Runner",
-    "cover": "{COVER_URL}/395.png",
-    "url": "{HTML_URL}/395.html",
+    "cover": "covers/395.png",
+    "url": "html/395.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5207,8 +5207,8 @@
   {
     "id": 396,
     "name": "Kaji Run",
-    "cover": "{COVER_URL}/396.png",
-    "url": "{HTML_URL}/396.html",
+    "cover": "covers/396.png",
+    "url": "html/396.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5221,8 +5221,8 @@
   {
     "id": 397,
     "name": "Make a SuperBoat",
-    "cover": "{COVER_URL}/397.png",
-    "url": "{HTML_URL}/397.html",
+    "cover": "covers/397.png",
+    "url": "html/397.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5235,8 +5235,8 @@
   {
     "id": 398,
     "name": "Makeover Run",
-    "cover": "{COVER_URL}/398.png",
-    "url": "{HTML_URL}/398.html",
+    "cover": "covers/398.png",
+    "url": "html/398.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5249,8 +5249,8 @@
   {
     "id": 399,
     "name": "Mega Car Jumps",
-    "cover": "{COVER_URL}/399.png",
-    "url": "{HTML_URL}/399.html",
+    "cover": "covers/399.png",
+    "url": "html/399.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5264,8 +5264,8 @@
   {
     "id": 400,
     "name": "Money Rush",
-    "cover": "{COVER_URL}/400.png",
-    "url": "{HTML_URL}/400.html",
+    "cover": "covers/400.png",
+    "url": "html/400.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5278,8 +5278,8 @@
   {
     "id": 401,
     "name": "Monster Box 3D",
-    "cover": "{COVER_URL}/401.png",
-    "url": "{HTML_URL}/401.html",
+    "cover": "covers/401.png",
+    "url": "html/401.html",
     "author": "Yandex",
     "genres": [
       "3d"
@@ -5291,8 +5291,8 @@
   {
     "id": 402,
     "name": "Office Fight",
-    "cover": "{COVER_URL}/402.png",
-    "url": "{HTML_URL}/402.html",
+    "cover": "covers/402.png",
+    "url": "html/402.html",
     "author": "Yandex",
     "genres": [
       "action"
@@ -5304,8 +5304,8 @@
   {
     "id": 403,
     "name": "Robot Invasion",
-    "cover": "{COVER_URL}/403.png",
-    "url": "{HTML_URL}/403.html",
+    "cover": "covers/403.png",
+    "url": "html/403.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5318,8 +5318,8 @@
   {
     "id": 404,
     "name": "Seat Jam 3D",
-    "cover": "{COVER_URL}/404.png",
-    "url": "{HTML_URL}/404.html",
+    "cover": "covers/404.png",
+    "url": "html/404.html",
     "author": "Yandex",
     "genres": [
       "3d"
@@ -5331,8 +5331,8 @@
   {
     "id": 405,
     "name": "Shooting Master",
-    "cover": "{COVER_URL}/405.png",
-    "url": "{HTML_URL}/405.html",
+    "cover": "covers/405.png",
+    "url": "html/405.html",
     "author": "Yandex",
     "genres": [
       "shooter"
@@ -5344,8 +5344,8 @@
   {
     "id": 406,
     "name": "Supermarket 3D",
-    "cover": "{COVER_URL}/406.png",
-    "url": "{HTML_URL}/406.html",
+    "cover": "covers/406.png",
+    "url": "html/406.html",
     "author": "Yandex",
     "genres": [
       "3d"
@@ -5357,8 +5357,8 @@
   {
     "id": 407,
     "name": "Survive to Victory",
-    "cover": "{COVER_URL}/407.png",
-    "url": "{HTML_URL}/407.html",
+    "cover": "covers/407.png",
+    "url": "html/407.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5371,8 +5371,8 @@
   {
     "id": 408,
     "name": "Telekinesis Attack",
-    "cover": "{COVER_URL}/408.png",
-    "url": "{HTML_URL}/408.html",
+    "cover": "covers/408.png",
+    "url": "html/408.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5385,8 +5385,8 @@
   {
     "id": 409,
     "name": "Telekinesis Car",
-    "cover": "{COVER_URL}/409.png",
-    "url": "{HTML_URL}/409.html",
+    "cover": "covers/409.png",
+    "url": "html/409.html",
     "author": "Yandex",
     "genres": [
       "racing"
@@ -5398,8 +5398,8 @@
   {
     "id": 410,
     "name": "Telekinesis Drive",
-    "cover": "{COVER_URL}/410.png",
-    "url": "{HTML_URL}/410.html",
+    "cover": "covers/410.png",
+    "url": "html/410.html",
     "author": "Yandex",
     "genres": [
       "racing"
@@ -5411,8 +5411,8 @@
   {
     "id": 411,
     "name": "Telekinesis",
-    "cover": "{COVER_URL}/411.png",
-    "url": "{HTML_URL}/411.html",
+    "cover": "covers/411.png",
+    "url": "html/411.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5425,8 +5425,8 @@
   {
     "id": 413,
     "name": "Tug of War with Cars",
-    "cover": "{COVER_URL}/413.png",
-    "url": "{HTML_URL}/413.html",
+    "cover": "covers/413.png",
+    "url": "html/413.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5440,8 +5440,8 @@
   {
     "id": 414,
     "name": "Twerk Race 3D",
-    "cover": "{COVER_URL}/414.png",
-    "url": "{HTML_URL}/414.html",
+    "cover": "covers/414.png",
+    "url": "html/414.html",
     "author": "Yandex",
     "genres": [
       "3d"
@@ -5453,8 +5453,8 @@
   {
     "id": 415,
     "name": "Twisted Rope 3D",
-    "cover": "{COVER_URL}/415.png",
-    "url": "{HTML_URL}/415.html",
+    "cover": "covers/415.png",
+    "url": "html/415.html",
     "author": "Yandex",
     "genres": [
       "3d"
@@ -5466,8 +5466,8 @@
   {
     "id": 416,
     "name": "Wall Crawler",
-    "cover": "{COVER_URL}/416.png",
-    "url": "{HTML_URL}/416.html",
+    "cover": "covers/416.png",
+    "url": "html/416.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5480,8 +5480,8 @@
   {
     "id": 417,
     "name": "War Regions",
-    "cover": "{COVER_URL}/417.png",
-    "url": "{HTML_URL}/417.html",
+    "cover": "covers/417.png",
+    "url": "html/417.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5494,8 +5494,8 @@
   {
     "id": 418,
     "name": "Weapon Craft Run",
-    "cover": "{COVER_URL}/418.png",
-    "url": "{HTML_URL}/418.html",
+    "cover": "covers/418.png",
+    "url": "html/418.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5509,8 +5509,8 @@
   {
     "id": 419,
     "name": "Weapon Upgrade Rush",
-    "cover": "{COVER_URL}/419.png",
-    "url": "{HTML_URL}/419.html",
+    "cover": "covers/419.png",
+    "url": "html/419.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5523,8 +5523,8 @@
   {
     "id": 420,
     "name": "Weapon Scale",
-    "cover": "{COVER_URL}/420.png",
-    "url": "{HTML_URL}/420.html",
+    "cover": "covers/420.png",
+    "url": "html/420.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5537,8 +5537,8 @@
   {
     "id": 421,
     "name": "Rich Run 3D",
-    "cover": "{COVER_URL}/421.png",
-    "url": "{HTML_URL}/421.html",
+    "cover": "covers/421.png",
+    "url": "html/421.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5553,8 +5553,8 @@
   {
     "id": 422,
     "name": "High Heels",
-    "cover": "{COVER_URL}/422.png",
-    "url": "{HTML_URL}/422.html",
+    "cover": "covers/422.png",
+    "url": "html/422.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5567,8 +5567,8 @@
   {
     "id": 423,
     "name": "WebFishing",
-    "cover": "{COVER_URL}/423.png",
-    "url": "{HTML_URL}/423.html",
+    "cover": "covers/423.png",
+    "url": "html/423.html",
     "author": "LameDev",
     "genres": [
       "action",
@@ -5581,8 +5581,8 @@
   {
     "id": 426,
     "name": "Andy's Apple Farm",
-    "cover": "{COVER_URL}/426.png",
-    "url": "{HTML_URL}/426.html",
+    "cover": "covers/426.png",
+    "url": "html/426.html",
     "author": "M36games",
     "genres": [
       "action",
@@ -5595,8 +5595,8 @@
   {
     "id": 427,
     "name": "OMORI",
-    "cover": "{COVER_URL}/427.png",
-    "url": "{HTML_URL}/427-z.html",
+    "cover": "covers/427.png",
+    "url": "html/427-z.html",
     "author": "Omocat",
     "genres": [
       "action",
@@ -5609,8 +5609,8 @@
   {
     "id": 428,
     "name": "Five Nights at Freddy's 4: Halloween",
-    "cover": "{COVER_URL}/428.png",
-    "url": "{HTML_URL}/428.html",
+    "cover": "covers/428.png",
+    "url": "html/428.html",
     "author": "Scott Cawthon",
     "genres": [
       "3d",
@@ -5624,8 +5624,8 @@
   {
     "id": 430,
     "name": "10 Minutes Till Dawn",
-    "cover": "{COVER_URL}/430.png",
-    "url": "{HTML_URL}/430.html",
+    "cover": "covers/430.png",
+    "url": "html/430.html",
     "author": "flanne",
     "genres": [
       "action",
@@ -5638,8 +5638,8 @@
   {
     "id": 431,
     "name": "99 Balls",
-    "cover": "{COVER_URL}/431.png",
-    "url": "{HTML_URL}/431.html",
+    "cover": "covers/431.png",
+    "url": "html/431.html",
     "author": "Diamond Games",
     "genres": [
       "action",
@@ -5652,8 +5652,8 @@
   {
     "id": 432,
     "name": "Abandoned",
-    "cover": "{COVER_URL}/432.png",
-    "url": "{HTML_URL}/432.html",
+    "cover": "covers/432.png",
+    "url": "html/432.html",
     "author": "krutovig",
     "genres": [
       "action",
@@ -5666,8 +5666,8 @@
   {
     "id": 433,
     "name": "Yume Nikki",
-    "cover": "{COVER_URL}/433.png",
-    "url": "{HTML_URL}/433.html",
+    "cover": "covers/433.png",
+    "url": "html/433.html",
     "author": "kikiyama",
     "genres": [
       "action",
@@ -5680,8 +5680,8 @@
   {
     "id": 434,
     "name": "God's Flesh",
-    "cover": "{COVER_URL}/434.png",
-    "url": "{HTML_URL}/434.html",
+    "cover": "covers/434.png",
+    "url": "html/434.html",
     "author": "Glompyy",
     "genres": [
       "action",
@@ -5694,8 +5694,8 @@
   {
     "id": 435,
     "name": "A Small World Cup",
-    "cover": "{COVER_URL}/435.png",
-    "url": "{HTML_URL}/435.html",
+    "cover": "covers/435.png",
+    "url": "html/435.html",
     "author": "rujogames",
     "genres": [
       "action",
@@ -5708,8 +5708,8 @@
   {
     "id": 436,
     "name": "Awesome Tanks",
-    "cover": "{COVER_URL}/436.png",
-    "url": "{HTML_URL}/436.html",
+    "cover": "covers/436.png",
+    "url": "html/436.html",
     "author": "coolmathgames",
     "genres": [
       "action",
@@ -5722,8 +5722,8 @@
   {
     "id": 437,
     "name": "Bouncemasters",
-    "cover": "{COVER_URL}/437.png",
-    "url": "{HTML_URL}/437.html",
+    "cover": "covers/437.png",
+    "url": "html/437.html",
     "author": "Azur Games, Playgendary",
     "genres": [
       "action",
@@ -5736,8 +5736,8 @@
   {
     "id": 438,
     "name": "Awesome Tanks 2",
-    "cover": "{COVER_URL}/438.png",
-    "url": "{HTML_URL}/438.html",
+    "cover": "covers/438.png",
+    "url": "html/438.html",
     "author": "coolmathgames",
     "genres": [
       "action",
@@ -5750,8 +5750,8 @@
   {
     "id": 439,
     "name": "Bank Robbery 2",
-    "cover": "{COVER_URL}/439.png",
-    "url": "{HTML_URL}/439.html",
+    "cover": "covers/439.png",
+    "url": "html/439.html",
     "author": "justaliendev",
     "genres": [
       "action",
@@ -5764,8 +5764,8 @@
   {
     "id": 440,
     "name": "Celeste PICO",
-    "cover": "{COVER_URL}/440.png",
-    "url": "{HTML_URL}/440.html",
+    "cover": "covers/440.png",
+    "url": "html/440.html",
     "author": "Matt Thorson and Noel Berry",
     "genres": [
       "action",
@@ -5778,8 +5778,8 @@
   {
     "id": 441,
     "name": "Kitty Toy",
-    "cover": "{COVER_URL}/441.png",
-    "url": "{HTML_URL}/441.html",
+    "cover": "covers/441.png",
+    "url": "html/441.html",
     "author": "Rakqoi",
     "genres": [
       "action",
@@ -5792,8 +5792,8 @@
   {
     "id": 442,
     "name": "Infinimoes",
-    "cover": "{COVER_URL}/442.png",
-    "url": "{HTML_URL}/442.html",
+    "cover": "covers/442.png",
+    "url": "html/442.html",
     "author": "Werxzy",
     "genres": [
       "action",
@@ -5806,8 +5806,8 @@
   {
     "id": 443,
     "name": "Adventure Drivers",
-    "cover": "{COVER_URL}/443.png",
-    "url": "{HTML_URL}/443.html",
+    "cover": "covers/443.png",
+    "url": "html/443.html",
     "author": "Domas Kazragis",
     "genres": [
       "adventure",
@@ -5820,8 +5820,8 @@
   {
     "id": 444,
     "name": "Ages of Conflict",
-    "cover": "{COVER_URL}/444.png",
-    "url": "{HTML_URL}/444.html",
+    "cover": "covers/444.png",
+    "url": "html/444.html",
     "author": "JoySpark Games",
     "genres": [
       "action",
@@ -5834,8 +5834,8 @@
   {
     "id": 445,
     "name": "Kindergarten",
-    "cover": "{COVER_URL}/445.png",
-    "url": "{HTML_URL}/445.html",
+    "cover": "covers/445.png",
+    "url": "html/445.html",
     "author": "Con Man Games, SmashGames and Sean Young",
     "genres": [
       "action",
@@ -5848,8 +5848,8 @@
   {
     "id": 446,
     "name": "Kindergarten 2",
-    "cover": "{COVER_URL}/446.png",
-    "url": "{HTML_URL}/446.html",
+    "cover": "covers/446.png",
+    "url": "html/446.html",
     "author": "Con Man Games, SmashGames and Sean Young",
     "genres": [
       "action",
@@ -5862,8 +5862,8 @@
   {
     "id": 447,
     "name": "Nijika's Ahoge",
-    "cover": "{COVER_URL}/447.png",
-    "url": "{HTML_URL}/447-e.html",
+    "cover": "covers/447.png",
+    "url": "html/447-e.html",
     "author": "TamaniDamani",
     "genres": [
       "action",
@@ -5876,8 +5876,8 @@
   {
     "id": 448,
     "name": "Aquapark.io",
-    "cover": "{COVER_URL}/448.png",
-    "url": "{HTML_URL}/448.html",
+    "cover": "covers/448.png",
+    "url": "html/448.html",
     "author": "Voodoo",
     "genres": [
       ".io"
@@ -5889,8 +5889,8 @@
   {
     "id": 449,
     "name": "City Smash",
-    "cover": "{COVER_URL}/449.png",
-    "url": "{HTML_URL}/449.html",
+    "cover": "covers/449.png",
+    "url": "html/449.html",
     "author": "Paradyme Games",
     "genres": [
       "action",
@@ -5903,8 +5903,8 @@
   {
     "id": 450,
     "name": "Amanda the Adventurer",
-    "cover": "{COVER_URL}/450.png",
-    "url": "{HTML_URL}/450.html",
+    "cover": "covers/450.png",
+    "url": "html/450.html",
     "author": "MANGLEDmaw Games, DreadXP",
     "genres": [
       "adventure"
@@ -5916,8 +5916,8 @@
   {
     "id": 451,
     "name": "Slender: The 8 Pages",
-    "cover": "{COVER_URL}/451.png",
-    "url": "{HTML_URL}/451.html",
+    "cover": "covers/451.png",
+    "url": "html/451.html",
     "author": "Parsec Productions",
     "genres": [
       "action",
@@ -5930,8 +5930,8 @@
   {
     "id": 452,
     "name": "Station 141",
-    "cover": "{COVER_URL}/452.png",
-    "url": "{HTML_URL}/452.html",
+    "cover": "covers/452.png",
+    "url": "html/452.html",
     "author": "Maksim Chmutov",
     "genres": [
       "action",
@@ -5944,8 +5944,8 @@
   {
     "id": 453,
     "name": "Station Saturn",
-    "cover": "{COVER_URL}/453.png",
-    "url": "{HTML_URL}/453.html",
+    "cover": "covers/453.png",
+    "url": "html/453.html",
     "author": "Maksim Chmutov",
     "genres": [
       "action",
@@ -5958,8 +5958,8 @@
   {
     "id": 454,
     "name": "BLOODMONEY!",
-    "cover": "{COVER_URL}/454.png",
-    "url": "{HTML_URL}/454.html",
+    "cover": "covers/454.png",
+    "url": "html/454.html",
     "author": "SHROOMYCHRIST-STUDIOS",
     "genres": [
       "action",
@@ -5972,8 +5972,8 @@
   {
     "id": 455,
     "name": "BERGENTRUCK 201x",
-    "cover": "{COVER_URL}/455.png",
-    "url": "{HTML_URL}/455.html",
+    "cover": "covers/455.png",
+    "url": "html/455.html",
     "author": "Paledoptera",
     "genres": [
       "racing"
@@ -5985,8 +5985,8 @@
   {
     "id": 456,
     "name": "Undertale Yellow",
-    "cover": "{COVER_URL}/456.png",
-    "url": "{HTML_URL}/456.html",
+    "cover": "covers/456.png",
+    "url": "html/456.html",
     "author": "Team Undertale Yellow",
     "genres": [
       "action",
@@ -5999,8 +5999,8 @@
   {
     "id": 457,
     "name": "Raft",
-    "cover": "{COVER_URL}/457.png",
-    "url": "{HTML_URL}/457.html",
+    "cover": "covers/457.png",
+    "url": "html/457.html",
     "author": "Redbeet Interactive, Axolot Games, Ashen Arrow",
     "genres": [
       "action",
@@ -6013,8 +6013,8 @@
   {
     "id": 458,
     "name": "The Deadseat",
-    "cover": "{COVER_URL}/458.png",
-    "url": "{HTML_URL}/458.html",
+    "cover": "covers/458.png",
+    "url": "html/458.html",
     "author": "Curious Fox Sox",
     "genres": [
       "action",
@@ -6027,8 +6027,8 @@
   {
     "id": 459,
     "name": "The Man In The Window",
-    "cover": "{COVER_URL}/459.png",
-    "url": "{HTML_URL}/459.html",
+    "cover": "covers/459.png",
+    "url": "html/459.html",
     "author": "Zed Technician",
     "genres": [
       "action",
@@ -6041,8 +6041,8 @@
   {
     "id": 460,
     "name": "Fears to Fathom: Home Alone",
-    "cover": "{COVER_URL}/460.png",
-    "url": "{HTML_URL}/460.html",
+    "cover": "covers/460.png",
+    "url": "html/460.html",
     "author": "Rayll",
     "genres": [
       "action",
@@ -6055,8 +6055,8 @@
   {
     "id": 461,
     "name": "Slither.io",
-    "cover": "{COVER_URL}/461.png",
-    "url": "{HTML_URL}/461.html",
+    "cover": "covers/461.png",
+    "url": "html/461.html",
     "author": "slither.io",
     "genres": [
       "action",
@@ -6070,8 +6070,8 @@
   {
     "id": 462,
     "name": "DEAD PLATE",
-    "cover": "{COVER_URL}/462.png",
-    "url": "{HTML_URL}/462.html",
+    "cover": "covers/462.png",
+    "url": "html/462.html",
     "author": "racheldrawsthis",
     "genres": [
       "action",
@@ -6084,8 +6084,8 @@
   {
     "id": 463,
     "name": "Lacey's Flash Games",
-    "cover": "{COVER_URL}/463.png",
-    "url": "{HTML_URL}/463.html",
+    "cover": "covers/463.png",
+    "url": "html/463.html",
     "author": "ghosttundra, Euroclipse, Brand New Groove",
     "genres": [
       "action",
@@ -6098,8 +6098,8 @@
   {
     "id": 464,
     "name": "Choppy Orc",
-    "cover": "{COVER_URL}/464.png",
-    "url": "{HTML_URL}/464.html",
+    "cover": "covers/464.png",
+    "url": "html/464.html",
     "author": "eddynardo",
     "genres": [
       "action",
@@ -6112,8 +6112,8 @@
   {
     "id": 465,
     "name": "Cuphead",
-    "cover": "{COVER_URL}/465.png",
-    "url": "{HTML_URL}/465.html",
+    "cover": "covers/465.png",
+    "url": "html/465.html",
     "author": "Studio MDHR Entertainment Inc",
     "genres": [
       "action",
@@ -6126,8 +6126,8 @@
   {
     "id": 466,
     "name": "Baldi's Basics Classic Remastered",
-    "cover": "{COVER_URL}/466.png",
-    "url": "{HTML_URL}/466.html",
+    "cover": "covers/466.png",
+    "url": "html/466.html",
     "author": "Basically Games",
     "genres": [
       "skill"
@@ -6139,8 +6139,8 @@
   {
     "id": 467,
     "name": "Baldi's Basics Plus",
-    "cover": "{COVER_URL}/467.png",
-    "url": "{HTML_URL}/467-updatee.html",
+    "cover": "covers/467.png",
+    "url": "html/467-updatee.html",
     "author": "Basically Games",
     "genres": [
       "action",
@@ -6153,8 +6153,8 @@
   {
     "id": 468,
     "name": "Hollow Knight",
-    "cover": "{COVER_URL}/468.png",
-    "url": "{HTML_URL}/468-f.html",
+    "cover": "covers/468.png",
+    "url": "html/468-f.html",
     "author": "Team Cherry",
     "genres": [
       "action",
@@ -6167,8 +6167,8 @@
   {
     "id": 470,
     "name": "Doodle Jump",
-    "cover": "{COVER_URL}/470.png",
-    "url": "{HTML_URL}/470.html",
+    "cover": "covers/470.png",
+    "url": "html/470.html",
     "author": "Marko Pusenjak",
     "genres": [
       "action",
@@ -6182,8 +6182,8 @@
   {
     "id": 471,
     "name": "Madness Combat: Project Nexus (classic)",
-    "cover": "{COVER_URL}/471.png",
-    "url": "{HTML_URL}/471.html",
+    "cover": "covers/471.png",
+    "url": "html/471.html",
     "author": "Krinkels, The-Swain, cheshyre, Luis, Rebel666",
     "genres": [
       "skill"
@@ -6195,8 +6195,8 @@
   {
     "id": 472,
     "name": "Bad Time Simulator",
-    "cover": "{COVER_URL}/472.png",
-    "url": "{HTML_URL}/472.html",
+    "cover": "covers/472.png",
+    "url": "html/472.html",
     "author": "jcw87",
     "genres": [
       "3d"
@@ -6208,8 +6208,8 @@
   {
     "id": 473,
     "name": "Spacebar Clicker",
-    "cover": "{COVER_URL}/473.png",
-    "url": "{HTML_URL}/473.html",
+    "cover": "covers/473.png",
+    "url": "html/473.html",
     "author": "Bruno Croci",
     "genres": [
       "idle"
@@ -6221,8 +6221,8 @@
   {
     "id": 474,
     "name": "Friday Night Funkin': V.S. Whitty",
-    "cover": "{COVER_URL}/474.png",
-    "url": "{HTML_URL}/474.html",
+    "cover": "covers/474.png",
+    "url": "html/474.html",
     "author": "Nate Anim8",
     "genres": [
       "action",
@@ -6235,8 +6235,8 @@
   {
     "id": 475,
     "name": "Friday Night Funkin': B-Sides",
-    "cover": "{COVER_URL}/475.png",
-    "url": "{HTML_URL}/475.html",
+    "cover": "covers/475.png",
+    "url": "html/475.html",
     "author": "Rozebud",
     "genres": [
       "action",
@@ -6249,8 +6249,8 @@
   {
     "id": 476,
     "name": "Friday Night Funkin': Vs. Hex",
-    "cover": "{COVER_URL}/476.png",
-    "url": "{HTML_URL}/476.html",
+    "cover": "covers/476.png",
+    "url": "html/476.html",
     "author": "YingYang48 etc",
     "genres": [
       "action",
@@ -6263,8 +6263,8 @@
   {
     "id": 477,
     "name": "Friday Night Funkin': Vs. Hatsune Miku",
-    "cover": "{COVER_URL}/477.png",
-    "url": "{HTML_URL}/477.html",
+    "cover": "covers/477.png",
+    "url": "html/477.html",
     "author": "evidal etc",
     "genres": [
       "action",
@@ -6277,8 +6277,8 @@
   {
     "id": 478,
     "name": "Friday Night Funkin': Neo",
-    "cover": "{COVER_URL}/478.png",
-    "url": "{HTML_URL}/478.html",
+    "cover": "covers/478.png",
+    "url": "html/478.html",
     "author": "JellyFishedm etc",
     "genres": [
       "action",
@@ -6291,8 +6291,8 @@
   {
     "id": 479,
     "name": "Steal A Brainrot",
-    "cover": "{COVER_URL}/479.png",
-    "url": "{HTML_URL}/479.html",
+    "cover": "covers/479.png",
+    "url": "html/479.html",
     "author": "nagami games",
     "genres": [
       "strategy"
@@ -6304,8 +6304,8 @@
   {
     "id": 480,
     "name": "Friday Night Funkin': Sarvente's Mid-Fight Masses",
-    "cover": "{COVER_URL}/480.png",
-    "url": "{HTML_URL}/480.html",
+    "cover": "covers/480.png",
+    "url": "html/480.html",
     "author": "Dokki.doodlez etc",
     "genres": [
       "action",
@@ -6318,8 +6318,8 @@
   {
     "id": 481,
     "name": "Friday Night Funkin': vs. Tricky",
-    "cover": "{COVER_URL}/481.png",
-    "url": "{HTML_URL}/481.html",
+    "cover": "covers/481.png",
+    "url": "html/481.html",
     "author": "Banbuds etc",
     "genres": [
       "action",
@@ -6332,8 +6332,8 @@
   {
     "id": 482,
     "name": "Human Expenditure Program",
-    "cover": "{COVER_URL}/482.png",
-    "url": "{HTML_URL}/482-2.html",
+    "cover": "covers/482.png",
+    "url": "html/482-2.html",
     "author": "SHROOMYCHRIST-STUDIOS",
     "genres": [
       "action",
@@ -6346,8 +6346,8 @@
   {
     "id": 485,
     "name": "Friday Night Funkin': vs. Garcello",
-    "cover": "{COVER_URL}/485.png",
-    "url": "{HTML_URL}/485.html",
+    "cover": "covers/485.png",
+    "url": "html/485.html",
     "author": "atsuover etc",
     "genres": [
       "action",
@@ -6360,8 +6360,8 @@
   {
     "id": 486,
     "name": "Friday Night Funkin': Sonic Legacy",
-    "cover": "{COVER_URL}/486.png",
-    "url": "{HTML_URL}/486.html",
+    "cover": "covers/486.png",
+    "url": "html/486.html",
     "author": "JoeDoughBoi etc",
     "genres": [
       "action",
@@ -6375,8 +6375,8 @@
   {
     "id": 489,
     "name": "Friday Night Funkin': Indie Cross",
-    "cover": "{COVER_URL}/489.png",
-    "url": "{HTML_URL}/489.html",
+    "cover": "covers/489.png",
+    "url": "html/489.html",
     "author": "MORØ etc",
     "genres": [
       "action",
@@ -6389,8 +6389,8 @@
   {
     "id": 490,
     "name": "Rooftop Snipers 2",
-    "cover": "{COVER_URL}/490.png",
-    "url": "{HTML_URL}/490.html",
+    "cover": "covers/490.png",
+    "url": "html/490.html",
     "author": "Neweichgames",
     "genres": [
       "action",
@@ -6403,8 +6403,8 @@
   {
     "id": 491,
     "name": "I woke up next to you again.",
-    "cover": "{COVER_URL}/491.png",
-    "url": "{HTML_URL}/491.html",
+    "cover": "covers/491.png",
+    "url": "html/491.html",
     "author": "angela he",
     "genres": [
       "action",
@@ -6417,8 +6417,8 @@
   {
     "id": 492,
     "name": "UNDERWHEELS",
-    "cover": "{COVER_URL}/492.png",
-    "url": "{HTML_URL}/492.html",
+    "cover": "covers/492.png",
+    "url": "html/492.html",
     "author": "LakenDaCoda",
     "genres": [
       "action",
@@ -6431,8 +6431,8 @@
   {
     "id": 493,
     "name": "RigBMX",
-    "cover": "{COVER_URL}/493.png",
-    "url": "{HTML_URL}/493.html",
+    "cover": "covers/493.png",
+    "url": "html/493.html",
     "author": "Cartoon Network",
     "genres": [
       "action",
@@ -6445,8 +6445,8 @@
   {
     "id": 494,
     "name": "RigBMX 2",
-    "cover": "{COVER_URL}/494.png",
-    "url": "{HTML_URL}/494.html",
+    "cover": "covers/494.png",
+    "url": "html/494.html",
     "author": "Cartoon Network",
     "genres": [
       "action",
@@ -6459,8 +6459,8 @@
   {
     "id": 495,
     "name": "groon groon, babey!",
-    "cover": "{COVER_URL}/495.png",
-    "url": "{HTML_URL}/495.html",
+    "cover": "covers/495.png",
+    "url": "html/495.html",
     "author": "tanner bananer",
     "genres": [
       "action",
@@ -6473,8 +6473,8 @@
   {
     "id": 501,
     "name": "Kindergarten 3",
-    "cover": "{COVER_URL}/501.png",
-    "url": "{HTML_URL}/501.html",
+    "cover": "covers/501.png",
+    "url": "html/501.html",
     "author": "Con Man Games, SmashGames and Sean Young",
     "genres": [
       "action",
@@ -6487,8 +6487,8 @@
   {
     "id": 502,
     "name": "Stick With It",
-    "cover": "{COVER_URL}/502.png",
-    "url": "{HTML_URL}/502-fixed.html",
+    "cover": "covers/502.png",
+    "url": "html/502-fixed.html",
     "author": "Sam Hogan",
     "genres": [
       "action",
@@ -6501,8 +6501,8 @@
   {
     "id": 503,
     "name": "Five Nights at Candy's",
-    "cover": "{COVER_URL}/503.png",
-    "url": "{HTML_URL}/503.html",
+    "cover": "covers/503.png",
+    "url": "html/503.html",
     "author": "Emil \"Ace\" Macko",
     "genres": [
       "action",
@@ -6515,8 +6515,8 @@
   {
     "id": 504,
     "name": "Five Nights at Candy's 2",
-    "cover": "{COVER_URL}/504.png",
-    "url": "{HTML_URL}/504.html",
+    "cover": "covers/504.png",
+    "url": "html/504.html",
     "author": "Emil \"Ace\" Macko",
     "genres": [
       "action",
@@ -6529,8 +6529,8 @@
   {
     "id": 505,
     "name": "Pokemon Red",
-    "cover": "{COVER_URL}/505.png",
-    "url": "{HTML_URL}/505.html",
+    "cover": "covers/505.png",
+    "url": "html/505.html",
     "author": "Nintendo",
     "genres": [
       "adventure",
@@ -6544,8 +6544,8 @@
   {
     "id": 506,
     "name": "Pokemon Emerald",
-    "cover": "{COVER_URL}/506.png",
-    "url": "{HTML_URL}/506.html",
+    "cover": "covers/506.png",
+    "url": "html/506.html",
     "author": "Nintendo",
     "genres": [
       "adventure",
@@ -6559,8 +6559,8 @@
   {
     "id": 507,
     "name": "The Impossible Quiz",
-    "cover": "{COVER_URL}/507.png",
-    "url": "{HTML_URL}/507.html",
+    "cover": "covers/507.png",
+    "url": "html/507.html",
     "author": "SPLAPP-ME-DO",
     "genres": [
       "strategy"
@@ -6572,8 +6572,8 @@
   {
     "id": 508,
     "name": "Super Mario Bros",
-    "cover": "{COVER_URL}/508.png",
-    "url": "{HTML_URL}/508.html",
+    "cover": "covers/508.png",
+    "url": "html/508.html",
     "author": "Nintendo",
     "genres": [
       "action",
@@ -6588,8 +6588,8 @@
   {
     "id": 510,
     "name": "Tomodachi Collection",
-    "cover": "{COVER_URL}/510.png",
-    "url": "{HTML_URL}/510.html",
+    "cover": "covers/510.png",
+    "url": "html/510.html",
     "author": "Nintendo",
     "genres": [
       "action",
@@ -6603,8 +6603,8 @@
   {
     "id": 511,
     "name": "Doge Miner",
-    "cover": "{COVER_URL}/511.png",
-    "url": "{HTML_URL}/511.html",
+    "cover": "covers/511.png",
+    "url": "html/511.html",
     "author": "rkn",
     "genres": [
       "action",
@@ -6617,8 +6617,8 @@
   {
     "id": 512,
     "name": "Final Earth 2",
-    "cover": "{COVER_URL}/512.png",
-    "url": "{HTML_URL}/512.html",
+    "cover": "covers/512.png",
+    "url": "html/512.html",
     "author": "flori9",
     "genres": [
       "action",
@@ -6631,8 +6631,8 @@
   {
     "id": 513,
     "name": "Swordfight!!",
-    "cover": "{COVER_URL}/513.png",
-    "url": "{HTML_URL}/513.html",
+    "cover": "covers/513.png",
+    "url": "html/513.html",
     "author": "Studio-19",
     "genres": [
       "action"
@@ -6644,8 +6644,8 @@
   {
     "id": 514,
     "name": "PortaBoy+",
-    "cover": "{COVER_URL}/514.png",
-    "url": "{HTML_URL}/514.html",
+    "cover": "covers/514.png",
+    "url": "html/514.html",
     "author": "Enchae, Lumpy",
     "genres": [
       "action",
@@ -6658,8 +6658,8 @@
   {
     "id": 515,
     "name": "PacMan (Horror)",
-    "cover": "{COVER_URL}/515.png",
-    "url": "{HTML_URL}/515.html",
+    "cover": "covers/515.png",
+    "url": "html/515.html",
     "author": "BerickCook",
     "genres": [
       "action",
@@ -6673,8 +6673,8 @@
   {
     "id": 516,
     "name": "Oshi Oshi Punch!",
-    "cover": "{COVER_URL}/516.png",
-    "url": "{HTML_URL}/516.html",
+    "cover": "covers/516.png",
+    "url": "html/516.html",
     "author": "Empty House Games, Shuu",
     "genres": [
       "action",
@@ -6687,8 +6687,8 @@
   {
     "id": 517,
     "name": "Nubby's Number Factory",
-    "cover": "{COVER_URL}/517.png",
-    "url": "{HTML_URL}/517.html",
+    "cover": "covers/517.png",
+    "url": "html/517.html",
     "author": "MogDogBlog Productions",
     "genres": [
       "action",
@@ -6701,8 +6701,8 @@
   {
     "id": 518,
     "name": "Touhou: Luminous Strike",
-    "cover": "{COVER_URL}/518.png",
-    "url": "{HTML_URL}/518.html",
+    "cover": "covers/518.png",
+    "url": "html/518.html",
     "author": "NitNitori, LadyEbony",
     "genres": [
       "action",
@@ -6715,8 +6715,8 @@
   {
     "id": 519,
     "name": "Generic Fighter Maybe",
-    "cover": "{COVER_URL}/519.png",
-    "url": "{HTML_URL}/519.html",
+    "cover": "covers/519.png",
+    "url": "html/519.html",
     "author": "Astrobard Games, Khao Mortadios",
     "genres": [
       "action"
@@ -6728,8 +6728,8 @@
   {
     "id": 520,
     "name": "Dan The Man",
-    "cover": "{COVER_URL}/520.png",
-    "url": "{HTML_URL}/520-fix.html",
+    "cover": "covers/520.png",
+    "url": "html/520-fix.html",
     "author": "Halfbrick Studios",
     "genres": [
       "action",
@@ -6742,8 +6742,8 @@
   {
     "id": 521,
     "name": "Bust a Loop",
-    "cover": "{COVER_URL}/521.png",
-    "url": "{HTML_URL}/521.html",
+    "cover": "covers/521.png",
+    "url": "html/521.html",
     "author": "PeachTreeOath",
     "genres": [
       "action",
@@ -6756,8 +6756,8 @@
   {
     "id": 522,
     "name": "Bad Monday Simulator",
-    "cover": "{COVER_URL}/522.png",
-    "url": "{HTML_URL}/522.html",
+    "cover": "covers/522.png",
+    "url": "html/522.html",
     "author": "Lumpy, Spasco",
     "genres": [
       "3d"
@@ -6769,8 +6769,8 @@
   {
     "id": 523,
     "name": "Touhou Mother",
-    "cover": "{COVER_URL}/523.png",
-    "url": "{HTML_URL}/523-f.html",
+    "cover": "covers/523.png",
+    "url": "html/523-f.html",
     "author": "vgperson",
     "genres": [
       "action",
@@ -6783,8 +6783,8 @@
   {
     "id": 524,
     "name": "Parappa The Rapper",
-    "cover": "{COVER_URL}/524.png",
-    "url": "{HTML_URL}/524.html",
+    "cover": "covers/524.png",
+    "url": "html/524.html",
     "author": "NanaOn-Sha",
     "genres": [
       "action",
@@ -6798,8 +6798,8 @@
   {
     "id": 526,
     "name": "SpongeBob SquarePants: Land Ho!",
-    "cover": "{COVER_URL}/526.png",
-    "url": "{HTML_URL}/526.html",
+    "cover": "covers/526.png",
+    "url": "html/526.html",
     "author": "Nickelodeon",
     "genres": [
       "action",
@@ -6812,8 +6812,8 @@
   {
     "id": 527,
     "name": "SpongeBob SquarePants: SpongeBob Run",
-    "cover": "{COVER_URL}/527.png",
-    "url": "{HTML_URL}/527.html",
+    "cover": "covers/527.png",
+    "url": "html/527.html",
     "author": "Nickelodeon",
     "genres": [
       "action",
@@ -6826,8 +6826,8 @@
   {
     "id": 528,
     "name": "SpongeBob SquarePants: Squidward's Sizzlin' Scare",
-    "cover": "{COVER_URL}/528.png",
-    "url": "{HTML_URL}/528.html",
+    "cover": "covers/528.png",
+    "url": "html/528.html",
     "author": "Nickelodeon",
     "genres": [
       "action",
@@ -6841,8 +6841,8 @@
   {
     "id": 529,
     "name": "SpongeBob SquarePants: Sandy's Sponge Stacker",
-    "cover": "{COVER_URL}/529.png",
-    "url": "{HTML_URL}/529.html",
+    "cover": "covers/529.png",
+    "url": "html/529.html",
     "author": "Nickelodeon",
     "genres": [
       "action",
@@ -6855,8 +6855,8 @@
   {
     "id": 530,
     "name": "SpongeBob SquarePants: Tasty Pastry Party",
-    "cover": "{COVER_URL}/530.png",
-    "url": "{HTML_URL}/530.html",
+    "cover": "covers/530.png",
+    "url": "html/530.html",
     "author": "Nickelodeon",
     "genres": [
       "action",
@@ -6869,8 +6869,8 @@
   {
     "id": 531,
     "name": "SpongeBob SquarePants: The Kah-Ray-Tay Squid",
-    "cover": "{COVER_URL}/531.png",
-    "url": "{HTML_URL}/531.html",
+    "cover": "covers/531.png",
+    "url": "html/531.html",
     "author": "Nickelodeon",
     "genres": [
       "action",
@@ -6883,8 +6883,8 @@
   {
     "id": 532,
     "name": "SpongeBob SquarePants: WereSquirrel",
-    "cover": "{COVER_URL}/532.png",
-    "url": "{HTML_URL}/532.html",
+    "cover": "covers/532.png",
+    "url": "html/532.html",
     "author": "Nickelodeon",
     "genres": [
       "action",
@@ -6897,8 +6897,8 @@
   {
     "id": 533,
     "name": "SpongeBob SquarePants: Krabby Katch",
-    "cover": "{COVER_URL}/533.png",
-    "url": "{HTML_URL}/533.html",
+    "cover": "covers/533.png",
+    "url": "html/533.html",
     "author": "Nickelodeon",
     "genres": [
       "action",
@@ -6911,8 +6911,8 @@
   {
     "id": 534,
     "name": "Teen Titans GO!: Jump Jousts",
-    "cover": "{COVER_URL}/534.png",
-    "url": "{HTML_URL}/534.html",
+    "cover": "covers/534.png",
+    "url": "html/534.html",
     "author": "Cartoon Network",
     "genres": [
       "action",
@@ -6925,8 +6925,8 @@
   {
     "id": 535,
     "name": "Teen Titans GO!: Jump Jousts 2",
-    "cover": "{COVER_URL}/535.png",
-    "url": "{HTML_URL}/535.html",
+    "cover": "covers/535.png",
+    "url": "html/535.html",
     "author": "Cartoon Network",
     "genres": [
       "action",
@@ -6939,8 +6939,8 @@
   {
     "id": 536,
     "name": "Cat Connection",
-    "cover": "{COVER_URL}/536.png",
-    "url": "{HTML_URL}/536.html",
+    "cover": "covers/536.png",
+    "url": "html/536.html",
     "author": "MOSTLY MAD PRODUCTIONS",
     "genres": [
       "action",
@@ -6953,8 +6953,8 @@
   {
     "id": 537,
     "name": "Cat Gunner: Super Zombie Shoot",
-    "cover": "{COVER_URL}/537.png",
-    "url": "{HTML_URL}/537.html",
+    "cover": "covers/537.png",
+    "url": "html/537.html",
     "author": "Poki",
     "genres": [
       "action",
@@ -6968,8 +6968,8 @@
   {
     "id": 538,
     "name": "Love Letters",
-    "cover": "{COVER_URL}/538.png",
-    "url": "{HTML_URL}/538.html",
+    "cover": "covers/538.png",
+    "url": "html/538.html",
     "author": "Nozomu Games",
     "genres": [
       "action",
@@ -6982,8 +6982,8 @@
   {
     "id": 539,
     "name": "Chiikawa Puzzle",
-    "cover": "{COVER_URL}/539.png",
-    "url": "{HTML_URL}/539.html",
+    "cover": "covers/539.png",
+    "url": "html/539.html",
     "author": "emptygamer",
     "genres": [
       "strategy"
@@ -6995,8 +6995,8 @@
   {
     "id": 540,
     "name": "myTeardrop",
-    "cover": "{COVER_URL}/540.png",
-    "url": "{HTML_URL}/540.html",
+    "cover": "covers/540.png",
+    "url": "html/540.html",
     "author": "VENDORMINT",
     "genres": [
       "action",
@@ -7009,8 +7009,8 @@
   {
     "id": 542,
     "name": "Karlson",
-    "cover": "{COVER_URL}/542.png",
-    "url": "{HTML_URL}/542-a.html",
+    "cover": "covers/542.png",
+    "url": "html/542-a.html",
     "author": "DaniDev",
     "genres": [
       "action",
@@ -7023,8 +7023,8 @@
   {
     "id": 543,
     "name": "Jelly Drift",
-    "cover": "{COVER_URL}/543.png",
-    "url": "{HTML_URL}/543-a.html",
+    "cover": "covers/543.png",
+    "url": "html/543-a.html",
     "author": "DaniDev",
     "genres": [
       "action",
@@ -7037,8 +7037,8 @@
   {
     "id": 544,
     "name": "Plinko",
-    "cover": "{COVER_URL}/544.png",
-    "url": "{HTML_URL}/544.html",
+    "cover": "covers/544.png",
+    "url": "html/544.html",
     "author": "Anson Heung",
     "genres": [
       "action",
@@ -7051,8 +7051,8 @@
   {
     "id": 545,
     "name": "Clash Of Vikings",
-    "cover": "{COVER_URL}/545.png",
-    "url": "{HTML_URL}/545.html",
+    "cover": "covers/545.png",
+    "url": "html/545.html",
     "author": "unknown",
     "genres": [
       "action",
@@ -7065,8 +7065,8 @@
   {
     "id": 546,
     "name": "Recoil",
-    "cover": "{COVER_URL}/546.png",
-    "url": "{HTML_URL}/546.html",
+    "cover": "covers/546.png",
+    "url": "html/546.html",
     "author": "Martin Magini",
     "genres": [
       "action",
@@ -7079,8 +7079,8 @@
   {
     "id": 547,
     "name": "Baseball Bros",
-    "cover": "{COVER_URL}/547.png",
-    "url": "{HTML_URL}/547.html",
+    "cover": "covers/547.png",
+    "url": "html/547.html",
     "author": "Blue Wizard",
     "genres": [
       "action",
@@ -7093,8 +7093,8 @@
   {
     "id": 548,
     "name": "Football Bros",
-    "cover": "{COVER_URL}/548.png",
-    "url": "{HTML_URL}/548.html",
+    "cover": "covers/548.png",
+    "url": "html/548.html",
     "author": "Blue Wizard",
     "genres": [
       "action",
@@ -7107,8 +7107,8 @@
   {
     "id": 549,
     "name": "Sonic the Hedgehog 2: Community's Cut",
-    "cover": "{COVER_URL}/549.png",
-    "url": "{HTML_URL}/549.html",
+    "cover": "covers/549.png",
+    "url": "html/549.html",
     "author": "heyjoeway and SEGA",
     "genres": [
       "action",
@@ -7122,8 +7122,8 @@
   {
     "id": 550,
     "name": "Sonic the Hedgehog 3: Angel Island Remastered",
-    "cover": "{COVER_URL}/550.png",
-    "url": "{HTML_URL}/550.html",
+    "cover": "covers/550.png",
+    "url": "html/550.html",
     "author": "Eukaryot3K and SEGA",
     "genres": [
       "action",
@@ -7137,8 +7137,8 @@
   {
     "id": 551,
     "name": "Hypper Sandbox",
-    "cover": "{COVER_URL}/551.png",
-    "url": "{HTML_URL}/551.html",
+    "cover": "covers/551.png",
+    "url": "html/551.html",
     "author": "VobbyGames, weirdnessworld",
     "genres": [
       "action",
@@ -7151,8 +7151,8 @@
   {
     "id": 552,
     "name": "Aviamasters",
-    "cover": "{COVER_URL}/552.png",
-    "url": "{HTML_URL}/552.html",
+    "cover": "covers/552.png",
+    "url": "html/552.html",
     "author": "BGaming",
     "genres": [
       "action",
@@ -7165,8 +7165,8 @@
   {
     "id": 553,
     "name": "Rolling Sky",
-    "cover": "{COVER_URL}/553.png",
-    "url": "{HTML_URL}/553.html",
+    "cover": "covers/553.png",
+    "url": "html/553.html",
     "author": "Dream Playz",
     "genres": [
       "action",
@@ -7179,8 +7179,8 @@
   {
     "id": 554,
     "name": "Yandere Simulator",
-    "cover": "{COVER_URL}/554.png",
-    "url": "{HTML_URL}/554.html",
+    "cover": "covers/554.png",
+    "url": "html/554.html",
     "author": "YandereDev",
     "genres": [
       "3d"
@@ -7192,8 +7192,8 @@
   {
     "id": 555,
     "name": "Friday Night Funkin VS. KAPI",
-    "cover": "{COVER_URL}/555.png",
-    "url": "{HTML_URL}/555.html",
+    "cover": "covers/555.png",
+    "url": "html/555.html",
     "author": "paperkitty etc",
     "genres": [
       "action",
@@ -7206,8 +7206,8 @@
   {
     "id": 556,
     "name": "Friday Night Funkin VS. Sky",
-    "cover": "{COVER_URL}/556.png",
-    "url": "{HTML_URL}/556.html",
+    "cover": "covers/556.png",
+    "url": "html/556.html",
     "author": "Alexander0110 etc",
     "genres": [
       "action",
@@ -7220,8 +7220,8 @@
   {
     "id": 557,
     "name": "Getting Over It with Bennett Foddy",
-    "cover": "{COVER_URL}/557.png",
-    "url": "{HTML_URL}/557.html",
+    "cover": "covers/557.png",
+    "url": "html/557.html",
     "author": "Bennett Foddy",
     "genres": [
       "action",
@@ -7234,8 +7234,8 @@
   {
     "id": 559,
     "name": "Friday Night Funkin vs Shaggy",
-    "cover": "{COVER_URL}/559.png",
-    "url": "{HTML_URL}/559.html",
+    "cover": "covers/559.png",
+    "url": "html/559.html",
     "author": "srPerez etc",
     "genres": [
       "action",
@@ -7248,8 +7248,8 @@
   {
     "id": 560,
     "name": "Deltatraveler",
-    "cover": "{COVER_URL}/560.png",
-    "url": "{HTML_URL}/560.html",
+    "cover": "covers/560.png",
+    "url": "html/560.html",
     "author": "VyletBunni",
     "genres": [
       "action",
@@ -7262,8 +7262,8 @@
   {
     "id": 561,
     "name": "BitGun.io",
-    "cover": "{COVER_URL}/561.png",
-    "url": "{HTML_URL}/561.html",
+    "cover": "covers/561.png",
+    "url": "html/561.html",
     "author": "Hazmob",
     "genres": [
       ".io"
@@ -7275,8 +7275,8 @@
   {
     "id": 562,
     "name": "Boom Slingers: Reboom",
-    "cover": "{COVER_URL}/562.png",
-    "url": "{HTML_URL}/562.html",
+    "cover": "covers/562.png",
+    "url": "html/562.html",
     "author": "Boom Corp",
     "genres": [
       "action",
@@ -7289,8 +7289,8 @@
   {
     "id": 563,
     "name": "CG FC 25",
-    "cover": "{COVER_URL}/563.png",
-    "url": "{HTML_URL}/563.html",
+    "cover": "covers/563.png",
+    "url": "html/563.html",
     "author": "Finz Games",
     "genres": [
       "action",
@@ -7303,8 +7303,8 @@
   {
     "id": 564,
     "name": "Count Masters: Stickman Games",
-    "cover": "{COVER_URL}/564.png",
-    "url": "{HTML_URL}/564.html",
+    "cover": "covers/564.png",
+    "url": "html/564.html",
     "author": "FreePlay LLC",
     "genres": [
       "action"
@@ -7316,8 +7316,8 @@
   {
     "id": 565,
     "name": "Dalgona Candy Honeycomb Cookie",
-    "cover": "{COVER_URL}/565.png",
-    "url": "{HTML_URL}/565.html",
+    "cover": "covers/565.png",
+    "url": "html/565.html",
     "author": "CrazyGames",
     "genres": [
       "action",
@@ -7330,8 +7330,8 @@
   {
     "id": 567,
     "name": "Highway Racer",
-    "cover": "{COVER_URL}/567.png",
-    "url": "{HTML_URL}/567.html",
+    "cover": "covers/567.png",
+    "url": "html/567.html",
     "author": "CrazyGames",
     "genres": [
       "action",
@@ -7344,8 +7344,8 @@
   {
     "id": 568,
     "name": "Highway Racer 2 REMASTERED",
-    "cover": "{COVER_URL}/568.png",
-    "url": "{HTML_URL}/568.html",
+    "cover": "covers/568.png",
+    "url": "html/568.html",
     "author": "CrazyGames",
     "genres": [
       "action",
@@ -7358,8 +7358,8 @@
   {
     "id": 569,
     "name": "Hula Hoop Race",
-    "cover": "{COVER_URL}/569.png",
-    "url": "{HTML_URL}/569.html",
+    "cover": "covers/569.png",
+    "url": "html/569.html",
     "author": "CrazyGames",
     "genres": [
       "action",
@@ -7372,8 +7372,8 @@
   {
     "id": 570,
     "name": "Jelly Restaurant",
-    "cover": "{COVER_URL}/570.png",
-    "url": "{HTML_URL}/570.html",
+    "cover": "covers/570.png",
+    "url": "html/570.html",
     "author": "CrazyGames",
     "genres": [
       "action",
@@ -7386,8 +7386,8 @@
   {
     "id": 571,
     "name": "Layers Roll",
-    "cover": "{COVER_URL}/571.png",
-    "url": "{HTML_URL}/571.html",
+    "cover": "covers/571.png",
+    "url": "html/571.html",
     "author": "CrazyGames",
     "genres": [
       "action",
@@ -7400,8 +7400,8 @@
   {
     "id": 572,
     "name": "Lazy Jumper",
-    "cover": "{COVER_URL}/572.png",
-    "url": "{HTML_URL}/572.html",
+    "cover": "covers/572.png",
+    "url": "html/572.html",
     "author": "CrazyGames",
     "genres": [
       "action",
@@ -7414,8 +7414,8 @@
   {
     "id": 573,
     "name": "Man Runner 2048",
-    "cover": "{COVER_URL}/573.png",
-    "url": "{HTML_URL}/573.html",
+    "cover": "covers/573.png",
+    "url": "html/573.html",
     "author": "CrazyGames",
     "genres": [
       "action",
@@ -7429,8 +7429,8 @@
   {
     "id": 574,
     "name": "Pottery Master",
-    "cover": "{COVER_URL}/574.png",
-    "url": "{HTML_URL}/574.html",
+    "cover": "covers/574.png",
+    "url": "html/574.html",
     "author": "CrazyGames",
     "genres": [
       "action",
@@ -7443,8 +7443,8 @@
   {
     "id": 575,
     "name": "Shovel 3D",
-    "cover": "{COVER_URL}/575.png",
-    "url": "{HTML_URL}/575.html",
+    "cover": "covers/575.png",
+    "url": "html/575.html",
     "author": "CrazyGames",
     "genres": [
       "3d"
@@ -7456,8 +7456,8 @@
   {
     "id": 576,
     "name": "Sky Riders",
-    "cover": "{COVER_URL}/576.png",
-    "url": "{HTML_URL}/576.html",
+    "cover": "covers/576.png",
+    "url": "html/576.html",
     "author": "CrazyGames",
     "genres": [
       "action",
@@ -7470,8 +7470,8 @@
   {
     "id": 577,
     "name": "Steal Brainrot Online",
-    "cover": "{COVER_URL}/577.png",
-    "url": "{HTML_URL}/577.html",
+    "cover": "covers/577.png",
+    "url": "html/577.html",
     "author": "CrazyGames",
     "genres": [
       "strategy"
@@ -7483,8 +7483,8 @@
   {
     "id": 578,
     "name": "Stickman and Guns",
-    "cover": "{COVER_URL}/578.png",
-    "url": "{HTML_URL}/578.html",
+    "cover": "covers/578.png",
+    "url": "html/578.html",
     "author": "CrazyGames",
     "genres": [
       "action"
@@ -7496,8 +7496,8 @@
   {
     "id": 579,
     "name": "Super Star Car",
-    "cover": "{COVER_URL}/579.png",
-    "url": "{HTML_URL}/579.html",
+    "cover": "covers/579.png",
+    "url": "html/579.html",
     "author": "CrazyGames",
     "genres": [
       "racing"
@@ -7509,8 +7509,8 @@
   {
     "id": 580,
     "name": "Traffic Rider",
-    "cover": "{COVER_URL}/580.png",
-    "url": "{HTML_URL}/580.html",
+    "cover": "covers/580.png",
+    "url": "html/580.html",
     "author": "CrazyGames",
     "genres": [
       "action",
@@ -7523,8 +7523,8 @@
   {
     "id": 581,
     "name": "BuildNow.gg",
-    "cover": "{COVER_URL}/581.png",
-    "url": "{HTML_URL}/581.html",
+    "cover": "covers/581.png",
+    "url": "html/581.html",
     "author": "CrazyGames",
     "genres": [
       "action",
@@ -7537,8 +7537,8 @@
   {
     "id": 584,
     "name": "Stone Grass Mowing Simulator",
-    "cover": "{COVER_URL}/584-a.png",
-    "url": "{HTML_URL}/584.html",
+    "cover": "covers/584-a.png",
+    "url": "html/584.html",
     "author": "CrazyGames",
     "genres": [
       "3d"
@@ -7550,8 +7550,8 @@
   {
     "id": 585,
     "name": "Fallout",
-    "cover": "{COVER_URL}/585.png",
-    "url": "{HTML_URL}/585.html",
+    "cover": "covers/585.png",
+    "url": "html/585.html",
     "author": "Bethesda Softworks",
     "genres": [
       "action",
@@ -7564,8 +7564,8 @@
   {
     "id": 586,
     "name": "The Oregon Trail",
-    "cover": "{COVER_URL}/586.png",
-    "url": "{HTML_URL}/586.html",
+    "cover": "covers/586.png",
+    "url": "html/586.html",
     "author": "MECC",
     "genres": [
       "action",
@@ -7578,8 +7578,8 @@
   {
     "id": 587,
     "name": "Newgrounds Rumble",
-    "cover": "{COVER_URL}/587.png",
-    "url": "{HTML_URL}/587.html",
+    "cover": "covers/587.png",
+    "url": "html/587.html",
     "author": "NegativeONE, Luis, MindChamber",
     "genres": [
       "action",
@@ -7592,8 +7592,8 @@
   {
     "id": 588,
     "name": "Super Mario 64",
-    "cover": "{COVER_URL}/588.png",
-    "url": "{HTML_URL}/588.html",
+    "cover": "covers/588.png",
+    "url": "html/588.html",
     "author": "Nintendo",
     "genres": [
       "action",
@@ -7607,8 +7607,8 @@
   {
     "id": 589,
     "name": "Sonic CD",
-    "cover": "{COVER_URL}/589.png",
-    "url": "{HTML_URL}/589-f.html",
+    "cover": "covers/589.png",
+    "url": "html/589-f.html",
     "author": "SEGA",
     "genres": [
       "action",
@@ -7622,8 +7622,8 @@
   {
     "id": 590,
     "name": "Sonic Mania",
-    "cover": "{COVER_URL}/590.png",
-    "url": "{HTML_URL}/590-f.html",
+    "cover": "covers/590.png",
+    "url": "html/590-f.html",
     "author": "SEGA, crunch arcade",
     "genres": [
       "action",
@@ -7637,8 +7637,8 @@
   {
     "id": 591,
     "name": "Slime Rancher",
-    "cover": "{COVER_URL}/591.png",
-    "url": "{HTML_URL}/591-awe.html",
+    "cover": "covers/591.png",
+    "url": "html/591-awe.html",
     "author": "Monomi Park, Ported by Snubby.top",
     "genres": [
       "action",
@@ -7651,8 +7651,8 @@
   {
     "id": 592,
     "name": "Pac Man World",
-    "cover": "{COVER_URL}/592.png",
-    "url": "{HTML_URL}/592.html",
+    "cover": "covers/592.png",
+    "url": "html/592.html",
     "author": "Full Fat Games",
     "genres": [
       "action",
@@ -7666,8 +7666,8 @@
   {
     "id": 593,
     "name": "Pac Man World 2",
-    "cover": "{COVER_URL}/593.png",
-    "url": "{HTML_URL}/593-f.html",
+    "cover": "covers/593.png",
+    "url": "html/593-f.html",
     "author": "Full Fat Games",
     "genres": [
       "action",
@@ -7681,8 +7681,8 @@
   {
     "id": 594,
     "name": "Waterworks!",
-    "cover": "{COVER_URL}/594.png",
-    "url": "{HTML_URL}/594.html",
+    "cover": "covers/594.png",
+    "url": "html/594.html",
     "author": "scriptwelder",
     "genres": [
       "action",
@@ -7695,8 +7695,8 @@
   {
     "id": 595,
     "name": "Shapez.io",
-    "cover": "{COVER_URL}/595.png",
-    "url": "{HTML_URL}/595.html",
+    "cover": "covers/595.png",
+    "url": "html/595.html",
     "author": "scriptwelder",
     "genres": [
       ".io"
@@ -7708,8 +7708,8 @@
   {
     "id": 597,
     "name": "Plants vs. Zombies 2 Gardenless",
-    "cover": "{COVER_URL}/597.png",
-    "url": "{HTML_URL}/597-a.html",
+    "cover": "covers/597.png",
+    "url": "html/597-a.html",
     "author": "Gzh0821",
     "genres": [
       "action",
@@ -7722,8 +7722,8 @@
   {
     "id": 598,
     "name": "Sonic.EXE",
-    "cover": "{COVER_URL}/598.png",
-    "url": "{HTML_URL}/598.html",
+    "cover": "covers/598.png",
+    "url": "html/598.html",
     "author": " Cinossu",
     "genres": [
       "action",
@@ -7738,8 +7738,8 @@
   {
     "id": 599,
     "name": "Metal Gear Solid",
-    "cover": "{COVER_URL}/599.png",
-    "url": "{HTML_URL}/599.html",
+    "cover": "covers/599.png",
+    "url": "html/599.html",
     "author": " Konami Computer Entertainment Japan",
     "genres": [
       "action",
@@ -7753,8 +7753,8 @@
   {
     "id": 602,
     "name": "Doom 2",
-    "cover": "{COVER_URL}/602.png",
-    "url": "{HTML_URL}/602.html",
+    "cover": "covers/602.png",
+    "url": "html/602.html",
     "author": "id Software",
     "genres": [
       "action",
@@ -7768,8 +7768,8 @@
   {
     "id": 603,
     "name": "Growden.io",
-    "cover": "{COVER_URL}/603.png",
-    "url": "{HTML_URL}/603-aa.html",
+    "cover": "covers/603.png",
+    "url": "html/603-aa.html",
     "author": "growden.io",
     "genres": [
       ".io"
@@ -7781,8 +7781,8 @@
   {
     "id": 604,
     "name": "Minesweeper Plus",
-    "cover": "{COVER_URL}/604.png",
-    "url": "{HTML_URL}/604-a.html",
+    "cover": "covers/604.png",
+    "url": "html/604-a.html",
     "author": "Jorel Simpson",
     "genres": [
       "action",
@@ -7795,8 +7795,8 @@
   {
     "id": 605,
     "name": "Schoolboy Runaway",
-    "cover": "{COVER_URL}/605.png",
-    "url": "{HTML_URL}/605-e.html",
+    "cover": "covers/605.png",
+    "url": "html/605-e.html",
     "author": "Linked Squad",
     "genres": [
       "action",
@@ -7809,8 +7809,8 @@
   {
     "id": 606,
     "name": "Sonic.EXE (ORIGINAL)",
-    "cover": "{COVER_URL}/606.png",
-    "url": "{HTML_URL}/606-e.html",
+    "cover": "covers/606.png",
+    "url": "html/606-e.html",
     "author": "MY5TCrimson",
     "genres": [
       "action",
@@ -7824,8 +7824,8 @@
   {
     "id": 607,
     "name": "Tattletail",
-    "cover": "{COVER_URL}/607.png",
-    "url": "{HTML_URL}/607-e.html",
+    "cover": "covers/607.png",
+    "url": "html/607-e.html",
     "author": "Waygetter Electronics, Ported by Snubby.top",
     "genres": [
       "action",
@@ -7838,8 +7838,8 @@
   {
     "id": 611,
     "name": "The Legend of Zelda Ocarina of Time",
-    "cover": "{COVER_URL}/611.png",
-    "url": "{HTML_URL}/611.html",
+    "cover": "covers/611.png",
+    "url": "html/611.html",
     "author": "Nintendo",
     "genres": [
       "racing"
@@ -7853,8 +7853,8 @@
   {
     "id": 612,
     "name": "The Legend of Zelda Majora's Mask",
-    "cover": "{COVER_URL}/612.png",
-    "url": "{HTML_URL}/612.html",
+    "cover": "covers/612.png",
+    "url": "html/612.html",
     "author": "Nintendo",
     "genres": [
       "action",
@@ -7869,8 +7869,8 @@
   {
     "id": 614,
     "name": "Toy Rider",
-    "cover": "{COVER_URL}/614.png",
-    "url": "{HTML_URL}/614.html",
+    "cover": "covers/614.png",
+    "url": "html/614.html",
     "author": "CrazyGames",
     "genres": [
       "action",
@@ -7883,8 +7883,8 @@
   {
     "id": 617,
     "name": "Postal",
-    "cover": "{COVER_URL}/617.png",
-    "url": "{HTML_URL}/617-a.html",
+    "cover": "covers/617.png",
+    "url": "html/617-a.html",
     "author": "Stinkalistic, Running With Scissors",
     "genres": [
       "action",
@@ -7897,8 +7897,8 @@
   {
     "id": 620,
     "name": "Three Goblets",
-    "cover": "{COVER_URL}/620.png",
-    "url": "{HTML_URL}/620.html",
+    "cover": "covers/620.png",
+    "url": "html/620.html",
     "author": "Adventale",
     "genres": [
       "action",
@@ -7911,8 +7911,8 @@
   {
     "id": 622,
     "name": "Oneshot (LEGACY)",
-    "cover": "{COVER_URL}/622.png",
-    "url": "{HTML_URL}/622.html",
+    "cover": "covers/622.png",
+    "url": "html/622.html",
     "author": "Future Cat LLC, ARandomPerson",
     "genres": [
       "action",
@@ -7925,8 +7925,8 @@
   {
     "id": 623,
     "name": "Celeste",
-    "cover": "{COVER_URL}/623.png",
-    "url": "{HTML_URL}/623-work.html",
+    "cover": "covers/623.png",
+    "url": "html/623-work.html",
     "author": "MaddyMakesGames, Mercury Workshop",
     "genres": [
       "action",
@@ -7939,8 +7939,8 @@
   {
     "id": 624,
     "name": "Happy Wheels",
-    "cover": "{COVER_URL}/624.png",
-    "url": "{HTML_URL}/624.html",
+    "cover": "covers/624.png",
+    "url": "html/624.html",
     "author": "Jim Bonacci",
     "genres": [
       "action",
@@ -7953,8 +7953,8 @@
   {
     "id": 625,
     "name": "Get Yoked",
-    "cover": "{COVER_URL}/625.png",
-    "url": "{HTML_URL}/625.html",
+    "cover": "covers/625.png",
+    "url": "html/625.html",
     "author": "gregs games",
     "genres": [
       "action",
@@ -7967,8 +7967,8 @@
   {
     "id": 626,
     "name": "Doom 3",
-    "cover": "{COVER_URL}/626.png",
-    "url": "{HTML_URL}/626-f.html",
+    "cover": "covers/626.png",
+    "url": "html/626-f.html",
     "author": "id Software, 98corbins",
     "genres": [
       "action",
@@ -7981,8 +7981,8 @@
   {
     "id": 627,
     "name": "Tag",
-    "cover": "{COVER_URL}/627.png",
-    "url": "{HTML_URL}/627.html",
+    "cover": "covers/627.png",
+    "url": "html/627.html",
     "author": "WeLoPlay",
     "genres": [
       "action",
@@ -7995,8 +7995,8 @@
   {
     "id": 628,
     "name": "Pizza Tower: Scoutdigo",
-    "cover": "{COVER_URL}/628.png",
-    "url": "{HTML_URL}/628-f.html",
+    "cover": "covers/628.png",
+    "url": "html/628-f.html",
     "author": "only1indigo, burnedpopcorn",
     "genres": [
       "action",
@@ -8009,8 +8009,8 @@
   {
     "id": 629,
     "name": "Off",
-    "cover": "{COVER_URL}/629.png",
-    "url": "{HTML_URL}/629.html",
+    "cover": "covers/629.png",
+    "url": "html/629.html",
     "author": "Mortis Ghost, Fangamer",
     "genres": [
       "action",
@@ -8023,8 +8023,8 @@
   {
     "id": 630,
     "name": "Space Funeral",
-    "cover": "{COVER_URL}/630.png",
-    "url": "{HTML_URL}/630.html",
+    "cover": "covers/630.png",
+    "url": "html/630.html",
     "author": "Stephen Gillmurphy",
     "genres": [
       "action",
@@ -8037,8 +8037,8 @@
   {
     "id": 631,
     "name": "Endroll",
-    "cover": "{COVER_URL}/631.png",
-    "url": "{HTML_URL}/631-a.html",
+    "cover": "covers/631.png",
+    "url": "html/631-a.html",
     "author": " Segawa",
     "genres": [
       "action",
@@ -8051,8 +8051,8 @@
   {
     "id": 632,
     "name": "Cave Story",
-    "cover": "{COVER_URL}/632.png",
-    "url": "{HTML_URL}/632-a.html",
+    "cover": "covers/632.png",
+    "url": "html/632-a.html",
     "author": " Daisuke 'Pixel' Amaya",
     "genres": [
       "action",
@@ -8065,8 +8065,8 @@
   {
     "id": 635,
     "name": "Spelunky Classic HD",
-    "cover": "{COVER_URL}/635.png",
-    "url": "{HTML_URL}/635.html",
+    "cover": "covers/635.png",
+    "url": "html/635.html",
     "author": " nkrapivin",
     "genres": [
       "skill"
@@ -8078,8 +8078,8 @@
   {
     "id": 637,
     "name": "BFDIA 5b",
-    "cover": "{COVER_URL}/637.png",
-    "url": "{HTML_URL}/637-f.html",
+    "cover": "covers/637.png",
+    "url": "html/637-f.html",
     "author": "Cary Huang",
     "genres": [
       "action",
@@ -8092,8 +8092,8 @@
   {
     "id": 638,
     "name": "BFDIA 5b: 5*30",
-    "cover": "{COVER_URL}/638.gif",
-    "url": "{HTML_URL}/638-f.html",
+    "cover": "covers/638.gif",
+    "url": "html/638-f.html",
     "author": "Mawilite, Cary Huang",
     "genres": [
       "action",
@@ -8106,8 +8106,8 @@
   {
     "id": 640,
     "name": "Mutilate a Doll 2",
-    "cover": "{COVER_URL}/640.png",
-    "url": "{HTML_URL}/640.html",
+    "cover": "covers/640.png",
+    "url": "html/640.html",
     "author": "SilverGames",
     "genres": [
       "action",
@@ -8120,8 +8120,8 @@
   {
     "id": 641,
     "name": "Godzilla Daikaiju Battle Royale",
-    "cover": "{COVER_URL}/641.png",
-    "url": "{HTML_URL}/641.html",
+    "cover": "covers/641.png",
+    "url": "html/641.html",
     "author": "AWM Studio Productions LLC",
     "genres": [
       "action"
@@ -8133,8 +8133,8 @@
   {
     "id": 643,
     "name": "Rio Rex",
-    "cover": "{COVER_URL}/643.png",
-    "url": "{HTML_URL}/643.html",
+    "cover": "covers/643.png",
+    "url": "html/643.html",
     "author": "Gametornado",
     "genres": [
       "action",
@@ -8147,8 +8147,8 @@
   {
     "id": 645,
     "name": "Arthur's Nightmare",
-    "cover": "{COVER_URL}/645.png",
-    "url": "{HTML_URL}/645-e.html",
+    "cover": "covers/645.png",
+    "url": "html/645-e.html",
     "author": "Varun R.",
     "genres": [
       "action",
@@ -8161,8 +8161,8 @@
   {
     "id": 646,
     "name": "Buster Jam",
-    "cover": "{COVER_URL}/646.png",
-    "url": "{HTML_URL}/646-fixed.html",
+    "cover": "covers/646.png",
+    "url": "html/646-fixed.html",
     "author": "TALL GLASS",
     "genres": [
       "action",
@@ -8175,8 +8175,8 @@
   {
     "id": 647,
     "name": "Super Smash Flash",
-    "cover": "{COVER_URL}/647.png",
-    "url": "{HTML_URL}/647.html",
+    "cover": "covers/647.png",
+    "url": "html/647.html",
     "author": "McLeodGaming",
     "genres": [
       "action",
@@ -8189,8 +8189,8 @@
   {
     "id": 648,
     "name": "Mindwave",
-    "cover": "{COVER_URL}/648.png",
-    "url": "{HTML_URL}/648-el.html",
+    "cover": "covers/648.png",
+    "url": "html/648-el.html",
     "author": "HoloHammer",
     "genres": [
       "action",
@@ -8203,8 +8203,8 @@
   {
     "id": 649,
     "name": "Look Outside",
-    "cover": "{COVER_URL}/649.png",
-    "url": "{HTML_URL}/649.html",
+    "cover": "covers/649.png",
+    "url": "html/649.html",
     "author": "Francis Coulombe",
     "genres": [
       "action",
@@ -8217,8 +8217,8 @@
   {
     "id": 650,
     "name": "Milk Inside a Bag of Milk Inside a Bag of Milk",
-    "cover": "{COVER_URL}/650.png",
-    "url": "{HTML_URL}/650-f.html",
+    "cover": "covers/650.png",
+    "url": "html/650-f.html",
     "author": "Nikita Kryukov",
     "genres": [
       "action",
@@ -8231,8 +8231,8 @@
   {
     "id": 651,
     "name": "Milk Outside A Bag Of Milk Outside A Bag Of Milk",
-    "cover": "{COVER_URL}/651.png",
-    "url": "{HTML_URL}/651.html",
+    "cover": "covers/651.png",
+    "url": "html/651.html",
     "author": "Nikita Kryukov",
     "genres": [
       "action",
@@ -8245,8 +8245,8 @@
   {
     "id": 653,
     "name": "1 Date Danger",
-    "cover": "{COVER_URL}/653.png",
-    "url": "{HTML_URL}/653-f.html",
+    "cover": "covers/653.png",
+    "url": "html/653-f.html",
     "author": "Knives",
     "genres": [
       "action",
@@ -8259,8 +8259,8 @@
   {
     "id": 654,
     "name": "Final Fantasy VII",
-    "cover": "{COVER_URL}/654.png",
-    "url": "{HTML_URL}/654.html",
+    "cover": "covers/654.png",
+    "url": "html/654.html",
     "author": "Square Enix",
     "genres": [
       "action",
@@ -8273,8 +8273,8 @@
   {
     "id": 655,
     "name": "Goblin Goopmaxxing",
-    "cover": "{COVER_URL}/655.png",
-    "url": "{HTML_URL}/655.html",
+    "cover": "covers/655.png",
+    "url": "html/655.html",
     "author": "BugfightStudio",
     "genres": [
       "action",
@@ -8287,8 +8287,8 @@
   {
     "id": 656,
     "name": "Rogue Sergeant The Final Operation",
-    "cover": "{COVER_URL}/656.png",
-    "url": "{HTML_URL}/656.html",
+    "cover": "covers/656.png",
+    "url": "html/656.html",
     "author": "Studiohammergames",
     "genres": [
       "action",
@@ -8301,8 +8301,8 @@
   {
     "id": 657,
     "name": "Friday Night Funkin vs Undertale",
-    "cover": "{COVER_URL}/657.png",
-    "url": "{HTML_URL}/657.html",
+    "cover": "covers/657.png",
+    "url": "html/657.html",
     "author": "vs undertale team",
     "genres": [
       "action",
@@ -8315,8 +8315,8 @@
   {
     "id": 658,
     "name": "Midnight Shift",
-    "cover": "{COVER_URL}/658.png",
-    "url": "{HTML_URL}/658.html",
+    "cover": "covers/658.png",
+    "url": "html/658.html",
     "author": "Phantom GD",
     "genres": [
       "action",
@@ -8329,8 +8329,8 @@
   {
     "id": 659,
     "name": "Orange Roulette",
-    "cover": "{COVER_URL}/659.png",
-    "url": "{HTML_URL}/659.html",
+    "cover": "covers/659.png",
+    "url": "html/659.html",
     "author": "Matzerath",
     "genres": [
       "action",
@@ -8343,8 +8343,8 @@
   {
     "id": 660,
     "name": "Please Dont Touch Anything",
-    "cover": "{COVER_URL}/660.png",
-    "url": "{HTML_URL}/660.html",
+    "cover": "covers/660.png",
+    "url": "html/660.html",
     "author": "Four Quarters",
     "genres": [
       "action",
@@ -8357,8 +8357,8 @@
   {
     "id": 661,
     "name": "Royal Towers: Medieval TD",
-    "cover": "{COVER_URL}/661.png",
-    "url": "{HTML_URL}/661.html",
+    "cover": "covers/661.png",
+    "url": "html/661.html",
     "author": "Superplus Games",
     "genres": [
       "action",
@@ -8371,8 +8371,8 @@
   {
     "id": 662,
     "name": "Going Balls",
-    "cover": "{COVER_URL}/662.png",
-    "url": "{HTML_URL}/662.html",
+    "cover": "covers/662.png",
+    "url": "html/662.html",
     "author": "Supersonic Studios LTD",
     "genres": [
       "action",
@@ -8385,8 +8385,8 @@
   {
     "id": 663,
     "name": "3D Bolt Master",
-    "cover": "{COVER_URL}/663.png",
-    "url": "{HTML_URL}/663.html",
+    "cover": "covers/663.png",
+    "url": "html/663.html",
     "author": "Joymaster Puzzle Game Studio",
     "genres": [
       "3d"
@@ -8398,8 +8398,8 @@
   {
     "id": 664,
     "name": "Tall.io",
-    "cover": "{COVER_URL}/664.png",
-    "url": "{HTML_URL}/664.html",
+    "cover": "covers/664.png",
+    "url": "html/664.html",
     "author": "Playgama",
     "genres": [
       ".io"
@@ -8411,8 +8411,8 @@
   {
     "id": 665,
     "name": "Match Triple 3D",
-    "cover": "{COVER_URL}/665.png",
-    "url": "{HTML_URL}/665.html",
+    "cover": "covers/665.png",
+    "url": "html/665.html",
     "author": "LIHUHU PTE. LTD.",
     "genres": [
       "3d",
@@ -8425,8 +8425,8 @@
   {
     "id": 666,
     "name": "Stick War: Legacy",
-    "cover": "{COVER_URL}/666.png",
-    "url": "{HTML_URL}/666.html",
+    "cover": "covers/666.png",
+    "url": "html/666.html",
     "author": "Max Games Studios",
     "genres": [
       "action",
@@ -8439,8 +8439,8 @@
   {
     "id": 667,
     "name": "In Stars and Time",
-    "cover": "{COVER_URL}/667.png",
-    "url": "{HTML_URL}/667-fix.html",
+    "cover": "covers/667.png",
+    "url": "html/667-fix.html",
     "author": "insertdisc5",
     "genres": [
       "action",
@@ -8453,8 +8453,8 @@
   {
     "id": 668,
     "name": "Gorilla Tag",
-    "cover": "{COVER_URL}/668.png",
-    "url": "{HTML_URL}/668-fix2.html",
+    "cover": "covers/668.png",
+    "url": "html/668-fix2.html",
     "author": "Another Axiom Inc, Boolonx",
     "genres": [
       "action",
@@ -8467,8 +8467,8 @@
   {
     "id": 669,
     "name": "Terraria",
-    "cover": "{COVER_URL}/669.png",
-    "url": "{HTML_URL}/669.html",
+    "cover": "covers/669.png",
+    "url": "html/669.html",
     "author": "Re-Logic, Mercury Workshop",
     "genres": [
       "action",
@@ -8481,8 +8481,8 @@
   {
     "id": 670,
     "name": "Raldi's Crackhouse",
-    "cover": "{COVER_URL}/670.png",
-    "url": "{HTML_URL}/670.html",
+    "cover": "covers/670.png",
+    "url": "html/670.html",
     "author": "RCHTeam, Grayson",
     "genres": [
       "action",
@@ -8495,8 +8495,8 @@
   {
     "id": 671,
     "name": "We Become What We Behold",
-    "cover": "{COVER_URL}/671.png",
-    "url": "{HTML_URL}/671.html",
+    "cover": "covers/671.png",
+    "url": "html/671.html",
     "author": "Ncase",
     "genres": [
       "action",
@@ -8509,8 +8509,8 @@
   {
     "id": 672,
     "name": "A Difficult Game About Climbing",
-    "cover": "{COVER_URL}/672.png",
-    "url": "{HTML_URL}/672-2.html",
+    "cover": "covers/672.png",
+    "url": "html/672-2.html",
     "author": "Pontypants",
     "genres": [
       "action",
@@ -8523,8 +8523,8 @@
   {
     "id": 673,
     "name": "Hobo 1",
-    "cover": "{COVER_URL}/673.png",
-    "url": "{HTML_URL}/673.html",
+    "cover": "covers/673.png",
+    "url": "html/673.html",
     "author": "SeethingSwarm",
     "genres": [
       "action",
@@ -8537,8 +8537,8 @@
   {
     "id": 674,
     "name": "Hobo 2",
-    "cover": "{COVER_URL}/674.png",
-    "url": "{HTML_URL}/674.html",
+    "cover": "covers/674.png",
+    "url": "html/674.html",
     "author": "SeethingSwarm",
     "genres": [
       "action",
@@ -8551,8 +8551,8 @@
   {
     "id": 675,
     "name": "Hobo 3",
-    "cover": "{COVER_URL}/675.png",
-    "url": "{HTML_URL}/675.html",
+    "cover": "covers/675.png",
+    "url": "html/675.html",
     "author": "SeethingSwarm",
     "genres": [
       "action",
@@ -8565,8 +8565,8 @@
   {
     "id": 676,
     "name": "Hobo 4",
-    "cover": "{COVER_URL}/676.png",
-    "url": "{HTML_URL}/676.html",
+    "cover": "covers/676.png",
+    "url": "html/676.html",
     "author": "SeethingSwarm",
     "genres": [
       "action",
@@ -8579,8 +8579,8 @@
   {
     "id": 677,
     "name": "Hobo 5",
-    "cover": "{COVER_URL}/677.png",
-    "url": "{HTML_URL}/677.html",
+    "cover": "covers/677.png",
+    "url": "html/677.html",
     "author": "SeethingSwarm",
     "genres": [
       "action",
@@ -8593,8 +8593,8 @@
   {
     "id": 678,
     "name": "Hobo 6",
-    "cover": "{COVER_URL}/678.png",
-    "url": "{HTML_URL}/678.html",
+    "cover": "covers/678.png",
+    "url": "html/678.html",
     "author": "SeethingSwarm",
     "genres": [
       "action",
@@ -8607,8 +8607,8 @@
   {
     "id": 679,
     "name": "Hobo 7",
-    "cover": "{COVER_URL}/679.png",
-    "url": "{HTML_URL}/679.html",
+    "cover": "covers/679.png",
+    "url": "html/679.html",
     "author": "SeethingSwarm",
     "genres": [
       "action",
@@ -8621,8 +8621,8 @@
   {
     "id": 680,
     "name": "Kirby Super Star Ultra",
-    "cover": "{COVER_URL}/680.png",
-    "url": "{HTML_URL}/680.html",
+    "cover": "covers/680.png",
+    "url": "html/680.html",
     "author": "Nintendo",
     "genres": [
       "action",
@@ -8637,8 +8637,8 @@
   {
     "id": 685,
     "name": "FIFA 11",
-    "cover": "{COVER_URL}/685.png",
-    "url": "{HTML_URL}/685.html",
+    "cover": "covers/685.png",
+    "url": "html/685.html",
     "author": "EA Sports",
     "genres": [
       "action",
@@ -8652,8 +8652,8 @@
   {
     "id": 686,
     "name": "FIFA 10",
-    "cover": "{COVER_URL}/686.png",
-    "url": "{HTML_URL}/686.html",
+    "cover": "covers/686.png",
+    "url": "html/686.html",
     "author": "EA Sports",
     "genres": [
       "action",
@@ -8667,8 +8667,8 @@
   {
     "id": 687,
     "name": "Pico's School (1999)",
-    "cover": "{COVER_URL}/687.png",
-    "url": "{HTML_URL}/687.html",
+    "cover": "covers/687.png",
+    "url": "html/687.html",
     "author": "Tom Fulp",
     "genres": [
       "action",
@@ -8681,8 +8681,8 @@
   {
     "id": 688,
     "name": "Peggle",
-    "cover": "{COVER_URL}/688.png",
-    "url": "{HTML_URL}/688.html",
+    "cover": "covers/688.png",
+    "url": "html/688.html",
     "author": "PopCap Games",
     "genres": [
       "action",
@@ -8695,8 +8695,8 @@
   {
     "id": 689,
     "name": "Meatboy",
-    "cover": "{COVER_URL}/689.png",
-    "url": "{HTML_URL}/689.html",
+    "cover": "covers/689.png",
+    "url": "html/689.html",
     "author": "Jonathan McEntee",
     "genres": [
       "action",
@@ -8709,8 +8709,8 @@
   {
     "id": 692,
     "name": "Kirby ~ Soft & Wet",
-    "cover": "{COVER_URL}/692.png",
-    "url": "{HTML_URL}/692.html",
+    "cover": "covers/692.png",
+    "url": "html/692.html",
     "author": "Strimp's Kitchen",
     "genres": [
       "action",
@@ -8724,8 +8724,8 @@
   {
     "id": 693,
     "name": "Half Life: Opposing Force",
-    "cover": "{COVER_URL}/693.png",
-    "url": "{HTML_URL}/693.html",
+    "cover": "covers/693.png",
+    "url": "html/693.html",
     "author": "Valve",
     "genres": [
       "action",
@@ -8738,8 +8738,8 @@
   {
     "id": 694,
     "name": "Pokemon Firered",
-    "cover": "{COVER_URL}/694.png",
-    "url": "{HTML_URL}/694.html",
+    "cover": "covers/694.png",
+    "url": "html/694.html",
     "author": "Nintendo",
     "genres": [
       "adventure",
@@ -8754,8 +8754,8 @@
   {
     "id": 695,
     "name": "Duck Life 8",
-    "cover": "{COVER_URL}/695.png",
-    "url": "{HTML_URL}/695.html",
+    "cover": "covers/695.png",
+    "url": "html/695.html",
     "author": "Wix Games",
     "genres": [
       "action",
@@ -8768,8 +8768,8 @@
   {
     "id": 696,
     "name": "Pokemon HeartGold",
-    "cover": "{COVER_URL}/696.png",
-    "url": "{HTML_URL}/696.html",
+    "cover": "covers/696.png",
+    "url": "html/696.html",
     "author": "Nintendo",
     "genres": [
       "adventure",
@@ -8784,8 +8784,8 @@
   {
     "id": 697,
     "name": "Bank Robbery",
-    "cover": "{COVER_URL}/697.png",
-    "url": "{HTML_URL}/697.html",
+    "cover": "covers/697.png",
+    "url": "html/697.html",
     "author": "justaliendev",
     "genres": [
       "action",
@@ -8798,8 +8798,8 @@
   {
     "id": 698,
     "name": "Bank Robbery 3",
-    "cover": "{COVER_URL}/698.png",
-    "url": "{HTML_URL}/698.html",
+    "cover": "covers/698.png",
+    "url": "html/698.html",
     "author": "justaliendev",
     "genres": [
       "action",
@@ -8812,8 +8812,8 @@
   {
     "id": 699,
     "name": "Stickman Destruction",
-    "cover": "{COVER_URL}/699.png",
-    "url": "{HTML_URL}/699.html",
+    "cover": "covers/699.png",
+    "url": "html/699.html",
     "author": "freezenova",
     "genres": [
       "action"
@@ -8825,8 +8825,8 @@
   {
     "id": 701,
     "name": "Real Flight Simulator",
-    "cover": "{COVER_URL}/701.png",
-    "url": "{HTML_URL}/701.html",
+    "cover": "covers/701.png",
+    "url": "html/701.html",
     "author": "freezenova",
     "genres": [
       "3d"
@@ -8838,8 +8838,8 @@
   {
     "id": 702,
     "name": "JavascriptPS1",
-    "cover": "{COVER_URL}/702.png",
-    "url": "{HTML_URL}/702.html",
+    "cover": "covers/702.png",
+    "url": "html/702.html",
     "author": "Alex Ashnov",
     "genres": [
       "action",
@@ -8852,8 +8852,8 @@
   {
     "id": 704,
     "name": "Five Nights at Freddy's: World Refreshed",
-    "cover": "{COVER_URL}/704.png",
-    "url": "{HTML_URL}/704-fix.html",
+    "cover": "covers/704.png",
+    "url": "html/704-fix.html",
     "author": "Pyturret, Willowy (squall.cc)",
     "genres": [
       "3d",
@@ -8867,8 +8867,8 @@
   {
     "id": 705,
     "name": "Iron Lung",
-    "cover": "{COVER_URL}/705.png",
-    "url": "{HTML_URL}/705-fix.html",
+    "cover": "covers/705.png",
+    "url": "html/705-fix.html",
     "author": "David Szymanski, 98corbins",
     "genres": [
       "action",
@@ -8881,8 +8881,8 @@
   {
     "id": 706,
     "name": "Fear & Hunger",
-    "cover": "{COVER_URL}/706.png",
-    "url": "{HTML_URL}/706-fix.html",
+    "cover": "covers/706.png",
+    "url": "html/706-fix.html",
     "author": "Miro Haverinen, Happy Paintings",
     "genres": [
       "action",
@@ -8895,8 +8895,8 @@
   {
     "id": 707,
     "name": "Traffic Racer",
-    "cover": "{COVER_URL}/707.png",
-    "url": "{HTML_URL}/707-fix.html",
+    "cover": "covers/707.png",
+    "url": "html/707-fix.html",
     "author": "skgames, madkidgames",
     "genres": [
       "action",
@@ -8909,8 +8909,8 @@
   {
     "id": 708,
     "name": "Needy Streamer Overload",
-    "cover": "{COVER_URL}/708.png",
-    "url": "{HTML_URL}/708-fix.html",
+    "cover": "covers/708.png",
+    "url": "html/708-fix.html",
     "author": "WSS playground, EDURocks",
     "genres": [
       "action",
@@ -8923,8 +8923,8 @@
   {
     "id": 709,
     "name": "Survivor.io",
-    "cover": "{COVER_URL}/709.png",
-    "url": "{HTML_URL}/709-fixagain.html",
+    "cover": "covers/709.png",
+    "url": "html/709-fixagain.html",
     "author": "Habby Pte. Ltd, madkidgames",
     "genres": [
       ".io"
@@ -8936,8 +8936,8 @@
   {
     "id": 710,
     "name": "Five Nights at Epstein's",
-    "cover": "{COVER_URL}/710.png",
-    "url": "{HTML_URL}/710-fix.html",
+    "cover": "covers/710.png",
+    "url": "html/710-fix.html",
     "author": "EvanProductions",
     "genres": [
       "action",
@@ -8950,8 +8950,8 @@
   {
     "id": 711,
     "name": "Antonblast",
-    "cover": "{COVER_URL}/711.png",
-    "url": "{HTML_URL}/711.html",
+    "cover": "covers/711.png",
+    "url": "html/711.html",
     "author": "Summitsphere",
     "genres": [
       "action",
@@ -8964,8 +8964,8 @@
   {
     "id": 712,
     "name": "Jumbo Mario",
-    "cover": "{COVER_URL}/712.png",
-    "url": "{HTML_URL}/712-f.html",
+    "cover": "covers/712.png",
+    "url": "html/712-f.html",
     "author": "wik",
     "genres": [
       "action",
@@ -8979,8 +8979,8 @@
   {
     "id": 713,
     "name": "Silent Hill",
-    "cover": "{COVER_URL}/713.png",
-    "url": "{HTML_URL}/713.html",
+    "cover": "covers/713.png",
+    "url": "html/713.html",
     "author": "Konami, Team Silent",
     "genres": [
       "action",
@@ -8994,8 +8994,8 @@
   {
     "id": 716,
     "name": "Clover Pit",
-    "cover": "{COVER_URL}/716.png",
-    "url": "{HTML_URL}/716-fix2.html",
+    "cover": "covers/716.png",
+    "url": "html/716-fix2.html",
     "author": "Panik Arcade",
     "genres": [
       "action",
@@ -9008,8 +9008,8 @@
   {
     "id": 717,
     "name": "Peaks of Yore",
-    "cover": "{COVER_URL}/717.png",
-    "url": "{HTML_URL}/717-fix2.html",
+    "cover": "covers/717.png",
+    "url": "html/717-fix2.html",
     "author": "Anders Grube Jensen",
     "genres": [
       "action",
@@ -9022,8 +9022,8 @@
   {
     "id": 718,
     "name": "Untitled Goose Game",
-    "cover": "{COVER_URL}/718.png",
-    "url": "{HTML_URL}/718.html",
+    "cover": "covers/718.png",
+    "url": "html/718.html",
     "author": "House House",
     "genres": [
       "action",
@@ -9036,8 +9036,8 @@
   {
     "id": 719,
     "name": "A Game About Feeding A Black Hole",
-    "cover": "{COVER_URL}/719.png",
-    "url": "{HTML_URL}/719.html",
+    "cover": "covers/719.png",
+    "url": "html/719.html",
     "author": "Aarimous, Thornityco",
     "genres": [
       "action",
@@ -9050,8 +9050,8 @@
   {
     "id": 720,
     "name": "Roulette Hero",
-    "cover": "{COVER_URL}/720.png",
-    "url": "{HTML_URL}/720.html",
+    "cover": "covers/720.png",
+    "url": "html/720.html",
     "author": "vfqd, Mr.Pootsley, Jaybooty, Kane Forster, shxyder",
     "genres": [
       "action",
@@ -9064,8 +9064,8 @@
   {
     "id": 721,
     "name": "Shift at Midnight",
-    "cover": "{COVER_URL}/721.png",
-    "url": "{HTML_URL}/721.html",
+    "cover": "covers/721.png",
+    "url": "html/721.html",
     "author": "Bun Muen, Slqnt",
     "genres": [
       "action",
@@ -9078,8 +9078,8 @@
   {
     "id": 722,
     "name": "Fused 240",
-    "cover": "{COVER_URL}/722.png",
-    "url": "{HTML_URL}/722.html",
+    "cover": "covers/722.png",
+    "url": "html/722.html",
     "author": "Mike Klubnika, shxyder",
     "genres": [
       "action",
@@ -9092,8 +9092,8 @@
   {
     "id": 723,
     "name": "Brotato",
-    "cover": "{COVER_URL}/723.png",
-    "url": "{HTML_URL}/723.html",
+    "cover": "covers/723.png",
+    "url": "html/723.html",
     "author": "Blobfish, Individual/Stinkalistic",
     "genres": [
       "action",
@@ -9106,8 +9106,8 @@
   {
     "id": 724,
     "name": "Endoparasitic 2",
-    "cover": "{COVER_URL}/724.png",
-    "url": "{HTML_URL}/724.html",
+    "cover": "covers/724.png",
+    "url": "html/724.html",
     "author": "Miziziziz, Deep Root Interactive, Individual/Stinkalistic",
     "genres": [
       "action",
@@ -9120,8 +9120,8 @@
   {
     "id": 725,
     "name": "ShredSauce",
-    "cover": "{COVER_URL}/725.png",
-    "url": "{HTML_URL}/725-ff.html",
+    "cover": "covers/725.png",
+    "url": "html/725-ff.html",
     "author": "Shredsauce Team",
     "genres": [
       "action",
@@ -9134,8 +9134,8 @@
   {
     "id": 727,
     "name": "Dimension Incident",
-    "cover": "{COVER_URL}/727.png",
-    "url": "{HTML_URL}/727.html",
+    "cover": "covers/727.png",
+    "url": "html/727.html",
     "author": "biznesbear",
     "genres": [
       "action",
@@ -9148,8 +9148,8 @@
   {
     "id": 728,
     "name": "Fear Assessment",
-    "cover": "{COVER_URL}/728.png",
-    "url": "{HTML_URL}/728.html",
+    "cover": "covers/728.png",
+    "url": "html/728.html",
     "author": "Alexander Wiseman",
     "genres": [
       "action",
@@ -9162,8 +9162,8 @@
   {
     "id": 729,
     "name": "game inside a game inside a game inside a game inside a game inside a game",
-    "cover": "{COVER_URL}/729.png",
-    "url": "{HTML_URL}/729.html",
+    "cover": "covers/729.png",
+    "url": "html/729.html",
     "author": "Sam Hogan",
     "genres": [
       "action",
@@ -9176,8 +9176,8 @@
   {
     "id": 730,
     "name": "Cell Machine",
-    "cover": "{COVER_URL}/730.png",
-    "url": "{HTML_URL}/730.html",
+    "cover": "covers/730.png",
+    "url": "html/730.html",
     "author": "Sam Hogan",
     "genres": [
       "action",
@@ -9190,8 +9190,8 @@
   {
     "id": 731,
     "name": "Undertale: Last Breath",
-    "cover": "{COVER_URL}/731.png",
-    "url": "{HTML_URL}/731.html",
+    "cover": "covers/731.png",
+    "url": "html/731.html",
     "author": "caijiqaq",
     "genres": [
       "action",
@@ -9204,8 +9204,8 @@
   {
     "id": 732,
     "name": "64 in 1 NES",
-    "cover": "{COVER_URL}/732.png",
-    "url": "{HTML_URL}/732.html",
+    "cover": "covers/732.png",
+    "url": "html/732.html",
     "author": "idk",
     "genres": [
       "action",
@@ -9220,8 +9220,8 @@
   {
     "id": 733,
     "name": "Tetris",
-    "cover": "{COVER_URL}/733.png",
-    "url": "{HTML_URL}/733.html",
+    "cover": "covers/733.png",
+    "url": "html/733.html",
     "author": "Nintendo",
     "genres": [
       "strategy",
@@ -9236,8 +9236,8 @@
   {
     "id": 734,
     "name": "Christmas Massacre",
-    "cover": "{COVER_URL}/734.png",
-    "url": "{HTML_URL}/734.html",
+    "cover": "covers/734.png",
+    "url": "html/734.html",
     "author": "Puppet Combo",
     "genres": [
       "action",
@@ -9250,8 +9250,8 @@
   {
     "id": 735,
     "name": "Famidash",
-    "cover": "{COVER_URL}/735.png",
-    "url": "{HTML_URL}/735.html",
+    "cover": "covers/735.png",
+    "url": "html/735.html",
     "author": "Zephyrside",
     "genres": [
       "action",
@@ -9266,8 +9266,8 @@
   {
     "id": 736,
     "name": "Super Mario Bros. Remastered",
-    "cover": "{COVER_URL}/736.png",
-    "url": "{HTML_URL}/736.html",
+    "cover": "covers/736.png",
+    "url": "html/736.html",
     "author": "Zephyrside",
     "genres": [
       "action",
@@ -9281,8 +9281,8 @@
   {
     "id": 737,
     "name": "Saihate Station (さいはて駅)",
-    "cover": "{COVER_URL}/737.png",
-    "url": "{HTML_URL}/737.html",
+    "cover": "covers/737.png",
+    "url": "html/737.html",
     "author": "びぶ/viv",
     "genres": [
       "action",
@@ -9295,8 +9295,8 @@
   {
     "id": 738,
     "name": "Dumb Ways to Die",
-    "cover": "{COVER_URL}/738.png",
-    "url": "{HTML_URL}/738-u.html",
+    "cover": "covers/738.png",
+    "url": "html/738-u.html",
     "author": "PlaySide Studios Ltd, Metro Trains",
     "genres": [
       "action",
@@ -9309,8 +9309,8 @@
   {
     "id": 739,
     "name": "Soccer Random",
-    "cover": "{COVER_URL}/739.png",
-    "url": "{HTML_URL}/739.html",
+    "cover": "covers/739.png",
+    "url": "html/739.html",
     "author": "RHM Interactive OÜ",
     "genres": [
       "action",
@@ -9323,8 +9323,8 @@
   {
     "id": 740,
     "name": "Bart Blast",
-    "cover": "{COVER_URL}/740.png",
-    "url": "{HTML_URL}/740.html",
+    "cover": "covers/740.png",
+    "url": "html/740.html",
     "author": "epickface",
     "genres": [
       "action",
@@ -9337,8 +9337,8 @@
   {
     "id": 741,
     "name": "Resident Evil",
-    "cover": "{COVER_URL}/741.png",
-    "url": "{HTML_URL}/741.html",
+    "cover": "covers/741.png",
+    "url": "html/741.html",
     "author": "Capcom",
     "genres": [
       "action",
@@ -9353,8 +9353,8 @@
   {
     "id": 742,
     "name": "Resident Evil 2",
-    "cover": "{COVER_URL}/742.png",
-    "url": "{HTML_URL}/742.html",
+    "cover": "covers/742.png",
+    "url": "html/742.html",
     "author": "Capcom",
     "genres": [
       "action",
@@ -9369,8 +9369,8 @@
   {
     "id": 743,
     "name": "Power Hover",
-    "cover": "{COVER_URL}/743.png",
-    "url": "{HTML_URL}/743.html",
+    "cover": "covers/743.png",
+    "url": "html/743.html",
     "author": "ODDROK",
     "genres": [
       "action",
@@ -9383,8 +9383,8 @@
   {
     "id": 744,
     "name": "Escape Road City 2",
-    "cover": "{COVER_URL}/744.png",
-    "url": "{HTML_URL}/744-a.html",
+    "cover": "covers/744.png",
+    "url": "html/744-a.html",
     "author": "AZ Games",
     "genres": [
       "action",
@@ -9397,8 +9397,8 @@
   {
     "id": 745,
     "name": "Tetris",
-    "cover": "{COVER_URL}/745.png",
-    "url": "{HTML_URL}/745.html",
+    "cover": "covers/745.png",
+    "url": "html/745.html",
     "author": "Nintendo",
     "genres": [
       "strategy",
@@ -9413,8 +9413,8 @@
   {
     "id": 746,
     "name": "Fundamental Paper Novel",
-    "cover": "{COVER_URL}/746.png",
-    "url": "{HTML_URL}/746.html",
+    "cover": "covers/746.png",
+    "url": "html/746.html",
     "author": "yakubell",
     "genres": [
       "action",
@@ -9427,8 +9427,8 @@
   {
     "id": 747,
     "name": "Worst Time Simulator",
-    "cover": "{COVER_URL}/747.png",
-    "url": "{HTML_URL}/747.html",
+    "cover": "covers/747.png",
+    "url": "html/747.html",
     "author": "omegafredo",
     "genres": [
       "3d"
@@ -9440,8 +9440,8 @@
   {
     "id": 748,
     "name": "Undertale Last Breath PHASE THREE",
-    "cover": "{COVER_URL}/748.png",
-    "url": "{HTML_URL}/748.html",
+    "cover": "covers/748.png",
+    "url": "html/748.html",
     "author": "mario1d240",
     "genres": [
       "action",
@@ -9454,8 +9454,8 @@
   {
     "id": 749,
     "name": "Super Monkey Ball 1&2",
-    "cover": "{COVER_URL}/749.png",
-    "url": "{HTML_URL}/749.html",
+    "cover": "covers/749.png",
+    "url": "html/749.html",
     "author": "Amusement Vision, camthesaxman etc",
     "genres": [
       "action",
@@ -9468,8 +9468,8 @@
   {
     "id": 750,
     "name": "Five Nights at Last Breath",
-    "cover": "{COVER_URL}/750.png",
-    "url": "{HTML_URL}/750-u.html",
+    "cover": "covers/750.png",
+    "url": "html/750-u.html",
     "author": "Free_Breath",
     "genres": [
       "action",
@@ -9482,8 +9482,8 @@
   {
     "id": 751,
     "name": "Jeffrey Epstein Basics In Education And Kidnapping",
-    "cover": "{COVER_URL}/751.png",
-    "url": "{HTML_URL}/751.html",
+    "cover": "covers/751.png",
+    "url": "html/751.html",
     "author": "Zakaria_ALZ",
     "genres": [
       "action",
@@ -9496,8 +9496,8 @@
   {
     "id": 752,
     "name": "Bad Piggies",
-    "cover": "{COVER_URL}/752.png",
-    "url": "{HTML_URL}/752.html",
+    "cover": "covers/752.png",
+    "url": "html/752.html",
     "author": "Rovio Entertainment, EDURocks",
     "genres": [
       "action",
@@ -9510,8 +9510,8 @@
   {
     "id": 753,
     "name": "Breaklock",
-    "cover": "{COVER_URL}/753.png",
-    "url": "{HTML_URL}/753.html",
+    "cover": "covers/753.png",
+    "url": "html/753.html",
     "author": "Print More India",
     "genres": [
       "action",
@@ -9524,8 +9524,8 @@
   {
     "id": 754,
     "name": "Minecraft Pocket Edition",
-    "cover": "{COVER_URL}/754.png",
-    "url": "{HTML_URL}/754.html",
+    "cover": "covers/754.png",
+    "url": "html/754.html",
     "author": "Mojang",
     "genres": [
       "adventure",
@@ -9539,8 +9539,8 @@
   {
     "id": 755,
     "name": "Brawl Simulator 3D",
-    "cover": "{COVER_URL}/755.png",
-    "url": "{HTML_URL}/755.html",
+    "cover": "covers/755.png",
+    "url": "html/755.html",
     "author": "Fire Games, Supercell",
     "genres": [
       "3d"
@@ -9552,8 +9552,8 @@
   {
     "id": 756,
     "name": "Witch's Heart",
-    "cover": "{COVER_URL}/756.png",
-    "url": "{HTML_URL}/756-f.html",
+    "cover": "covers/756.png",
+    "url": "html/756-f.html",
     "author": "IZ (BLUE STAR Entertainment)",
     "genres": [
       "action",
@@ -9566,8 +9566,8 @@
   {
     "id": 757,
     "name": "Ultrapool",
-    "cover": "{COVER_URL}/757.png",
-    "url": "{HTML_URL}/757.html",
+    "cover": "covers/757.png",
+    "url": "html/757.html",
     "author": "Icedrop Games, mysmic",
     "genres": [
       "action",
@@ -9580,8 +9580,8 @@
   {
     "id": 758,
     "name": "CaseOh's Basics in Eating and Fast Food",
-    "cover": "{COVER_URL}/758.png",
-    "url": "{HTML_URL}/758a.html",
+    "cover": "covers/758.png",
+    "url": "html/758a.html",
     "author": "Ronezkj15",
     "genres": [
       "action",
@@ -9594,8 +9594,8 @@
   {
     "id": 759,
     "name": "Dice a Million",
-    "cover": "{COVER_URL}/759.png",
-    "url": "{HTML_URL}/759.html",
+    "cover": "covers/759.png",
+    "url": "html/759.html",
     "author": "countlessnights, 2 Left Thumbs, NotRexed",
     "genres": [
       "strategy"
@@ -9607,8 +9607,8 @@
   {
     "id": 760,
     "name": "Overburden",
-    "cover": "{COVER_URL}/760.png",
-    "url": "{HTML_URL}/760.html",
+    "cover": "covers/760.png",
+    "url": "html/760.html",
     "author": "notsospecialgames, shxyder",
     "genres": [
       "action",
@@ -9621,8 +9621,8 @@
   {
     "id": 761,
     "name": "FISH",
-    "cover": "{COVER_URL}/761.png",
-    "url": "{HTML_URL}/761.html",
+    "cover": "covers/761.png",
+    "url": "html/761.html",
     "author": "dmcaguy",
     "genres": [
       "action",
@@ -9635,8 +9635,8 @@
   {
     "id": 762,
     "name": "Cheese Rolling",
-    "cover": "{COVER_URL}/762.png",
-    "url": "{HTML_URL}/762.html",
+    "cover": "covers/762.png",
+    "url": "html/762.html",
     "author": "The Interviewed, wasm.com",
     "genres": [
       "action",
@@ -9649,8 +9649,8 @@
   {
     "id": 763,
     "name": "Flying Gorilla 3D",
-    "cover": "{COVER_URL}/763.png",
-    "url": "{HTML_URL}/763.html",
+    "cover": "covers/763.png",
+    "url": "html/763.html",
     "author": "Pinbit LLC",
     "genres": [
       "3d"
@@ -9662,8 +9662,8 @@
   {
     "id": 764,
     "name": "Five Night's at Shrek's Hotel",
-    "cover": "{COVER_URL}/764.png",
-    "url": "{HTML_URL}/764.html",
+    "cover": "covers/764.png",
+    "url": "html/764.html",
     "author": "rend-pii",
     "genres": [
       "action",
@@ -9676,8 +9676,8 @@
   {
     "id": 765,
     "name": "Scary Shawarma Kiosk: the ANOMALY",
-    "cover": "{COVER_URL}/765.png",
-    "url": "{HTML_URL}/765.html",
+    "cover": "covers/765.png",
+    "url": "html/765.html",
     "author": "kharbor_ykt",
     "genres": [
       "action",
@@ -9692,8 +9692,8 @@
   {
     "id": 766,
     "name": "Suika Game",
-    "cover": "{COVER_URL}/766.png",
-    "url": "{HTML_URL}/766.html",
+    "cover": "covers/766.png",
+    "url": "html/766.html",
     "author": "unknown",
     "genres": [
       "action",
@@ -9706,8 +9706,8 @@
   {
     "id": 767,
     "name": "Stick Slasher",
-    "cover": "{COVER_URL}/767.png",
-    "url": "{HTML_URL}/767.html",
+    "cover": "covers/767.png",
+    "url": "html/767.html",
     "author": "Beruke Games",
     "genres": [
       "action",
@@ -9720,8 +9720,8 @@
   {
     "id": 768,
     "name": "Stickman Kombat 2D",
-    "cover": "{COVER_URL}/768.png",
-    "url": "{HTML_URL}/768.html",
+    "cover": "covers/768.png",
+    "url": "html/768.html",
     "author": "GamePush",
     "genres": [
       "action"
@@ -9733,8 +9733,8 @@
   {
     "id": 769,
     "name": "Stickman Duel",
-    "cover": "{COVER_URL}/769.png",
-    "url": "{HTML_URL}/769.html",
+    "cover": "covers/769.png",
+    "url": "html/769.html",
     "author": "unknown",
     "genres": [
       "action"
@@ -9746,8 +9746,8 @@
   {
     "id": 770,
     "name": "Sonic Robo Blast 2",
-    "cover": "{COVER_URL}/770.png",
-    "url": "{HTML_URL}/770.html",
+    "cover": "covers/770.png",
+    "url": "html/770.html",
     "author": "Sonic Team Junior, crunch, vinmannie",
     "genres": [
       "action",
@@ -9761,8 +9761,8 @@
   {
     "id": 771,
     "name": "Hollow Knight: Silksong",
-    "cover": "{COVER_URL}/771.png",
-    "url": "{HTML_URL}/771-z.html",
+    "cover": "covers/771.png",
+    "url": "html/771-z.html",
     "author": "Team Cherry, Edurocks",
     "genres": [
       "action",
@@ -9775,8 +9775,8 @@
   {
     "id": 772,
     "name": "Sam & Max Hit the Road",
-    "cover": "{COVER_URL}/772.png",
-    "url": "{HTML_URL}/772.html",
+    "cover": "covers/772.png",
+    "url": "html/772.html",
     "author": "Lucasfilm",
     "genres": [
       "action",
@@ -9790,8 +9790,8 @@
   {
     "id": 773,
     "name": "Command & Conquer",
-    "cover": "{COVER_URL}/773.png",
-    "url": "{HTML_URL}/773.html",
+    "cover": "covers/773.png",
+    "url": "html/773.html",
     "author": "Westwood Studios",
     "genres": [
       "action",
@@ -9805,8 +9805,8 @@
   {
     "id": 774,
     "name": "Mountain Bike Racer",
-    "cover": "{COVER_URL}/774.png",
-    "url": "{HTML_URL}/774.html",
+    "cover": "covers/774.png",
+    "url": "html/774.html",
     "author": "stefano1234",
     "genres": [
       "racing"
@@ -9818,8 +9818,8 @@
   {
     "id": 775,
     "name": "Bart Bash",
-    "cover": "{COVER_URL}/775.png",
-    "url": "{HTML_URL}/775.html",
+    "cover": "covers/775.png",
+    "url": "html/775.html",
     "author": "TeleSTOP",
     "genres": [
       "action",
@@ -9832,8 +9832,8 @@
   {
     "id": 776,
     "name": "Your Only Move Is HUSTLE",
-    "cover": "{COVER_URL}/776.png",
-    "url": "{HTML_URL}/776.html",
+    "cover": "covers/776.png",
+    "url": "html/776.html",
     "author": "ivysly",
     "genres": [
       "action",
@@ -9846,8 +9846,8 @@
   {
     "id": 777,
     "name": "Outhold",
-    "cover": "{COVER_URL}/777.png",
-    "url": "{HTML_URL}/777.html",
+    "cover": "covers/777.png",
+    "url": "html/777.html",
     "author": "tellusgames",
     "genres": [
       "action",
@@ -9860,8 +9860,8 @@
   {
     "id": 778,
     "name": "Serial Experiments Lain",
-    "cover": "{COVER_URL}/778.png",
-    "url": "{HTML_URL}/778.html",
+    "cover": "covers/778.png",
+    "url": "html/778.html",
     "author": "NBCUniversal Entertainment Japan, Pioneer Productions",
     "genres": [
       "action",
@@ -9874,8 +9874,8 @@
   {
     "id": 779,
     "name": "I Have No Mouth, and I Must Scream",
-    "cover": "{COVER_URL}/779.png",
-    "url": "{HTML_URL}/779.html",
+    "cover": "covers/779.png",
+    "url": "html/779.html",
     "author": "Cyberdreams",
     "genres": [
       "action",
@@ -9889,8 +9889,8 @@
   {
     "id": 780,
     "name": "Thing-Thing Arena 3",
-    "cover": "{COVER_URL}/780.png",
-    "url": "{HTML_URL}/780.html",
+    "cover": "covers/780.png",
+    "url": "html/780.html",
     "author": "Weasel",
     "genres": [
       "action",
@@ -9903,8 +9903,8 @@
   {
     "id": 781,
     "name": "Scratch Inc",
-    "cover": "{COVER_URL}/781.png",
-    "url": "{HTML_URL}/781.html",
+    "cover": "covers/781.png",
+    "url": "html/781.html",
     "author": "Makopaz",
     "genres": [
       "action",
@@ -9917,8 +9917,8 @@
   {
     "id": 782,
     "name": "Um Jammer Lammy",
-    "cover": "{COVER_URL}/782.png",
-    "url": "{HTML_URL}/782f.html",
+    "cover": "covers/782.png",
+    "url": "html/782f.html",
     "author": "NanaOn-Sha",
     "genres": [
       "action",
@@ -9933,8 +9933,8 @@
   {
     "id": 783,
     "name": "Apes vs Helium",
-    "cover": "{COVER_URL}/783.png",
-    "url": "{HTML_URL}/783.html",
+    "cover": "covers/783.png",
+    "url": "html/783.html",
     "author": "mdtowerz",
     "genres": [
       "action",
@@ -9947,8 +9947,8 @@
   {
     "id": 784,
     "name": "Gabriel's Awesome Schoolhouse (GASH)",
-    "cover": "{COVER_URL}/784.png",
-    "url": "{HTML_URL}/784.html",
+    "cover": "covers/784.png",
+    "url": "html/784.html",
     "author": "Gabriel115GJ",
     "genres": [
       "action",
@@ -9961,8 +9961,8 @@
   {
     "id": 785,
     "name": "Geometry Dash",
-    "cover": "{COVER_URL}/785.png",
-    "url": "{HTML_URL}/785.html",
+    "cover": "covers/785.png",
+    "url": "html/785.html",
     "author": "RobTop Games",
     "genres": [
       "action",

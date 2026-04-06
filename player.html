@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playing — Vispora</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script src="js/storage.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/cloak.js"></script>
+  <script src="js/app.js"></script>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <main class="player-page page-enter container" role="main">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="home.html">Home</a>
+      <span class="breadcrumb-sep" aria-hidden="true">›</span>
+      <a href="games.html">Games</a>
+      <span class="breadcrumb-sep" aria-hidden="true">›</span>
+      <span id="breadcrumb-game" aria-current="page">Loading…</span>
+    </nav>
+
+    <!-- Header -->
+    <div class="player-header">
+      <div class="player-info">
+        <h1 class="player-title" id="game-title">Loading…</h1>
+        <div class="player-author" id="game-author"></div>
+        <div class="player-tags" id="game-tags"></div>
+      </div>
+      <div style="display:flex;gap:10px;align-items:center">
+        <div id="playtime-display" style="font-family:var(--font-display);font-size:0.75rem;color:var(--text-secondary);letter-spacing:0.08em;text-align:right;line-height:1.3"></div>
+        <button class="btn btn-secondary" id="back-btn" aria-label="Back to games library">
+          ${VApp.SVG_BACK} Back
+        </button>
+      </div>
+    </div>
+
+    <!-- iframe -->
+    <div class="player-iframe-wrap" id="iframe-wrap">
+      <div class="player-error" id="player-error" style="display:none">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <strong>Game failed to load</strong>
+        <p id="error-fallback-link"></p>
+      </div>
+      <iframe 
+        id="game-frame" 
+        title="Game Player"
+        allowfullscreen
+        allow="autoplay; fullscreen; pointer-lock"
+        sandbox="allow-scripts allow-same-origin allow-forms allow-pointer-lock allow-popups"
+        style="display:none"
+      ></iframe>
+    </div>
+
+    <!-- Controls -->
+    <div class="player-controls" role="toolbar" aria-label="Game controls">
+      <button class="btn-icon" id="btn-fullscreen" title="Toggle Fullscreen" aria-label="Toggle fullscreen">
+        ${VApp.SVG_FULLSCREEN}
+      </button>
+      <button class="btn-icon" id="btn-reload" title="Reload Game" aria-label="Reload game">
+        ${VApp.SVG_RELOAD}
+      </button>
+      <button class="btn-icon" id="btn-screenshot" title="Screenshot" aria-label="Take screenshot">
+        ${VApp.SVG_SCREENSHOT}
+      </button>
+      <button class="btn-icon" id="btn-fav" title="Toggle Favorite" aria-label="Toggle favorite">
+        ${VApp.SVG_STAR}
+      </button>
+      <div style="width:1px;height:24px;background:var(--card-border);margin:0 4px"></div>
+      <span id="session-time" style="font-family:var(--font-display);font-size:0.7rem;color:var(--text-secondary);letter-spacing:0.1em;min-width:50px;text-align:center" aria-live="polite" aria-label="Session time"></span>
+    </div>
+  </main>
+
+  <div id="toast-container" role="status" aria-live="polite"></div>
+
+  <script>
+    document.getElementById('nav-placeholder').innerHTML = VApp.navHTML('games');
+    VCloak.initCloak();
+    VApp.initPanicBtn();
+
+    const dtEl = document.getElementById('nav-datetime');
+    if (dtEl) VApp.startDatetime(dtEl);
+
+    // Parse URL params
+    const params = new URLSearchParams(window.location.search);
+    const gameId  = params.get('id');
+
+    let game = null;
+    let sessionStart = null;
+    let sessionMs = 0;
+    let sessionTimer = null;
+    let isFullscreen = false;
+
+    if (!gameId) {
+      window.location.href = 'games.html';
+    } else {
+      initPlayer();
+    }
+
+    async function initPlayer() {
+      const games = await VApp.loadGames();
+      game = games.find(g => String(g.id) === String(gameId));
+
+      if (!game) {
+        VApp.showToast('Game not found!', 'error');
+        setTimeout(() => window.location.href = 'games.html', 1500);
+        return;
+      }
+
+      // Update page
+      document.title = `${game.name} — Vispora`;
+      document.getElementById('game-title').textContent    = game.name;
+      document.getElementById('breadcrumb-game').textContent = game.name;
+      document.getElementById('game-author').innerHTML =
+        `by <strong>${VApp.escHtml(game.author || 'Unknown')}</strong>`;
+
+      // Tags
+      const tagsEl = document.getElementById('game-tags');
+      const tags = [...(game.special || []), ...(game.genres || [])].slice(0, 4);
+      tagsEl.innerHTML = tags.map(t =>
+        `<span class="tag tag-accent">${VApp.escHtml(t)}</span>`
+      ).join('');
+
+      // Favorite button
+      updateFavBtn();
+
+      // Load iframe
+      const frame = document.getElementById('game-frame');
+      const errorEl = document.getElementById('player-error');
+
+      if (game.url) {
+        frame.src = game.url;
+        frame.style.display = '';
+
+        frame.addEventListener('load', () => {
+          startSession();
+          VStorage.addToHistory(game);
+        });
+
+        frame.addEventListener('error', () => {
+          frame.style.display = 'none';
+          errorEl.style.display = 'flex';
+          const fallback = document.getElementById('error-fallback-link');
+          fallback.innerHTML = `<a href="${VApp.escHtml(game.url)}" target="_blank" style="color:var(--accent)">Try opening directly ↗</a>`;
+        });
+      } else {
+        frame.style.display = 'none';
+        errorEl.style.display = 'flex';
+      }
+
+      // Existing playtime
+      const existing = VStorage.getPlaytime(game.id);
+      updatePlaytimeDisplay(existing);
+    }
+
+    // ---- Session timer ----
+    function startSession() {
+      sessionStart = Date.now();
+      sessionTimer = setInterval(tickSession, 1000);
+    }
+
+    function tickSession() {
+      if (!sessionStart) return;
+      const elapsed = Date.now() - sessionStart + sessionMs;
+      const sEl = document.getElementById('session-time');
+      if (sEl) sEl.textContent = VStorage.formatTime(elapsed) || '0s';
+    }
+
+    function saveSession() {
+      if (!game || !sessionStart) return;
+      const elapsed = Date.now() - sessionStart;
+      sessionMs += elapsed;
+      sessionStart = null;
+      if (elapsed > 2000) {
+        VStorage.addPlaytime(game.id, elapsed);
+        VStorage.addToHistory(game);
+      }
+    }
+
+    // Pause on tab blur, resume on focus
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        if (sessionStart) {
+          saveSession();
+          clearInterval(sessionTimer);
+        }
+      } else {
+        if (game) {
+          sessionStart = Date.now();
+          sessionTimer = setInterval(tickSession, 1000);
+        }
+      }
+    });
+
+    // Save on navigation away
+    window.addEventListener('beforeunload', saveSession);
+    window.addEventListener('pagehide', saveSession);
+
+    function updatePlaytimeDisplay(ms) {
+      const el = document.getElementById('playtime-display');
+      const t = VStorage.formatTime(ms);
+      el.innerHTML = t ? `Total<br><strong style="color:var(--accent)">${t}</strong>` : '';
+    }
+
+    // ---- Back ----
+    document.getElementById('back-btn').addEventListener('click', () => {
+      saveSession();
+      clearInterval(sessionTimer);
+      history.back();
+    });
+
+    // ---- Fullscreen ----
+    const iframeWrap = document.getElementById('iframe-wrap');
+    const btnFs = document.getElementById('btn-fullscreen');
+
+    function toggleFullscreen() {
+      isFullscreen = !isFullscreen;
+      iframeWrap.classList.toggle('fullscreen-mode', isFullscreen);
+      btnFs.innerHTML = isFullscreen ? VApp.SVG_FULLSCREEN_EXIT : VApp.SVG_FULLSCREEN;
+      btnFs.setAttribute('aria-label', isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen');
+
+      if (isFullscreen) {
+        // Try native fullscreen
+        if (iframeWrap.requestFullscreen) iframeWrap.requestFullscreen().catch(() => {});
+      } else {
+        if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
+      }
+    }
+
+    btnFs.addEventListener('click', toggleFullscreen);
+
+    document.addEventListener('fullscreenchange', () => {
+      if (!document.fullscreenElement && isFullscreen) {
+        isFullscreen = false;
+        iframeWrap.classList.remove('fullscreen-mode');
+        btnFs.innerHTML = VApp.SVG_FULLSCREEN;
+      }
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && isFullscreen) {
+        isFullscreen = false;
+        iframeWrap.classList.remove('fullscreen-mode');
+        btnFs.innerHTML = VApp.SVG_FULLSCREEN;
+        if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
+      }
+    });
+
+    // ---- Reload ----
+    document.getElementById('btn-reload').addEventListener('click', () => {
+      const frame = document.getElementById('game-frame');
+      frame.src = frame.src;
+      VApp.showToast('Game reloaded');
+    });
+
+    // ---- Screenshot ----
+    document.getElementById('btn-screenshot').addEventListener('click', () => {
+      VApp.showToast('Screenshot: right-click the game area to save', 'info', 4000);
+    });
+
+    // ---- Favorite ----
+    document.getElementById('btn-fav').addEventListener('click', () => {
+      if (!game) return;
+      const added = VStorage.toggleFavorite(game.id);
+      updateFavBtn();
+      VApp.showToast(added ? '⭐ Added to favorites' : 'Removed from favorites');
+    });
+
+    function updateFavBtn() {
+      if (!game) return;
+      const btn = document.getElementById('btn-fav');
+      const isFav = VStorage.isFavorite(game.id);
+      btn.innerHTML = isFav ? `<span style="color:var(--accent)">${VApp.SVG_STAR_FILLED}</span>` : VApp.SVG_STAR;
+      btn.setAttribute('aria-label', isFav ? 'Remove from favorites' : 'Add to favorites');
+      btn.title = isFav ? 'Remove from favorites' : 'Add to favorites';
+    }
+  </script>
+</body>
+</html>

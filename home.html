@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home — Vispora</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script src="js/storage.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/cloak.js"></script>
+  <script src="js/app.js"></script>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <main class="home-page page-enter container" role="main">
+    <!-- Hero + Stats row -->
+    <div class="home-hero-section" id="hero-section">
+      <!-- Hero card -->
+      <div id="hero-container">
+        <div class="hero-card skeleton" id="hero-card" style="min-height:200px"></div>
+      </div>
+      <!-- Quick stats -->
+      <div style="display:flex;flex-direction:column;gap:14px;justify-content:center">
+        <div class="stat-card">
+          <div class="stat-value" id="stat-total-games">—</div>
+          <div class="stat-label">Games Available</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="stat-playtime">—</div>
+          <div class="stat-label">Total Playtime</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="stat-favorites">—</div>
+          <div class="stat-label">Favorites</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent Games -->
+    <section aria-labelledby="recent-title">
+      <div class="section-header">
+        <h2 class="section-title" id="recent-title"><span>▷</span>Recently Played</h2>
+        <a href="#" class="section-viewall" id="recent-viewall" style="display:none" aria-label="View all recently played games">View All</a>
+      </div>
+      <div id="recent-container">
+        <div class="empty-state">
+          <div class="empty-state-icon">🎮</div>
+          <div class="empty-state-title">No games played yet</div>
+          <p>Head to the <a href="games.html" style="color:var(--accent)">Games Library</a> to start playing!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Games -->
+    <section aria-labelledby="popular-title">
+      <div class="section-header">
+        <h2 class="section-title" id="popular-title"><span>▷</span>Popular Games</h2>
+        <a href="games.html" class="section-viewall" aria-label="View all games">View All</a>
+      </div>
+      <div id="popular-container">
+        <div class="games-row skeleton-row" id="popular-row" style="display:flex;gap:14px">
+          ${Array(8).fill(0).map(() => '<div class="skeleton" style="flex:0 0 160px;height:160px;border-radius:12px"></div>').join('')}
+        </div>
+      </div>
+    </section>
+
+    <!-- Favorites -->
+    <section aria-labelledby="fav-title">
+      <div class="section-header">
+        <h2 class="section-title" id="fav-title"><span>▷</span>Favorites</h2>
+        <a href="#" class="section-viewall" id="fav-viewall" style="display:none" aria-label="View all favorites">View All</a>
+      </div>
+      <div id="fav-container">
+        <div class="empty-state">
+          <div class="empty-state-icon">⭐</div>
+          <div class="empty-state-title">No favorites yet</div>
+          <p>Star games to add them here!</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- View All Modal -->
+  <div id="viewall-modal" style="display:none" role="dialog" aria-modal="true" aria-labelledby="viewall-title"></div>
+
+  <div id="toast-container" role="status" aria-live="polite"></div>
+
+  <script>
+    // Nav
+    document.getElementById('nav-placeholder').innerHTML = VApp.navHTML('home');
+    VCloak.initCloak();
+    VApp.initPanicBtn();
+
+    // Datetime
+    const dtEl = document.getElementById('nav-datetime');
+    if (dtEl) VApp.startDatetime(dtEl);
+
+    let allGames = [];
+
+    async function init() {
+      allGames = await VApp.loadGames();
+
+      renderHero();
+      renderStats();
+      renderRecent();
+      renderPopular();
+      renderFavorites();
+    }
+
+    function renderHero() {
+      if (!allGames.length) return;
+      const game = allGames[Math.floor(Math.random() * Math.min(allGames.length, 30))];
+      const card = document.getElementById('hero-card');
+      card.classList.remove('skeleton');
+      card.innerHTML = `
+        ${game.cover ? `<img src="${VApp.escHtml(game.cover)}" alt="${VApp.escHtml(game.name)}" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0">` : ''}
+        <div class="hero-card-content">
+          <div class="hero-badge">Featured</div>
+          <div class="hero-title">${VApp.escHtml(game.name)}</div>
+          <div class="hero-author">by ${VApp.escHtml(game.author || 'Unknown')}</div>
+          <a href="player.html?id=${game.id}" class="btn btn-primary" style="width:fit-content">
+            ${VApp.SVG_PLAY} Play Now
+          </a>
+        </div>
+      `;
+      card.style.position = 'relative';
+      card.style.overflow = 'hidden';
+    }
+
+    function renderStats() {
+      document.getElementById('stat-total-games').textContent = allGames.length.toLocaleString();
+      const playtime = Object.values(VStorage.getAllPlaytime()).reduce((a,b) => a+b, 0);
+      document.getElementById('stat-playtime').textContent = VStorage.formatTime(playtime) || '0m';
+      document.getElementById('stat-favorites').textContent = VStorage.getFavorites().length;
+    }
+
+    function renderRecent() {
+      const history = VStorage.getHistory();
+      const container = document.getElementById('recent-container');
+      const viewall = document.getElementById('recent-viewall');
+
+      if (!history.length) return;
+
+      const shown = history.slice(0, 8);
+      viewall.style.display = history.length > 8 ? '' : 'none';
+
+      const row = document.createElement('div');
+      row.className = 'games-row scroll-fade-right';
+      row.innerHTML = shown.map(h => VApp.createGameCardHTML(h, { showRemove: true })).join('');
+      container.innerHTML = '';
+      container.appendChild(row);
+
+      VApp.initStarDelegation(row);
+
+      // Remove from history
+      row.addEventListener('click', async (e) => {
+        const removeBtn = e.target.closest('.game-card-remove');
+        if (!removeBtn) return;
+        e.preventDefault();
+        e.stopPropagation();
+        const id = Number(removeBtn.dataset.id);
+        const confirmed = await VApp.showModal({
+          title: 'Remove from History',
+          message: 'Remove this game from your recently played list? This only affects history, not favorites.',
+          confirmText: 'Remove',
+          dangerous: true,
+        });
+        if (confirmed) {
+          VStorage.removeFromHistory(id);
+          removeBtn.closest('.game-card').remove();
+          VApp.showToast('Removed from history');
+          renderStats();
+        }
+      });
+
+      // View all
+      viewall.addEventListener('click', (e) => {
+        e.preventDefault();
+        showViewAllModal('Recent Games', history);
+      });
+    }
+
+    function renderPopular() {
+      const container = document.getElementById('popular-container');
+      if (!allGames.length) return;
+
+      // Sort by total playtime (community), fallback to random shuffle
+      const playtimes = VStorage.getAllPlaytime();
+      const scored = [...allGames].sort((a,b) => {
+        return (playtimes[String(b.id)] || 0) - (playtimes[String(a.id)] || 0);
+      });
+
+      // If no playtime data, shuffle
+      const popular = scored.slice(0, 8);
+
+      const row = document.createElement('div');
+      row.className = 'games-row scroll-fade-right';
+      row.innerHTML = popular.map(g => VApp.createGameCardHTML(g)).join('');
+      container.innerHTML = '';
+      container.appendChild(row);
+      VApp.initStarDelegation(row);
+    }
+
+    function renderFavorites() {
+      const favIds = VStorage.getFavorites();
+      const container = document.getElementById('fav-container');
+      const viewall = document.getElementById('fav-viewall');
+
+      if (!favIds.length) return;
+
+      const favGames = favIds
+        .map(id => allGames.find(g => g.id === id))
+        .filter(Boolean)
+        .slice(0, 8);
+
+      if (!favGames.length) return;
+
+      viewall.style.display = favIds.length > 8 ? '' : 'none';
+
+      const row = document.createElement('div');
+      row.className = 'games-row scroll-fade-right';
+      row.innerHTML = favGames.map(g => VApp.createGameCardHTML(g)).join('');
+      container.innerHTML = '';
+      container.appendChild(row);
+      VApp.initStarDelegation(row);
+
+      viewall.addEventListener('click', (e) => {
+        e.preventDefault();
+        const allFavs = VStorage.getFavorites()
+          .map(id => allGames.find(g => g.id === id))
+          .filter(Boolean);
+        showViewAllModal('Favorites', allFavs);
+      });
+    }
+
+    function showViewAllModal(title, games) {
+      const overlay = document.createElement('div');
+      overlay.className = 'modal-overlay';
+      overlay.innerHTML = `
+        <div class="modal" style="max-width:700px;width:100%">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
+            <h3 style="margin:0">${VApp.escHtml(title)}</h3>
+            <button class="btn-icon modal-close-btn" aria-label="Close">${VApp.SVG_X}</button>
+          </div>
+          <div class="view-all-grid">
+            ${games.map(g => VApp.createGameCardHTML(g)).join('')}
+          </div>
+        </div>
+      `;
+      overlay.querySelector('.modal-close-btn').addEventListener('click', () => overlay.remove());
+      overlay.addEventListener('click', e => { if (e.target === overlay) overlay.remove(); });
+      VApp.initStarDelegation(overlay);
+      document.body.appendChild(overlay);
+    }
+
+    init();
+  </script>
+</body>
+</html>
