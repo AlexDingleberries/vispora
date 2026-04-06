@@ -73,8 +73,7 @@
     "author": "Dreamon Studios",
     "genres": [
       "action",
-      "sports",
-      "skill"
+      "fighting"
     ],
     "special": [
       "web"
@@ -88,9 +87,7 @@
     "author": "Onionfist Studio",
     "genres": [
       "action",
-      "adventure",
-      "3d",
-      "skill"
+      "3d"
     ],
     "special": [
       "web"
@@ -103,8 +100,8 @@
     "url": "html/6.html",
     "author": "reunbozdo",
     "genres": [
-      "strategy",
-      "skill"
+      "puzzle",
+      "strategy"
     ],
     "special": [
       "web"
@@ -118,8 +115,8 @@
     "author": "Halfbrick Studios",
     "genres": [
       "action",
-      "adventure",
-      "skill"
+      "casual",
+      "endless-runner"
     ],
     "special": [
       "web"
@@ -132,8 +129,8 @@
     "url": "html/8-wow.html",
     "author": "ninja-muffin24",
     "genres": [
-      "action",
-      "skill"
+      "music",
+      "rhythm"
     ],
     "special": [
       "web"
@@ -146,9 +143,9 @@
     "url": "html/9.html",
     "author": "NyankoBfLol",
     "genres": [
-      "action",
-      "idle",
-      "skill"
+      "music",
+      "rhythm",
+      "idle"
     ],
     "special": [
       "web"
@@ -164,7 +161,7 @@
       "action",
       "adventure",
       "3d",
-      "skill"
+      "endless-runner"
     ],
     "special": [
       "web"
@@ -178,7 +175,6 @@
     "author": "Madbox",
     "genres": [
       "action",
-      "3d",
       "platformer",
       "skill"
     ],
@@ -193,7 +189,7 @@
     "url": "html/13.html",
     "author": "Homa Games",
     "genres": [
-      "action",
+      "casual",
       "3d",
       "idle"
     ],
@@ -208,10 +204,9 @@
     "url": "html/14.html",
     "author": "QubicGames",
     "genres": [
-      "action",
+      "casual",
       "3d",
-      "racing",
-      "skill"
+      "racing"
     ],
     "special": [
       "web"
@@ -224,9 +219,9 @@
     "url": "html/15.html",
     "author": "Tapnation",
     "genres": [
+      "puzzle",
       "3d",
-      "strategy",
-      "skill"
+      "casual"
     ],
     "special": [
       "web"
@@ -239,9 +234,9 @@
     "url": "html/16.html",
     "author": "Supersonic Studios LTD",
     "genres": [
-      "action",
-      "adventure",
-      "3d"
+      "casual",
+      "3d",
+      "adventure"
     ],
     "special": [
       "web"
@@ -254,8 +249,8 @@
     "url": "html/17.html",
     "author": "AmaNotes",
     "genres": [
-      "action",
-      "skill"
+      "music",
+      "rhythm"
     ],
     "special": [
       "web"
@@ -268,9 +263,8 @@
     "url": "html/18.html",
     "author": "Supersonic Studios LTD",
     "genres": [
-      "action",
-      "3d",
-      "skill"
+      "casual",
+      "3d"
     ],
     "special": [
       "web"
@@ -284,7 +278,7 @@
     "author": "Neron's Brother",
     "genres": [
       "action",
-      "skill"
+      "fighting"
     ],
     "special": [
       "web"
@@ -297,10 +291,8 @@
     "url": "html/20a.html",
     "author": "Supersonic Studios LTD",
     "genres": [
-      "action",
-      "adventure",
-      "3d",
-      "skill"
+      "casual",
+      "3d"
     ],
     "special": [
       "web"
@@ -311,12 +303,11 @@
     "name": "Turbo Stars",
     "cover": "covers/21.png",
     "url": "html/21.html",
-    "author": "https://play.google.com/store/apps/details?id=com.turbo.stars",
+    "author": "Unknown",
     "genres": [
-      "action",
-      "3d",
       "racing",
-      "skill"
+      "action",
+      "3d"
     ],
     "special": [
       "web"
@@ -329,9 +320,8 @@
     "url": "html/22.html",
     "author": "Voodoo",
     "genres": [
-      "action",
-      "3d",
-      "strategy"
+      "strategy",
+      "3d"
     ],
     "special": [
       "web"
@@ -344,8 +334,9 @@
     "url": "html/23.html",
     "author": "Zakeh",
     "genres": [
-      "adventure",
-      "idle"
+      "casual",
+      "idle",
+      "simulation"
     ],
     "special": [
       "web"
@@ -358,14 +349,14 @@
     "url": "html/24.html",
     "author": "Hipster Whale",
     "genres": [
-      "action",
-      "adventure",
-      "3d",
-      "skill"
+      "casual",
+      "3d"
     ],
     "special": [
       "web"
-    ]
+    ],
+        "featured": true
+
   },
   {
     "id": 25,
@@ -374,10 +365,9 @@
     "url": "html/25.html",
     "author": "Supersonic Studios LTD",
     "genres": [
-      "action",
-      "3d",
       "sports",
-      "skill"
+      "3d",
+      "casual"
     ],
     "special": [
       "web"
@@ -390,9 +380,8 @@
     "url": "html/26.html",
     "author": "CrazyLabs",
     "genres": [
-      "3d",
-      "strategy",
-      "skill"
+      "puzzle",
+      "casual"
     ],
     "special": [
       "web"
@@ -407,6 +396,7 @@
     "genres": [
       "action",
       "platformer",
+      "rhythm",
       "skill"
     ],
     "special": [
@@ -421,6 +411,7 @@
     "author": "FRVR",
     "genres": [
       "sports",
+      "casual",
       "skill"
     ],
     "special": [
@@ -436,8 +427,7 @@
     "genres": [
       "action",
       "shooter",
-      "3d",
-      "skill"
+      "3d"
     ],
     "special": [
       "web"
@@ -450,7 +440,7 @@
     "url": "html/30.html",
     "author": "CASUAL AZUR GAMES",
     "genres": [
-      "action",
+      "casual",
       "3d",
       "skill"
     ],
@@ -645,7 +635,8 @@
     "author": "Kids Games LLC",
     "genres": [
       "action",
-      "skill"
+      "casual",
+      "physics"
     ],
     "special": [
       "web"
@@ -851,7 +842,8 @@
     "author": "JustPlay.LOL",
     "genres": [
       "action",
-      "skill"
+      "shooter",
+      "io"
     ],
     "special": [
       "web"
@@ -864,7 +856,8 @@
     "url": "html/59.html",
     "author": "fizzd",
     "genres": [
-      "action",
+      "music",
+      "rhythm",
       "skill"
     ],
     "special": [
@@ -878,8 +871,9 @@
     "url": "html/60.html",
     "author": "jmtb02",
     "genres": [
-      "action",
-      "skill"
+      "puzzle",
+      "casual",
+      "idle"
     ],
     "special": [
       "flash"
@@ -892,8 +886,9 @@
     "url": "html/61.html",
     "author": "jmtb02",
     "genres": [
-      "action",
-      "skill"
+      "puzzle",
+      "casual",
+      "idle"
     ],
     "special": [
       "flash"
@@ -906,8 +901,9 @@
     "url": "html/62.html",
     "author": "jmtb02",
     "genres": [
-      "action",
-      "skill"
+      "puzzle",
+      "casual",
+      "idle"
     ],
     "special": [
       "flash"
@@ -935,8 +931,8 @@
     "url": "html/64-fix.html",
     "author": "Esyverse",
     "genres": [
-      "action",
-      "skill"
+      "horror",
+      "adventure"
     ],
     "special": [
       "web"
@@ -949,8 +945,8 @@
     "url": "html/65-fixed.html",
     "author": "Basically Games",
     "genres": [
-      "action",
-      "skill"
+      "horror",
+      "action"
     ],
     "special": [
       "web"
@@ -961,10 +957,10 @@
     "name": "Basket Random",
     "cover": "covers/66.png",
     "url": "html/66.html",
-    "author": "RHM Interactive OÜ",
+    "author": "RHM Interactive O\u00dc",
     "genres": [
-      "action",
-      "skill"
+      "sports",
+      "casual"
     ],
     "special": [
       "web"
@@ -978,6 +974,7 @@
     "author": "EvilObjective",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -992,6 +989,7 @@
     "author": "EvilObjective",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -1006,6 +1004,7 @@
     "author": "EvilObjective",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -1019,8 +1018,8 @@
     "url": "html/70.html",
     "author": "Candywriter",
     "genres": [
-      "action",
-      "skill"
+      "simulation",
+      "idle"
     ],
     "special": [
       "web"
@@ -1033,8 +1032,8 @@
     "url": "html/71.html",
     "author": "Ninja Kiwi",
     "genres": [
-      "action",
-      "skill"
+      "strategy",
+      "tower-defense"
     ],
     "special": [
       "flash"
@@ -1047,8 +1046,8 @@
     "url": "html/72.html",
     "author": "Ninja Kiwi",
     "genres": [
-      "action",
-      "skill"
+      "strategy",
+      "tower-defense"
     ],
     "special": [
       "flash"
@@ -1061,8 +1060,8 @@
     "url": "html/73.html",
     "author": "Ninja Kiwi",
     "genres": [
-      "action",
-      "skill"
+      "strategy",
+      "tower-defense"
     ],
     "special": [
       "flash"
@@ -1075,8 +1074,8 @@
     "url": "html/74.html",
     "author": "Ninja Kiwi",
     "genres": [
-      "action",
-      "skill"
+      "strategy",
+      "tower-defense"
     ],
     "special": [
       "flash"
@@ -1089,8 +1088,8 @@
     "url": "html/75-fix.html",
     "author": "Ninja Kiwi",
     "genres": [
-      "action",
-      "skill"
+      "strategy",
+      "tower-defense"
     ],
     "special": [
       "flash"
@@ -1104,7 +1103,8 @@
     "author": "Meow Beast",
     "genres": [
       "action",
-      "skill"
+      "adventure",
+      "platformer"
     ],
     "special": [
       "web"
@@ -1117,8 +1117,9 @@
     "url": "html/77.html",
     "author": "RHM Interactive",
     "genres": [
-      "action",
-      "skill"
+      "sports",
+      "fighting",
+      "casual"
     ],
     "special": [
       "web"
@@ -1132,6 +1133,7 @@
     "author": "Juicy Beast",
     "genres": [
       "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -1145,7 +1147,8 @@
     "url": "html/79.html",
     "author": "Oleh \"qzix13\" Kuzyk",
     "genres": [
-      "action",
+      "sports",
+      "casual",
       "skill"
     ],
     "special": [
@@ -1159,7 +1162,8 @@
     "url": "html/80.html",
     "author": "Oleh \"qzix13\" Kuzyk",
     "genres": [
-      "action",
+      "sports",
+      "casual",
       "skill"
     ],
     "special": [
@@ -1174,6 +1178,7 @@
     "author": "Landfall",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -1200,7 +1205,7 @@
     "url": "html/83.html",
     "author": "Ben Vinegar",
     "genres": [
-      "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -1215,7 +1220,8 @@
     "author": "Max Abernethy",
     "genres": [
       "action",
-      "skill"
+      "skill",
+      "casual"
     ],
     "special": [
       "flash"
@@ -1242,8 +1248,8 @@
     "url": "html/86.html",
     "author": "VOODOO",
     "genres": [
-      "action",
-      "skill"
+      "casual",
+      "platformer"
     ],
     "special": [
       "web"
@@ -1299,8 +1305,8 @@
     "url": "html/90-fix2.html",
     "author": "DVloper",
     "genres": [
-      "action",
-      "skill"
+      "horror",
+      "action"
     ],
     "special": [
       "port"
@@ -1367,7 +1373,7 @@
     "name": "Line Rider",
     "cover": "covers/95.png",
     "url": "html/95.html",
-    "author": "Boštjan Čadež",
+    "author": "Bo\u0161tjan \u010cade\u017e",
     "genres": [
       "action",
       "skill"
@@ -1446,10 +1452,10 @@
     "name": "Ninja vs EvilCorp",
     "cover": "covers/101.png",
     "url": "html/101.html",
-    "author": "Rémi Vansteelandt",
+    "author": "R\u00e9mi Vansteelandt",
     "genres": [
       "action",
-      "skill"
+      "fighting"
     ],
     "special": [
       "web"
@@ -1462,9 +1468,8 @@
     "url": "html/102.html",
     "author": "VOODOO",
     "genres": [
-      "action",
-      "strategy",
-      ".io"
+      "casual",
+      "io"
     ],
     "special": [
       "web"
@@ -1603,8 +1608,8 @@
     "url": "html/112-fix.html",
     "author": "New York Times",
     "genres": [
-      "action",
-      "skill"
+      "puzzle",
+      "casual"
     ],
     "special": [
       "web"
@@ -1658,7 +1663,7 @@
     "name": "Offroad Mountain Bike",
     "cover": "covers/116.png",
     "url": "html/116.html",
-    "author": "RHM Interactive OÜ",
+    "author": "RHM Interactive O\u00dc",
     "genres": [
       "racing"
     ],
@@ -1688,7 +1693,7 @@
     "author": "Paradyme Games",
     "genres": [
       "action",
-      "skill"
+      "fighting"
     ],
     "special": [
       "web"
@@ -1714,7 +1719,8 @@
     "url": "html/120.html",
     "author": "Mirra Games",
     "genres": [
-      "action"
+      "action",
+      "fighting"
     ],
     "special": [
       "web"
@@ -1782,7 +1788,7 @@
     "author": "DVloper",
     "genres": [
       "action",
-      "skill"
+      "horror"
     ],
     "special": [
       "web"
@@ -1796,7 +1802,7 @@
     "author": "DVloper",
     "genres": [
       "action",
-      "skill"
+      "horror"
     ],
     "special": [
       "web"
@@ -1809,7 +1815,8 @@
     "url": "html/127.html",
     "author": "Apps Mobile Games",
     "genres": [
-      "action"
+      "action",
+      "fighting"
     ],
     "special": [
       "web"
@@ -2191,8 +2198,9 @@
     "url": "html/170.html",
     "author": "EO Interactive",
     "genres": [
-      "action",
-      "skill"
+      "tower-defense",
+      "strategy",
+      "platformer"
     ],
     "special": [
       "flash"
@@ -2305,8 +2313,8 @@
     "url": "html/178.html",
     "author": "Armor Games",
     "genres": [
-      "action",
-      "skill"
+      "puzzle",
+      "casual"
     ],
     "special": [
       "flash"
@@ -2338,8 +2346,9 @@
       "3d"
     ],
     "special": [
-      "web"
-    ]
+      "port"
+    ],
+    "featured": true
   },
   {
     "id": 185,
@@ -2602,7 +2611,7 @@
     "author": "lax1dude",
     "genres": [
       "action",
-      "skill"
+      "horror"
     ],
     "special": [
       "web"
@@ -2620,7 +2629,9 @@
     ],
     "special": [
       "port"
-    ]
+    ],
+        "featured": true
+
   },
   {
     "id": 206,
@@ -2687,7 +2698,7 @@
     "author": "Voodoo",
     "genres": [
       "action",
-      "skill"
+      "fighting"
     ],
     "special": [
       "web"
@@ -2829,7 +2840,7 @@
     "author": "Flipline Studios",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "flash"
@@ -3026,7 +3037,7 @@
     "author": "Mad.com",
     "genres": [
       "action",
-      "skill"
+      "simulation"
     ],
     "special": [
       "flash"
@@ -3040,7 +3051,7 @@
     "author": "Mad.com",
     "genres": [
       "action",
-      "skill"
+      "simulation"
     ],
     "special": [
       "flash"
@@ -3054,7 +3065,7 @@
     "author": "Mad.com",
     "genres": [
       "action",
-      "skill"
+      "simulation"
     ],
     "special": [
       "flash"
@@ -3068,7 +3079,7 @@
     "author": "Mad.com",
     "genres": [
       "action",
-      "skill"
+      "simulation"
     ],
     "special": [
       "flash"
@@ -3082,7 +3093,7 @@
     "author": "Mad.com",
     "genres": [
       "action",
-      "skill"
+      "simulation"
     ],
     "special": [
       "flash"
@@ -3332,7 +3343,7 @@
     "author": "Garrett McKay",
     "genres": [
       "action",
-      "skill"
+      "horror"
     ],
     "special": [
       "port"
@@ -3388,11 +3399,12 @@
     "author": "Valve",
     "genres": [
       "action",
-      "skill"
+      "simulation"
     ],
     "special": [
       "port"
-    ]
+    ],
+        "featured": true
   },
   {
     "id": 263,
@@ -3457,8 +3469,8 @@
     "url": "html/267.html",
     "author": "Tour De Pizza, BurnedPopcorn",
     "genres": [
-      "action",
-      "skill"
+      "tower-defense",
+      "strategy"
     ],
     "special": [
       "port"
@@ -3831,7 +3843,7 @@
     "name": "Idle Dice",
     "cover": "covers/294.png",
     "url": "html/294.html",
-    "author": "Lutz Schönfelder",
+    "author": "Lutz Sch\u00f6nfelder",
     "genres": [
       "strategy",
       "idle"
@@ -3847,7 +3859,8 @@
     "url": "html/295.html",
     "author": "Shared Dreams Studio",
     "genres": [
-      "action"
+      "action",
+      "fighting"
     ],
     "special": [
       "web"
@@ -3858,66 +3871,6 @@
     "name": "Minecraft 1.5.2",
     "cover": "covers/297.png",
     "url": "html/297.html",
-    "author": "lax1dude",
-    "genres": [
-      "adventure",
-      "rpg",
-      "3d"
-    ],
-    "special": [
-      "web"
-    ]
-  },
-  {
-    "id": 298,
-    "name": "Minecraft Alpha 1.2.6",
-    "cover": "covers/298.png",
-    "url": "html/298.html",
-    "author": "lax1dude",
-    "genres": [
-      "adventure",
-      "rpg",
-      "3d"
-    ],
-    "special": [
-      "web"
-    ]
-  },
-  {
-    "id": 299,
-    "name": "Minecraft Beta 1.3",
-    "cover": "covers/299.png",
-    "url": "html/299.html",
-    "author": "lax1dude",
-    "genres": [
-      "adventure",
-      "rpg",
-      "3d"
-    ],
-    "special": [
-      "web"
-    ]
-  },
-  {
-    "id": 300,
-    "name": "Minecraft Beta 1.7.3",
-    "cover": "covers/300.png",
-    "url": "html/300.html",
-    "author": "lax1dude",
-    "genres": [
-      "adventure",
-      "rpg",
-      "3d"
-    ],
-    "special": [
-      "web"
-    ]
-  },
-  {
-    "id": 301,
-    "name": "Minecraft Indev",
-    "cover": "covers/301.png",
-    "url": "html/301.html",
     "author": "lax1dude",
     "genres": [
       "adventure",
@@ -4032,7 +3985,7 @@
     "author": "R74N",
     "genres": [
       "action",
-      "skill"
+      "simulation"
     ],
     "special": [
       "web"
@@ -4175,7 +4128,7 @@
     "author": "Supersonic Studios LTD",
     "genres": [
       "action",
-      "skill"
+      "simulation"
     ],
     "special": [
       "web"
@@ -4201,8 +4154,8 @@
     "url": "html/321.html",
     "author": "Gamincat",
     "genres": [
-      "action",
-      "skill"
+      "puzzle",
+      "casual"
     ],
     "special": [
       "web"
@@ -4528,8 +4481,8 @@
     "url": "html/346.html",
     "author": "graebor",
     "genres": [
-      "action",
-      "skill"
+      "puzzle",
+      "casual"
     ],
     "special": [
       "web"
@@ -4847,7 +4800,7 @@
     "author": "Tall Team",
     "genres": [
       "action",
-      "skill"
+      "fighting"
     ],
     "special": [
       "web"
@@ -4860,7 +4813,8 @@
     "url": "html/371e.html",
     "author": "Vanorium",
     "genres": [
-      "action"
+      "action",
+      "fighting"
     ],
     "special": [
       "web"
@@ -4929,7 +4883,7 @@
     "author": "Yandex",
     "genres": [
       "action",
-      "skill"
+      "simulation"
     ],
     "special": [
       "web"
@@ -4943,7 +4897,7 @@
     "author": "Yandex",
     "genres": [
       "action",
-      "skill"
+      "simulation"
     ],
     "special": [
       "web"
@@ -4984,8 +4938,9 @@
     "url": "html/380.html",
     "author": "Yandex",
     "genres": [
-      "action",
-      "skill"
+      "tower-defense",
+      "strategy",
+      "simulation"
     ],
     "special": [
       "web"
@@ -5295,7 +5250,8 @@
     "url": "html/402.html",
     "author": "Yandex",
     "genres": [
-      "action"
+      "action",
+      "fighting"
     ],
     "special": [
       "web"
@@ -5586,7 +5542,7 @@
     "author": "M36games",
     "genres": [
       "action",
-      "skill"
+      "simulation"
     ],
     "special": [
       "port"
@@ -5894,7 +5850,8 @@
     "author": "Paradyme Games",
     "genres": [
       "action",
-      "skill"
+      "fighting",
+      "simulation"
     ],
     "special": [
       "web"
@@ -6059,9 +6016,8 @@
     "url": "html/461.html",
     "author": "slither.io",
     "genres": [
-      "action",
-      ".io",
-      "skill"
+      "casual",
+      "io"
     ],
     "special": [
       "web"
@@ -6130,7 +6086,7 @@
     "url": "html/466.html",
     "author": "Basically Games",
     "genres": [
-      "skill"
+      "horror"
     ],
     "special": [
       "port"
@@ -6144,7 +6100,7 @@
     "author": "Basically Games",
     "genres": [
       "action",
-      "skill"
+      "horror"
     ],
     "special": [
       "port"
@@ -6158,7 +6114,8 @@
     "author": "Team Cherry",
     "genres": [
       "action",
-      "skill"
+      "horror",
+      "platformer"
     ],
     "special": [
       "port"
@@ -6225,8 +6182,9 @@
     "url": "html/474.html",
     "author": "Nate Anim8",
     "genres": [
-      "action",
-      "skill"
+      "music",
+      "rhythm",
+      "horror"
     ],
     "special": [
       "web"
@@ -6239,8 +6197,9 @@
     "url": "html/475.html",
     "author": "Rozebud",
     "genres": [
-      "action",
-      "skill"
+      "music",
+      "rhythm",
+      "horror"
     ],
     "special": [
       "web"
@@ -6253,8 +6212,10 @@
     "url": "html/476.html",
     "author": "YingYang48 etc",
     "genres": [
-      "action",
-      "skill"
+      "music",
+      "rhythm",
+      "horror",
+      "fighting"
     ],
     "special": [
       "web"
@@ -6267,8 +6228,10 @@
     "url": "html/477.html",
     "author": "evidal etc",
     "genres": [
-      "action",
-      "skill"
+      "music",
+      "rhythm",
+      "horror",
+      "fighting"
     ],
     "special": [
       "web"
@@ -6281,8 +6244,9 @@
     "url": "html/478.html",
     "author": "JellyFishedm etc",
     "genres": [
-      "action",
-      "skill"
+      "music",
+      "rhythm",
+      "horror"
     ],
     "special": [
       "web"
@@ -6308,8 +6272,10 @@
     "url": "html/480.html",
     "author": "Dokki.doodlez etc",
     "genres": [
-      "action",
-      "skill"
+      "music",
+      "rhythm",
+      "horror",
+      "fighting"
     ],
     "special": [
       "web"
@@ -6322,8 +6288,10 @@
     "url": "html/481.html",
     "author": "Banbuds etc",
     "genres": [
-      "action",
-      "skill"
+      "music",
+      "rhythm",
+      "horror",
+      "fighting"
     ],
     "special": [
       "web"
@@ -6350,8 +6318,10 @@
     "url": "html/485.html",
     "author": "atsuover etc",
     "genres": [
-      "action",
-      "skill"
+      "music",
+      "rhythm",
+      "horror",
+      "fighting"
     ],
     "special": [
       "web"
@@ -6377,10 +6347,11 @@
     "name": "Friday Night Funkin': Indie Cross",
     "cover": "covers/489.png",
     "url": "html/489.html",
-    "author": "MORØ etc",
+    "author": "MOR\u00d8 etc",
     "genres": [
-      "action",
-      "skill"
+      "music",
+      "rhythm",
+      "horror"
     ],
     "special": [
       "web"
@@ -6506,7 +6477,7 @@
     "author": "Emil \"Ace\" Macko",
     "genres": [
       "action",
-      "skill"
+      "horror"
     ],
     "special": [
       "port"
@@ -6520,7 +6491,7 @@
     "author": "Emil \"Ace\" Macko",
     "genres": [
       "action",
-      "skill"
+      "horror"
     ],
     "special": [
       "port"
@@ -6635,7 +6606,9 @@
     "url": "html/513.html",
     "author": "Studio-19",
     "genres": [
-      "action"
+      "puzzle",
+      "casual",
+      "fighting"
     ],
     "special": [
       "web"
@@ -6719,7 +6692,8 @@
     "url": "html/519.html",
     "author": "Astrobard Games, Khao Mortadios",
     "genres": [
-      "action"
+      "action",
+      "fighting"
     ],
     "special": [
       "web"
@@ -7142,7 +7116,7 @@
     "author": "VobbyGames, weirdnessworld",
     "genres": [
       "action",
-      "skill"
+      "simulation"
     ],
     "special": [
       "web"
@@ -7196,8 +7170,10 @@
     "url": "html/555.html",
     "author": "paperkitty etc",
     "genres": [
-      "action",
-      "skill"
+      "music",
+      "rhythm",
+      "horror",
+      "fighting"
     ],
     "special": [
       "web"
@@ -7210,8 +7186,10 @@
     "url": "html/556.html",
     "author": "Alexander0110 etc",
     "genres": [
-      "action",
-      "skill"
+      "music",
+      "rhythm",
+      "horror",
+      "fighting"
     ],
     "special": [
       "web"
@@ -7238,8 +7216,10 @@
     "url": "html/559.html",
     "author": "srPerez etc",
     "genres": [
-      "action",
-      "skill"
+      "music",
+      "rhythm",
+      "horror",
+      "fighting"
     ],
     "special": [
       "web"
@@ -7321,7 +7301,7 @@
     "author": "CrazyGames",
     "genres": [
       "action",
-      "skill"
+      "simulation"
     ],
     "special": [
       "web"
@@ -7528,7 +7508,7 @@
     "author": "CrazyGames",
     "genres": [
       "action",
-      "skill"
+      "simulation"
     ],
     "special": [
       "web"
@@ -7602,7 +7582,9 @@
     ],
     "special": [
       "port"
-    ]
+    ],
+        "featured": true
+
   },
   {
     "id": 589,
@@ -7858,7 +7840,8 @@
     "author": "Nintendo",
     "genres": [
       "action",
-      "skill"
+      "skill",
+      "rpg"
     ],
     "special": [
       "emulator",
@@ -7999,8 +7982,8 @@
     "url": "html/628-f.html",
     "author": "only1indigo, burnedpopcorn",
     "genres": [
-      "action",
-      "skill"
+      "tower-defense",
+      "strategy"
     ],
     "special": [
       "port"
@@ -8124,7 +8107,8 @@
     "url": "html/641.html",
     "author": "AWM Studio Productions LLC",
     "genres": [
-      "action"
+      "action",
+      "fighting"
     ],
     "special": [
       "flash"
@@ -8152,7 +8136,7 @@
     "author": "Varun R.",
     "genres": [
       "action",
-      "skill"
+      "horror"
     ],
     "special": [
       "port"
@@ -8165,8 +8149,8 @@
     "url": "html/646-fixed.html",
     "author": "TALL GLASS",
     "genres": [
-      "action",
-      "skill"
+      "music",
+      "rhythm"
     ],
     "special": [
       "port"
@@ -8180,7 +8164,7 @@
     "author": "McLeodGaming",
     "genres": [
       "action",
-      "skill"
+      "fighting"
     ],
     "special": [
       "flash"
@@ -8264,7 +8248,8 @@
     "author": "Square Enix",
     "genres": [
       "action",
-      "skill"
+      "skill",
+      "rpg"
     ],
     "special": [
       "web"
@@ -8305,8 +8290,10 @@
     "url": "html/657.html",
     "author": "vs undertale team",
     "genres": [
-      "action",
-      "skill"
+      "music",
+      "rhythm",
+      "horror",
+      "fighting"
     ],
     "special": [
       "web"
@@ -8320,7 +8307,7 @@
     "author": "Phantom GD",
     "genres": [
       "action",
-      "skill"
+      "horror"
     ],
     "special": [
       "port"
@@ -8361,8 +8348,8 @@
     "url": "html/661.html",
     "author": "Superplus Games",
     "genres": [
-      "action",
-      "skill"
+      "tower-defense",
+      "strategy"
     ],
     "special": [
       "web"
@@ -8729,7 +8716,7 @@
     "author": "Valve",
     "genres": [
       "action",
-      "skill"
+      "simulation"
     ],
     "special": [
       "port"
@@ -8759,7 +8746,7 @@
     "author": "Wix Games",
     "genres": [
       "action",
-      "skill"
+      "simulation"
     ],
     "special": [
       "port"
@@ -8876,7 +8863,9 @@
     ],
     "special": [
       "port"
-    ]
+    ],
+        "featured": true
+
   },
   {
     "id": 706,
@@ -8941,7 +8930,7 @@
     "author": "EvanProductions",
     "genres": [
       "action",
-      "skill"
+      "horror"
     ],
     "special": [
       "port"
@@ -9026,12 +9015,14 @@
     "url": "html/718.html",
     "author": "House House",
     "genres": [
-      "action",
-      "skill"
+      "strategy",
+      "physics"
     ],
     "special": [
       "port"
-    ]
+    ],
+        "featured": true
+
   },
   {
     "id": 719,
@@ -9069,7 +9060,7 @@
     "author": "Bun Muen, Slqnt",
     "genres": [
       "action",
-      "skill"
+      "horror"
     ],
     "special": [
       "port"
@@ -9280,10 +9271,10 @@
   },
   {
     "id": 737,
-    "name": "Saihate Station (さいはて駅)",
+    "name": "Saihate Station (\u3055\u3044\u306f\u3066\u99c5)",
     "cover": "covers/737.png",
     "url": "html/737.html",
-    "author": "びぶ/viv",
+    "author": "\u3073\u3076/viv",
     "genres": [
       "action",
       "skill"
@@ -9311,7 +9302,7 @@
     "name": "Soccer Random",
     "cover": "covers/739.png",
     "url": "html/739.html",
-    "author": "RHM Interactive OÜ",
+    "author": "RHM Interactive O\u00dc",
     "genres": [
       "action",
       "skill"
@@ -9388,7 +9379,7 @@
     "author": "AZ Games",
     "genres": [
       "action",
-      "skill"
+      "simulation"
     ],
     "special": [
       "web"
@@ -9473,7 +9464,7 @@
     "author": "Free_Breath",
     "genres": [
       "action",
-      "skill"
+      "horror"
     ],
     "special": [
       "port"
@@ -9522,28 +9513,15 @@
     ]
   },
   {
-    "id": 754,
-    "name": "Minecraft Pocket Edition",
-    "cover": "covers/754.png",
-    "url": "html/754.html",
-    "author": "Mojang",
-    "genres": [
-      "adventure",
-      "rpg",
-      "3d"
-    ],
-    "special": [
-      "port"
-    ]
-  },
-  {
     "id": 755,
     "name": "Brawl Simulator 3D",
     "cover": "covers/755.png",
     "url": "html/755.html",
     "author": "Fire Games, Supercell",
     "genres": [
-      "3d"
+      "action",
+      "3d",
+      "fighting"
     ],
     "special": [
       "web"
@@ -9556,8 +9534,8 @@
     "url": "html/756-f.html",
     "author": "IZ (BLUE STAR Entertainment)",
     "genres": [
-      "action",
-      "skill"
+      "adventure",
+      "rpg"
     ],
     "special": [
       "port"
@@ -9584,8 +9562,8 @@
     "url": "html/758a.html",
     "author": "Ronezkj15",
     "genres": [
-      "action",
-      "skill"
+      "horror",
+      "action"
     ],
     "special": [
       "port"
@@ -9598,7 +9576,8 @@
     "url": "html/759.html",
     "author": "countlessnights, 2 Left Thumbs, NotRexed",
     "genres": [
-      "strategy"
+      "strategy",
+      "puzzle"
     ],
     "special": [
       "port"
@@ -9611,8 +9590,8 @@
     "url": "html/760.html",
     "author": "notsospecialgames, shxyder",
     "genres": [
-      "action",
-      "skill"
+      "strategy",
+      "tower-defense"
     ],
     "special": [
       "port"
@@ -9625,8 +9604,8 @@
     "url": "html/761.html",
     "author": "dmcaguy",
     "genres": [
-      "action",
-      "skill"
+      "casual",
+      "fishing"
     ],
     "special": [
       "port"
@@ -9639,8 +9618,8 @@
     "url": "html/762.html",
     "author": "The Interviewed, wasm.com",
     "genres": [
-      "action",
-      "skill"
+      "casual",
+      "sports"
     ],
     "special": [
       "port"
@@ -9653,7 +9632,9 @@
     "url": "html/763.html",
     "author": "Pinbit LLC",
     "genres": [
-      "3d"
+      "action",
+      "3d",
+      "casual"
     ],
     "special": [
       "port"
@@ -9666,8 +9647,8 @@
     "url": "html/764.html",
     "author": "rend-pii",
     "genres": [
-      "action",
-      "skill"
+      "horror",
+      "strategy"
     ],
     "special": [
       "web"
@@ -9680,10 +9661,8 @@
     "url": "html/765.html",
     "author": "kharbor_ykt",
     "genres": [
-      "action",
-      "strategy",
       "horror",
-      "racing"
+      "strategy"
     ],
     "special": [
       "web"
@@ -9696,8 +9675,8 @@
     "url": "html/766.html",
     "author": "unknown",
     "genres": [
-      "action",
-      "skill"
+      "puzzle",
+      "casual"
     ],
     "special": [
       "web"
@@ -9724,7 +9703,8 @@
     "url": "html/768.html",
     "author": "GamePush",
     "genres": [
-      "action"
+      "action",
+      "fighting"
     ],
     "special": [
       "web"
@@ -9737,7 +9717,8 @@
     "url": "html/769.html",
     "author": "unknown",
     "genres": [
-      "action"
+      "action",
+      "fighting"
     ],
     "special": [
       "web"
@@ -9752,7 +9733,7 @@
     "genres": [
       "action",
       "platformer",
-      "skill"
+      "adventure"
     ],
     "special": [
       "web"
@@ -9766,11 +9747,14 @@
     "author": "Team Cherry, Edurocks",
     "genres": [
       "action",
-      "skill"
+      "platformer",
+      "adventure"
     ],
     "special": [
       "port"
-    ]
+    ],
+        "featured": true
+
   },
   {
     "id": 772,
@@ -9779,8 +9763,8 @@
     "url": "html/772.html",
     "author": "Lucasfilm",
     "genres": [
-      "action",
-      "skill"
+      "adventure",
+      "puzzle"
     ],
     "special": [
       "dos",
@@ -9794,8 +9778,8 @@
     "url": "html/773.html",
     "author": "Westwood Studios",
     "genres": [
-      "action",
-      "skill"
+      "strategy",
+      "action"
     ],
     "special": [
       "dos",
@@ -9809,7 +9793,8 @@
     "url": "html/774.html",
     "author": "stefano1234",
     "genres": [
-      "racing"
+      "racing",
+      "sports"
     ],
     "special": [
       "web"
@@ -9823,7 +9808,7 @@
     "author": "TeleSTOP",
     "genres": [
       "action",
-      "skill"
+      "fighting"
     ],
     "special": [
       "web"
@@ -9837,11 +9822,14 @@
     "author": "ivysly",
     "genres": [
       "action",
-      "skill"
+      "fighting",
+      "strategy"
     ],
     "special": [
       "port"
-    ]
+    ],
+        "featured": true
+
   },
   {
     "id": 777,
@@ -9850,8 +9838,8 @@
     "url": "html/777.html",
     "author": "tellusgames",
     "genres": [
-      "action",
-      "skill"
+      "strategy",
+      "tower-defense"
     ],
     "special": [
       "web"
@@ -9864,8 +9852,7 @@
     "url": "html/778.html",
     "author": "NBCUniversal Entertainment Japan, Pioneer Productions",
     "genres": [
-      "action",
-      "skill"
+      "adventure"
     ],
     "special": [
       "web"
@@ -9878,8 +9865,9 @@
     "url": "html/779.html",
     "author": "Cyberdreams",
     "genres": [
-      "action",
-      "skill"
+      "adventure",
+      "horror",
+      "puzzle"
     ],
     "special": [
       "dos",
@@ -9894,7 +9882,7 @@
     "author": "Weasel",
     "genres": [
       "action",
-      "skill"
+      "shooter"
     ],
     "special": [
       "flash"
@@ -9907,8 +9895,8 @@
     "url": "html/781.html",
     "author": "Makopaz",
     "genres": [
-      "action",
-      "skill"
+      "casual",
+      "idle"
     ],
     "special": [
       "web"
@@ -9921,8 +9909,8 @@
     "url": "html/782f.html",
     "author": "NanaOn-Sha",
     "genres": [
-      "action",
-      "skill"
+      "music",
+      "rhythm"
     ],
     "special": [
       "emulator",
@@ -9938,7 +9926,7 @@
     "author": "mdtowerz",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "port"
@@ -9966,6 +9954,8 @@
     "author": "RobTop Games",
     "genres": [
       "action",
+      "platformer",
+      "rhythm",
       "skill"
     ],
     "special": [

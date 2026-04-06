@@ -1,14 +1,14 @@
 // ===== VISPORA THEME MODULE =====
 
 const ACCENT_PRESETS = [
-  { hex: '#00e5ff', label: 'Cyan'    },
+  { hex: '#ffffff', label: 'White'    },
   { hex: '#7c3aed', label: 'Violet'  },
   { hex: '#10b981', label: 'Emerald' },
   { hex: '#f59e0b', label: 'Amber'   },
   { hex: '#ef4444', label: 'Red'     },
   { hex: '#ec4899', label: 'Pink'    },
   { hex: '#6366f1', label: 'Indigo'  },
-  { hex: '#14b8a6', label: 'Teal'    },
+  { hex: '#00e5ff', label: 'Cyan'    },
   { hex: '#f97316', label: 'Orange'  },
   { hex: '#84cc16', label: 'Lime'    },
 ];

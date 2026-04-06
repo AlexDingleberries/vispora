@@ -34,7 +34,7 @@ function cloakTab(mode, customUrl) {
 }
 
 function uncloakTab(title) {
-  document.title = title || 'Vispora';
+  document.title = title || 'vispora';
   setFavicon('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="%2300e5ff"/><text x="50%" y="60%" font-size="18" font-family="monospace" font-weight="900" fill="black" text-anchor="middle">V</text></svg>');
 }
 

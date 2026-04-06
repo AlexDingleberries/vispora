@@ -1,272 +1,176 @@
-// ===== VISPORA APP UTILITIES =====
+// VISPORA APP UTILITIES
+
+// ---- SVG ICONS (Lucide-style, clean paths) ----
+const IC = {
+  home: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
+  grid: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>`,
+  settings: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>`,
+  star: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
+  starFilled: `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
+  x: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>`,
+  play: `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>`,
+  maximize: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>`,
+  minimize: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v3a2 2 0 0 1-2 2H3"/><path d="M21 8h-3a2 2 0 0 1-2-2V3"/><path d="M3 16h3a2 2 0 0 1 2 2v3"/><path d="M16 21v-3a2 2 0 0 1 2-2h3"/></svg>`,
+  reload: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>`,
+  camera: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>`,
+  chevronLeft: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>`,
+  search: `<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>`,
+  alert: `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>`,
+  clock: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
+  key: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 2-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>`,
+  download: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>`,
+  upload: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>`,
+  trash: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>`,
+  zap: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>`,
+};
 
 // ---- Toast ----
-function showToast(message, type = 'info', duration = 3000) {
-  let container = document.getElementById('toast-container');
-  if (!container) {
-    container = document.createElement('div');
-    container.id = 'toast-container';
-    document.body.appendChild(container);
-  }
-
-  const toast = document.createElement('div');
-  toast.className = `toast ${type !== 'info' ? `toast-${type}` : ''}`;
-  toast.textContent = message;
-  container.appendChild(toast);
-
-  setTimeout(() => {
-    toast.classList.add('toast-out');
-    setTimeout(() => toast.remove(), 300);
-  }, duration);
+function showToast(msg, type='info', duration=3000){
+  let c=document.getElementById('toast-container');
+  if(!c){c=document.createElement('div');c.id='toast-container';document.body.appendChild(c);}
+  const t=document.createElement('div');
+  t.className=`toast${type!=='info'?` toast-${type}`:''}`;
+  t.textContent=msg;c.appendChild(t);
+  setTimeout(()=>{t.classList.add('toast-out');setTimeout(()=>t.remove(),220);},duration);
 }
 
 // ---- Modal ----
-function showModal({ title, message, confirmText = 'Confirm', cancelText = 'Cancel', dangerous = false }) {
-  return new Promise((resolve) => {
-    const overlay = document.createElement('div');
-    overlay.className = 'modal-overlay';
-    overlay.innerHTML = `
-      <div class="modal" role="dialog" aria-modal="true">
-        <h3>${title}</h3>
-        <p>${message}</p>
-        <div class="modal-actions">
-          <button class="btn btn-secondary modal-cancel">${cancelText}</button>
-          <button class="btn ${dangerous ? 'btn-danger' : 'btn-primary'} modal-confirm">${confirmText}</button>
-        </div>
-      </div>
-    `;
-
-    overlay.querySelector('.modal-cancel').addEventListener('click', () => {
-      overlay.remove();
-      resolve(false);
-    });
-
-    overlay.querySelector('.modal-confirm').addEventListener('click', () => {
-      overlay.remove();
-      resolve(true);
-    });
-
-    overlay.addEventListener('click', (e) => {
-      if (e.target === overlay) { overlay.remove(); resolve(false); }
-    });
-
-    document.body.appendChild(overlay);
-    overlay.querySelector('.modal-confirm').focus();
+function showModal({title,message,confirmText='Confirm',cancelText='Cancel',dangerous=false}){
+  return new Promise(resolve=>{
+    const o=document.createElement('div');o.className='modal-overlay';
+    o.innerHTML=`<div class="modal" role="dialog" aria-modal="true">
+      <h3>${esc(title)}</h3><p>${esc(message)}</p>
+      <div class="modal-actions">
+        <button class="btn btn-secondary modal-cancel">${esc(cancelText)}</button>
+        <button class="btn ${dangerous?'btn-danger':'btn-primary'} modal-confirm">${esc(confirmText)}</button>
+      </div></div>`;
+    o.querySelector('.modal-cancel').onclick=()=>{o.remove();resolve(false);};
+    o.querySelector('.modal-confirm').onclick=()=>{o.remove();resolve(true);};
+    o.onclick=e=>{if(e.target===o){o.remove();resolve(false);}};
+    document.body.appendChild(o);o.querySelector('.modal-confirm').focus();
   });
-}
-
-// ---- Game Card HTML ----
-function createGameCardHTML(game, opts = {}) {
-  const { showRemove = false, linkToPlayer = true } = opts;
-  const playtime = VStorage.getPlaytime(game.id);
-  const timeStr = VStorage.formatTime(playtime);
-  const isFav = VStorage.isFavorite(game.id);
-
-  const imgSrc = game.cover || '';
-  const href = linkToPlayer ? `player.html?id=${game.id}` : '#';
-
-  return `
-    <${linkToPlayer ? `a href="${href}"` : 'div'} 
-      class="game-card" 
-      data-id="${game.id}" 
-      tabindex="0"
-      aria-label="${escHtml(game.name)}"
-    >
-      ${imgSrc
-        ? `<img class="game-card-img" src="${escHtml(imgSrc)}" alt="${escHtml(game.name)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
-        : ''
-      }
-      <div class="game-card-img-placeholder" style="${imgSrc ? 'display:none' : ''}">🎮</div>
-
-      <div class="game-card-overlay">
-        <div class="game-card-title">${escHtml(game.name)}</div>
-        ${timeStr ? `<div class="game-card-playtime">⏱ ${timeStr}</div>` : ''}
-      </div>
-
-      <button class="game-card-star ${isFav ? 'favorited' : ''}" 
-        data-id="${game.id}" 
-        aria-label="${isFav ? 'Unfavorite' : 'Favorite'} ${escHtml(game.name)}"
-        title="${isFav ? 'Remove from favorites' : 'Add to favorites'}">
-        ${isFav ? SVG_STAR_FILLED : SVG_STAR}
-      </button>
-
-      ${!isFav ? `
-        <span class="game-card-fav-badge" style="display:none" aria-hidden="true">
-          ${SVG_STAR_FILLED}
-        </span>
-      ` : `
-        <span class="game-card-fav-badge" aria-hidden="true">
-          ${SVG_STAR_FILLED}
-        </span>
-      `}
-
-      ${showRemove ? `
-        <button class="game-card-remove" data-id="${game.id}" aria-label="Remove from history" title="Remove from history">
-          ${SVG_X}
-        </button>
-      ` : ''}
-    </${linkToPlayer ? 'a' : 'div'}>
-  `;
-}
-
-// ---- Ripple effect ----
-function addRipple(el, e) {
-  const rect = el.getBoundingClientRect();
-  const ripple = document.createElement('span');
-  ripple.className = 'ripple-effect';
-  ripple.style.left = `${e.clientX - rect.left}px`;
-  ripple.style.top  = `${e.clientY - rect.top}px`;
-  let container = el.querySelector('.ripple-container');
-  if (!container) {
-    container = document.createElement('div');
-    container.className = 'ripple-container';
-    el.appendChild(container);
-  }
-  container.appendChild(ripple);
-  setTimeout(() => ripple.remove(), 600);
 }
 
 // ---- Escape HTML ----
-function escHtml(str) {
-  return String(str || '')
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+
+// ---- Game card HTML ----
+function makeCard(game,opts={}){
+  const{showRemove=false,linkToPlayer=true}=opts;
+  const pt=VStorage.getPlaytime(game.id);
+  const timeStr=VStorage.formatTime(pt);
+  const isFav=VStorage.isFavorite(game.id);
+  const tag=linkToPlayer?'a':'div';
+  const href=linkToPlayer?`player.html?id=${game.id}`:'#';
+  return`<${tag} ${linkToPlayer?`href="${href}"`:''}
+    class="game-card" data-id="${game.id}" tabindex="0"
+    aria-label="${esc(game.name)}" role="${linkToPlayer?'link':'article'}">
+    <img class="game-card-img" src="${esc(game.cover||'')}" alt="${esc(game.name)}"
+      loading="lazy" decoding="async"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="game-card-placeholder" style="display:none;position:absolute;inset:0">🎮</div>
+    <div class="game-card-overlay">
+      <div class="game-card-title">${esc(game.name)}</div>
+      ${timeStr?`<div class="game-card-playtime">${IC.clock} ${timeStr}</div>`:''}
+    </div>
+    <button class="game-card-star${isFav?' favorited':''}" data-id="${game.id}"
+      aria-label="${isFav?'Unfavorite':'Favorite'} ${esc(game.name)}" type="button">
+      ${isFav?IC.starFilled:IC.star}
+    </button>
+    ${showRemove?`<button class="game-card-remove" data-id="${game.id}" aria-label="Remove from history" type="button">${IC.x}</button>`:''}
+  </${tag}>`;
 }
 
-// ---- Update datetime ----
-function startDatetime(el) {
-  function update() {
-    const now = new Date();
-    const date = now.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
-    const time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
-    el.innerHTML = `${date}<br>${time}`;
-  }
-  update();
-  return setInterval(update, 1000);
-}
-
-// ---- Load games JSON ----
-async function loadGames() {
-  try {
-    const res = await fetch('data/games.json');
-    const data = await res.json();
-    // Handle both array and object with array
-    return Array.isArray(data) ? data : (data.games || data);
-  } catch (e) {
-    console.error('Failed to load games:', e);
-    return [];
-  }
-}
-
-// ---- Nav active link ----
-function setNavActive() {
-  const path = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-links a').forEach(a => {
-    const href = a.getAttribute('href');
-    a.classList.toggle('active', href === path || 
-      (path === '' && href === 'home.html') ||
-      (path === 'index.html' && href === 'index.html'));
+// ---- Star delegation ----
+function initStars(container){
+  container.addEventListener('click',e=>{
+    const btn=e.target.closest('.game-card-star');
+    if(!btn)return;e.preventDefault();e.stopPropagation();
+    const id=Number(btn.dataset.id);
+    const added=VStorage.toggleFavorite(id);
+    btn.classList.toggle('favorited',added);
+    btn.innerHTML=added?IC.starFilled:IC.star;
+    btn.setAttribute('aria-label',`${added?'Unfavorite':'Favorite'} game`);
+    showToast(added?'Added to favorites':'Removed from favorites');
   });
 }
 
-// ---- Init panic button ----
-function initPanicBtn() {
-  document.querySelectorAll('.btn-panic').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const mode = VStorage.getCloakMode();
-      const cu   = VStorage.getCloakUrl();
-      if (mode === 'google') {
-        window.location.replace(VCloak.CLOAK_TARGETS.google.url);
-      } else if (mode === 'custom' && cu) {
-        window.location.replace(cu);
-      } else {
-        VCloak.cloakTab('google');
-        showToast('Tab cloaked!');
-      }
+// ---- Datetime ----
+function startDatetime(el){
+  function up(){
+    const n=new Date();
+    const d=n.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
+    const t=n.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
+    el.innerHTML=`${d}&nbsp;&nbsp;${t}`;
+  }up();return setInterval(up,1000);
+}
+
+// ---- Load games ----
+async function loadGames(){
+  try{const r=await fetch('data/games.json');const d=await r.json();return Array.isArray(d)?d:(d.games||d);}
+  catch(e){console.error(e);return[];}
+}
+
+// ---- Nav HTML ----
+function navHTML(active){
+  return`<nav class="nav" role="navigation" aria-label="Main">
+    <a href="home.html" class="nav-logo">vispora</a>
+    <ul class="nav-links">
+      <li><a href="home.html" ${active==='home'?'class="active"':''}>
+        <span class="nav-icon">${IC.home}</span><span>Home</span></a></li>
+      <li><a href="games.html" ${active==='games'?'class="active"':''}>
+        <span class="nav-icon">${IC.grid}</span><span>Games</span></a></li>
+      <li><a href="settings.html" ${active==='settings'?'class="active"':''}>
+        <span class="nav-icon">${IC.settings}</span><span>Settings</span></a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-datetime" id="nav-datetime"></div>
+      <button class="btn-panic" id="nav-panic" type="button">${IC.alert} PANIC</button>
+    </div>
+  </nav>`;
+}
+
+// ---- Panic btn ----
+function initPanic(){
+  document.querySelectorAll('#nav-panic,.btn-panic').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const m=VStorage.getCloakMode(),cu=VStorage.getCloakUrl();
+      if(m==='google')window.location.replace(VCloak.CLOAK_TARGETS.google.url);
+      else if(m==='custom'&&cu)window.location.replace(cu);
+      else{VCloak.cloakTab('google');showToast('Tab cloaked');}
     });
   });
 }
 
-// ---- Star button delegation ----
-function initStarDelegation(container) {
-  container.addEventListener('click', (e) => {
-    const starBtn = e.target.closest('.game-card-star');
-    if (!starBtn) return;
-    e.preventDefault();
-    e.stopPropagation();
-    const id = Number(starBtn.dataset.id);
-    const added = VStorage.toggleFavorite(id);
-    starBtn.classList.toggle('favorited', added);
-    starBtn.innerHTML = added ? SVG_STAR_FILLED : SVG_STAR;
-    starBtn.setAttribute('aria-label', `${added ? 'Unfavorite' : 'Favorite'} game`);
-    // Update fav badge sibling
-    const card = starBtn.closest('.game-card');
-    if (card) {
-      const badge = card.querySelector('.game-card-fav-badge');
-      if (badge) badge.style.display = added ? '' : 'none';
-    }
-    addRipple(starBtn, e);
-    showToast(added ? '⭐ Added to favorites' : 'Removed from favorites');
-  });
+// ---- Particles ----
+function initParticles(){
+  const cfg=VStorage.getParticlesConfig();
+  if(!cfg.enabled){const el=document.getElementById('particles-js');if(el)el.style.display='none';return;}
+  const accent=VStorage.getAccent();
+  const color=cfg.color==='accent'?accent:'#ffffff';
+  if(window.particlesJS){
+    particlesJS('particles-js',{
+      particles:{
+        number:{value:cfg.count,density:{enable:true,value_area:800}},
+        color:{value:color},
+        shape:{type:'circle'},
+        opacity:{value:cfg.opacity,random:true},
+        size:{value:cfg.size,random:true},
+        line_linked:{enable:cfg.linked,distance:150,color:color,opacity:cfg.opacity*0.5,width:1},
+        move:{enable:true,speed:cfg.speed,direction:'none',random:true,out_mode:'out'},
+      },
+      interactivity:{detect_on:'canvas',events:{onhover:{enable:true,mode:'repulse'},onclick:{enable:true,mode:'push'},resize:true},modes:{repulse:{distance:80},push:{particles_nb:2}}},
+      retina_detect:true
+    });
+  }
 }
 
-// ---- SVG Icons ----
-const SVG_STAR = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
-const SVG_STAR_FILLED = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
-const SVG_X = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>`;
-const SVG_PLAY = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>`;
-const SVG_HOME = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`;
-const SVG_GRID = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>`;
-const SVG_SETTINGS = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>`;
-const SVG_FULLSCREEN = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>`;
-const SVG_FULLSCREEN_EXIT = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"/></svg>`;
-const SVG_RELOAD = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>`;
-const SVG_SCREENSHOT = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>`;
-const SVG_BACK = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>`;
-const SVG_SEARCH = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>`;
-const SVG_ALERT = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>`;
-
-// Navigation HTML helper
-function navHTML(activePage) {
-  return `
-  <nav class="nav" role="navigation" aria-label="Main navigation">
-    <a href="home.html" class="nav-logo" aria-label="Vispora home">VISPORA</a>
-    <ul class="nav-links" role="list">
-      <li><a href="home.html" ${activePage==='home'?'class="active"':''} aria-label="Home">
-        <span class="nav-icon">${SVG_HOME}</span><span>Home</span>
-      </a></li>
-      <li><a href="games.html" ${activePage==='games'?'class="active"':''} aria-label="Games">
-        <span class="nav-icon">${SVG_GRID}</span><span>Games</span>
-      </a></li>
-      <li><a href="settings.html" ${activePage==='settings'?'class="active"':''} aria-label="Settings">
-        <span class="nav-icon">${SVG_SETTINGS}</span><span>Settings</span>
-      </a></li>
-    </ul>
-    <div class="nav-right">
-      <div class="nav-datetime" id="nav-datetime" aria-live="polite"></div>
-      <button class="btn-panic" id="nav-panic" aria-label="Panic: cloak tab">
-        ${SVG_ALERT} PANIC
-      </button>
-    </div>
-  </nav>
-  `;
+function reloadParticles(){
+  if(window.pJSDom&&window.pJSDom.length>0){
+    window.pJSDom.forEach(p=>{try{p.pJS.fn.vendors.destroypJS();}catch(e){}});
+    window.pJSDom=[];
+  }
+  initParticles();
 }
 
-window.VApp = {
-  showToast, showModal,
-  createGameCardHTML,
-  addRipple,
-  escHtml,
-  startDatetime,
-  loadGames,
-  setNavActive,
-  initPanicBtn,
-  initStarDelegation,
-  navHTML,
-  SVG_STAR, SVG_STAR_FILLED, SVG_X, SVG_PLAY,
-  SVG_HOME, SVG_GRID, SVG_SETTINGS,
-  SVG_FULLSCREEN, SVG_FULLSCREEN_EXIT,
-  SVG_RELOAD, SVG_SCREENSHOT, SVG_BACK, SVG_SEARCH, SVG_ALERT,
-};
+window.VApp={IC,esc,showToast,showModal,makeCard,initStars,startDatetime,loadGames,navHTML,initPanic,initParticles,reloadParticles};
