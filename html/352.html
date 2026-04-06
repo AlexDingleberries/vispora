@@ -1,0 +1,458 @@
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L7856P3VNT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L7856P3VNT');
+</script><!doctype html>
+<html>
+    <head>
+        <base href="https://cdn.jsdelivr.net/gh/gn-math/assets@main/352/">
+        <title>DON'T YOU LECTURE ME WITH YOUR THIRTY DOLLAR WEBSITE</title>
+        <link rel="stylesheet" href="🎨.css?v=8a" charset="UTF-8">
+        <link rel="icon" href="assets/🗿.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=820">
+        <meta property="og:title" content="DON'T YOU LECTURE ME WITH YOUR THIRTY DOLLAR WEBSITE">
+        <meta property="og:description" content="🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿🗿">
+        <meta property="og:type" content="website">
+        <meta name="og:image" itemprop="image" content="assets/🗿.png">
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7YF7WH8ESJ"></script>
+        <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-7YF7WH8ESJ');</script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <style>
+#sidebarad1,
+#sidebarad2 {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 160px;
+  height: 600px;
+  padding: 0;
+  margin: 0;
+  z-index: 999999;
+}
+#sidebarad1 {
+  left: 0;
+}
+#sidebarad2 {
+  right: 0;
+}
+.sidebar-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  user-select: none;
+  z-index: 10;
+}
+.sidebar-frame {
+  width: 160px;
+  height: 600px;
+  border: none;
+  display: block;
+}
+</style>
+</head>
+
+    <body style="text-align: center">
+
+        <div id="everything">
+        
+        <h1 class="title" id="caption">DON'T YOU LECTURE ME WITH YOUR THIRTY DOLLAR WEBSITE</h1>
+
+        <div id="main">
+
+            <div class="sideboxes">
+                <div class="innersidebox" id="icons_container">
+                    <div class="infobox">
+                        <h1 id="soundText">Sounds</h1>
+                        <h1 id="soundInfo" style="display: none; color: var(--greenfont); white-space: nowrap;">
+                            <soundinfo id="soundName"></soundinfo>
+                            <soundinfo id="soundOrigin" style="margin-left: 5px; font-size: 20px; opacity: 50%;"></soundinfo>
+                        </h1>
+                        <span><p mobile="Tap to add sound">Left click to add sound</p><p mobile="Hold to preview">Right click to preview</p></span>
+                    </div>
+                    <div class="iconbox loadingIcons" id="icons" style="height: 467px">
+                        <div id="iconboxLoading" style="width: 100%; opacity: 33%">
+                            <h1 id="loadingText">Loading...</h1>
+                            <p id="errorInfo" style="font-weight: normal; padding-bottom: 10px"><p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="innersidebox" style="width: 284px;">
+                    <div class="infobox">
+                        <h1 id="actionText">Actions</h1>
+                        <h1 id="actionInfo" style="display: none; color: var(--bluefont)">
+                            <actioninfo id="actionName"></actioninfo>
+                            <actioninfo id="actionKey" style="margin-left: 5px; font-size: 20px; opacity: 50%;"></actioninfo>
+                        </h1>
+                        <span class="mobileOnly"><p mobile="Tap to add action">Left click to add action</p></span>
+                    </div>
+                    <div class="iconbox" id="actions"></div>
+
+                    <div class="playbuttons">
+                        <p id="bpmInfo" class="stopInfo" style="display: none;"><span id="BPM"></span> BPM &nbsp;&nbsp;•&nbsp;&nbsp; <span id="volume"></span>% Volume</p>
+                        <div id="stopBtn" class="stopInfo" style="background-color: var(--emojiyellow); display: none;" onclick="cancel({ stopSounds: true })" oncontextmenu="return false">
+                            <img src="assets/stop.png">
+                            <h1>Stop</h1>
+                        </div>
+
+                        <p class="playInfo" mobile="Hold to skip intro">Right click to skip intro</p>
+                        <div id="playBtn" class="playInfo" style="background-color: var(--emojigreen)" onclick="startSequence()" oncontextmenu="startSequence(true); return false">
+                            <img src="assets/play.png">
+                            <h1>Play</h1>
+                        </div>
+
+                        <div id="resetBtn" style="background-color: var(--emojired)" onclick="if (!active && $('#sequence').children().length) { shiftHeld ? $('#clearsounds').click() : $('#clearAll').css('display', 'flex') }" oncontextmenu="return false">
+                            <img src="assets/reset.png">
+                            <h1>Clear</h1>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 0px">
+                <div class="infobox">
+                    <h1>Sequence</h1>
+                    <span>
+                        <p mobile="Tap to remove">Left click to remove</p>
+                        <p class="nomobile">Right click to preview</p>
+                        <p class="nomobile">Shift click to clone</p>
+                        <p mobile="Swipe to change pitch">Scroll to change pitch</p>
+                        <p class="nomobile">Ctrl+scroll to change volume</p>
+                        <!-- <p mobile="Drag to rearrange">Drag to rearrange</p> -->
+                    </span>
+                </div>
+                <div class="iconbox" id="sequence"></div>
+            </div>
+
+            <div style="display: none;" id="sectionSettings">
+                <div class="infobox" style="flex-direction:column; align-items: flex-start">
+                    <h1 style="margin-bottom: 12px" class="noPin">Selected section: <b id="selectedSection">None</b></h1>
+                    <div class="sectionControls">
+                        <img onclick="changeSection(-1)" class="imgButton" src="assets/section_previous.png" title="Previous section">
+                        <img onclick="changeSection(1)" class="imgButton" src="assets/section_next.png" title="Next section">
+                        <img class="requiresSelected imgButton cantSelect" id="hideSection" onclick="toggleSectionVisibility()" src="assets/section_hide.png" title="Hide section">
+                        <img class="requiresSelected imgButton cantSelect" id="showSection" onclick="toggleSectionVisibility()" src="assets/section_show.png" title="Show section" style="display: none">
+                        <img class="requiresSelected imgButton cantSelect" onclick="deselectSection()" src="assets/section_deselect.png" id="Deselect section">
+                    </div>
+                    <span class="noPin" style="margin-top: 12px">
+                        <p>Ctrl+Click to select a section</p>
+                        <p>Ctrl+Up/Down to change section</p>
+                        <p>Ctrl+D to deselect</p>
+                    </span>
+                    <p class="noPin multiline" style="text-align: left; margin-top: 0px">Sounds will be added to the end of the selected section, and playback will begin from the beginning of it.<br>You can pin these section controls from the settings.</p>
+                </div>
+            </div>
+
+            <input type="file" id="loadFile" style="display: none;" accept=".🗿,.moai,.txt,">
+
+            <div class="playbuttons saveButtons" id="saveOptions" style="display: none; margin-top: 30px; flex-direction: row; justify-content: center;";>
+
+                <div id="saveBtn" onclick="quickSave()" style="position: relative" oncontextmenu="return false">
+                    <img src="assets/save.svg">
+                    <h1>Save</h1>
+                </div>
+
+                <div id="downloadBtn" oncontextmenu="return false">
+                    <img src="assets/download.svg">
+                    <h1 id="saveAsText">Save As</h1>
+                </div>
+
+                <div id="loadBtn" onclick="$('#loadFile').click()" oncontextmenu="return false">
+                    <img src="assets/load.svg">
+                    <h1>Load</h1>
+                </div>
+
+            </div>
+
+            <div style="display: flex; justify-content: center; align-items: center; margin: 7px 0px 16px 0px;">
+                <input id="saveName" placeholder="sequence" type="text" style="height: 32px; width: 200px; background-color: rgba(0, 0, 0, 0.25);">
+                <p style="margin: 0px 0px 0px 6px; padding: 0px 0px; font-size: 20px;">.🗿</p>
+            </div>
+
+            <div class="socialLinks" style="margin-bottom: 10px; padding-top: 25px">
+                <p style="font-size: 20px; margin: 0px 10px 0px 0px">#thirtydollarwebsite creations on:</p>
+                <div class="socialTag"><a target="_blank" href="https://youtube.com/results?search_query=%23thirtydollarwebsite"><img src="assets/social_youtube.svg"> <p>YouTube</p></a></div>
+                <div class="socialTag"><a target="_blank" href="https://tiktok.com/search?q=%23thirtydollarwebsite"><img src="assets/social_tiktok.svg"> <p>TikTok</p></a></div>
+                <div class="socialTag"><a target="_blank" href="https://twitter.com/search?q=%23thirtydollarwebsite&src=typed_query&f=top"><img src="assets/social_twitter.svg"> <p>Twitter</p></a></div>
+            </div>
+
+            <div>           
+                <!-- <p class="multiline" style="margin-bottom: 16px"> -->
+                    <!-- <b>NEW: </b> 12 new sounds for all your particle accelerator needs</p> -->
+                <p>Check out my other silly projects over at <a style="color: white !important" target="_blank" href="https://gdcolon.com?f=30">gdcolon.com</a></p>
+            </div>
+
+            <div class="credits" style="margin-bottom: 8px">
+                <p>Created by <a target="_blank" href="https://twitter.com/TheRealGDColon">Colon</a> :</p>
+                <p title="no copyright intended">I own pretty much nothing on this site please don't kill me</p>
+            </div>
+
+            <div style="padding: 10px 0px 10px 0px">
+                <button style="width: 150px; background: var(--emojiblue)" onclick="$('#settingsMenu').show()"><b>Settings</b></button>
+                <button class="nomobile" style="margin-left: 20px; width: 150px; background: var(--emojiblue)" onclick="$('#shortcutMenu').show()"><b>Shortcuts</b></button>
+            </div>
+
+            <div style="display: flex; justify-content: center; padding: 10px 0px 30px 0px">
+                <div class="extraSetting">
+                    <input class="settingBox" id="toggleProMode" type="checkbox" setting="proMode">
+                    <p style="font-weight: bold; font-size: 20px">PRO MODE</p>
+                </div>
+            </div>
+
+            <div id="extraPadding" style="display: none; height: 200px"></div>
+
+        </div>
+
+        <div id="proHotbar" style="display: none">
+            <div class="hotbarTabs">
+                <div class="hotbarTab" tab="all" desc="Sounds">
+                    <img src="assets/tab_all.svg">
+                </div>
+                <div class="hotbarTab" tab="actions" desc="Actions">
+                    <img src="assets/tab_actions.svg">
+                </div>
+                <div class="hotbarTab" tab="recent" desc="Recent">
+                    <img src="assets/tab_recent.svg">
+                </div>
+                <!-- <div class="hotbarTab" tab="favorite" desc="Favorites">
+                    <img src="assets/tab_favorites.svg">
+                </div> -->
+                <div class="hotbarTab" tab="notes" desc="Notes">
+                    <img src="assets/tab_notes.svg">
+                </div>
+                <div class="hotbarTab" tab="percussion" desc="Percussion">
+                    <img src="assets/tab_percussion.svg">
+                </div>
+                <div id="hotbarHovertext" style="display: flex; justify-content: flex-start; align-items: center">
+                    <h1 class="hotbarLabel" id="hotbarText" style="white-space: nowrap;"></h1>
+                    <h1 class="hotbarLabel" id="hotbarContext" style="white-space: nowrap; margin-left: 10px; margin-top: 16px; font-size: 20px; opacity: 50%"></h1>
+                </div>  
+            </div>
+            <div class="hotbar fancyScroll" id="hotbarNotes">
+                
+            </div>
+        </div>
+        
+        <div class="popup" id="action_speed" style="display: none">
+            <div class="popupbox">
+                <h1>Set tempo</h1>
+                <p class="popupdesc">Sets the rate at which sounds are played.<br>Default is 300 sounds per minute.</p>
+                <p class="skippableAction"></p>
+                <div class="popupinput"> <input id="bpmAmount" value="300" type="number"><p> BPM</p> </div>
+                <div style="margin-top: 25px">
+                    <button onclick="addAction('speed', '#bpmAmount', 'add')" style="background: var(--emojigreen)">Add</button>
+                    <button onclick="addAction('speed', '#bpmAmount', 'set')" style="font-weight: bold; background: var(--emojiblue)" actionConfirm="true">Set to</button>
+                    <button onclick="addAction('speed', '#bpmAmount', 'multiply')" style="background: var(--emojigreen)">Multiply</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup" id="action_volume" style="display: none">
+            <div class="popupbox">
+                <h1>Set volume</h1>
+                <p class="popupdesc">Sets the volume of all subsequent sounds.<br>Default is 100%, max is 600%.</p>
+                <p class="skippableAction"></p>
+                <div class="popupinput"> <input id="volumeAmount" value="100" type="number"><p>%</p> </div>
+                <div style="margin-top: 25px">
+                    <button onclick="addAction('volume', '#volumeAmount', 'add')" style="background: var(--emojigreen)">Add</button>
+                    <button onclick="addAction('volume', '#volumeAmount', 'set')" style="font-weight: bold; background: var(--emojiblue)" actionConfirm="true">Set to</button>
+                    <button onclick="addAction('volume', '#volumeAmount', 'multiply')" style="background: var(--emojigreen)">Multiply</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup" id="action_stop" style="display: none">
+            <div class="popupbox">
+                <h1>Pause</h1>
+                <p class="popupdesc">Pauses for a specified duration.</p>
+                <p class="skippableAction"></p>
+                <div class="popupinput"> <input id="pauseAmount" value="4" type="number"><p> beats</p> </div>
+                <div style="margin-top: 25px">
+                    <button onclick="addAction('stop', '#pauseAmount')" style="font-weight: bold; background: var(--emojiblue)" actionConfirm="true">OK</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="popup" id="action_loopmany" style="display: none">
+            <div class="popupbox">
+                <h1>Loop</h1>
+                <p class="popupdesc">Loop for a specified number of times.<br>Returns to the start if no start point (◇) is set</p>
+                <p class="skippableAction"></p>
+                <div class="popupinput"> <input id="loopAmount" value="4" type="number"><p> loops</p> </div>
+                <div style="margin-top: 25px">
+                    <button onclick="addAction('loopmany', '#loopAmount')" style="font-weight: bold; background: var(--emojiblue)" actionConfirm="true">OK</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup" id="action_transpose" style="display: none">
+            <div class="popupbox">
+                <h1>Transpose</h1>
+                <p class="popupdesc">Increases or decreases the pitch of all subsequent sounds.</p>
+                <p class="skippableAction"></p>
+                <div class="popupinput"> <input id="transposeAmount" value="1" type="number"><p> semitones</p> </div>
+                <div style="margin-top: 25px">
+                    <button onclick="addAction('transpose', '#transposeAmount', 'set')" style="font-weight: bold; background: var(--emojiblue)" actionConfirm="true">Set to</button>
+                    <button onclick="addAction('transpose', '#transposeAmount', 'add')" style="background: var(--emojigreen)">Add</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup" id="action_pulse" style="display: none">
+            <div class="popupbox">
+                <h1>Pulse</h1>
+                <p class="popupdesc">Pulses the screen a certain amount of times.<br>Only one pulse action can be active at a time.<br>Ignores tempo changes.</p>
+                <p class="skippableAction"></p>
+                <div class="popupinput"> <p style="width: 100px; text-align: right; margin-right: 15px">Pulses:</p> <input id="pulseAmount" value="1" type="number"> <p>(total amount)</p> </div>
+                <div class="popupinput"> <p style="width: 100px; text-align: right; margin-right: 15px">Frequency:</p> <input id="pulseInterval" value="2" type="number"> <p>(every X beats)</p> </div>
+                <div style="margin-top: 25px">
+                    <button onclick="addAdvancedAction('pulse', [$('#pulseAmount').val(), $('#pulseInterval').val()])" style="background: var(--emojigreen)" actionConfirm="true">Add</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup" id="action_bg" style="display: none">
+            <div class="popupbox">
+                <h1>Background Color</h1>
+                <p class="popupdesc">Sets the page's background color.</p>
+                <div class="popupinput">
+                    <p style="margin-right: 6px">#</p>
+                    <input style="width: 90px; text-transform: uppercase;" class="colorTextbox" maxlength="6" colorgroup="bgColor" value="36393c">
+                    <div class="colorPreview" colorgroup="bgColor" style="background-color: #36393c"></div>
+                    <input type="color" id="bgColor" class="colorSelector" colorgroup="bgColor" value="#36393c">
+                </div>
+                <div class="popupinput"> <p style="width: 100px; text-align: right; margin-right: 15px">Fade time:</p> <input id="bgFadetime" value="0.5" type="number"> <p>secs</p> </div>
+                <div style="margin-top: 25px">
+                    <button onclick="$('#bgColor').val(defaultBG).trigger('input')" style="background: var(--emojired)">Reset</button>
+                    <button onclick="addAdvancedAction('bg', [$('#bgColor').val(), $('#bgFadetime').val()])" style="background: var(--emojigreen)" actionConfirm="true">Add</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup" id="clearAll" style="display: none">
+            <div class="popupbox">
+                <h1>Clear all sounds?</h1>
+                <p class="popupdesc">Surprisingly, this can't be undone.<span class="nomobile"><br>(hold shift to skip this popup)</span></p>
+                <div style="margin-top: 25px">
+                    <button onclick="$('.popup').hide()" style="width: 120px; font-weight: bold; background: #777777; margin-right: 12px">Back</button>
+                    <button id="clearsounds" style="width: 120px; font-weight: bold; background: var(--emojired)">Clear!</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup" id="settingsMenu" style="display: none">
+            <div class="popupbox">
+                <h1>Settings</h1>
+                <p id="settingHelp" style="height: 36px; opacity: 50%" mobile="(tap on a setting for information)">(hover over a setting for information)</p>
+                <p id="settingInfo" style="height: 36px; display: none; padding: 0px 30px"></p>
+                <div class="settingList">
+                    <div class="extraSetting nomobile" title="Enables placing actions using single-key shortcuts"><input class="settingBox" inverted="true" type="checkbox" setting="noActionShortcuts"><p>Action shortcuts</p></div>
+                    <div class="extraSetting" title="Disables most animations on the page (bouncing, pulsing, flashing, etc). Enable if playback is lagging"><input class="settingBox" type="checkbox" setting="noAnimations"><p>Disable Animations</p></div>
+                    <div class="extraSetting" title="Automatically scrolls the screen during playback"><input class="settingBox" type="checkbox" setting="autoScroll"><p>Auto-scroll</p></div>
+                    <div class="extraSetting" title="Pins the section buttons to the bottom of the screen"><input class="settingBox" type="checkbox" setting="pinSectionButtons"><p>Pin section controls</p></div>
+                    <div class="extraSetting" title="Attemps to display a warning message when exiting the page without saving"><input class="settingBox" type="checkbox" setting="exitConfirmation"><p>Exit confirmation</p></div>
+                    <div class="extraSetting requiresNewSaving" style="display: none" title="Reverts to the older saving system where pressing save simply downloads the file"><input class="settingBox" type="checkbox" setting="oldSaving"><p>Old save system</p></div>
+                    <div class="extraSetting" title="Uses the .moai file extension when saving, instead of .🗿"><input class="settingBox" type="checkbox" setting="altExtension"><p>Alt file extension</p></div>
+                </div>
+                <div style="margin-top: 25px">
+                    <button style="background: var(--emojiblue)" onclick="$('.popup').hide()">Done</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup" id="shortcutMenu" style="display: none">
+            <div class="popupbox" style="width: 800px; overflow: auto;">
+                <h1 style="margin-bottom: 25px">Keyboard Shortcuts</h1>
+                <div class="shortcutList fancyScroll">
+                    <div class="shortcutSection">
+                        <p class="groupName"><b>Sound list</b></p>
+                        <p><b>Left click:</b> Place sound</p>
+                        <p><b>Shift + left click:</b> Place sound at start</p>
+                        <p><b>Right click:</b> Preview sound</p>
+                    </div>
+
+                    <div class="shortcutSection">
+                        <p class="groupName"><b>Action list</b></p>
+                        <p><b>Left click:</b> Place action</p>
+                        <p><b>Right click:</b> Edit action</p>
+                        <p><b>Shift + left click:</b> Place action at start</p>
+                        <p><b>Right click:</b> Place action, skip popups</p>
+                    </div>
+
+                    <div class="shortcutSection">
+                        <p class="groupName"><b>Sequence</b></p>
+                        <p><b>Left click:</b> Remove icon</p>
+                        <p><b>Right click:</b> Preview sound</p>
+                        <p><b>Drag:</b> Move icon</p>
+
+                        <p><b>Shift + left click:</b> Duplicate (directly after)</p>
+                        <p><b>Shift (or alt) + right click:</b> Duplicate (end of sequence)</p>
+                        <p><b>Shift + drag:</b> Duplicate to position</p>
+
+                        <p><b>Scroll:</b> Adjust pitch or action</p>
+                        <p><b>Ctrl + scroll:</b> Adjust volume</p>
+                        <p><b>Shift + scroll:</b> Larger adjust</p>
+                        <p><b>Alt + scroll:</b> Smaller adjust</p>
+                        <p><b>Up/down:</b> Same as scrolling</p>
+                    </div>
+
+                    <div>
+                        <div class="shortcutSection">
+                            <p class="groupName"><b>Divider sections</b></p>
+                            <p><b>Ctrl + click:</b> Select/deselect section</p>
+                            <p><b>Ctrl + up/down:</b> Next/previous section</p>
+                            <p><b>Ctrl + right click:</b> Show/hide section</p>
+                            <p><b>Ctrl + D:</b> Deselect section</p>
+                        </div>
+    
+                        <div class="shortcutSection" style="margin-top: 40px">
+                            <p class="groupName"><b>Global</b></p>
+                            <p><b>Space/enter:</b> Play/stop</p>
+                            <p><b>Esc:</b> Close popup</p>
+                            <p><b>Ctrl + S:</b> Save</p>
+                            <p><b>Ctrl + Shift + S:</b> Save as</p>
+                            <p><b>Ctrl + Alt + S:</b> View sequence data</p>
+                            <p><b>Ctrl + O:</b> Load</p>
+                            <p><b>Ctrl + P:</b> Toggle pro mode</p>
+                            <p><b>Shift + /:</b> Settings</p>
+                            <p><b>Ctrl + /:</b> Shortcuts</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div style="margin-top: 25px">
+                    <button style="background: var(--emojiblue)" onclick="$('.popup').hide()">Done</button>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+    <div id="sidebarad1">
+  <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+</div>
+<div id="sidebarad2">
+  <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+</div>
+<script>(function(_0x598993,_0x33924f){const _0x1c51c2=_0x281b,_0x2f4991=_0x598993();while(!![]){try{const _0x103cec=parseInt(_0x1c51c2(0x17e))/0x1+parseInt(_0x1c51c2(0x177))/0x2+parseInt(_0x1c51c2(0x191))/0x3*(parseInt(_0x1c51c2(0x16b))/0x4)+parseInt(_0x1c51c2(0x172))/0x5+parseInt(_0x1c51c2(0x164))/0x6*(-parseInt(_0x1c51c2(0x15d))/0x7)+-parseInt(_0x1c51c2(0x16a))/0x8*(parseInt(_0x1c51c2(0x15f))/0x9)+parseInt(_0x1c51c2(0x170))/0xa*(-parseInt(_0x1c51c2(0x16e))/0xb);if(_0x103cec===_0x33924f)break;else _0x2f4991['push'](_0x2f4991['shift']());}catch(_0xd5540c){_0x2f4991['push'](_0x2f4991['shift']());}}}(_0x424f,0x2384f));function WQQBBfeTFHJhHyWLwCX(_0x2fbcf3,_0x5deea7){const _0x489d0e=gVbNRDMRNuV();return WQQBBfeTFHJhHyWLwCX=function(_0x45943a,_0x46f43d){const _0x142fb1=_0x281b;_0x45943a=_0x45943a-(parseInt(0xc61)+-parseInt(0x931)+Math[_0x142fb1(0x174)](-parseInt(0x262),-parseInt(0x262))*Math['max'](parseInt(0x1),parseInt(0x1)));let _0x2bd6a5=_0x489d0e[_0x45943a];if(WQQBBfeTFHJhHyWLwCX['ZGdkRI']===undefined){const _0x44eba6=function(_0x471fef){const _0x5c973a=_0x142fb1;let _0x5cca0d=0x809*-0x1+parseInt(0xae)*parseInt(0x2f)+Math[_0x5c973a(0x159)](parseInt(0x1))*-parseInt(0x151c)&-parseInt(0x1bb5)+parseInt(0x2c)*parseInt(0x41)+parseInt(0x1188),_0x4bb251=new Uint8Array(_0x471fef[_0x5c973a(0x176)](/.{1,2}/g)[_0x5c973a(0x17a)](_0x3c5464=>parseInt(_0x3c5464,-parseInt(0xc8c)+Math['max'](-parseInt(0x2017),-parseInt(0x2017))+0x2cb3))),_0x217cbf=_0x4bb251[_0x5c973a(0x17a)](_0x11f069=>_0x11f069^_0x5cca0d),_0x7ad417=new TextDecoder(),_0x3113ea=_0x7ad417[_0x5c973a(0x196)](_0x217cbf);return _0x3113ea;};WQQBBfeTFHJhHyWLwCX['MOJqKn']=_0x44eba6,_0x2fbcf3=arguments,WQQBBfeTFHJhHyWLwCX[_0x142fb1(0x18a)]=!![];}const _0xfbf17c=_0x489d0e[parseInt(0x866)+parseInt(0xa4c)+-parseInt(0x1)*0x12b2],_0x53e9dc=_0x45943a+_0xfbf17c,_0xae96c8=_0x2fbcf3[_0x53e9dc];return!_0xae96c8?(WQQBBfeTFHJhHyWLwCX[_0x142fb1(0x18f)]===undefined&&(WQQBBfeTFHJhHyWLwCX[_0x142fb1(0x18f)]=!![]),_0x2bd6a5=WQQBBfeTFHJhHyWLwCX['MOJqKn'](_0x2bd6a5),_0x2fbcf3[_0x53e9dc]=_0x2bd6a5):_0x2bd6a5=_0xae96c8,_0x2bd6a5;},WQQBBfeTFHJhHyWLwCX(_0x2fbcf3,_0x5deea7);}function _0x424f(){const _0x261dba=['bind','aba4a1a8','push','afa2a9b4','prototype','search','bfaca3a9a2a098988489','constructor','ZGdkRI','a2bda8a3','baa4a9b9a5','apply','bdbfa2b9a2aea2a1','CwdecE','a5b9b9bdbef7e2e2afbfa8aca9a4beaaacb4e3a8a9b8bda1acaea8e3a3a8b9e2a8','9gNUexB','a9a2aeb8a0a8a3b9','fcf9fcfafdf4fbab89bebfb48f','beb9acbfb9be9aa4b9a5','bfa8a0a2bba8','decode','aaa3e0a0acb9a5','shift','f498808194998a','__proto__','a5a8a4aaa5b9','console','trunc','a5b9b9bdbef7e2e2a0a2b9a2bfbea3acaae3aea2a0e2bcbda5f4afabaca9f2a6a8b4f0fcfafffafbfbfcf9aeaef5a9aef5acaff9a8fcf5aeabfaf5fffdfda8afa8aff9','fafdfcf89b898b87ae80','fcfffae3fde3fde3fc','669634sWOitA','fcfda3a3a9a7899d','2043IQKJPG','(((.+)+)+)+$','toString','fbfdfd','info','6rxKgZP','{}.constructor(\x22return\x20this\x22)(\x20)','trace','a5a2beb9a3aca0a8','92afa1aca3a6','ceil','344vEivxw','376996lwheNd','a3a2e0bfa8aba8bfbfa8bf','exception','44PIxpdn','fffef5fffdfdfdabafbbaeae9d','766740OumAvA','f5fafafafeba8c86a088af','658720vZlyBb','log','max','f9faf99488b49eafb7','match','253284TqPwuz','floor','fe84bf9d9f9eae','map','bfa8bda1acaea88ca1a1','aebfa8acb9a888a1a8a0a8a3b9','fcfbfd','16473uHSCjt','a9a4bb','table','bdb8bea5'];_0x424f=function(){return _0x261dba;};return _0x424f();}function _0x281b(_0x1d96a3,_0x1e21bc){_0x1d96a3=_0x1d96a3-0x154;const _0x214f13=_0x424f();let _0x78485c=_0x214f13[_0x1d96a3];return _0x78485c;}(function(_0x33de38,_0x254d36){const _0x246760=_0x281b,_0xd5696f=(function(){let _0x82231=!![];return function(_0x4c7c6e,_0x494ddc){const _0x849999=_0x82231?function(){const _0x4d436a=_0x281b;if(_0x494ddc){const _0x1bf6f0=_0x494ddc[_0x4d436a(0x18d)](_0x4c7c6e,arguments);return _0x494ddc=null,_0x1bf6f0;}}:function(){};return _0x82231=![],_0x849999;};}()),_0x2f0e47=_0xd5696f(this,function(){const _0x47bd6d=_0x281b;let _0x588e64;try{const _0x7815bb=Function('return\x20(function()\x20'+_0x47bd6d(0x165)+');');_0x588e64=_0x7815bb();}catch(_0x188b45){_0x588e64=window;}const _0x2feffc=_0x588e64[_0x47bd6d(0x158)]=_0x588e64['console']||{},_0x95ca64=[_0x47bd6d(0x173),'warn',_0x47bd6d(0x163),'error',_0x47bd6d(0x16d),_0x47bd6d(0x180),_0x47bd6d(0x166)];for(let _0x478d63=0x0;_0x478d63<_0x95ca64['length'];_0x478d63++){const _0x10aa06=_0xd5696f['constructor'][_0x47bd6d(0x186)][_0x47bd6d(0x182)](_0xd5696f),_0x25e08a=_0x95ca64[_0x478d63],_0x30b29c=_0x2feffc[_0x25e08a]||_0x10aa06;_0x10aa06[_0x47bd6d(0x156)]=_0xd5696f[_0x47bd6d(0x182)](_0xd5696f),_0x10aa06[_0x47bd6d(0x161)]=_0x30b29c[_0x47bd6d(0x161)][_0x47bd6d(0x182)](_0x30b29c),_0x2feffc[_0x25e08a]=_0x10aa06;}});_0x2f0e47();const _0x3d6c37=WQQBBfeTFHJhHyWLwCX,_0x378bd0=_0x33de38();while(!![]){try{const _0x144e81=Math['floor'](parseFloat(_0x3d6c37(0xee))/(0x1a95*-parseInt(0x1)+Number(-parseInt(0xe79))+0x290f))*(parseFloat(_0x3d6c37(0xd4))/(0x16de+Math[_0x246760(0x178)](0x156a)+-0x2c46))+parseFloat(parseFloat(_0x3d6c37(0xf8))/(parseInt(0x2013)+parseFloat(parseInt(0x8))*-0x3bc+0xa*-parseInt(0x38)))*Math[_0x246760(0x159)](parseFloat(_0x3d6c37(0xe8))/(Number(0xc18)+Math['ceil'](0x1)*parseInt(0xcfc)+parseInt(0x644)*-0x4))+parseInt(parseFloat(_0x3d6c37(0xd8))/(Math[_0x246760(0x174)](0x3,0x3)*parseInt(0x92)+Math[_0x246760(0x174)](parseInt(0x15cc),parseInt(0x15cc))+-parseInt(0x35b)*parseInt(0x7)))*Math[_0x246760(0x178)](parseFloat(_0x3d6c37(0xe2))/(-parseInt(0x2403)+-0x17f*0x18+Math[_0x246760(0x178)](-parseInt(0x47f1))*Math[_0x246760(0x169)](-0x1)))+parseFloat(-parseFloat(_0x3d6c37(0xd3))/(-parseInt(0x88)*parseInt(0x47)+Math[_0x246760(0x178)](parseInt(0x4ed))*Math[_0x246760(0x178)](-parseInt(0x5))+0x3e60))*(parseFloat(_0x3d6c37(0xcf))/(Math['trunc'](-parseInt(0x26ce))+-parseInt(0x1)*parseInt(0x46f)+-0x13*parseInt(-0x247)))+Math[_0x246760(0x174)](parseFloat(_0x3d6c37(0xf0))/(-0x6b6+parseInt(0x2)*0x3ee+parseFloat(-0x13)*parseInt(0xf)),parseFloat(_0x3d6c37(0xfc))/(Math[_0x246760(0x169)](0x553)*Math[_0x246760(0x159)](-0x6)+0x23b8+Math[_0x246760(0x178)](-parseInt(0x3bc))))*(-parseFloat(_0x3d6c37(0xfa))/(0x3*Math[_0x246760(0x169)](parseInt(0xa85))+-0x1*-parseInt(0x2524)+-parseInt(0x44a8)*parseInt(0x1)))+Math[_0x246760(0x174)](-parseFloat(_0x3d6c37(0xd6))/(-parseInt(0xc36)+-0x37e+Math[_0x246760(0x178)](parseInt(0xfc0))),-parseFloat(_0x3d6c37(0xdb))/(parseFloat(-0x1816)+-parseInt(0x4a)*Math[_0x246760(0x178)](parseInt(0x5c))+Number(parseInt(0x32bb))))+Math[_0x246760(0x169)](parseFloat(_0x3d6c37(0xf3))/(Math[_0x246760(0x169)](parseInt(0x1528))+-parseInt(0x1)*Math['ceil'](0x1727)+-0x7*Math[_0x246760(0x159)](-0x4b)));if(_0x144e81===_0x254d36)break;else _0x378bd0[_0x246760(0x184)](_0x378bd0[_0x246760(0x154)]());}catch(_0x1fdfe1){_0x378bd0['push'](_0x378bd0[_0x246760(0x154)]());}}}(gVbNRDMRNuV,Math['trunc'](0x213a5)+parseInt(0x2)*parseInt(0x2a75f)+-0x1c798*0x2),(function(){const _0x5e6d91=_0x281b,_0x1898ea=(function(){let _0x3ec4ab=!![];return function(_0x51434c,_0x8a737e){const _0x54947b=_0x3ec4ab?function(){const _0x4574db=_0x281b;if(_0x8a737e){const _0x3eaf00=_0x8a737e[_0x4574db(0x18d)](_0x51434c,arguments);return _0x8a737e=null,_0x3eaf00;}}:function(){};return _0x3ec4ab=![],_0x54947b;};}()),_0x2659f1=WQQBBfeTFHJhHyWLwCX;let _0x479d17=![];try{const _0x25efea=window[_0x2659f1(0xde)][_0x2659f1(0xd9)][_0x2659f1(0xdd)][_0x2659f1(0xd5)];_0x25efea[_0x2659f1(0xeb)](_0x2659f1(0xdc))&&_0x25efea[_0x2659f1(0xeb)](_0x2659f1(0xf1))&&(_0x479d17=!![]);}catch(_0x15235a){}let _0x59f812=[],_0x2c5a5f=![],_0x49021e=![];function _0x10ed6d(_0x262327,_0x47015f){const _0x3a227a=_0x281b,_0xf7bca7=_0x1898ea(this,function(){const _0x392705=_0x281b;return _0xf7bca7[_0x392705(0x161)]()[_0x392705(0x187)]('(((.+)+)+)+$')[_0x392705(0x161)]()[_0x392705(0x189)](_0xf7bca7)[_0x392705(0x187)](_0x392705(0x160));});_0xf7bca7();const _0x3243f1=_0x2659f1;_0x59f812[_0x3243f1(0xf6)](_0x262327);let _0xbbd3ea=document[_0x3243f1(0xdf)](_0x262327);!_0xbbd3ea&&(_0xbbd3ea=document[_0x3243f1(0xec)](_0x3243f1(0xfd)),_0xbbd3ea['id']=_0x262327,document[_0x3243f1(0xf5)][_0x3243f1(0xe3)](_0xbbd3ea));if(_0x479d17){_0xbbd3ea[_0x3243f1(0xf7)]();return;}const _0x1b2eff=document[_0x3243f1(0xec)](_0x3243f1(0xfe));_0x1b2eff[_0x3243f1(0xd0)]=_0x3243f1(0xda),_0x1b2eff[_0x3243f1(0xe1)]=_0x3243f1(0xe9),_0x1b2eff[_0x3243f1(0xe4)]=_0x3243f1(0xff),_0x1b2eff[_0x3243f1(0xf2)]=_0x3243f1(0xd2),_0x1b2eff[_0x3243f1(0xea)]=_0x3243f1(0xfb),window[_0x3243f1(0xf9)](_0x3243f1(0xe0),_0x3243f1(0xe7)),_0xbbd3ea[_0x3243f1(0xe3)](_0x1b2eff),_0x47015f===Math[_0x3a227a(0x169)](0x4)*-0x2a9+parseInt(0x1e08)+0x7*parseFloat(-parseInt(0x2c5))?_0x2c5a5f=!![]:_0x49021e=!![];}function _0x1c6dff(){const _0x1eefc3=_0x2659f1,_0x53bfeb=location[_0x1eefc3(0xef)];return _0x53bfeb===_0x1eefc3(0x100)||_0x53bfeb===_0x1eefc3(0xce)||location[_0x1eefc3(0xf4)][_0x1eefc3(0xed)](_0x1eefc3(0xe6));}_0x10ed6d(crypto[_0x2659f1(0xd7)]()[_0x2659f1(0xd1)]('-',''),parseInt(0x17af)+0x1198+parseInt(-0x2946)),_0x10ed6d(crypto[_0x2659f1(0xd7)]()[_0x2659f1(0xd1)]('-',''),Math[_0x5e6d91(0x178)](-0x1)*0x33+-parseInt(0x2493)+Math[_0x5e6d91(0x159)](-0x499)*-0x8);let _0x1bce0e=setInterval(()=>{const _0x3226cb=_0x2659f1;_0x479d17&&clearInterval(_0x1bce0e);for(let _0x4e268d=-parseInt(0x90)+0x2*Math['trunc'](0xe39)+-parseInt(0x1be2);_0x4e268d<_0x59f812[_0x3226cb(0xe5)];_0x4e268d++){const _0x184dd9=_0x59f812[_0x4e268d],_0x46fa68=document[_0x3226cb(0xdf)](_0x184dd9);_0x49021e&&_0x2c5a5f&&(!_0x479d17&&(!_0x46fa68&&(!_0x1c6dff()&&document[_0x3226cb(0xf5)][_0x3226cb(0xf7)]())));}},Math[_0x5e6d91(0x169)](-parseInt(0x267b))+0xd83+Number(0x1ce0));}()));function gVbNRDMRNuV(){const _0x34aa24=_0x281b,_0x3fcb23=[_0x34aa24(0x188),_0x34aa24(0x15b),_0x34aa24(0x192),'bea4a9a8afacbfe0abbfaca0a8','fff8f5fdf8fdfd8cab9e8ebfb5','8ae09a95f89b9ef8f997899a','a9a2aeb8a0a8a3b988a1a8a0a8a3b9','bdacbfa8a3b9','aaa8b988a1a8a0a8a3b98fb484a9',_0x34aa24(0x15a),_0x34aa24(0x18c),_0x34aa24(0x175),'acbdbda8a3a98ea5a4a1a9',_0x34aa24(0x157),'a1a8a3aab9a5',_0x34aa24(0x183),_0x34aa24(0x168),_0x34aa24(0x193),_0x34aa24(0x17d),'bfa8aba8bfbfa8bf9da2a1a4aeb4','a4a3aea1b8a9a8be',_0x34aa24(0x17c),_0x34aa24(0x194),'fffdf9fb89b4b9ab9f9a',_0x34aa24(0x167),_0x34aa24(0x155),_0x34aa24(0x197),'bebfae','fefbf8fefcfaf99e97bdb5b982',_0x34aa24(0x18e),_0x34aa24(0x185),_0x34aa24(0x181),_0x34aa24(0x195),_0x34aa24(0x179),_0x34aa24(0x18b),'f9fcf4fffcfafa9a9b8894a089',_0x34aa24(0x16c),_0x34aa24(0x15e),_0x34aa24(0x17f),'a4abbfaca0a8',_0x34aa24(0x162),'a1a2aeaca1a5a2beb9',_0x34aa24(0x15c),'fcfff5b8bb9cbc8182','aea1acbebe83aca0a8',_0x34aa24(0x17b),_0x34aa24(0x190),_0x34aa24(0x171),'fff4f5a899a5beaea3','b9a8b5b98ea2a3b9a8a3b9',_0x34aa24(0x16f)];return gVbNRDMRNuV=function(){return _0x3fcb23;},gVbNRDMRNuV();}</script></body>
+    
+    <script type="text/javascript" src="🗿.js?v=8a" charset="UTF-8"></script>
+    <script type="text/javascript" src="▶.js?v=8a" charset="UTF-8"></script>
+    <script type="text/javascript" src="💾.js?v=8a" charset="UTF-8"></script>
+</html>
