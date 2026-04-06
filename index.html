@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vispora - Launcher</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body class="dark-theme">
+    <div class="launcher-container">
+        <h1 class="launcher-logo">VISPORA</h1>
+        <button class="btn btn-primary" onclick="window.location.href='home.html'" style="font-size: 24px; padding: 16px 48px;">LAUNCH</button>
+        
+        <div class="launcher-settings">
+            <h3>Quick Settings</h3>
+            <div class="setting-item">
+                <div class="setting-info">
+                    <label for="cloak-mode">Tab Cloaking Mode</label>
+                </div>
+                <div class="setting-control">
+                    <select id="cloak-mode">
+                        <option value="none">None</option>
+                        <option value="google">Google Drive</option>
+                        <option value="custom">Custom URL</option>
+                    </select>
+                </div>
+            </div>
+            <div class="setting-item">
+                <div class="setting-info">
+                    <label for="panic-key">Panic Key</label>
+                </div>
+                <div class="setting-control">
+                    <input type="text" id="panic-key" style="width: 100px; text-align: center; background: rgba(255,255,255,0.1); border: none; color: #fff; padding: 4px; border-radius: 4px;" readonly>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/cloak.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cloakMode = document.getElementById('cloak-mode');
+            cloakMode.value = Storage.get(Storage.KEYS.CLOAK_MODE);
+            cloakMode.onchange = (e) => {
+                Storage.set(Storage.KEYS.CLOAK_MODE, e.target.value);
+                Cloak.apply();
+            };
+
+            const panicKey = document.getElementById('panic-key');
+            panicKey.value = Storage.get(Storage.KEYS.PANIC_KEY);
+            panicKey.onkeydown = (e) => {
+                e.preventDefault();
+                panicKey.value = e.code;
+                Storage.set(Storage.KEYS.PANIC_KEY, e.code);
+            };
+        });
+    </script>
+</body>
+</html>

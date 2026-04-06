@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vispora - Games Library</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body class="dark-theme">
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo">VISPORA</div>
+            <div class="nav-links">
+                <a href="home.html" class="nav-item">Home</a>
+                <a href="games.html" class="nav-item active">Games</a>
+                <a href="settings.html" class="nav-item">Settings</a>
+            </div>
+        </div>
+        <div class="nav-right" id="date-time"></div>
+    </nav>
+
+    <main class="library-container">
+        <header class="library-header">
+            <div class="search-container">
+                <input type="text" id="search-input" class="search-input" placeholder="Search for games...">
+            </div>
+            <div class="filter-tabs">
+                <div class="filter-tab active" data-category="all">All</div>
+                <div class="filter-tab" data-category="web">Web</div>
+                <div class="filter-tab" data-category="port">Ports</div>
+                <div class="filter-tab" data-category="flash">Flash</div>
+            </div>
+        </header>
+
+        <div id="game-grid" class="game-grid"></div>
+    </main>
+
+    <script src="js/storage.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/cloak.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
