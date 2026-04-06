@@ -7,7 +7,8 @@
     "author": "Azur Games, Playgendary",
     "genres": [
       "action",
-      "sports"
+      "sports",
+      "skill"
     ],
     "special": [
       "web"
@@ -22,7 +23,9 @@
     "genres": [
       "action",
       "adventure",
-      "3d"
+      "3d",
+      "platformer",
+      "skill"
     ],
     "special": [
       "web"
@@ -37,7 +40,9 @@
     "genres": [
       "action",
       "adventure",
-      "3d"
+      "3d",
+      "platformer",
+      "skill"
     ],
     "special": [
       "web"
@@ -52,7 +57,9 @@
     "genres": [
       "action",
       "adventure",
-      "3d"
+      "3d",
+      "platformer",
+      "skill"
     ],
     "special": [
       "web"
@@ -66,7 +73,8 @@
     "author": "Dreamon Studios",
     "genres": [
       "action",
-      "sports"
+      "sports",
+      "skill"
     ],
     "special": [
       "web"
@@ -81,7 +89,8 @@
     "genres": [
       "action",
       "adventure",
-      "3d"
+      "3d",
+      "skill"
     ],
     "special": [
       "web"
@@ -94,7 +103,8 @@
     "url": "{HTML_URL}/6.html",
     "author": "reunbozdo",
     "genres": [
-      "strategy"
+      "strategy",
+      "skill"
     ],
     "special": [
       "web"
@@ -108,7 +118,8 @@
     "author": "Halfbrick Studios",
     "genres": [
       "action",
-      "adventure"
+      "adventure",
+      "skill"
     ],
     "special": [
       "web"
@@ -121,7 +132,8 @@
     "url": "{HTML_URL}/8-wow.html",
     "author": "ninja-muffin24",
     "genres": [
-      "action"
+      "action",
+      "skill"
     ],
     "special": [
       "web"
@@ -134,7 +146,9 @@
     "url": "{HTML_URL}/9.html",
     "author": "NyankoBfLol",
     "genres": [
-      "idle"
+      "action",
+      "idle",
+      "skill"
     ],
     "special": [
       "web"
@@ -149,7 +163,8 @@
     "genres": [
       "action",
       "adventure",
-      "3d"
+      "3d",
+      "skill"
     ],
     "special": [
       "web"
@@ -163,7 +178,9 @@
     "author": "Madbox",
     "genres": [
       "action",
-      "3d"
+      "3d",
+      "platformer",
+      "skill"
     ],
     "special": [
       "web"
@@ -193,7 +210,8 @@
     "genres": [
       "action",
       "3d",
-      "racing"
+      "racing",
+      "skill"
     ],
     "special": [
       "web"
@@ -206,8 +224,9 @@
     "url": "{HTML_URL}/15.html",
     "author": "Tapnation",
     "genres": [
+      "3d",
       "strategy",
-      "3d"
+      "skill"
     ],
     "special": [
       "web"
@@ -221,8 +240,8 @@
     "author": "Supersonic Studios LTD",
     "genres": [
       "action",
-      "3d",
-      "adventure"
+      "adventure",
+      "3d"
     ],
     "special": [
       "web"
@@ -235,7 +254,8 @@
     "url": "{HTML_URL}/17.html",
     "author": "AmaNotes",
     "genres": [
-      "action"
+      "action",
+      "skill"
     ],
     "special": [
       "web"
@@ -249,7 +269,8 @@
     "author": "Supersonic Studios LTD",
     "genres": [
       "action",
-      "3d"
+      "3d",
+      "skill"
     ],
     "special": [
       "web"
@@ -262,7 +283,8 @@
     "url": "{HTML_URL}/19.html",
     "author": "Neron's Brother",
     "genres": [
-      "action"
+      "action",
+      "skill"
     ],
     "special": [
       "web"
@@ -276,8 +298,9 @@
     "author": "Supersonic Studios LTD",
     "genres": [
       "action",
+      "adventure",
       "3d",
-      "adventure"
+      "skill"
     ],
     "special": [
       "web"
@@ -292,7 +315,8 @@
     "genres": [
       "action",
       "3d",
-      "racing"
+      "racing",
+      "skill"
     ],
     "special": [
       "web"
@@ -320,8 +344,8 @@
     "url": "{HTML_URL}/23.html",
     "author": "Zakeh",
     "genres": [
-      "idle",
-      "adventure"
+      "adventure",
+      "idle"
     ],
     "special": [
       "web"
@@ -336,7 +360,8 @@
     "genres": [
       "action",
       "adventure",
-      "3d"
+      "3d",
+      "skill"
     ],
     "special": [
       "web"
@@ -351,7 +376,8 @@
     "genres": [
       "action",
       "3d",
-      "sports"
+      "sports",
+      "skill"
     ],
     "special": [
       "web"
@@ -364,8 +390,9 @@
     "url": "{HTML_URL}/26.html",
     "author": "CrazyLabs",
     "genres": [
+      "3d",
       "strategy",
-      "3d"
+      "skill"
     ],
     "special": [
       "web"
@@ -378,7 +405,9 @@
     "url": "{HTML_URL}/27-f.html",
     "author": "RobTop Games",
     "genres": [
-      "action"
+      "action",
+      "platformer",
+      "skill"
     ],
     "special": [
       "web"
@@ -391,7 +420,8 @@
     "url": "{HTML_URL}/28.html",
     "author": "FRVR",
     "genres": [
-      "sports"
+      "sports",
+      "skill"
     ],
     "special": [
       "web"
@@ -406,7 +436,8 @@
     "genres": [
       "action",
       "shooter",
-      "3d"
+      "3d",
+      "skill"
     ],
     "special": [
       "web"
@@ -420,7 +451,8 @@
     "author": "CASUAL AZUR GAMES",
     "genres": [
       "action",
-      "3d"
+      "3d",
+      "skill"
     ],
     "special": [
       "web"
@@ -433,8 +465,9 @@
     "url": "{HTML_URL}/31.html",
     "author": "Supersonic Studios LTD",
     "genres": [
+      "3d",
       "strategy",
-      "3d"
+      "skill"
     ],
     "special": [
       "web"
@@ -447,8 +480,8 @@
     "url": "{HTML_URL}/32.html",
     "author": "CrazyLabs LTD",
     "genres": [
-      "idle",
-      "3d"
+      "3d",
+      "idle"
     ],
     "special": [
       "web"
@@ -461,7 +494,9 @@
     "url": "{HTML_URL}/33.html",
     "author": "New Star Games",
     "genres": [
-      "sports"
+      "strategy",
+      "sports",
+      "skill"
     ],
     "special": [
       "web"
@@ -474,7 +509,9 @@
     "url": "{HTML_URL}/34-fixed.html",
     "author": "New Star Games",
     "genres": [
-      "sports"
+      "strategy",
+      "sports",
+      "skill"
     ],
     "special": [
       "web"
@@ -487,8 +524,9 @@
     "url": "{HTML_URL}/36.html",
     "author": "Fancade",
     "genres": [
+      "3d",
       "racing",
-      "3d"
+      "skill"
     ],
     "special": [
       "web"
@@ -502,7 +540,8 @@
     "author": "Fancade",
     "genres": [
       "action",
-      "3d"
+      "3d",
+      "skill"
     ],
     "special": [
       "web"
@@ -515,8 +554,9 @@
     "url": "{HTML_URL}/38.html",
     "author": "Scott Cawthon",
     "genres": [
-      "horror",
-      "3d"
+      "3d",
+      "strategy",
+      "horror"
     ],
     "special": [
       "port"
@@ -529,8 +569,9 @@
     "url": "{HTML_URL}/39.html",
     "author": "Scott Cawthon",
     "genres": [
-      "horror",
-      "3d"
+      "3d",
+      "strategy",
+      "horror"
     ],
     "special": [
       "port"
@@ -543,8 +584,9 @@
     "url": "{HTML_URL}/40.html",
     "author": "Scott Cawthon",
     "genres": [
-      "horror",
-      "3d"
+      "3d",
+      "strategy",
+      "horror"
     ],
     "special": [
       "port"
@@ -557,8 +599,9 @@
     "url": "{HTML_URL}/41.html",
     "author": "Scott Cawthon",
     "genres": [
-      "horror",
-      "3d"
+      "3d",
+      "strategy",
+      "horror"
     ],
     "special": [
       "port"
@@ -586,8 +629,9 @@
     "url": "{HTML_URL}/43.html",
     "author": "KilledByAPixel",
     "genres": [
+      "3d",
       "racing",
-      "3d"
+      "skill"
     ],
     "special": [
       "web"
@@ -600,7 +644,8 @@
     "url": "{HTML_URL}/44-fix.html",
     "author": "Kids Games LLC",
     "genres": [
-      "action"
+      "action",
+      "skill"
     ],
     "special": [
       "web"
@@ -614,7 +659,9 @@
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
-      "adventure"
+      "adventure",
+      "platformer",
+      "skill"
     ],
     "special": [
       "flash"
@@ -628,7 +675,9 @@
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
-      "adventure"
+      "adventure",
+      "platformer",
+      "skill"
     ],
     "special": [
       "flash"
@@ -642,7 +691,9 @@
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
-      "adventure"
+      "adventure",
+      "platformer",
+      "skill"
     ],
     "special": [
       "flash"
@@ -656,7 +707,9 @@
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
-      "adventure"
+      "adventure",
+      "platformer",
+      "skill"
     ],
     "special": [
       "web"
@@ -670,7 +723,9 @@
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
-      "adventure"
+      "adventure",
+      "platformer",
+      "skill"
     ],
     "special": [
       "web"
@@ -684,7 +739,9 @@
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
-      "adventure"
+      "adventure",
+      "platformer",
+      "skill"
     ],
     "special": [
       "web"
@@ -698,7 +755,9 @@
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
-      "adventure"
+      "adventure",
+      "platformer",
+      "skill"
     ],
     "special": [
       "web"
@@ -712,7 +771,9 @@
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
-      "adventure"
+      "adventure",
+      "platformer",
+      "skill"
     ],
     "special": [
       "web"
@@ -726,7 +787,9 @@
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
-      "adventure"
+      "adventure",
+      "platformer",
+      "skill"
     ],
     "special": [
       "web"
@@ -740,7 +803,9 @@
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
-      "adventure"
+      "adventure",
+      "platformer",
+      "skill"
     ],
     "special": [
       "web"
@@ -754,7 +819,9 @@
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
-      "adventure"
+      "adventure",
+      "platformer",
+      "skill"
     ],
     "special": [
       "web"
@@ -768,7 +835,9 @@
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
-      "adventure"
+      "adventure",
+      "platformer",
+      "skill"
     ],
     "special": [
       "web"
@@ -780,7 +849,10 @@
     "cover": "{COVER_URL}/58.png",
     "url": "{HTML_URL}/58.html",
     "author": "JustPlay.LOL",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -791,7 +863,10 @@
     "cover": "{COVER_URL}/59.png",
     "url": "{HTML_URL}/59.html",
     "author": "fizzd",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -802,7 +877,10 @@
     "cover": "{COVER_URL}/60.png",
     "url": "{HTML_URL}/60.html",
     "author": "jmtb02",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -813,7 +891,10 @@
     "cover": "{COVER_URL}/61.png",
     "url": "{HTML_URL}/61.html",
     "author": "jmtb02",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -824,7 +905,10 @@
     "cover": "{COVER_URL}/62.png",
     "url": "{HTML_URL}/62.html",
     "author": "jmtb02",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -835,7 +919,11 @@
     "cover": "{COVER_URL}/63.png",
     "url": "{HTML_URL}/63.html",
     "author": "Rovio Entertainment",
-    "genres": [],
+    "genres": [
+      "action",
+      "strategy",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -846,7 +934,10 @@
     "cover": "{COVER_URL}/64.png",
     "url": "{HTML_URL}/64-fix.html",
     "author": "Esyverse",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -857,7 +948,10 @@
     "cover": "{COVER_URL}/65.png",
     "url": "{HTML_URL}/65-fixed.html",
     "author": "Basically Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -868,7 +962,10 @@
     "cover": "{COVER_URL}/66.png",
     "url": "{HTML_URL}/66.html",
     "author": "RHM Interactive OÜ",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -879,7 +976,10 @@
     "cover": "{COVER_URL}/67.png",
     "url": "{HTML_URL}/67-f.html",
     "author": "EvilObjective",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -890,7 +990,10 @@
     "cover": "{COVER_URL}/68.png",
     "url": "{HTML_URL}/68.html",
     "author": "EvilObjective",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -901,7 +1004,10 @@
     "cover": "{COVER_URL}/69.png",
     "url": "{HTML_URL}/69.html",
     "author": "EvilObjective",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -912,7 +1018,10 @@
     "cover": "{COVER_URL}/70.png",
     "url": "{HTML_URL}/70.html",
     "author": "Candywriter",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -923,7 +1032,10 @@
     "cover": "{COVER_URL}/71.png",
     "url": "{HTML_URL}/71.html",
     "author": "Ninja Kiwi",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -934,7 +1046,10 @@
     "cover": "{COVER_URL}/72.png",
     "url": "{HTML_URL}/72.html",
     "author": "Ninja Kiwi",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -945,7 +1060,10 @@
     "cover": "{COVER_URL}/73.png",
     "url": "{HTML_URL}/73.html",
     "author": "Ninja Kiwi",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -956,7 +1074,10 @@
     "cover": "{COVER_URL}/74.png",
     "url": "{HTML_URL}/74.html",
     "author": "Ninja Kiwi",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -967,7 +1088,10 @@
     "cover": "{COVER_URL}/75.png",
     "url": "{HTML_URL}/75-fix.html",
     "author": "Ninja Kiwi",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -978,7 +1102,10 @@
     "cover": "{COVER_URL}/76.png",
     "url": "{HTML_URL}/76-fix.html",
     "author": "Meow Beast",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -989,7 +1116,10 @@
     "cover": "{COVER_URL}/77.png",
     "url": "{HTML_URL}/77.html",
     "author": "RHM Interactive",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1000,7 +1130,10 @@
     "cover": "{COVER_URL}/78.png",
     "url": "{HTML_URL}/78.html",
     "author": "Juicy Beast",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -1011,7 +1144,10 @@
     "cover": "{COVER_URL}/79.png",
     "url": "{HTML_URL}/79.html",
     "author": "Oleh \"qzix13\" Kuzyk",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -1022,7 +1158,10 @@
     "cover": "{COVER_URL}/80.png",
     "url": "{HTML_URL}/80.html",
     "author": "Oleh \"qzix13\" Kuzyk",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -1033,7 +1172,10 @@
     "cover": "{COVER_URL}/81.png",
     "url": "{HTML_URL}/81.html",
     "author": "Landfall",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1044,7 +1186,9 @@
     "cover": "{COVER_URL}/82.png",
     "url": "{HTML_URL}/82-u.html",
     "author": "Orteil",
-    "genres": [],
+    "genres": [
+      "idle"
+    ],
     "special": [
       "web"
     ]
@@ -1055,7 +1199,10 @@
     "cover": "{COVER_URL}/83.png",
     "url": "{HTML_URL}/83.html",
     "author": "Ben Vinegar",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1066,7 +1213,10 @@
     "cover": "{COVER_URL}/84.png",
     "url": "{HTML_URL}/84.html",
     "author": "Max Abernethy",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -1077,7 +1227,10 @@
     "cover": "{COVER_URL}/85.png",
     "url": "{HTML_URL}/85-f.html",
     "author": "ZeptoLab",
-    "genres": [],
+    "genres": [
+      "strategy",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1088,7 +1241,10 @@
     "cover": "{COVER_URL}/86.png",
     "url": "{HTML_URL}/86.html",
     "author": "VOODOO",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1099,7 +1255,10 @@
     "cover": "{COVER_URL}/87.png",
     "url": "{HTML_URL}/87.html",
     "author": "Ethan O'Brien",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "emulator",
       "web"
@@ -1111,7 +1270,10 @@
     "cover": "{COVER_URL}/88.png",
     "url": "{HTML_URL}/88.html",
     "author": "Oslo Albet",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -1122,7 +1284,10 @@
     "cover": "{COVER_URL}/89.png",
     "url": "{HTML_URL}/89.html",
     "author": "Oslo Albet",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -1133,7 +1298,10 @@
     "cover": "{COVER_URL}/90.png",
     "url": "{HTML_URL}/90-fix2.html",
     "author": "DVloper",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -1144,7 +1312,10 @@
     "cover": "{COVER_URL}/91.png",
     "url": "{HTML_URL}/91.html",
     "author": "minijuegos.com",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -1155,7 +1326,10 @@
     "cover": "{COVER_URL}/92.png",
     "url": "{HTML_URL}/92.html",
     "author": "Bone Cracker Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1166,7 +1340,10 @@
     "cover": "{COVER_URL}/93.png",
     "url": "{HTML_URL}/93.html",
     "author": "SayGames",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1177,7 +1354,10 @@
     "cover": "{COVER_URL}/94.png",
     "url": "{HTML_URL}/94.html",
     "author": "Megagon Industries",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1188,7 +1368,10 @@
     "cover": "{COVER_URL}/95.png",
     "url": "{HTML_URL}/95.html",
     "author": "Boštjan Čadež",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -1199,7 +1382,9 @@
     "cover": "{COVER_URL}/96.png",
     "url": "{HTML_URL}/96.html",
     "author": "MadPuffers",
-    "genres": [],
+    "genres": [
+      "racing"
+    ],
     "special": [
       "web"
     ]
@@ -1210,7 +1395,9 @@
     "cover": "{COVER_URL}/97.png",
     "url": "{HTML_URL}/97.html",
     "author": "MadPuffers",
-    "genres": [],
+    "genres": [
+      "racing"
+    ],
     "special": [
       "web"
     ]
@@ -1221,7 +1408,9 @@
     "cover": "{COVER_URL}/98.png",
     "url": "{HTML_URL}/98.html",
     "author": "MadPuffers",
-    "genres": [],
+    "genres": [
+      "racing"
+    ],
     "special": [
       "web"
     ]
@@ -1232,7 +1421,9 @@
     "cover": "{COVER_URL}/99.png",
     "url": "{HTML_URL}/99.html",
     "author": "MadPuffers",
-    "genres": [],
+    "genres": [
+      "racing"
+    ],
     "special": [
       "web"
     ]
@@ -1243,7 +1434,9 @@
     "cover": "{COVER_URL}/100.png",
     "url": "{HTML_URL}/100-f.html",
     "author": "MadPuffers",
-    "genres": [],
+    "genres": [
+      "racing"
+    ],
     "special": [
       "web"
     ]
@@ -1254,7 +1447,10 @@
     "cover": "{COVER_URL}/101.png",
     "url": "{HTML_URL}/101.html",
     "author": "Rémi Vansteelandt",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1266,6 +1462,8 @@
     "url": "{HTML_URL}/102.html",
     "author": "VOODOO",
     "genres": [
+      "action",
+      "strategy",
       ".io"
     ],
     "special": [
@@ -1278,7 +1476,10 @@
     "cover": "{COVER_URL}/103.png",
     "url": "{HTML_URL}/103.html",
     "author": "Stevie Critoph",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -1289,7 +1490,10 @@
     "cover": "{COVER_URL}/104.png",
     "url": "{HTML_URL}/104.html",
     "author": "Stevie Critoph",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -1300,7 +1504,10 @@
     "cover": "{COVER_URL}/105.png",
     "url": "{HTML_URL}/105.html",
     "author": "Stevie Critoph",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -1311,7 +1518,10 @@
     "cover": "{COVER_URL}/106.png",
     "url": "{HTML_URL}/106.html",
     "author": "jmtb02",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -1322,7 +1532,10 @@
     "cover": "{COVER_URL}/107.png",
     "url": "{HTML_URL}/107.html",
     "author": "jmtb02",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -1333,7 +1546,10 @@
     "cover": "{COVER_URL}/108.png",
     "url": "{HTML_URL}/108.html",
     "author": "Winter Studio",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1344,7 +1560,10 @@
     "cover": "{COVER_URL}/109.png",
     "url": "{HTML_URL}/109.html",
     "author": "Happymagenta UAB",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1355,7 +1574,10 @@
     "cover": "{COVER_URL}/110.png",
     "url": "{HTML_URL}/110-f.html",
     "author": "GonzoSSM",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -1366,7 +1588,10 @@
     "cover": "{COVER_URL}/111.png",
     "url": "{HTML_URL}/111.html",
     "author": "New Eich Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1377,7 +1602,10 @@
     "cover": "{COVER_URL}/112.png",
     "url": "{HTML_URL}/112-fix.html",
     "author": "New York Times",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1388,7 +1616,10 @@
     "cover": "{COVER_URL}/113.png",
     "url": "{HTML_URL}/113.html",
     "author": "Mike Welsh",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "emulator",
       "flash"
@@ -1400,7 +1631,10 @@
     "cover": "{COVER_URL}/114.png",
     "url": "{HTML_URL}/114-f.html",
     "author": "Gabriele Cirulli",
-    "genres": [],
+    "genres": [
+      "strategy",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1411,7 +1645,10 @@
     "cover": "{COVER_URL}/115.png",
     "url": "{HTML_URL}/115.html",
     "author": "Miniclip.com",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1422,7 +1659,9 @@
     "cover": "{COVER_URL}/116.png",
     "url": "{HTML_URL}/116.html",
     "author": "RHM Interactive OÜ",
-    "genres": [],
+    "genres": [
+      "racing"
+    ],
     "special": [
       "web"
     ]
@@ -1433,7 +1672,10 @@
     "cover": "{COVER_URL}/117.png",
     "url": "{HTML_URL}/117-fix.html",
     "author": "do.games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1444,7 +1686,10 @@
     "cover": "{COVER_URL}/118.png",
     "url": "{HTML_URL}/118.html",
     "author": "Paradyme Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1468,7 +1713,9 @@
     "cover": "{COVER_URL}/120.png",
     "url": "{HTML_URL}/120.html",
     "author": "Mirra Games",
-    "genres": [],
+    "genres": [
+      "action"
+    ],
     "special": [
       "web"
     ]
@@ -1492,7 +1739,10 @@
     "cover": "{COVER_URL}/122.png",
     "url": "{HTML_URL}/122.html",
     "author": "Brain Massage",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1503,7 +1753,10 @@
     "cover": "{COVER_URL}/123.png",
     "url": "{HTML_URL}/123-win.html",
     "author": "Kodub",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1514,7 +1767,9 @@
     "cover": "{COVER_URL}/124.png",
     "url": "{HTML_URL}/124.html",
     "author": "MadPuffers",
-    "genres": [],
+    "genres": [
+      "racing"
+    ],
     "special": [
       "web"
     ]
@@ -1525,7 +1780,10 @@
     "cover": "{COVER_URL}/125.png",
     "url": "{HTML_URL}/125.html",
     "author": "DVloper",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1536,7 +1794,10 @@
     "cover": "{COVER_URL}/126.png",
     "url": "{HTML_URL}/126.html",
     "author": "DVloper",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1547,7 +1808,9 @@
     "cover": "{COVER_URL}/127.png",
     "url": "{HTML_URL}/127.html",
     "author": "Apps Mobile Games",
-    "genres": [],
+    "genres": [
+      "action"
+    ],
     "special": [
       "web"
     ]
@@ -1558,7 +1821,10 @@
     "cover": "{COVER_URL}/128.png",
     "url": "{HTML_URL}/128.html",
     "author": "VOODOO",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1569,7 +1835,10 @@
     "cover": "{COVER_URL}/129.png",
     "url": "{HTML_URL}/129.html",
     "author": "Dong Nguyen",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1580,7 +1849,10 @@
     "cover": "{COVER_URL}/130.png",
     "url": "{HTML_URL}/130.html",
     "author": "ppy",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1591,7 +1863,9 @@
     "cover": "{COVER_URL}/146.png",
     "url": "{HTML_URL}/146.html",
     "author": "Famobi",
-    "genres": [],
+    "genres": [
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1602,7 +1876,11 @@
     "cover": "{COVER_URL}/147.png",
     "url": "{HTML_URL}/147.html",
     "author": "Rovio Entertainment",
-    "genres": [],
+    "genres": [
+      "action",
+      "strategy",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1613,7 +1891,10 @@
     "cover": "{COVER_URL}/148.png",
     "url": "{HTML_URL}/148.html",
     "author": "Famobi",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1624,7 +1905,10 @@
     "cover": "{COVER_URL}/149.png",
     "url": "{HTML_URL}/149.html",
     "author": "Voodoo",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1648,7 +1932,10 @@
     "cover": "{COVER_URL}/151.png",
     "url": "{HTML_URL}/151.html",
     "author": "Famobi",
-    "genres": [],
+    "genres": [
+      "strategy",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1659,7 +1946,10 @@
     "cover": "{COVER_URL}/152.png",
     "url": "{HTML_URL}/152.html",
     "author": "Supersonic Studios LTD",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1670,7 +1960,10 @@
     "cover": "{COVER_URL}/153.png",
     "url": "{HTML_URL}/153.html",
     "author": "Voodoo",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1681,7 +1974,10 @@
     "cover": "{COVER_URL}/154.png",
     "url": "{HTML_URL}/154.html",
     "author": "SayGames",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1692,7 +1988,10 @@
     "cover": "{COVER_URL}/155.png",
     "url": "{HTML_URL}/155.html",
     "author": "TapNation",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1729,7 +2028,10 @@
     "cover": "{COVER_URL}/158.png",
     "url": "{HTML_URL}/158.html",
     "author": "RedFox Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1740,7 +2042,10 @@
     "cover": "{COVER_URL}/159.png",
     "url": "{HTML_URL}/159.html",
     "author": "Nine&Nine",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1790,7 +2095,9 @@
     "cover": "{COVER_URL}/163.png",
     "url": "{HTML_URL}/163.html",
     "author": "etermax",
-    "genres": [],
+    "genres": [
+      "strategy"
+    ],
     "special": [
       "web"
     ]
@@ -1827,7 +2134,10 @@
     "cover": "{COVER_URL}/166.png",
     "url": "{HTML_URL}/166.html",
     "author": "98corbins",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -1838,7 +2148,10 @@
     "cover": "{COVER_URL}/167.png",
     "url": "{HTML_URL}/167.html",
     "author": "??",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1849,7 +2162,10 @@
     "cover": "{COVER_URL}/168.png",
     "url": "{HTML_URL}/168.html",
     "author": "Beedo Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1860,7 +2176,10 @@
     "cover": "{COVER_URL}/169.png",
     "url": "{HTML_URL}/169.html",
     "author": "Damien Clarke",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1871,7 +2190,10 @@
     "cover": "{COVER_URL}/170.png",
     "url": "{HTML_URL}/170.html",
     "author": "EO Interactive",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -1882,7 +2204,10 @@
     "cover": "{COVER_URL}/171.png",
     "url": "{HTML_URL}/171.html",
     "author": "King.com",
-    "genres": [],
+    "genres": [
+      "strategy",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1893,7 +2218,10 @@
     "cover": "{COVER_URL}/172.png",
     "url": "{HTML_URL}/172.html",
     "author": "playducky.com",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1904,7 +2232,10 @@
     "cover": "{COVER_URL}/173.png",
     "url": "{HTML_URL}/173.html",
     "author": "Illia Kaminetskyi",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1915,7 +2246,10 @@
     "cover": "{COVER_URL}/174.png",
     "url": "{HTML_URL}/174.html",
     "author": "Kendja",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -1926,7 +2260,10 @@
     "cover": "{COVER_URL}/175.png",
     "url": "{HTML_URL}/175.html",
     "author": "Joseph Cloutier",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -1937,7 +2274,10 @@
     "cover": "{COVER_URL}/176.png",
     "url": "{HTML_URL}/176.html",
     "author": "Joseph Cloutier",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -1948,7 +2288,12 @@
     "cover": "{COVER_URL}/177.png",
     "url": "{HTML_URL}/177.html",
     "author": "Joseph Cloutier",
-    "genres": [],
+    "genres": [
+      "action",
+      "3d",
+      "platformer",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -1959,7 +2304,10 @@
     "cover": "{COVER_URL}/178.png",
     "url": "{HTML_URL}/178.html",
     "author": "Armor Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -1970,7 +2318,10 @@
     "cover": "{COVER_URL}/180.png",
     "url": "{HTML_URL}/180.html",
     "author": "landgreen",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -1981,7 +2332,11 @@
     "cover": "{COVER_URL}/181.png",
     "url": "{HTML_URL}/181.html",
     "author": "lax1dude",
-    "genres": [],
+    "genres": [
+      "adventure",
+      "rpg",
+      "3d"
+    ],
     "special": [
       "web"
     ]
@@ -1993,8 +2348,9 @@
     "url": "{HTML_URL}/185.html",
     "author": "Scott Cawthon",
     "genres": [
-      "horror",
-      "3d"
+      "3d",
+      "strategy",
+      "horror"
     ],
     "special": [
       "port"
@@ -2006,7 +2362,10 @@
     "cover": "{COVER_URL}/186.png",
     "url": "{HTML_URL}/186.html",
     "author": "Ericetto",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -2017,7 +2376,10 @@
     "cover": "{COVER_URL}/187.png",
     "url": "{HTML_URL}/187.html",
     "author": "Lucas Pope",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2028,7 +2390,10 @@
     "cover": "{COVER_URL}/188.png",
     "url": "{HTML_URL}/188e.html",
     "author": "Ciorbyn",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -2040,8 +2405,9 @@
     "url": "{HTML_URL}/190.html",
     "author": "Scott Cawthon",
     "genres": [
-      "horror",
-      "3d"
+      "3d",
+      "strategy",
+      "horror"
     ],
     "special": [
       "port"
@@ -2054,8 +2420,9 @@
     "url": "{HTML_URL}/191.html",
     "author": "Scott Cawthon",
     "genres": [
-      "horror",
-      "3d"
+      "3d",
+      "strategy",
+      "horror"
     ],
     "special": [
       "port"
@@ -2068,8 +2435,9 @@
     "url": "{HTML_URL}/192.html",
     "author": "Scott Cawthon",
     "genres": [
-      "horror",
-      "3d"
+      "3d",
+      "strategy",
+      "horror"
     ],
     "special": [
       "port"
@@ -2081,7 +2449,10 @@
     "cover": "{COVER_URL}/193.png",
     "url": "{HTML_URL}/193.html",
     "author": "Pixelliminal",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -2092,7 +2463,10 @@
     "cover": "{COVER_URL}/194-m.png",
     "url": "{HTML_URL}/194-a.html",
     "author": "Studio Minus, 98corbins",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -2103,7 +2477,10 @@
     "cover": "{COVER_URL}/195.png",
     "url": "{HTML_URL}/195.html",
     "author": "semiwork, 98corbins",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -2114,7 +2491,10 @@
     "cover": "{COVER_URL}/196.png",
     "url": "{HTML_URL}/196-fixed.html",
     "author": "New Blood Interactive, Cake Logic",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -2125,7 +2505,10 @@
     "cover": "{COVER_URL}/197.png",
     "url": "{HTML_URL}/197.html",
     "author": "David Li",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -2136,7 +2519,11 @@
     "cover": "{COVER_URL}/198.png",
     "url": "{HTML_URL}/198.html",
     "author": "coweggs",
-    "genres": [],
+    "genres": [
+      "action",
+      "3d",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -2186,7 +2573,9 @@
     "cover": "{COVER_URL}/202.png",
     "url": "{HTML_URL}/202.html",
     "author": "GameSnacks",
-    "genres": [],
+    "genres": [
+      "racing"
+    ],
     "special": [
       "web"
     ]
@@ -2197,7 +2586,10 @@
     "cover": "{COVER_URL}/203.png",
     "url": "{HTML_URL}/203-a.html",
     "author": "Id Software",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -2208,7 +2600,10 @@
     "cover": "{COVER_URL}/204.png",
     "url": "{HTML_URL}/204-a.html",
     "author": "lax1dude",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -2219,7 +2614,10 @@
     "cover": "{COVER_URL}/205.png",
     "url": "{HTML_URL}/205-f.html",
     "author": "Mike Klubnika",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -2230,7 +2628,11 @@
     "cover": "{COVER_URL}/206.png",
     "url": "{HTML_URL}/206.html",
     "author": "Deer Cat Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "3d",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -2242,6 +2644,7 @@
     "url": "{HTML_URL}/207.html",
     "author": "Royalec/Tokyo",
     "genres": [
+      "action",
       ".io"
     ],
     "special": [
@@ -2254,7 +2657,10 @@
     "cover": "{COVER_URL}/208.png",
     "url": "{HTML_URL}/208.html",
     "author": "Voodoo",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -2265,7 +2671,10 @@
     "cover": "{COVER_URL}/209.png",
     "url": "{HTML_URL}/209.html",
     "author": "Stelennnn",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -2276,7 +2685,10 @@
     "cover": "{COVER_URL}/210.png",
     "url": "{HTML_URL}/210.html",
     "author": "Voodoo",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -2288,7 +2700,10 @@
     "url": "{HTML_URL}/211.html",
     "author": "kevin.wang",
     "genres": [
-      "3d"
+      "action",
+      "3d",
+      "platformer",
+      "skill"
     ],
     "special": [
       "web"
@@ -2300,7 +2715,10 @@
     "cover": "{COVER_URL}/212.png",
     "url": "{HTML_URL}/212-f.html",
     "author": "ZeptoLab",
-    "genres": [],
+    "genres": [
+      "strategy",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -2311,7 +2729,10 @@
     "cover": "{COVER_URL}/213.png",
     "url": "{HTML_URL}/213-f.html",
     "author": "ZeptoLab",
-    "genres": [],
+    "genres": [
+      "strategy",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -2322,7 +2743,10 @@
     "cover": "{COVER_URL}/214.png",
     "url": "{HTML_URL}/214-fi.html",
     "author": "ZeptoLab",
-    "genres": [],
+    "genres": [
+      "strategy",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -2333,7 +2757,10 @@
     "cover": "{COVER_URL}/215.png",
     "url": "{HTML_URL}/215.html",
     "author": "Joey Drew Studios",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -2344,7 +2771,10 @@
     "cover": "{COVER_URL}/216.png",
     "url": "{HTML_URL}/216.html",
     "author": "Nacho Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -2355,7 +2785,10 @@
     "cover": "{COVER_URL}/217.png",
     "url": "{HTML_URL}/217-c.html",
     "author": "Dennaton Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -2366,7 +2799,10 @@
     "cover": "{COVER_URL}/218.png",
     "url": "{HTML_URL}/218.html",
     "author": "Flipline Studios",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2377,7 +2813,10 @@
     "cover": "{COVER_URL}/219.png",
     "url": "{HTML_URL}/219.html",
     "author": "Flipline Studios",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2388,7 +2827,10 @@
     "cover": "{COVER_URL}/220.png",
     "url": "{HTML_URL}/220.html",
     "author": "Flipline Studios",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2399,7 +2841,10 @@
     "cover": "{COVER_URL}/221.png",
     "url": "{HTML_URL}/221.html",
     "author": "Flipline Studios",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2410,7 +2855,10 @@
     "cover": "{COVER_URL}/222.png",
     "url": "{HTML_URL}/222.html",
     "author": "Flipline Studios",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2421,7 +2869,10 @@
     "cover": "{COVER_URL}/223.png",
     "url": "{HTML_URL}/223.html",
     "author": "Flipline Studios",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2432,7 +2883,10 @@
     "cover": "{COVER_URL}/224.png",
     "url": "{HTML_URL}/224.html",
     "author": "Flipline Studios",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2443,7 +2897,10 @@
     "cover": "{COVER_URL}/225.png",
     "url": "{HTML_URL}/225.html",
     "author": "Flipline Studios",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2454,7 +2911,10 @@
     "cover": "{COVER_URL}/226.png",
     "url": "{HTML_URL}/226.html",
     "author": "Flipline Studios",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2465,7 +2925,10 @@
     "cover": "{COVER_URL}/227.png",
     "url": "{HTML_URL}/227.html",
     "author": "Flipline Studios",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2476,7 +2939,10 @@
     "cover": "{COVER_URL}/228.png",
     "url": "{HTML_URL}/228.html",
     "author": "Flipline Studios",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2487,7 +2953,10 @@
     "cover": "{COVER_URL}/229.png",
     "url": "{HTML_URL}/229.html",
     "author": "Flipline Studios",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2498,7 +2967,10 @@
     "cover": "{COVER_URL}/230.png",
     "url": "{HTML_URL}/230.html",
     "author": "Flipline Studios",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2509,7 +2981,10 @@
     "cover": "{COVER_URL}/231.png",
     "url": "{HTML_URL}/231.html",
     "author": "Flipline Studios",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2520,7 +2995,11 @@
     "cover": "{COVER_URL}/232.png",
     "url": "{HTML_URL}/232.html",
     "author": "PopCap Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "strategy",
+      "horror"
+    ],
     "special": [
       "flash"
     ]
@@ -2531,7 +3010,10 @@
     "cover": "{COVER_URL}/233.png",
     "url": "{HTML_URL}/233.html",
     "author": "Superhot Team",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -2542,7 +3024,10 @@
     "cover": "{COVER_URL}/234.png",
     "url": "{HTML_URL}/234.html",
     "author": "Mad.com",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2553,7 +3038,10 @@
     "cover": "{COVER_URL}/235.png",
     "url": "{HTML_URL}/235.html",
     "author": "Mad.com",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2564,7 +3052,10 @@
     "cover": "{COVER_URL}/236.png",
     "url": "{HTML_URL}/236.html",
     "author": "Mad.com",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2575,7 +3066,10 @@
     "cover": "{COVER_URL}/237.png",
     "url": "{HTML_URL}/237.html",
     "author": "Mad.com",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2586,7 +3080,10 @@
     "cover": "{COVER_URL}/238.png",
     "url": "{HTML_URL}/238.html",
     "author": "Mad.com",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2597,7 +3094,10 @@
     "cover": "{COVER_URL}/239.png",
     "url": "{HTML_URL}/239.html",
     "author": "Yohoho Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2608,7 +3108,10 @@
     "cover": "{COVER_URL}/240.png",
     "url": "{HTML_URL}/240.html",
     "author": "Yohoho Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2619,7 +3122,10 @@
     "cover": "{COVER_URL}/241.png",
     "url": "{HTML_URL}/241.html",
     "author": "Yohoho Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2630,7 +3136,10 @@
     "cover": "{COVER_URL}/242.png",
     "url": "{HTML_URL}/242.html",
     "author": "Yohoho Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2641,7 +3150,10 @@
     "cover": "{COVER_URL}/243.png",
     "url": "{HTML_URL}/243.html",
     "author": "Yohoho Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2652,7 +3164,10 @@
     "cover": "{COVER_URL}/244.png",
     "url": "{HTML_URL}/244.html",
     "author": "Yohoho Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2663,7 +3178,10 @@
     "cover": "{COVER_URL}/245.png",
     "url": "{HTML_URL}/245.html",
     "author": "Pegas Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2674,7 +3192,10 @@
     "cover": "{COVER_URL}/246.png",
     "url": "{HTML_URL}/246.html",
     "author": "Pegas Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2685,7 +3206,10 @@
     "cover": "{COVER_URL}/247.png",
     "url": "{HTML_URL}/247.html",
     "author": "Pegas Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2696,7 +3220,10 @@
     "cover": "{COVER_URL}/248.png",
     "url": "{HTML_URL}/248.html",
     "author": "Pegas Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2707,7 +3234,10 @@
     "cover": "{COVER_URL}/249.png",
     "url": "{HTML_URL}/249.html",
     "author": "Pegas Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2718,7 +3248,10 @@
     "cover": "{COVER_URL}/250.png",
     "url": "{HTML_URL}/250.html",
     "author": "Pegas Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2729,7 +3262,10 @@
     "cover": "{COVER_URL}/251.png",
     "url": "{HTML_URL}/251.html",
     "author": "Pegas Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2740,7 +3276,10 @@
     "cover": "{COVER_URL}/252.png",
     "url": "{HTML_URL}/252.html",
     "author": "Pegas Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -2777,7 +3316,10 @@
     "cover": "{COVER_URL}/257.png",
     "url": "{HTML_URL}/257.html",
     "author": "Google",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -2788,7 +3330,10 @@
     "cover": "{COVER_URL}/258.png",
     "url": "{HTML_URL}/258.html",
     "author": "Garrett McKay",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -2799,7 +3344,10 @@
     "cover": "{COVER_URL}/259.png",
     "url": "{HTML_URL}/259.html",
     "author": "sbn3",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -2810,7 +3358,10 @@
     "cover": "{COVER_URL}/260.png",
     "url": "{HTML_URL}/260.html",
     "author": "DaniDev",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -2821,7 +3372,10 @@
     "cover": "{COVER_URL}/261.png",
     "url": "{HTML_URL}/261.html",
     "author": "Halfbrick Studios",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -2832,7 +3386,10 @@
     "cover": "{COVER_URL}/262.png",
     "url": "{HTML_URL}/262.html",
     "author": "Valve",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -2843,7 +3400,10 @@
     "cover": "{COVER_URL}/263.png",
     "url": "{HTML_URL}/263.html",
     "author": "Id Software",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -2854,7 +3414,10 @@
     "cover": "{COVER_URL}/264.png",
     "url": "{HTML_URL}/264.html",
     "author": "AzGames",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -2865,7 +3428,10 @@
     "cover": "{COVER_URL}/265.png",
     "url": "{HTML_URL}/265-fix.html",
     "author": "AzGames",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -2876,7 +3442,10 @@
     "cover": "{COVER_URL}/266.png",
     "url": "{HTML_URL}/266-a.html",
     "author": "Luke Doukakis",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -2887,7 +3456,10 @@
     "cover": "{COVER_URL}/267.png",
     "url": "{HTML_URL}/267.html",
     "author": "Tour De Pizza, BurnedPopcorn",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -2898,7 +3470,10 @@
     "cover": "{COVER_URL}/268.png",
     "url": "{HTML_URL}/268.html",
     "author": "SnoutUp",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -2909,7 +3484,10 @@
     "cover": "{COVER_URL}/269.png",
     "url": "{HTML_URL}/269.html",
     "author": "Nitrome",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -2920,7 +3498,10 @@
     "cover": "{COVER_URL}/270.png",
     "url": "{HTML_URL}/270.html",
     "author": "Nitrome",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -2931,7 +3512,10 @@
     "cover": "{COVER_URL}/271.png",
     "url": "{HTML_URL}/271.html",
     "author": "Nitrome",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -2942,7 +3526,10 @@
     "cover": "{COVER_URL}/272.png",
     "url": "{HTML_URL}/272.html",
     "author": "MadPuffers",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -2953,7 +3540,10 @@
     "cover": "{COVER_URL}/273.png",
     "url": "{HTML_URL}/273.html",
     "author": "SkullCap Studios",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -2964,7 +3554,10 @@
     "cover": "{COVER_URL}/274.png",
     "url": "{HTML_URL}/274.html",
     "author": "Florian van Strien",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -2975,7 +3568,10 @@
     "cover": "{COVER_URL}/275.png",
     "url": "{HTML_URL}/275.html",
     "author": "Florian van Strien",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -2986,7 +3582,10 @@
     "cover": "{COVER_URL}/276.png",
     "url": "{HTML_URL}/276.html",
     "author": "marketjs",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -2997,7 +3596,10 @@
     "cover": "{COVER_URL}/277.png",
     "url": "{HTML_URL}/277.html",
     "author": "agar3s",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3008,7 +3610,9 @@
     "cover": "{COVER_URL}/278.png",
     "url": "{HTML_URL}/278.html",
     "author": "Madalin Games",
-    "genres": [],
+    "genres": [
+      "racing"
+    ],
     "special": [
       "web"
     ]
@@ -3019,7 +3623,9 @@
     "cover": "{COVER_URL}/279.png",
     "url": "{HTML_URL}/279.html",
     "author": "Madalin Games",
-    "genres": [],
+    "genres": [
+      "racing"
+    ],
     "special": [
       "web"
     ]
@@ -3030,7 +3636,10 @@
     "cover": "{COVER_URL}/280.png",
     "url": "{HTML_URL}/280.html",
     "author": "Akos Makovics",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3041,7 +3650,10 @@
     "cover": "{COVER_URL}/281.png",
     "url": "{HTML_URL}/281.html",
     "author": "Mentolatux",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3052,7 +3664,10 @@
     "cover": "{COVER_URL}/282.png",
     "url": "{HTML_URL}/282.html",
     "author": "rujogames",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3063,7 +3678,10 @@
     "cover": "{COVER_URL}/283.png",
     "url": "{HTML_URL}/283.html",
     "author": "New Eich Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3074,7 +3692,10 @@
     "cover": "{COVER_URL}/284.png",
     "url": "{HTML_URL}/284.html",
     "author": "BANZAI",
-    "genres": [],
+    "genres": [
+      "action",
+      "strategy"
+    ],
     "special": [
       "web"
     ]
@@ -3085,7 +3706,10 @@
     "cover": "{COVER_URL}/285.png",
     "url": "{HTML_URL}/285.html",
     "author": "Blue Wizard Digital",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3096,7 +3720,10 @@
     "cover": "{COVER_URL}/286.png",
     "url": "{HTML_URL}/286.html",
     "author": "Deep Root Interactive",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -3107,7 +3734,10 @@
     "cover": "{COVER_URL}/287.png",
     "url": "{HTML_URL}/287.html",
     "author": "JonBro",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -3118,7 +3748,10 @@
     "cover": "{COVER_URL}/288.png",
     "url": "{HTML_URL}/288.html",
     "author": "JonBro",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -3129,7 +3762,10 @@
     "cover": "{COVER_URL}/289.png",
     "url": "{HTML_URL}/289.html",
     "author": "JonBro",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -3140,7 +3776,10 @@
     "cover": "{COVER_URL}/290.png",
     "url": "{HTML_URL}/290.html",
     "author": "JonBro",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -3151,7 +3790,10 @@
     "cover": "{COVER_URL}/291.png",
     "url": "{HTML_URL}/291.html",
     "author": "JonBro",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -3162,7 +3804,10 @@
     "cover": "{COVER_URL}/292.png",
     "url": "{HTML_URL}/292.html",
     "author": "JonBro",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -3173,7 +3818,10 @@
     "cover": "{COVER_URL}/293.png",
     "url": "{HTML_URL}/293.html",
     "author": "JonBro",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -3185,6 +3833,7 @@
     "url": "{HTML_URL}/294.html",
     "author": "Lutz Schönfelder",
     "genres": [
+      "strategy",
       "idle"
     ],
     "special": [
@@ -3197,7 +3846,9 @@
     "cover": "{COVER_URL}/295.png",
     "url": "{HTML_URL}/295.html",
     "author": "Shared Dreams Studio",
-    "genres": [],
+    "genres": [
+      "action"
+    ],
     "special": [
       "web"
     ]
@@ -3208,7 +3859,11 @@
     "cover": "{COVER_URL}/297.png",
     "url": "{HTML_URL}/297.html",
     "author": "lax1dude",
-    "genres": [],
+    "genres": [
+      "adventure",
+      "rpg",
+      "3d"
+    ],
     "special": [
       "web"
     ]
@@ -3219,7 +3874,11 @@
     "cover": "{COVER_URL}/298.png",
     "url": "{HTML_URL}/298.html",
     "author": "lax1dude",
-    "genres": [],
+    "genres": [
+      "adventure",
+      "rpg",
+      "3d"
+    ],
     "special": [
       "web"
     ]
@@ -3230,7 +3889,11 @@
     "cover": "{COVER_URL}/299.png",
     "url": "{HTML_URL}/299.html",
     "author": "lax1dude",
-    "genres": [],
+    "genres": [
+      "adventure",
+      "rpg",
+      "3d"
+    ],
     "special": [
       "web"
     ]
@@ -3241,7 +3904,11 @@
     "cover": "{COVER_URL}/300.png",
     "url": "{HTML_URL}/300.html",
     "author": "lax1dude",
-    "genres": [],
+    "genres": [
+      "adventure",
+      "rpg",
+      "3d"
+    ],
     "special": [
       "web"
     ]
@@ -3252,7 +3919,11 @@
     "cover": "{COVER_URL}/301.png",
     "url": "{HTML_URL}/301.html",
     "author": "lax1dude",
-    "genres": [],
+    "genres": [
+      "adventure",
+      "rpg",
+      "3d"
+    ],
     "special": [
       "web"
     ]
@@ -3263,7 +3934,10 @@
     "cover": "{COVER_URL}/302.png",
     "url": "{HTML_URL}/302.html",
     "author": "juhosprite, gooseworx",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3287,7 +3961,10 @@
     "cover": "{COVER_URL}/304.png",
     "url": "{HTML_URL}/304.html",
     "author": "Tom Fulp, Dan Paladin",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -3298,7 +3975,10 @@
     "cover": "{COVER_URL}/305.png",
     "url": "{HTML_URL}/305.html",
     "author": "Rewind Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3322,7 +4002,10 @@
     "cover": "{COVER_URL}/307.png",
     "url": "{HTML_URL}/307.html",
     "author": "emolingo games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3333,7 +4016,10 @@
     "cover": "{COVER_URL}/308.png",
     "url": "{HTML_URL}/308.html",
     "author": "nzp team",
-    "genres": [],
+    "genres": [
+      "action",
+      "horror"
+    ],
     "special": [
       "web"
     ]
@@ -3344,7 +4030,10 @@
     "cover": "{COVER_URL}/309.png",
     "url": "{HTML_URL}/309.html",
     "author": "R74N",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3355,7 +4044,10 @@
     "cover": "{COVER_URL}/310.png",
     "url": "{HTML_URL}/310.html",
     "author": "GameTornado",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3366,7 +4058,10 @@
     "cover": "{COVER_URL}/311.png",
     "url": "{HTML_URL}/311.html",
     "author": "FRANCO MIRANDA",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3377,7 +4072,10 @@
     "cover": "{COVER_URL}/312.png",
     "url": "{HTML_URL}/312.html",
     "author": "Synic-dx",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3388,7 +4086,10 @@
     "cover": "{COVER_URL}/313.png",
     "url": "{HTML_URL}/313.html",
     "author": "gamesnacks",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3399,7 +4100,11 @@
     "cover": "{COVER_URL}/314.png",
     "url": "{HTML_URL}/314.html",
     "author": "Runouw",
-    "genres": [],
+    "genres": [
+      "action",
+      "platformer",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3410,7 +4115,11 @@
     "cover": "{COVER_URL}/315.png",
     "url": "{HTML_URL}/315.html",
     "author": "Schteppe",
-    "genres": [],
+    "genres": [
+      "action",
+      "platformer",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3421,7 +4130,11 @@
     "cover": "{COVER_URL}/316.png",
     "url": "{HTML_URL}/316.html",
     "author": "Rovio",
-    "genres": [],
+    "genres": [
+      "action",
+      "strategy",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3432,7 +4145,10 @@
     "cover": "{COVER_URL}/317.png",
     "url": "{HTML_URL}/317.html",
     "author": "maxbittker",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3443,7 +4159,10 @@
     "cover": "{COVER_URL}/318.png",
     "url": "{HTML_URL}/318.html",
     "author": "hi rohun, Mr.Pootsley, Jaybooty",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3454,7 +4173,10 @@
     "cover": "{COVER_URL}/319.png",
     "url": "{HTML_URL}/319.html",
     "author": "Supersonic Studios LTD",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3478,7 +4200,10 @@
     "cover": "{COVER_URL}/321.png",
     "url": "{HTML_URL}/321.html",
     "author": "Gamincat",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3489,7 +4214,10 @@
     "cover": "{COVER_URL}/322.png",
     "url": "{HTML_URL}/322.html",
     "author": "Famobi",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3500,7 +4228,10 @@
     "cover": "{COVER_URL}/323.png",
     "url": "{HTML_URL}/323.html",
     "author": "MOONEE PUBLISHING LTD",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3511,7 +4242,10 @@
     "cover": "{COVER_URL}/324.png",
     "url": "{HTML_URL}/324.html",
     "author": "Raval Matic",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3522,7 +4256,10 @@
     "cover": "{COVER_URL}/325.png",
     "url": "{HTML_URL}/325.html",
     "author": "Gameloft",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3533,7 +4270,10 @@
     "cover": "{COVER_URL}/326.png",
     "url": "{HTML_URL}/326.html",
     "author": "Voodoo",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3557,7 +4297,10 @@
     "cover": "{COVER_URL}/328.png",
     "url": "{HTML_URL}/328.html",
     "author": "ZeptoLab",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3568,7 +4311,10 @@
     "cover": "{COVER_URL}/329.png",
     "url": "{HTML_URL}/329a.html",
     "author": "GameSnacks",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3579,7 +4325,10 @@
     "cover": "{COVER_URL}/330.png",
     "url": "{HTML_URL}/330.html",
     "author": "Anton Medvedev",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3590,7 +4339,9 @@
     "cover": "{COVER_URL}/331.png",
     "url": "{HTML_URL}/331.html",
     "author": "No Pressure Studios",
-    "genres": [],
+    "genres": [
+      "racing"
+    ],
     "special": [
       "web"
     ]
@@ -3601,7 +4352,9 @@
     "cover": "{COVER_URL}/333.png",
     "url": "{HTML_URL}/333.html",
     "author": "Brad Borne",
-    "genres": [],
+    "genres": [
+      "adventure"
+    ],
     "special": [
       "flash"
     ]
@@ -3612,7 +4365,9 @@
     "cover": "{COVER_URL}/334.png",
     "url": "{HTML_URL}/334.html",
     "author": "Brad Borne",
-    "genres": [],
+    "genres": [
+      "adventure"
+    ],
     "special": [
       "flash"
     ]
@@ -3623,7 +4378,9 @@
     "cover": "{COVER_URL}/335.png",
     "url": "{HTML_URL}/335.html",
     "author": "Brad Borne",
-    "genres": [],
+    "genres": [
+      "adventure"
+    ],
     "special": [
       "flash"
     ]
@@ -3634,7 +4391,9 @@
     "cover": "{COVER_URL}/336.png",
     "url": "{HTML_URL}/336.html",
     "author": "Brad Borne",
-    "genres": [],
+    "genres": [
+      "adventure"
+    ],
     "special": [
       "flash"
     ]
@@ -3645,7 +4404,9 @@
     "cover": "{COVER_URL}/337.png",
     "url": "{HTML_URL}/337.html",
     "author": "Brad Borne",
-    "genres": [],
+    "genres": [
+      "adventure"
+    ],
     "special": [
       "flash"
     ]
@@ -3656,7 +4417,9 @@
     "cover": "{COVER_URL}/338.png",
     "url": "{HTML_URL}/338.html",
     "author": "New Eich Games",
-    "genres": [],
+    "genres": [
+      "shooter"
+    ],
     "special": [
       "web"
     ]
@@ -3667,7 +4430,10 @@
     "cover": "{COVER_URL}/339.png",
     "url": "{HTML_URL}/339.html",
     "author": "New Eich Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3678,7 +4444,10 @@
     "cover": "{COVER_URL}/340.png",
     "url": "{HTML_URL}/340.html",
     "author": "Light Bringer Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -3689,7 +4458,10 @@
     "cover": "{COVER_URL}/341.png",
     "url": "{HTML_URL}/341.html",
     "author": "Light Bringer Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -3700,7 +4472,10 @@
     "cover": "{COVER_URL}/342.png",
     "url": "{HTML_URL}/342.html",
     "author": "Light Bringer Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -3724,7 +4499,10 @@
     "cover": "{COVER_URL}/344.png",
     "url": "{HTML_URL}/344.html",
     "author": "GaZZer Game",
-    "genres": [],
+    "genres": [
+      "action",
+      "strategy"
+    ],
     "special": [
       "flash"
     ]
@@ -3735,7 +4513,10 @@
     "cover": "{COVER_URL}/345.png",
     "url": "{HTML_URL}/345.html",
     "author": "GaZZer Game",
-    "genres": [],
+    "genres": [
+      "action",
+      "strategy"
+    ],
     "special": [
       "flash"
     ]
@@ -3746,7 +4527,10 @@
     "cover": "{COVER_URL}/346.png",
     "url": "{HTML_URL}/346.html",
     "author": "graebor",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3757,7 +4541,10 @@
     "cover": "{COVER_URL}/347.png",
     "url": "{HTML_URL}/347.html",
     "author": "Ysopprod",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3768,7 +4555,10 @@
     "cover": "{COVER_URL}/348.png",
     "url": "{HTML_URL}/348.html",
     "author": "OnHit Developments",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3779,7 +4569,10 @@
     "cover": "{COVER_URL}/349.png",
     "url": "{HTML_URL}/349.html",
     "author": "Voodoo",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3790,7 +4583,10 @@
     "cover": "{COVER_URL}/350.png",
     "url": "{HTML_URL}/350.html",
     "author": "Edmund McMillen",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -3801,7 +4597,10 @@
     "cover": "{COVER_URL}/351.png",
     "url": "{HTML_URL}/351.html",
     "author": "Berker Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3812,7 +4611,10 @@
     "cover": "{COVER_URL}/353.png",
     "url": "{HTML_URL}/353.html",
     "author": "Blumgi",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3823,7 +4625,9 @@
     "cover": "{COVER_URL}/354.png",
     "url": "{HTML_URL}/354-a.html",
     "author": "Hyper Hippo Games",
-    "genres": [],
+    "genres": [
+      "adventure"
+    ],
     "special": [
       "web"
     ]
@@ -3834,7 +4638,10 @@
     "cover": "{COVER_URL}/355.png",
     "url": "{HTML_URL}/355.html",
     "author": "Thomas K. Young",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3845,7 +4652,10 @@
     "cover": "{COVER_URL}/356.png",
     "url": "{HTML_URL}/356.html",
     "author": "Thomas K. Young",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3856,7 +4666,10 @@
     "cover": "{COVER_URL}/357.png",
     "url": "{HTML_URL}/357.html",
     "author": "Thomas K. Young",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3880,7 +4693,10 @@
     "cover": "{COVER_URL}/359.png",
     "url": "{HTML_URL}/359.html",
     "author": "Thomas K. Young",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3892,6 +4708,8 @@
     "url": "{HTML_URL}/360.html",
     "author": "Night Steed S.C.",
     "genres": [
+      "action",
+      "strategy",
       ".io"
     ],
     "special": [
@@ -3904,7 +4722,10 @@
     "cover": "{COVER_URL}/361.png",
     "url": "{HTML_URL}/361.html",
     "author": "Justin Hook",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3954,7 +4775,10 @@
     "cover": "{COVER_URL}/365.png",
     "url": "{HTML_URL}/365.html",
     "author": "JustPlay.LOL",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -3965,7 +4789,10 @@
     "cover": "{COVER_URL}/366.png",
     "url": "{HTML_URL}/366.html",
     "author": "idfk",
-    "genres": [],
+    "genres": [
+      "strategy",
+      "idle"
+    ],
     "special": [
       "web"
     ]
@@ -3989,7 +4816,11 @@
     "cover": "{COVER_URL}/368.png",
     "url": "{HTML_URL}/368.html",
     "author": "idfk",
-    "genres": [],
+    "genres": [
+      "action",
+      "3d",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4000,7 +4831,10 @@
     "cover": "{COVER_URL}/369.png",
     "url": "{HTML_URL}/369.html",
     "author": "Topograph Interactive",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4011,7 +4845,10 @@
     "cover": "{COVER_URL}/370.png",
     "url": "{HTML_URL}/370-f.html",
     "author": "Tall Team",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4022,7 +4859,9 @@
     "cover": "{COVER_URL}/371.png",
     "url": "{HTML_URL}/371e.html",
     "author": "Vanorium",
-    "genres": [],
+    "genres": [
+      "action"
+    ],
     "special": [
       "web"
     ]
@@ -4033,7 +4872,9 @@
     "cover": "{COVER_URL}/372.png",
     "url": "{HTML_URL}/372.html",
     "author": "y8",
-    "genres": [],
+    "genres": [
+      "action"
+    ],
     "special": [
       "web"
     ]
@@ -4044,7 +4885,9 @@
     "cover": "{COVER_URL}/373.png",
     "url": "{HTML_URL}/373.html",
     "author": "No Pressure Studios",
-    "genres": [],
+    "genres": [
+      "action"
+    ],
     "special": [
       "web"
     ]
@@ -4055,7 +4898,9 @@
     "cover": "{COVER_URL}/374.png",
     "url": "{HTML_URL}/374e.html",
     "author": "NoodleCake",
-    "genres": [],
+    "genres": [
+      "action"
+    ],
     "special": [
       "web"
     ]
@@ -4066,7 +4911,12 @@
     "cover": "{COVER_URL}/375.png",
     "url": "{HTML_URL}/375.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "action",
+      "strategy",
+      "idle",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4077,7 +4927,10 @@
     "cover": "{COVER_URL}/376.png",
     "url": "{HTML_URL}/376.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4088,7 +4941,10 @@
     "cover": "{COVER_URL}/377.png",
     "url": "{HTML_URL}/377.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4099,7 +4955,10 @@
     "cover": "{COVER_URL}/378.png",
     "url": "{HTML_URL}/378.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4111,7 +4970,8 @@
     "url": "{HTML_URL}/379.html",
     "author": "Yandex",
     "genres": [
-      "3d"
+      "3d",
+      "racing"
     ],
     "special": [
       "web"
@@ -4123,7 +4983,10 @@
     "cover": "{COVER_URL}/380.png",
     "url": "{HTML_URL}/380.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4148,7 +5011,11 @@
     "url": "{HTML_URL}/382.html",
     "author": "Yandex",
     "genres": [
-      "3d"
+      "action",
+      "3d",
+      "racing",
+      "platformer",
+      "skill"
     ],
     "special": [
       "web"
@@ -4161,7 +5028,8 @@
     "url": "{HTML_URL}/383.html",
     "author": "Yandex",
     "genres": [
-      "3d"
+      "3d",
+      "racing"
     ],
     "special": [
       "web"
@@ -4174,7 +5042,10 @@
     "url": "{HTML_URL}/384.html",
     "author": "Yandex",
     "genres": [
-      "3d"
+      "action",
+      "3d",
+      "platformer",
+      "skill"
     ],
     "special": [
       "web"
@@ -4187,7 +5058,8 @@
     "url": "{HTML_URL}/385.html",
     "author": "Yandex",
     "genres": [
-      "3d"
+      "3d",
+      "racing"
     ],
     "special": [
       "web"
@@ -4199,7 +5071,10 @@
     "cover": "{COVER_URL}/386.png",
     "url": "{HTML_URL}/386.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4210,7 +5085,10 @@
     "cover": "{COVER_URL}/387.png",
     "url": "{HTML_URL}/387.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4234,7 +5112,10 @@
     "cover": "{COVER_URL}/389.png",
     "url": "{HTML_URL}/389.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4245,7 +5126,10 @@
     "cover": "{COVER_URL}/390.png",
     "url": "{HTML_URL}/390.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4256,7 +5140,10 @@
     "cover": "{COVER_URL}/391.png",
     "url": "{HTML_URL}/391.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4267,7 +5154,10 @@
     "cover": "{COVER_URL}/392.png",
     "url": "{HTML_URL}/392.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4278,7 +5168,10 @@
     "cover": "{COVER_URL}/393.png",
     "url": "{HTML_URL}/393.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4289,7 +5182,10 @@
     "cover": "{COVER_URL}/394.png",
     "url": "{HTML_URL}/394.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4300,7 +5196,10 @@
     "cover": "{COVER_URL}/395.png",
     "url": "{HTML_URL}/395.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4311,7 +5210,10 @@
     "cover": "{COVER_URL}/396.png",
     "url": "{HTML_URL}/396.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4322,7 +5224,10 @@
     "cover": "{COVER_URL}/397.png",
     "url": "{HTML_URL}/397.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4333,7 +5238,10 @@
     "cover": "{COVER_URL}/398.png",
     "url": "{HTML_URL}/398.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4344,7 +5252,11 @@
     "cover": "{COVER_URL}/399.png",
     "url": "{HTML_URL}/399.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "action",
+      "racing",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4355,7 +5267,10 @@
     "cover": "{COVER_URL}/400.png",
     "url": "{HTML_URL}/400.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4379,7 +5294,9 @@
     "cover": "{COVER_URL}/402.png",
     "url": "{HTML_URL}/402.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "action"
+    ],
     "special": [
       "web"
     ]
@@ -4390,7 +5307,10 @@
     "cover": "{COVER_URL}/403.png",
     "url": "{HTML_URL}/403.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4414,7 +5334,9 @@
     "cover": "{COVER_URL}/405.png",
     "url": "{HTML_URL}/405.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "shooter"
+    ],
     "special": [
       "web"
     ]
@@ -4438,7 +5360,10 @@
     "cover": "{COVER_URL}/407.png",
     "url": "{HTML_URL}/407.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4449,7 +5374,10 @@
     "cover": "{COVER_URL}/408.png",
     "url": "{HTML_URL}/408.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4460,7 +5388,9 @@
     "cover": "{COVER_URL}/409.png",
     "url": "{HTML_URL}/409.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "racing"
+    ],
     "special": [
       "web"
     ]
@@ -4471,7 +5401,9 @@
     "cover": "{COVER_URL}/410.png",
     "url": "{HTML_URL}/410.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "racing"
+    ],
     "special": [
       "web"
     ]
@@ -4482,7 +5414,10 @@
     "cover": "{COVER_URL}/411.png",
     "url": "{HTML_URL}/411.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4493,7 +5428,11 @@
     "cover": "{COVER_URL}/413.png",
     "url": "{HTML_URL}/413.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "action",
+      "strategy",
+      "racing"
+    ],
     "special": [
       "web"
     ]
@@ -4530,7 +5469,10 @@
     "cover": "{COVER_URL}/416.png",
     "url": "{HTML_URL}/416.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4541,7 +5483,10 @@
     "cover": "{COVER_URL}/417.png",
     "url": "{HTML_URL}/417.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "action",
+      "strategy"
+    ],
     "special": [
       "web"
     ]
@@ -4552,7 +5497,11 @@
     "cover": "{COVER_URL}/418.png",
     "url": "{HTML_URL}/418.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "action",
+      "adventure",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4563,7 +5512,10 @@
     "cover": "{COVER_URL}/419.png",
     "url": "{HTML_URL}/419.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4574,7 +5526,10 @@
     "cover": "{COVER_URL}/420.png",
     "url": "{HTML_URL}/420.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4586,7 +5541,10 @@
     "url": "{HTML_URL}/421.html",
     "author": "Yandex",
     "genres": [
-      "3d"
+      "action",
+      "3d",
+      "platformer",
+      "skill"
     ],
     "special": [
       "web"
@@ -4598,7 +5556,10 @@
     "cover": "{COVER_URL}/422.png",
     "url": "{HTML_URL}/422.html",
     "author": "Yandex",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4609,7 +5570,10 @@
     "cover": "{COVER_URL}/423.png",
     "url": "{HTML_URL}/423.html",
     "author": "LameDev",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -4620,7 +5584,10 @@
     "cover": "{COVER_URL}/426.png",
     "url": "{HTML_URL}/426.html",
     "author": "M36games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -4631,7 +5598,10 @@
     "cover": "{COVER_URL}/427.png",
     "url": "{HTML_URL}/427-z.html",
     "author": "Omocat",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -4643,8 +5613,9 @@
     "url": "{HTML_URL}/428.html",
     "author": "Scott Cawthon",
     "genres": [
-      "horror",
-      "3d"
+      "3d",
+      "strategy",
+      "horror"
     ],
     "special": [
       "port"
@@ -4656,7 +5627,10 @@
     "cover": "{COVER_URL}/430.png",
     "url": "{HTML_URL}/430.html",
     "author": "flanne",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4667,7 +5641,10 @@
     "cover": "{COVER_URL}/431.png",
     "url": "{HTML_URL}/431.html",
     "author": "Diamond Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4678,7 +5655,10 @@
     "cover": "{COVER_URL}/432.png",
     "url": "{HTML_URL}/432.html",
     "author": "krutovig",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4689,7 +5669,10 @@
     "cover": "{COVER_URL}/433.png",
     "url": "{HTML_URL}/433.html",
     "author": "kikiyama",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -4700,7 +5683,10 @@
     "cover": "{COVER_URL}/434.png",
     "url": "{HTML_URL}/434.html",
     "author": "Glompyy",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4711,7 +5697,10 @@
     "cover": "{COVER_URL}/435.png",
     "url": "{HTML_URL}/435.html",
     "author": "rujogames",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4722,7 +5711,10 @@
     "cover": "{COVER_URL}/436.png",
     "url": "{HTML_URL}/436.html",
     "author": "coolmathgames",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4733,7 +5725,10 @@
     "cover": "{COVER_URL}/437.png",
     "url": "{HTML_URL}/437.html",
     "author": "Azur Games, Playgendary",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4744,7 +5739,10 @@
     "cover": "{COVER_URL}/438.png",
     "url": "{HTML_URL}/438.html",
     "author": "coolmathgames",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4755,7 +5753,10 @@
     "cover": "{COVER_URL}/439.png",
     "url": "{HTML_URL}/439.html",
     "author": "justaliendev",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4766,7 +5767,10 @@
     "cover": "{COVER_URL}/440.png",
     "url": "{HTML_URL}/440.html",
     "author": "Matt Thorson and Noel Berry",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4777,7 +5781,10 @@
     "cover": "{COVER_URL}/441.png",
     "url": "{HTML_URL}/441.html",
     "author": "Rakqoi",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4788,7 +5795,10 @@
     "cover": "{COVER_URL}/442.png",
     "url": "{HTML_URL}/442.html",
     "author": "Werxzy",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4799,7 +5809,10 @@
     "cover": "{COVER_URL}/443.png",
     "url": "{HTML_URL}/443.html",
     "author": "Domas Kazragis",
-    "genres": [],
+    "genres": [
+      "adventure",
+      "racing"
+    ],
     "special": [
       "web"
     ]
@@ -4810,7 +5823,10 @@
     "cover": "{COVER_URL}/444.png",
     "url": "{HTML_URL}/444.html",
     "author": "JoySpark Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4821,7 +5837,10 @@
     "cover": "{COVER_URL}/445.png",
     "url": "{HTML_URL}/445.html",
     "author": "Con Man Games, SmashGames and Sean Young",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -4832,7 +5851,10 @@
     "cover": "{COVER_URL}/446.png",
     "url": "{HTML_URL}/446.html",
     "author": "Con Man Games, SmashGames and Sean Young",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -4843,7 +5865,10 @@
     "cover": "{COVER_URL}/447.png",
     "url": "{HTML_URL}/447-e.html",
     "author": "TamaniDamani",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4867,7 +5892,10 @@
     "cover": "{COVER_URL}/449.png",
     "url": "{HTML_URL}/449.html",
     "author": "Paradyme Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4878,7 +5906,9 @@
     "cover": "{COVER_URL}/450.png",
     "url": "{HTML_URL}/450.html",
     "author": "MANGLEDmaw Games, DreadXP",
-    "genres": [],
+    "genres": [
+      "adventure"
+    ],
     "special": [
       "port"
     ]
@@ -4889,7 +5919,10 @@
     "cover": "{COVER_URL}/451.png",
     "url": "{HTML_URL}/451.html",
     "author": "Parsec Productions",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -4900,7 +5933,10 @@
     "cover": "{COVER_URL}/452.png",
     "url": "{HTML_URL}/452.html",
     "author": "Maksim Chmutov",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4911,7 +5947,10 @@
     "cover": "{COVER_URL}/453.png",
     "url": "{HTML_URL}/453.html",
     "author": "Maksim Chmutov",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -4922,7 +5961,10 @@
     "cover": "{COVER_URL}/454.png",
     "url": "{HTML_URL}/454.html",
     "author": "SHROOMYCHRIST-STUDIOS",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -4933,7 +5975,9 @@
     "cover": "{COVER_URL}/455.png",
     "url": "{HTML_URL}/455.html",
     "author": "Paledoptera",
-    "genres": [],
+    "genres": [
+      "racing"
+    ],
     "special": [
       "port"
     ]
@@ -4944,7 +5988,10 @@
     "cover": "{COVER_URL}/456.png",
     "url": "{HTML_URL}/456.html",
     "author": "Team Undertale Yellow",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -4955,7 +6002,10 @@
     "cover": "{COVER_URL}/457.png",
     "url": "{HTML_URL}/457.html",
     "author": "Redbeet Interactive, Axolot Games, Ashen Arrow",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -4966,7 +6016,10 @@
     "cover": "{COVER_URL}/458.png",
     "url": "{HTML_URL}/458.html",
     "author": "Curious Fox Sox",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -4977,7 +6030,10 @@
     "cover": "{COVER_URL}/459.png",
     "url": "{HTML_URL}/459.html",
     "author": "Zed Technician",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -4988,7 +6044,10 @@
     "cover": "{COVER_URL}/460.png",
     "url": "{HTML_URL}/460.html",
     "author": "Rayll",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -5000,7 +6059,9 @@
     "url": "{HTML_URL}/461.html",
     "author": "slither.io",
     "genres": [
-      ".io"
+      "action",
+      ".io",
+      "skill"
     ],
     "special": [
       "web"
@@ -5012,7 +6073,10 @@
     "cover": "{COVER_URL}/462.png",
     "url": "{HTML_URL}/462.html",
     "author": "racheldrawsthis",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -5023,7 +6087,10 @@
     "cover": "{COVER_URL}/463.png",
     "url": "{HTML_URL}/463.html",
     "author": "ghosttundra, Euroclipse, Brand New Groove",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -5034,7 +6101,10 @@
     "cover": "{COVER_URL}/464.png",
     "url": "{HTML_URL}/464.html",
     "author": "eddynardo",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5045,7 +6115,10 @@
     "cover": "{COVER_URL}/465.png",
     "url": "{HTML_URL}/465.html",
     "author": "Studio MDHR Entertainment Inc",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -5056,7 +6129,9 @@
     "cover": "{COVER_URL}/466.png",
     "url": "{HTML_URL}/466.html",
     "author": "Basically Games",
-    "genres": [],
+    "genres": [
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -5067,7 +6142,10 @@
     "cover": "{COVER_URL}/467.png",
     "url": "{HTML_URL}/467-updatee.html",
     "author": "Basically Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -5078,7 +6156,10 @@
     "cover": "{COVER_URL}/468.png",
     "url": "{HTML_URL}/468-f.html",
     "author": "Team Cherry",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -5089,7 +6170,11 @@
     "cover": "{COVER_URL}/470.png",
     "url": "{HTML_URL}/470.html",
     "author": "Marko Pusenjak",
-    "genres": [],
+    "genres": [
+      "action",
+      "platformer",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5100,7 +6185,9 @@
     "cover": "{COVER_URL}/471.png",
     "url": "{HTML_URL}/471.html",
     "author": "Krinkels, The-Swain, cheshyre, Luis, Rebel666",
-    "genres": [],
+    "genres": [
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -5111,7 +6198,9 @@
     "cover": "{COVER_URL}/472.png",
     "url": "{HTML_URL}/472.html",
     "author": "jcw87",
-    "genres": [],
+    "genres": [
+      "3d"
+    ],
     "special": [
       "web"
     ]
@@ -5122,7 +6211,9 @@
     "cover": "{COVER_URL}/473.png",
     "url": "{HTML_URL}/473.html",
     "author": "Bruno Croci",
-    "genres": [],
+    "genres": [
+      "idle"
+    ],
     "special": [
       "web"
     ]
@@ -5134,7 +6225,8 @@
     "url": "{HTML_URL}/474.html",
     "author": "Nate Anim8",
     "genres": [
-      "action"
+      "action",
+      "skill"
     ],
     "special": [
       "web"
@@ -5147,7 +6239,8 @@
     "url": "{HTML_URL}/475.html",
     "author": "Rozebud",
     "genres": [
-      "action"
+      "action",
+      "skill"
     ],
     "special": [
       "web"
@@ -5160,7 +6253,8 @@
     "url": "{HTML_URL}/476.html",
     "author": "YingYang48 etc",
     "genres": [
-      "action"
+      "action",
+      "skill"
     ],
     "special": [
       "web"
@@ -5173,7 +6267,8 @@
     "url": "{HTML_URL}/477.html",
     "author": "evidal etc",
     "genres": [
-      "action"
+      "action",
+      "skill"
     ],
     "special": [
       "web"
@@ -5186,7 +6281,8 @@
     "url": "{HTML_URL}/478.html",
     "author": "JellyFishedm etc",
     "genres": [
-      "action"
+      "action",
+      "skill"
     ],
     "special": [
       "web"
@@ -5198,7 +6294,9 @@
     "cover": "{COVER_URL}/479.png",
     "url": "{HTML_URL}/479.html",
     "author": "nagami games",
-    "genres": [],
+    "genres": [
+      "strategy"
+    ],
     "special": [
       "web"
     ]
@@ -5210,7 +6308,8 @@
     "url": "{HTML_URL}/480.html",
     "author": "Dokki.doodlez etc",
     "genres": [
-      "action"
+      "action",
+      "skill"
     ],
     "special": [
       "web"
@@ -5223,7 +6322,8 @@
     "url": "{HTML_URL}/481.html",
     "author": "Banbuds etc",
     "genres": [
-      "action"
+      "action",
+      "skill"
     ],
     "special": [
       "web"
@@ -5235,7 +6335,10 @@
     "cover": "{COVER_URL}/482.png",
     "url": "{HTML_URL}/482-2.html",
     "author": "SHROOMYCHRIST-STUDIOS",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -5247,7 +6350,8 @@
     "url": "{HTML_URL}/485.html",
     "author": "atsuover etc",
     "genres": [
-      "action"
+      "action",
+      "skill"
     ],
     "special": [
       "web"
@@ -5260,7 +6364,9 @@
     "url": "{HTML_URL}/486.html",
     "author": "JoeDoughBoi etc",
     "genres": [
-      "action"
+      "action",
+      "platformer",
+      "skill"
     ],
     "special": [
       "web"
@@ -5273,7 +6379,8 @@
     "url": "{HTML_URL}/489.html",
     "author": "MORØ etc",
     "genres": [
-      "action"
+      "action",
+      "skill"
     ],
     "special": [
       "web"
@@ -5285,7 +6392,10 @@
     "cover": "{COVER_URL}/490.png",
     "url": "{HTML_URL}/490.html",
     "author": "Neweichgames",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5296,7 +6406,10 @@
     "cover": "{COVER_URL}/491.png",
     "url": "{HTML_URL}/491.html",
     "author": "angela he",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5307,7 +6420,10 @@
     "cover": "{COVER_URL}/492.png",
     "url": "{HTML_URL}/492.html",
     "author": "LakenDaCoda",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5318,7 +6434,10 @@
     "cover": "{COVER_URL}/493.png",
     "url": "{HTML_URL}/493.html",
     "author": "Cartoon Network",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5329,7 +6448,10 @@
     "cover": "{COVER_URL}/494.png",
     "url": "{HTML_URL}/494.html",
     "author": "Cartoon Network",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5340,7 +6462,10 @@
     "cover": "{COVER_URL}/495.png",
     "url": "{HTML_URL}/495.html",
     "author": "tanner bananer",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5351,7 +6476,10 @@
     "cover": "{COVER_URL}/501.png",
     "url": "{HTML_URL}/501.html",
     "author": "Con Man Games, SmashGames and Sean Young",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -5362,7 +6490,10 @@
     "cover": "{COVER_URL}/502.png",
     "url": "{HTML_URL}/502-fixed.html",
     "author": "Sam Hogan",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -5373,7 +6504,10 @@
     "cover": "{COVER_URL}/503.png",
     "url": "{HTML_URL}/503.html",
     "author": "Emil \"Ace\" Macko",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -5384,7 +6518,10 @@
     "cover": "{COVER_URL}/504.png",
     "url": "{HTML_URL}/504.html",
     "author": "Emil \"Ace\" Macko",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -5395,7 +6532,10 @@
     "cover": "{COVER_URL}/505.png",
     "url": "{HTML_URL}/505.html",
     "author": "Nintendo",
-    "genres": [],
+    "genres": [
+      "adventure",
+      "rpg"
+    ],
     "special": [
       "emulator",
       "web"
@@ -5407,7 +6547,10 @@
     "cover": "{COVER_URL}/506.png",
     "url": "{HTML_URL}/506.html",
     "author": "Nintendo",
-    "genres": [],
+    "genres": [
+      "adventure",
+      "rpg"
+    ],
     "special": [
       "emulator",
       "web"
@@ -5419,7 +6562,9 @@
     "cover": "{COVER_URL}/507.png",
     "url": "{HTML_URL}/507.html",
     "author": "SPLAPP-ME-DO",
-    "genres": [],
+    "genres": [
+      "strategy"
+    ],
     "special": [
       "flash"
     ]
@@ -5430,7 +6575,11 @@
     "cover": "{COVER_URL}/508.png",
     "url": "{HTML_URL}/508.html",
     "author": "Nintendo",
-    "genres": [],
+    "genres": [
+      "action",
+      "platformer",
+      "skill"
+    ],
     "special": [
       "emulator",
       "web"
@@ -5442,7 +6591,10 @@
     "cover": "{COVER_URL}/510.png",
     "url": "{HTML_URL}/510.html",
     "author": "Nintendo",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "emulator",
       "web"
@@ -5454,7 +6606,10 @@
     "cover": "{COVER_URL}/511.png",
     "url": "{HTML_URL}/511.html",
     "author": "rkn",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5465,7 +6620,10 @@
     "cover": "{COVER_URL}/512.png",
     "url": "{HTML_URL}/512.html",
     "author": "flori9",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5476,7 +6634,9 @@
     "cover": "{COVER_URL}/513.png",
     "url": "{HTML_URL}/513.html",
     "author": "Studio-19",
-    "genres": [],
+    "genres": [
+      "action"
+    ],
     "special": [
       "web"
     ]
@@ -5487,7 +6647,10 @@
     "cover": "{COVER_URL}/514.png",
     "url": "{HTML_URL}/514.html",
     "author": "Enchae, Lumpy",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5499,7 +6662,9 @@
     "url": "{HTML_URL}/515.html",
     "author": "BerickCook",
     "genres": [
-      "horror"
+      "action",
+      "horror",
+      "skill"
     ],
     "special": [
       "web"
@@ -5511,7 +6676,10 @@
     "cover": "{COVER_URL}/516.png",
     "url": "{HTML_URL}/516.html",
     "author": "Empty House Games, Shuu",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5522,7 +6690,10 @@
     "cover": "{COVER_URL}/517.png",
     "url": "{HTML_URL}/517.html",
     "author": "MogDogBlog Productions",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -5533,7 +6704,10 @@
     "cover": "{COVER_URL}/518.png",
     "url": "{HTML_URL}/518.html",
     "author": "NitNitori, LadyEbony",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5544,7 +6718,9 @@
     "cover": "{COVER_URL}/519.png",
     "url": "{HTML_URL}/519.html",
     "author": "Astrobard Games, Khao Mortadios",
-    "genres": [],
+    "genres": [
+      "action"
+    ],
     "special": [
       "web"
     ]
@@ -5555,7 +6731,10 @@
     "cover": "{COVER_URL}/520.png",
     "url": "{HTML_URL}/520-fix.html",
     "author": "Halfbrick Studios",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5566,7 +6745,10 @@
     "cover": "{COVER_URL}/521.png",
     "url": "{HTML_URL}/521.html",
     "author": "PeachTreeOath",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5577,7 +6759,9 @@
     "cover": "{COVER_URL}/522.png",
     "url": "{HTML_URL}/522.html",
     "author": "Lumpy, Spasco",
-    "genres": [],
+    "genres": [
+      "3d"
+    ],
     "special": [
       "web"
     ]
@@ -5588,7 +6772,10 @@
     "cover": "{COVER_URL}/523.png",
     "url": "{HTML_URL}/523-f.html",
     "author": "vgperson",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -5599,7 +6786,10 @@
     "cover": "{COVER_URL}/524.png",
     "url": "{HTML_URL}/524.html",
     "author": "NanaOn-Sha",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "emulator",
       "web"
@@ -5611,7 +6801,10 @@
     "cover": "{COVER_URL}/526.png",
     "url": "{HTML_URL}/526.html",
     "author": "Nickelodeon",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5622,7 +6815,10 @@
     "cover": "{COVER_URL}/527.png",
     "url": "{HTML_URL}/527.html",
     "author": "Nickelodeon",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5633,7 +6829,11 @@
     "cover": "{COVER_URL}/528.png",
     "url": "{HTML_URL}/528.html",
     "author": "Nickelodeon",
-    "genres": [],
+    "genres": [
+      "action",
+      "strategy",
+      "racing"
+    ],
     "special": [
       "web"
     ]
@@ -5644,7 +6844,10 @@
     "cover": "{COVER_URL}/529.png",
     "url": "{HTML_URL}/529.html",
     "author": "Nickelodeon",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5655,7 +6858,10 @@
     "cover": "{COVER_URL}/530.png",
     "url": "{HTML_URL}/530.html",
     "author": "Nickelodeon",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5666,7 +6872,10 @@
     "cover": "{COVER_URL}/531.png",
     "url": "{HTML_URL}/531.html",
     "author": "Nickelodeon",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5677,7 +6886,10 @@
     "cover": "{COVER_URL}/532.png",
     "url": "{HTML_URL}/532.html",
     "author": "Nickelodeon",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5688,7 +6900,10 @@
     "cover": "{COVER_URL}/533.png",
     "url": "{HTML_URL}/533.html",
     "author": "Nickelodeon",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5699,7 +6914,10 @@
     "cover": "{COVER_URL}/534.png",
     "url": "{HTML_URL}/534.html",
     "author": "Cartoon Network",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5710,7 +6928,10 @@
     "cover": "{COVER_URL}/535.png",
     "url": "{HTML_URL}/535.html",
     "author": "Cartoon Network",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5721,7 +6942,10 @@
     "cover": "{COVER_URL}/536.png",
     "url": "{HTML_URL}/536.html",
     "author": "MOSTLY MAD PRODUCTIONS",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5732,7 +6956,11 @@
     "cover": "{COVER_URL}/537.png",
     "url": "{HTML_URL}/537.html",
     "author": "Poki",
-    "genres": [],
+    "genres": [
+      "action",
+      "shooter",
+      "horror"
+    ],
     "special": [
       "web"
     ]
@@ -5743,7 +6971,10 @@
     "cover": "{COVER_URL}/538.png",
     "url": "{HTML_URL}/538.html",
     "author": "Nozomu Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5754,7 +6985,9 @@
     "cover": "{COVER_URL}/539.png",
     "url": "{HTML_URL}/539.html",
     "author": "emptygamer",
-    "genres": [],
+    "genres": [
+      "strategy"
+    ],
     "special": [
       "web"
     ]
@@ -5765,7 +6998,10 @@
     "cover": "{COVER_URL}/540.png",
     "url": "{HTML_URL}/540.html",
     "author": "VENDORMINT",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5776,7 +7012,10 @@
     "cover": "{COVER_URL}/542.png",
     "url": "{HTML_URL}/542-a.html",
     "author": "DaniDev",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -5787,7 +7026,10 @@
     "cover": "{COVER_URL}/543.png",
     "url": "{HTML_URL}/543-a.html",
     "author": "DaniDev",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -5798,7 +7040,10 @@
     "cover": "{COVER_URL}/544.png",
     "url": "{HTML_URL}/544.html",
     "author": "Anson Heung",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5809,7 +7054,10 @@
     "cover": "{COVER_URL}/545.png",
     "url": "{HTML_URL}/545.html",
     "author": "unknown",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5820,7 +7068,10 @@
     "cover": "{COVER_URL}/546.png",
     "url": "{HTML_URL}/546.html",
     "author": "Martin Magini",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5831,7 +7082,10 @@
     "cover": "{COVER_URL}/547.png",
     "url": "{HTML_URL}/547.html",
     "author": "Blue Wizard",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5842,7 +7096,10 @@
     "cover": "{COVER_URL}/548.png",
     "url": "{HTML_URL}/548.html",
     "author": "Blue Wizard",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5853,7 +7110,11 @@
     "cover": "{COVER_URL}/549.png",
     "url": "{HTML_URL}/549.html",
     "author": "heyjoeway and SEGA",
-    "genres": [],
+    "genres": [
+      "action",
+      "platformer",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5864,7 +7125,11 @@
     "cover": "{COVER_URL}/550.png",
     "url": "{HTML_URL}/550.html",
     "author": "Eukaryot3K and SEGA",
-    "genres": [],
+    "genres": [
+      "action",
+      "platformer",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5875,7 +7140,10 @@
     "cover": "{COVER_URL}/551.png",
     "url": "{HTML_URL}/551.html",
     "author": "VobbyGames, weirdnessworld",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5886,7 +7154,10 @@
     "cover": "{COVER_URL}/552.png",
     "url": "{HTML_URL}/552.html",
     "author": "BGaming",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5897,7 +7168,10 @@
     "cover": "{COVER_URL}/553.png",
     "url": "{HTML_URL}/553.html",
     "author": "Dream Playz",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -5908,7 +7182,9 @@
     "cover": "{COVER_URL}/554.png",
     "url": "{HTML_URL}/554.html",
     "author": "YandereDev",
-    "genres": [],
+    "genres": [
+      "3d"
+    ],
     "special": [
       "port"
     ]
@@ -5920,7 +7196,8 @@
     "url": "{HTML_URL}/555.html",
     "author": "paperkitty etc",
     "genres": [
-      "action"
+      "action",
+      "skill"
     ],
     "special": [
       "web"
@@ -5933,7 +7210,8 @@
     "url": "{HTML_URL}/556.html",
     "author": "Alexander0110 etc",
     "genres": [
-      "action"
+      "action",
+      "skill"
     ],
     "special": [
       "web"
@@ -5945,7 +7223,10 @@
     "cover": "{COVER_URL}/557.png",
     "url": "{HTML_URL}/557.html",
     "author": "Bennett Foddy",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -5957,7 +7238,8 @@
     "url": "{HTML_URL}/559.html",
     "author": "srPerez etc",
     "genres": [
-      "action"
+      "action",
+      "skill"
     ],
     "special": [
       "web"
@@ -5969,7 +7251,10 @@
     "cover": "{COVER_URL}/560.png",
     "url": "{HTML_URL}/560.html",
     "author": "VyletBunni",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -5993,7 +7278,10 @@
     "cover": "{COVER_URL}/562.png",
     "url": "{HTML_URL}/562.html",
     "author": "Boom Corp",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6004,7 +7292,10 @@
     "cover": "{COVER_URL}/563.png",
     "url": "{HTML_URL}/563.html",
     "author": "Finz Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6015,7 +7306,9 @@
     "cover": "{COVER_URL}/564.png",
     "url": "{HTML_URL}/564.html",
     "author": "FreePlay LLC",
-    "genres": [],
+    "genres": [
+      "action"
+    ],
     "special": [
       "web"
     ]
@@ -6026,7 +7319,10 @@
     "cover": "{COVER_URL}/565.png",
     "url": "{HTML_URL}/565.html",
     "author": "CrazyGames",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6037,7 +7333,10 @@
     "cover": "{COVER_URL}/567.png",
     "url": "{HTML_URL}/567.html",
     "author": "CrazyGames",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6048,7 +7347,10 @@
     "cover": "{COVER_URL}/568.png",
     "url": "{HTML_URL}/568.html",
     "author": "CrazyGames",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6059,7 +7361,10 @@
     "cover": "{COVER_URL}/569.png",
     "url": "{HTML_URL}/569.html",
     "author": "CrazyGames",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6070,7 +7375,10 @@
     "cover": "{COVER_URL}/570.png",
     "url": "{HTML_URL}/570.html",
     "author": "CrazyGames",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6081,7 +7389,10 @@
     "cover": "{COVER_URL}/571.png",
     "url": "{HTML_URL}/571.html",
     "author": "CrazyGames",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6092,7 +7403,10 @@
     "cover": "{COVER_URL}/572.png",
     "url": "{HTML_URL}/572.html",
     "author": "CrazyGames",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6103,7 +7417,11 @@
     "cover": "{COVER_URL}/573.png",
     "url": "{HTML_URL}/573.html",
     "author": "CrazyGames",
-    "genres": [],
+    "genres": [
+      "action",
+      "strategy",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6114,7 +7432,10 @@
     "cover": "{COVER_URL}/574.png",
     "url": "{HTML_URL}/574.html",
     "author": "CrazyGames",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6138,7 +7459,10 @@
     "cover": "{COVER_URL}/576.png",
     "url": "{HTML_URL}/576.html",
     "author": "CrazyGames",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6149,7 +7473,9 @@
     "cover": "{COVER_URL}/577.png",
     "url": "{HTML_URL}/577.html",
     "author": "CrazyGames",
-    "genres": [],
+    "genres": [
+      "strategy"
+    ],
     "special": [
       "web"
     ]
@@ -6160,7 +7486,9 @@
     "cover": "{COVER_URL}/578.png",
     "url": "{HTML_URL}/578.html",
     "author": "CrazyGames",
-    "genres": [],
+    "genres": [
+      "action"
+    ],
     "special": [
       "web"
     ]
@@ -6171,7 +7499,9 @@
     "cover": "{COVER_URL}/579.png",
     "url": "{HTML_URL}/579.html",
     "author": "CrazyGames",
-    "genres": [],
+    "genres": [
+      "racing"
+    ],
     "special": [
       "web"
     ]
@@ -6182,7 +7512,10 @@
     "cover": "{COVER_URL}/580.png",
     "url": "{HTML_URL}/580.html",
     "author": "CrazyGames",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6193,7 +7526,10 @@
     "cover": "{COVER_URL}/581.png",
     "url": "{HTML_URL}/581.html",
     "author": "CrazyGames",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6204,7 +7540,9 @@
     "cover": "{COVER_URL}/584-a.png",
     "url": "{HTML_URL}/584.html",
     "author": "CrazyGames",
-    "genres": [],
+    "genres": [
+      "3d"
+    ],
     "special": [
       "web"
     ]
@@ -6215,7 +7553,10 @@
     "cover": "{COVER_URL}/585.png",
     "url": "{HTML_URL}/585.html",
     "author": "Bethesda Softworks",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -6226,7 +7567,10 @@
     "cover": "{COVER_URL}/586.png",
     "url": "{HTML_URL}/586.html",
     "author": "MECC",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6237,7 +7581,10 @@
     "cover": "{COVER_URL}/587.png",
     "url": "{HTML_URL}/587.html",
     "author": "NegativeONE, Luis, MindChamber",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -6248,7 +7595,11 @@
     "cover": "{COVER_URL}/588.png",
     "url": "{HTML_URL}/588.html",
     "author": "Nintendo",
-    "genres": [],
+    "genres": [
+      "action",
+      "platformer",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -6259,7 +7610,11 @@
     "cover": "{COVER_URL}/589.png",
     "url": "{HTML_URL}/589-f.html",
     "author": "SEGA",
-    "genres": [],
+    "genres": [
+      "action",
+      "platformer",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -6270,7 +7625,11 @@
     "cover": "{COVER_URL}/590.png",
     "url": "{HTML_URL}/590-f.html",
     "author": "SEGA, crunch arcade",
-    "genres": [],
+    "genres": [
+      "action",
+      "platformer",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -6281,7 +7640,10 @@
     "cover": "{COVER_URL}/591.png",
     "url": "{HTML_URL}/591-awe.html",
     "author": "Monomi Park, Ported by Snubby.top",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -6292,7 +7654,10 @@
     "cover": "{COVER_URL}/592.png",
     "url": "{HTML_URL}/592.html",
     "author": "Full Fat Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "emulator",
       "web"
@@ -6304,7 +7669,10 @@
     "cover": "{COVER_URL}/593.png",
     "url": "{HTML_URL}/593-f.html",
     "author": "Full Fat Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "emulator",
       "web"
@@ -6316,7 +7684,10 @@
     "cover": "{COVER_URL}/594.png",
     "url": "{HTML_URL}/594.html",
     "author": "scriptwelder",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6340,7 +7711,10 @@
     "cover": "{COVER_URL}/597.png",
     "url": "{HTML_URL}/597-a.html",
     "author": "Gzh0821",
-    "genres": [],
+    "genres": [
+      "action",
+      "horror"
+    ],
     "special": [
       "web"
     ]
@@ -6351,7 +7725,11 @@
     "cover": "{COVER_URL}/598.png",
     "url": "{HTML_URL}/598.html",
     "author": " Cinossu",
-    "genres": [],
+    "genres": [
+      "action",
+      "platformer",
+      "skill"
+    ],
     "special": [
       "emulator",
       "web"
@@ -6363,7 +7741,10 @@
     "cover": "{COVER_URL}/599.png",
     "url": "{HTML_URL}/599.html",
     "author": " Konami Computer Entertainment Japan",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "emulator",
       "web"
@@ -6375,7 +7756,10 @@
     "cover": "{COVER_URL}/602.png",
     "url": "{HTML_URL}/602.html",
     "author": "id Software",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "emulator",
       "web"
@@ -6400,7 +7784,10 @@
     "cover": "{COVER_URL}/604.png",
     "url": "{HTML_URL}/604-a.html",
     "author": "Jorel Simpson",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -6411,7 +7798,10 @@
     "cover": "{COVER_URL}/605.png",
     "url": "{HTML_URL}/605-e.html",
     "author": "Linked Squad",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -6422,7 +7812,11 @@
     "cover": "{COVER_URL}/606.png",
     "url": "{HTML_URL}/606-e.html",
     "author": "MY5TCrimson",
-    "genres": [],
+    "genres": [
+      "action",
+      "platformer",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -6433,7 +7827,10 @@
     "cover": "{COVER_URL}/607.png",
     "url": "{HTML_URL}/607-e.html",
     "author": "Waygetter Electronics, Ported by Snubby.top",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -6444,7 +7841,9 @@
     "cover": "{COVER_URL}/611.png",
     "url": "{HTML_URL}/611.html",
     "author": "Nintendo",
-    "genres": [],
+    "genres": [
+      "racing"
+    ],
     "special": [
       "emulator",
       "n64",
@@ -6457,7 +7856,10 @@
     "cover": "{COVER_URL}/612.png",
     "url": "{HTML_URL}/612.html",
     "author": "Nintendo",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "emulator",
       "n64",
@@ -6470,7 +7872,10 @@
     "cover": "{COVER_URL}/614.png",
     "url": "{HTML_URL}/614.html",
     "author": "CrazyGames",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6481,7 +7886,10 @@
     "cover": "{COVER_URL}/617.png",
     "url": "{HTML_URL}/617-a.html",
     "author": "Stinkalistic, Running With Scissors",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6492,7 +7900,10 @@
     "cover": "{COVER_URL}/620.png",
     "url": "{HTML_URL}/620.html",
     "author": "Adventale",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6503,7 +7914,10 @@
     "cover": "{COVER_URL}/622.png",
     "url": "{HTML_URL}/622.html",
     "author": "Future Cat LLC, ARandomPerson",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -6514,7 +7928,10 @@
     "cover": "{COVER_URL}/623.png",
     "url": "{HTML_URL}/623-work.html",
     "author": "MaddyMakesGames, Mercury Workshop",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -6525,7 +7942,10 @@
     "cover": "{COVER_URL}/624.png",
     "url": "{HTML_URL}/624.html",
     "author": "Jim Bonacci",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6536,7 +7956,10 @@
     "cover": "{COVER_URL}/625.png",
     "url": "{HTML_URL}/625.html",
     "author": "gregs games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6547,7 +7970,10 @@
     "cover": "{COVER_URL}/626.png",
     "url": "{HTML_URL}/626-f.html",
     "author": "id Software, 98corbins",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -6558,7 +7984,10 @@
     "cover": "{COVER_URL}/627.png",
     "url": "{HTML_URL}/627.html",
     "author": "WeLoPlay",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6569,7 +7998,10 @@
     "cover": "{COVER_URL}/628.png",
     "url": "{HTML_URL}/628-f.html",
     "author": "only1indigo, burnedpopcorn",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -6580,7 +8012,10 @@
     "cover": "{COVER_URL}/629.png",
     "url": "{HTML_URL}/629.html",
     "author": "Mortis Ghost, Fangamer",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6591,7 +8026,10 @@
     "cover": "{COVER_URL}/630.png",
     "url": "{HTML_URL}/630.html",
     "author": "Stephen Gillmurphy",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6602,7 +8040,10 @@
     "cover": "{COVER_URL}/631.png",
     "url": "{HTML_URL}/631-a.html",
     "author": " Segawa",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6613,7 +8054,10 @@
     "cover": "{COVER_URL}/632.png",
     "url": "{HTML_URL}/632-a.html",
     "author": " Daisuke 'Pixel' Amaya",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6624,7 +8068,9 @@
     "cover": "{COVER_URL}/635.png",
     "url": "{HTML_URL}/635.html",
     "author": " nkrapivin",
-    "genres": [],
+    "genres": [
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6635,7 +8081,10 @@
     "cover": "{COVER_URL}/637.png",
     "url": "{HTML_URL}/637-f.html",
     "author": "Cary Huang",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -6646,7 +8095,10 @@
     "cover": "{COVER_URL}/638.gif",
     "url": "{HTML_URL}/638-f.html",
     "author": "Mawilite, Cary Huang",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -6657,7 +8109,10 @@
     "cover": "{COVER_URL}/640.png",
     "url": "{HTML_URL}/640.html",
     "author": "SilverGames",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -6668,7 +8123,9 @@
     "cover": "{COVER_URL}/641.png",
     "url": "{HTML_URL}/641.html",
     "author": "AWM Studio Productions LLC",
-    "genres": [],
+    "genres": [
+      "action"
+    ],
     "special": [
       "flash"
     ]
@@ -6679,7 +8136,10 @@
     "cover": "{COVER_URL}/643.png",
     "url": "{HTML_URL}/643.html",
     "author": "Gametornado",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6690,7 +8150,10 @@
     "cover": "{COVER_URL}/645.png",
     "url": "{HTML_URL}/645-e.html",
     "author": "Varun R.",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -6701,7 +8164,10 @@
     "cover": "{COVER_URL}/646.png",
     "url": "{HTML_URL}/646-fixed.html",
     "author": "TALL GLASS",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -6712,7 +8178,10 @@
     "cover": "{COVER_URL}/647.png",
     "url": "{HTML_URL}/647.html",
     "author": "McLeodGaming",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -6723,7 +8192,10 @@
     "cover": "{COVER_URL}/648.png",
     "url": "{HTML_URL}/648-el.html",
     "author": "HoloHammer",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -6734,7 +8206,10 @@
     "cover": "{COVER_URL}/649.png",
     "url": "{HTML_URL}/649.html",
     "author": "Francis Coulombe",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -6745,7 +8220,10 @@
     "cover": "{COVER_URL}/650.png",
     "url": "{HTML_URL}/650-f.html",
     "author": "Nikita Kryukov",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -6756,7 +8234,10 @@
     "cover": "{COVER_URL}/651.png",
     "url": "{HTML_URL}/651.html",
     "author": "Nikita Kryukov",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -6767,7 +8248,10 @@
     "cover": "{COVER_URL}/653.png",
     "url": "{HTML_URL}/653-f.html",
     "author": "Knives",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6778,7 +8262,10 @@
     "cover": "{COVER_URL}/654.png",
     "url": "{HTML_URL}/654.html",
     "author": "Square Enix",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6789,7 +8276,10 @@
     "cover": "{COVER_URL}/655.png",
     "url": "{HTML_URL}/655.html",
     "author": "BugfightStudio",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6800,7 +8290,10 @@
     "cover": "{COVER_URL}/656.png",
     "url": "{HTML_URL}/656.html",
     "author": "Studiohammergames",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6812,7 +8305,8 @@
     "url": "{HTML_URL}/657.html",
     "author": "vs undertale team",
     "genres": [
-      "action"
+      "action",
+      "skill"
     ],
     "special": [
       "web"
@@ -6824,7 +8318,10 @@
     "cover": "{COVER_URL}/658.png",
     "url": "{HTML_URL}/658.html",
     "author": "Phantom GD",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -6835,7 +8332,10 @@
     "cover": "{COVER_URL}/659.png",
     "url": "{HTML_URL}/659.html",
     "author": "Matzerath",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -6846,7 +8346,10 @@
     "cover": "{COVER_URL}/660.png",
     "url": "{HTML_URL}/660.html",
     "author": "Four Quarters",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6857,7 +8360,10 @@
     "cover": "{COVER_URL}/661.png",
     "url": "{HTML_URL}/661.html",
     "author": "Superplus Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6868,7 +8374,10 @@
     "cover": "{COVER_URL}/662.png",
     "url": "{HTML_URL}/662.html",
     "author": "Supersonic Studios LTD",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6906,7 +8415,8 @@
     "url": "{HTML_URL}/665.html",
     "author": "LIHUHU PTE. LTD.",
     "genres": [
-      "3d"
+      "3d",
+      "strategy"
     ],
     "special": [
       "web"
@@ -6918,7 +8428,10 @@
     "cover": "{COVER_URL}/666.png",
     "url": "{HTML_URL}/666.html",
     "author": "Max Games Studios",
-    "genres": [],
+    "genres": [
+      "action",
+      "strategy"
+    ],
     "special": [
       "web"
     ]
@@ -6929,7 +8442,10 @@
     "cover": "{COVER_URL}/667.png",
     "url": "{HTML_URL}/667-fix.html",
     "author": "insertdisc5",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -6940,7 +8456,10 @@
     "cover": "{COVER_URL}/668.png",
     "url": "{HTML_URL}/668-fix2.html",
     "author": "Another Axiom Inc, Boolonx",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -6951,7 +8470,10 @@
     "cover": "{COVER_URL}/669.png",
     "url": "{HTML_URL}/669.html",
     "author": "Re-Logic, Mercury Workshop",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -6962,7 +8484,10 @@
     "cover": "{COVER_URL}/670.png",
     "url": "{HTML_URL}/670.html",
     "author": "RCHTeam, Grayson",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -6973,7 +8498,10 @@
     "cover": "{COVER_URL}/671.png",
     "url": "{HTML_URL}/671.html",
     "author": "Ncase",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -6984,7 +8512,10 @@
     "cover": "{COVER_URL}/672.png",
     "url": "{HTML_URL}/672-2.html",
     "author": "Pontypants",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -6995,7 +8526,10 @@
     "cover": "{COVER_URL}/673.png",
     "url": "{HTML_URL}/673.html",
     "author": "SeethingSwarm",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -7006,7 +8540,10 @@
     "cover": "{COVER_URL}/674.png",
     "url": "{HTML_URL}/674.html",
     "author": "SeethingSwarm",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -7017,7 +8554,10 @@
     "cover": "{COVER_URL}/675.png",
     "url": "{HTML_URL}/675.html",
     "author": "SeethingSwarm",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -7028,7 +8568,10 @@
     "cover": "{COVER_URL}/676.png",
     "url": "{HTML_URL}/676.html",
     "author": "SeethingSwarm",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -7039,7 +8582,10 @@
     "cover": "{COVER_URL}/677.png",
     "url": "{HTML_URL}/677.html",
     "author": "SeethingSwarm",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -7050,7 +8596,10 @@
     "cover": "{COVER_URL}/678.png",
     "url": "{HTML_URL}/678.html",
     "author": "SeethingSwarm",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -7061,7 +8610,10 @@
     "cover": "{COVER_URL}/679.png",
     "url": "{HTML_URL}/679.html",
     "author": "SeethingSwarm",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -7072,7 +8624,11 @@
     "cover": "{COVER_URL}/680.png",
     "url": "{HTML_URL}/680.html",
     "author": "Nintendo",
-    "genres": [],
+    "genres": [
+      "action",
+      "platformer",
+      "skill"
+    ],
     "special": [
       "emulator",
       "web"
@@ -7084,7 +8640,10 @@
     "cover": "{COVER_URL}/685.png",
     "url": "{HTML_URL}/685.html",
     "author": "EA Sports",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "emulator",
       "web"
@@ -7096,7 +8655,10 @@
     "cover": "{COVER_URL}/686.png",
     "url": "{HTML_URL}/686.html",
     "author": "EA Sports",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "emulator",
       "web"
@@ -7108,7 +8670,10 @@
     "cover": "{COVER_URL}/687.png",
     "url": "{HTML_URL}/687.html",
     "author": "Tom Fulp",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -7119,7 +8684,10 @@
     "cover": "{COVER_URL}/688.png",
     "url": "{HTML_URL}/688.html",
     "author": "PopCap Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -7130,7 +8698,10 @@
     "cover": "{COVER_URL}/689.png",
     "url": "{HTML_URL}/689.html",
     "author": "Jonathan McEntee",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -7141,7 +8712,11 @@
     "cover": "{COVER_URL}/692.png",
     "url": "{HTML_URL}/692.html",
     "author": "Strimp's Kitchen",
-    "genres": [],
+    "genres": [
+      "action",
+      "platformer",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -7152,7 +8727,10 @@
     "cover": "{COVER_URL}/693.png",
     "url": "{HTML_URL}/693.html",
     "author": "Valve",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -7163,7 +8741,10 @@
     "cover": "{COVER_URL}/694.png",
     "url": "{HTML_URL}/694.html",
     "author": "Nintendo",
-    "genres": [],
+    "genres": [
+      "adventure",
+      "rpg"
+    ],
     "special": [
       "emulator",
       "gba",
@@ -7176,7 +8757,10 @@
     "cover": "{COVER_URL}/695.png",
     "url": "{HTML_URL}/695.html",
     "author": "Wix Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -7187,7 +8771,10 @@
     "cover": "{COVER_URL}/696.png",
     "url": "{HTML_URL}/696.html",
     "author": "Nintendo",
-    "genres": [],
+    "genres": [
+      "adventure",
+      "rpg"
+    ],
     "special": [
       "emulator",
       "nds",
@@ -7200,7 +8787,10 @@
     "cover": "{COVER_URL}/697.png",
     "url": "{HTML_URL}/697.html",
     "author": "justaliendev",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -7211,7 +8801,10 @@
     "cover": "{COVER_URL}/698.png",
     "url": "{HTML_URL}/698.html",
     "author": "justaliendev",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -7222,7 +8815,9 @@
     "cover": "{COVER_URL}/699.png",
     "url": "{HTML_URL}/699.html",
     "author": "freezenova",
-    "genres": [],
+    "genres": [
+      "action"
+    ],
     "special": [
       "web"
     ]
@@ -7233,7 +8828,9 @@
     "cover": "{COVER_URL}/701.png",
     "url": "{HTML_URL}/701.html",
     "author": "freezenova",
-    "genres": [],
+    "genres": [
+      "3d"
+    ],
     "special": [
       "web"
     ]
@@ -7244,7 +8841,10 @@
     "cover": "{COVER_URL}/702.png",
     "url": "{HTML_URL}/702.html",
     "author": "Alex Ashnov",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -7256,8 +8856,9 @@
     "url": "{HTML_URL}/704-fix.html",
     "author": "Pyturret, Willowy (squall.cc)",
     "genres": [
-      "horror",
-      "3d"
+      "3d",
+      "strategy",
+      "horror"
     ],
     "special": [
       "port"
@@ -7269,7 +8870,10 @@
     "cover": "{COVER_URL}/705.png",
     "url": "{HTML_URL}/705-fix.html",
     "author": "David Szymanski, 98corbins",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -7280,7 +8884,10 @@
     "cover": "{COVER_URL}/706.png",
     "url": "{HTML_URL}/706-fix.html",
     "author": "Miro Haverinen, Happy Paintings",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -7291,7 +8898,10 @@
     "cover": "{COVER_URL}/707.png",
     "url": "{HTML_URL}/707-fix.html",
     "author": "skgames, madkidgames",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -7302,7 +8912,10 @@
     "cover": "{COVER_URL}/708.png",
     "url": "{HTML_URL}/708-fix.html",
     "author": "WSS playground, EDURocks",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -7326,7 +8939,10 @@
     "cover": "{COVER_URL}/710.png",
     "url": "{HTML_URL}/710-fix.html",
     "author": "EvanProductions",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -7337,7 +8953,10 @@
     "cover": "{COVER_URL}/711.png",
     "url": "{HTML_URL}/711.html",
     "author": "Summitsphere",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -7348,7 +8967,11 @@
     "cover": "{COVER_URL}/712.png",
     "url": "{HTML_URL}/712-f.html",
     "author": "wik",
-    "genres": [],
+    "genres": [
+      "action",
+      "platformer",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -7359,7 +8982,10 @@
     "cover": "{COVER_URL}/713.png",
     "url": "{HTML_URL}/713.html",
     "author": "Konami, Team Silent",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "emulator",
       "web"
@@ -7371,7 +8997,10 @@
     "cover": "{COVER_URL}/716.png",
     "url": "{HTML_URL}/716-fix2.html",
     "author": "Panik Arcade",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -7382,7 +9011,10 @@
     "cover": "{COVER_URL}/717.png",
     "url": "{HTML_URL}/717-fix2.html",
     "author": "Anders Grube Jensen",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -7393,7 +9025,10 @@
     "cover": "{COVER_URL}/718.png",
     "url": "{HTML_URL}/718.html",
     "author": "House House",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -7404,7 +9039,10 @@
     "cover": "{COVER_URL}/719.png",
     "url": "{HTML_URL}/719.html",
     "author": "Aarimous, Thornityco",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -7415,7 +9053,10 @@
     "cover": "{COVER_URL}/720.png",
     "url": "{HTML_URL}/720.html",
     "author": "vfqd, Mr.Pootsley, Jaybooty, Kane Forster, shxyder",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -7426,7 +9067,10 @@
     "cover": "{COVER_URL}/721.png",
     "url": "{HTML_URL}/721.html",
     "author": "Bun Muen, Slqnt",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -7437,7 +9081,10 @@
     "cover": "{COVER_URL}/722.png",
     "url": "{HTML_URL}/722.html",
     "author": "Mike Klubnika, shxyder",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -7448,7 +9095,10 @@
     "cover": "{COVER_URL}/723.png",
     "url": "{HTML_URL}/723.html",
     "author": "Blobfish, Individual/Stinkalistic",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -7459,7 +9109,10 @@
     "cover": "{COVER_URL}/724.png",
     "url": "{HTML_URL}/724.html",
     "author": "Miziziziz, Deep Root Interactive, Individual/Stinkalistic",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -7470,7 +9123,10 @@
     "cover": "{COVER_URL}/725.png",
     "url": "{HTML_URL}/725-ff.html",
     "author": "Shredsauce Team",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -7481,7 +9137,10 @@
     "cover": "{COVER_URL}/727.png",
     "url": "{HTML_URL}/727.html",
     "author": "biznesbear",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -7492,7 +9151,10 @@
     "cover": "{COVER_URL}/728.png",
     "url": "{HTML_URL}/728.html",
     "author": "Alexander Wiseman",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -7503,7 +9165,10 @@
     "cover": "{COVER_URL}/729.png",
     "url": "{HTML_URL}/729.html",
     "author": "Sam Hogan",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -7514,7 +9179,10 @@
     "cover": "{COVER_URL}/730.png",
     "url": "{HTML_URL}/730.html",
     "author": "Sam Hogan",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -7525,7 +9193,10 @@
     "cover": "{COVER_URL}/731.png",
     "url": "{HTML_URL}/731.html",
     "author": "caijiqaq",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -7536,7 +9207,10 @@
     "cover": "{COVER_URL}/732.png",
     "url": "{HTML_URL}/732.html",
     "author": "idk",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "emulator",
       "nes",
@@ -7549,7 +9223,10 @@
     "cover": "{COVER_URL}/733.png",
     "url": "{HTML_URL}/733.html",
     "author": "Nintendo",
-    "genres": [],
+    "genres": [
+      "strategy",
+      "skill"
+    ],
     "special": [
       "emulator",
       "gba",
@@ -7562,7 +9239,10 @@
     "cover": "{COVER_URL}/734.png",
     "url": "{HTML_URL}/734.html",
     "author": "Puppet Combo",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -7573,7 +9253,10 @@
     "cover": "{COVER_URL}/735.png",
     "url": "{HTML_URL}/735.html",
     "author": "Zephyrside",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "emulator",
       "nes",
@@ -7586,7 +9269,11 @@
     "cover": "{COVER_URL}/736.png",
     "url": "{HTML_URL}/736.html",
     "author": "Zephyrside",
-    "genres": [],
+    "genres": [
+      "action",
+      "platformer",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -7597,7 +9284,10 @@
     "cover": "{COVER_URL}/737.png",
     "url": "{HTML_URL}/737.html",
     "author": "びぶ/viv",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -7608,7 +9298,10 @@
     "cover": "{COVER_URL}/738.png",
     "url": "{HTML_URL}/738-u.html",
     "author": "PlaySide Studios Ltd, Metro Trains",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -7619,7 +9312,10 @@
     "cover": "{COVER_URL}/739.png",
     "url": "{HTML_URL}/739.html",
     "author": "RHM Interactive OÜ",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -7630,7 +9326,10 @@
     "cover": "{COVER_URL}/740.png",
     "url": "{HTML_URL}/740.html",
     "author": "epickface",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -7641,7 +9340,10 @@
     "cover": "{COVER_URL}/741.png",
     "url": "{HTML_URL}/741.html",
     "author": "Capcom",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "emulator",
       "psx",
@@ -7654,7 +9356,10 @@
     "cover": "{COVER_URL}/742.png",
     "url": "{HTML_URL}/742.html",
     "author": "Capcom",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "emulator",
       "psx",
@@ -7667,7 +9372,10 @@
     "cover": "{COVER_URL}/743.png",
     "url": "{HTML_URL}/743.html",
     "author": "ODDROK",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -7678,7 +9386,10 @@
     "cover": "{COVER_URL}/744.png",
     "url": "{HTML_URL}/744-a.html",
     "author": "AZ Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -7689,7 +9400,10 @@
     "cover": "{COVER_URL}/745.png",
     "url": "{HTML_URL}/745.html",
     "author": "Nintendo",
-    "genres": [],
+    "genres": [
+      "strategy",
+      "skill"
+    ],
     "special": [
       "emulator",
       "nes",
@@ -7702,7 +9416,10 @@
     "cover": "{COVER_URL}/746.png",
     "url": "{HTML_URL}/746.html",
     "author": "yakubell",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -7713,7 +9430,9 @@
     "cover": "{COVER_URL}/747.png",
     "url": "{HTML_URL}/747.html",
     "author": "omegafredo",
-    "genres": [],
+    "genres": [
+      "3d"
+    ],
     "special": [
       "web"
     ]
@@ -7724,7 +9443,10 @@
     "cover": "{COVER_URL}/748.png",
     "url": "{HTML_URL}/748.html",
     "author": "mario1d240",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -7735,7 +9457,10 @@
     "cover": "{COVER_URL}/749.png",
     "url": "{HTML_URL}/749.html",
     "author": "Amusement Vision, camthesaxman etc",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -7746,7 +9471,10 @@
     "cover": "{COVER_URL}/750.png",
     "url": "{HTML_URL}/750-u.html",
     "author": "Free_Breath",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -7757,7 +9485,10 @@
     "cover": "{COVER_URL}/751.png",
     "url": "{HTML_URL}/751.html",
     "author": "Zakaria_ALZ",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -7768,7 +9499,10 @@
     "cover": "{COVER_URL}/752.png",
     "url": "{HTML_URL}/752.html",
     "author": "Rovio Entertainment, EDURocks",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -7779,7 +9513,10 @@
     "cover": "{COVER_URL}/753.png",
     "url": "{HTML_URL}/753.html",
     "author": "Print More India",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -7790,7 +9527,11 @@
     "cover": "{COVER_URL}/754.png",
     "url": "{HTML_URL}/754.html",
     "author": "Mojang",
-    "genres": [],
+    "genres": [
+      "adventure",
+      "rpg",
+      "3d"
+    ],
     "special": [
       "port"
     ]
@@ -7814,7 +9555,10 @@
     "cover": "{COVER_URL}/756.png",
     "url": "{HTML_URL}/756-f.html",
     "author": "IZ (BLUE STAR Entertainment)",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -7825,7 +9569,10 @@
     "cover": "{COVER_URL}/757.png",
     "url": "{HTML_URL}/757.html",
     "author": "Icedrop Games, mysmic",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -7836,7 +9583,10 @@
     "cover": "{COVER_URL}/758.png",
     "url": "{HTML_URL}/758a.html",
     "author": "Ronezkj15",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -7847,7 +9597,9 @@
     "cover": "{COVER_URL}/759.png",
     "url": "{HTML_URL}/759.html",
     "author": "countlessnights, 2 Left Thumbs, NotRexed",
-    "genres": [],
+    "genres": [
+      "strategy"
+    ],
     "special": [
       "port"
     ]
@@ -7858,7 +9610,10 @@
     "cover": "{COVER_URL}/760.png",
     "url": "{HTML_URL}/760.html",
     "author": "notsospecialgames, shxyder",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -7869,7 +9624,10 @@
     "cover": "{COVER_URL}/761.png",
     "url": "{HTML_URL}/761.html",
     "author": "dmcaguy",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -7880,7 +9638,10 @@
     "cover": "{COVER_URL}/762.png",
     "url": "{HTML_URL}/762.html",
     "author": "The Interviewed, wasm.com",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -7904,7 +9665,10 @@
     "cover": "{COVER_URL}/764.png",
     "url": "{HTML_URL}/764.html",
     "author": "rend-pii",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -7915,7 +9679,12 @@
     "cover": "{COVER_URL}/765.png",
     "url": "{HTML_URL}/765.html",
     "author": "kharbor_ykt",
-    "genres": [],
+    "genres": [
+      "action",
+      "strategy",
+      "horror",
+      "racing"
+    ],
     "special": [
       "web"
     ]
@@ -7926,7 +9695,10 @@
     "cover": "{COVER_URL}/766.png",
     "url": "{HTML_URL}/766.html",
     "author": "unknown",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -7937,7 +9709,10 @@
     "cover": "{COVER_URL}/767.png",
     "url": "{HTML_URL}/767.html",
     "author": "Beruke Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -7948,7 +9723,9 @@
     "cover": "{COVER_URL}/768.png",
     "url": "{HTML_URL}/768.html",
     "author": "GamePush",
-    "genres": [],
+    "genres": [
+      "action"
+    ],
     "special": [
       "web"
     ]
@@ -7959,7 +9736,9 @@
     "cover": "{COVER_URL}/769.png",
     "url": "{HTML_URL}/769.html",
     "author": "unknown",
-    "genres": [],
+    "genres": [
+      "action"
+    ],
     "special": [
       "web"
     ]
@@ -7970,7 +9749,11 @@
     "cover": "{COVER_URL}/770.png",
     "url": "{HTML_URL}/770.html",
     "author": "Sonic Team Junior, crunch, vinmannie",
-    "genres": [],
+    "genres": [
+      "action",
+      "platformer",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -7981,7 +9764,10 @@
     "cover": "{COVER_URL}/771.png",
     "url": "{HTML_URL}/771-z.html",
     "author": "Team Cherry, Edurocks",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -7992,7 +9778,10 @@
     "cover": "{COVER_URL}/772.png",
     "url": "{HTML_URL}/772.html",
     "author": "Lucasfilm",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "dos",
       "web"
@@ -8004,7 +9793,10 @@
     "cover": "{COVER_URL}/773.png",
     "url": "{HTML_URL}/773.html",
     "author": "Westwood Studios",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "dos",
       "web"
@@ -8016,7 +9808,9 @@
     "cover": "{COVER_URL}/774.png",
     "url": "{HTML_URL}/774.html",
     "author": "stefano1234",
-    "genres": [],
+    "genres": [
+      "racing"
+    ],
     "special": [
       "web"
     ]
@@ -8027,7 +9821,10 @@
     "cover": "{COVER_URL}/775.png",
     "url": "{HTML_URL}/775.html",
     "author": "TeleSTOP",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -8038,7 +9835,10 @@
     "cover": "{COVER_URL}/776.png",
     "url": "{HTML_URL}/776.html",
     "author": "ivysly",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -8049,7 +9849,10 @@
     "cover": "{COVER_URL}/777.png",
     "url": "{HTML_URL}/777.html",
     "author": "tellusgames",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -8060,7 +9863,10 @@
     "cover": "{COVER_URL}/778.png",
     "url": "{HTML_URL}/778.html",
     "author": "NBCUniversal Entertainment Japan, Pioneer Productions",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -8071,7 +9877,10 @@
     "cover": "{COVER_URL}/779.png",
     "url": "{HTML_URL}/779.html",
     "author": "Cyberdreams",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "dos",
       "web"
@@ -8083,7 +9892,10 @@
     "cover": "{COVER_URL}/780.png",
     "url": "{HTML_URL}/780.html",
     "author": "Weasel",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "flash"
     ]
@@ -8094,7 +9906,10 @@
     "cover": "{COVER_URL}/781.png",
     "url": "{HTML_URL}/781.html",
     "author": "Makopaz",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "web"
     ]
@@ -8105,7 +9920,10 @@
     "cover": "{COVER_URL}/782.png",
     "url": "{HTML_URL}/782f.html",
     "author": "NanaOn-Sha",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "emulator",
       "psx",
@@ -8118,7 +9936,10 @@
     "cover": "{COVER_URL}/783.png",
     "url": "{HTML_URL}/783.html",
     "author": "mdtowerz",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -8129,7 +9950,10 @@
     "cover": "{COVER_URL}/784.png",
     "url": "{HTML_URL}/784.html",
     "author": "Gabriel115GJ",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
@@ -8140,7 +9964,10 @@
     "cover": "{COVER_URL}/785.png",
     "url": "{HTML_URL}/785.html",
     "author": "RobTop Games",
-    "genres": [],
+    "genres": [
+      "action",
+      "skill"
+    ],
     "special": [
       "port"
     ]
