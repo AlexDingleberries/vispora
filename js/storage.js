@@ -21,7 +21,7 @@ function getCloakUrl(){return get(KEYS.CLOAK_URL,'');}
 function setCloakUrl(v){set(KEYS.CLOAK_URL,v);}
 function getAutoCloak(){return get(KEYS.AUTO_CLOAK,false);}
 function setAutoCloak(v){set(KEYS.AUTO_CLOAK,v);}
-function getPanicKey(){return get(KEYS.PANIC_KEY,'RightBracket');}
+function getPanicKey(){return get(KEYS.PANIC_KEY,'BracketRight');}
 function setPanicKey(v){set(KEYS.PANIC_KEY,v);}
 function getFavorites(){return get(KEYS.FAVORITES,[]);}
 function isFavorite(id){return getFavorites().includes(Number(id));}

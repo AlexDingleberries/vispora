@@ -842,7 +842,7 @@
     "genres": [
       "action",
       "shooter",
-      "io"
+      ".io"
     ],
     "special": [
       "web"
@@ -1477,7 +1477,7 @@
     "author": "VOODOO",
     "genres": [
       "casual",
-      "io"
+      ".io"
     ],
     "special": [
       "web"
@@ -3959,7 +3959,7 @@
       "3d"
     ],
     "special": [
-      "web"
+      "port"
     ]
   },
   {
@@ -6127,7 +6127,7 @@
     "author": "slither.io",
     "genres": [
       "casual",
-      "io"
+      ".io"
     ],
     "special": [
       "web"
@@ -9595,20 +9595,6 @@
     ],
     "special": [
       "web"
-    ]
-  },
-  {
-    "id": 750,
-    "name": "Five Nights at Last Breath",
-    "cover": "covers/750.png",
-    "url": "html/750-u.html",
-    "author": "Free_Breath",
-    "genres": [
-      "action",
-      "horror"
-    ],
-    "special": [
-      "port"
     ]
   },
   {

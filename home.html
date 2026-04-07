@@ -130,8 +130,7 @@ function renderDay(){
   if(!allGames.length) return;
   
   const seed = new Date().getDate();
-  const shuffled = [...allGames].sort((a,b)=>(((a.id*1103+seed)%997)-((b.id*1103+seed)%997)));
-  const pop = shuffled.slice(0, 12);
+const shuffled = [...allGames].sort((a,b)=>(((a.id * (seed + 1) * 1103) % 997) - ((b.id * (seed + 1) * 1103) % 997)));  const pop = shuffled.slice(0, 12);
   
   const row = document.createElement('div');
   row.className = 'games-row';
