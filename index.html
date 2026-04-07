@@ -41,7 +41,7 @@
       <div><div class="settings-label">Panic Key</div><div class="settings-label-desc">Press to instantly redirect</div></div>
       <div class="panic-key-display" id="panic-key-btn" tabindex="0" role="button">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/></svg>
-        <span id="panic-key-label">ESC</span>
+        <span id="panic-key-label">]</span>
       </div>
     </div>
   </div>
@@ -52,6 +52,9 @@
 <script>
 VCloak.initCloak();
 VApp.initParticles();
+
+const autoCloak = VStorage.getAutoCloak();
+if (autoCloak) var win = window.open(); win.document.body.style.margin = '0';win.document.body.style.height = '100vh';var iframe = win.document.createElement('iframe');iframe.style.border = 'none';iframe.style.width = '100%'; iframe.style.height = '100%';iframe.style.margin = '0'; iframe.src = 'home.html';win.document.body.appendChild(iframe);;const m = VStorage.getCloakMode();const cu = VStorage.getCloakUrl();if (m === 'google') {window.location.replace(CLOAK_TARGETS.google.url);} else if (m === 'custom' && cu) {window.location.replace(cu);};
 
 const modeSelect=document.getElementById('cloak-mode-select');
 const customRow=document.getElementById('custom-url-row');
@@ -78,6 +81,6 @@ function startListen(){
 }
 pkBtn.onclick=startListen;
 pkBtn.onkeydown=e=>{if(e.key==='Enter'||e.key===' ')startListen();};
-document.getElementById('launch-btn').onclick=()=>window.open('home.html','_blank');
+document.getElementById('launch-btn').onclick=()=>{var win = window.open(); win.document.body.style.margin = '0';win.document.body.style.height = '100vh';var iframe = win.document.createElement('iframe');iframe.style.border = 'none';iframe.style.width = '100%'; iframe.style.height = '100%';iframe.style.margin = '0'; iframe.src = 'home.html';win.document.body.appendChild(iframe);;const m = VStorage.getCloakMode();const cu = VStorage.getCloakUrl();if (m === 'google') {window.location.replace(CLOAK_TARGETS.google.url);} else if (m === 'custom' && cu) {window.location.replace(cu);}};
 </script>
 </body></html>

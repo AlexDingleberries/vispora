@@ -71,7 +71,8 @@ body {
   opacity: 0.5;
 }
 
-body > *:not(#particles-js) { position: relative; z-index: 1; }
+/* NOTE: Do NOT add position:relative here — it creates a stacking context
+   that traps fixed/absolute children like modals below the nav z-index */
 
 ::-webkit-scrollbar { width: 4px; height: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
@@ -106,7 +107,7 @@ img { display: block; max-width: 100%; }
 .modal-overlay {
   position: fixed; inset: 0; background: rgba(0,0,0,0.6);
   backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
-  z-index: 900; display: flex; align-items: center; justify-content: center;
+  z-index: 30000; display: flex; align-items: center; justify-content: center;
   padding: 20px; animation: fadeIn 0.18s ease both;
 }
 .modal {

@@ -35,9 +35,12 @@ function showToast(msg, type='info', duration=3000){
 }
 
 // ---- Modal ----
+// ---- Modal ----
 function showModal({title,message,confirmText='Confirm',cancelText='Cancel',dangerous=false}){
   return new Promise(resolve=>{
-    const o=document.createElement('div');o.className='modal-overlay';
+    const o=document.createElement('div');
+    o.className='modal-overlay';
+    o.style.zIndex='30000'; // <-- THIS FIXES IT
     o.innerHTML=`<div class="modal" role="dialog" aria-modal="true">
       <h3>${esc(title)}</h3><p>${esc(message)}</p>
       <div class="modal-actions">

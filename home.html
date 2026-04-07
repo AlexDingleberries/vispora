@@ -27,7 +27,19 @@
       </div>
     </div>
 
-    <!-- Recent -->
+    <!-- Games of the Day -->
+    <section>
+      <div class="section-header">
+        <h2 class="section-title">Games of the Day</h2>
+      </div>
+      <div id="day-wrap">
+        <div class="games-row" id="day-row" style="pointer-events:none">
+          ${[...Array(8)].map(()=>'<div class="skeleton" style="flex:0 0 155px;height:155px;border-radius:10px"></div>').join('')}
+        </div>
+      </div>
+    </section>
+
+     <!-- Recent -->
     <section>
       <div class="section-header">
         <h2 class="section-title">Recently Played</h2>
@@ -35,18 +47,6 @@
       </div>
       <div id="recent-wrap">
         <div class="empty-state"><div class="empty-state-icon">🎮</div><div class="empty-state-title">Nothing played yet</div><p>Head to the <a href="games.html" style="color:var(--accent)">Games Library</a> to start!</p></div>
-      </div>
-    </section>
-
-    <!-- Games of the Week -->
-    <section>
-      <div class="section-header">
-        <h2 class="section-title">Games of the Week</h2>
-      </div>
-      <div id="week-wrap">
-        <div class="games-row" id="week-row" style="pointer-events:none">
-          ${[...Array(8)].map(()=>'<div class="skeleton" style="flex:0 0 155px;height:155px;border-radius:10px"></div>').join('')}
-        </div>
       </div>
     </section>
 
@@ -74,12 +74,14 @@ let allGames=[];
 
 async function init(){
   allGames=await VApp.loadGames();
-  renderHero();renderStats();renderRecent();renderWeek();renderFavs();
+  renderHero();renderStats();renderRecent();renderDay();renderFavs();
 }
 
 function renderHero(){
   if(!allGames.length)return;
-  const g=allGames[Math.floor(Math.random()*Math.min(allGames.length,50))];
+  const featured=allGames.filter(g=>g.featured);
+  const pool=featured.length?featured:allGames.slice(0,50);
+  const g=pool[Math.floor(Math.random()*pool.length)];
   const card=document.getElementById('hero-card');
   card.classList.remove('skeleton');
   card.href=`player.html?id=${g.id}`;
@@ -121,15 +123,20 @@ function renderRecent(){
   va.addEventListener('click',e=>{e.preventDefault();showViewAll('Recent Games',hist);});
 }
 
-function renderWeek(){
-  const wrap=document.getElementById('week-wrap');if(!allGames.length)return;
-  // Week = all games, shuffled (seeded by date so consistent per day), NOT from history
-  const seed=new Date().getDate();
-  const shuffled=[...allGames].sort((a,b)=>(((a.id*1103+seed)%997)-((b.id*1103+seed)%997)));
-  const pop=shuffled.slice(0,6);
-  const row=document.createElement('div');row.className='games-row';
-  row.innerHTML=pop.map(g=>VApp.makeCard(g)).join('');
-  wrap.innerHTML='';wrap.appendChild(row);
+function renderDay(){
+  const wrap = document.getElementById('day-wrap'); 
+  if(!allGames.length) return;
+  
+  const seed = new Date().getDate();
+  const shuffled = [...allGames].sort((a,b)=>(((a.id*1103+seed)%997)-((b.id*1103+seed)%997)));
+  const pop = shuffled.slice(0, 12);
+  
+  const row = document.createElement('div');
+  row.className = 'games-row';
+  row.innerHTML = pop.map(g => VApp.makeCard(g)).join('');
+  
+  wrap.innerHTML = '';
+  wrap.appendChild(row);
   VApp.initStars(row);
 }
 
@@ -138,7 +145,7 @@ function renderFavs(){
   if(!ids.length)return;
   const games=ids.map(id=>allGames.find(g=>g.id===id)).filter(Boolean);
   if(!games.length)return;
-  va.style.display=ids.length>8?'':'none';
+  va.style.display='';
   const row=document.createElement('div');row.className='games-row';
   row.innerHTML=games.slice(0,8).map(g=>VApp.makeCard(g)).join('');
   wrap.innerHTML='';wrap.appendChild(row);

@@ -5,7 +5,9 @@
   background: rgba(13,13,13,0.9);
   backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--card-border);
-  z-index: 1000;
+  z-index: 20000;
+  pointer-events: auto;
+  user-select: none;
   display: flex; align-items: center;
   padding: 0 28px; gap: 32px;
 }
@@ -159,20 +161,45 @@
 
 /* ===== SCROLL ROW ===== */
 .games-row {
-  display: flex; gap: 12px;
-  overflow-x: auto; padding: 4px 0 14px;
+  display: flex; 
+  gap: 12px;
+  overflow-x: auto; 
+  padding: 4px 0 14px;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
+  /* Scrollbar visible for better UX */
+  scrollbar-width: thin;
+  scrollbar-color: var(--card-border) transparent;
 }
-.games-row::-webkit-scrollbar { display: none; }
-.games-row .game-card { flex: 0 0 155px; scroll-snap-align: start; }
 
+/* Custom Flat Scrollbar for Webkit */
+.games-row::-webkit-scrollbar {
+  height: 6px;
+}
+
+.games-row::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.games-row::-webkit-scrollbar-thumb {
+  background: var(--card-border);
+  border-radius: 10px;
+  transition: background 160ms;
+}
+
+.games-row::-webkit-scrollbar-thumb:hover {
+  background: var(--text-dim);
+}
+
+.games-row .game-card { 
+  flex: 0 0 200px; 
+  scroll-snap-align: start; 
+}
 /* Section header */
 .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
-.section-title { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-secondary); }
+.section-title { font-size: 1rem; font-weight: 700;  color: var(--text-secondary); }
 .section-viewall {
-  font-size: 0.72rem; font-weight: 600; color: var(--accent);
+  font-size: 1rem; font-weight: 600; color: var(--accent);
   opacity: 0.75; letter-spacing: 0.04em; transition: opacity 160ms;
 }
 .section-viewall:hover { opacity: 1; }
@@ -205,7 +232,7 @@
 .filter-tabs { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; }
 .filter-tab {
   padding: 5px 16px; border-radius: 100px;
-  font-size: 0.77rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
+  font-size: 0.77rem; font-weight: 600; 
   color: var(--text-secondary); background: var(--bg3); border: 1px solid var(--card-border);
   transition: all 160ms ease; cursor: pointer;
 }
@@ -288,10 +315,11 @@
 }
 .hero-badge {
   display: inline-block; padding: 2px 9px; background: var(--accent); color: var(--text-inv);
-  font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; border-radius: 3px; margin-bottom: 8px; text-transform: uppercase;
+  font-size: 0.62rem; font-weight: 700;  border-radius: 3px; margin-bottom: 8px; text-transform: uppercase;
 }
 .hero-title { font-size: clamp(1.1rem, 3vw, 1.7rem); font-weight: 800; color: #fff; line-height: 1.15; margin-bottom: 6px; }
 .hero-author { font-size: 0.8rem; color: rgba(255,255,255,0.55); margin-bottom: 14px; }
+
 
 /* Player controls */
 .player-controls {
@@ -308,7 +336,7 @@
 /* Tags */
 .tag {
   display: inline-block; padding: 2px 9px; border-radius: 100px;
-  font-size: 0.68rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
+  font-size: 0.68rem; font-weight: 600; 
   background: var(--bg4); border: 1px solid var(--card-border); color: var(--text-secondary);
 }
 .tag-accent { background: var(--accent-dim); border-color: rgba(var(--accent-rgb),0.25); color: var(--accent); }
@@ -316,7 +344,7 @@
 /* Stats */
 .stat-card { background: var(--bg4); border: 1px solid var(--card-border); border-radius: var(--radius-lg); padding: 18px; text-align: center; }
 .stat-value { font-size: 1.5rem; font-weight: 800; color: var(--accent); line-height: 1; }
-.stat-label { font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-secondary); margin-top: 4px; }
+.stat-label { font-size: 0.68rem; font-weight: 600; color: var(--text-secondary); margin-top: 4px; }
 
 /* Settings inputs */
 .settings-input {
