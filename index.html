@@ -54,7 +54,7 @@ VCloak.initCloak();
 VApp.initParticles();
 
 const autoCloak = VStorage.getAutoCloak();
-if (autoCloak) var win = window.open(); win.document.body.style.margin = '0';win.document.body.style.height = '100vh';var iframe = win.document.createElement('iframe');iframe.style.border = 'none';iframe.style.width = '100%'; iframe.style.height = '100%';iframe.style.margin = '0'; iframe.src = 'home.html';win.document.body.appendChild(iframe);;const m = VStorage.getCloakMode();const cu = VStorage.getCloakUrl();if (m === 'google') {window.location.replace(CLOAK_TARGETS.google.url);} else if (m === 'custom' && cu) {window.location.replace(cu);};
+if (autoCloak) { var win = window.open(); win.document.body.style.margin = '0';win.document.body.style.height = '100vh';var iframe = win.document.createElement('iframe');iframe.style.border = 'none';iframe.style.width = '100%'; iframe.style.height = '100%';iframe.style.margin = '0'; iframe.src = 'home.html';win.document.body.appendChild(iframe);;const m = VStorage.getCloakMode();const cu = VStorage.getCloakUrl();if (m === 'google') {window.location.replace(CLOAK_TARGETS.google.url);} else if (m === 'custom' && cu) {window.location.replace(cu);};}
 
 const modeSelect=document.getElementById('cloak-mode-select');
 const customRow=document.getElementById('custom-url-row');
