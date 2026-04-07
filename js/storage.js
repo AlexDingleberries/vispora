@@ -15,7 +15,7 @@ function getAccent(){return get(KEYS.ACCENT,'#ffffff');}
 function setAccent(v){set(KEYS.ACCENT,v);}
 function getFontSize(){return get(KEYS.FONT_SIZE,'medium');}
 function setFontSize(v){set(KEYS.FONT_SIZE,v);}
-function getCloakMode(){return get(KEYS.CLOAK_MODE,'none');}
+function getCloakMode(){return get(KEYS.CLOAK_MODE,'google');}
 function setCloakMode(v){set(KEYS.CLOAK_MODE,v);}
 function getCloakUrl(){return get(KEYS.CLOAK_URL,'');}
 function setCloakUrl(v){set(KEYS.CLOAK_URL,v);}

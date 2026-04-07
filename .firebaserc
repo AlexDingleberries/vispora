@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "default": "vispora-87e0b"
+  },
+  "targets": {
+    "vispora-87e0b": {
+      "hosting": {
+        "main": [
+          "vispora"
+        ],
+        "secondary": [
+          "vispora-87e0b"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
