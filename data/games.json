@@ -355,8 +355,7 @@
     "special": [
       "web"
     ],
-        "featured": true
-
+    "featured": true
   },
   {
     "id": 25,
@@ -957,7 +956,7 @@
     "name": "Basket Random",
     "cover": "covers/66.png",
     "url": "html/66.html",
-    "author": "RHM Interactive O\u00dc",
+    "author": "RHM Interactive OÜ",
     "genres": [
       "sports",
       "casual"
@@ -1262,8 +1261,8 @@
     "url": "html/87.html",
     "author": "Ethan O'Brien",
     "genres": [
-      "action",
-      "skill"
+      "casual",
+      "simulation"
     ],
     "special": [
       "emulator",
@@ -1278,6 +1277,8 @@
     "author": "Oslo Albet",
     "genres": [
       "action",
+      "adventure",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -1292,6 +1293,8 @@
     "author": "Oslo Albet",
     "genres": [
       "action",
+      "adventure",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -1320,6 +1323,7 @@
     "author": "minijuegos.com",
     "genres": [
       "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -1334,6 +1338,7 @@
     "author": "Bone Cracker Games",
     "genres": [
       "action",
+      "racing",
       "skill"
     ],
     "special": [
@@ -1348,7 +1353,8 @@
     "author": "SayGames",
     "genres": [
       "action",
-      "skill"
+      "shooter",
+      "casual"
     ],
     "special": [
       "web"
@@ -1362,6 +1368,7 @@
     "author": "Megagon Industries",
     "genres": [
       "action",
+      "racing",
       "skill"
     ],
     "special": [
@@ -1373,9 +1380,10 @@
     "name": "Line Rider",
     "cover": "covers/95.png",
     "url": "html/95.html",
-    "author": "Bo\u0161tjan \u010cade\u017e",
+    "author": "Boštjan Čadež",
     "genres": [
-      "action",
+      "casual",
+      "simulation",
       "skill"
     ],
     "special": [
@@ -1452,7 +1460,7 @@
     "name": "Ninja vs EvilCorp",
     "cover": "covers/101.png",
     "url": "html/101.html",
-    "author": "R\u00e9mi Vansteelandt",
+    "author": "Rémi Vansteelandt",
     "genres": [
       "action",
       "fighting"
@@ -1483,6 +1491,7 @@
     "author": "Stevie Critoph",
     "genres": [
       "action",
+      "puzzle",
       "skill"
     ],
     "special": [
@@ -1497,6 +1506,7 @@
     "author": "Stevie Critoph",
     "genres": [
       "action",
+      "puzzle",
       "skill"
     ],
     "special": [
@@ -1511,6 +1521,7 @@
     "author": "Stevie Critoph",
     "genres": [
       "action",
+      "puzzle",
       "skill"
     ],
     "special": [
@@ -1525,6 +1536,7 @@
     "author": "jmtb02",
     "genres": [
       "action",
+      "puzzle",
       "skill"
     ],
     "special": [
@@ -1539,6 +1551,7 @@
     "author": "jmtb02",
     "genres": [
       "action",
+      "puzzle",
       "skill"
     ],
     "special": [
@@ -1552,7 +1565,8 @@
     "url": "html/108.html",
     "author": "Winter Studio",
     "genres": [
-      "action",
+      "casual",
+      "fishing",
       "skill"
     ],
     "special": [
@@ -1567,6 +1581,7 @@
     "author": "Happymagenta UAB",
     "genres": [
       "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -1581,6 +1596,7 @@
     "author": "GonzoSSM",
     "genres": [
       "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -1595,7 +1611,7 @@
     "author": "New Eich Games",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "web"
@@ -1622,8 +1638,8 @@
     "url": "html/113.html",
     "author": "Mike Welsh",
     "genres": [
-      "action",
-      "skill"
+      "casual",
+      "simulation"
     ],
     "special": [
       "emulator",
@@ -1651,7 +1667,8 @@
     "url": "html/115.html",
     "author": "Miniclip.com",
     "genres": [
-      "action",
+      "sports",
+      "casual",
       "skill"
     ],
     "special": [
@@ -1663,7 +1680,7 @@
     "name": "Offroad Mountain Bike",
     "cover": "covers/116.png",
     "url": "html/116.html",
-    "author": "RHM Interactive O\u00dc",
+    "author": "RHM Interactive OÜ",
     "genres": [
       "racing"
     ],
@@ -1679,6 +1696,7 @@
     "author": "do.games",
     "genres": [
       "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -1747,7 +1765,7 @@
     "author": "Brain Massage",
     "genres": [
       "action",
-      "skill"
+      "racing"
     ],
     "special": [
       "web"
@@ -1760,7 +1778,7 @@
     "url": "html/123-win.html",
     "author": "Kodub",
     "genres": [
-      "action",
+      "racing",
       "skill"
     ],
     "special": [
@@ -1830,6 +1848,7 @@
     "author": "VOODOO",
     "genres": [
       "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -1844,6 +1863,7 @@
     "author": "Dong Nguyen",
     "genres": [
       "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -1857,7 +1877,8 @@
     "url": "html/130.html",
     "author": "ppy",
     "genres": [
-      "action",
+      "music",
+      "rhythm",
       "skill"
     ],
     "special": [
@@ -1899,7 +1920,8 @@
     "url": "html/148.html",
     "author": "Famobi",
     "genres": [
-      "action",
+      "sports",
+      "casual",
       "skill"
     ],
     "special": [
@@ -1914,6 +1936,7 @@
     "author": "Voodoo",
     "genres": [
       "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -1954,8 +1977,8 @@
     "url": "html/152.html",
     "author": "Supersonic Studios LTD",
     "genres": [
-      "action",
-      "skill"
+      "puzzle",
+      "casual"
     ],
     "special": [
       "web"
@@ -1969,6 +1992,8 @@
     "author": "Voodoo",
     "genres": [
       "action",
+      "sports",
+      "casual",
       "skill"
     ],
     "special": [
@@ -1983,6 +2008,7 @@
     "author": "SayGames",
     "genres": [
       "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -1996,8 +2022,8 @@
     "url": "html/155.html",
     "author": "TapNation",
     "genres": [
-      "action",
-      "skill"
+      "puzzle",
+      "casual"
     ],
     "special": [
       "web"
@@ -2037,6 +2063,7 @@
     "author": "RedFox Games",
     "genres": [
       "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -2050,8 +2077,8 @@
     "url": "html/159.html",
     "author": "Nine&Nine",
     "genres": [
-      "action",
-      "skill"
+      "casual",
+      "puzzle"
     ],
     "special": [
       "web"
@@ -2143,6 +2170,7 @@
     "author": "98corbins",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -2157,6 +2185,7 @@
     "author": "??",
     "genres": [
       "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -2171,7 +2200,7 @@
     "author": "Beedo Games",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "web"
@@ -2184,7 +2213,7 @@
     "url": "html/169.html",
     "author": "Damien Clarke",
     "genres": [
-      "action",
+      "puzzle",
       "skill"
     ],
     "special": [
@@ -2228,7 +2257,8 @@
     "author": "playducky.com",
     "genres": [
       "action",
-      "skill"
+      "simulation",
+      "casual"
     ],
     "special": [
       "web"
@@ -2241,7 +2271,7 @@
     "url": "html/173.html",
     "author": "Illia Kaminetskyi",
     "genres": [
-      "action",
+      "racing",
       "skill"
     ],
     "special": [
@@ -2255,8 +2285,9 @@
     "url": "html/174.html",
     "author": "Kendja",
     "genres": [
-      "action",
-      "skill"
+      "strategy",
+      "simulation",
+      "casual"
     ],
     "special": [
       "flash"
@@ -2270,6 +2301,7 @@
     "author": "Joseph Cloutier",
     "genres": [
       "action",
+      "endless-runner",
       "skill"
     ],
     "special": [
@@ -2284,6 +2316,7 @@
     "author": "Joseph Cloutier",
     "genres": [
       "action",
+      "endless-runner",
       "skill"
     ],
     "special": [
@@ -2328,6 +2361,7 @@
     "author": "landgreen",
     "genres": [
       "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -2373,7 +2407,8 @@
     "author": "Ericetto",
     "genres": [
       "action",
-      "skill"
+      "casual",
+      "physics"
     ],
     "special": [
       "web"
@@ -2386,8 +2421,8 @@
     "url": "html/187.html",
     "author": "Lucas Pope",
     "genres": [
-      "action",
-      "skill"
+      "strategy",
+      "simulation"
     ],
     "special": [
       "flash"
@@ -2401,6 +2436,7 @@
     "author": "Ciorbyn",
     "genres": [
       "action",
+      "racing",
       "skill"
     ],
     "special": [
@@ -2459,8 +2495,9 @@
     "url": "html/193.html",
     "author": "Pixelliminal",
     "genres": [
-      "action",
-      "skill"
+      "adventure",
+      "puzzle",
+      "casual"
     ],
     "special": [
       "port"
@@ -2474,7 +2511,8 @@
     "author": "Studio Minus, 98corbins",
     "genres": [
       "action",
-      "skill"
+      "simulation",
+      "casual"
     ],
     "special": [
       "port"
@@ -2488,7 +2526,8 @@
     "author": "semiwork, 98corbins",
     "genres": [
       "action",
-      "skill"
+      "horror",
+      "adventure"
     ],
     "special": [
       "port"
@@ -2502,7 +2541,7 @@
     "author": "New Blood Interactive, Cake Logic",
     "genres": [
       "action",
-      "skill"
+      "shooter"
     ],
     "special": [
       "port"
@@ -2515,8 +2554,8 @@
     "url": "html/197.html",
     "author": "David Li",
     "genres": [
-      "action",
-      "skill"
+      "casual",
+      "simulation"
     ],
     "special": [
       "web"
@@ -2597,7 +2636,7 @@
     "author": "Id Software",
     "genres": [
       "action",
-      "skill"
+      "shooter"
     ],
     "special": [
       "web"
@@ -2625,13 +2664,13 @@
     "author": "Mike Klubnika",
     "genres": [
       "action",
-      "skill"
+      "strategy",
+      "horror"
     ],
     "special": [
       "port"
     ],
-        "featured": true
-
+    "featured": true
   },
   {
     "id": 206,
@@ -2670,6 +2709,7 @@
     "author": "Voodoo",
     "genres": [
       "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -2684,7 +2724,7 @@
     "author": "Stelennnn",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "web"
@@ -2770,7 +2810,8 @@
     "author": "Joey Drew Studios",
     "genres": [
       "action",
-      "skill"
+      "horror",
+      "adventure"
     ],
     "special": [
       "port"
@@ -2784,7 +2825,8 @@
     "author": "Nacho Games",
     "genres": [
       "action",
-      "skill"
+      "strategy",
+      "horror"
     ],
     "special": [
       "port"
@@ -2798,7 +2840,7 @@
     "author": "Dennaton Games",
     "genres": [
       "action",
-      "skill"
+      "shooter"
     ],
     "special": [
       "port"
@@ -2811,7 +2853,8 @@
     "url": "html/218.html",
     "author": "Flipline Studios",
     "genres": [
-      "action",
+      "casual",
+      "simulation",
       "skill"
     ],
     "special": [
@@ -2825,7 +2868,8 @@
     "url": "html/219.html",
     "author": "Flipline Studios",
     "genres": [
-      "action",
+      "casual",
+      "simulation",
       "skill"
     ],
     "special": [
@@ -2853,7 +2897,8 @@
     "url": "html/221.html",
     "author": "Flipline Studios",
     "genres": [
-      "action",
+      "casual",
+      "simulation",
       "skill"
     ],
     "special": [
@@ -2867,7 +2912,8 @@
     "url": "html/222.html",
     "author": "Flipline Studios",
     "genres": [
-      "action",
+      "casual",
+      "simulation",
       "skill"
     ],
     "special": [
@@ -2881,7 +2927,8 @@
     "url": "html/223.html",
     "author": "Flipline Studios",
     "genres": [
-      "action",
+      "casual",
+      "simulation",
       "skill"
     ],
     "special": [
@@ -2895,7 +2942,8 @@
     "url": "html/224.html",
     "author": "Flipline Studios",
     "genres": [
-      "action",
+      "casual",
+      "simulation",
       "skill"
     ],
     "special": [
@@ -2909,7 +2957,8 @@
     "url": "html/225.html",
     "author": "Flipline Studios",
     "genres": [
-      "action",
+      "casual",
+      "simulation",
       "skill"
     ],
     "special": [
@@ -2923,7 +2972,8 @@
     "url": "html/226.html",
     "author": "Flipline Studios",
     "genres": [
-      "action",
+      "casual",
+      "simulation",
       "skill"
     ],
     "special": [
@@ -2937,7 +2987,8 @@
     "url": "html/227.html",
     "author": "Flipline Studios",
     "genres": [
-      "action",
+      "casual",
+      "simulation",
       "skill"
     ],
     "special": [
@@ -2951,7 +3002,8 @@
     "url": "html/228.html",
     "author": "Flipline Studios",
     "genres": [
-      "action",
+      "casual",
+      "simulation",
       "skill"
     ],
     "special": [
@@ -2965,7 +3017,8 @@
     "url": "html/229.html",
     "author": "Flipline Studios",
     "genres": [
-      "action",
+      "casual",
+      "simulation",
       "skill"
     ],
     "special": [
@@ -2979,7 +3032,8 @@
     "url": "html/230.html",
     "author": "Flipline Studios",
     "genres": [
-      "action",
+      "casual",
+      "simulation",
       "skill"
     ],
     "special": [
@@ -2993,7 +3047,8 @@
     "url": "html/231.html",
     "author": "Flipline Studios",
     "genres": [
-      "action",
+      "casual",
+      "simulation",
       "skill"
     ],
     "special": [
@@ -3023,7 +3078,7 @@
     "author": "Superhot Team",
     "genres": [
       "action",
-      "skill"
+      "shooter"
     ],
     "special": [
       "web"
@@ -3107,6 +3162,7 @@
     "author": "Yohoho Games",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -3121,6 +3177,7 @@
     "author": "Yohoho Games",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -3135,6 +3192,7 @@
     "author": "Yohoho Games",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -3149,6 +3207,7 @@
     "author": "Yohoho Games",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -3163,6 +3222,7 @@
     "author": "Yohoho Games",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -3177,6 +3237,7 @@
     "author": "Yohoho Games",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -3191,6 +3252,7 @@
     "author": "Pegas Games",
     "genres": [
       "action",
+      "puzzle",
       "skill"
     ],
     "special": [
@@ -3205,6 +3267,7 @@
     "author": "Pegas Games",
     "genres": [
       "action",
+      "puzzle",
       "skill"
     ],
     "special": [
@@ -3219,6 +3282,7 @@
     "author": "Pegas Games",
     "genres": [
       "action",
+      "puzzle",
       "skill"
     ],
     "special": [
@@ -3233,6 +3297,7 @@
     "author": "Pegas Games",
     "genres": [
       "action",
+      "puzzle",
       "skill"
     ],
     "special": [
@@ -3247,6 +3312,7 @@
     "author": "Pegas Games",
     "genres": [
       "action",
+      "puzzle",
       "skill"
     ],
     "special": [
@@ -3261,6 +3327,7 @@
     "author": "Pegas Games",
     "genres": [
       "action",
+      "puzzle",
       "skill"
     ],
     "special": [
@@ -3275,6 +3342,7 @@
     "author": "Pegas Games",
     "genres": [
       "action",
+      "puzzle",
       "skill"
     ],
     "special": [
@@ -3289,6 +3357,7 @@
     "author": "Pegas Games",
     "genres": [
       "action",
+      "puzzle",
       "skill"
     ],
     "special": [
@@ -3328,7 +3397,8 @@
     "url": "html/257.html",
     "author": "Google",
     "genres": [
-      "action",
+      "sports",
+      "casual",
       "skill"
     ],
     "special": [
@@ -3356,8 +3426,8 @@
     "url": "html/259.html",
     "author": "sbn3",
     "genres": [
-      "action",
-      "skill"
+      "adventure",
+      "casual"
     ],
     "special": [
       "port"
@@ -3371,6 +3441,7 @@
     "author": "DaniDev",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -3385,6 +3456,7 @@
     "author": "Halfbrick Studios",
     "genres": [
       "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -3404,7 +3476,7 @@
     "special": [
       "port"
     ],
-        "featured": true
+    "featured": true
   },
   {
     "id": 263,
@@ -3414,7 +3486,7 @@
     "author": "Id Software",
     "genres": [
       "action",
-      "skill"
+      "shooter"
     ],
     "special": [
       "port"
@@ -3428,6 +3500,7 @@
     "author": "AzGames",
     "genres": [
       "action",
+      "racing",
       "skill"
     ],
     "special": [
@@ -3442,6 +3515,7 @@
     "author": "AzGames",
     "genres": [
       "action",
+      "racing",
       "skill"
     ],
     "special": [
@@ -3455,8 +3529,8 @@
     "url": "html/266-a.html",
     "author": "Luke Doukakis",
     "genres": [
-      "action",
-      "skill"
+      "sports",
+      "racing"
     ],
     "special": [
       "port"
@@ -3484,7 +3558,7 @@
     "author": "SnoutUp",
     "genres": [
       "action",
-      "skill"
+      "fighting"
     ],
     "special": [
       "web"
@@ -3498,6 +3572,7 @@
     "author": "Nitrome",
     "genres": [
       "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -3512,6 +3587,7 @@
     "author": "Nitrome",
     "genres": [
       "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -3526,6 +3602,7 @@
     "author": "Nitrome",
     "genres": [
       "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -3539,6 +3616,7 @@
     "url": "html/272.html",
     "author": "MadPuffers",
     "genres": [
+      "sports",
       "action",
       "skill"
     ],
@@ -3554,7 +3632,7 @@
     "author": "SkullCap Studios",
     "genres": [
       "action",
-      "skill"
+      "shooter"
     ],
     "special": [
       "web"
@@ -3567,7 +3645,7 @@
     "url": "html/274.html",
     "author": "Florian van Strien",
     "genres": [
-      "action",
+      "puzzle",
       "skill"
     ],
     "special": [
@@ -3581,7 +3659,7 @@
     "url": "html/275.html",
     "author": "Florian van Strien",
     "genres": [
-      "action",
+      "puzzle",
       "skill"
     ],
     "special": [
@@ -3595,7 +3673,7 @@
     "url": "html/276.html",
     "author": "marketjs",
     "genres": [
-      "action",
+      "racing",
       "skill"
     ],
     "special": [
@@ -3610,6 +3688,7 @@
     "author": "agar3s",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -3649,7 +3728,7 @@
     "url": "html/280.html",
     "author": "Akos Makovics",
     "genres": [
-      "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -3664,7 +3743,7 @@
     "author": "Mentolatux",
     "genres": [
       "action",
-      "skill"
+      "shooter"
     ],
     "special": [
       "web"
@@ -3678,7 +3757,8 @@
     "author": "rujogames",
     "genres": [
       "action",
-      "skill"
+      "shooter",
+      "tower-defense"
     ],
     "special": [
       "web"
@@ -3692,7 +3772,7 @@
     "author": "New Eich Games",
     "genres": [
       "action",
-      "skill"
+      "fighting"
     ],
     "special": [
       "web"
@@ -3719,6 +3799,7 @@
     "url": "html/285.html",
     "author": "Blue Wizard Digital",
     "genres": [
+      "sports",
       "action",
       "skill"
     ],
@@ -3734,7 +3815,7 @@
     "author": "Deep Root Interactive",
     "genres": [
       "action",
-      "skill"
+      "horror"
     ],
     "special": [
       "port"
@@ -3747,8 +3828,8 @@
     "url": "html/287.html",
     "author": "JonBro",
     "genres": [
-      "action",
-      "skill"
+      "adventure",
+      "puzzle"
     ],
     "special": [
       "flash"
@@ -3761,8 +3842,8 @@
     "url": "html/288.html",
     "author": "JonBro",
     "genres": [
-      "action",
-      "skill"
+      "adventure",
+      "puzzle"
     ],
     "special": [
       "flash"
@@ -3775,8 +3856,8 @@
     "url": "html/289.html",
     "author": "JonBro",
     "genres": [
-      "action",
-      "skill"
+      "adventure",
+      "puzzle"
     ],
     "special": [
       "flash"
@@ -3789,8 +3870,8 @@
     "url": "html/290.html",
     "author": "JonBro",
     "genres": [
-      "action",
-      "skill"
+      "adventure",
+      "puzzle"
     ],
     "special": [
       "flash"
@@ -3803,8 +3884,8 @@
     "url": "html/291.html",
     "author": "JonBro",
     "genres": [
-      "action",
-      "skill"
+      "adventure",
+      "puzzle"
     ],
     "special": [
       "flash"
@@ -3817,8 +3898,8 @@
     "url": "html/292.html",
     "author": "JonBro",
     "genres": [
-      "action",
-      "skill"
+      "adventure",
+      "puzzle"
     ],
     "special": [
       "flash"
@@ -3831,8 +3912,8 @@
     "url": "html/293.html",
     "author": "JonBro",
     "genres": [
-      "action",
-      "skill"
+      "adventure",
+      "puzzle"
     ],
     "special": [
       "flash"
@@ -3843,7 +3924,7 @@
     "name": "Idle Dice",
     "cover": "covers/294.png",
     "url": "html/294.html",
-    "author": "Lutz Sch\u00f6nfelder",
+    "author": "Lutz Schönfelder",
     "genres": [
       "strategy",
       "idle"
@@ -3889,6 +3970,7 @@
     "author": "juhosprite, gooseworx",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -3916,7 +3998,8 @@
     "author": "Tom Fulp, Dan Paladin",
     "genres": [
       "action",
-      "skill"
+      "shooter",
+      "platformer"
     ],
     "special": [
       "flash"
@@ -3929,7 +4012,7 @@
     "url": "html/305.html",
     "author": "Rewind Games",
     "genres": [
-      "action",
+      "racing",
       "skill"
     ],
     "special": [
@@ -3957,6 +4040,7 @@
     "author": "emolingo games",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -3999,6 +4083,7 @@
     "author": "GameTornado",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -4012,7 +4097,7 @@
     "url": "html/311.html",
     "author": "FRANCO MIRANDA",
     "genres": [
-      "action",
+      "puzzle",
       "skill"
     ],
     "special": [
@@ -4026,8 +4111,8 @@
     "url": "html/312.html",
     "author": "Synic-dx",
     "genres": [
-      "action",
-      "skill"
+      "strategy",
+      "casual"
     ],
     "special": [
       "web"
@@ -4040,7 +4125,8 @@
     "url": "html/313.html",
     "author": "gamesnacks",
     "genres": [
-      "action",
+      "puzzle",
+      "strategy",
       "skill"
     ],
     "special": [
@@ -4099,8 +4185,8 @@
     "url": "html/317.html",
     "author": "maxbittker",
     "genres": [
-      "action",
-      "skill"
+      "casual",
+      "simulation"
     ],
     "special": [
       "web"
@@ -4114,6 +4200,7 @@
     "author": "hi rohun, Mr.Pootsley, Jaybooty",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -4168,7 +4255,7 @@
     "url": "html/322.html",
     "author": "Famobi",
     "genres": [
-      "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -4182,8 +4269,8 @@
     "url": "html/323.html",
     "author": "MOONEE PUBLISHING LTD",
     "genres": [
-      "action",
-      "skill"
+      "puzzle",
+      "casual"
     ],
     "special": [
       "web"
@@ -4197,6 +4284,7 @@
     "author": "Raval Matic",
     "genres": [
       "action",
+      "puzzle",
       "skill"
     ],
     "special": [
@@ -4210,8 +4298,8 @@
     "url": "html/325.html",
     "author": "Gameloft",
     "genres": [
-      "action",
-      "skill"
+      "casual",
+      "simulation"
     ],
     "special": [
       "web"
@@ -4225,6 +4313,7 @@
     "author": "Voodoo",
     "genres": [
       "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -4252,7 +4341,8 @@
     "author": "ZeptoLab",
     "genres": [
       "action",
-      "skill"
+      "endless-runner",
+      "casual"
     ],
     "special": [
       "web"
@@ -4265,8 +4355,8 @@
     "url": "html/329a.html",
     "author": "GameSnacks",
     "genres": [
-      "action",
-      "skill"
+      "puzzle",
+      "casual"
     ],
     "special": [
       "web"
@@ -4280,6 +4370,7 @@
     "author": "Anton Medvedev",
     "genres": [
       "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -4385,7 +4476,7 @@
     "author": "New Eich Games",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "web"
@@ -4399,6 +4490,7 @@
     "author": "Light Bringer Games",
     "genres": [
       "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -4413,6 +4505,7 @@
     "author": "Light Bringer Games",
     "genres": [
       "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -4427,6 +4520,7 @@
     "author": "Light Bringer Games",
     "genres": [
       "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -4496,7 +4590,8 @@
     "author": "Ysopprod",
     "genres": [
       "action",
-      "skill"
+      "casual",
+      "physics"
     ],
     "special": [
       "web"
@@ -4510,7 +4605,7 @@
     "author": "OnHit Developments",
     "genres": [
       "action",
-      "skill"
+      "shooter"
     ],
     "special": [
       "web"
@@ -4524,7 +4619,7 @@
     "author": "Voodoo",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "web"
@@ -4538,7 +4633,8 @@
     "author": "Edmund McMillen",
     "genres": [
       "action",
-      "skill"
+      "rpg",
+      "horror"
     ],
     "special": [
       "flash"
@@ -4551,8 +4647,8 @@
     "url": "html/351.html",
     "author": "Berker Games",
     "genres": [
-      "action",
-      "skill"
+      "casual",
+      "puzzle"
     ],
     "special": [
       "web"
@@ -4566,6 +4662,7 @@
     "author": "Blumgi",
     "genres": [
       "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -4593,6 +4690,7 @@
     "author": "Thomas K. Young",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -4607,6 +4705,7 @@
     "author": "Thomas K. Young",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -4621,6 +4720,7 @@
     "author": "Thomas K. Young",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -4648,6 +4748,7 @@
     "author": "Thomas K. Young",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -4676,8 +4777,8 @@
     "url": "html/361.html",
     "author": "Justin Hook",
     "genres": [
-      "action",
-      "skill"
+      "puzzle",
+      "casual"
     ],
     "special": [
       "web"
@@ -4730,7 +4831,7 @@
     "author": "JustPlay.LOL",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "web"
@@ -4785,8 +4886,8 @@
     "url": "html/369.html",
     "author": "Topograph Interactive",
     "genres": [
-      "action",
-      "skill"
+      "casual",
+      "racing"
     ],
     "special": [
       "web"
@@ -4911,7 +5012,7 @@
     "author": "Yandex",
     "genres": [
       "action",
-      "skill"
+      "shooter"
     ],
     "special": [
       "web"
@@ -5028,7 +5129,7 @@
     "author": "Yandex",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "web"
@@ -5042,7 +5143,8 @@
     "author": "Yandex",
     "genres": [
       "action",
-      "skill"
+      "casual",
+      "physics"
     ],
     "special": [
       "web"
@@ -5069,7 +5171,7 @@
     "author": "Yandex",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "web"
@@ -5082,8 +5184,8 @@
     "url": "html/390.html",
     "author": "Yandex",
     "genres": [
-      "action",
-      "skill"
+      "casual",
+      "simulation"
     ],
     "special": [
       "web"
@@ -5096,7 +5198,8 @@
     "url": "html/391.html",
     "author": "Yandex",
     "genres": [
-      "action",
+      "sports",
+      "casual",
       "skill"
     ],
     "special": [
@@ -5111,6 +5214,7 @@
     "author": "Yandex",
     "genres": [
       "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -5125,7 +5229,7 @@
     "author": "Yandex",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "web"
@@ -5139,7 +5243,7 @@
     "author": "Yandex",
     "genres": [
       "action",
-      "skill"
+      "shooter"
     ],
     "special": [
       "web"
@@ -5153,7 +5257,7 @@
     "author": "Yandex",
     "genres": [
       "action",
-      "skill"
+      "shooter"
     ],
     "special": [
       "web"
@@ -5167,7 +5271,7 @@
     "author": "Yandex",
     "genres": [
       "action",
-      "skill"
+      "endless-runner"
     ],
     "special": [
       "web"
@@ -5181,7 +5285,7 @@
     "author": "Yandex",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "web"
@@ -5194,8 +5298,7 @@
     "url": "html/398.html",
     "author": "Yandex",
     "genres": [
-      "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "web"
@@ -5224,7 +5327,7 @@
     "author": "Yandex",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "web"
@@ -5265,7 +5368,7 @@
     "author": "Yandex",
     "genres": [
       "action",
-      "skill"
+      "shooter"
     ],
     "special": [
       "web"
@@ -5318,7 +5421,7 @@
     "author": "Yandex",
     "genres": [
       "action",
-      "skill"
+      "shooter"
     ],
     "special": [
       "web"
@@ -5332,7 +5435,7 @@
     "author": "Yandex",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "web"
@@ -5372,7 +5475,7 @@
     "author": "Yandex",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "web"
@@ -5427,6 +5530,7 @@
     "author": "Yandex",
     "genres": [
       "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -5470,7 +5574,7 @@
     "author": "Yandex",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "web"
@@ -5484,7 +5588,7 @@
     "author": "Yandex",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "web"
@@ -5514,7 +5618,7 @@
     "author": "Yandex",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "web"
@@ -5527,8 +5631,8 @@
     "url": "html/423.html",
     "author": "LameDev",
     "genres": [
-      "action",
-      "skill"
+      "casual",
+      "fishing"
     ],
     "special": [
       "port"
@@ -5555,8 +5659,8 @@
     "url": "html/427-z.html",
     "author": "Omocat",
     "genres": [
-      "action",
-      "skill"
+      "rpg",
+      "adventure"
     ],
     "special": [
       "port"
@@ -5585,7 +5689,7 @@
     "author": "flanne",
     "genres": [
       "action",
-      "skill"
+      "shooter"
     ],
     "special": [
       "web"
@@ -5599,6 +5703,7 @@
     "author": "Diamond Games",
     "genres": [
       "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -5612,8 +5717,8 @@
     "url": "html/432.html",
     "author": "krutovig",
     "genres": [
-      "action",
-      "skill"
+      "horror",
+      "adventure"
     ],
     "special": [
       "web"
@@ -5626,8 +5731,8 @@
     "url": "html/433.html",
     "author": "kikiyama",
     "genres": [
-      "action",
-      "skill"
+      "rpg",
+      "adventure"
     ],
     "special": [
       "port"
@@ -5641,7 +5746,7 @@
     "author": "Glompyy",
     "genres": [
       "action",
-      "skill"
+      "horror"
     ],
     "special": [
       "web"
@@ -5654,7 +5759,8 @@
     "url": "html/435.html",
     "author": "rujogames",
     "genres": [
-      "action",
+      "sports",
+      "casual",
       "skill"
     ],
     "special": [
@@ -5669,7 +5775,7 @@
     "author": "coolmathgames",
     "genres": [
       "action",
-      "skill"
+      "shooter"
     ],
     "special": [
       "web"
@@ -5683,6 +5789,7 @@
     "author": "Azur Games, Playgendary",
     "genres": [
       "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -5697,7 +5804,7 @@
     "author": "coolmathgames",
     "genres": [
       "action",
-      "skill"
+      "shooter"
     ],
     "special": [
       "web"
@@ -5711,7 +5818,7 @@
     "author": "justaliendev",
     "genres": [
       "action",
-      "skill"
+      "platformer"
     ],
     "special": [
       "web"
@@ -5725,6 +5832,7 @@
     "author": "Matt Thorson and Noel Berry",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -5738,8 +5846,8 @@
     "url": "html/441.html",
     "author": "Rakqoi",
     "genres": [
-      "action",
-      "skill"
+      "casual",
+      "simulation"
     ],
     "special": [
       "web"
@@ -5752,8 +5860,8 @@
     "url": "html/442.html",
     "author": "Werxzy",
     "genres": [
-      "action",
-      "skill"
+      "puzzle",
+      "strategy"
     ],
     "special": [
       "web"
@@ -5780,8 +5888,8 @@
     "url": "html/444.html",
     "author": "JoySpark Games",
     "genres": [
-      "action",
-      "skill"
+      "strategy",
+      "simulation"
     ],
     "special": [
       "web"
@@ -5794,8 +5902,8 @@
     "url": "html/445.html",
     "author": "Con Man Games, SmashGames and Sean Young",
     "genres": [
-      "action",
-      "skill"
+      "adventure",
+      "puzzle"
     ],
     "special": [
       "port"
@@ -5808,8 +5916,8 @@
     "url": "html/446.html",
     "author": "Con Man Games, SmashGames and Sean Young",
     "genres": [
-      "action",
-      "skill"
+      "adventure",
+      "puzzle"
     ],
     "special": [
       "port"
@@ -5822,8 +5930,8 @@
     "url": "html/447-e.html",
     "author": "TamaniDamani",
     "genres": [
-      "action",
-      "skill"
+      "casual",
+      "action"
     ],
     "special": [
       "web"
@@ -5877,8 +5985,8 @@
     "url": "html/451.html",
     "author": "Parsec Productions",
     "genres": [
-      "action",
-      "skill"
+      "horror",
+      "adventure"
     ],
     "special": [
       "port"
@@ -5892,7 +6000,7 @@
     "author": "Maksim Chmutov",
     "genres": [
       "action",
-      "skill"
+      "horror"
     ],
     "special": [
       "web"
@@ -5906,7 +6014,7 @@
     "author": "Maksim Chmutov",
     "genres": [
       "action",
-      "skill"
+      "horror"
     ],
     "special": [
       "web"
@@ -5920,7 +6028,7 @@
     "author": "SHROOMYCHRIST-STUDIOS",
     "genres": [
       "action",
-      "skill"
+      "shooter"
     ],
     "special": [
       "port"
@@ -5947,7 +6055,8 @@
     "author": "Team Undertale Yellow",
     "genres": [
       "action",
-      "skill"
+      "rpg",
+      "adventure"
     ],
     "special": [
       "port"
@@ -5961,7 +6070,8 @@
     "author": "Redbeet Interactive, Axolot Games, Ashen Arrow",
     "genres": [
       "action",
-      "skill"
+      "adventure",
+      "simulation"
     ],
     "special": [
       "port"
@@ -5974,8 +6084,8 @@
     "url": "html/458.html",
     "author": "Curious Fox Sox",
     "genres": [
-      "action",
-      "skill"
+      "horror",
+      "adventure"
     ],
     "special": [
       "port"
@@ -5988,8 +6098,8 @@
     "url": "html/459.html",
     "author": "Zed Technician",
     "genres": [
-      "action",
-      "skill"
+      "horror",
+      "adventure"
     ],
     "special": [
       "port"
@@ -6002,8 +6112,8 @@
     "url": "html/460.html",
     "author": "Rayll",
     "genres": [
-      "action",
-      "skill"
+      "horror",
+      "adventure"
     ],
     "special": [
       "port"
@@ -6030,8 +6140,9 @@
     "url": "html/462.html",
     "author": "racheldrawsthis",
     "genres": [
-      "action",
-      "skill"
+      "rpg",
+      "adventure",
+      "horror"
     ],
     "special": [
       "port"
@@ -6045,7 +6156,7 @@
     "author": "ghosttundra, Euroclipse, Brand New Groove",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "port"
@@ -6059,7 +6170,7 @@
     "author": "eddynardo",
     "genres": [
       "action",
-      "skill"
+      "platformer"
     ],
     "special": [
       "web"
@@ -6073,7 +6184,8 @@
     "author": "Studio MDHR Entertainment Inc",
     "genres": [
       "action",
-      "skill"
+      "platformer",
+      "fighting"
     ],
     "special": [
       "port"
@@ -6305,7 +6417,7 @@
     "author": "SHROOMYCHRIST-STUDIOS",
     "genres": [
       "action",
-      "skill"
+      "shooter"
     ],
     "special": [
       "port"
@@ -6347,7 +6459,7 @@
     "name": "Friday Night Funkin': Indie Cross",
     "cover": "covers/489.png",
     "url": "html/489.html",
-    "author": "MOR\u00d8 etc",
+    "author": "MORØ etc",
     "genres": [
       "music",
       "rhythm",
@@ -6365,7 +6477,7 @@
     "author": "Neweichgames",
     "genres": [
       "action",
-      "skill"
+      "fighting"
     ],
     "special": [
       "web"
@@ -6378,8 +6490,9 @@
     "url": "html/491.html",
     "author": "angela he",
     "genres": [
-      "action",
-      "skill"
+      "casual",
+      "simulation",
+      "adventure"
     ],
     "special": [
       "web"
@@ -6393,7 +6506,7 @@
     "author": "LakenDaCoda",
     "genres": [
       "action",
-      "skill"
+      "racing"
     ],
     "special": [
       "web"
@@ -6406,6 +6519,7 @@
     "url": "html/493.html",
     "author": "Cartoon Network",
     "genres": [
+      "sports",
       "action",
       "skill"
     ],
@@ -6420,6 +6534,7 @@
     "url": "html/494.html",
     "author": "Cartoon Network",
     "genres": [
+      "sports",
       "action",
       "skill"
     ],
@@ -6435,7 +6550,7 @@
     "author": "tanner bananer",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "web"
@@ -6448,8 +6563,8 @@
     "url": "html/501.html",
     "author": "Con Man Games, SmashGames and Sean Young",
     "genres": [
-      "action",
-      "skill"
+      "adventure",
+      "puzzle"
     ],
     "special": [
       "port"
@@ -6463,6 +6578,7 @@
     "author": "Sam Hogan",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -6563,8 +6679,8 @@
     "url": "html/510.html",
     "author": "Nintendo",
     "genres": [
-      "action",
-      "skill"
+      "casual",
+      "simulation"
     ],
     "special": [
       "emulator",
@@ -6578,8 +6694,8 @@
     "url": "html/511.html",
     "author": "rkn",
     "genres": [
-      "action",
-      "skill"
+      "idle",
+      "casual"
     ],
     "special": [
       "web"
@@ -6592,8 +6708,8 @@
     "url": "html/512.html",
     "author": "flori9",
     "genres": [
-      "action",
-      "skill"
+      "strategy",
+      "simulation"
     ],
     "special": [
       "web"
@@ -6622,7 +6738,7 @@
     "author": "Enchae, Lumpy",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "web"
@@ -6651,7 +6767,8 @@
     "author": "Empty House Games, Shuu",
     "genres": [
       "action",
-      "skill"
+      "casual",
+      "fighting"
     ],
     "special": [
       "web"
@@ -6664,8 +6781,8 @@
     "url": "html/517.html",
     "author": "MogDogBlog Productions",
     "genres": [
-      "action",
-      "skill"
+      "puzzle",
+      "strategy"
     ],
     "special": [
       "port"
@@ -6679,7 +6796,7 @@
     "author": "NitNitori, LadyEbony",
     "genres": [
       "action",
-      "skill"
+      "shooter"
     ],
     "special": [
       "web"
@@ -6707,7 +6824,8 @@
     "author": "Halfbrick Studios",
     "genres": [
       "action",
-      "skill"
+      "platformer",
+      "fighting"
     ],
     "special": [
       "web"
@@ -6721,6 +6839,7 @@
     "author": "PeachTreeOath",
     "genres": [
       "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -6747,8 +6866,8 @@
     "url": "html/523-f.html",
     "author": "vgperson",
     "genres": [
-      "action",
-      "skill"
+      "rpg",
+      "adventure"
     ],
     "special": [
       "port"
@@ -6761,8 +6880,8 @@
     "url": "html/524.html",
     "author": "NanaOn-Sha",
     "genres": [
-      "action",
-      "skill"
+      "music",
+      "rhythm"
     ],
     "special": [
       "emulator",
@@ -6777,7 +6896,7 @@
     "author": "Nickelodeon",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "web"
@@ -6791,7 +6910,8 @@
     "author": "Nickelodeon",
     "genres": [
       "action",
-      "skill"
+      "endless-runner",
+      "casual"
     ],
     "special": [
       "web"
@@ -6819,8 +6939,8 @@
     "url": "html/529.html",
     "author": "Nickelodeon",
     "genres": [
-      "action",
-      "skill"
+      "puzzle",
+      "casual"
     ],
     "special": [
       "web"
@@ -6833,8 +6953,8 @@
     "url": "html/530.html",
     "author": "Nickelodeon",
     "genres": [
-      "action",
-      "skill"
+      "casual",
+      "puzzle"
     ],
     "special": [
       "web"
@@ -6848,7 +6968,8 @@
     "author": "Nickelodeon",
     "genres": [
       "action",
-      "skill"
+      "casual",
+      "fighting"
     ],
     "special": [
       "web"
@@ -6862,7 +6983,8 @@
     "author": "Nickelodeon",
     "genres": [
       "action",
-      "skill"
+      "casual",
+      "horror"
     ],
     "special": [
       "web"
@@ -6875,8 +6997,8 @@
     "url": "html/533.html",
     "author": "Nickelodeon",
     "genres": [
-      "action",
-      "skill"
+      "casual",
+      "fishing"
     ],
     "special": [
       "web"
@@ -6890,7 +7012,8 @@
     "author": "Cartoon Network",
     "genres": [
       "action",
-      "skill"
+      "fighting",
+      "casual"
     ],
     "special": [
       "web"
@@ -6904,7 +7027,8 @@
     "author": "Cartoon Network",
     "genres": [
       "action",
-      "skill"
+      "fighting",
+      "casual"
     ],
     "special": [
       "web"
@@ -6917,8 +7041,8 @@
     "url": "html/536.html",
     "author": "MOSTLY MAD PRODUCTIONS",
     "genres": [
-      "action",
-      "skill"
+      "puzzle",
+      "casual"
     ],
     "special": [
       "web"
@@ -6946,8 +7070,8 @@
     "url": "html/538.html",
     "author": "Nozomu Games",
     "genres": [
-      "action",
-      "skill"
+      "casual",
+      "puzzle"
     ],
     "special": [
       "web"
@@ -6973,8 +7097,8 @@
     "url": "html/540.html",
     "author": "VENDORMINT",
     "genres": [
-      "action",
-      "skill"
+      "casual",
+      "simulation"
     ],
     "special": [
       "web"
@@ -6988,6 +7112,7 @@
     "author": "DaniDev",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -7001,7 +7126,7 @@
     "url": "html/543-a.html",
     "author": "DaniDev",
     "genres": [
-      "action",
+      "racing",
       "skill"
     ],
     "special": [
@@ -7015,7 +7140,7 @@
     "url": "html/544.html",
     "author": "Anson Heung",
     "genres": [
-      "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -7030,7 +7155,7 @@
     "author": "unknown",
     "genres": [
       "action",
-      "skill"
+      "fighting"
     ],
     "special": [
       "web"
@@ -7044,7 +7169,7 @@
     "author": "Martin Magini",
     "genres": [
       "action",
-      "skill"
+      "shooter"
     ],
     "special": [
       "web"
@@ -7057,6 +7182,7 @@
     "url": "html/547.html",
     "author": "Blue Wizard",
     "genres": [
+      "sports",
       "action",
       "skill"
     ],
@@ -7071,6 +7197,7 @@
     "url": "html/548.html",
     "author": "Blue Wizard",
     "genres": [
+      "sports",
       "action",
       "skill"
     ],
@@ -7130,7 +7257,7 @@
     "author": "BGaming",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "web"
@@ -7144,6 +7271,7 @@
     "author": "Dream Playz",
     "genres": [
       "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -7203,6 +7331,7 @@
     "author": "Bennett Foddy",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -7232,8 +7361,8 @@
     "url": "html/560.html",
     "author": "VyletBunni",
     "genres": [
-      "action",
-      "skill"
+      "rpg",
+      "adventure"
     ],
     "special": [
       "port"
@@ -7260,6 +7389,7 @@
     "author": "Boom Corp",
     "genres": [
       "action",
+      "strategy",
       "skill"
     ],
     "special": [
@@ -7273,8 +7403,8 @@
     "url": "html/563.html",
     "author": "Finz Games",
     "genres": [
-      "action",
-      "skill"
+      "sports",
+      "simulation"
     ],
     "special": [
       "web"
@@ -7315,6 +7445,7 @@
     "author": "CrazyGames",
     "genres": [
       "action",
+      "racing",
       "skill"
     ],
     "special": [
@@ -7329,6 +7460,7 @@
     "author": "CrazyGames",
     "genres": [
       "action",
+      "racing",
       "skill"
     ],
     "special": [
@@ -7343,7 +7475,8 @@
     "author": "CrazyGames",
     "genres": [
       "action",
-      "skill"
+      "casual",
+      "sports"
     ],
     "special": [
       "web"
@@ -7356,8 +7489,8 @@
     "url": "html/570.html",
     "author": "CrazyGames",
     "genres": [
-      "action",
-      "skill"
+      "casual",
+      "simulation"
     ],
     "special": [
       "web"
@@ -7371,6 +7504,7 @@
     "author": "CrazyGames",
     "genres": [
       "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -7385,7 +7519,7 @@
     "author": "CrazyGames",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "web"
@@ -7413,8 +7547,8 @@
     "url": "html/574.html",
     "author": "CrazyGames",
     "genres": [
-      "action",
-      "skill"
+      "casual",
+      "simulation"
     ],
     "special": [
       "web"
@@ -7441,7 +7575,7 @@
     "author": "CrazyGames",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "web"
@@ -7494,6 +7628,7 @@
     "author": "CrazyGames",
     "genres": [
       "action",
+      "racing",
       "skill"
     ],
     "special": [
@@ -7535,7 +7670,8 @@
     "author": "Bethesda Softworks",
     "genres": [
       "action",
-      "skill"
+      "rpg",
+      "adventure"
     ],
     "special": [
       "port"
@@ -7548,8 +7684,9 @@
     "url": "html/586.html",
     "author": "MECC",
     "genres": [
-      "action",
-      "skill"
+      "strategy",
+      "simulation",
+      "adventure"
     ],
     "special": [
       "web"
@@ -7563,7 +7700,7 @@
     "author": "NegativeONE, Luis, MindChamber",
     "genres": [
       "action",
-      "skill"
+      "fighting"
     ],
     "special": [
       "flash"
@@ -7583,8 +7720,7 @@
     "special": [
       "port"
     ],
-        "featured": true
-
+    "featured": true
   },
   {
     "id": 589,
@@ -7624,7 +7760,8 @@
     "author": "Monomi Park, Ported by Snubby.top",
     "genres": [
       "action",
-      "skill"
+      "adventure",
+      "simulation"
     ],
     "special": [
       "port"
@@ -7638,6 +7775,7 @@
     "author": "Full Fat Games",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -7653,6 +7791,7 @@
     "author": "Full Fat Games",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -7667,8 +7806,8 @@
     "url": "html/594.html",
     "author": "scriptwelder",
     "genres": [
-      "action",
-      "skill"
+      "puzzle",
+      "strategy"
     ],
     "special": [
       "web"
@@ -7725,7 +7864,7 @@
     "author": " Konami Computer Entertainment Japan",
     "genres": [
       "action",
-      "skill"
+      "adventure"
     ],
     "special": [
       "emulator",
@@ -7740,7 +7879,7 @@
     "author": "id Software",
     "genres": [
       "action",
-      "skill"
+      "shooter"
     ],
     "special": [
       "emulator",
@@ -7767,8 +7906,8 @@
     "url": "html/604-a.html",
     "author": "Jorel Simpson",
     "genres": [
-      "action",
-      "skill"
+      "puzzle",
+      "strategy"
     ],
     "special": [
       "port"
@@ -7782,6 +7921,7 @@
     "author": "Linked Squad",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -7810,8 +7950,8 @@
     "url": "html/607-e.html",
     "author": "Waygetter Electronics, Ported by Snubby.top",
     "genres": [
-      "action",
-      "skill"
+      "horror",
+      "adventure"
     ],
     "special": [
       "port"
@@ -7857,6 +7997,7 @@
     "author": "CrazyGames",
     "genres": [
       "action",
+      "racing",
       "skill"
     ],
     "special": [
@@ -7871,7 +8012,7 @@
     "author": "Stinkalistic, Running With Scissors",
     "genres": [
       "action",
-      "skill"
+      "shooter"
     ],
     "special": [
       "web"
@@ -7884,8 +8025,8 @@
     "url": "html/620.html",
     "author": "Adventale",
     "genres": [
-      "action",
-      "skill"
+      "adventure",
+      "puzzle"
     ],
     "special": [
       "web"
@@ -7898,8 +8039,9 @@
     "url": "html/622.html",
     "author": "Future Cat LLC, ARandomPerson",
     "genres": [
-      "action",
-      "skill"
+      "adventure",
+      "rpg",
+      "puzzle"
     ],
     "special": [
       "port"
@@ -7913,6 +8055,7 @@
     "author": "MaddyMakesGames, Mercury Workshop",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -7927,7 +8070,8 @@
     "author": "Jim Bonacci",
     "genres": [
       "action",
-      "skill"
+      "casual",
+      "physics"
     ],
     "special": [
       "web"
@@ -7940,8 +8084,8 @@
     "url": "html/625.html",
     "author": "gregs games",
     "genres": [
-      "action",
-      "skill"
+      "casual",
+      "simulation"
     ],
     "special": [
       "web"
@@ -7955,7 +8099,8 @@
     "author": "id Software, 98corbins",
     "genres": [
       "action",
-      "skill"
+      "shooter",
+      "horror"
     ],
     "special": [
       "port"
@@ -7969,7 +8114,7 @@
     "author": "WeLoPlay",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "web"
@@ -7996,8 +8141,8 @@
     "url": "html/629.html",
     "author": "Mortis Ghost, Fangamer",
     "genres": [
-      "action",
-      "skill"
+      "rpg",
+      "adventure"
     ],
     "special": [
       "web"
@@ -8010,8 +8155,8 @@
     "url": "html/630.html",
     "author": "Stephen Gillmurphy",
     "genres": [
-      "action",
-      "skill"
+      "rpg",
+      "adventure"
     ],
     "special": [
       "web"
@@ -8024,8 +8169,8 @@
     "url": "html/631-a.html",
     "author": " Segawa",
     "genres": [
-      "action",
-      "skill"
+      "rpg",
+      "adventure"
     ],
     "special": [
       "web"
@@ -8039,7 +8184,8 @@
     "author": " Daisuke 'Pixel' Amaya",
     "genres": [
       "action",
-      "skill"
+      "platformer",
+      "adventure"
     ],
     "special": [
       "web"
@@ -8066,6 +8212,7 @@
     "author": "Cary Huang",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -8080,6 +8227,7 @@
     "author": "Mawilite, Cary Huang",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -8094,7 +8242,8 @@
     "author": "SilverGames",
     "genres": [
       "action",
-      "skill"
+      "casual",
+      "simulation"
     ],
     "special": [
       "flash"
@@ -8122,7 +8271,7 @@
     "author": "Gametornado",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "web"
@@ -8177,8 +8326,8 @@
     "url": "html/648-el.html",
     "author": "HoloHammer",
     "genres": [
-      "action",
-      "skill"
+      "puzzle",
+      "strategy"
     ],
     "special": [
       "port"
@@ -8191,8 +8340,9 @@
     "url": "html/649.html",
     "author": "Francis Coulombe",
     "genres": [
-      "action",
-      "skill"
+      "rpg",
+      "horror",
+      "adventure"
     ],
     "special": [
       "port"
@@ -8205,8 +8355,8 @@
     "url": "html/650-f.html",
     "author": "Nikita Kryukov",
     "genres": [
-      "action",
-      "skill"
+      "adventure",
+      "casual"
     ],
     "special": [
       "port"
@@ -8219,25 +8369,11 @@
     "url": "html/651.html",
     "author": "Nikita Kryukov",
     "genres": [
-      "action",
-      "skill"
+      "adventure",
+      "casual"
     ],
     "special": [
       "port"
-    ]
-  },
-  {
-    "id": 653,
-    "name": "1 Date Danger",
-    "cover": "covers/653.png",
-    "url": "html/653-f.html",
-    "author": "Knives",
-    "genres": [
-      "action",
-      "skill"
-    ],
-    "special": [
-      "web"
     ]
   },
   {
@@ -8263,7 +8399,7 @@
     "author": "BugfightStudio",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "web"
@@ -8277,7 +8413,7 @@
     "author": "Studiohammergames",
     "genres": [
       "action",
-      "skill"
+      "shooter"
     ],
     "special": [
       "web"
@@ -8320,8 +8456,8 @@
     "url": "html/659.html",
     "author": "Matzerath",
     "genres": [
-      "action",
-      "skill"
+      "strategy",
+      "casual"
     ],
     "special": [
       "flash"
@@ -8334,8 +8470,8 @@
     "url": "html/660.html",
     "author": "Four Quarters",
     "genres": [
-      "action",
-      "skill"
+      "puzzle",
+      "strategy"
     ],
     "special": [
       "web"
@@ -8363,6 +8499,7 @@
     "author": "Supersonic Studios LTD",
     "genres": [
       "action",
+      "casual",
       "skill"
     ],
     "special": [
@@ -8430,8 +8567,8 @@
     "url": "html/667-fix.html",
     "author": "insertdisc5",
     "genres": [
-      "action",
-      "skill"
+      "rpg",
+      "adventure"
     ],
     "special": [
       "port"
@@ -8445,7 +8582,8 @@
     "author": "Another Axiom Inc, Boolonx",
     "genres": [
       "action",
-      "skill"
+      "casual",
+      "sports"
     ],
     "special": [
       "port"
@@ -8459,7 +8597,8 @@
     "author": "Re-Logic, Mercury Workshop",
     "genres": [
       "action",
-      "skill"
+      "adventure",
+      "rpg"
     ],
     "special": [
       "port"
@@ -8473,7 +8612,8 @@
     "author": "RCHTeam, Grayson",
     "genres": [
       "action",
-      "skill"
+      "horror",
+      "adventure"
     ],
     "special": [
       "port"
@@ -8486,8 +8626,8 @@
     "url": "html/671.html",
     "author": "Ncase",
     "genres": [
-      "action",
-      "skill"
+      "casual",
+      "simulation"
     ],
     "special": [
       "web"
@@ -8501,6 +8641,7 @@
     "author": "Pontypants",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -8515,7 +8656,7 @@
     "author": "SeethingSwarm",
     "genres": [
       "action",
-      "skill"
+      "fighting"
     ],
     "special": [
       "flash"
@@ -8529,7 +8670,7 @@
     "author": "SeethingSwarm",
     "genres": [
       "action",
-      "skill"
+      "fighting"
     ],
     "special": [
       "flash"
@@ -8543,7 +8684,7 @@
     "author": "SeethingSwarm",
     "genres": [
       "action",
-      "skill"
+      "fighting"
     ],
     "special": [
       "flash"
@@ -8557,7 +8698,7 @@
     "author": "SeethingSwarm",
     "genres": [
       "action",
-      "skill"
+      "fighting"
     ],
     "special": [
       "flash"
@@ -8571,7 +8712,7 @@
     "author": "SeethingSwarm",
     "genres": [
       "action",
-      "skill"
+      "fighting"
     ],
     "special": [
       "flash"
@@ -8585,7 +8726,7 @@
     "author": "SeethingSwarm",
     "genres": [
       "action",
-      "skill"
+      "fighting"
     ],
     "special": [
       "flash"
@@ -8599,7 +8740,7 @@
     "author": "SeethingSwarm",
     "genres": [
       "action",
-      "skill"
+      "fighting"
     ],
     "special": [
       "flash"
@@ -8628,8 +8769,8 @@
     "url": "html/685.html",
     "author": "EA Sports",
     "genres": [
-      "action",
-      "skill"
+      "sports",
+      "simulation"
     ],
     "special": [
       "emulator",
@@ -8643,8 +8784,8 @@
     "url": "html/686.html",
     "author": "EA Sports",
     "genres": [
-      "action",
-      "skill"
+      "sports",
+      "simulation"
     ],
     "special": [
       "emulator",
@@ -8659,7 +8800,7 @@
     "author": "Tom Fulp",
     "genres": [
       "action",
-      "skill"
+      "adventure"
     ],
     "special": [
       "flash"
@@ -8672,7 +8813,8 @@
     "url": "html/688.html",
     "author": "PopCap Games",
     "genres": [
-      "action",
+      "casual",
+      "puzzle",
       "skill"
     ],
     "special": [
@@ -8687,6 +8829,7 @@
     "author": "Jonathan McEntee",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -8776,7 +8919,7 @@
     "author": "justaliendev",
     "genres": [
       "action",
-      "skill"
+      "platformer"
     ],
     "special": [
       "web"
@@ -8790,7 +8933,7 @@
     "author": "justaliendev",
     "genres": [
       "action",
-      "skill"
+      "platformer"
     ],
     "special": [
       "web"
@@ -8829,8 +8972,8 @@
     "url": "html/702.html",
     "author": "Alex Ashnov",
     "genres": [
-      "action",
-      "skill"
+      "casual",
+      "simulation"
     ],
     "special": [
       "web"
@@ -8858,14 +9001,13 @@
     "url": "html/705-fix.html",
     "author": "David Szymanski, 98corbins",
     "genres": [
-      "action",
-      "skill"
+      "horror",
+      "adventure"
     ],
     "special": [
       "port"
     ],
-        "featured": true
-
+    "featured": true
   },
   {
     "id": 706,
@@ -8874,8 +9016,9 @@
     "url": "html/706-fix.html",
     "author": "Miro Haverinen, Happy Paintings",
     "genres": [
-      "action",
-      "skill"
+      "rpg",
+      "horror",
+      "adventure"
     ],
     "special": [
       "port"
@@ -8889,7 +9032,7 @@
     "author": "skgames, madkidgames",
     "genres": [
       "action",
-      "skill"
+      "racing"
     ],
     "special": [
       "web"
@@ -8902,8 +9045,8 @@
     "url": "html/708-fix.html",
     "author": "WSS playground, EDURocks",
     "genres": [
-      "action",
-      "skill"
+      "simulation",
+      "casual"
     ],
     "special": [
       "port"
@@ -8923,20 +9066,6 @@
     ]
   },
   {
-    "id": 710,
-    "name": "Five Nights at Epstein's",
-    "cover": "covers/710.png",
-    "url": "html/710-fix.html",
-    "author": "EvanProductions",
-    "genres": [
-      "action",
-      "horror"
-    ],
-    "special": [
-      "port"
-    ]
-  },
-  {
     "id": 711,
     "name": "Antonblast",
     "cover": "covers/711.png",
@@ -8944,6 +9073,7 @@
     "author": "Summitsphere",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -8973,7 +9103,8 @@
     "author": "Konami, Team Silent",
     "genres": [
       "action",
-      "skill"
+      "horror",
+      "adventure"
     ],
     "special": [
       "emulator",
@@ -8988,7 +9119,7 @@
     "author": "Panik Arcade",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "port"
@@ -9002,6 +9133,7 @@
     "author": "Anders Grube Jensen",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [
@@ -9021,8 +9153,7 @@
     "special": [
       "port"
     ],
-        "featured": true
-
+    "featured": true
   },
   {
     "id": 719,
@@ -9032,7 +9163,7 @@
     "author": "Aarimous, Thornityco",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "web"
@@ -9046,7 +9177,8 @@
     "author": "vfqd, Mr.Pootsley, Jaybooty, Kane Forster, shxyder",
     "genres": [
       "action",
-      "skill"
+      "strategy",
+      "casual"
     ],
     "special": [
       "web"
@@ -9074,7 +9206,7 @@
     "author": "Mike Klubnika, shxyder",
     "genres": [
       "action",
-      "skill"
+      "puzzle"
     ],
     "special": [
       "port"
@@ -9088,7 +9220,8 @@
     "author": "Blobfish, Individual/Stinkalistic",
     "genres": [
       "action",
-      "skill"
+      "shooter",
+      "rpg"
     ],
     "special": [
       "port"
@@ -9102,7 +9235,7 @@
     "author": "Miziziziz, Deep Root Interactive, Individual/Stinkalistic",
     "genres": [
       "action",
-      "skill"
+      "horror"
     ],
     "special": [
       "port"
@@ -9115,8 +9248,8 @@
     "url": "html/725-ff.html",
     "author": "Shredsauce Team",
     "genres": [
-      "action",
-      "skill"
+      "sports",
+      "action"
     ],
     "special": [
       "web"
@@ -9130,7 +9263,8 @@
     "author": "biznesbear",
     "genres": [
       "action",
-      "skill"
+      "adventure",
+      "puzzle"
     ],
     "special": [
       "web"
@@ -9143,8 +9277,8 @@
     "url": "html/728.html",
     "author": "Alexander Wiseman",
     "genres": [
-      "action",
-      "skill"
+      "horror",
+      "adventure"
     ],
     "special": [
       "web"
@@ -9157,8 +9291,8 @@
     "url": "html/729.html",
     "author": "Sam Hogan",
     "genres": [
-      "action",
-      "skill"
+      "puzzle",
+      "casual"
     ],
     "special": [
       "web"
@@ -9171,8 +9305,8 @@
     "url": "html/730.html",
     "author": "Sam Hogan",
     "genres": [
-      "action",
-      "skill"
+      "puzzle",
+      "strategy"
     ],
     "special": [
       "web"
@@ -9186,7 +9320,7 @@
     "author": "caijiqaq",
     "genres": [
       "action",
-      "skill"
+      "rpg"
     ],
     "special": [
       "web"
@@ -9200,7 +9334,7 @@
     "author": "idk",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "emulator",
@@ -9232,7 +9366,7 @@
     "author": "Puppet Combo",
     "genres": [
       "action",
-      "skill"
+      "horror"
     ],
     "special": [
       "port"
@@ -9246,7 +9380,9 @@
     "author": "Zephyrside",
     "genres": [
       "action",
-      "skill"
+      "platformer",
+      "skill",
+      "rhythm"
     ],
     "special": [
       "emulator",
@@ -9271,13 +9407,13 @@
   },
   {
     "id": 737,
-    "name": "Saihate Station (\u3055\u3044\u306f\u3066\u99c5)",
+    "name": "Saihate Station (さいはて駅)",
     "cover": "covers/737.png",
     "url": "html/737.html",
-    "author": "\u3073\u3076/viv",
+    "author": "びぶ/viv",
     "genres": [
-      "action",
-      "skill"
+      "adventure",
+      "casual"
     ],
     "special": [
       "port"
@@ -9291,7 +9427,7 @@
     "author": "PlaySide Studios Ltd, Metro Trains",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "web"
@@ -9302,10 +9438,11 @@
     "name": "Soccer Random",
     "cover": "covers/739.png",
     "url": "html/739.html",
-    "author": "RHM Interactive O\u00dc",
+    "author": "RHM Interactive OÜ",
     "genres": [
-      "action",
-      "skill"
+      "sports",
+      "casual",
+      "action"
     ],
     "special": [
       "web"
@@ -9319,7 +9456,7 @@
     "author": "epickface",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "web"
@@ -9333,7 +9470,8 @@
     "author": "Capcom",
     "genres": [
       "action",
-      "skill"
+      "horror",
+      "adventure"
     ],
     "special": [
       "emulator",
@@ -9349,7 +9487,8 @@
     "author": "Capcom",
     "genres": [
       "action",
-      "skill"
+      "horror",
+      "adventure"
     ],
     "special": [
       "emulator",
@@ -9365,7 +9504,8 @@
     "author": "ODDROK",
     "genres": [
       "action",
-      "skill"
+      "casual",
+      "racing"
     ],
     "special": [
       "port"
@@ -9408,8 +9548,8 @@
     "url": "html/746.html",
     "author": "yakubell",
     "genres": [
-      "action",
-      "skill"
+      "adventure",
+      "horror"
     ],
     "special": [
       "port"
@@ -9436,7 +9576,7 @@
     "author": "mario1d240",
     "genres": [
       "action",
-      "skill"
+      "rpg"
     ],
     "special": [
       "web"
@@ -9450,7 +9590,8 @@
     "author": "Amusement Vision, camthesaxman etc",
     "genres": [
       "action",
-      "skill"
+      "platformer",
+      "casual"
     ],
     "special": [
       "web"
@@ -9471,28 +9612,15 @@
     ]
   },
   {
-    "id": 751,
-    "name": "Jeffrey Epstein Basics In Education And Kidnapping",
-    "cover": "covers/751.png",
-    "url": "html/751.html",
-    "author": "Zakaria_ALZ",
-    "genres": [
-      "action",
-      "skill"
-    ],
-    "special": [
-      "port"
-    ]
-  },
-  {
     "id": 752,
     "name": "Bad Piggies",
     "cover": "covers/752.png",
     "url": "html/752.html",
     "author": "Rovio Entertainment, EDURocks",
     "genres": [
-      "action",
-      "skill"
+      "puzzle",
+      "casual",
+      "physics"
     ],
     "special": [
       "port"
@@ -9505,8 +9633,8 @@
     "url": "html/753.html",
     "author": "Print More India",
     "genres": [
-      "action",
-      "skill"
+      "puzzle",
+      "casual"
     ],
     "special": [
       "web"
@@ -9548,7 +9676,8 @@
     "url": "html/757.html",
     "author": "Icedrop Games, mysmic",
     "genres": [
-      "action",
+      "sports",
+      "casual",
       "skill"
     ],
     "special": [
@@ -9690,7 +9819,7 @@
     "author": "Beruke Games",
     "genres": [
       "action",
-      "skill"
+      "casual"
     ],
     "special": [
       "web"
@@ -9753,8 +9882,7 @@
     "special": [
       "port"
     ],
-        "featured": true
-
+    "featured": true
   },
   {
     "id": 772,
@@ -9828,8 +9956,7 @@
     "special": [
       "port"
     ],
-        "featured": true
-
+    "featured": true
   },
   {
     "id": 777,
@@ -9940,6 +10067,7 @@
     "author": "Gabriel115GJ",
     "genres": [
       "action",
+      "platformer",
       "skill"
     ],
     "special": [

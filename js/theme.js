@@ -1,5 +1,3 @@
-// ===== VISPORA THEME MODULE =====
-
 const ACCENT_PRESETS = [
   { hex: '#ffffff', label: 'White'    },
   { hex: '#7c3aed', label: 'Violet'  },

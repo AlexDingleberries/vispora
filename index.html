@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>vispora</title>
-<link rel="stylesheet" href="css/global.css">
-<link rel="stylesheet" href="css/components.css">
-<link rel="stylesheet" href="css/pages.css">
-<script src="js/storage.js"></script>
-<script src="js/theme.js"></script>
-<script src="js/cloak.js"></script>
+<link rel="stylesheet" href="/css/global.css">
+<link rel="stylesheet" href="/css/components.css">
+<link rel="stylesheet" href="/css/pages.css">
+<script src="/js/storage.js"></script>
+<script src="/js/theme.js"></script>
+<script src="/js/cloak.js"></script>
 </head>
 <body>
 <div id="particles-js"></div>
@@ -33,17 +33,6 @@
       <div style="flex:1"><div class="settings-label">Custom URL</div>
         <input type="url" class="settings-input" id="custom-url-input" placeholder="https://classroom.google.com"></div>
     </div>
-    <div class="settings-row">
-      <div><div class="settings-label">Auto-Cloak on Load</div><div class="settings-label-desc">Disguise tab immediately</div></div>
-      <label class="toggle-wrap"><input type="checkbox" class="toggle-input" id="auto-cloak-toggle"><span class="toggle-slider"></span></label>
-    </div>
-    <div class="settings-row">
-      <div><div class="settings-label">Panic Key</div><div class="settings-label-desc">Press to instantly redirect</div></div>
-      <div class="panic-key-display" id="panic-key-btn" tabindex="0" role="button">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/></svg>
-        <span id="panic-key-label">]</span>
-      </div>
-    </div>
   </div>
 </main>
 <div id="toast-container"></div>
@@ -52,9 +41,6 @@
 <script>
 VCloak.initCloak();
 VApp.initParticles();
-
-const autoCloak = VStorage.getAutoCloak();
-if (autoCloak) { var win = window.open(); win.document.body.style.margin = '0';win.document.body.style.height = '100vh';var iframe = win.document.createElement('iframe');iframe.style.border = 'none';iframe.style.width = '100%'; iframe.style.height = '100%';iframe.style.margin = '0'; iframe.src = 'home.html';win.document.body.appendChild(iframe);;const m = VStorage.getCloakMode();const cu = VStorage.getCloakUrl();if (m === 'google') {window.location.replace(CLOAK_TARGETS.google.url);} else if (m === 'custom' && cu) {window.location.replace(cu);};}
 
 const modeSelect=document.getElementById('cloak-mode-select');
 const customRow=document.getElementById('custom-url-row');
@@ -65,13 +51,10 @@ const pkLbl=document.getElementById('panic-key-label');
 
 modeSelect.value=VStorage.getCloakMode();
 customIn.value=VStorage.getCloakUrl()||'';
-autoTog.checked=VStorage.getAutoCloak();
 customRow.style.display=modeSelect.value==='custom'?'':'none';
-const k=VStorage.getPanicKey();pkLbl.textContent=k==='Escape'?'ESC':k.replace('Key','');
 
 modeSelect.onchange=()=>{VStorage.setCloakMode(modeSelect.value);customRow.style.display=modeSelect.value==='custom'?'':'none';};
 customIn.oninput=()=>VStorage.setCloakUrl(customIn.value);
-autoTog.onchange=()=>VStorage.setAutoCloak(autoTog.checked);
 
 let listening=false;
 function startListen(){
@@ -79,8 +62,6 @@ function startListen(){
   function onKey(e){e.preventDefault();const key=e.code;VStorage.setPanicKey(key);pkBtn.classList.remove('listening');pkLbl.textContent=key.replace('Key','');listening=false;document.removeEventListener('keydown',onKey);}
   document.addEventListener('keydown',onKey);
 }
-pkBtn.onclick=startListen;
-pkBtn.onkeydown=e=>{if(e.key==='Enter'||e.key===' ')startListen();};
 document.getElementById('launch-btn').onclick=()=>{var win = window.open(); win.document.body.style.margin = '0';win.document.body.style.height = '100vh';var iframe = win.document.createElement('iframe');iframe.style.border = 'none';iframe.style.width = '100%'; iframe.style.height = '100%';iframe.style.margin = '0'; iframe.src = 'home.html';win.document.body.appendChild(iframe);;const m = VStorage.getCloakMode();const cu = VStorage.getCloakUrl();if (m === 'google') {window.location.replace(CLOAK_TARGETS.google.url);} else if (m === 'custom' && cu) {window.location.replace(cu);}};
 </script>
 </body></html>

@@ -1,5 +1,3 @@
-// ===== VISPORA CLOAK MODULE =====
-
 const CLOAK_TARGETS = {
   google: {
     title: 'My Drive – Google Drive',
@@ -24,7 +22,7 @@ function cloakTab(mode, customUrl) {
 
   if (m === 'google') {
     document.title = CLOAK_TARGETS.google.title;
-    setFavicon(CLOAK_TARGETS.google.favicon);
+    setFavicon('https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png');
   } else if (m === 'custom' && cu) {
     const u = new URL(cu, window.location.origin);
     document.title = u.hostname.replace('www.', '');
@@ -35,7 +33,6 @@ function cloakTab(mode, customUrl) {
 
 function uncloakTab(title) {
   document.title = title || 'vispora';
-  setFavicon('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="%2300e5ff"/><text x="50%" y="60%" font-size="18" font-family="monospace" font-weight="900" fill="black" text-anchor="middle">V</text></svg>');
 }
 
 function initCloak() {

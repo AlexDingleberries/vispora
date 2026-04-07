@@ -1,5 +1,3 @@
-// ===== VISPORA SEARCH MODULE =====
-
 let _games = [];
 let _filtered = [];
 let _currentCategory = 'all';

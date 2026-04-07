@@ -1,6 +1,3 @@
-// VISPORA APP UTILITIES
-
-// ---- SVG ICONS (Lucide-style, clean paths) ----
 const IC = {
   home: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
   grid: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>`,
@@ -34,7 +31,6 @@ function showToast(msg, type='info', duration=3000){
   setTimeout(()=>{t.classList.add('toast-out');setTimeout(()=>t.remove(),220);},duration);
 }
 
-// ---- Modal ----
 // ---- Modal ----
 function showModal({title,message,confirmText='Confirm',cancelText='Cancel',dangerous=false}){
   return new Promise(resolve=>{
@@ -84,7 +80,7 @@ function makeCard(game,opts={}){
   </${tag}>`;
 }
 
-// ---- Star delegation ----
+// ---- Star ----
 function initStars(container){
   container.addEventListener('click',e=>{
     const btn=e.target.closest('.game-card-star');

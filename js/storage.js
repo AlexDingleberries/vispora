@@ -1,4 +1,3 @@
-// VISPORA STORAGE
 const KEYS = {
   THEME:'vispora_theme', ACCENT:'vispora_accent', FONT_SIZE:'vispora_fontsize',
   CLOAK_MODE:'vispora_cloak_mode', CLOAK_URL:'vispora_cloak_url',
@@ -22,7 +21,7 @@ function getCloakUrl(){return get(KEYS.CLOAK_URL,'');}
 function setCloakUrl(v){set(KEYS.CLOAK_URL,v);}
 function getAutoCloak(){return get(KEYS.AUTO_CLOAK,false);}
 function setAutoCloak(v){set(KEYS.AUTO_CLOAK,v);}
-function getPanicKey(){return get(KEYS.PANIC_KEY,'Escape');}
+function getPanicKey(){return get(KEYS.PANIC_KEY,'RightBracket');}
 function setPanicKey(v){set(KEYS.PANIC_KEY,v);}
 function getFavorites(){return get(KEYS.FAVORITES,[]);}
 function isFavorite(id){return getFavorites().includes(Number(id));}
