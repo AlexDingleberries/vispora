@@ -32,14 +32,14 @@
 @media (max-width: 900px) { .home-hero-section { grid-template-columns: 1fr; } }
 
 /* ===== GAMES PAGE ===== */
-.games-page { padding-top: calc(var(--nav-h) + 36px); padding-bottom: 60px; min-height: 100vh; }
-.games-page-header { text-align: center; margin-bottom: 36px; }
-.games-page-title { font-size: 2rem; font-weight: 900; margin-bottom: 3px; }
-.games-page-sub { color: var(--text-secondary); font-size: 0.84rem; }
-.games-filters { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-bottom: 36px; }
-.games-filter-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; justify-content: center; }
-.games-count { font-size: 0.77rem; font-weight: 500; color: var(--text-secondary); margin-bottom: 10px; text-align: right; }
-.games-count span { color: var(--accent); font-weight: 700; }
+.visps-page { padding-top: calc(var(--nav-h) + 36px); padding-bottom: 60px; min-height: 100vh; }
+.visps-page-header { text-align: center; margin-bottom: 36px; }
+.visps-page-title { font-size: 2rem; font-weight: 900; margin-bottom: 3px; }
+.visps-page-sub { color: var(--text-secondary); font-size: 0.84rem; }
+.visps-filters { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-bottom: 36px; }
+.visps-filter-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; justify-content: center; }
+.visps-count { font-size: 0.77rem; font-weight: 500; color: var(--text-secondary); margin-bottom: 10px; text-align: right; }
+.visps-count span { color: var(--accent); font-weight: 700; }
 .no-results { grid-column: 1/-1; text-align: center; padding: 70px 20px; color: var(--text-secondary); }
 .no-results-title { font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
 

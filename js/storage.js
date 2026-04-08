@@ -30,9 +30,9 @@ function toggleFavorite(id){
   if(i===-1)favs.push(id);else favs.splice(i,1);set(KEYS.FAVORITES,favs);return i===-1;
 }
 function getHistory(){return get(KEYS.HISTORY,[]);}
-function addToHistory(game){
-  let h=getHistory().filter(x=>x.id!==game.id);
-  h.unshift({id:game.id,name:game.name,cover:game.cover,lastPlayed:Date.now(),totalPlaytime:getPlaytime(game.id)});
+function addToHistory(visp){
+  let h=getHistory().filter(x=>x.id!==visp.id);
+  h.unshift({id:visp.id,name:visp.name,cover:visp.cover,lastPlayed:Date.now(),totalPlaytime:getPlaytime(visp.id)});
   if(h.length>50)h=h.slice(0,50);set(KEYS.HISTORY,h);
 }
 function removeFromHistory(id){set(KEYS.HISTORY,getHistory().filter(h=>h.id!==Number(id)));}

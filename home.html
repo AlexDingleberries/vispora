@@ -22,19 +22,19 @@
     <div class="home-hero-section">
       <a id="hero-card" class="hero-card skeleton" style="min-height:200px" href="#"></a>
       <div style="display:flex;flex-direction:column;gap:12px;justify-content:center">
-        <div class="stat-card"><div class="stat-value" id="s-games">—</div><div class="stat-label">Games</div></div>
+        <div class="stat-card"><div class="stat-value" id="s-visps">—</div><div class="stat-label">Visps</div></div>
         <div class="stat-card"><div class="stat-value" id="s-time">—</div><div class="stat-label">Playtime</div></div>
         <div class="stat-card"><div class="stat-value" id="s-favs">—</div><div class="stat-label">Favorites</div></div>
       </div>
     </div>
 
-    <!-- Games of the Day -->
+    <!-- Visps of the Day -->
     <section>
       <div class="section-header">
-        <h2 class="section-title">Games of the Day</h2>
+        <h2 class="section-title">Visps of the Day</h2>
       </div>
       <div id="day-wrap">
-        <div class="games-row" id="day-row" style="pointer-events:none">
+        <div class="visps-row" id="day-row" style="pointer-events:none">
           <div class="skeleton" style="flex:0 0 155px;height:155px;border-radius:10px"></div>
         </div>
       </div>
@@ -47,7 +47,7 @@
         <a href="#" class="section-viewall" id="recent-va" style="display:none">View All</a>
       </div>
       <div id="recent-wrap">
-        <div class="empty-state"><div class="empty-state-icon">🎮</div><div class="empty-state-title">Nothing played yet</div><p>Head to the <a href="games.html" style="color:var(--accent)">Games Library</a> to start!</p></div>
+        <div class="empty-state"><div class="empty-state-icon">🎮</div><div class="empty-state-title">Nothing played yet</div><p>Head to the <a href="visps.html" style="color:var(--accent)">Visps Library</a> to start!</p></div>
       </div>
     </section>
 
@@ -58,7 +58,7 @@
         <a href="#" class="section-viewall" id="fav-va" style="display:none">View All</a>
       </div>
       <div id="fav-wrap">
-        <div class="empty-state"><div class="empty-state-icon">⭐</div><div class="empty-state-title">No favorites yet</div><p>Star games to see them here</p></div>
+        <div class="empty-state"><div class="empty-state-icon">⭐</div><div class="empty-state-title">No favorites yet</div><p>Star visps to see them here</p></div>
       </div>
     </section>
 
@@ -73,17 +73,17 @@ document.getElementById('nav-ph').innerHTML=VApp.navHTML('home');
 VCloak.initCloak();VApp.initPanic();VApp.initParticles();
 const dtEl=document.getElementById('nav-datetime');if(dtEl)VApp.startDatetime(dtEl);
 
-let allGames=[];
+let allVisps=[];
 
 async function init(){
-  allGames=await VApp.loadGames();
+  allVisps=await VApp.loadVisps();
   renderHero();renderStats();renderRecent();renderDay();renderFavs();
 }
 
 function renderHero(){
-  if(!allGames.length)return;
-  const featured=allGames.filter(g=>g.featured);
-  const pool=featured.length?featured:allGames.slice(0,50);
+  if(!allVisps.length)return;
+  const featured=allVisps.filter(g=>g.featured);
+  const pool=featured.length?featured:allVisps.slice(0,50);
   const g=pool[Math.floor(Math.random()*pool.length)];
   const card=document.getElementById('hero-card');
   card.classList.remove('skeleton');
@@ -100,7 +100,7 @@ function renderHero(){
 }
 
 function renderStats(){
-  document.getElementById('s-games').textContent=allGames.length.toLocaleString();
+  document.getElementById('s-visps').textContent=allVisps.length.toLocaleString();
   const tot=Object.values(VStorage.getAllPlaytime()).reduce((a,b)=>a+b,0);
   document.getElementById('s-time').textContent=VStorage.formatTime(tot)||'0m';
   document.getElementById('s-favs').textContent=VStorage.getFavorites().length;
@@ -111,30 +111,30 @@ function renderRecent(){
   if(!hist.length)return;
   va.style.display=hist.length>8?'':'none';
   const shown=hist.slice(0,8);
-  const row=document.createElement('div');row.className='games-row';
+  const row=document.createElement('div');row.className='visps-row';
   row.innerHTML=shown.map(h=>VApp.makeCard(h,{showRemove:true})).join('');
   wrap.innerHTML='';wrap.appendChild(row);
   VApp.initStars(row);
   // Remove from history
   row.addEventListener('click',async e=>{
-    const rb=e.target.closest('.game-card-remove');if(!rb)return;
+    const rb=e.target.closest('.visp-card-remove');if(!rb)return;
     e.preventDefault();e.stopPropagation();
     const id=Number(rb.dataset.id);
-    const ok=await VApp.showModal({title:'Remove from History',message:'Remove this game from your recently played list?',confirmText:'Remove',dangerous:true});
-    if(ok){VStorage.removeFromHistory(id);rb.closest('.game-card').remove();VApp.showToast('Removed from history');renderStats();}
+    const ok=await VApp.showModal({title:'Remove from History',message:'Remove this visp from your recently played list?',confirmText:'Remove',dangerous:true});
+    if(ok){VStorage.removeFromHistory(id);rb.closest('.visp-card').remove();VApp.showToast('Removed from history');renderStats();}
   });
-  va.addEventListener('click',e=>{e.preventDefault();showViewAll('Recent Games',hist);});
+  va.addEventListener('click',e=>{e.preventDefault();showViewAll('Recent Visps',hist);});
 }
 
 function renderDay(){
   const wrap = document.getElementById('day-wrap'); 
-  if(!allGames.length) return;
+  if(!allVisps.length) return;
   
   const seed = new Date().getDate();
-const shuffled = [...allGames].sort((a,b)=>(((a.id * (seed + 1) * 1103) % 997) - ((b.id * (seed + 1) * 1103) % 997)));  const pop = shuffled.slice(0, 12);
+const shuffled = [...allVisps].sort((a,b)=>(((a.id * (seed + 1) * 1103) % 997) - ((b.id * (seed + 1) * 1103) % 997)));  const pop = shuffled.slice(0, 12);
   
   const row = document.createElement('div');
-  row.className = 'games-row';
+  row.className = 'visps-row';
   row.innerHTML = pop.map(g => VApp.makeCard(g)).join('');
   
   wrap.innerHTML = '';
@@ -145,24 +145,24 @@ const shuffled = [...allGames].sort((a,b)=>(((a.id * (seed + 1) * 1103) % 997) -
 function renderFavs(){
   const ids=VStorage.getFavorites();const wrap=document.getElementById('fav-wrap');const va=document.getElementById('fav-va');
   if(!ids.length)return;
-  const games=ids.map(id=>allGames.find(g=>g.id===id)).filter(Boolean);
-  if(!games.length)return;
+  const visps=ids.map(id=>allVisps.find(g=>g.id===id)).filter(Boolean);
+  if(!visps.length)return;
   va.style.display='';
-  const row=document.createElement('div');row.className='games-row';
-  row.innerHTML=games.slice(0,8).map(g=>VApp.makeCard(g)).join('');
+  const row=document.createElement('div');row.className='visps-row';
+  row.innerHTML=visps.slice(0,8).map(g=>VApp.makeCard(g)).join('');
   wrap.innerHTML='';wrap.appendChild(row);
   VApp.initStars(row);
-  va.addEventListener('click',e=>{e.preventDefault();showViewAll('Favorites',games);});
+  va.addEventListener('click',e=>{e.preventDefault();showViewAll('Favorites',visps);});
 }
 
-function showViewAll(title,games){
+function showViewAll(title,visps){
   const o=document.createElement('div');o.className='modal-overlay';
   o.innerHTML=`<div class="modal" style="max-width:680px;width:100%">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0">
       <h3 style="margin:0">${VApp.esc(title)}</h3>
       <button class="btn-icon va-close" type="button">${VApp.IC.x}</button>
     </div>
-    <div class="view-all-grid">${games.map(g=>VApp.makeCard(g)).join('')}</div>
+    <div class="view-all-grid">${visps.map(g=>VApp.makeCard(g)).join('')}</div>
   </div>`;
   o.querySelector('.va-close').onclick=()=>o.remove();
   o.onclick=e=>{if(e.target===o)o.remove();};

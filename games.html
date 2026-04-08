@@ -2,7 +2,7 @@
 <html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Games — vispora</title>
+<title>Visps — vispora</title>
 <link rel="stylesheet" href="/css/global.css">
 <link rel="stylesheet" href="/css/components.css">
 <link rel="stylesheet" href="/css/pages.css">
@@ -15,18 +15,18 @@
 <body>
 <div id="particles-js"></div>
 <div id="nav-ph"></div>
-<main class="games-page page-enter container">
-  <div class="games-page-header">
-    <h1 class="games-page-title">Games</h1>
+<main class="visps-page page-enter container">
+  <div class="visps-page-header">
+    <h1 class="visps-page-title">Visps</h1>
   </div>
-  <div class="games-filters">
+  <div class="visps-filters">
     <div class="search-wrap">
       <span class="search-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
       </span>
-      <input type="search" class="search-input" id="search-input" placeholder="Search games, authors, genres…" autocomplete="off" spellcheck="false" aria-label="Search games">
+      <input type="search" class="search-input" id="search-input" placeholder="Search visps, authors, genres…" autocomplete="off" spellcheck="false" aria-label="Search visps">
     </div>
-    <div class="games-filter-row">
+    <div class="visps-filter-row">
       <div class="filter-tabs" id="cat-tabs">
         <button class="filter-tab active" data-cat="all">All</button>
         <button class="filter-tab" data-cat="web">Web</button>
@@ -36,28 +36,28 @@
       <select class="genre-select" id="genre-select" aria-label="Filter by genre"><option value="all">All Genres</option></select>
     </div>
   </div>
-  <div class="games-count" id="games-count"></div>
-  <div class="game-grid" id="game-grid" role="list">
+  <div class="visps-count" id="visps-count"></div>
+  <div class="visp-grid" id="visp-grid" role="list">
     <div class="skeleton" style="aspect-ratio:1;border-radius:10px"></div>
   </div>
 </main>
 <div id="toast-container"></div>
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <script>
-document.getElementById('nav-ph').innerHTML=VApp.navHTML('games');
+document.getElementById('nav-ph').innerHTML=VApp.navHTML('visps');
 VCloak.initCloak();VApp.initPanic();VApp.initParticles();
 const dtEl=document.getElementById('nav-datetime');if(dtEl)VApp.startDatetime(dtEl);
 
-const grid=document.getElementById('game-grid');
+const grid=document.getElementById('visp-grid');
 const searchIn=document.getElementById('search-input');
 const genreSel=document.getElementById('genre-select');
-const countEl=document.getElementById('games-count');
+const countEl=document.getElementById('visps-count');
 let timer=null;
 
 async function init(){
-  const games=await VApp.loadGames();
-  VSearch.setGames(games);
-  VSearch.getAllGenres(games).forEach(g=>{
+  const visps=await VApp.loadVisps();
+  VSearch.setVisps(visps);
+  VSearch.getAllGenres(visps).forEach(g=>{
     const o=document.createElement('option');
     o.value=g;o.textContent=g.charAt(0).toUpperCase()+g.slice(1).replace('-',' ');
     genreSel.appendChild(o);
@@ -68,11 +68,11 @@ async function init(){
 
 function render(){
   const results=VSearch.getFiltered().sort((a,b)=>a.name.localeCompare(b.name));
-  countEl.innerHTML=`Showing <span>${results.length.toLocaleString()}</span> game${results.length!==1?'s':''}`;
+  countEl.innerHTML=`Showing <span>${results.length.toLocaleString()}</span> visp${results.length!==1?'s':''}`;
   if(!results.length){
     grid.innerHTML=`<div style="grid-column:1/-1;text-align:center;padding:80px 20px">
       <div style="font-size:2.5rem;margin-bottom:12px">🔍</div>
-      <div class="no-results-title">No games found</div>
+      <div class="no-results-title">No visps found</div>
       <p style="color:var(--text-secondary);margin-top:6px;font-size:0.875rem">Try a different search or clear filters</p>
       <button class="btn btn-secondary" style="margin-top:16px" id="clear-btn">Clear Filters</button>
     </div>`;
@@ -81,7 +81,7 @@ function render(){
   }
   grid.innerHTML=results.map((g,i)=>`<div style="animation-delay:${Math.min(i*25,500)}ms">${VApp.makeCard(g)}</div>`).join('');
   VApp.initStars(grid);
-  grid.querySelectorAll('.game-card').forEach(c=>{
+  grid.querySelectorAll('.visp-card').forEach(c=>{
     c.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();if(c.href)window.location.href=c.href;}});
   });
 }
