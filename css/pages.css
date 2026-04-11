@@ -34,7 +34,7 @@
 /* ===== GAMES PAGE ===== */
 .visps-page { padding-top: calc(var(--nav-h) + 36px); padding-bottom: 60px; min-height: 100vh; }
 .visps-page-header { text-align: center; margin-bottom: 36px; }
-.visps-page-title { font-size: 2rem; font-weight: 900; margin-bottom: 3px; }
+.visps-page-title { font-size: 3rem; font-weight: 900; margin-bottom: 3px; }
 .visps-page-sub { color: var(--text-secondary); font-size: 0.84rem; }
 .visps-filters { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-bottom: 36px; }
 .visps-filter-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; justify-content: center; }
