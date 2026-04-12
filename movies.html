@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Movies — vispora</title>
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+<script src="js/storage.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/cloak.js"></script>
+<script src="js/app.js"></script>
+<script src="js/media.js"></script>
+</head>
+<body>
+<div id="particles-js"></div>
+<div id="nav-ph"></div>
+<main class="media-browse-page page-enter container">
+  <div class="visps-page-header">
+    <h1 class="visps-page-title">Movies</h1>
+    <p class="visps-page-sub">Discover and watch your favorite films</p>
+  </div>
+  <div class="visps-filters">
+    <div class="search-wrap">
+      <span class="search-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </span>
+      <input type="search" class="search-input" id="search-input" placeholder="Search movies…" autocomplete="off" spellcheck="false" aria-label="Search movies">
+    </div>
+    <div class="visps-filter-row" id="cat-row">
+      <div class="filter-tabs" id="cat-tabs">
+        <button class="filter-tab active" data-cat="popular">Popular</button>
+        <button class="filter-tab" data-cat="top_rated">Top Rated</button>
+        <button class="filter-tab" data-cat="now_playing">Now Playing</button>
+        <button class="filter-tab" data-cat="upcoming">Upcoming</button>
+      </div>
+      <select class="genre-select" id="genre-select" aria-label="Filter by genre">
+        <option value="">All Genres</option>
+      </select>
+    </div>
+  </div>
+  <div class="visps-count" id="result-count"></div>
+  <div class="media-grid" id="media-grid"></div>
+  <div id="load-more-wrap" style="text-align:center;margin-top:32px;display:none">
+    <button class="btn btn-secondary" id="load-more-btn" type="button">Load More</button>
+  </div>
+</main>
+<div id="toast-container"></div>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+document.getElementById('nav-ph').innerHTML = VApp.navHTML('movies');
+VCloak.initCloak(); VApp.initPanic(); VApp.initParticles();
+const dtEl = document.getElementById('nav-datetime'); if (dtEl) VApp.startDatetime(dtEl);
+
+const grid = document.getElementById('media-grid');
+const searchIn = document.getElementById('search-input');
+const genreSel = document.getElementById('genre-select');
+const countEl = document.getElementById('result-count');
+const loadMoreWrap = document.getElementById('load-more-wrap');
+const loadMoreBtn = document.getElementById('load-more-btn');
+const catRow = document.getElementById('cat-row');
+
+let state = { query: '', category: 'popular', genreId: '', page: 1, totalPages: 1, results: [], loading: false };
+let searchTimer = null;
+
+function renderSkeletons() {
+  grid.innerHTML = Array(12).fill(`<div class="skeleton media-card-skeleton"></div>`).join('');
+}
+
+async function loadMovies(append = false) {
+  if (state.loading) return;
+  state.loading = true;
+  if (!append) { state.results = []; renderSkeletons(); }
+
+  try {
+    let data;
+    if (state.query) {
+      data = await VMedia.tmdbFetch('/search/movie', { query: state.query, page: state.page, with_genres: state.genreId || undefined });
+    } else {
+      data = await VMedia.tmdbFetch(`/movie/${state.category}`, { page: state.page, with_genres: state.genreId || undefined });
+    }
+    const movies = (data.results || []).filter(m => m.poster_path);
+    state.totalPages = Math.min(data.total_pages || 1, 500);
+    state.results = append ? [...state.results, ...movies] : movies;
+    renderMovies(append, movies);
+  } catch (e) {
+    console.error(e);
+    grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:60px;color:var(--text-secondary)">
+      <div style="font-size:2rem;margin-bottom:10px">⚠️</div>Failed to load movies. Check your connection.</div>`;
+  } finally {
+    state.loading = false;
+  }
+}
+
+function renderMovies(append, newMovies) {
+  countEl.innerHTML = state.results.length ? `Showing <span style="color:var(--accent);font-weight:700">${state.results.length.toLocaleString()}</span> movies` : '';
+  if (!state.results.length) {
+    grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:80px 20px">
+      <div style="font-size:2.5rem;margin-bottom:12px">🎬</div>
+      <div class="no-results-title">No movies found</div>
+      <p style="color:var(--text-secondary);margin-top:6px;font-size:0.875rem">Try a different search or filter</p>
+    </div>`;
+    loadMoreWrap.style.display = 'none';
+    return;
+  }
+  if (append && newMovies) {
+    const frag = document.createDocumentFragment();
+    newMovies.forEach((m, i) => {
+      const d = document.createElement('div');
+      d.style.cssText = `animation-delay:${Math.min(i * 25, 400)}ms;animation:cardIn 0.3s ease both`;
+      d.innerHTML = VMedia.makeMovieCard(m);
+      frag.appendChild(d);
+    });
+    grid.appendChild(frag);
+    VMedia.initMediaStars(grid);
+  } else {
+    grid.innerHTML = state.results.map((m, i) =>
+      `<div style="animation-delay:${Math.min(i * 25, 400)}ms;animation:cardIn 0.3s ease both">${VMedia.makeMovieCard(m)}</div>`
+    ).join('');
+    VMedia.initMediaStars(grid);
+  }
+  loadMoreWrap.style.display = state.page < state.totalPages ? '' : 'none';
+  loadMoreBtn.disabled = false;
+  loadMoreBtn.textContent = 'Load More';
+}
+
+async function init() {
+  renderSkeletons();
+  try {
+    const genres = await VMedia.getMovieGenres();
+    genres.forEach(g => {
+      const o = document.createElement('option');
+      o.value = g.id; o.textContent = g.name;
+      genreSel.appendChild(o);
+    });
+  } catch(e) { console.error(e); }
+  await loadMovies();
+  document.addEventListener('keydown', e => {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') { e.preventDefault(); searchIn.focus(); searchIn.select(); }
+  });
+}
+
+searchIn.addEventListener('input', () => {
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(() => {
+    state.query = searchIn.value.trim();
+    state.page = 1;
+    catRow.style.display = state.query ? 'none' : '';
+    loadMovies();
+  }, 250);
+});
+
+document.getElementById('cat-tabs').addEventListener('click', e => {
+  const btn = e.target.closest('.filter-tab');
+  if (!btn) return;
+  document.querySelectorAll('#cat-tabs .filter-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  state.category = btn.dataset.cat;
+  state.page = 1;
+  loadMovies();
+});
+
+genreSel.addEventListener('change', () => {
+  state.genreId = genreSel.value;
+  state.page = 1;
+  loadMovies();
+});
+
+loadMoreBtn.addEventListener('click', async () => {
+  loadMoreBtn.disabled = true;
+  loadMoreBtn.textContent = 'Loading…';
+  state.page++;
+  await loadMovies(true);
+});
+
+init();
+</script>
+</body>
+</html>

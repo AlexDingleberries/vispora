@@ -4,6 +4,9 @@ const KEYS = {
   AUTO_CLOAK:'vispora_auto_cloak', PANIC_KEY:'vispora_panic_key',
   FAVORITES:'vispora_favorites', HISTORY:'vispora_history', PLAYTIME:'vispora_playtime',
   PARTICLES:'vispora_particles',
+  MOVIE_FAVS:'vispora_movie_favs', TV_FAVS:'vispora_tv_favs',
+  MOVIE_HIST:'vispora_movie_hist', TV_HIST:'vispora_tv_hist',
+  TV_PROG:'vispora_tv_prog',
 };
 function get(k,d=null){try{const v=localStorage.getItem(k);return v===null?d:JSON.parse(v);}catch{return d;}}
 function set(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch{}}
@@ -47,6 +50,41 @@ function getParticlesConfig(){
   return get(KEYS.PARTICLES,{enabled:true,count:40,speed:0.6,size:1.5,opacity:0.25,linked:true,color:'accent'});
 }
 function setParticlesConfig(v){set(KEYS.PARTICLES,v);}
+
+/* ---- Movie favorites ---- */
+function getMovieFavorites(){return get(KEYS.MOVIE_FAVS,[]);}
+function isMovieFavorite(id){return getMovieFavorites().includes(Number(id));}
+function toggleMovieFavorite(id){
+  id=Number(id);const f=getMovieFavorites();const i=f.indexOf(id);
+  if(i===-1)f.push(id);else f.splice(i,1);set(KEYS.MOVIE_FAVS,f);return i===-1;
+}
+/* ---- TV favorites ---- */
+function getTVFavorites(){return get(KEYS.TV_FAVS,[]);}
+function isTVFavorite(id){return getTVFavorites().includes(Number(id));}
+function toggleTVFavorite(id){
+  id=Number(id);const f=getTVFavorites();const i=f.indexOf(id);
+  if(i===-1)f.push(id);else f.splice(i,1);set(KEYS.TV_FAVS,f);return i===-1;
+}
+/* ---- TV progress ---- */
+function getTVProgress(showId){return(get(KEYS.TV_PROG,{})[String(showId)])||{season:1,episode:1};}
+function setTVProgress(showId,season,episode){
+  const d=get(KEYS.TV_PROG,{});d[String(showId)]={season:Number(season),episode:Number(episode)};set(KEYS.TV_PROG,d);
+}
+/* ---- Movie history ---- */
+function getMovieHistory(){return get(KEYS.MOVIE_HIST,[]);}
+function addToMovieHistory(movie){
+  let h=getMovieHistory().filter(x=>x.id!==movie.id);
+  h.unshift({id:movie.id,title:movie.title,poster_path:movie.poster_path,lastPlayed:Date.now()});
+  if(h.length>50)h=h.slice(0,50);set(KEYS.MOVIE_HIST,h);
+}
+/* ---- TV history ---- */
+function getTVHistory(){return get(KEYS.TV_HIST,[]);}
+function addToTVHistory(show){
+  let h=getTVHistory().filter(x=>x.id!==show.id);
+  h.unshift({id:show.id,name:show.name,poster_path:show.poster_path,lastPlayed:Date.now()});
+  if(h.length>50)h=h.slice(0,50);set(KEYS.TV_HIST,h);
+}
+
 function formatTime(ms){
   if(!ms||ms<5000)return'';
   const h=Math.floor(ms/3600000),m=Math.floor((ms%3600000)/60000);
@@ -60,7 +98,16 @@ function exportData(){
 function importData(json){const d=JSON.parse(json);Object.entries(d).forEach(([k,v])=>set(k,v));}
 function clearAll(){Object.values(KEYS).forEach(k=>remove(k));}
 
-window.VStorage={KEYS,get,set,remove,getTheme,setTheme,getAccent,setAccent,getFontSize,setFontSize,
+window.VStorage={
+  KEYS,get,set,remove,
+  getTheme,setTheme,getAccent,setAccent,getFontSize,setFontSize,
   getCloakMode,setCloakMode,getCloakUrl,setCloakUrl,getAutoCloak,setAutoCloak,getPanicKey,setPanicKey,
   getFavorites,isFavorite,toggleFavorite,getHistory,addToHistory,removeFromHistory,
-  getPlaytime,addPlaytime,getAllPlaytime,getParticlesConfig,setParticlesConfig,formatTime,exportData,importData,clearAll};
+  getPlaytime,addPlaytime,getAllPlaytime,getParticlesConfig,setParticlesConfig,
+  formatTime,exportData,importData,clearAll,
+  getMovieFavorites,isMovieFavorite,toggleMovieFavorite,
+  getTVFavorites,isTVFavorite,toggleTVFavorite,
+  getTVProgress,setTVProgress,
+  getMovieHistory,addToMovieHistory,
+  getTVHistory,addToTVHistory,
+};

@@ -1,6 +1,8 @@
 const IC = {
   home: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
   grid: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>`,
+  film: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/><line x1="17" y1="17" x2="22" y2="17"/></svg>`,
+  tv: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>`,
   settings: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>`,
   star: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
   starFilled: `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
@@ -36,7 +38,7 @@ function showModal({title,message,confirmText='Confirm',cancelText='Cancel',dang
   return new Promise(resolve=>{
     const o=document.createElement('div');
     o.className='modal-overlay';
-    o.style.zIndex='30000'; // <-- THIS FIXES IT
+    o.style.zIndex='30000';
     o.innerHTML=`<div class="modal" role="dialog" aria-modal="true">
       <h3>${esc(title)}</h3><p>${esc(message)}</p>
       <div class="modal-actions">
@@ -119,6 +121,10 @@ function navHTML(active){
         <span class="nav-icon">${IC.home}</span><span>Home</span></a></li>
       <li><a href="visps.html" ${active==='visps'?'class="active"':''}>
         <span class="nav-icon">${IC.grid}</span><span>Visps</span></a></li>
+      <li><a href="movies.html" ${active==='movies'?'class="active"':''}>
+        <span class="nav-icon">${IC.film}</span><span>Movies</span></a></li>
+      <li><a href="tv.html" ${active==='tv'?'class="active"':''}>
+        <span class="nav-icon">${IC.tv}</span><span>TV</span></a></li>
       <li><a href="settings.html" ${active==='settings'?'class="active"':''}>
         <span class="nav-icon">${IC.settings}</span><span>Settings</span></a></li>
     </ul>
@@ -151,8 +157,7 @@ function initParticles(){
     particlesJS('particles-js',{
       particles:{
         number:{value:cfg.count,density:{enable:true,value_area:800}},
-        color:{value:color},
-        shape:{type:'circle'},
+        color:{value:color},shape:{type:'circle'},
         opacity:{value:cfg.opacity,random:true},
         size:{value:cfg.size,random:true},
         line_linked:{enable:cfg.linked,distance:150,color:color,opacity:cfg.opacity*0.5,width:1},

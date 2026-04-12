@@ -10,6 +10,7 @@
 <script src="js/theme.js"></script>
 <script src="js/cloak.js"></script>
 <script src="js/app.js"></script>
+<script src="js/media.js"></script>
 </head>
 <body>
 <div id="particles-js"></div>
@@ -116,7 +117,7 @@ const fsExitIcon=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" str
 
 btnFs.onclick=()=>{
   isFs=!isFs;wrap.classList.toggle('fullscreen-mode',isFs);btnFs.innerHTML=isFs?fsExitIcon:fsIcon;
-  if(isFs){wrap.requestFullscreen?.().catch(()=>{});document.getElementById("visp-frame").focus()}else if(document.fullscreenElement)document.exitFullscreen?.();
+  if(isFs){wrap.requestFullscreen?.().catch(()=>{});}else if(document.fullscreenElement)document.exitFullscreen?.();
 };
 document.addEventListener('fullscreenchange',()=>{if(!document.fullscreenElement&&isFs){isFs=false;wrap.classList.remove('fullscreen-mode');btnFs.innerHTML=fsIcon;}});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&isFs){isFs=false;wrap.classList.remove('fullscreen-mode');btnFs.innerHTML=fsIcon;if(document.fullscreenElement)document.exitFullscreen?.();}});

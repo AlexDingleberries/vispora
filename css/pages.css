@@ -34,7 +34,7 @@
 /* ===== GAMES PAGE ===== */
 .visps-page { padding-top: calc(var(--nav-h) + 36px); padding-bottom: 60px; min-height: 100vh; }
 .visps-page-header { text-align: center; margin-bottom: 36px; }
-.visps-page-title { font-size: 3rem; font-weight: 900; margin-bottom: 3px; }
+.visps-page-title { font-size: 2rem; font-weight: 900; margin-bottom: 3px; }
 .visps-page-sub { color: var(--text-secondary); font-size: 0.84rem; }
 .visps-filters { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-bottom: 36px; }
 .visps-filter-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; justify-content: center; }
@@ -83,4 +83,208 @@
 .range-row { display: flex; flex-direction: column; gap: 6px; }
 .range-label { display: flex; justify-content: space-between; font-size: 0.8rem; }
 .range-label span:first-child { color: var(--text-secondary); font-weight: 500; }
-.range-label span:last-child { color: var(--accent); font-weight: 600; font-size: 0.78rem; }
+.range-label span:last-child { color: var(--accent); font-weight: 600; font-size: 0.78rem; }/* ===== MEDIA CARDS (Movies & TV) ===== */
+.media-card {
+  position: relative;
+  display: block;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 200ms var(--ease), border-color 200ms, box-shadow 200ms;
+}
+
+/* Accent glow on hover — applied to both movie and TV cards */
+.movie-card:hover,
+.movie-card:focus-visible {
+  transform: translateY(-5px) scale(1.02);
+  border-color: rgba(var(--accent-rgb), 0.55);
+  box-shadow:
+    0 0 0 1px rgba(var(--accent-rgb), 0.2),
+    0 0 28px rgba(var(--accent-rgb), 0.4),
+    0 14px 44px rgba(0,0,0,0.55);
+  z-index: 2;
+}
+
+.tv-card:hover,
+.tv-card:focus-visible {
+  transform: translateY(-5px) scale(1.02);
+  border-color: rgba(var(--accent-rgb), 0.55);
+  box-shadow:
+    0 0 0 1px rgba(var(--accent-rgb), 0.2),
+    0 0 28px rgba(var(--accent-rgb), 0.4),
+    0 14px 44px rgba(0,0,0,0.55);
+  z-index: 2;
+}
+.media-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.media-card-poster {
+  aspect-ratio: 2/3;
+  overflow: hidden;
+  background: var(--bg3);
+  position: relative;
+}
+.media-card-poster img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform 280ms var(--ease);
+}
+.media-card:hover .media-card-poster img { transform: scale(1.06); }
+
+.media-card-noposter {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.5rem; background: var(--bg3); color: var(--text-dim);
+}
+
+.media-card-info {
+  padding: 9px 10px 10px;
+  background: var(--card-bg);
+}
+.media-card-title {
+  font-size: 0.78rem; font-weight: 600; color: var(--text); line-height: 1.3;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.media-card-meta {
+  font-size: 0.68rem; color: var(--text-secondary); margin-top: 3px;
+}
+
+/* Star on media cards */
+.media-card .visp-card-star { opacity: 0; }
+.media-card:hover .visp-card-star,
+.media-card:focus-visible .visp-card-star,
+.media-card .visp-card-star.favorited { opacity: 1; }
+
+/* Media grid (portrait cards, 2/3 ratio) */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+}
+@media (max-width: 640px) {
+  .media-grid { grid-template-columns: repeat(auto-fill, minmax(115px, 1fr)); gap: 10px; }
+}
+.media-grid .media-card { animation: cardIn 0.3s ease both; }
+
+/* Skeleton for media cards (portrait) */
+.media-card-skeleton {
+  aspect-ratio: 2/3;
+  border-radius: var(--radius);
+}
+
+/* Media row (horizontal scroll, portrait cards) */
+.media-row {
+  display: flex; gap: 12px;
+  overflow-x: auto; padding: 4px 0 14px;
+  scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin; scrollbar-color: var(--card-border) transparent;
+}
+.media-row::-webkit-scrollbar { height: 6px; }
+.media-row::-webkit-scrollbar-track { background: transparent; }
+.media-row::-webkit-scrollbar-thumb { background: var(--card-border); border-radius: 10px; }
+.media-row::-webkit-scrollbar-thumb:hover { background: var(--text-dim); }
+.media-row .media-card { flex: 0 0 148px; scroll-snap-align: start; }
+
+/* ===== QUICK ACCESS ROW ===== */
+.quick-access-row {
+  display: flex; gap: 12px; flex-wrap: wrap;
+}
+.quick-access-btn {
+  display: flex; align-items: center; gap: 14px;
+  padding: 16px 22px;
+  background: var(--bg3); border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg); color: var(--text);
+  font-weight: 600; font-size: 0.875rem;
+  transition: all 180ms var(--ease);
+  flex: 1; min-width: 130px; text-decoration: none;
+}
+.quick-access-btn:hover {
+  border-color: rgba(var(--accent-rgb), 0.45);
+  background: var(--accent-dim);
+  color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 0 16px rgba(var(--accent-rgb), 0.15), 0 6px 20px rgba(0,0,0,0.2);
+}
+.qa-icon { font-size: 1.5rem; flex-shrink: 0; }
+.qa-label { font-weight: 700; font-size: 0.9rem; }
+.qa-sub { font-size: 0.72rem; color: var(--text-secondary); font-weight: 400; margin-top: 1px; }
+.quick-access-btn:hover .qa-sub { color: rgba(var(--accent-rgb), 0.7); }
+
+/* ===== MEDIA PLAYER AREA ===== */
+.media-player-area {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  width: 100%;
+}
+.media-player-area.tv-mode {
+  grid-template-columns: 1fr 272px;
+  align-items: start;
+}
+@media (max-width: 820px) {
+  .media-player-area.tv-mode { grid-template-columns: 1fr; }
+  .media-player-area.tv-mode .tv-episode-picker { max-height: 340px; }
+}
+
+/* ===== TV EPISODE PICKER ===== */
+.tv-episode-picker {
+  background: var(--card-bg); border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg); display: flex; flex-direction: column;
+  overflow: hidden;
+  /* In grid, height matches the iframe column height; sidebar scrolls internally */
+  max-height: 70vh;
+  min-height: 200px;
+}
+.episode-picker-header {
+  padding: 14px 14px 12px; border-bottom: 1px solid var(--card-border); flex-shrink: 0;
+}
+.episode-picker-header select {
+  width: 100%; padding: 8px 28px 8px 10px;
+  background: var(--bg4); border: 1px solid var(--card-border);
+  border-radius: var(--radius-sm); color: var(--text);
+  font-size: 0.85rem; font-weight: 600; font-family: inherit;
+  outline: none; cursor: pointer; appearance: none; transition: border-color 160ms;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 9px center;
+}
+.episode-picker-header select:focus { border-color: rgba(var(--accent-rgb), 0.4); }
+
+.episode-picker-list {
+  overflow-y: auto; flex: 1; padding: 6px;
+  scrollbar-width: thin; scrollbar-color: var(--card-border) transparent;
+}
+.episode-picker-list::-webkit-scrollbar { width: 4px; }
+.episode-picker-list::-webkit-scrollbar-thumb { background: var(--card-border); border-radius: 2px; }
+
+.episode-btn {
+  width: 100%; display: flex; align-items: flex-start; gap: 10px;
+  padding: 9px 10px; border-radius: var(--radius-sm); text-align: left;
+  cursor: pointer; transition: background 140ms; font-family: inherit;
+  border: 1px solid transparent; background: none; color: var(--text-secondary);
+  font-size: 0.82rem; margin-bottom: 2px;
+}
+.episode-btn:hover { background: var(--bg4); color: var(--text); }
+.episode-btn.active {
+  background: var(--accent-dim); color: var(--accent);
+  border-color: rgba(var(--accent-rgb), 0.2);
+}
+.ep-number {
+  font-size: 0.68rem; font-weight: 700;
+  background: var(--bg4); padding: 2px 6px; border-radius: var(--radius-xs);
+  white-space: nowrap; flex-shrink: 0; margin-top: 2px;
+  color: var(--text-secondary);
+}
+.episode-btn.active .ep-number {
+  background: rgba(var(--accent-rgb), 0.2); color: var(--accent);
+}
+.ep-title {
+  line-height: 1.35; display: -webkit-box;
+  -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* ===== MEDIA BROWSE PAGE ===== */
+.media-browse-page {
+  padding-top: calc(var(--nav-h) + 36px); padding-bottom: 60px; min-height: 100vh;
+}

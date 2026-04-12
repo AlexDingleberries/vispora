@@ -10,6 +10,7 @@
 <script src="js/theme.js"></script>
 <script src="js/cloak.js"></script>
 <script src="js/app.js"></script>
+<script src="js/media.js"></script>
 </head>
 <body>
 <div id="particles-js"></div>
@@ -28,10 +29,32 @@
       </div>
     </div>
 
+    <!-- Quick Access -->
+    <section>
+      <div class="section-header">
+        <h2 class="section-title">Browse</h2>
+      </div>
+      <div class="quick-access-row">
+        <a href="visps.html" class="quick-access-btn">
+          <span class="qa-icon">🎮</span>
+          <div><div class="qa-label">Visps</div><div class="qa-sub">Play browser games</div></div>
+        </a>
+        <a href="movies.html" class="quick-access-btn">
+          <span class="qa-icon">🎬</span>
+          <div><div class="qa-label">Movies</div><div class="qa-sub">Stream films</div></div>
+        </a>
+        <a href="tv.html" class="quick-access-btn">
+          <span class="qa-icon">📺</span>
+          <div><div class="qa-label">TV Shows</div><div class="qa-sub">Watch series</div></div>
+        </a>
+      </div>
+    </section>
+
     <!-- Visps of the Day -->
     <section>
       <div class="section-header">
         <h2 class="section-title">Visps of the Day</h2>
+        <a href="visps.html" class="section-viewall">View All</a>
       </div>
       <div id="day-wrap">
         <div class="visps-row" id="day-row" style="pointer-events:none">
@@ -40,7 +63,39 @@
       </div>
     </section>
 
-     <!-- Recent -->
+    <!-- Popular Movies -->
+    <section>
+      <div class="section-header">
+        <h2 class="section-title">Popular Movies</h2>
+        <a href="movies.html" class="section-viewall">View All</a>
+      </div>
+      <div id="movies-wrap">
+        <div class="media-row">
+          <div class="skeleton media-card-skeleton" style="flex:0 0 140px"></div>
+          <div class="skeleton media-card-skeleton" style="flex:0 0 140px"></div>
+          <div class="skeleton media-card-skeleton" style="flex:0 0 140px"></div>
+          <div class="skeleton media-card-skeleton" style="flex:0 0 140px"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular TV -->
+    <section>
+      <div class="section-header">
+        <h2 class="section-title">Popular TV Shows</h2>
+        <a href="tv.html" class="section-viewall">View All</a>
+      </div>
+      <div id="tv-wrap">
+        <div class="media-row">
+          <div class="skeleton media-card-skeleton" style="flex:0 0 140px"></div>
+          <div class="skeleton media-card-skeleton" style="flex:0 0 140px"></div>
+          <div class="skeleton media-card-skeleton" style="flex:0 0 140px"></div>
+          <div class="skeleton media-card-skeleton" style="flex:0 0 140px"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Visps -->
     <section>
       <div class="section-header">
         <h2 class="section-title">Recently Played</h2>
@@ -51,14 +106,31 @@
       </div>
     </section>
 
-    <!-- Favorites -->
+    <!-- Visp Favorites -->
     <section>
       <div class="section-header">
-        <h2 class="section-title">Favorites</h2>
+        <h2 class="section-title">Visp Favorites</h2>
         <a href="#" class="section-viewall" id="fav-va" style="display:none">View All</a>
       </div>
       <div id="fav-wrap">
         <div class="empty-state"><div class="empty-state-icon">⭐</div><div class="empty-state-title">No favorites yet</div><p>Star visps to see them here</p></div>
+      </div>
+    </section>
+
+    <!-- Media Favorites (Movies + TV) -->
+    <section id="media-favs-section" style="display:none">
+      <div class="section-header">
+        <h2 class="section-title">Media Favorites</h2>
+      </div>
+      <!-- Movie favorites row -->
+      <div id="movie-favs-wrap" style="margin-bottom:18px;display:none">
+        <div style="font-size:0.72rem;font-weight:700;color:var(--text-secondary);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px">Movies</div>
+        <div class="media-row" id="movie-favs-row"></div>
+      </div>
+      <!-- TV favorites row -->
+      <div id="tv-favs-wrap" style="display:none">
+        <div style="font-size:0.72rem;font-weight:700;color:var(--text-secondary);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px">TV Shows</div>
+        <div class="media-row" id="tv-favs-row"></div>
       </div>
     </section>
 
@@ -69,107 +141,174 @@
 <script src="https://js.puter.com/v2/"></script>
 
 <script>
-document.getElementById('nav-ph').innerHTML=VApp.navHTML('home');
-VCloak.initCloak();VApp.initPanic();VApp.initParticles();
-const dtEl=document.getElementById('nav-datetime');if(dtEl)VApp.startDatetime(dtEl);
+document.getElementById('nav-ph').innerHTML = VApp.navHTML('home');
+VCloak.initCloak(); VApp.initPanic(); VApp.initParticles();
+const dtEl = document.getElementById('nav-datetime'); if (dtEl) VApp.startDatetime(dtEl);
 
-let allVisps=[];
+let allVisps = [];
 
-async function init(){
-  allVisps=await VApp.loadVisps();
-  renderHero();renderStats();renderRecent();renderDay();renderFavs();
+async function init() {
+  allVisps = await VApp.loadVisps();
+  renderHero();
+  renderStats();
+  renderRecent();
+  renderDay();
+  renderFavs();
+  // Load media sections in parallel
+  renderPopularMovies();
+  renderPopularTV();
+  renderMediaFavs();
 }
 
-function renderHero(){
-  if(!allVisps.length)return;
-  const featured=allVisps.filter(g=>g.featured);
-  const pool=featured.length?featured:allVisps.slice(0,50);
-  const g=pool[Math.floor(Math.random()*pool.length)];
-  const card=document.getElementById('hero-card');
+function renderHero() {
+  if (!allVisps.length) return;
+  const featured = allVisps.filter(g => g.featured);
+  const pool = featured.length ? featured : allVisps.slice(0, 50);
+  const g = pool[Math.floor(Math.random() * pool.length)];
+  const card = document.getElementById('hero-card');
   card.classList.remove('skeleton');
-  card.href=`player.html?id=${g.id}`;
-  card.innerHTML=`
-    ${g.cover?`<img src="${VApp.esc(g.cover)}" alt="${VApp.esc(g.name)}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">`:''}
+  card.href = `player.html?id=${g.id}`;
+  card.innerHTML = `
+    ${g.cover ? `<img src="${VApp.esc(g.cover)}" alt="${VApp.esc(g.name)}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">` : ''}
     <div class="hero-card-content">
       <div class="hero-badge">Featured</div>
       <div class="hero-title">${VApp.esc(g.name)}</div>
-      <div class="hero-author">by ${VApp.esc(g.author||'Unknown')}</div>
+      <div class="hero-author">by ${VApp.esc(g.author || 'Unknown')}</div>
       <span class="btn btn-primary" style="display:inline-flex;width:fit-content">${VApp.IC.play} Play Now</span>
     </div>`;
-  card.style.cssText+=';position:relative;overflow:hidden;aspect-ratio:16/9;';
+  card.style.cssText += ';position:relative;overflow:hidden;aspect-ratio:16/9;';
 }
 
-function renderStats(){
-  document.getElementById('s-visps').textContent=allVisps.length.toLocaleString();
-  const tot=Object.values(VStorage.getAllPlaytime()).reduce((a,b)=>a+b,0);
-  document.getElementById('s-time').textContent=VStorage.formatTime(tot)||'0m';
-  document.getElementById('s-favs').textContent=VStorage.getFavorites().length;
+function renderStats() {
+  document.getElementById('s-visps').textContent = allVisps.length.toLocaleString();
+  const tot = Object.values(VStorage.getAllPlaytime()).reduce((a, b) => a + b, 0);
+  document.getElementById('s-time').textContent = VStorage.formatTime(tot) || '0m';
+  const totalFavs = VStorage.getFavorites().length + VStorage.getMovieFavorites().length + VStorage.getTVFavorites().length;
+  document.getElementById('s-favs').textContent = totalFavs;
 }
 
-function renderRecent(){
-  const hist=VStorage.getHistory();const wrap=document.getElementById('recent-wrap');const va=document.getElementById('recent-va');
-  if(!hist.length)return;
-  va.style.display=hist.length>8?'':'none';
-  const shown=hist.slice(0,8);
-  const row=document.createElement('div');row.className='visps-row';
-  row.innerHTML=shown.map(h=>VApp.makeCard(h,{showRemove:true})).join('');
-  wrap.innerHTML='';wrap.appendChild(row);
+function renderRecent() {
+  const hist = VStorage.getHistory();
+  const wrap = document.getElementById('recent-wrap');
+  const va = document.getElementById('recent-va');
+  if (!hist.length) return;
+  va.style.display = hist.length > 8 ? '' : 'none';
+  const shown = hist.slice(0, 8);
+  const row = document.createElement('div'); row.className = 'visps-row';
+  row.innerHTML = shown.map(h => VApp.makeCard(h, { showRemove: true })).join('');
+  wrap.innerHTML = ''; wrap.appendChild(row);
   VApp.initStars(row);
-  // Remove from history
-  row.addEventListener('click',async e=>{
-    const rb=e.target.closest('.visp-card-remove');if(!rb)return;
-    e.preventDefault();e.stopPropagation();
-    const id=Number(rb.dataset.id);
-    const ok=await VApp.showModal({title:'Remove from History',message:'Remove this visp from your recently played list?',confirmText:'Remove',dangerous:true});
-    if(ok){VStorage.removeFromHistory(id);rb.closest('.visp-card').remove();VApp.showToast('Removed from history');renderStats();}
+  row.addEventListener('click', async e => {
+    const rb = e.target.closest('.visp-card-remove'); if (!rb) return;
+    e.preventDefault(); e.stopPropagation();
+    const id = Number(rb.dataset.id);
+    const ok = await VApp.showModal({ title: 'Remove from History', message: 'Remove this visp from your recently played list?', confirmText: 'Remove', dangerous: true });
+    if (ok) { VStorage.removeFromHistory(id); rb.closest('.visp-card').remove(); VApp.showToast('Removed from history'); renderStats(); }
   });
-  va.addEventListener('click',e=>{e.preventDefault();showViewAll('Recent Visps',hist);});
+  va.addEventListener('click', e => { e.preventDefault(); showViewAll('Recent Visps', hist); });
 }
 
-function renderDay(){
-  const wrap = document.getElementById('day-wrap'); 
-  if(!allVisps.length) return;
-  
+function renderDay() {
+  const wrap = document.getElementById('day-wrap');
+  if (!allVisps.length) return;
   const seed = new Date().getDate();
-const shuffled = [...allVisps].sort((a,b)=>(((a.id * (seed + 1) * 1103) % 997) - ((b.id * (seed + 1) * 1103) % 997)));  const pop = shuffled.slice(1, 13);
-  
-  const row = document.createElement('div');
-  row.className = 'visps-row';
+  const shuffled = [...allVisps].sort((a, b) => (((a.id * (seed + 1) * 1103) % 997) - ((b.id * (seed + 1) * 1103) % 997)));
+  const pop = shuffled.slice(1, 13);
+  const row = document.createElement('div'); row.className = 'visps-row';
   row.innerHTML = pop.map(g => VApp.makeCard(g)).join('');
-  
-  wrap.innerHTML = '';
-  wrap.appendChild(row);
+  wrap.innerHTML = ''; wrap.appendChild(row);
   VApp.initStars(row);
 }
 
-function renderFavs(){
-  const ids=VStorage.getFavorites();const wrap=document.getElementById('fav-wrap');const va=document.getElementById('fav-va');
-  if(!ids.length)return;
-  const visps=ids.map(id=>allVisps.find(g=>g.id===id)).filter(Boolean);
-  if(!visps.length)return;
-  va.style.display='';
-  const row=document.createElement('div');row.className='visps-row';
-  row.innerHTML=visps.slice(0,8).map(g=>VApp.makeCard(g)).join('');
-  wrap.innerHTML='';wrap.appendChild(row);
+function renderFavs() {
+  const ids = VStorage.getFavorites();
+  const wrap = document.getElementById('fav-wrap');
+  const va = document.getElementById('fav-va');
+  if (!ids.length) return;
+  const visps = ids.map(id => allVisps.find(g => g.id === id)).filter(Boolean);
+  if (!visps.length) return;
+  va.style.display = '';
+  const row = document.createElement('div'); row.className = 'visps-row';
+  row.innerHTML = visps.slice(0, 8).map(g => VApp.makeCard(g)).join('');
+  wrap.innerHTML = ''; wrap.appendChild(row);
   VApp.initStars(row);
-  va.addEventListener('click',e=>{e.preventDefault();showViewAll('Favorites',visps);});
+  va.addEventListener('click', e => { e.preventDefault(); showViewAll('Favorites', visps); });
 }
 
-function showViewAll(title,visps){
-  const o=document.createElement('div');o.className='modal-overlay';
-  o.innerHTML=`<div class="modal" style="max-width:680px;width:100%">
+async function renderPopularMovies() {
+  const wrap = document.getElementById('movies-wrap');
+  try {
+    const data = await VMedia.tmdbFetch('/movie/popular', { page: 1 });
+    const movies = (data.results || []).filter(m => m.poster_path).slice(0, 12);
+    if (!movies.length) { wrap.innerHTML = ''; return; }
+    const row = document.createElement('div'); row.className = 'media-row';
+    row.innerHTML = movies.map(m => VMedia.makeMovieCard(m)).join('');
+    wrap.innerHTML = ''; wrap.appendChild(row);
+    VMedia.initMediaStars(row);
+  } catch (e) { console.error('Popular movies:', e); wrap.innerHTML = ''; }
+}
+
+async function renderPopularTV() {
+  const wrap = document.getElementById('tv-wrap');
+  try {
+    const data = await VMedia.tmdbFetch('/tv/popular', { page: 1 });
+    const shows = (data.results || []).filter(s => s.poster_path).slice(0, 12);
+    if (!shows.length) { wrap.innerHTML = ''; return; }
+    const row = document.createElement('div'); row.className = 'media-row';
+    row.innerHTML = shows.map(s => VMedia.makeTVCard(s)).join('');
+    wrap.innerHTML = ''; wrap.appendChild(row);
+    VMedia.initMediaStars(row);
+  } catch (e) { console.error('Popular TV:', e); wrap.innerHTML = ''; }
+}
+
+async function renderMediaFavs() {
+  const movieIds = VStorage.getMovieFavorites();
+  const tvIds = VStorage.getTVFavorites();
+  if (!movieIds.length && !tvIds.length) return;
+
+  document.getElementById('media-favs-section').style.display = '';
+
+  if (movieIds.length) {
+    const wrap = document.getElementById('movie-favs-wrap');
+    const row = document.getElementById('movie-favs-row');
+    wrap.style.display = '';
+    try {
+      const movies = await Promise.all(movieIds.slice(0, 8).map(id => VMedia.tmdbFetch(`/movie/${id}`).catch(() => null)));
+      const valid = movies.filter(Boolean);
+      row.innerHTML = valid.map(m => VMedia.makeMovieCard(m)).join('');
+      VMedia.initMediaStars(wrap);
+    } catch (e) { console.error(e); }
+  }
+
+  if (tvIds.length) {
+    const wrap = document.getElementById('tv-favs-wrap');
+    const row = document.getElementById('tv-favs-row');
+    wrap.style.display = '';
+    try {
+      const shows = await Promise.all(tvIds.slice(0, 8).map(id => VMedia.tmdbFetch(`/tv/${id}`).catch(() => null)));
+      const valid = shows.filter(Boolean);
+      row.innerHTML = valid.map(s => VMedia.makeTVCard(s)).join('');
+      VMedia.initMediaStars(wrap);
+    } catch (e) { console.error(e); }
+  }
+}
+
+function showViewAll(title, visps) {
+  const o = document.createElement('div'); o.className = 'modal-overlay';
+  o.innerHTML = `<div class="modal" style="max-width:680px;width:100%">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0">
       <h3 style="margin:0">${VApp.esc(title)}</h3>
       <button class="btn-icon va-close" type="button">${VApp.IC.x}</button>
     </div>
-    <div class="view-all-grid">${visps.map(g=>VApp.makeCard(g)).join('')}</div>
+    <div class="view-all-grid">${visps.map(g => VApp.makeCard(g)).join('')}</div>
   </div>`;
-  o.querySelector('.va-close').onclick=()=>o.remove();
-  o.onclick=e=>{if(e.target===o)o.remove();};
+  o.querySelector('.va-close').onclick = () => o.remove();
+  o.onclick = e => { if (e.target === o) o.remove(); };
   VApp.initStars(o);
   document.body.appendChild(o);
 }
 
 init();
 </script>
-</body></html>
+</body>
+</html>
