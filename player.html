@@ -16,126 +16,189 @@
 <div id="particles-js"></div>
 <div id="nav-ph"></div>
 <main class="player-page page-enter container">
+
   <nav class="breadcrumb">
     <a href="home.html">Home</a><span class="breadcrumb-sep">›</span>
     <a href="visps.html">Visps</a><span class="breadcrumb-sep">›</span>
     <span id="bc-visp">Loading…</span>
   </nav>
-  <div class="player-header">
-    <div>
-      <h1 class="player-title" id="visp-title">Loading…</h1>
-      <div class="player-author" id="visp-author"></div>
-      <div class="player-tags" id="visp-tags"></div>
+
+  <!-- ===== Accent-blended control bar ABOVE the iframe ===== -->
+  <div class="game-ctrl-bar">
+    <!-- Left: title + meta -->
+    <div class="game-ctrl-info">
+      <h1 class="game-ctrl-title" id="visp-title">Loading…</h1>
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+        <span class="game-ctrl-author" id="visp-author"></span>
+        <div class="game-ctrl-tags" id="visp-tags"></div>
+      </div>
     </div>
-    <div style="display:flex;gap:10px;align-items:center;flex-shrink:0">
-      <div id="pt-display" style="font-size:0.75rem;color:var(--text-secondary);text-align:right;line-height:1.4"></div>
+
+    <!-- Center: session stats -->
+    <div class="game-ctrl-stats">
+      <div class="game-stat-cell">
+        <span class="game-stat-label">Session</span>
+        <span class="game-stat-value" id="session-time">—</span>
+      </div>
+      <div class="game-stat-cell">
+        <span class="game-stat-label">Total</span>
+        <span class="game-stat-value" id="total-time">—</span>
+      </div>
+    </div>
+
+    <!-- Right: action buttons -->
+    <div class="game-ctrl-actions">
+      <button class="btn-icon" id="btn-fav" title="Favorite" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </button>
+      <button class="btn-icon" id="btn-reload" title="Reload" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>
+      </button>
+      <button class="btn-icon" id="btn-fs" title="Fullscreen" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
+      </button>
       <button class="btn btn-secondary" id="back-btn" type="button">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
         Visps
       </button>
     </div>
   </div>
+
+  <!-- ===== Bigger iframe ===== -->
   <div class="player-iframe-wrap" id="iframe-wrap">
     <div class="player-error" id="player-error" style="display:none">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="40" height="40"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
       <strong>Visp failed to load</strong>
       <p id="error-link"></p>
     </div>
     <iframe id="visp-frame" title="Visp" allowfullscreen allow="autoplay; fullscreen; pointer-lock"
-      sandbox="allow-scripts allow-same-origin allow-forms allow-pointer-lock allow-popups" style="display:none"></iframe>
+      sandbox="allow-scripts allow-same-origin allow-forms allow-pointer-lock allow-popups"></iframe>
   </div>
-  <div class="player-controls">
-    <button class="btn-icon" id="btn-fs" title="Fullscreen" type="button">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
-    </button>
-    <button class="btn-icon" id="btn-reload" title="Reload" type="button">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>
-    </button>
-    <button class="btn-icon" id="btn-fav" title="Favorite" type="button">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-    </button>
-    <div style="width:1px;height:22px;background:var(--card-border);margin:0 4px"></div>
-    <span id="session-time" style="font-size:0.75rem;color:var(--text-secondary);min-width:44px;text-align:center;font-weight:500"></span>
-  </div>
+
 </main>
 <div id="toast-container"></div>
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <script>
-document.getElementById('nav-ph').innerHTML=VApp.navHTML('visps');
-VCloak.initCloak();VApp.initPanic();VApp.initParticles();
-const dtEl=document.getElementById('nav-datetime');if(dtEl)VApp.startDatetime(dtEl);
+document.getElementById('nav-ph').innerHTML = VApp.navHTML('visps');
+VCloak.initCloak(); VApp.initPanic(); VApp.initParticles();
+const dtEl = document.getElementById('nav-datetime'); if (dtEl) VApp.startDatetime(dtEl);
 
-const params=new URLSearchParams(location.search);
-const vispId=params.get('id');
-if(!vispId){location.href='visps.html';}
+const params = new URLSearchParams(location.search);
+const vispId = params.get('id');
+if (!vispId) { location.href = 'visps.html'; }
 
-let visp=null,sessionStart=null,sessionMs=0,sessionTimer=null,isFs=false;
+let visp = null;
+let sessionStart = null, sessionMs = 0, sessionTimer = null;
+let estFinishTimer = null;
+let isFs = false;
 
-async function initPlayer(){
-  const visps=await VApp.loadVisps();
-  visp=visps.find(g=>String(g.id)===String(vispId));
-  if(!visp){VApp.showToast('Visp not found','error');setTimeout(()=>location.href='visps.html',1500);return;}
+async function initPlayer() {
+  const visps = await VApp.loadVisps();
+  visp = visps.find(g => String(g.id) === String(vispId));
+  if (!visp) { VApp.showToast('Visp not found', 'error'); setTimeout(() => location.href = 'visps.html', 1500); return; }
 
-  document.title=`${visp.name} — vispora`;
-  document.getElementById('visp-title').textContent=visp.name;
-  document.getElementById('bc-visp').textContent=visp.name;
-  document.getElementById('visp-author').innerHTML=`by <strong>${VApp.esc(visp.author||'Unknown')}</strong>`;
+  document.title = `${visp.name} — vispora`;
+  document.getElementById('visp-title').textContent = visp.name;
+  document.getElementById('bc-visp').textContent = visp.name;
+  document.getElementById('visp-author').textContent = visp.author ? `by ${visp.author}` : '';
 
-  const tags=[...(visp.special||[]),...(visp.genres||[])].slice(0,5);
-  document.getElementById('visp-tags').innerHTML=tags.map(t=>`<span class="tag tag-accent">${VApp.esc(t)}</span>`).join('');
+  const tags = [...(visp.special || []), ...(visp.genres || [])].slice(0, 4);
+  document.getElementById('visp-tags').innerHTML = tags.map(t => `<span class="tag tag-accent">${VApp.esc(t)}</span>`).join('');
+
+  // Total playtime
+  const totalMs = VStorage.getPlaytime(visp.id);
+  const totalEl = document.getElementById('total-time');
+  totalEl.textContent = VStorage.formatTime(totalMs) || '0m';
 
   updateFavBtn();
-  updatePtDisplay(VStorage.getPlaytime(visp.id));
 
-  const frame=document.getElementById('visp-frame');
-  const err=document.getElementById('player-error');
-  if(visp.url){
-    frame.src=visp.url;frame.style.display='';
-    frame.onload=()=>{startSession();VStorage.addToHistory(visp);};
-    frame.onerror=()=>{frame.style.display='none';err.style.display='flex';document.getElementById('error-link').innerHTML=`<a href="${VApp.esc(visp.url)}" target="_blank" style="color:var(--accent)">Open directly ↗</a>`;};
-  }else{frame.style.display='none';err.style.display='flex';}
+  const frame = document.getElementById('visp-frame');
+  const err = document.getElementById('player-error');
+  if (visp.url) {
+    frame.src = visp.url; frame.style.display = 'block';
+    frame.onload = () => { startSession(); VStorage.addToHistory(visp); };
+    frame.onerror = () => {
+      frame.style.display = 'none'; err.style.display = 'flex';
+      document.getElementById('error-link').innerHTML =
+        `<a href="${VApp.esc(visp.url)}" target="_blank" style="color:var(--accent)">Open directly ↗</a>`;
+    };
+  } else { frame.style.display = 'none'; err.style.display = 'flex'; }
 }
 
-function startSession(){sessionStart=Date.now();sessionTimer=setInterval(tickSession,1000);}
-function tickSession(){if(!sessionStart)return;const el=document.getElementById('session-time');if(el)el.textContent=VStorage.formatTime(Date.now()-sessionStart+sessionMs)||'<1m';}
-function saveSession(){if(!visp||!sessionStart)return;const e=Date.now()-sessionStart;sessionMs+=e;sessionStart=null;if(e>2000){VStorage.addPlaytime(visp.id,e);VStorage.addToHistory(visp);}}
-function updatePtDisplay(ms){const el=document.getElementById('pt-display');const t=VStorage.formatTime(ms);el.innerHTML=t?`Total playtime<br><strong style="color:var(--accent)">${t}</strong>`:'';;}
+function startSession() {
+  sessionStart = Date.now();
+  sessionTimer = setInterval(tickSession, 1000);
+  estFinishTimer = setInterval(tickEst, 10000); // update est every 10s
+  tickSession(); tickEst();
+}
 
-document.addEventListener('visibilitychange',()=>{
-  if(document.hidden){if(sessionStart){saveSession();clearInterval(sessionTimer);}}
-  else{if(visp){sessionStart=Date.now();sessionTimer=setInterval(tickSession,1000);}}
+function tickSession() {
+  if (!sessionStart) return;
+  const el = document.getElementById('session-time');
+  if (el) el.textContent = VStorage.formatTime(Date.now() - sessionStart + sessionMs) || '<1m';
+}
+
+function saveSession() {
+  if (!visp || !sessionStart) return;
+  const e = Date.now() - sessionStart;
+  sessionMs += e; sessionStart = null;
+  if (e > 2000) { VStorage.addPlaytime(visp.id, e); VStorage.addToHistory(visp); }
+}
+
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) { saveSession(); clearInterval(sessionTimer); clearInterval(estFinishTimer); }
+  else if (visp) { sessionStart = Date.now(); sessionTimer = setInterval(tickSession, 1000); estFinishTimer = setInterval(tickEst, 10000); tickEst(); }
 });
-window.addEventListener('beforeunload',saveSession);
-window.addEventListener('pagehide',saveSession);
+window.addEventListener('beforeunload', saveSession);
+window.addEventListener('pagehide', saveSession);
 
-document.getElementById('back-btn').onclick=()=>{saveSession();clearInterval(sessionTimer);window.location.href = "visps.html"};
-
-const wrap=document.getElementById('iframe-wrap');
-const btnFs=document.getElementById('btn-fs');
-const fsIcon=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>`;
-const fsExitIcon=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v3a2 2 0 0 1-2 2H3"/><path d="M21 8h-3a2 2 0 0 1-2-2V3"/><path d="M3 16h3a2 2 0 0 1 2 2v3"/><path d="M16 21v-3a2 2 0 0 1 2-2h3"/></svg>`;
-
-btnFs.onclick=()=>{
-  isFs=!isFs;wrap.classList.toggle('fullscreen-mode',isFs);btnFs.innerHTML=isFs?fsExitIcon:fsIcon;
-  if(isFs){wrap.requestFullscreen?.().catch(()=>{});}else if(document.fullscreenElement)document.exitFullscreen?.();
-};
-document.addEventListener('fullscreenchange',()=>{if(!document.fullscreenElement&&isFs){isFs=false;wrap.classList.remove('fullscreen-mode');btnFs.innerHTML=fsIcon;}});
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&isFs){isFs=false;wrap.classList.remove('fullscreen-mode');btnFs.innerHTML=fsIcon;if(document.fullscreenElement)document.exitFullscreen?.();}});
-
-document.getElementById('btn-reload').onclick=()=>{const f=document.getElementById('visp-frame');f.src=f.src;VApp.showToast('Reloaded');};
-document.getElementById('btn-fav').onclick=()=>{if(!visp)return;const a=VStorage.toggleFavorite(visp.id);updateFavBtn();VApp.showToast(a?'Added to favorites':'Removed from favorites');};
-
-function updateFavBtn(){
-  if(!visp)return;
-  const btn=document.getElementById('btn-fav');
-  const isFav=VStorage.isFavorite(visp.id);
-  btn.style.color=isFav?'var(--accent)':'';
-  btn.innerHTML=isFav
-    ?`<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`
-    :`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
-  btn.title=isFav?'Remove from favorites':'Add to favorites';
+// ---- Favorite ----
+function updateFavBtn() {
+  if (!visp) return;
+  const btn = document.getElementById('btn-fav');
+  const isFav = VStorage.isFavorite(visp.id);
+  btn.style.color = isFav ? 'var(--accent)' : '';
+  btn.title = isFav ? 'Remove from favorites' : 'Add to favorites';
+  btn.innerHTML = isFav
+    ? `<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`
+    : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
 }
+document.getElementById('btn-fav').onclick = () => {
+  if (!visp) return;
+  const a = VStorage.toggleFavorite(visp.id); updateFavBtn();
+  VApp.showToast(a ? 'Added to favorites' : 'Removed from favorites');
+};
+
+// ---- Reload ----
+document.getElementById('btn-reload').onclick = () => {
+  const f = document.getElementById('visp-frame'); f.src = f.src; VApp.showToast('Reloaded');
+};
+
+// ---- Back ----
+document.getElementById('back-btn').onclick = () => {
+  saveSession(); clearInterval(sessionTimer); clearInterval(estFinishTimer);
+  window.location.href = 'visps.html';
+};
+
+// ---- Fullscreen ----
+const wrap = document.getElementById('iframe-wrap');
+const btnFs = document.getElementById('btn-fs');
+const fsIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>`;
+const fsExitIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v3a2 2 0 0 1-2 2H3"/><path d="M21 8h-3a2 2 0 0 1-2-2V3"/><path d="M3 16h3a2 2 0 0 1 2 2v3"/><path d="M16 21v-3a2 2 0 0 1 2-2h3"/></svg>`;
+
+btnFs.onclick = () => {
+  isFs = !isFs; wrap.classList.toggle('fullscreen-mode', isFs); document.getElementById("visp-frame").focus(); btnFs.innerHTML = isFs ? fsExitIcon : fsIcon;
+  if (isFs) wrap.requestFullscreen?.().catch(() => {});
+  else if (document.fullscreenElement) document.exitFullscreen?.();
+};
+document.addEventListener('fullscreenchange', () => {
+  if (!document.fullscreenElement && isFs) { isFs = false; wrap.classList.remove('fullscreen-mode'); btnFs.innerHTML = fsIcon; }
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && isFs) { isFs = false; wrap.classList.remove('fullscreen-mode'); btnFs.innerHTML = fsIcon; if (document.fullscreenElement) document.exitFullscreen?.(); }
+});
 
 initPlayer();
 </script>
-</body></html>
+</body>
+</html>

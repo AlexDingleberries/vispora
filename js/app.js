@@ -23,8 +23,7 @@ const IC = {
   zap: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>`,
 };
 
-// ---- Toast ----
-function showToast(msg, type='info', duration=3000){
+function showToast(msg,type='info',duration=3000){
   let c=document.getElementById('toast-container');
   if(!c){c=document.createElement('div');c.id='toast-container';document.body.appendChild(c);}
   const t=document.createElement('div');
@@ -33,12 +32,9 @@ function showToast(msg, type='info', duration=3000){
   setTimeout(()=>{t.classList.add('toast-out');setTimeout(()=>t.remove(),220);},duration);
 }
 
-// ---- Modal ----
 function showModal({title,message,confirmText='Confirm',cancelText='Cancel',dangerous=false}){
   return new Promise(resolve=>{
-    const o=document.createElement('div');
-    o.className='modal-overlay';
-    o.style.zIndex='30000';
+    const o=document.createElement('div');o.className='modal-overlay';o.style.zIndex='30000';
     o.innerHTML=`<div class="modal" role="dialog" aria-modal="true">
       <h3>${esc(title)}</h3><p>${esc(message)}</p>
       <div class="modal-actions">
@@ -52,10 +48,8 @@ function showModal({title,message,confirmText='Confirm',cancelText='Cancel',dang
   });
 }
 
-// ---- Escape HTML ----
 function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 
-// ---- Visp card HTML ----
 function makeCard(visp,opts={}){
   const{showRemove=false,linkToPlayer=true}=opts;
   const pt=VStorage.getPlaytime(visp.id);
@@ -82,7 +76,6 @@ function makeCard(visp,opts={}){
   </${tag}>`;
 }
 
-// ---- Star ----
 function initStars(container){
   container.addEventListener('click',e=>{
     const btn=e.target.closest('.visp-card-star');
@@ -96,7 +89,6 @@ function initStars(container){
   });
 }
 
-// ---- Datetime ----
 function startDatetime(el){
   function up(){
     const n=new Date();
@@ -106,13 +98,11 @@ function startDatetime(el){
   }up();return setInterval(up,1000);
 }
 
-// ---- Load visps ----
 async function loadVisps(){
   try{const r=await fetch('data/visps.json');const d=await r.json();return Array.isArray(d)?d:(d.visps||d);}
   catch(e){console.error(e);return[];}
 }
 
-// ---- Nav HTML ----
 function navHTML(active){
   return`<nav class="nav" role="navigation" aria-label="Main">
     <a href="home.html" class="nav-logo">vispora</a>
@@ -124,7 +114,7 @@ function navHTML(active){
       <li><a href="movies.html" ${active==='movies'?'class="active"':''}>
         <span class="nav-icon">${IC.film}</span><span>Movies</span></a></li>
       <li><a href="tv.html" ${active==='tv'?'class="active"':''}>
-        <span class="nav-icon">${IC.tv}</span><span>TV</span></a></li>
+        <span class="nav-icon">${IC.tv}</span><span>TV Shows</span></a></li>
       <li><a href="settings.html" ${active==='settings'?'class="active"':''}>
         <span class="nav-icon">${IC.settings}</span><span>Settings</span></a></li>
     </ul>
@@ -135,7 +125,6 @@ function navHTML(active){
   </nav>`;
 }
 
-// ---- Panic btn ----
 function initPanic(){
   document.querySelectorAll('#nav-panic,.btn-panic').forEach(btn=>{
     btn.addEventListener('click',()=>{
@@ -147,7 +136,6 @@ function initPanic(){
   });
 }
 
-// ---- Particles ----
 function initParticles(){
   const cfg=VStorage.getParticlesConfig();
   if(!cfg.enabled){const el=document.getElementById('particles-js');if(el)el.style.display='none';return;}
@@ -158,8 +146,7 @@ function initParticles(){
       particles:{
         number:{value:cfg.count,density:{enable:true,value_area:800}},
         color:{value:color},shape:{type:'circle'},
-        opacity:{value:cfg.opacity,random:true},
-        size:{value:cfg.size,random:true},
+        opacity:{value:cfg.opacity,random:true},size:{value:cfg.size,random:true},
         line_linked:{enable:cfg.linked,distance:150,color:color,opacity:cfg.opacity*0.5,width:1},
         move:{enable:true,speed:cfg.speed,direction:'none',random:true,out_mode:'out'},
       },

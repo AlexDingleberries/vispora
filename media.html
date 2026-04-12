@@ -15,67 +15,92 @@
 <body>
 <div id="particles-js"></div>
 <div id="nav-ph"></div>
-<main class="player-page page-enter container">
-  <nav class="breadcrumb" id="breadcrumb">
+<main class="media-player-page page-enter container">
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb">
     <a href="home.html">Home</a><span class="breadcrumb-sep">›</span>
-    <a href="#" id="bc-type">Loading…</a><span class="breadcrumb-sep">›</span>
+    <a href="#" id="bc-type">Media</a><span class="breadcrumb-sep">›</span>
     <span id="bc-title">Loading…</span>
   </nav>
 
-  <div class="player-header">
-    <div>
-      <h1 class="player-title" id="media-title">Loading…</h1>
-      <div class="player-author" id="media-meta"></div>
-      <div class="player-tags" id="media-tags"></div>
-    </div>
-    <div style="display:flex;gap:10px;align-items:center;flex-shrink:0">
-      <div id="pt-display" style="font-size:0.75rem;color:var(--text-secondary);text-align:right;line-height:1.4"></div>
-      <button class="btn btn-secondary" id="back-btn" type="button">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-        Back
-      </button>
-    </div>
-  </div>
-
-  <!-- Player area: movie = single col, tv = iframe + sidebar -->
+  <!-- ===== PLAYER AREA ===== -->
   <div class="media-player-area" id="player-area">
     <div class="player-iframe-wrap" id="iframe-wrap">
       <div class="player-error" id="player-error" style="display:none">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="40" height="40"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
         <strong>Failed to load</strong>
         <p id="error-link"></p>
       </div>
       <iframe id="media-frame" title="Media Player" allowfullscreen
         allow="autoplay; fullscreen; pointer-lock"
-        sandbox="allow-scripts allow-same-origin allow-forms allow-pointer-lock allow-popups"
-        style="display:none"></iframe>
+        sandbox="allow-scripts allow-same-origin allow-forms allow-pointer-lock allow-popups"></iframe>
     </div>
-
-    <!-- TV Episode Picker (hidden for movies) -->
+    <!-- TV episode picker (hidden for movies, shown for TV) -->
     <div class="tv-episode-picker" id="episode-picker" style="display:none">
       <div class="episode-picker-header">
-        <div style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-secondary);margin-bottom:8px">Episodes</div>
+        <div class="episode-picker-header-label">Episodes</div>
         <select id="season-select" aria-label="Select season"></select>
       </div>
       <div class="episode-picker-list" id="episode-list">
-        <div style="padding:20px;text-align:center;color:var(--text-secondary);font-size:0.8rem">Loading episodes…</div>
+        <div style="padding:24px;text-align:center;color:var(--text-secondary);font-size:0.8rem">Loading…</div>
       </div>
     </div>
   </div>
 
-  <div class="player-controls">
-    <button class="btn-icon" id="btn-fs" title="Fullscreen" type="button">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
-    </button>
-    <button class="btn-icon" id="btn-reload" title="Reload" type="button">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>
-    </button>
-    <button class="btn-icon" id="btn-fav" title="Favorite" type="button">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-    </button>
-    <div style="width:1px;height:22px;background:var(--card-border);margin:0 4px"></div>
-    <span id="session-time" style="font-size:0.75rem;color:var(--text-secondary);min-width:44px;text-align:center;font-weight:500"></span>
+  <br><br>
+
+    <div class="media-hero" id="media-hero">
+    <div class="media-hero-backdrop" id="hero-backdrop"></div>
+    <div class="media-hero-backdrop-gradient"></div>
+    <div class="media-hero-content">
+      <!-- Poster -->
+      <div class="media-hero-poster" id="hero-poster-wrap">
+        <div class="media-hero-poster-placeholder">🎬</div>
+      </div>
+      <!-- Info -->
+      <div class="media-hero-info">
+        <div class="media-hero-badge" id="hero-badge">Loading…</div>
+        <h1 class="media-hero-title" id="media-title">Loading…</h1>
+        <div class="media-hero-tagline" id="media-tagline"></div>
+
+        <div class="media-hero-meta" id="media-meta"></div>
+        <div class="media-hero-genres" id="media-genres"></div>
+        <p class="media-hero-overview" id="media-overview"></p>
+
+        <!-- Cast -->
+        <div class="media-hero-cast" id="cast-row"></div>
+
+        <!-- Actions -->
+        <div class="media-hero-actions">
+          <span id="est-done-display" style="display:none;font-size:0.78rem;font-weight:600;color:var(--accent)"></span>
+          <button class="btn btn-primary" id="btn-play-scroll" type="button">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Play
+          </button>
+          <button class="btn-icon" id="btn-fav" title="Favorite" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </button>
+          <button class="btn-icon" id="btn-reload-hero" title="Reload" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>
+          </button>
+          <button class="btn btn-secondary" id="back-btn" type="button">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            Back
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <!-- ===== RECOMMENDATIONS ===== -->
+  <section class="recs-section" id="recs-section" style="display:none">
+    <div class="section-header">
+      <h2 class="section-title">You Might Also Like</h2>
+    </div>
+    <div class="media-row" id="recs-row"></div>
+  </section>
+
 </main>
 <div id="toast-container"></div>
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
@@ -85,181 +110,266 @@ VCloak.initCloak(); VApp.initPanic(); VApp.initParticles();
 const dtEl = document.getElementById('nav-datetime'); if (dtEl) VApp.startDatetime(dtEl);
 
 const params = new URLSearchParams(location.search);
-const mediaType = params.get('type'); // 'movie' or 'tv'
-const mediaId = params.get('id');
-
+const mediaType = params.get('type'); // 'movie' | 'tv'
+const mediaId   = params.get('id');
 if (!mediaType || !mediaId) { location.href = 'home.html'; }
 
 let mediaData = null;
 let sessionStart = null, sessionMs = 0, sessionTimer = null;
 let isFs = false;
-// TV state
 let currentSeason = 1, currentEpisode = 1;
 const seasonCache = {};
+let _runtimeMs = 0; // populated from TMDB data
 
-// ---- Session tracking ----
-function startSession() { sessionStart = Date.now(); sessionTimer = setInterval(tickSession, 1000); }
+// ---- Session ----
+function startSession() {
+  if (sessionStart) return; // already running
+  sessionStart = Date.now();
+  sessionTimer = setInterval(tickSession, 1000);
+  tickSession();
+}
 function tickSession() {
-  const el = document.getElementById('session-time');
-  if (el && sessionStart) el.textContent = VStorage.formatTime(Date.now() - sessionStart + sessionMs) || '<1m';
+  if (!sessionStart || !_runtimeMs) return;
+  const el = document.getElementById('est-done-display');
+  if (!el) return;
+  const elapsed = Date.now() - sessionStart + sessionMs;
+  if (elapsed >= _runtimeMs) {
+    el.textContent = '✓ Done';
+  } else {
+    const remaining = _runtimeMs - elapsed;
+    const estEnd = new Date(Date.now() + remaining);
+    el.textContent = 'Est. Finish Time: ' + estEnd.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+  }
+  el.style.display = '';
 }
 function saveSession() {
   if (!sessionStart) return;
-  const elapsed = Date.now() - sessionStart;
-  sessionMs += elapsed; sessionStart = null;
-  if (elapsed > 2000 && mediaData) {
-    if (mediaType === 'movie') VStorage.addToMovieHistory(mediaData);
-    else VStorage.addToTVHistory(mediaData);
-  }
+  const e = Date.now() - sessionStart;
+  sessionMs += e; sessionStart = null;
+  if (e > 2000 && mediaData) VStorage.addToMediaHistory(mediaData, mediaType);
 }
-
 document.addEventListener('visibilitychange', () => {
-  if (document.hidden) { saveSession(); clearInterval(sessionTimer); }
-  else if (mediaData) { sessionStart = Date.now(); sessionTimer = setInterval(tickSession, 1000); }
+  if (document.hidden) { saveSession(); clearInterval(sessionTimer); sessionTimer = null; }
+  else if (mediaData) { sessionStart = Date.now(); sessionTimer = setInterval(tickSession, 1000); tickSession(); }
 });
 window.addEventListener('beforeunload', saveSession);
 window.addEventListener('pagehide', saveSession);
 
-// ---- Favorite button ----
+// ---- Favorite ----
 function updateFavBtn() {
   if (!mediaData) return;
   const btn = document.getElementById('btn-fav');
-  const isFav = mediaType === 'movie' ? VStorage.isMovieFavorite(mediaData.id) : VStorage.isTVFavorite(mediaData.id);
+  const isFav = VStorage.isMediaFavorite(mediaData.id, mediaType);
   btn.style.color = isFav ? 'var(--accent)' : '';
   btn.title = isFav ? 'Remove from favorites' : 'Add to favorites';
   btn.innerHTML = isFav
-    ? `<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`
-    : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
+    ? `<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`
+    : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
 }
-
 document.getElementById('btn-fav').onclick = () => {
   if (!mediaData) return;
-  const added = mediaType === 'movie' ? VStorage.toggleMovieFavorite(mediaData.id) : VStorage.toggleTVFavorite(mediaData.id);
+  VStorage.toggleMediaFavorite(mediaData.id, mediaType);
   updateFavBtn();
-  VApp.showToast(added ? 'Added to favorites' : 'Removed from favorites');
+  VApp.showToast(VStorage.isMediaFavorite(mediaData.id, mediaType) ? 'Added to favorites' : 'Removed from favorites');
 };
 
 // ---- Fullscreen ----
 const wrap = document.getElementById('iframe-wrap');
-const btnFs = document.getElementById('btn-fs');
-const fsIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>`;
-const fsExitIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v3a2 2 0 0 1-2 2H3"/><path d="M21 8h-3a2 2 0 0 1-2-2V3"/><path d="M3 16h3a2 2 0 0 1 2 2v3"/><path d="M16 21v-3a2 2 0 0 1 2-2h3"/></svg>`;
+const fsIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>`;
+const fsExitIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M8 3v3a2 2 0 0 1-2 2H3"/><path d="M21 8h-3a2 2 0 0 1-2-2V3"/><path d="M3 16h3a2 2 0 0 1 2 2v3"/><path d="M16 21v-3a2 2 0 0 1 2-2h3"/></svg>`;
 
-btnFs.onclick = () => {
-  isFs = !isFs;
-  wrap.classList.toggle('fullscreen-mode', isFs);
-  btnFs.innerHTML = isFs ? fsExitIcon : fsIcon;
-  if (isFs) wrap.requestFullscreen?.().catch(() => {});
-  else if (document.fullscreenElement) document.exitFullscreen?.();
+document.getElementById('btn-reload-hero').onclick = () => {
+  const f = document.getElementById('media-frame'); f.src = f.src; VApp.showToast('Reloaded');
 };
-document.addEventListener('fullscreenchange', () => {
-  if (!document.fullscreenElement && isFs) { isFs = false; wrap.classList.remove('fullscreen-mode'); btnFs.innerHTML = fsIcon; }
-});
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && isFs) { isFs = false; wrap.classList.remove('fullscreen-mode'); btnFs.innerHTML = fsIcon; if (document.fullscreenElement) document.exitFullscreen?.(); }
-});
-
-document.getElementById('btn-reload').onclick = () => {
-  const f = document.getElementById('media-frame');
-  f.src = f.src;
-  VApp.showToast('Reloaded');
+document.getElementById('btn-play-scroll').onclick = () => {
+  document.getElementById('iframe-wrap').scrollIntoView({ behavior: 'smooth', block: 'start' });
 };
-
 document.getElementById('back-btn').onclick = () => {
   saveSession(); clearInterval(sessionTimer);
   window.location.href = mediaType === 'movie' ? 'movies.html' : 'tv.html';
 };
 
-// ---- TV: load episode into iframe ----
-function loadEpisode(showId, season, episode) {
-  const frame = document.getElementById('media-frame');
-  const err = document.getElementById('player-error');
-  const url = VMedia.tvPlayerUrl(showId, season, episode);
-  frame.src = url;
-  frame.style.display = '';
-  err.style.display = 'none';
-  currentSeason = season;
-  currentEpisode = episode;
-  VStorage.setTVProgress(showId, season, episode);
-  document.getElementById('season-select').value = season;
+// ---- Hero backdrop + poster ----
+function setHeroVisuals(posterPath, backdropPath) {
+  if (backdropPath) {
+    document.getElementById('hero-backdrop').style.backgroundImage =
+      `url(${VMedia.backdropUrl(backdropPath, 'w1280')})`;
+  }
+  const pw = document.getElementById('hero-poster-wrap');
+  if (posterPath) {
+    pw.innerHTML = `<img src="${VMedia.posterUrl(posterPath, 'w342')}" alt="poster" style="width:100%;display:block;">`;
+  }
 }
 
-// ---- TV: load season episodes ----
+// ---- Populate hero ----
+function populateHero(data, type) {
+  const title = data.title || data.name;
+  document.title = `${title} — vispora`;
+  document.getElementById('bc-title').textContent = title;
+  document.getElementById('media-title').textContent = title;
+  document.getElementById('hero-badge').textContent = type === 'movie' ? '🎬 Movie' : '📺 TV Show';
+
+  if (data.tagline) document.getElementById('media-tagline').textContent = data.tagline;
+
+  // Meta chips
+  const year = (data.release_date || data.first_air_date || '').slice(0, 4);
+  const rating = data.vote_average ? Number(data.vote_average).toFixed(1) : '';
+  const runtime = data.runtime ? `${data.runtime}m` :
+    data.episode_run_time?.length ? `${data.episode_run_time[0]}m/ep` : '';
+  const seasons = data.number_of_seasons;
+  const contentRating = data.certification || '';
+
+  const metaEl = document.getElementById('media-meta');
+  const chips = [];
+  if (year) chips.push(`<span class="media-hero-meta-chip">${VApp.esc(year)}</span>`);
+  if (rating) chips.push(`<span class="media-hero-rating">★ ${VApp.esc(rating)}</span>`);
+  if (runtime) chips.push(`<span class="media-hero-meta-chip">${VApp.esc(runtime)}</span>`);
+  if (seasons) chips.push(`<span class="media-hero-meta-chip">${seasons} season${seasons > 1 ? 's' : ''}</span>`);
+  if (contentRating) chips.push(`<span class="media-hero-meta-chip">${VApp.esc(contentRating)}</span>`);
+  metaEl.innerHTML = chips.join('');
+
+  // Genres
+  const genres = data.genres || [];
+  document.getElementById('media-genres').innerHTML =
+    genres.slice(0, 5).map(g => `<span class="media-hero-genre">${VApp.esc(g.name)}</span>`).join('');
+
+  // Overview
+  const overviewEl = document.getElementById('media-overview');
+  overviewEl.textContent = data.overview || 'No description available.';
+
+  // Store runtime for est. done calculation
+  if (data.runtime) {
+    _runtimeMs = data.runtime * 60 * 1000;
+  } else if (data.episode_run_time?.length) {
+    _runtimeMs = data.episode_run_time[0] * 60 * 1000;
+  } else {
+    _runtimeMs = 0;
+  }
+
+  setHeroVisuals(data.poster_path, data.backdrop_path);
+  updateFavBtn();
+  // Start session now — don't wait for iframe onload (cross-origin iframes rarely fire it)
+  startSession();
+}
+
+// ---- Populate cast ----
+async function populateCast(id, type) {
+  try {
+    const endpoint = type === 'movie' ? `/movie/${id}/credits` : `/tv/${id}/credits`;
+    const data = await VMedia.tmdbFetch(endpoint);
+    const cast = (data.cast || []).filter(c => c.profile_path).slice(0, 10);
+    if (!cast.length) return;
+    const castRow = document.getElementById('cast-row');
+    castRow.innerHTML = cast.map(c => `
+      <div class="cast-member">
+        <img class="cast-photo" src="${VMedia.posterUrl(c.profile_path, 'w185')}" alt="${VApp.esc(c.name)}"
+          loading="lazy" onerror="this.style.display='none'">
+        <div class="cast-name">${VApp.esc(c.name)}</div>
+        <div class="cast-char">${VApp.esc(c.character || '')}</div>
+      </div>`).join('');
+  } catch (e) { console.warn('Cast fetch failed:', e); }
+}
+
+// ---- Load recommendations ----
+async function loadRecs(id, type) {
+  try {
+    const endpoint = type === 'movie' ? `/movie/${id}/recommendations` : `/tv/${id}/recommendations`;
+    const data = await VMedia.tmdbFetch(endpoint, { page: 1 });
+    const results = (data.results || []).filter(r => r.poster_path).slice(0, 14);
+    if (!results.length) return;
+    document.getElementById('recs-section').style.display = '';
+    const row = document.getElementById('recs-row');
+    row.innerHTML = type === 'movie'
+      ? results.map(m => VMedia.makeMovieCard(m)).join('')
+      : results.map(s => VMedia.makeTVCard(s)).join('');
+    VMedia.initMediaStars(row);
+  } catch (e) { console.warn('Recs fetch failed:', e); }
+}
+
+// ---- TV Episode loading ----
+function loadEpisodeIntoFrame(showId, season, episode) {
+  const frame = document.getElementById('media-frame');
+  const url = VMedia.tvPlayerUrl(showId, season, episode);
+  frame.src = url;
+  frame.style.display = 'block';
+  currentSeason = season; currentEpisode = episode;
+  VStorage.setTVProgress(showId, season, episode);
+  VStorage.addToMediaHistory(mediaData, 'tv');
+  document.getElementById('season-select').value = season;
+  // Update runtime from cached episode data so est. done reflects this episode's length
+  if (seasonCache[season]) {
+    const ep = seasonCache[season].find(e => e.episode_number === episode);
+    if (ep && ep.runtime) {
+      _runtimeMs = ep.runtime * 60 * 1000;
+    }
+  }
+  // Update active state in list
+  document.querySelectorAll('.episode-btn').forEach(b => {
+    b.classList.toggle('active',
+      parseInt(b.dataset.season) === season && parseInt(b.dataset.ep) === episode);
+  });
+}
+
 async function loadSeasonEpisodes(showId, seasonNum, activeEp) {
   const list = document.getElementById('episode-list');
-  list.innerHTML = `<div style="padding:20px;text-align:center;color:var(--text-secondary);font-size:0.8rem">Loading…</div>`;
-
+  list.innerHTML = `<div style="padding:24px;text-align:center;color:var(--text-secondary);font-size:0.8rem">Loading…</div>`;
   try {
     if (!seasonCache[seasonNum]) {
-      const data = await VMedia.tmdbFetch(`/tv/${showId}/season/${seasonNum}`);
-      seasonCache[seasonNum] = data.episodes || [];
+      const d = await VMedia.tmdbFetch(`/tv/${showId}/season/${seasonNum}`);
+      seasonCache[seasonNum] = d.episodes || [];
     }
-    const episodes = seasonCache[seasonNum];
-    if (!episodes.length) {
-      list.innerHTML = `<div style="padding:20px;text-align:center;color:var(--text-secondary);font-size:0.8rem">No episodes found</div>`;
+    const eps = seasonCache[seasonNum];
+    if (!eps.length) {
+      list.innerHTML = `<div style="padding:20px;text-align:center;color:var(--text-secondary);font-size:0.8rem">No episodes</div>`;
       return;
     }
-
-    list.innerHTML = episodes.map(ep => `
+    list.innerHTML = eps.map(ep => `
       <button class="episode-btn${ep.episode_number === activeEp ? ' active' : ''}"
         data-ep="${ep.episode_number}" data-season="${seasonNum}" type="button">
         <span class="ep-number">E${ep.episode_number}</span>
         <span class="ep-title">${VApp.esc(ep.name || `Episode ${ep.episode_number}`)}</span>
-      </button>
-    `).join('');
+      </button>`).join('');
 
     // Scroll active into view
     setTimeout(() => {
       const active = list.querySelector('.episode-btn.active');
-      if (active) active.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }, 80);
-
-    list.addEventListener('click', e => {
-      const btn = e.target.closest('.episode-btn');
-      if (!btn) return;
-      const ep = parseInt(btn.dataset.ep);
-      const season = parseInt(btn.dataset.season);
-      list.querySelectorAll('.episode-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      loadEpisode(showId, season, ep);
-    }, { once: false });
+      if (active) active.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }, 100);
 
     // Load the active episode
-    loadEpisode(showId, seasonNum, activeEp);
+    loadEpisodeIntoFrame(showId, seasonNum, activeEp);
   } catch (e) {
     console.error(e);
     list.innerHTML = `<div style="padding:20px;text-align:center;color:var(--text-secondary);font-size:0.8rem">Failed to load episodes</div>`;
   }
 }
 
+// Episode click delegation — single listener on the list
+document.getElementById('episode-list').addEventListener('click', e => {
+  const btn = e.target.closest('.episode-btn');
+  if (!btn || !mediaData) return;
+  loadEpisodeIntoFrame(mediaData.id, parseInt(btn.dataset.season), parseInt(btn.dataset.ep));
+});
+
 // ---- Init Movie ----
 async function initMovie(id) {
   document.getElementById('bc-type').textContent = 'Movies';
   document.getElementById('bc-type').href = 'movies.html';
-
   const frame = document.getElementById('media-frame');
   const err = document.getElementById('player-error');
-
   try {
-    mediaData = await VMedia.tmdbFetch(`/movie/${id}`);
-    document.title = `${mediaData.title} — vispora`;
-    document.getElementById('media-title').textContent = mediaData.title;
-    document.getElementById('bc-title').textContent = mediaData.title;
-    const year = mediaData.release_date ? mediaData.release_date.slice(0, 4) : '';
-    const rating = mediaData.vote_average ? `⭐ ${Number(mediaData.vote_average).toFixed(1)}` : '';
-    const runtime = mediaData.runtime ? `${mediaData.runtime}m` : '';
-    document.getElementById('media-meta').textContent = [year, rating, runtime].filter(Boolean).join(' · ');
-    const tags = (mediaData.genres || []).slice(0, 4);
-    document.getElementById('media-tags').innerHTML = tags.map(g => `<span class="tag tag-accent">${VApp.esc(g.name)}</span>`).join('');
-    updateFavBtn();
+    mediaData = await VMedia.tmdbFetch(`/movie/${id}`, { append_to_response: 'release_dates' });
+    populateHero(mediaData, 'movie');
+    populateCast(id, 'movie');
+    loadRecs(id, 'movie');
+    VStorage.addToMediaHistory(mediaData, 'movie');
 
     const url = VMedia.moviePlayerUrl(id);
-    frame.src = url;
-    frame.style.display = '';
-    frame.onload = () => { startSession(); VStorage.addToMovieHistory(mediaData); };
+    frame.src = url; frame.style.display = 'block';
     frame.onerror = () => {
       frame.style.display = 'none'; err.style.display = 'flex';
-      document.getElementById('error-link').innerHTML = `<a href="${VApp.esc(url)}" target="_blank" style="color:var(--accent)">Open directly ↗</a>`;
+      document.getElementById('error-link').innerHTML =
+        `<a href="${VApp.esc(url)}" target="_blank" style="color:var(--accent)">Open directly ↗</a>`;
     };
   } catch (e) {
     console.error(e);
@@ -272,23 +382,14 @@ async function initMovie(id) {
 async function initTV(id) {
   document.getElementById('bc-type').textContent = 'TV Shows';
   document.getElementById('bc-type').href = 'tv.html';
-
   try {
     mediaData = await VMedia.tmdbFetch(`/tv/${id}`);
-    document.title = `${mediaData.name} — vispora`;
-    document.getElementById('media-title').textContent = mediaData.name;
-    document.getElementById('bc-title').textContent = mediaData.name;
-    const year = mediaData.first_air_date ? mediaData.first_air_date.slice(0, 4) : '';
-    const rating = mediaData.vote_average ? `⭐ ${Number(mediaData.vote_average).toFixed(1)}` : '';
-    const seasons = mediaData.number_of_seasons;
-    document.getElementById('media-meta').textContent = [year, rating, seasons ? `${seasons} season${seasons > 1 ? 's' : ''}` : ''].filter(Boolean).join(' · ');
-    const tags = (mediaData.genres || []).slice(0, 4);
-    document.getElementById('media-tags').innerHTML = tags.map(g => `<span class="tag tag-accent">${VApp.esc(g.name)}</span>`).join('');
-    updateFavBtn();
-    VStorage.addToTVHistory(mediaData);
-    startSession();
+    populateHero(mediaData, 'tv'); // startSession() called inside
+    populateCast(id, 'tv');
+    loadRecs(id, 'tv');
+    VStorage.addToMediaHistory(mediaData, 'tv');
 
-    // Populate season select (skip season 0 = specials)
+    // Populate season selector (skip season 0 = specials)
     const validSeasons = (mediaData.seasons || []).filter(s => s.season_number > 0);
     const seasonSel = document.getElementById('season-select');
     validSeasons.forEach(s => {
@@ -298,7 +399,7 @@ async function initTV(id) {
       seasonSel.appendChild(o);
     });
 
-    // Restore last progress
+    // Restore progress
     const prog = VStorage.getTVProgress(id);
     const startSeason = prog.season || 1;
     const startEp = prog.episode || 1;
@@ -308,20 +409,12 @@ async function initTV(id) {
     document.getElementById('player-area').classList.add('tv-mode');
     document.getElementById('episode-picker').style.display = '';
 
-    // Load episodes
     await loadSeasonEpisodes(id, startSeason, startEp);
 
-    // Season change
     seasonSel.addEventListener('change', async () => {
-      const newSeason = parseInt(seasonSel.value);
-      // Remove existing click listeners by replacing the list
-      const list = document.getElementById('episode-list');
-      const newList = list.cloneNode(false);
-      list.parentNode.replaceChild(newList, list);
-      document.getElementById('episode-list').innerHTML = `<div style="padding:20px;text-align:center;color:var(--text-secondary);font-size:0.8rem">Loading…</div>`;
-      await loadSeasonEpisodes(id, newSeason, 1);
+      const s = parseInt(seasonSel.value);
+      await loadSeasonEpisodes(id, s, 1);
     });
-
   } catch (e) {
     console.error(e);
     VApp.showToast('Show not found', 'error');
@@ -329,7 +422,7 @@ async function initTV(id) {
   }
 }
 
-// ---- Boot ----
+// Boot
 if (mediaType === 'movie') initMovie(mediaId);
 else if (mediaType === 'tv') initTV(mediaId);
 else location.href = 'home.html';
