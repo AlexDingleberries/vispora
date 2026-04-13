@@ -16,7 +16,7 @@
 <div id="particles-js"></div>
 <div id="nav-ph"></div>
 <main class="home-page page-enter container">
-  <h1 class="settings-page-title">Home</h1>
+  <h1 class="home-title"><span class="char">v</span><span class="char">i</span><span class="char">s</span><span class="char">p</span><span class="char">o</span><span class="char">r</span><span class="char">a</span></h1>
   <div class="home-grid">
 
     <!-- Hero + Featured Movie -->
@@ -55,6 +55,13 @@
           <div class="browse-card-label">TV Shows</div>
           <div class="browse-card-sub">Watch series</div>
         </a>
+        <a href="ai.html" class="browse-card browse-card-sq">
+          <div class="browse-card-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg>
+          </div>
+          <div class="browse-card-label">AI Chat</div>
+          <div class="browse-card-sub">Ask anything</div>
+        </a>
       </div>
     </section>
 
@@ -64,11 +71,7 @@
         <h2 class="section-title">Visps of the Day</h2>
         <a href="visps.html" class="section-viewall">View All</a>
       </div>
-      <div id="day-wrap">
-        <div class="visps-row" style="pointer-events:none">
-          <div class="skeleton" style="flex:0 0 155px;height:155px;border-radius:10px"></div>
-        </div>
-      </div>
+      <div id="day-wrap"><div class="skeleton" style="flex:0 0 155px;height:155px;border-radius:10px"></div></div>
     </section>
 
     <!-- Popular Movies -->
@@ -117,7 +120,7 @@
     <!-- Visp Favorites -->
     <section>
       <div class="section-header">
-        <h2 class="section-title">Visp Favorites</h2>
+        <h2 class="section-title">Favorite Visps</h2>
         <a href="#" class="section-viewall" id="fav-va" style="display:none">View All</a>
       </div>
       <div id="fav-wrap">
@@ -125,10 +128,10 @@
       </div>
     </section>
 
-    <!-- ★ Media — Recently Watched -->
+    <!-- Recently Watched (Media)-->
     <section>
       <div class="section-header">
-        <h2 class="section-title">Media — Recently Watched</h2>
+        <h2 class="section-title">Recently Watched</h2>
         <a href="#" class="section-viewall" id="media-hist-va" style="display:none">View All</a>
       </div>
       <div id="media-hist-wrap">
@@ -140,10 +143,10 @@
       </div>
     </section>
 
-    <!-- ★ Media — Favorites -->
+    <!-- Media Favorites -->
     <section>
       <div class="section-header">
-        <h2 class="section-title">Media Favorites</h2>
+        <h2 class="section-title">Favorite Media</h2>
         <a href="#" class="section-viewall" id="media-fav-va" style="display:none">View All</a>
       </div>
       <div id="media-fav-wrap">
@@ -205,29 +208,23 @@ async function renderFeaturedMovie() {
     const data = await VMedia.tmdbFetch('/movie/now_playing', { page: 1 });
     const movies = (data.results || []).filter(m => m.backdrop_path || m.poster_path);
     if (!movies.length) { panel.innerHTML = ''; return; }
-    // Pick top-rated from now_playing (top 20)
     const top = movies.slice(0, 20).sort((a, b) => b.vote_average - a.vote_average);
     const m = top[Math.floor(Math.random() * Math.min(5, top.length))];
     const bg = m.backdrop_path
       ? `https://image.tmdb.org/t/p/w780${m.backdrop_path}`
       : `https://image.tmdb.org/t/p/w500${m.poster_path}`;
     const year = m.release_date ? m.release_date.slice(0, 4) : '';
-    const rating = m.vote_average ? m.vote_average.toFixed(1) : '';
+    const rating = m.vote_average ? `★ ${m.vote_average.toFixed(1)}` : '';
+    // Remove skeleton, give panel the same hero-card structure as the game card
+    panel.style.cssText = 'flex:1;min-width:0;border-radius:var(--radius-xl);overflow:hidden;position:relative;min-height:220px;';
     panel.innerHTML = `
-      <a href="movies.html?id=${m.id}" style="display:block;position:relative;width:100%;height:100%;min-height:220px;border-radius:14px;overflow:hidden;text-decoration:none">
-        <img src="${VApp.esc(bg)}" alt="${VApp.esc(m.title||'')}"
-          style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top">
-        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.88) 0%,rgba(0,0,0,0.18) 55%,transparent 100%)"></div>
-        <div style="position:absolute;top:10px;left:12px">
-          <span style="background:var(--accent);color:#000;font-size:0.65rem;font-weight:700;padding:2px 8px;border-radius:20px;letter-spacing:0.05em;text-transform:uppercase">🎬 Now Playing</span>
-        </div>
-        ${rating ? `<div style="position:absolute;top:10px;right:12px;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);color:#facc15;font-size:0.75rem;font-weight:700;padding:3px 8px;border-radius:20px">★ ${VApp.esc(rating)}</div>` : ''}
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:14px 14px 14px">
-          <div style="font-size:1.05rem;font-weight:700;color:#fff;line-height:1.2;margin-bottom:4px;text-shadow:0 1px 6px rgba(0,0,0,0.7)">${VApp.esc(m.title||'')}</div>
-          ${year ? `<div style="font-size:0.75rem;color:rgba(255,255,255,0.6);margin-bottom:8px">${VApp.esc(year)}</div>` : ''}
-          <span style="display:inline-flex;align-items:center;gap:5px;background:var(--accent);color:#000;font-size:0.72rem;font-weight:700;padding:4px 12px;border-radius:20px">
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg> Watch Now
-          </span>
+      <a href="movies.html?id=${m.id}" class="hero-card" style="max-height:none;min-height:220px;height:100%">
+        <img src="${VApp.esc(bg)}" alt="${VApp.esc(m.title||'')}" style="min-height:220px">
+        <div class="hero-card-content">
+          <div class="hero-badge">🎬 Now Playing${rating ? ' · ' + rating : ''}</div>
+          <div class="hero-title">${VApp.esc(m.title||'')}</div>
+          ${year ? `<div class="hero-author">${VApp.esc(year)}</div>` : ''}
+          <span class="btn btn-primary" style="display:inline-flex;width:fit-content;margin-top:2px">${VApp.IC.play} Watch Now</span>
         </div>
       </a>`;
   } catch(e) { console.error(e); panel.innerHTML = ''; }
@@ -249,7 +246,6 @@ function renderRecent() {
     const id = Number(rb.dataset.id);
     const pt = VStorage.getPlaytime(id);
     const ptStr = VStorage.formatTime(pt);
-    // Build a custom modal with checkbox
     const ok = await new Promise(resolve => {
       const o = document.createElement('div'); o.className = 'modal-overlay'; o.style.zIndex = '30000';
       o.innerHTML = `<div class="modal" role="dialog" aria-modal="true">
@@ -351,7 +347,7 @@ function renderMediaHistory() {
 }
 
 async function renderMediaFavs() {
-  const favs = VStorage.getMediaFavorites(); // [{id, type}]
+  const favs = VStorage.getMediaFavorites();
   const wrap  = document.getElementById('media-fav-wrap');
   const va    = document.getElementById('media-fav-va');
   if (!favs.length) return;

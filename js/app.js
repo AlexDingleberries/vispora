@@ -21,6 +21,7 @@ const IC = {
   upload: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>`,
   trash: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>`,
   zap: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>`,
+  brain: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg>`,
 };
 
 function showToast(msg,type='info',duration=3000){
@@ -65,7 +66,7 @@ function makeCard(visp,opts={}){
       onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
     <div class="visp-card-placeholder" style="display:none;position:absolute;inset:0">🎮</div>
     <div class="visp-card-overlay">
-      <div class="visp-card-title">${esc(visp.name)}</div>
+      <div class="visp-card-title"><span class="title-text">${esc(visp.name)}</span></div>
       ${timeStr?`<div class="visp-card-playtime">${IC.clock} ${timeStr}</div>`:''}
     </div>
     <button class="visp-card-star${isFav?' favorited':''}" data-id="${visp.id}"
@@ -124,6 +125,8 @@ function navHTML(active){
         <span class="nav-icon">${IC.film}</span><span>Movies</span></a></li>
       <li><a href="tv.html" ${active==='tv'?'class="active"':''}>
         <span class="nav-icon">${IC.tv}</span><span>TV Shows</span></a></li>
+        <li><a href="ai.html" ${active==='ai'?'class="active"':''}>
+        <span class="nav-icon">${IC.brain}</span><span>AI Chat</span></a></li>
       <li><a href="settings.html" ${active==='settings'?'class="active"':''}>
         <span class="nav-icon">${IC.settings}</span><span>Settings</span></a></li>
     </ul>

@@ -33,8 +33,7 @@
         <p id="error-link"></p>
       </div>
       <iframe id="media-frame" title="Media Player" allowfullscreen
-        allow="autoplay; fullscreen; pointer-lock"
-        sandbox="allow-scripts allow-same-origin allow-forms allow-pointer-lock allow-popups"></iframe>
+        allow="autoplay; fullscreen; pointer-lock"></iframe>
     </div>
     <!-- TV episode picker (hidden for movies, shown for TV) -->
     <div class="tv-episode-picker" id="episode-picker" style="display:none">
@@ -292,7 +291,6 @@ function loadEpisodeIntoFrame(showId, season, episode) {
   VStorage.setTVProgress(showId, season, episode);
   VStorage.addToMediaHistory(mediaData, 'tv');
   document.getElementById('season-select').value = season;
-  // Update runtime from cached episode data so est. done reflects this episode's length
   if (seasonCache[season]) {
     const ep = seasonCache[season].find(e => e.episode_number === episode);
     if (ep && ep.runtime) {

@@ -28,11 +28,11 @@ function backdropUrl(path, size = 'w1280') {
 }
 
 function moviePlayerUrl(tmdbId) {
-  return `https://api.cinetaro.buzz/movie/${tmdbId}/english?color=${getAccentHex()}`;
+  return `https://player.videasy.net/movie/${tmdbId}?color=${getAccentHex()}`;
 }
 
-function tvPlayerUrl(tmdbId, season, episode) {
-  return `https://api.cinetaro.buzz/tv/${tmdbId}/${season}/${episode}/english?color=${getAccentHex()}`;
+function tvPlayerUrl(tmdbId, season, episode) {https://player.vidplus.to/embed/tv/${tmdbId}/${season}/${episode}?
+  return `https://player.videasy.net/tv/${tmdbId}/${season}/${episode}/english?color=${getAccentHex()}`;
 }
 
 /* ---- Poster-only card (hover reveals info + blur) ---- */

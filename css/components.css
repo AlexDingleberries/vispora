@@ -91,22 +91,26 @@
   position: relative; border-radius: var(--radius); overflow: hidden;
   background: var(--card-bg); border: 1px solid var(--card-border);
   cursor: pointer; display: block;
-  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+  transition: transform 200ms var(--ease), border-color 200ms ease, box-shadow 200ms ease;
   aspect-ratio: 1;
-  margin-left: 1%;
 }
+
 .visp-card:hover, .visp-card:focus-visible {
-  transform: scale(1.04);
-  border-color: var(--accent);
-  box-shadow: 0 6px 28px rgba(0,0,0,0.4), 0 0 0 1px rgba(var(--accent-rgb),0.15);
+  transform: translateY(-3px);
+  border-color: rgba(var(--accent-rgb), 0.5);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.45), 0 0 0 1px rgba(var(--accent-rgb),0.12);
   z-index: 2;
 }
 .visp-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 .visp-card-img {
   width: 100%; height: 100%; object-fit: cover;
-  transition: opacity 0.3s ease;
+  transition: filter 280ms ease, transform 280ms ease;
   display: block;
+}
+.visp-card:hover .visp-card-img {
+  filter: blur(1.5px) brightness(0.88);
+  transform: scale(1.04);
 }
 .visp-card-placeholder {
   width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
@@ -116,17 +120,33 @@
 .visp-card-overlay {
   position: absolute; bottom: 0; left: 0; right: 0;
   padding: 28px 10px 9px;
-  background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, transparent 100%);
+  background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, transparent 100%);
   transform: translateY(6px); opacity: 0;
-  transition: transform 180ms ease, opacity 180ms ease;
+  transition: transform 200ms ease, opacity 200ms ease;
+  overflow: hidden;
 }
 .visp-card:hover .visp-card-overlay,
 .visp-card:focus-visible .visp-card-overlay { transform: translateY(0); opacity: 1; }
 
+/* Title marquee */
 .visp-card-title {
   font-size: 0.76rem; font-weight: 700; color: #fff;
   line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
+.visp-card-title .title-text {
+  display: inline-block;
+}
+.visp-card:hover .visp-card-title {
+  text-overflow: clip;
+}
+.visp-card:hover .title-text {
+  animation: title-marquee 3.5s ease-in-out 0.7s alternate infinite;
+}
+@keyframes title-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(min(0px, calc(-100% + 162px))); }
+}
+
 .visp-card-playtime {
   font-size: 0.67rem; color: rgba(255,255,255,0.55); margin-top: 2px;
   display: flex; align-items: center; gap: 3px;
@@ -164,37 +184,23 @@
   display: flex; 
   gap: 12px;
   overflow-x: auto; 
-  padding: 4px 0 10px;
+  padding: 6px 0 14px 10px;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  /* Scrollbar visible for better UX */
   scrollbar-width: thin;
   scrollbar-color: var(--card-border) transparent;
 }
+.visps-row::after {
+  content: ''; flex: 0 0 10px; /* right-edge padding that survives overflow-x:auto */
+}
 
 /* Custom Flat Scrollbar for Webkit */
-.visps-row::-webkit-scrollbar {
-  height: 6px;
-}
+.visps-row::-webkit-scrollbar { height: 5px; }
+.visps-row::-webkit-scrollbar-track { background: transparent; }
+.visps-row::-webkit-scrollbar-thumb { background: var(--card-border); border-radius: 10px; transition: background 160ms; }
+.visps-row::-webkit-scrollbar-thumb:hover { background: var(--text-dim); }
 
-.visps-row::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.visps-row::-webkit-scrollbar-thumb {
-  background: var(--card-border);
-  border-radius: 10px;
-  transition: background 160ms;
-}
-
-.visps-row::-webkit-scrollbar-thumb:hover {
-  background: var(--text-dim);
-}
-
-.visps-row .visp-card { 
-  flex: 0 0 200px; 
-  scroll-snap-align: start; 
-}
+.visps-row .visp-card { flex: 0 0 190px; scroll-snap-align: start; }
 /* Section header */
 .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
 .section-title { font-size: 1rem; font-weight: 700;  color: var(--text-secondary); }

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Chat — vispora</title>
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+<script src="js/storage.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/cloak.js"></script>
+<script src="js/app.js"></script>
+</head>
+<body>
+<div id="particles-js"></div>
+<div id="nav-ph"></div>
+
+<main class="ai-page">
+  <div class="ai-layout">
+
+    <!-- Sidebar -->
+    <aside class="ai-sidebar" id="ai-sidebar">
+      <div class="ai-sidebar-inner">
+
+        <div class="ai-sidebar-section">
+          <div class="ai-sidebar-title">Model</div>
+          <select class="ai-select" id="ai-model">
+            <optgroup label="Fast">
+              <option value="google/gemini-2.0-flash-001">Gemini 2.0 Flash</option>
+              <option value="openai/gpt-4o-mini">GPT-4o Mini</option>
+              <option value="meta-llama/llama-3.3-70b-instruct">Llama 3.3 70B</option>
+            </optgroup>
+            <optgroup label="Powerful">
+              <option value="openai/gpt-4o" selected>GPT-4o</option>
+              <option value="anthropic/claude-3.5-sonnet">Claude 3.5 Sonnet</option>
+              <option value="google/gemini-2.5-pro-preview-03-25">Gemini 2.5 Pro</option>
+            </optgroup>
+            <optgroup label="Reasoning">
+              <option value="deepseek/deepseek-r1">DeepSeek R1</option>
+              <option value="openai/o4-mini">o4-mini</option>
+              <option value="anthropic/claude-3-7-sonnet">Claude 3.7 Sonnet</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="ai-sidebar-section">
+          <div class="ai-sidebar-title">Temperature</div>
+          <div class="ai-ctrl-label">Creativity <span class="val" id="temp-display">0.70</span></div>
+          <input type="range" class="range-slider" id="ai-temp" min="0" max="2" step="0.05" value="0.7">
+          <div class="ai-ctrl-sub">0 = precise &nbsp;·&nbsp; 2 = creative</div>
+        </div>
+
+        <div class="ai-sidebar-section">
+          <div class="ai-sidebar-title">Features</div>
+          <div class="ai-toggle-row">
+            <div class="ai-toggle-info">
+              <div class="ai-ctrl-label" style="margin-bottom:2px">🧠 Reasoning</div>
+              <div class="ai-ctrl-sub" id="reason-sub"><span id="reason-left">3</span> uses left today</div>
+            </div>
+            <label class="toggle-wrap" style="flex-shrink:0">
+              <input type="checkbox" class="toggle-input" id="ai-reasoning">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          <div class="ai-toggle-row" style="margin-top:14px">
+            <div class="ai-toggle-info">
+              <div class="ai-ctrl-label" style="margin-bottom:2px">🔍 Web Search</div>
+              <div class="ai-ctrl-sub">Live data via the web</div>
+            </div>
+            <label class="toggle-wrap" style="flex-shrink:0">
+              <input type="checkbox" class="toggle-input" id="ai-websearch">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="ai-sidebar-section">
+          <div class="ai-sidebar-title">Mode &amp; Tools</div>
+          <select class="ai-select" id="ai-mode">
+            <option value="">General Assistant</option>
+            <option value="code">💻 Code Helper</option>
+            <option value="debug">🐛 Debugger</option>
+            <option value="creative">✍️ Creative Writing</option>
+            <option value="analysis">📊 Data Analysis</option>
+            <option value="research">🔬 Research</option>
+            <option value="math">🧮 Math &amp; Logic</option>
+            <option value="tutor">🎓 Tutor</option>
+          </select>
+        </div>
+
+        <div class="ai-sidebar-section" style="flex:1">
+          <div class="ai-sidebar-title">System Prompt</div>
+          <textarea id="ai-system" class="ai-system-prompt"
+            placeholder="Custom instructions for this session…" style="resize: none;"></textarea>
+        </div>
+
+        <div class="ai-sidebar-actions">
+          <button id="ai-clear" class="btn btn-secondary" style="width:100%;font-size:0.82rem">Clear Chat</button>
+        </div>
+
+      </div>
+    </aside>
+
+    <!-- Chat -->
+    <div class="ai-chat-area">
+
+      <button class="ai-sidebar-toggle" id="sidebar-toggle">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg>
+        Controls
+      </button>
+      <div class="ai-sidebar-overlay" id="sidebar-overlay"></div>
+
+      <div class="ai-messages" id="ai-messages">
+        <div class="ai-welcome" id="ai-welcome">
+          <div class="ai-welcome-icon"><svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg></div>
+          <h2>AI Chat</h2>
+          <p>Ask anything. Adjust model, temperature, reasoning, and web search in the sidebar.</p>
+          <div class="ai-welcome-hints" id="hint-container">
+            <button class="ai-hint-chip" data-hint="Explain quantum computing in simple terms">Quantum computing</button>
+            <button class="ai-hint-chip" data-hint="Write a Python function to merge two sorted lists">Merge sorted lists</button>
+            <button class="ai-hint-chip" data-hint="What are best practices for REST API design?">REST API design</button>
+            <button class="ai-hint-chip" data-hint="Write a short sci-fi story about time travel">Sci-fi story</button>
+            <button class="ai-hint-chip" data-hint="Explain how neural networks learn">How do neural networks learn?</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="ai-input-area">
+        <div class="ai-input-wrap">
+          <textarea class="ai-textarea" id="ai-input" placeholder="Send a message…" rows="1"></textarea>
+          <button class="ai-stop-btn" id="ai-stop" style="display:none">⏹ Stop</button>
+          <button class="ai-send-btn" id="ai-send" title="Send (Enter)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </div>
+        <div class="ai-input-meta">
+          <div class="ai-input-hint">Enter to send &nbsp;·&nbsp; Shift+Enter for newline</div>
+          <div class="ai-status" id="ai-status"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<div id="toast-container"></div>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+document.getElementById('nav-ph').innerHTML = VApp.navHTML('ai');
+VCloak.initCloak(); VApp.initPanic(); VApp.initParticles();
+const dtEl = document.getElementById('nav-datetime'); if (dtEl) VApp.startDatetime(dtEl);
+
+const OR_KEY = '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';
+const OR_URL = 'https://openrouter.ai/api/v1/chat/completions';
+const RK = 'vispora_ai_reasoning_v2';
+const MAX_R = 3;
+const MODES = {
+  '':'You are a helpful, knowledgeable, and concise assistant. Use markdown when it aids clarity.',
+  code:'You are an expert programmer. Write clean, efficient, well-commented code. Use fenced code blocks with the correct language tag. Briefly explain your approach.',
+  debug:'You are a debugging expert. Identify the root cause, explain why it occurs, then provide a corrected version.',
+  creative:'You are a creative writing assistant. Be expressive, original, and craft compelling narratives, poetry, or dialogue.',
+  analysis:'You are a data and business analyst. Provide structured, insight-driven analysis using markdown tables and headers.',
+  research:'You are a research assistant. Provide accurate, structured information. Acknowledge uncertainty where it exists.',
+  math:'You are a mathematics and logic expert. Work through problems step-by-step showing all work clearly.',
+  tutor:'You are a patient, encouraging tutor. Explain concepts with analogies scaled to the student\'s level.',
+};
+
+let messages = [], isStreaming = false, abort = null;
+
+const todayKey = () => new Date().toDateString();
+const reasonLeft = () => Math.max(0, MAX_R - ((JSON.parse(localStorage.getItem(RK)||'{}')[todayKey()])||0));
+function bumpReason() {
+  const d = JSON.parse(localStorage.getItem(RK)||'{}');
+  const k = todayKey(); d[k]=(d[k]||0)+1; localStorage.setItem(RK,JSON.stringify(d));
+}
+function syncReasonUI() {
+  const left = reasonLeft();
+  document.getElementById('reason-left').textContent = left;
+  const cb = document.getElementById('ai-reasoning');
+  cb.disabled = left===0; if(left===0) cb.checked=false;
+  document.getElementById('reason-sub').style.color = left===0?'#e85d5d':'';
+}
+
+// Controls
+document.getElementById('ai-temp').addEventListener('input', e => {
+  document.getElementById('temp-display').textContent = parseFloat(e.target.value).toFixed(2);
+});
+document.getElementById('ai-mode').addEventListener('change', e => {
+  const s = document.getElementById('ai-system');
+  if (!s.dataset.edited) s.value = MODES[e.target.value]||'';
+});
+document.getElementById('ai-system').addEventListener('input', e => {
+  e.target.dataset.edited = e.target.value ? '1' : '';
+});
+document.getElementById('ai-system').value = MODES[''];
+
+// Textarea resize
+const ta = document.getElementById('ai-input');
+function rsz() { ta.style.height='auto'; ta.style.height=Math.min(ta.scrollHeight,160)+'px'; }
+ta.addEventListener('input', rsz);
+ta.addEventListener('keydown', e => { if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();send();} });
+
+// Hint chips (initial + rebuild)
+function bindHints(root) {
+  root.querySelectorAll('.ai-hint-chip').forEach(btn => {
+    btn.addEventListener('click', () => { ta.value=btn.dataset.hint; rsz(); send(); });
+  });
+}
+bindHints(document);
+
+document.getElementById('ai-send').addEventListener('click', send);
+document.getElementById('ai-stop').addEventListener('click', () => { if(abort) abort.abort(); });
+document.getElementById('ai-clear').addEventListener('click', async () => {
+  if (!messages.length) return;
+  const ok = await VApp.showModal({title:'Clear Chat',message:'Remove all messages from this session?',confirmText:'Clear',dangerous:true});
+  if (!ok) return;
+  messages = [];
+  const w = document.getElementById('ai-messages');
+  w.innerHTML = `<div class="ai-welcome" id="ai-welcome">
+    <div class="ai-welcome-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg></div><h2>AI Chat</h2>
+    <p>Ask anything. Adjust model, temperature, reasoning, and web search in the sidebar.</p>
+    <div class="ai-welcome-hints">
+      <button class="ai-hint-chip" data-hint="Explain quantum computing in simple terms">Quantum computing</button>
+      <button class="ai-hint-chip" data-hint="Write a Python function to merge two sorted lists">Merge sorted lists</button>
+      <button class="ai-hint-chip" data-hint="What are best practices for REST API design?">REST API design</button>
+      <button class="ai-hint-chip" data-hint="Write a short sci-fi story about time travel">Sci-fi story</button>
+    </div></div>`;
+  bindHints(w);
+  document.getElementById('ai-status').textContent='';
+});
+
+// Mobile sidebar
+document.getElementById('sidebar-toggle').addEventListener('click',()=>{
+  document.getElementById('ai-sidebar').classList.toggle('open');
+  document.getElementById('sidebar-overlay').classList.toggle('open');
+});
+document.getElementById('sidebar-overlay').addEventListener('click',()=>{
+  document.getElementById('ai-sidebar').classList.remove('open');
+  document.getElementById('sidebar-overlay').classList.remove('open');
+});
+
+// Markdown
+function md(raw, streaming) {
+  if (!raw) return streaming ? '<span class="ai-cursor"></span>' : '';
+  let t = raw;
+  if (streaming && (t.match(/```/g)||[]).length%2!==0) t+='\n```';
+  t = t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  const cb=[];
+  t = t.replace(/```(\w*)\n?([\s\S]*?)```/g,(_,l,c)=>{
+    const i=cb.length;
+    cb.push(`<pre class="ai-code-pre"><div class="ai-code-header"><span class="ai-code-lang">${l||'text'}</span><button class="ai-copy-btn" onclick="cpb(this)">Copy</button></div><code>${c.trimEnd()}</code></pre>`);
+    return `\x00${i}\x00`;
+  });
+  t = t.replace(/`([^`\n]+)`/g,'<code>$1</code>');
+  t = t.replace(/\*\*\*([\s\S]*?)\*\*\*/g,'<strong><em>$1</em></strong>');
+  t = t.replace(/\*\*([\s\S]*?)\*\*/g,'<strong>$1</strong>');
+  t = t.replace(/\*((?!\s)[\s\S]*?(?<!\s))\*/g,'<em>$1</em>');
+  t = t.replace(/^&gt; (.+)$/gm,'<blockquote>$1</blockquote>');
+  t = t.replace(/^---+$/gm,'<hr>');
+  t = t.replace(/^### (.+)$/gm,'<h3>$1</h3>');
+  t = t.replace(/^## (.+)$/gm,'<h2>$1</h2>');
+  t = t.replace(/^# (.+)$/gm,'<h1>$1</h1>');
+  t = t.replace(/^[*-] (.+)$/gm,'<li>$1</li>');
+  t = t.replace(/(<li>[\s\S]*?<\/li>)+/g,m=>`<ul>${m}</ul>`);
+  t = t.replace(/^\d+\. (.+)$/gm,'<lo>$1</lo>');
+  t = t.replace(/(<lo>[\s\S]*?<\/lo>)+/g,m=>`<ol>${m.replace(/<\/?lo>/g,s=>s.replace('lo','li'))}</ol>`);
+  t = t.split(/\n\n+/).map(p=>{
+    p=p.trim(); if(!p) return '';
+    return /^<(h[1-3]|ul|ol|blockquote|hr|pre)/.test(p)?p:`<p>${p.replace(/\n/g,'<br>')}</p>`;
+  }).join('');
+  cb.forEach((b,i)=>{ t=t.replace(`\x00${i}\x00`,b); });
+  if (streaming) t+='<span class="ai-cursor"></span>';
+  return t;
+}
+
+function cpb(btn) {
+  navigator.clipboard.writeText(btn.closest('pre').querySelector('code').textContent)
+    .then(()=>{ btn.textContent='✓ Copied'; setTimeout(()=>{btn.textContent='Copy';},1800); });
+}
+
+function appendMsg(role, content) {
+  document.getElementById('ai-welcome')?.remove();
+  const w = document.getElementById('ai-messages');
+  const el = document.createElement('div');
+  el.className = `ai-msg ai-msg-${role}`;
+  el.innerHTML = `
+    <div class="ai-msg-avatar">${role==='user'?'👤':'🧠'}</div>
+    <div class="ai-msg-body">
+      <div class="ai-msg-role">${role==='user'?'You':'AI'}</div>
+      <div class="ai-msg-bubble">${md(content,false)}</div>
+    </div>`;
+  w.appendChild(el); w.scrollTop=w.scrollHeight;
+  return el;
+}
+
+function setStatus(t, active) {
+  const el = document.getElementById('ai-status');
+  el.textContent = t;
+  el.className = 'ai-status'+(active?' streaming':'');
+}
+
+async function send() {
+  const text = ta.value.trim();
+  if (!text || isStreaming) return;
+
+  const model = document.getElementById('ai-model').value;
+  const temp  = parseFloat(document.getElementById('ai-temp').value);
+  const reasoning = document.getElementById('ai-reasoning').checked;
+  const webSearch = document.getElementById('ai-websearch').checked;
+  const sysOvr = document.getElementById('ai-system').value.trim();
+  const mode  = document.getElementById('ai-mode').value;
+
+  if (reasoning && reasonLeft()<=0) {
+    VApp.showToast('Daily reasoning limit reached (3/day)','error');
+    document.getElementById('ai-reasoning').checked=false; return;
+  }
+
+  messages.push({role:'user',content:text});
+  appendMsg('user',text);
+  ta.value=''; ta.style.height='auto';
+
+  // Assistant placeholder
+  document.getElementById('ai-welcome')?.remove();
+  const w = document.getElementById('ai-messages');
+  const row = document.createElement('div');
+  row.className = 'ai-msg ai-msg-assistant';
+  row.innerHTML = `
+    <div class="ai-msg-avatar">🧠</div>
+    <div class="ai-msg-body">
+      <div class="ai-msg-role">AI</div>
+      <div class="ai-msg-bubble ai-bubble-stream"><span class="ai-cursor"></span></div>
+    </div>`;
+  w.appendChild(row); w.scrollTop=w.scrollHeight;
+  const bubble = row.querySelector('.ai-bubble-stream');
+
+  isStreaming=true; abort=new AbortController();
+  document.getElementById('ai-send').style.display='none';
+  document.getElementById('ai-stop').style.display='';
+  setStatus('Connecting…',true);
+
+  const sys = sysOvr || MODES[mode] || MODES[''];
+  const payload = {
+    model: webSearch?`${model}:online`:model,
+    messages:[{role:'system',content:sys},...messages.slice(-28)],
+    temperature:temp, stream:true,max_tokens:2000
+  };
+  if (reasoning) payload.reasoning={effort:'high'};
+
+  let full='', fullR='', rEl=null;
+
+  try {
+    const res = await fetch(OR_URL,{
+      method:'POST',
+      headers:{'Authorization':`Bearer ${OR_KEY}`,'Content-Type':'application/json','HTTP-Referer':window.location.origin,'X-Title':'Vispora AI'},
+      body:JSON.stringify(payload), signal:abort.signal,
+    });
+    if (!res.ok) { const e=await res.json().catch(()=>({})); throw new Error(e.error?.message||`HTTP ${res.status}`); }
+    if (reasoning) { bumpReason(); syncReasonUI(); }
+
+    const reader=res.body.getReader(); const dec=new TextDecoder(); let buf='';
+    setStatus('Generating…',true);
+
+    while(true) {
+      const {done,value}=await reader.read(); if(done) break;
+      buf+=dec.decode(value,{stream:true});
+      const lines=buf.split('\n'); buf=lines.pop();
+      for (const line of lines) {
+        if(!line.startsWith('data: ')) continue;
+        const d=line.slice(6).trim(); if(d==='[DONE]') continue;
+        try {
+          const chunk=JSON.parse(d); const delta=chunk.choices?.[0]?.delta; if(!delta) continue;
+          if (delta.reasoning) {
+            fullR+=delta.reasoning;
+            if (!rEl) {
+              const rb=document.createElement('div'); rb.className='ai-reasoning-block';
+              rb.innerHTML=`<button class="ai-reasoning-toggle" onclick="this.nextElementSibling.classList.toggle('open');this.querySelector('em').textContent=this.nextElementSibling.classList.contains('open')?'▲':'▼'">💭 Thinking <em>▼</em></button><div class="ai-reasoning-body open" id="rstream"></div>`;
+              bubble.before(rb); rEl=rb.querySelector('#rstream');
+            }
+            if(rEl) rEl.innerHTML=VApp.esc(fullR).replace(/\n/g,'<br>')+'<span class="ai-cursor"></span>';
+          }
+          if (delta.content) { full+=delta.content; bubble.innerHTML=md(full,true); w.scrollTop=w.scrollHeight; }
+        } catch{}
+      }
+    }
+
+    // Finalize
+    if(rEl){rEl.id='';rEl.classList.remove('open');rEl.innerHTML=rEl.innerHTML.replace(/<span class="ai-cursor"><\/span>/g,'');}
+    bubble.className='ai-msg-bubble'; bubble.innerHTML=md(full,false);
+    messages.push({role:'assistant',content:full});
+    setStatus(`${Math.ceil(messages.length/2)} exchange${messages.length>2?'s':''}`,false);
+
+  } catch(err) {
+    if(err.name==='AbortError'){
+      bubble.className='ai-msg-bubble';
+      if(full){bubble.innerHTML=md(full,false)+'<p style="color:var(--text-secondary);font-size:0.72rem;margin-top:6px;font-style:italic;margin-bottom:0">— stopped —</p>';messages.push({role:'assistant',content:full});}
+      else{bubble.innerHTML='<p style="color:var(--text-secondary);font-style:italic;margin:0">Stopped.</p>';messages.pop();}
+      setStatus('Stopped',false);
+    } else {
+      bubble.className='ai-msg-bubble'; bubble.innerHTML=`<p style="color:#e85d5d;margin:0">⚠ ${VApp.esc(err.message)}</p>`;
+      messages.pop(); VApp.showToast(err.message,'error'); setStatus('Error',false);
+    }
+  }
+
+  isStreaming=false; abort=null;
+  document.getElementById('ai-send').style.display='';
+  document.getElementById('ai-stop').style.display='none';
+  w.scrollTop=w.scrollHeight;
+}
+
+syncReasonUI(); ta.focus();
+</script>
+</body>
+</html>

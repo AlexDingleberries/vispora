@@ -71,8 +71,6 @@ body {
   opacity: 0.5;
 }
 
-/* NOTE: Do NOT add position:relative here — it creates a stacking context
-   that traps fixed/absolute children like modals below the nav z-index */
 
 ::-webkit-scrollbar { width: 4px; height: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
