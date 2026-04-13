@@ -86,7 +86,7 @@
           </button>
           <button class="btn btn-secondary" id="back-btn" type="button">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-            Back
+            Return
           </button>
         </div>
       </div>
@@ -133,13 +133,9 @@ function tickSession() {
   const el = document.getElementById('est-done-display');
   if (!el) return;
   const elapsed = Date.now() - sessionStart + sessionMs;
-  if (elapsed >= _runtimeMs) {
-    el.textContent = '✓ Done';
-  } else {
     const remaining = _runtimeMs - elapsed;
     const estEnd = new Date(Date.now() + remaining);
     el.textContent = 'Est. Finish Time: ' + estEnd.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
-  }
   el.style.display = '';
 }
 function saveSession() {

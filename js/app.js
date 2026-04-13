@@ -99,8 +99,17 @@ function startDatetime(el){
 }
 
 async function loadVisps(){
-  try{const r=await fetch('data/visps.json');const d=await r.json();return Array.isArray(d)?d:(d.visps||d);}
-  catch(e){console.error(e);return[];}
+   return new Promise((resolve, reject) => {
+    window.receiveGames = (data) => {
+      document.body.removeChild(script);
+      delete window.receiveGames;
+      resolve(Array.isArray(data) ? data : (data.visps || data));
+    };
+    const script = document.createElement('script');
+    script.src = 'data/visps.js';
+        script.onerror = () => reject(new Error("Failed to load visps data."));
+        document.body.appendChild(script);
+  });
 }
 
 function navHTML(active){

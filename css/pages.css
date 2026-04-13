@@ -80,7 +80,7 @@
 /* ===== VISPS (GAMES) BROWSE PAGE ===== */
 .visps-page { padding-top: calc(var(--nav-h) + 36px); padding-bottom: 60px; min-height: 100vh; }
 .visps-page-header { text-align: center; margin-bottom: 36px; }
-.visps-page-title { font-size: 2rem; font-weight: 900; margin-bottom: 3px; }
+.visps-page-title { font-size: rem; font-weight: 900; margin-bottom: 3px; }
 .visps-page-sub { color: var(--text-secondary); font-size: 0.84rem; }
 .visps-filters { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-bottom: 36px; }
 .visps-filter-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; justify-content: center; }
@@ -182,7 +182,7 @@
 /* Accent glow outline on hover */
 .media-card:hover, .media-card:focus-visible {
   transform: translateY(-4px) scale(1.02);
-  border-color: rgba(var(--accent-rgb), 0.6);
+  border-color: var(--accent);
   box-shadow:
     0 0 0 1px rgba(var(--accent-rgb), 0.2),
     0 0 24px rgba(var(--accent-rgb), 0.35),
@@ -500,4 +500,54 @@
   border-radius: 0 2px 2px 0;
   transition: width 1s linear;
   max-width: 100%;
+}
+
+.browse-card-sq {
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 22px 12px 18px !important;
+  gap: 10px !important;
+  aspect-ratio: 3 / 1;
+  min-width: 0;
+  border: 1px solid rgba(255,255,255,0.07);
+  background: var(--surface-2, rgba(255,255,255,0.04)) !important;
+  border-radius: 16px !important;
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease !important;
+  position: relative;
+  overflow: hidden;
+}
+.browse-card-sq::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+.browse-card-sq:hover {
+  transform: translateY(-3px) scale(1.02) !important;
+  border-color: var(--accent) !important;
+  background: rgba(255,255,255,0.07) !important;
+}
+.browse-card-sq .browse-card-icon-wrap {
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 14px !important;
+  background: rgba(255,255,255,0.06) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.browse-card-sq .browse-card-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-1, #fff);
+  letter-spacing: 0.01em;
+}
+.browse-card-sq .browse-card-sub {
+  font-size: 0.7rem;
+  color: var(--text-2, rgba(255,255,255,0.45));
+  margin-top: -4px;
 }

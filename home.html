@@ -19,13 +19,12 @@
   <h1 class="settings-page-title">Home</h1>
   <div class="home-grid">
 
-    <!-- Hero + Stats -->
+    <!-- Hero + Featured Movie -->
     <div class="home-hero-section">
-      <a id="hero-card" class="hero-card skeleton" style="min-height:200px" href="#"></a>
-      <div style="display:flex;flex-direction:column;gap:12px;justify-content:center">
-        <div class="stat-card"><div class="stat-value" id="s-visps">—</div><div class="stat-label">Visps</div></div>
-        <div class="stat-card"><div class="stat-value" id="s-time">—</div><div class="stat-label">Playtime</div></div>
-        <div class="stat-card"><div class="stat-value" id="s-favs">—</div><div class="stat-label">Favorites</div></div>
+      <a id="hero-card" class="hero-card skeleton" style="min-height:200px;max-width:800px;flex-shrink:0" href="#"></a>
+      <div id="featured-movie-panel" style="flex:1;min-width:0;display:flex;flex-direction:column;gap:0;border-radius:14px;overflow:hidden;position:relative;min-height:220px;background:var(--surface-2)">
+        <div class="skeleton" style="position:absolute;inset:0;border-radius:14px"></div>
+        <div style="position:relative;z-index:1;padding:0" id="featured-movie-inner"></div>
       </div>
     </div>
 
@@ -35,29 +34,26 @@
         <h2 class="section-title">Browse</h2>
       </div>
       <div class="browse-grid">
-        <a href="visps.html" class="browse-card">
-          <div class="browse-card-icon-wrap"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg></div>
-          <div class="browse-card-text">
-            <div class="browse-card-label">Visps</div>
-            <div class="browse-card-sub">Browser games &amp; more</div>
+        <a href="visps.html" class="browse-card browse-card-sq">
+          <div class="browse-card-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
           </div>
-          <span class="browse-card-arrow">→</span>
+          <div class="browse-card-label">Visps</div>
+          <div class="browse-card-sub">Browser games</div>
         </a>
-        <a href="movies.html" class="browse-card">
-          <div class="browse-card-icon-wrap"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/><line x1="17" y1="17" x2="22" y2="17"/></svg></div>
-          <div class="browse-card-text">
-            <div class="browse-card-label">Movies</div>
-            <div class="browse-card-sub">Stream films</div>
+        <a href="movies.html" class="browse-card browse-card-sq">
+          <div class="browse-card-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/><line x1="17" y1="17" x2="22" y2="17"/></svg>
           </div>
-          <span class="browse-card-arrow">→</span>
+          <div class="browse-card-label">Movies</div>
+          <div class="browse-card-sub">Stream films</div>
         </a>
-        <a href="tv.html" class="browse-card">
-          <div class="browse-card-icon-wrap"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg></div>
-          <div class="browse-card-text">
-            <div class="browse-card-label">TV Shows</div>
-            <div class="browse-card-sub">Watch your series</div>
+        <a href="tv.html" class="browse-card browse-card-sq">
+          <div class="browse-card-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
           </div>
-          <span class="browse-card-arrow">→</span>
+          <div class="browse-card-label">TV Shows</div>
+          <div class="browse-card-sub">Watch series</div>
         </a>
       </div>
     </section>
@@ -174,10 +170,10 @@ let allVisps = [];
 async function init() {
   allVisps = await VApp.loadVisps();
   renderHero();
-  renderStats();
   renderRecent();
   renderDay();
   renderFavs();
+  renderFeaturedMovie();
   renderPopularMovies();
   renderPopularTV();
   renderMediaHistory();
@@ -203,12 +199,38 @@ function renderHero() {
   card.style.cssText += ';position:relative;overflow:hidden;aspect-ratio:16/9;';
 }
 
-function renderStats() {
-  document.getElementById('s-visps').textContent = allVisps.length.toLocaleString();
-  const tot = Object.values(VStorage.getAllPlaytime()).reduce((a, b) => a + b, 0);
-  document.getElementById('s-time').textContent = VStorage.formatTime(tot) || '0m';
-  const totalFavs = VStorage.getFavorites().length + VStorage.getMediaFavorites().length;
-  document.getElementById('s-favs').textContent = totalFavs;
+async function renderFeaturedMovie() {
+  const panel = document.getElementById('featured-movie-panel');
+  try {
+    const data = await VMedia.tmdbFetch('/movie/now_playing', { page: 1 });
+    const movies = (data.results || []).filter(m => m.backdrop_path || m.poster_path);
+    if (!movies.length) { panel.innerHTML = ''; return; }
+    // Pick top-rated from now_playing (top 20)
+    const top = movies.slice(0, 20).sort((a, b) => b.vote_average - a.vote_average);
+    const m = top[Math.floor(Math.random() * Math.min(5, top.length))];
+    const bg = m.backdrop_path
+      ? `https://image.tmdb.org/t/p/w780${m.backdrop_path}`
+      : `https://image.tmdb.org/t/p/w500${m.poster_path}`;
+    const year = m.release_date ? m.release_date.slice(0, 4) : '';
+    const rating = m.vote_average ? m.vote_average.toFixed(1) : '';
+    panel.innerHTML = `
+      <a href="movies.html?id=${m.id}" style="display:block;position:relative;width:100%;height:100%;min-height:220px;border-radius:14px;overflow:hidden;text-decoration:none">
+        <img src="${VApp.esc(bg)}" alt="${VApp.esc(m.title||'')}"
+          style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.88) 0%,rgba(0,0,0,0.18) 55%,transparent 100%)"></div>
+        <div style="position:absolute;top:10px;left:12px">
+          <span style="background:var(--accent);color:#000;font-size:0.65rem;font-weight:700;padding:2px 8px;border-radius:20px;letter-spacing:0.05em;text-transform:uppercase">🎬 Now Playing</span>
+        </div>
+        ${rating ? `<div style="position:absolute;top:10px;right:12px;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);color:#facc15;font-size:0.75rem;font-weight:700;padding:3px 8px;border-radius:20px">★ ${VApp.esc(rating)}</div>` : ''}
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:14px 14px 14px">
+          <div style="font-size:1.05rem;font-weight:700;color:#fff;line-height:1.2;margin-bottom:4px;text-shadow:0 1px 6px rgba(0,0,0,0.7)">${VApp.esc(m.title||'')}</div>
+          ${year ? `<div style="font-size:0.75rem;color:rgba(255,255,255,0.6);margin-bottom:8px">${VApp.esc(year)}</div>` : ''}
+          <span style="display:inline-flex;align-items:center;gap:5px;background:var(--accent);color:#000;font-size:0.72rem;font-weight:700;padding:4px 12px;border-radius:20px">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg> Watch Now
+          </span>
+        </div>
+      </a>`;
+  } catch(e) { console.error(e); panel.innerHTML = ''; }
 }
 
 function renderRecent() {
@@ -225,8 +247,36 @@ function renderRecent() {
     const rb = e.target.closest('.visp-card-remove'); if (!rb) return;
     e.preventDefault(); e.stopPropagation();
     const id = Number(rb.dataset.id);
-    const ok = await VApp.showModal({ title: 'Remove from History', message: 'Remove this visp from your recently played list?', confirmText: 'Remove', dangerous: true });
-    if (ok) { VStorage.removeFromHistory(id); rb.closest('.visp-card').remove(); VApp.showToast('Removed from history'); renderStats(); }
+    const pt = VStorage.getPlaytime(id);
+    const ptStr = VStorage.formatTime(pt);
+    // Build a custom modal with checkbox
+    const ok = await new Promise(resolve => {
+      const o = document.createElement('div'); o.className = 'modal-overlay'; o.style.zIndex = '30000';
+      o.innerHTML = `<div class="modal" role="dialog" aria-modal="true">
+        <h3>Remove from History</h3>
+        <p>Remove this visp from your recently played list?</p>
+        ${ptStr ? `<label style="display:flex;align-items:center;gap:8px;margin-top:8px;font-size:0.85rem;color:var(--text-2);cursor:pointer">
+          <input type="checkbox" id="reset-pt-chk" style="accent-color:var(--accent)">
+          Also reset playtime <span style="color:var(--accent);font-weight:600">(${ptStr})</span>
+        </label>` : ''}
+        <div class="modal-actions">
+          <button class="btn btn-secondary modal-cancel">Cancel</button>
+          <button class="btn btn-danger modal-confirm">Remove</button>
+        </div></div>`;
+      o.querySelector('.modal-cancel').onclick = () => { o.remove(); resolve(null); };
+      o.querySelector('.modal-confirm').onclick = () => {
+        const resetPt = o.querySelector('#reset-pt-chk')?.checked || false;
+        o.remove(); resolve(resetPt);
+      };
+      o.onclick = e => { if (e.target === o) { o.remove(); resolve(null); } };
+      document.body.appendChild(o); o.querySelector('.modal-confirm').focus();
+    });
+    if (ok !== null) {
+      VStorage.removeFromHistory(id);
+      if (ok) VStorage.resetPlaytime(id);
+      rb.closest('.visp-card').remove();
+      VApp.showToast(ok ? 'Removed from history & playtime reset' : 'Removed from history');
+    }
   });
   va.addEventListener('click', e => { e.preventDefault(); showVispViewAll('Recent Visps', hist); });
 }

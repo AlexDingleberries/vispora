@@ -14,7 +14,7 @@
 [data-theme="light"] .nav { background: rgba(240,240,240,0.9); }
 
 .nav-logo {
-  font-size: 1rem; font-weight: 800; letter-spacing: 0.12em;
+  font-size: 1rem; font-weight: 800;
   color: var(--accent); white-space: nowrap; flex-shrink: 0;
 }
 
@@ -83,7 +83,7 @@
   color: var(--text-secondary);
   display: flex; align-items: center; justify-content: center; transition: all 160ms ease;
 }
-.btn-icon:hover { color: var(--accent); border-color: rgba(var(--accent-rgb),0.35); background: var(--accent-dim); }
+.btn-icon:hover { color: var(--accent); border-color: rgba(var(--accent),0.35); background: var(--accent-dim); }
 .btn-icon svg { width: 16px; height: 16px; pointer-events: none; }
 
 /* ===== GAME CARDS ===== */
@@ -97,7 +97,7 @@
 }
 .visp-card:hover, .visp-card:focus-visible {
   transform: scale(1.04);
-  border-color: rgba(var(--accent-rgb),0.45);
+  border-color: var(--accent);
   box-shadow: 0 6px 28px rgba(0,0,0,0.4), 0 0 0 1px rgba(var(--accent-rgb),0.15);
   z-index: 2;
 }
@@ -164,7 +164,7 @@
   display: flex; 
   gap: 12px;
   overflow-x: auto; 
-  padding: 4px 0 14px;
+  padding: 4px 0 10px;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   /* Scrollbar visible for better UX */
