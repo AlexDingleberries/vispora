@@ -16,18 +16,18 @@
 <div id="particles-js"></div>
 <div id="nav-ph"></div>
 <main class="media-browse-page page-enter container">
-  <div class="visps-page-header">
-    <h1 class="visps-page-title">movies</h1>
-    <p class="visps-page-sub">Discover and watch your favorite films</p>
+  <div class="games-page-header">
+    <h1 class="games-page-title">movies</h1>
+    <p class="games-page-sub">Discover and watch your favorite films</p>
   </div>
-  <div class="visps-filters">
+  <div class="games-filters">
     <div class="search-wrap">
       <span class="search-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
       </span>
       <input type="search" class="search-input" id="search-input" placeholder="Search movies…" autocomplete="off" spellcheck="false" aria-label="Search movies">
     </div>
-    <div class="visps-filter-row" id="cat-row">
+    <div class="games-filter-row" id="cat-row">
       <div class="filter-tabs" id="cat-tabs">
         <button class="filter-tab active" data-cat="popular">Popular</button>
         <button class="filter-tab" data-cat="top_rated">Top Rated</button>
@@ -39,7 +39,7 @@
       </select>
     </div>
   </div>
-  <div class="visps-count" id="result-count"></div>
+  <div class="games-count" id="result-count"></div>
   <div class="media-grid" id="media-grid"></div>
   <div id="load-more-wrap" style="text-align:center;margin-top:32px;display:none">
     <button class="btn btn-secondary" id="load-more-btn" type="button">Load More</button>
@@ -75,9 +75,19 @@ async function loadMovies(append = false) {
   try {
     let data;
     if (state.query) {
-      data = await VMedia.tmdbFetch('/search/movie', { query: state.query, page: state.page, with_genres: state.genreId || undefined });
+      data = await VMedia.tmdbFetch('/search/movie', { query: state.query, page: state.page });
+      // TMDB search doesn't support with_genres — filter client-side
+      if (state.genreId) {
+        data.results = (data.results || []).filter(m =>
+          (m.genre_ids || []).includes(Number(state.genreId))
+        );
+      }
+    } else if (state.genreId) {
+      // /movie/{category} ignores with_genres — must use /discover/movie
+      const sortMap = { popular: 'popularity.desc', top_rated: 'vote_average.desc', now_playing: 'primary_release_date.desc', upcoming: 'primary_release_date.asc' };
+      data = await VMedia.tmdbFetch('/discover/movie', { page: state.page, with_genres: state.genreId, sort_by: sortMap[state.category] || 'popularity.desc', 'vote_count.gte': state.category === 'top_rated' ? 200 : undefined });
     } else {
-      data = await VMedia.tmdbFetch(`/movie/${state.category}`, { page: state.page, with_genres: state.genreId || undefined });
+      data = await VMedia.tmdbFetch(`/movie/${state.category}`, { page: state.page });
     }
     const movies = (data.results || []).filter(m => m.poster_path);
     state.totalPages = Math.min(data.total_pages || 1, 500);

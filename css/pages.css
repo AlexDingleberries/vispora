@@ -129,24 +129,24 @@
 .browse-card-sq .browse-card-label {
   font-size: 0.9rem;
   font-weight: 700;
-  color: var(--text-1, #fff);
+  color: var(--text);
   letter-spacing: 0.01em;
 }
 .browse-card-sq .browse-card-sub {
   font-size: 0.7rem;
-  color: var(--text-2, rgba(255,255,255,0.45));
+  color: var(--text, rgba(255,255,255,0.45));
   margin-top: -4px;
 }
 
 /* ===== VISPS (GAMES) BROWSE PAGE ===== */
-.visps-page { padding-top: calc(var(--nav-h) + 36px); padding-bottom: 60px; min-height: 100vh; }
-.visps-page-header { text-align: center; margin-bottom: 36px; }
-.visps-page-title { font-size: 3rem; font-weight: 700; margin-bottom: 3px; }
-.visps-page-sub { color: var(--text-secondary); font-size: 0.84rem; }
-.visps-filters { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-bottom: 36px; }
-.visps-filter-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; justify-content: center; }
-.visps-count { font-size: 0.77rem; font-weight: 500; color: var(--text-secondary); margin-bottom: 10px; text-align: right; }
-.visps-count span { color: var(--accent); font-weight: 700; }
+.games-page { padding-top: calc(var(--nav-h) + 36px); padding-bottom: 60px; min-height: 100vh; }
+.games-page-header { text-align: center; margin-bottom: 36px; }
+.games-page-title { font-size: 3rem; font-weight: 700; margin-bottom: 3px; }
+.games-page-sub { color: var(--text-secondary); font-size: 0.84rem; }
+.games-filters { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-bottom: 36px; }
+.games-filter-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; justify-content: center; }
+.games-count { font-size: 0.77rem; font-weight: 500; color: var(--text-secondary); margin-bottom: 10px; text-align: right; }
+.games-count span { color: var(--accent); font-weight: 700; }
 .no-results { grid-column: 1/-1; text-align: center; padding: 70px 20px; color: var(--text-secondary); }
 .no-results-title { font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
 
@@ -256,7 +256,7 @@
   transition: filter 280ms ease, transform 280ms ease;
 }
 .media-card:hover > img, .media-card:focus-visible > img {
-  filter: blur(1.5px) brightness(0.82);
+  filter: blur(1px) brightness(0.82);
   transform: scale(1.04);
 }
 
@@ -302,10 +302,10 @@
 }
 
 /* Star button on media cards */
-.media-card .visp-card-star { opacity: 0; }
-.media-card:hover .visp-card-star,
-.media-card:focus-visible .visp-card-star,
-.media-card .visp-card-star.favorited { opacity: 1; }
+.media-card .game-card-star { opacity: 0; }
+.media-card:hover .game-card-star,
+.media-card:focus-visible .game-card-star,
+.media-card .game-card-star.favorited { opacity: 1; }
 
 /* Media skeleton placeholder */
 .media-card-skeleton { aspect-ratio: 2/3; border-radius: var(--radius); }
@@ -620,8 +620,8 @@
 }
 .ai-sidebar-section:last-of-type { border-bottom: none; }
 .ai-sidebar-title {
-  font-size: 0.58rem; font-weight: 700; text-transform: uppercase;
-  color: var(--accent); opacity: 0.85;
+  font-size: 0.58rem; font-weight: 700;
+  color: var(--text); opacity: 0.85;
   margin-bottom: 4px;
 }
 
@@ -746,7 +746,7 @@
 .ai-msg-user .ai-msg-body { align-items: flex-end; }
 
 .ai-msg-role {
-  font-size: 0.62rem; font-weight: 700; text-transform: uppercase; color: var(--text-secondary); padding: 0 2px;
+  font-size: 0.62rem; font-weight: 700; color: var(--text-secondary); padding: 0 2px;
 }
 .ai-msg-user .ai-msg-role { color: rgba(var(--accent-rgb), 0.7); }
 
@@ -777,7 +777,7 @@
 }
 .ai-reasoning-toggle {
   display: flex; align-items: center; gap: 6px;
-  font-size: 0.62rem; font-weight: 700; text-transform: uppercase;
+  font-size: 0.62rem; font-weight: 700;
   color: var(--accent); cursor: pointer; margin-bottom: 0;
   background: none; border: none; padding: 0; font-family: inherit; width: 100%;
 }
@@ -814,7 +814,7 @@
   padding: 7px 12px; background: var(--bg2); border-bottom: 1px solid var(--card-border);
 }
 .ai-code-lang {
-  font-size: 0.6rem; font-weight: 700; text-transform: uppercase;
+  font-size: 0.6rem; font-weight: 700;
   color: var(--accent);
 }
 .ai-copy-btn {

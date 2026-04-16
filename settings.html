@@ -278,7 +278,7 @@ async function loadStats(){
   if(!top.length){topEl.innerHTML='<p style="color:var(--text-secondary);font-size:0.85rem">Play some visps to see stats!</p>';return;}
   topEl.innerHTML=top.map(([id,ms],i)=>{
     const g=allVisps.find(x=>String(x.id)===id)||hist.find(x=>String(x.id)===id);
-    const name=g?(g.name||`Visp ${id}`):`Visp ${id}`;
+    const name=g?(g.name||`Game ${id}`):`Game ${id}`;
     const pct=Math.round(ms/(top[0][1]||1)*100);
     return`<div style="display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid var(--card-border)">
       <span style="font-size:0.72rem;color:var(--text-secondary);width:14px;text-align:right;flex-shrink:0">${i+1}</span>

@@ -51,7 +51,7 @@ function makeMovieCard(movie) {
       <div class="media-card-title">${VApp.esc(movie.title || 'Untitled')}</div>
       ${meta ? `<div class="media-card-meta">${VApp.esc(meta)}</div>` : ''}
     </div>
-    <button class="visp-card-star media-star${isFav ? ' favorited' : ''}"
+    <button class="game-card-star media-star${isFav ? ' favorited' : ''}"
       data-id="${movie.id}" data-media-type="movie"
       aria-label="${isFav ? 'Unfavorite' : 'Favorite'}" type="button">
       ${isFav ? VApp.IC.starFilled : VApp.IC.star}
@@ -74,7 +74,7 @@ function makeTVCard(show) {
       <div class="media-card-title">${VApp.esc(show.name || 'Untitled')}</div>
       ${meta ? `<div class="media-card-meta">${VApp.esc(meta)}</div>` : ''}
     </div>
-    <button class="visp-card-star media-star${isFav ? ' favorited' : ''}"
+    <button class="game-card-star media-star${isFav ? ' favorited' : ''}"
       data-id="${show.id}" data-media-type="tv"
       aria-label="${isFav ? 'Unfavorite' : 'Favorite'}" type="button">
       ${isFav ? VApp.IC.starFilled : VApp.IC.star}
@@ -106,20 +106,50 @@ function initMediaStars(container) {
   });
 }
 
-/* Genre helpers */
-let _movieGenres = null, _tvGenres = null;
-async function getMovieGenres() {
-  if (_movieGenres) return _movieGenres;
-  try { const d = await tmdbFetch('/genre/movie/list'); _movieGenres = d.genres || []; }
-  catch { _movieGenres = []; }
-  return _movieGenres;
-}
-async function getTVGenres() {
-  if (_tvGenres) return _tvGenres;
-  try { const d = await tmdbFetch('/genre/tv/list'); _tvGenres = d.genres || []; }
-  catch { _tvGenres = []; }
-  return _tvGenres;
-}
+/* Genre helpers — hardcoded TMDB IDs (these never change) */
+const MOVIE_GENRES = [
+  { id: 28,    name: 'Action' },
+  { id: 12,    name: 'Adventure' },
+  { id: 16,    name: 'Animation' },
+  { id: 35,    name: 'Comedy' },
+  { id: 80,    name: 'Crime' },
+  { id: 99,    name: 'Documentary' },
+  { id: 18,    name: 'Drama' },
+  { id: 10751, name: 'Family' },
+  { id: 14,    name: 'Fantasy' },
+  { id: 36,    name: 'History' },
+  { id: 27,    name: 'Horror' },
+  { id: 10402, name: 'Music' },
+  { id: 9648,  name: 'Mystery' },
+  { id: 10749, name: 'Romance' },
+  { id: 878,   name: 'Science Fiction' },
+  { id: 10770, name: 'TV Movie' },
+  { id: 53,    name: 'Thriller' },
+  { id: 10752, name: 'War' },
+  { id: 37,    name: 'Western' },
+];
+
+const TV_GENRES = [
+  { id: 10759, name: 'Action & Adventure' },
+  { id: 16,    name: 'Animation' },
+  { id: 35,    name: 'Comedy' },
+  { id: 80,    name: 'Crime' },
+  { id: 99,    name: 'Documentary' },
+  { id: 18,    name: 'Drama' },
+  { id: 10751, name: 'Family' },
+  { id: 10762, name: 'Kids' },
+  { id: 9648,  name: 'Mystery' },
+  { id: 10763, name: 'News' },
+  { id: 10764, name: 'Reality' },
+  { id: 10765, name: 'Sci-Fi & Fantasy' },
+  { id: 10766, name: 'Soap' },
+  { id: 10767, name: 'Talk' },
+  { id: 10768, name: 'War & Politics' },
+  { id: 37,    name: 'Western' },
+];
+
+function getMovieGenres() { return Promise.resolve(MOVIE_GENRES); }
+function getTVGenres()    { return Promise.resolve(TV_GENRES); }
 
 window.VMedia = {
   tmdbFetch, getAccentHex, posterUrl, backdropUrl, moviePlayerUrl, tvPlayerUrl,

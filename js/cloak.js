@@ -52,9 +52,9 @@ function initCloak() {
       const m = VStorage.getCloakMode();
       const cu = VStorage.getCloakUrl();
       if (m === 'google') {
-        window.location.replace(CLOAK_TARGETS.google.url);
+        window.top.location.replace(CLOAK_TARGETS.google.url);
       } else if (m === 'custom' && cu) {
-        window.location.replace(cu);
+        window.top.location.replace(cu);
       } else {
         // Just cloak tab title
         cloakTab('google');

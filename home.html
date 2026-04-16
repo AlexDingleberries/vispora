@@ -2,7 +2,7 @@
 <html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Home — vispora</title>
+<title>Home — Gameora</title>
 <link rel="stylesheet" href="css/global.css">
 <link rel="stylesheet" href="css/components.css">
 <link rel="stylesheet" href="css/pages.css">
@@ -34,11 +34,11 @@
         <h2 class="section-title">Browse</h2>
       </div>
       <div class="browse-grid">
-        <a href="visps.html" class="browse-card browse-card-sq">
+        <a href="games.html" class="browse-card browse-card-sq">
           <div class="browse-card-icon-wrap">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
           </div>
-          <div class="browse-card-label">Visps</div>
+          <div class="browse-card-label">Games</div>
           <div class="browse-card-sub">Browser games</div>
         </a>
         <a href="movies.html" class="browse-card browse-card-sq">
@@ -65,11 +65,11 @@
       </div>
     </section>
 
-    <!-- Visps of the Day -->
+    <!-- Games of the Day -->
     <section>
       <div class="section-header">
-        <h2 class="section-title">Visps of the Day</h2>
-        <a href="visps.html" class="section-viewall">View All</a>
+        <h2 class="section-title">Games of the Day</h2>
+        <a href="games.html" class="section-viewall">View All</a>
       </div>
       <div id="day-wrap"><div class="skeleton" style="flex:0 0 155px;height:155px;border-radius:10px"></div></div>
     </section>
@@ -106,25 +106,25 @@
       </div>
     </section>
 
-    <!-- Recently Played (Visps) -->
+    <!-- Recently Played (Games) -->
     <section>
       <div class="section-header">
         <h2 class="section-title">Recently Played</h2>
         <a href="#" class="section-viewall" id="recent-va" style="display:none">View All</a>
       </div>
       <div id="recent-wrap">
-        <div class="empty-state"><div class="empty-state-icon">🎮</div><div class="empty-state-title">Nothing played yet</div><p>Head to the <a href="visps.html" style="color:var(--accent)">Visps Library</a> to start!</p></div>
+        <div class="empty-state"><div class="empty-state-icon">🎮</div><div class="empty-state-title">Nothing played yet</div><p>Head to the <a href="games.html" style="color:var(--accent)">Games Library</a> to start!</p></div>
       </div>
     </section>
 
-    <!-- Visp Favorites -->
+    <!-- Game Favorites -->
     <section>
       <div class="section-header">
-        <h2 class="section-title">Favorite Visps</h2>
+        <h2 class="section-title">Favorite Games</h2>
         <a href="#" class="section-viewall" id="fav-va" style="display:none">View All</a>
       </div>
       <div id="fav-wrap">
-        <div class="empty-state"><div class="empty-state-icon">⭐</div><div class="empty-state-title">No favorites yet</div><p>Star a visp to see it here</p></div>
+        <div class="empty-state"><div class="empty-state-icon">⭐</div><div class="empty-state-title">No favorites yet</div><p>Star a game to see it here</p></div>
       </div>
     </section>
 
@@ -168,10 +168,10 @@ document.getElementById('nav-ph').innerHTML = VApp.navHTML('home');
 VCloak.initCloak(); VApp.initPanic(); VApp.initParticles();
 const dtEl = document.getElementById('nav-datetime'); if (dtEl) VApp.startDatetime(dtEl);
 
-let allVisps = [];
+let allGames = [];
 
 async function init() {
-  allVisps = await VApp.loadVisps();
+  allGames = await VApp.loadGames();
   renderHero();
   renderRecent();
   renderDay();
@@ -184,9 +184,9 @@ async function init() {
 }
 
 function renderHero() {
-  if (!allVisps.length) return;
-  const featured = allVisps.filter(g => g.featured);
-  const pool = featured.length ? featured : allVisps.slice(0, 50);
+  if (!allGames.length) return;
+  const featured = allGames.filter(g => g.featured);
+  const pool = featured.length ? featured : allGames.slice(0, 50);
   const g = pool[Math.floor(Math.random() * pool.length)];
   const card = document.getElementById('hero-card');
   card.classList.remove('skeleton');
@@ -236,12 +236,12 @@ function renderRecent() {
   const va = document.getElementById('recent-va');
   if (!hist.length) return;
   va.style.display = hist.length > 8 ? '' : 'none';
-  const row = document.createElement('div'); row.className = 'visps-row';
+  const row = document.createElement('div'); row.className = 'games-row';
   row.innerHTML = hist.slice(0, 8).map(h => VApp.makeCard(h, { showRemove: true })).join('');
   wrap.innerHTML = ''; wrap.appendChild(row);
   VApp.initStars(row);
   row.addEventListener('click', async e => {
-    const rb = e.target.closest('.visp-card-remove'); if (!rb) return;
+    const rb = e.target.closest('.game-card-remove'); if (!rb) return;
     e.preventDefault(); e.stopPropagation();
     const id = Number(rb.dataset.id);
     const pt = VStorage.getPlaytime(id);
@@ -250,7 +250,7 @@ function renderRecent() {
       const o = document.createElement('div'); o.className = 'modal-overlay'; o.style.zIndex = '30000';
       o.innerHTML = `<div class="modal" role="dialog" aria-modal="true">
         <h3>Remove from History</h3>
-        <p>Remove this visp from your recently played list?</p>
+        <p>Remove this game from your recently played list?</p>
         ${ptStr ? `<label style="display:flex;align-items:center;gap:8px;margin-top:8px;font-size:0.85rem;color:var(--text-2);cursor:pointer">
           <input type="checkbox" id="reset-pt-chk" style="accent-color:var(--accent)">
           Also reset playtime <span style="color:var(--accent);font-weight:600">(${ptStr})</span>
@@ -270,19 +270,19 @@ function renderRecent() {
     if (ok !== null) {
       VStorage.removeFromHistory(id);
       if (ok) VStorage.resetPlaytime(id);
-      rb.closest('.visp-card').remove();
+      rb.closest('.game-card').remove();
       VApp.showToast(ok ? 'Removed from history & playtime reset' : 'Removed from history');
     }
   });
-  va.addEventListener('click', e => { e.preventDefault(); showVispViewAll('Recent Visps', hist); });
+  va.addEventListener('click', e => { e.preventDefault(); showGameViewAll('Recent Games', hist); });
 }
 
 function renderDay() {
   const wrap = document.getElementById('day-wrap');
-  if (!allVisps.length) return;
+  if (!allGames.length) return;
   const seed = new Date().getDate();
-  const shuffled = [...allVisps].sort((a, b) => (((a.id * (seed + 1) * 1103) % 997) - ((b.id * (seed + 1) * 1103) % 997)));
-  const row = document.createElement('div'); row.className = 'visps-row';
+  const shuffled = [...allGames].sort((a, b) => (((a.id * (seed + 1) * 1103) % 997) - ((b.id * (seed + 1) * 1103) % 997)));
+  const row = document.createElement('div'); row.className = 'games-row';
   row.innerHTML = shuffled.slice(1, 12).map(g => VApp.makeCard(g)).join('');
   wrap.innerHTML = ''; wrap.appendChild(row);
   VApp.initStars(row);
@@ -293,14 +293,14 @@ function renderFavs() {
   const wrap = document.getElementById('fav-wrap');
   const va = document.getElementById('fav-va');
   if (!ids.length) return;
-  const visps = ids.map(id => allVisps.find(g => g.id === id)).filter(Boolean);
-  if (!visps.length) return;
+  const games = ids.map(id => allGames.find(g => g.id === id)).filter(Boolean);
+  if (!games.length) return;
   va.style.display = '';
-  const row = document.createElement('div'); row.className = 'visps-row';
-  row.innerHTML = visps.slice(0, 8).map(g => VApp.makeCard(g)).join('');
+  const row = document.createElement('div'); row.className = 'games-row';
+  row.innerHTML = games.slice(0, 8).map(g => VApp.makeCard(g)).join('');
   wrap.innerHTML = ''; wrap.appendChild(row);
   VApp.initStars(row);
-  va.addEventListener('click', e => { e.preventDefault(); showVispViewAll('Visp Favorites', visps); });
+  va.addEventListener('click', e => { e.preventDefault(); showGameViewAll('Game Favorites', games); });
 }
 
 async function renderPopularMovies() {
@@ -371,14 +371,14 @@ async function renderMediaFavs() {
   } catch (e) { console.error(e); }
 }
 
-function showVispViewAll(title, visps) {
+function showGameViewAll(title, games) {
   const o = document.createElement('div'); o.className = 'modal-overlay';
   o.innerHTML = `<div class="modal" style="max-width:680px;width:100%">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0">
       <h3 style="margin:0">${VApp.esc(title)}</h3>
       <button class="btn-icon va-close" type="button">${VApp.IC.x}</button>
     </div>
-    <div class="view-all-grid">${visps.map(g => VApp.makeCard(g)).join('')}</div>
+    <div class="view-all-grid">${games.map(g => VApp.makeCard(g)).join('')}</div>
   </div>`;
   o.querySelector('.va-close').onclick = () => o.remove();
   o.onclick = e => { if (e.target === o) o.remove(); };

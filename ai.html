@@ -2,7 +2,7 @@
 <html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AI Chat — vispora</title>
+<title>ai chat — vispora</title>
 <link rel="stylesheet" href="css/global.css">
 <link rel="stylesheet" href="css/components.css">
 <link rel="stylesheet" href="css/pages.css">
@@ -10,6 +10,45 @@
 <script src="js/theme.js"></script>
 <script src="js/cloak.js"></script>
 <script src="js/app.js"></script>
+<style>
+/* ── Mic button ── */
+.ai-mic-btn {
+  position: absolute;
+  right: 48px;
+  bottom: 10px;
+  width: 32px; height: 32px;
+  border: none; border-radius: 50%;
+  background: transparent;
+  color: var(--text-secondary, #888);
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: color .2s, background .2s;
+  flex-shrink: 0;
+}
+.ai-mic-btn:hover { color: var(--accent, #7c6fff); }
+.ai-mic-btn.recording {
+  color: #e85d5d;
+  animation: mic-pulse 1s ease-in-out infinite;
+}
+@keyframes mic-pulse {
+  0%,100% { background: rgba(232,93,93,.08); }
+  50%      { background: rgba(232,93,93,.22); }
+}
+.ai-mic-btn svg { pointer-events: none; }
+
+/* ── STT status pill ── */
+.stt-pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 3px 10px; border-radius: 99px;
+  background: rgba(232,93,93,.12);
+  color: #e85d5d; font-size: 0.72rem; font-style: italic;
+}
+.stt-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: #e85d5d;
+  animation: mic-pulse 1s ease-in-out infinite;
+}
+</style>
 </head>
 <body>
 <div id="particles-js"></div>
@@ -26,19 +65,18 @@
           <div class="ai-sidebar-title">Model</div>
           <select class="ai-select" id="ai-model">
             <optgroup label="Fast">
-              <option value="google/gemini-2.0-flash-001">Gemini 2.0 Flash</option>
-              <option value="openai/gpt-4o-mini">GPT-4o Mini</option>
-              <option value="meta-llama/llama-3.3-70b-instruct">Llama 3.3 70B</option>
+              <option value="llama-3.1-8b-instant">Llama 3.1 8B</option>
+              <option value="gemma2-9b-it">Gemma 2 9B</option>
+              <option value="llama-3.3-70b-specdec">Llama 3.3 70B SpecDec</option>
             </optgroup>
             <optgroup label="Powerful">
-              <option value="openai/gpt-4o" selected>GPT-4o</option>
-              <option value="anthropic/claude-3.5-sonnet">Claude 3.5 Sonnet</option>
-              <option value="google/gemini-2.5-pro-preview-03-25">Gemini 2.5 Pro</option>
+              <option value="llama-3.3-70b-versatile" selected>Llama 3.3 70B</option>
+              <option value="llama3-70b-8192">Llama 3 70B</option>
+              <option value="mixtral-8x7b-32768">Mixtral 8x7B</option>
             </optgroup>
             <optgroup label="Reasoning">
-              <option value="deepseek/deepseek-r1">DeepSeek R1</option>
-              <option value="openai/o4-mini">o4-mini</option>
-              <option value="anthropic/claude-3-7-sonnet">Claude 3.7 Sonnet</option>
+              <option value="deepseek-r1-distill-llama-70b">DeepSeek R1 70B</option>
+              <option value="qwen-qwq-32b">QwQ 32B</option>
             </optgroup>
           </select>
         </div>
@@ -55,20 +93,10 @@
           <div class="ai-toggle-row">
             <div class="ai-toggle-info">
               <div class="ai-ctrl-label" style="margin-bottom:2px">🧠 Reasoning</div>
-              <div class="ai-ctrl-sub" id="reason-sub"><span id="reason-left">3</span> uses left today</div>
+              <div class="ai-ctrl-sub" id="reason-sub">Use DeepSeek R1 / QwQ</div>
             </div>
             <label class="toggle-wrap" style="flex-shrink:0">
               <input type="checkbox" class="toggle-input" id="ai-reasoning">
-              <span class="toggle-slider"></span>
-            </label>
-          </div>
-          <div class="ai-toggle-row" style="margin-top:14px">
-            <div class="ai-toggle-info">
-              <div class="ai-ctrl-label" style="margin-bottom:2px">🔍 Web Search</div>
-              <div class="ai-ctrl-sub">Live data via the web</div>
-            </div>
-            <label class="toggle-wrap" style="flex-shrink:0">
-              <input type="checkbox" class="toggle-input" id="ai-websearch">
               <span class="toggle-slider"></span>
             </label>
           </div>
@@ -114,7 +142,7 @@
         <div class="ai-welcome" id="ai-welcome">
           <div class="ai-welcome-icon"><svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg></div>
           <h2>AI Chat</h2>
-          <p>Ask anything. Adjust model, temperature, reasoning, and web search in the sidebar.</p>
+          <p>Ask anything. Adjust model, temperature, and reasoning in the sidebar. Click the microphone to speak.</p>
           <div class="ai-welcome-hints" id="hint-container">
             <button class="ai-hint-chip" data-hint="Explain quantum computing in simple terms">Quantum computing</button>
             <button class="ai-hint-chip" data-hint="Write a Python function to merge two sorted lists">Merge sorted lists</button>
@@ -126,15 +154,25 @@
       </div>
 
       <div class="ai-input-area">
-        <div class="ai-input-wrap">
-          <textarea class="ai-textarea" id="ai-input" placeholder="Send a message…" rows="1"></textarea>
+        <div class="ai-input-wrap" style="position:relative">
+          <textarea class="ai-textarea" id="ai-input" placeholder="Send a message… or click the microphone to speak" rows="1"></textarea>
+
+          <!-- Mic button (Speech-to-Text) -->
+          <button class="ai-mic-btn" id="ai-mic" title="Hold to record (Speech-to-Text)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a3 3 0 0 1 3 3v7a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3Z"/>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+              <line x1="12" y1="19" x2="12" y2="22"/>
+            </svg>
+          </button>
+
           <button class="ai-stop-btn" id="ai-stop" style="display:none">⏹ Stop</button>
           <button class="ai-send-btn" id="ai-send" title="Send (Enter)">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
           </button>
         </div>
         <div class="ai-input-meta">
-          <div class="ai-input-hint">Enter to send &nbsp;·&nbsp; Shift+Enter for newline</div>
+          <div class="ai-input-hint" id="ai-input-hint">Enter to send &nbsp;·&nbsp; Shift+Enter for newline &nbsp;·&nbsp; 🎤 click to record</div>
           <div class="ai-status" id="ai-status"></div>
         </div>
       </div>
@@ -150,10 +188,15 @@ document.getElementById('nav-ph').innerHTML = VApp.navHTML('ai');
 VCloak.initCloak(); VApp.initPanic(); VApp.initParticles();
 const dtEl = document.getElementById('nav-datetime'); if (dtEl) VApp.startDatetime(dtEl);
 
-const OR_KEY = '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';
-const OR_URL = 'https://openrouter.ai/api/v1/chat/completions';
-const RK = 'vispora_ai_reasoning_v2';
-const MAX_R = 3;
+/* ── Groq config ── */
+const GROQ_KEY = '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';
+const GROQ_CHAT = 'https://api.groq.com/openai/v1/chat/completions';
+const GROQ_STT  = 'https://api.groq.com/openai/v1/audio/transcriptions';
+const GROQ_HDR  = { 'Authorization': `Bearer ${GROQ_KEY}`, 'Content-Type': 'application/json' };
+
+/* Reasoning models that natively produce <think> blocks */
+const REASONING_MODELS = new Set(['deepseek-r1-distill-llama-70b','qwen-qwq-32b']);
+
 const MODES = {
   '':'You are a helpful, knowledgeable, and concise assistant. Use markdown when it aids clarity.',
   code:'You are an expert programmer. Write clean, efficient, well-commented code. Use fenced code blocks with the correct language tag. Briefly explain your approach.',
@@ -167,58 +210,63 @@ const MODES = {
 
 let messages = [], isStreaming = false, abort = null;
 
-const todayKey = () => new Date().toDateString();
-const reasonLeft = () => Math.max(0, MAX_R - ((JSON.parse(localStorage.getItem(RK)||'{}')[todayKey()])||0));
-function bumpReason() {
-  const d = JSON.parse(localStorage.getItem(RK)||'{}');
-  const k = todayKey(); d[k]=(d[k]||0)+1; localStorage.setItem(RK,JSON.stringify(d));
-}
-function syncReasonUI() {
-  const left = reasonLeft();
-  document.getElementById('reason-left').textContent = left;
-  const cb = document.getElementById('ai-reasoning');
-  cb.disabled = left===0; if(left===0) cb.checked=false;
-  document.getElementById('reason-sub').style.color = left===0?'#e85d5d':'';
-}
+/* ── Reasoning toggle ── */
+const reasonCb = document.getElementById('ai-reasoning');
+const modelSel  = document.getElementById('ai-model');
 
-// Controls
+reasonCb.addEventListener('change', () => {
+  if (reasonCb.checked) {
+    /* Switch to DeepSeek R1 if not already on a reasoning model */
+    if (!REASONING_MODELS.has(modelSel.value)) {
+      modelSel.value = 'deepseek-r1-distill-llama-70b';
+    }
+  }
+});
+modelSel.addEventListener('change', () => {
+  /* Uncheck reasoning if user picks a non-reasoning model */
+  if (!REASONING_MODELS.has(modelSel.value)) reasonCb.checked = false;
+  else reasonCb.checked = true;
+});
+
+/* ── Controls ── */
 document.getElementById('ai-temp').addEventListener('input', e => {
   document.getElementById('temp-display').textContent = parseFloat(e.target.value).toFixed(2);
 });
 document.getElementById('ai-mode').addEventListener('change', e => {
   const s = document.getElementById('ai-system');
-  if (!s.dataset.edited) s.value = MODES[e.target.value]||'';
+  if (!s.dataset.edited) s.value = MODES[e.target.value] || '';
 });
 document.getElementById('ai-system').addEventListener('input', e => {
   e.target.dataset.edited = e.target.value ? '1' : '';
 });
 document.getElementById('ai-system').value = MODES[''];
 
-// Textarea resize
+/* ── Textarea auto-resize ── */
 const ta = document.getElementById('ai-input');
-function rsz() { ta.style.height='auto'; ta.style.height=Math.min(ta.scrollHeight,160)+'px'; }
+function rsz() { ta.style.height = 'auto'; ta.style.height = Math.min(ta.scrollHeight, 160) + 'px'; }
 ta.addEventListener('input', rsz);
-ta.addEventListener('keydown', e => { if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();send();} });
+ta.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); send(); } });
 
-// Hint chips (initial + rebuild)
+/* ── Hint chips ── */
 function bindHints(root) {
   root.querySelectorAll('.ai-hint-chip').forEach(btn => {
-    btn.addEventListener('click', () => { ta.value=btn.dataset.hint; rsz(); send(); });
+    btn.addEventListener('click', () => { ta.value = btn.dataset.hint; rsz(); send(); });
   });
 }
 bindHints(document);
 
 document.getElementById('ai-send').addEventListener('click', send);
-document.getElementById('ai-stop').addEventListener('click', () => { if(abort) abort.abort(); });
+document.getElementById('ai-stop').addEventListener('click', () => { if (abort) abort.abort(); });
+
 document.getElementById('ai-clear').addEventListener('click', async () => {
   if (!messages.length) return;
-  const ok = await VApp.showModal({title:'Clear Chat',message:'Remove all messages from this session?',confirmText:'Clear',dangerous:true});
+  const ok = await VApp.showModal({ title: 'Clear Chat', message: 'Remove all messages from this session?', confirmText: 'Clear', dangerous: true });
   if (!ok) return;
   messages = [];
   const w = document.getElementById('ai-messages');
   w.innerHTML = `<div class="ai-welcome" id="ai-welcome">
-    <div class="ai-welcome-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg></div><h2>AI Chat</h2>
-    <p>Ask anything. Adjust model, temperature, reasoning, and web search in the sidebar.</p>
+    <div class="ai-welcome-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg></div><h2>ai chat</h2>
+    <p>Ask anything. Adjust model, temperature, and reasoning in the sidebar.</p>
     <div class="ai-welcome-hints">
       <button class="ai-hint-chip" data-hint="Explain quantum computing in simple terms">Quantum computing</button>
       <button class="ai-hint-chip" data-hint="Write a Python function to merge two sorted lists">Merge sorted lists</button>
@@ -226,29 +274,111 @@ document.getElementById('ai-clear').addEventListener('click', async () => {
       <button class="ai-hint-chip" data-hint="Write a short sci-fi story about time travel">Sci-fi story</button>
     </div></div>`;
   bindHints(w);
-  document.getElementById('ai-status').textContent='';
+  document.getElementById('ai-status').textContent = '';
 });
 
-// Mobile sidebar
-document.getElementById('sidebar-toggle').addEventListener('click',()=>{
+/* ── Mobile sidebar ── */
+document.getElementById('sidebar-toggle').addEventListener('click', () => {
   document.getElementById('ai-sidebar').classList.toggle('open');
   document.getElementById('sidebar-overlay').classList.toggle('open');
 });
-document.getElementById('sidebar-overlay').addEventListener('click',()=>{
+document.getElementById('sidebar-overlay').addEventListener('click', () => {
   document.getElementById('ai-sidebar').classList.remove('open');
   document.getElementById('sidebar-overlay').classList.remove('open');
 });
 
-// Markdown
+/* ─────────────────────── Speech-to-Text ─────────────────────── */
+const micBtn = document.getElementById('ai-mic');
+let mediaRecorder = null, audioChunks = [], isRecording = false;
+
+micBtn.addEventListener('click', () => {
+  isRecording ? stopRecording() : startRecording();
+});
+
+async function startRecording() {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    audioChunks = [];
+
+    /* Pick best supported MIME type */
+    const mime = ['audio/webm;codecs=opus','audio/webm','audio/ogg;codecs=opus','audio/mp4']
+      .find(m => MediaRecorder.isTypeSupported(m)) || '';
+
+    mediaRecorder = new MediaRecorder(stream, mime ? { mimeType: mime } : {});
+    mediaRecorder.ondataavailable = e => { if (e.data.size > 0) audioChunks.push(e.data); };
+    mediaRecorder.onstop = transcribeAudio;
+    mediaRecorder.start(250); /* collect in 250 ms chunks */
+
+    isRecording = true;
+    micBtn.classList.add('recording');
+    micBtn.title = 'Click to stop recording';
+    setHint('<span class="stt-pill"><span class="stt-dot"></span>Recording… click 🎤 to stop</span>');
+  } catch (err) {
+    VApp.showToast('Microphone access denied: ' + err.message, 'error');
+  }
+}
+
+function stopRecording() {
+  if (!mediaRecorder) return;
+  mediaRecorder.stop();
+  mediaRecorder.stream.getTracks().forEach(t => t.stop());
+  mediaRecorder = null;
+  isRecording = false;
+  micBtn.classList.remove('recording');
+  micBtn.title = 'Click to record (Speech-to-Text)';
+  setHint('Transcribing…');
+}
+
+async function transcribeAudio() {
+  if (!audioChunks.length) { setHint(null); return; }
+
+  const blob = new Blob(audioChunks, { type: audioChunks[0]?.type || 'audio/webm' });
+  const fd   = new FormData();
+  fd.append('file', blob, 'recording.webm');
+  fd.append('model', 'whisper-large-v3-turbo');
+  fd.append('response_format', 'json');
+
+  try {
+    const res  = await fetch(GROQ_STT, {
+      method: 'POST',
+      headers: { 'Authorization': `Bearer ${GROQ_KEY}` },
+      body: fd,
+    });
+    if (!res.ok) { const e = await res.json().catch(() => ({})); throw new Error(e.error?.message || `HTTP ${res.status}`); }
+    const data = await res.json();
+    const text = (data.text || '').trim();
+    if (text) {
+      ta.value += (ta.value && !ta.value.endsWith(' ') ? ' ' : '') + text;
+      rsz(); ta.focus();
+      VApp.showToast('Transcribed!', 'success');
+    } else {
+      VApp.showToast('No speech detected', 'info');
+    }
+  } catch (err) {
+    VApp.showToast('Transcription failed: ' + err.message, 'error');
+  }
+  setHint(null);
+}
+
+function setHint(html) {
+  const el = document.getElementById('ai-input-hint');
+  el.innerHTML = html || 'Enter to send &nbsp;·&nbsp; Shift+Enter for newline &nbsp;·&nbsp; 🎤 click to record';
+}
+
+/* ─────────────────────── Markdown ─────────────────────── */
 function md(raw, streaming) {
   if (!raw) return streaming ? '<span class="ai-cursor"></span>' : '';
   let t = raw;
-  if (streaming && (t.match(/```/g)||[]).length%2!==0) t+='\n```';
+
+  /* Strip <think>…</think> blocks from reasoning models — shown separately */
+  t = t.replace(/<think>[\s\S]*?<\/think>/gi, '');
+
+  if (streaming && (t.match(/```/g) || []).length % 2 !== 0) t += '\n```';
   t = t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-  const cb=[];
-  t = t.replace(/```(\w*)\n?([\s\S]*?)```/g,(_,l,c)=>{
-    const i=cb.length;
-    cb.push(`<pre class="ai-code-pre"><div class="ai-code-header"><span class="ai-code-lang">${l||'text'}</span><button class="ai-copy-btn" onclick="cpb(this)">Copy</button></div><code>${c.trimEnd()}</code></pre>`);
+  const cb = [];
+  t = t.replace(/```(\w*)\n?([\s\S]*?)```/g, (_, l, c) => {
+    const i = cb.length;
+    cb.push(`<pre class="ai-code-pre"><div class="ai-code-header"><span class="ai-code-lang">${l || 'text'}</span><button class="ai-copy-btn" onclick="cpb(this)">Copy</button></div><code>${c.trimEnd()}</code></pre>`);
     return `\x00${i}\x00`;
   });
   t = t.replace(/`([^`\n]+)`/g,'<code>$1</code>');
@@ -261,21 +391,27 @@ function md(raw, streaming) {
   t = t.replace(/^## (.+)$/gm,'<h2>$1</h2>');
   t = t.replace(/^# (.+)$/gm,'<h1>$1</h1>');
   t = t.replace(/^[*-] (.+)$/gm,'<li>$1</li>');
-  t = t.replace(/(<li>[\s\S]*?<\/li>)+/g,m=>`<ul>${m}</ul>`);
+  t = t.replace(/(<li>[\s\S]*?<\/li>)+/g, m => `<ul>${m}</ul>`);
   t = t.replace(/^\d+\. (.+)$/gm,'<lo>$1</lo>');
-  t = t.replace(/(<lo>[\s\S]*?<\/lo>)+/g,m=>`<ol>${m.replace(/<\/?lo>/g,s=>s.replace('lo','li'))}</ol>`);
-  t = t.split(/\n\n+/).map(p=>{
-    p=p.trim(); if(!p) return '';
-    return /^<(h[1-3]|ul|ol|blockquote|hr|pre)/.test(p)?p:`<p>${p.replace(/\n/g,'<br>')}</p>`;
+  t = t.replace(/(<lo>[\s\S]*?<\/lo>)+/g, m => `<ol>${m.replace(/<\/?lo>/g, s => s.replace('lo','li'))}</ol>`);
+  t = t.split(/\n\n+/).map(p => {
+    p = p.trim(); if (!p) return '';
+    return /^<(h[1-3]|ul|ol|blockquote|hr|pre)/.test(p) ? p : `<p>${p.replace(/\n/g,'<br>')}</p>`;
   }).join('');
-  cb.forEach((b,i)=>{ t=t.replace(`\x00${i}\x00`,b); });
-  if (streaming) t+='<span class="ai-cursor"></span>';
+  cb.forEach((b, i) => { t = t.replace(`\x00${i}\x00`, b); });
+  if (streaming) t += '<span class="ai-cursor"></span>';
   return t;
 }
 
 function cpb(btn) {
   navigator.clipboard.writeText(btn.closest('pre').querySelector('code').textContent)
-    .then(()=>{ btn.textContent='✓ Copied'; setTimeout(()=>{btn.textContent='Copy';},1800); });
+    .then(() => { btn.textContent = '✓ Copied'; setTimeout(() => { btn.textContent = 'Copy'; }, 1800); });
+}
+
+/* Extract <think>…</think> content for display */
+function extractThink(raw) {
+  const m = raw.match(/<think>([\s\S]*?)<\/think>/i);
+  return m ? m[1].trim() : null;
 }
 
 function appendMsg(role, content) {
@@ -284,42 +420,37 @@ function appendMsg(role, content) {
   const el = document.createElement('div');
   el.className = `ai-msg ai-msg-${role}`;
   el.innerHTML = `
-    <div class="ai-msg-avatar">${role==='user'?'👤':'🧠'}</div>
+    <div class="ai-msg-avatar">${role === 'user' ? '👤' : '🧠'}</div>
     <div class="ai-msg-body">
-      <div class="ai-msg-role">${role==='user'?'You':'AI'}</div>
-      <div class="ai-msg-bubble">${md(content,false)}</div>
+      <div class="ai-msg-role">${role === 'user' ? 'You' : 'AI'}</div>
+      <div class="ai-msg-bubble">${md(content, false)}</div>
     </div>`;
-  w.appendChild(el); w.scrollTop=w.scrollHeight;
+  w.appendChild(el); w.scrollTop = w.scrollHeight;
   return el;
 }
 
 function setStatus(t, active) {
   const el = document.getElementById('ai-status');
   el.textContent = t;
-  el.className = 'ai-status'+(active?' streaming':'');
+  el.className = 'ai-status' + (active ? ' streaming' : '');
 }
 
+/* ─────────────────────── Send ─────────────────────── */
 async function send() {
   const text = ta.value.trim();
   if (!text || isStreaming) return;
 
-  const model = document.getElementById('ai-model').value;
-  const temp  = parseFloat(document.getElementById('ai-temp').value);
-  const reasoning = document.getElementById('ai-reasoning').checked;
-  const webSearch = document.getElementById('ai-websearch').checked;
-  const sysOvr = document.getElementById('ai-system').value.trim();
-  const mode  = document.getElementById('ai-mode').value;
+  const model     = modelSel.value;
+  const temp      = parseFloat(document.getElementById('ai-temp').value);
+  const reasoning = reasonCb.checked;
+  const sysOvr   = document.getElementById('ai-system').value.trim();
+  const mode      = document.getElementById('ai-mode').value;
 
-  if (reasoning && reasonLeft()<=0) {
-    VApp.showToast('Daily reasoning limit reached (3/day)','error');
-    document.getElementById('ai-reasoning').checked=false; return;
-  }
+  messages.push({ role: 'user', content: text });
+  appendMsg('user', text);
+  ta.value = ''; ta.style.height = 'auto';
 
-  messages.push({role:'user',content:text});
-  appendMsg('user',text);
-  ta.value=''; ta.style.height='auto';
-
-  // Assistant placeholder
+  /* Assistant placeholder */
   document.getElementById('ai-welcome')?.remove();
   const w = document.getElementById('ai-messages');
   const row = document.createElement('div');
@@ -330,84 +461,117 @@ async function send() {
       <div class="ai-msg-role">AI</div>
       <div class="ai-msg-bubble ai-bubble-stream"><span class="ai-cursor"></span></div>
     </div>`;
-  w.appendChild(row); w.scrollTop=w.scrollHeight;
+  w.appendChild(row); w.scrollTop = w.scrollHeight;
   const bubble = row.querySelector('.ai-bubble-stream');
 
-  isStreaming=true; abort=new AbortController();
-  document.getElementById('ai-send').style.display='none';
-  document.getElementById('ai-stop').style.display='';
-  setStatus('Connecting…',true);
+  isStreaming = true; abort = new AbortController();
+  document.getElementById('ai-send').style.display = 'none';
+  document.getElementById('ai-stop').style.display  = '';
+  setStatus('Connecting…', true);
 
   const sys = sysOvr || MODES[mode] || MODES[''];
-  const payload = {
-    model: webSearch?`${model}:online`:model,
-    messages:[{role:'system',content:sys},...messages.slice(-28)],
-    temperature:temp, stream:true,max_tokens:2000
-  };
-  if (reasoning) payload.reasoning={effort:'high'};
 
-  let full='', fullR='', rEl=null;
+  /* Groq doesn't use a "reasoning" field — reasoning comes from the model itself */
+  const payload = {
+    model,
+    messages: [{ role: 'system', content: sys }, ...messages.slice(-28)],
+    temperature: temp,
+    stream: true,
+    max_tokens: 4096,
+  };
+
+  let full = '', fullThink = '', thinkEl = null;
 
   try {
-    const res = await fetch(OR_URL,{
-      method:'POST',
-      headers:{'Authorization':`Bearer ${OR_KEY}`,'Content-Type':'application/json','HTTP-Referer':window.location.origin,'X-Title':'Vispora AI'},
-      body:JSON.stringify(payload), signal:abort.signal,
+    const res = await fetch(GROQ_CHAT, {
+      method: 'POST',
+      headers: GROQ_HDR,
+      body: JSON.stringify(payload),
+      signal: abort.signal,
     });
-    if (!res.ok) { const e=await res.json().catch(()=>({})); throw new Error(e.error?.message||`HTTP ${res.status}`); }
-    if (reasoning) { bumpReason(); syncReasonUI(); }
+    if (!res.ok) { const e = await res.json().catch(() => ({})); throw new Error(e.error?.message || `HTTP ${res.status}`); }
 
-    const reader=res.body.getReader(); const dec=new TextDecoder(); let buf='';
-    setStatus('Generating…',true);
+    const reader = res.body.getReader(); const dec = new TextDecoder(); let buf = '';
+    setStatus('Generating…', true);
 
-    while(true) {
-      const {done,value}=await reader.read(); if(done) break;
-      buf+=dec.decode(value,{stream:true});
-      const lines=buf.split('\n'); buf=lines.pop();
+    while (true) {
+      const { done, value } = await reader.read(); if (done) break;
+      buf += dec.decode(value, { stream: true });
+      const lines = buf.split('\n'); buf = lines.pop();
       for (const line of lines) {
-        if(!line.startsWith('data: ')) continue;
-        const d=line.slice(6).trim(); if(d==='[DONE]') continue;
+        if (!line.startsWith('data: ')) continue;
+        const d = line.slice(6).trim(); if (d === '[DONE]') continue;
         try {
-          const chunk=JSON.parse(d); const delta=chunk.choices?.[0]?.delta; if(!delta) continue;
-          if (delta.reasoning) {
-            fullR+=delta.reasoning;
-            if (!rEl) {
-              const rb=document.createElement('div'); rb.className='ai-reasoning-block';
-              rb.innerHTML=`<button class="ai-reasoning-toggle" onclick="this.nextElementSibling.classList.toggle('open');this.querySelector('em').textContent=this.nextElementSibling.classList.contains('open')?'▲':'▼'">💭 Thinking <em>▼</em></button><div class="ai-reasoning-body open" id="rstream"></div>`;
-              bubble.before(rb); rEl=rb.querySelector('#rstream');
+          const chunk = JSON.parse(d);
+          /* Groq streaming: reasoning_content vs content */
+          const delta = chunk.choices?.[0]?.delta; if (!delta) continue;
+
+          /* Some Groq reasoning models emit reasoning_content */
+          if (delta.reasoning_content) {
+            fullThink += delta.reasoning_content;
+            if (!thinkEl) {
+              const rb = document.createElement('div'); rb.className = 'ai-reasoning-block';
+              rb.innerHTML = `<button class="ai-reasoning-toggle" onclick="this.nextElementSibling.classList.toggle('open');this.querySelector('em').textContent=this.nextElementSibling.classList.contains('open')?'▲':'▼'">💭 Thinking <em>▼</em></button><div class="ai-reasoning-body open" id="rstream"></div>`;
+              bubble.before(rb); thinkEl = rb.querySelector('#rstream');
             }
-            if(rEl) rEl.innerHTML=VApp.esc(fullR).replace(/\n/g,'<br>')+'<span class="ai-cursor"></span>';
+            if (thinkEl) thinkEl.innerHTML = VApp.esc(fullThink).replace(/\n/g,'<br>') + '<span class="ai-cursor"></span>';
           }
-          if (delta.content) { full+=delta.content; bubble.innerHTML=md(full,true); w.scrollTop=w.scrollHeight; }
-        } catch{}
+
+          if (delta.content) {
+            full += delta.content;
+
+            /* For models that embed <think> inline, extract and display it */
+            const thinkContent = extractThink(full);
+            if (thinkContent && !thinkEl) {
+              const rb = document.createElement('div'); rb.className = 'ai-reasoning-block';
+              rb.innerHTML = `<button class="ai-reasoning-toggle" onclick="this.nextElementSibling.classList.toggle('open');this.querySelector('em').textContent=this.nextElementSibling.classList.contains('open')?'▲':'▼'">💭 Thinking <em>▼</em></button><div class="ai-reasoning-body open" id="rstream2"></div>`;
+              bubble.before(rb); thinkEl = rb.querySelector('#rstream2');
+            }
+            if (thinkEl && thinkContent) {
+              thinkEl.innerHTML = VApp.esc(thinkContent).replace(/\n/g,'<br>') + '<span class="ai-cursor"></span>';
+            }
+
+            bubble.innerHTML = md(full, true);
+            w.scrollTop = w.scrollHeight;
+          }
+        } catch {}
       }
     }
 
-    // Finalize
-    if(rEl){rEl.id='';rEl.classList.remove('open');rEl.innerHTML=rEl.innerHTML.replace(/<span class="ai-cursor"><\/span>/g,'');}
-    bubble.className='ai-msg-bubble'; bubble.innerHTML=md(full,false);
-    messages.push({role:'assistant',content:full});
-    setStatus(`${Math.ceil(messages.length/2)} exchange${messages.length>2?'s':''}`,false);
+    /* Finalise */
+    if (thinkEl) {
+      thinkEl.id = ''; thinkEl.classList.remove('open');
+      thinkEl.innerHTML = thinkEl.innerHTML.replace(/<span class="ai-cursor"><\/span>/g,'');
+    }
+    bubble.className = 'ai-msg-bubble'; bubble.innerHTML = md(full, false);
+    messages.push({ role: 'assistant', content: full });
+    setStatus(`${Math.ceil(messages.length / 2)} exchange${messages.length > 2 ? 's' : ''}`, false);
 
-  } catch(err) {
-    if(err.name==='AbortError'){
-      bubble.className='ai-msg-bubble';
-      if(full){bubble.innerHTML=md(full,false)+'<p style="color:var(--text-secondary);font-size:0.72rem;margin-top:6px;font-style:italic;margin-bottom:0">— stopped —</p>';messages.push({role:'assistant',content:full});}
-      else{bubble.innerHTML='<p style="color:var(--text-secondary);font-style:italic;margin:0">Stopped.</p>';messages.pop();}
-      setStatus('Stopped',false);
+  } catch (err) {
+    if (err.name === 'AbortError') {
+      bubble.className = 'ai-msg-bubble';
+      if (full) {
+        bubble.innerHTML = md(full, false) + '<p style="color:var(--text-secondary);font-size:0.72rem;margin-top:6px;font-style:italic;margin-bottom:0">— stopped —</p>';
+        messages.push({ role: 'assistant', content: full });
+      } else {
+        bubble.innerHTML = '<p style="color:var(--text-secondary);font-style:italic;margin:0">Stopped.</p>';
+        messages.pop();
+      }
+      setStatus('Stopped', false);
     } else {
-      bubble.className='ai-msg-bubble'; bubble.innerHTML=`<p style="color:#e85d5d;margin:0">⚠ ${VApp.esc(err.message)}</p>`;
-      messages.pop(); VApp.showToast(err.message,'error'); setStatus('Error',false);
+      bubble.className = 'ai-msg-bubble';
+      bubble.innerHTML = `<p style="color:#e85d5d;margin:0">⚠ ${VApp.esc(err.message)}</p>`;
+      messages.pop(); VApp.showToast(err.message, 'error'); setStatus('Error', false);
     }
   }
 
-  isStreaming=false; abort=null;
-  document.getElementById('ai-send').style.display='';
-  document.getElementById('ai-stop').style.display='none';
-  w.scrollTop=w.scrollHeight;
+  isStreaming = false; abort = null;
+  document.getElementById('ai-send').style.display = '';
+  document.getElementById('ai-stop').style.display = 'none';
+  w.scrollTop = w.scrollHeight;
 }
 
-syncReasonUI(); ta.focus();
+ta.focus();
 </script>
 </body>
 </html>

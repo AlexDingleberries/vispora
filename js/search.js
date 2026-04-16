@@ -1,12 +1,12 @@
-let _visps = [];
+let _games = [];
 let _filtered = [];
 let _currentCategory = 'all';
 let _currentGenre = 'all';
 let _currentQuery = '';
 
-function setVisps(visps) {
-  _visps = visps;
-  _filtered = visps;
+function setGames(games) {
+  _games = games;
+  _filtered = games;
 }
 
 function getFiltered() { return _filtered; }
@@ -27,7 +27,7 @@ function setGenre(genre) {
 }
 
 function _applyFilters() {
-  let results = _visps;
+  let results = _games;
 
   // Category filter
   if (_currentCategory !== 'all') {
@@ -75,16 +75,16 @@ function _fuzzyMatch(query, target) {
   return qi === query.length;
 }
 
-function getAllGenres(visps) {
+function getAllGenres(games) {
   const set = new Set();
-  (visps || _visps).forEach(g => {
+  (games || _games).forEach(g => {
     (g.genres || []).forEach(genre => set.add(genre));
   });
   return [...set].sort();
 }
 
 window.VSearch = {
-  setVisps,
+  setGames,
   getFiltered,
   search,
   setCategory,

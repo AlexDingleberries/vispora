@@ -19,18 +19,18 @@
 
   <nav class="breadcrumb">
     <a href="home.html">Home</a><span class="breadcrumb-sep">›</span>
-    <a href="visps.html">Visps</a><span class="breadcrumb-sep">›</span>
-    <span id="bc-visp">Loading…</span>
+    <a href="games.html">Games</a><span class="breadcrumb-sep">›</span>
+    <span id="bc-game">Loading…</span>
   </nav>
 
   <!-- ===== Accent-blended control bar ABOVE the iframe ===== -->
   <div class="game-ctrl-bar">
     <!-- Left: title + meta -->
     <div class="game-ctrl-info">
-      <h1 class="game-ctrl-title" id="visp-title">Loading…</h1>
+      <h1 class="game-ctrl-title" id="game-title">Loading…</h1>
       <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-        <span class="game-ctrl-author" id="visp-author"></span>
-        <div class="game-ctrl-tags" id="visp-tags"></div>
+        <span class="game-ctrl-author" id="game-author"></span>
+        <div class="game-ctrl-tags" id="game-tags"></div>
       </div>
     </div>
 
@@ -68,10 +68,10 @@
   <div class="player-iframe-wrap" id="iframe-wrap">
     <div class="player-error" id="player-error" style="display:none">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="40" height="40"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-      <strong>Visp failed to load</strong>
+      <strong>Game failed to load</strong>
       <p id="error-link"></p>
     </div>
-    <iframe id="visp-frame" title="Visp" allowfullscreen allow="autoplay; fullscreen; pointer-lock"
+    <iframe id="game-frame" title="Game" allowfullscreen allow="autoplay; fullscreen; pointer-lock"
       sandbox="allow-scripts allow-same-origin allow-forms allow-pointer-lock allow-popups"></iframe>
   </div>
 
@@ -79,48 +79,48 @@
 <div id="toast-container"></div>
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <script>
-document.getElementById('nav-ph').innerHTML = VApp.navHTML('visps');
+document.getElementById('nav-ph').innerHTML = VApp.navHTML('games');
 VCloak.initCloak(); VApp.initPanic(); VApp.initParticles();
 const dtEl = document.getElementById('nav-datetime'); if (dtEl) VApp.startDatetime(dtEl);
 
 const params = new URLSearchParams(location.search);
-const vispId = params.get('id');
-if (!vispId) { location.href = 'visps.html'; }
+const gameId = params.get('id');
+if (!gameId) { location.href = 'games.html'; }
 
-let visp = null;
+let game = null;
 let sessionStart = null, sessionMs = 0, sessionTimer = null;
 let estFinishTimer = null;
 let isFs = false;
 
 async function initPlayer() {
-  const visps = await VApp.loadVisps();
-  visp = visps.find(g => String(g.id) === String(vispId));
-  if (!visp) { VApp.showToast('Visp not found', 'error'); setTimeout(() => location.href = 'visps.html', 1500); return; }
+  const games = await VApp.loadGames();
+  game = games.find(g => String(g.id) === String(gameId));
+  if (!game) { VApp.showToast('Game not found', 'error'); setTimeout(() => location.href = 'games.html', 1500); return; }
 
-  document.title = `${visp.name} — vispora`;
-  document.getElementById('visp-title').textContent = visp.name;
-  document.getElementById('bc-visp').textContent = visp.name;
-  document.getElementById('visp-author').textContent = visp.author ? `by ${visp.author}` : '';
+  document.title = `${game.name} — vispora`;
+  document.getElementById('game-title').textContent = game.name;
+  document.getElementById('bc-game').textContent = game.name;
+  document.getElementById('game-author').textContent = game.author ? `by ${game.author}` : '';
 
-  const tags = [...(visp.special || []), ...(visp.genres || [])].slice(0, 4);
-  document.getElementById('visp-tags').innerHTML = tags.map(t => `<span class="tag tag-accent">${VApp.esc(t)}</span>`).join('');
+  const tags = [...(game.special || []), ...(game.genres || [])].slice(0, 4);
+  document.getElementById('game-tags').innerHTML = tags.map(t => `<span class="tag tag-accent">${VApp.esc(t)}</span>`).join('');
 
   // Total playtime
-  const totalMs = VStorage.getPlaytime(visp.id);
+  const totalMs = VStorage.getPlaytime(game.id);
   const totalEl = document.getElementById('total-time');
   totalEl.textContent = VStorage.formatTime(totalMs) || '0m';
 
   updateFavBtn();
 
-  const frame = document.getElementById('visp-frame');
+  const frame = document.getElementById('game-frame');
   const err = document.getElementById('player-error');
-  if (visp.url) {
-    frame.src = visp.url; frame.style.display = 'block';
-    frame.onload = () => { startSession(); VStorage.addToHistory(visp); };
+  if (game.url) {
+    frame.src = game.url; frame.style.display = 'block';
+    frame.onload = () => { startSession(); VStorage.addToHistory(game); };
     frame.onerror = () => {
       frame.style.display = 'none'; err.style.display = 'flex';
       document.getElementById('error-link').innerHTML =
-        `<a href="${VApp.esc(visp.url)}" target="_blank" style="color:var(--accent)">Open directly ↗</a>`;
+        `<a href="${VApp.esc(game.url)}" target="_blank" style="color:var(--accent)">Open directly ↗</a>`;
     };
   } else { frame.style.display = 'none'; err.style.display = 'flex'; }
 }
@@ -139,24 +139,24 @@ function tickSession() {
 }
 
 function saveSession() {
-  if (!visp || !sessionStart) return;
+  if (!game || !sessionStart) return;
   const e = Date.now() - sessionStart;
   sessionMs += e; sessionStart = null;
-  if (e > 2000) { VStorage.addPlaytime(visp.id, e); VStorage.addToHistory(visp); }
+  if (e > 2000) { VStorage.addPlaytime(game.id, e); VStorage.addToHistory(game); }
 }
 
 document.addEventListener('visibilitychange', () => {
   if (document.hidden) { saveSession(); clearInterval(sessionTimer); clearInterval(estFinishTimer); }
-  else if (visp) { sessionStart = Date.now(); sessionTimer = setInterval(tickSession, 1000); estFinishTimer = setInterval(tickEst, 10000); tickEst(); }
+  else if (game) { sessionStart = Date.now(); sessionTimer = setInterval(tickSession, 1000); estFinishTimer = setInterval(tickEst, 10000); tickEst(); }
 });
 window.addEventListener('beforeunload', saveSession);
 window.addEventListener('pagehide', saveSession);
 
 // ---- Favorite ----
 function updateFavBtn() {
-  if (!visp) return;
+  if (!game) return;
   const btn = document.getElementById('btn-fav');
-  const isFav = VStorage.isFavorite(visp.id);
+  const isFav = VStorage.isFavorite(game.id);
   btn.style.color = isFav ? 'var(--accent)' : '';
   btn.title = isFav ? 'Remove from favorites' : 'Add to favorites';
   btn.innerHTML = isFav
@@ -164,20 +164,20 @@ function updateFavBtn() {
     : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
 }
 document.getElementById('btn-fav').onclick = () => {
-  if (!visp) return;
-  const a = VStorage.toggleFavorite(visp.id); updateFavBtn();
+  if (!game) return;
+  const a = VStorage.toggleFavorite(game.id); updateFavBtn();
   VApp.showToast(a ? 'Added to favorites' : 'Removed from favorites');
 };
 
 // ---- Reload ----
 document.getElementById('btn-reload').onclick = () => {
-  const f = document.getElementById('visp-frame'); f.src = f.src; VApp.showToast('Reloaded');
+  const f = document.getElementById('game-frame'); f.src = f.src; VApp.showToast('Reloaded');
 };
 
 // ---- Back ----
 document.getElementById('back-btn').onclick = () => {
   saveSession(); clearInterval(sessionTimer); clearInterval(estFinishTimer);
-  window.location.href = 'visps.html';
+  window.location.href = 'games.html';
 };
 
 // ---- Fullscreen ----
@@ -187,7 +187,7 @@ const fsIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strok
 const fsExitIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v3a2 2 0 0 1-2 2H3"/><path d="M21 8h-3a2 2 0 0 1-2-2V3"/><path d="M3 16h3a2 2 0 0 1 2 2v3"/><path d="M16 21v-3a2 2 0 0 1 2-2h3"/></svg>`;
 
 btnFs.onclick = () => {
-  isFs = !isFs; wrap.classList.toggle('fullscreen-mode', isFs); document.getElementById("visp-frame").focus(); btnFs.innerHTML = isFs ? fsExitIcon : fsIcon;
+  isFs = !isFs; wrap.classList.toggle('fullscreen-mode', isFs); document.getElementById("game-frame").focus(); btnFs.innerHTML = isFs ? fsExitIcon : fsIcon;
   if (isFs) wrap.requestFullscreen?.().catch(() => {});
   else if (document.fullscreenElement) document.exitFullscreen?.();
 };

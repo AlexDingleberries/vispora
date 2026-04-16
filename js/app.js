@@ -51,41 +51,41 @@ function showModal({title,message,confirmText='Confirm',cancelText='Cancel',dang
 
 function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 
-function makeCard(visp,opts={}){
+function makeCard(game,opts={}){
   const{showRemove=false,linkToPlayer=true}=opts;
-  const pt=VStorage.getPlaytime(visp.id);
+  const pt=VStorage.getPlaytime(game.id);
   const timeStr=VStorage.formatTime(pt);
-  const isFav=VStorage.isFavorite(visp.id);
+  const isFav=VStorage.isFavorite(game.id);
   const tag=linkToPlayer?'a':'div';
-  const href=linkToPlayer?`player.html?id=${visp.id}`:'#';
+  const href=linkToPlayer?`player.html?id=${game.id}`:'#';
   return`<${tag} ${linkToPlayer?`href="${href}"`:''}
-    class="visp-card" data-id="${visp.id}" tabindex="0"
-    aria-label="${esc(visp.name)}" role="${linkToPlayer?'link':'article'}">
-    <img class="visp-card-img" src="${esc(visp.cover||'')}" alt="${esc(visp.name)}"
+    class="game-card" data-id="${game.id}" tabindex="0"
+    aria-label="${esc(game.name)}" role="${linkToPlayer?'link':'article'}">
+    <img class="game-card-img" src="${esc(game.cover||'')}" alt="${esc(game.name)}"
       loading="lazy" decoding="async"
       onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-    <div class="visp-card-placeholder" style="display:none;position:absolute;inset:0">🎮</div>
-    <div class="visp-card-overlay">
-      <div class="visp-card-title"><span class="title-text">${esc(visp.name)}</span></div>
-      ${timeStr?`<div class="visp-card-playtime">${IC.clock} ${timeStr}</div>`:''}
+    <div class="game-card-placeholder" style="display:none;position:absolute;inset:0">🎮</div>
+    <div class="game-card-overlay">
+      <div class="game-card-title"><span class="title-text">${esc(game.name)}</span></div>
+      ${timeStr?`<div class="game-card-playtime">${IC.clock} ${timeStr}</div>`:''}
     </div>
-    <button class="visp-card-star${isFav?' favorited':''}" data-id="${visp.id}"
-      aria-label="${isFav?'Unfavorite':'Favorite'} ${esc(visp.name)}" type="button">
+    <button class="game-card-star${isFav?' favorited':''}" data-id="${game.id}"
+      aria-label="${isFav?'Unfavorite':'Favorite'} ${esc(game.name)}" type="button">
       ${isFav?IC.starFilled:IC.star}
     </button>
-    ${showRemove?`<button class="visp-card-remove" data-id="${visp.id}" aria-label="Remove from history" type="button">${IC.x}</button>`:''}
+    ${showRemove?`<button class="game-card-remove" data-id="${game.id}" aria-label="Remove from history" type="button">${IC.x}</button>`:''}
   </${tag}>`;
 }
 
 function initStars(container){
   container.addEventListener('click',e=>{
-    const btn=e.target.closest('.visp-card-star');
+    const btn=e.target.closest('.game-card-star');
     if(!btn)return;e.preventDefault();e.stopPropagation();
     const id=Number(btn.dataset.id);
     const added=VStorage.toggleFavorite(id);
     btn.classList.toggle('favorited',added);
     btn.innerHTML=added?IC.starFilled:IC.star;
-    btn.setAttribute('aria-label',`${added?'Unfavorite':'Favorite'} visp`);
+    btn.setAttribute('aria-label',`${added?'Unfavorite':'Favorite'} game`);
     showToast(added?'Added to favorites':'Removed from favorites');
   });
 }
@@ -99,16 +99,16 @@ function startDatetime(el){
   }up();return setInterval(up,1000);
 }
 
-async function loadVisps(){
+async function loadGames(){
    return new Promise((resolve, reject) => {
     window.receiveGames = (data) => {
       document.body.removeChild(script);
       delete window.receiveGames;
-      resolve(Array.isArray(data) ? data : (data.visps || data));
+      resolve(Array.isArray(data) ? data : (data.games || data));
     };
     const script = document.createElement('script');
-    script.src = 'data/visps.js';
-        script.onerror = () => reject(new Error("Failed to load visps data."));
+    script.src = 'data/games.js';
+        script.onerror = () => reject(new Error("Failed to load games data."));
         document.body.appendChild(script);
   });
 }
@@ -119,8 +119,8 @@ function navHTML(active){
     <ul class="nav-links">
       <li><a href="home.html" ${active==='home'?'class="active"':''}>
         <span class="nav-icon">${IC.home}</span><span>Home</span></a></li>
-      <li><a href="visps.html" ${active==='visps'?'class="active"':''}>
-        <span class="nav-icon">${IC.grid}</span><span>Visps</span></a></li>
+      <li><a href="games.html" ${active==='games'?'class="active"':''}>
+        <span class="nav-icon">${IC.grid}</span><span>Games</span></a></li>
       <li><a href="movies.html" ${active==='movies'?'class="active"':''}>
         <span class="nav-icon">${IC.film}</span><span>Movies</span></a></li>
       <li><a href="tv.html" ${active==='tv'?'class="active"':''}>
@@ -141,8 +141,8 @@ function initPanic(){
   document.querySelectorAll('#nav-panic,.btn-panic').forEach(btn=>{
     btn.addEventListener('click',()=>{
       const m=VStorage.getCloakMode(),cu=VStorage.getCloakUrl();
-      if(m==='google')window.location.replace(VCloak.CLOAK_TARGETS.google.url);
-      else if(m==='custom'&&cu)window.location.replace(cu);
+      if(m==='google')window.top.location.replace(VCloak.CLOAK_TARGETS.google.url);
+      else if(m==='custom'&&cu)window.top.location.replace(cu);
       else{VCloak.cloakTab('google');showToast('Tab cloaked');}
     });
   });
@@ -176,4 +176,4 @@ function reloadParticles(){
   initParticles();
 }
 
-window.VApp={IC,esc,showToast,showModal,makeCard,initStars,startDatetime,loadVisps,navHTML,initPanic,initParticles,reloadParticles};
+window.VApp={IC,esc,showToast,showModal,makeCard,initStars,startDatetime,loadGames,navHTML,initPanic,initParticles,reloadParticles};
