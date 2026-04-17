@@ -2,7 +2,7 @@
 <html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Home — Gameora</title>
+<title>Home — vispora</title>
 <link rel="stylesheet" href="css/global.css">
 <link rel="stylesheet" href="css/components.css">
 <link rel="stylesheet" href="css/pages.css">
@@ -11,56 +11,133 @@
 <script src="js/cloak.js"></script>
 <script src="js/app.js"></script>
 <script src="js/media.js"></script>
+<style>
+/* ── 2-cell featured grid ── */
+.featured-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  min-height: 320px;
+}
+@media (max-width: 700px) { .featured-grid-2 { grid-template-columns: 1fr; } }
+
+.featured-cell-hero {
+  position: relative; border-radius: var(--radius-xl); overflow: hidden;
+  background: var(--bg3); border: 1px solid var(--card-border);
+  min-height: 280px; cursor: pointer;
+}
+.featured-cell-media {
+  position: relative; border-radius: var(--radius-xl); overflow: hidden;
+  background: var(--bg3); border: 1px solid var(--card-border);
+  min-height: 280px; cursor: pointer;
+  display: flex; flex-direction: column;
+}
+
+/* Hero (game) card style */
+.feat-bg {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: center; opacity: 0.65;
+  transition: opacity 0.3s, transform 0.5s;
+}
+.featured-cell-hero:hover .feat-bg { opacity: 0.8; transform: scale(1.03); }
+.featured-cell-media:hover .feat-bg { opacity: 0.8; transform: scale(1.03); }
+.feat-gradient {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.3) 55%, transparent 100%);
+}
+.feat-content {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 20px 22px; z-index: 2;
+}
+.feat-badge {
+  font-size: 0.67rem; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase;
+  color: var(--accent); background: rgba(var(--accent-rgb),0.15);
+  border: 1px solid rgba(var(--accent-rgb),0.3);
+  padding: 3px 9px; border-radius: 99px; display: inline-flex; align-items: center;
+  gap: 5px; margin-bottom: 7px;
+}
+.feat-title { font-size: 1.25rem; font-weight: 800; color: #fff; line-height: 1.25; margin-bottom: 3px; }
+.feat-sub { font-size: 0.78rem; color: rgba(255,255,255,0.65); margin-bottom: 10px; }
+.feat-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--accent); color: var(--text-inv);
+  padding: 7px 16px; border-radius: var(--radius-sm);
+  font-size: 0.78rem; font-weight: 800; letter-spacing: 0.02em;
+  box-shadow: 0 4px 16px rgba(var(--accent-rgb),0.35);
+}
+.featured-cell-hero:hover .feat-btn, .featured-cell-media:hover .feat-btn {
+  box-shadow: 0 6px 24px rgba(var(--accent-rgb),0.5);
+}
+
+/* Media panel tabs */
+.feat-media-tabs {
+  position: absolute; top: 12px; right: 12px; z-index: 5;
+  display: flex; gap: 4px;
+}
+.feat-media-tab {
+  padding: 4px 10px; border-radius: 99px; font-size: 0.65rem; font-weight: 700;
+  border: 1px solid rgba(255,255,255,0.25); background: rgba(0,0,0,0.5);
+  color: rgba(255,255,255,0.75); cursor: pointer; transition: all 0.15s; backdrop-filter: blur(4px);
+}
+.feat-media-tab.active { background: var(--accent); color: var(--text-inv); border-color: var(--accent); }
+.feat-media-tab:hover:not(.active) { background: rgba(255,255,255,0.15); }
+
+/* Progress bar on home media cards */
+.media-card-progress-bar {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 3px; background: rgba(255,255,255,0.12);
+}
+.media-card-progress-fill {
+  height: 100%; background: var(--accent); border-radius: 0 0 0 0;
+}
+
+/* Skeleton cell */
+.skeleton-cell { background: var(--bg3); border-radius: var(--radius-xl); animation: shimmer 1.5s infinite; }
+</style>
 </head>
 <body>
 <div id="particles-js"></div>
 <div id="nav-ph"></div>
 <main class="home-page page-enter container">
-  <h1 class="home-title"><span class="char">v</span><span class="char">i</span><span class="char">s</span><span class="char">p</span><span class="char">o</span><span class="char">r</span><span class="char">a</span></h1>
+  <h1 class="home-title">
+    <span class="char">v</span><span class="char">i</span><span class="char">s</span><span class="char">p</span><span class="char">o</span><span class="char">r</span><span class="char">a</span>
+  </h1>
   <div class="home-grid">
 
-    <!-- Hero + Featured Movie -->
-    <div class="home-hero-section">
-      <a id="hero-card" class="hero-card skeleton" style="min-height:200px;max-width:800px;flex-shrink:0" href="#"></a>
-      <div id="featured-movie-panel" style="flex:1;min-width:0;display:flex;flex-direction:column;gap:0;border-radius:14px;overflow:hidden;position:relative;min-height:220px;background:var(--surface-2)">
-        <div class="skeleton" style="position:absolute;inset:0;border-radius:14px"></div>
-        <div style="position:relative;z-index:1;padding:0" id="featured-movie-inner"></div>
-      </div>
-    </div>
-
-    <!-- Browse quick-access -->
+    <!-- ===== Featured 2-cell Grid ===== -->
     <section>
       <div class="section-header">
-        <h2 class="section-title">Browse</h2>
+        <h2 class="section-title">Featured</h2>
       </div>
+      <div class="featured-grid-2">
+        <div class="featured-cell-hero skeleton-cell" id="feat-game"></div>
+        <div class="featured-cell-media skeleton-cell" id="feat-media"></div>
+      </div>
+    </section>
+
+    <!-- Browse -->
+    <section>
+      <div class="section-header"><h2 class="section-title">Browse</h2></div>
       <div class="browse-grid">
         <a href="games.html" class="browse-card browse-card-sq">
-          <div class="browse-card-icon-wrap">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
-          </div>
-          <div class="browse-card-label">Games</div>
-          <div class="browse-card-sub">Browser games</div>
+          <div class="browse-card-icon-wrap"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg></div>
+          <div class="browse-card-label">Games</div><div class="browse-card-sub">Browser games</div>
         </a>
         <a href="movies.html" class="browse-card browse-card-sq">
-          <div class="browse-card-icon-wrap">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/><line x1="17" y1="17" x2="22" y2="17"/></svg>
-          </div>
-          <div class="browse-card-label">Movies</div>
-          <div class="browse-card-sub">Stream films</div>
+          <div class="browse-card-icon-wrap"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/><line x1="17" y1="17" x2="22" y2="17"/></svg></div>
+          <div class="browse-card-label">Movies</div><div class="browse-card-sub">Stream films</div>
         </a>
         <a href="tv.html" class="browse-card browse-card-sq">
-          <div class="browse-card-icon-wrap">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
-          </div>
-          <div class="browse-card-label">TV Shows</div>
-          <div class="browse-card-sub">Watch series</div>
+          <div class="browse-card-icon-wrap"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/></svg></div>
+          <div class="browse-card-label">TV Shows</div><div class="browse-card-sub">Watch series</div>
+        </a>
+        <a href="anime.html" class="browse-card browse-card-sq">
+          <div class="browse-card-icon-wrap"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7c4-1.5 14-1.5 18 0"/><path d="M5 10h14"/><path d="M7 10v11"/><path d="M17 10v11"/><path d="M3 5.5l1 .5M20 6l1-.5"/></svg></div>
+          <div class="browse-card-label">Anime</div><div class="browse-card-sub">Watch anime</div>
         </a>
         <a href="ai.html" class="browse-card browse-card-sq">
-          <div class="browse-card-icon-wrap">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg>
-          </div>
-          <div class="browse-card-label">AI Chat</div>
-          <div class="browse-card-sub">Ask anything</div>
+          <div class="browse-card-icon-wrap"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg></div>
+          <div class="browse-card-label">AI Chat</div><div class="browse-card-sub">Ask anything</div>
         </a>
       </div>
     </section>
@@ -77,7 +154,7 @@
     <!-- Popular Movies -->
     <section>
       <div class="section-header">
-        <h2 class="section-title">Popular Movies</h2>
+        <h2 class="section-title">Top Playing Movies</h2>
         <a href="movies.html" class="section-viewall">View All</a>
       </div>
       <div id="movies-wrap">
@@ -90,13 +167,29 @@
       </div>
     </section>
 
-    <!-- Popular TV -->
+    <!-- Currently Airing TV -->
     <section>
       <div class="section-header">
-        <h2 class="section-title">Popular TV Shows</h2>
+        <h2 class="section-title">Top Airing TV Shows</h2>
         <a href="tv.html" class="section-viewall">View All</a>
       </div>
       <div id="tv-wrap">
+        <div class="media-row">
+          <div class="skeleton media-card-skeleton" style="flex:0 0 140px"></div>
+          <div class="skeleton media-card-skeleton" style="flex:0 0 140px"></div>
+          <div class="skeleton media-card-skeleton" style="flex:0 0 140px"></div>
+          <div class="skeleton media-card-skeleton" style="flex:0 0 140px"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Currently Airing Anime -->
+    <section>
+      <div class="section-header">
+        <h2 class="section-title">Top Airing Anime</h2>
+        <a href="anime.html" class="section-viewall">View All</a>
+      </div>
+      <div id="anime-wrap">
         <div class="media-row">
           <div class="skeleton media-card-skeleton" style="flex:0 0 140px"></div>
           <div class="skeleton media-card-skeleton" style="flex:0 0 140px"></div>
@@ -128,7 +221,7 @@
       </div>
     </section>
 
-    <!-- Recently Watched (Media)-->
+    <!-- Recently Watched (Media) -->
     <section>
       <div class="section-header">
         <h2 class="section-title">Recently Watched</h2>
@@ -138,7 +231,7 @@
         <div class="empty-state">
           <div class="empty-state-icon">🍿</div>
           <div class="empty-state-title">No media watched yet!</div>
-          <p>Browse <a href="movies.html" style="color:var(--accent)">Movies</a> or <a href="tv.html" style="color:var(--accent)">TV Shows</a> to get started</p>
+          <p>Browse <a href="movies.html" style="color:var(--accent)">Movies</a>, <a href="tv.html" style="color:var(--accent)">TV</a>, or <a href="anime.html" style="color:var(--accent)">Anime</a></p>
         </div>
       </div>
     </section>
@@ -153,7 +246,7 @@
         <div class="empty-state">
           <div class="empty-state-icon">❤️</div>
           <div class="empty-state-title">No media saved yet!</div>
-          <p>Star a movie or show to save it here</p>
+          <p>Star a movie, show, or anime to save it here</p>
         </div>
       </div>
     </section>
@@ -162,7 +255,6 @@
 </main>
 <div id="toast-container"></div>
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-<script src="https://js.puter.com/v2/"></script>
 <script>
 document.getElementById('nav-ph').innerHTML = VApp.navHTML('home');
 VCloak.initCloak(); VApp.initPanic(); VApp.initParticles();
@@ -170,74 +262,211 @@ const dtEl = document.getElementById('nav-datetime'); if (dtEl) VApp.startDateti
 
 let allGames = [];
 
+/* ================================================================
+   postMessage — receive progress from embedded player iframes
+   ================================================================ */
+window.addEventListener('message', function(event) {
+  let data = null;
+  try { data = typeof event.data === 'string' ? JSON.parse(event.data) : event.data; } catch { return; }
+  if (!data) return;
+  const ct  = data.currentTime ?? data.current_time ?? null;
+  const dur = data.duration ?? null;
+  if (ct !== null && dur && dur > 0) {
+    /* Store progress for currently open media — use data-active-media attributes if set */
+    const activeId   = document.body.dataset.activeMediaId;
+    const activeType = document.body.dataset.activeMediaType;
+    if (activeId && activeType) VStorage.setMediaProgress(activeId, activeType, ct, dur);
+  }
+});
+
+/* ================================================================
+   Reactive section refresh
+   ================================================================ */
+document.addEventListener('vispora:game-favs-changed', () => renderFavs());
+document.addEventListener('vispora:media-favs-changed', () => renderMediaFavs());
+document.addEventListener('vispora:media-hist-changed', () => renderMediaHistory());
+document.addEventListener('vispora:game-history-changed', () => renderRecent());
+
 async function init() {
-  allGames = await VApp.loadGames();
-  renderHero();
-  renderRecent();
+  allGames = await VApp.loadGames().catch(() => []);
+  renderFeaturedGame();
+  renderFeaturedMedia();
   renderDay();
+  renderRecent();
   renderFavs();
-  renderFeaturedMovie();
   renderPopularMovies();
-  renderPopularTV();
+  renderAiringTV();
+  renderAiringAnime();
   renderMediaHistory();
   renderMediaFavs();
 }
 
-function renderHero() {
+/* ================================================================
+   Featured helpers
+   ================================================================ */
+function featCellGame(imgSrc, href, badge, title, sub) {
+  const el = document.getElementById('feat-game');
+  el.classList.remove('skeleton-cell');
+  el.innerHTML = `<a href="${VApp.esc(href)}" style="position:absolute;inset:0;display:block;text-decoration:none">
+    <img class="feat-bg" src="${VApp.esc(imgSrc)}" alt="${VApp.esc(title)}" onerror="this.style.display='none'">
+    <div class="feat-gradient"></div>
+    <div class="feat-content">
+      <div class="feat-badge">${badge}</div>
+      <div class="feat-title">${VApp.esc(title)}</div>
+      ${sub ? `<div class="feat-sub">${VApp.esc(sub)}</div>` : ''}
+      <div class="feat-btn">▶ Play Now</div>
+    </div>
+  </a>`;
+}
+
+/* Featured Media cell — cycles through movie/TV/anime tabs */
+let _featMediaItems = []; // [{type, href, bg, badge, title, sub, btnLabel}]
+let _featMediaIdx = 0;
+let _featMediaTimer = null;
+
+function featCellMedia(items) {
+  if (!items.length) return;
+  _featMediaItems = items; _featMediaIdx = 0;
+  const el = document.getElementById('feat-media');
+  el.classList.remove('skeleton-cell');
+  renderFeatMediaSlide(el);
+  /* Auto-rotate every 6s */
+  clearInterval(_featMediaTimer);
+  _featMediaTimer = setInterval(() => {
+    _featMediaIdx = (_featMediaIdx + 1) % _featMediaItems.length;
+    renderFeatMediaSlide(el);
+  }, 6000);
+}
+
+function renderFeatMediaSlide(el) {
+  const item = _featMediaItems[_featMediaIdx];
+  if (!item) return;
+  const icons = ['🎬','📺','🎌'];
+  const types = ['movie','tv','anime'];
+  const tabsHtml = _featMediaItems.map((it, i) => {
+    const icon = icons[types.indexOf(it.type)] || '▶';
+    return `<button class="feat-media-tab${i===_featMediaIdx?' active':''}" data-idx="${i}" type="button">${icon} ${it.type.charAt(0).toUpperCase()+it.type.slice(1)}</button>`;
+  }).join('');
+
+  el.innerHTML = `
+    <div class="feat-media-tabs">${tabsHtml}</div>
+    <a href="${VApp.esc(item.href)}" style="position:absolute;inset:0;display:block;text-decoration:none">
+      <img class="feat-bg" src="${VApp.esc(item.bg)}" alt="${VApp.esc(item.title)}" onerror="this.style.display='none'">
+      <div class="feat-gradient"></div>
+      <div class="feat-content">
+        <div class="feat-badge">${item.badge}</div>
+        <div class="feat-title">${VApp.esc(item.title)}</div>
+        ${item.sub ? `<div class="feat-sub">${VApp.esc(item.sub)}</div>` : ''}
+        <div class="feat-btn">▶ ${VApp.esc(item.btnLabel)}</div>
+      </div>
+    </a>`;
+
+  /* Tab click handlers */
+  el.querySelectorAll('.feat-media-tab').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault(); e.stopPropagation();
+      _featMediaIdx = parseInt(btn.dataset.idx);
+      clearInterval(_featMediaTimer);
+      _featMediaTimer = setInterval(() => {
+        _featMediaIdx = (_featMediaIdx + 1) % _featMediaItems.length;
+        renderFeatMediaSlide(el);
+      }, 6000);
+      renderFeatMediaSlide(el);
+    });
+  });
+}
+
+/* ================================================================
+   Render Featured sections
+   ================================================================ */
+function renderFeaturedGame() {
   if (!allGames.length) return;
   const featured = allGames.filter(g => g.featured);
   const pool = featured.length ? featured : allGames.slice(0, 50);
   const g = pool[Math.floor(Math.random() * pool.length)];
-  const card = document.getElementById('hero-card');
-  card.classList.remove('skeleton');
-  card.href = `player.html?id=${g.id}`;
-  card.innerHTML = `
-    ${g.cover ? `<img src="${VApp.esc(g.cover)}" alt="${VApp.esc(g.name)}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">` : ''}
-    <div class="hero-card-content">
-      <div class="hero-badge">Featured</div>
-      <div class="hero-title">${VApp.esc(g.name)}</div>
-      <div class="hero-author">by ${VApp.esc(g.author || 'Unknown')}</div>
-      <span class="btn btn-primary" style="display:inline-flex;width:fit-content">${VApp.IC.play} Play Now</span>
-    </div>`;
-  card.style.cssText += ';position:relative;overflow:hidden;aspect-ratio:16/9;';
+  featCellGame(g.cover || '', `player.html?id=${g.id}`,
+    '🎮 Featured Game', g.name, g.author ? `by ${g.author}` : '');
 }
 
-async function renderFeaturedMovie() {
-  const panel = document.getElementById('featured-movie-panel');
+async function renderFeaturedMedia() {
+  const items = [];
   try {
-    const data = await VMedia.tmdbFetch('/movie/now_playing', { page: 1 });
-    const movies = (data.results || []).filter(m => m.backdrop_path || m.poster_path);
-    if (!movies.length) { panel.innerHTML = ''; return; }
-    const top = movies.slice(0, 20).sort((a, b) => b.vote_average - a.vote_average);
-    const m = top[Math.floor(Math.random() * Math.min(5, top.length))];
-    const bg = m.backdrop_path
-      ? `https://image.tmdb.org/t/p/w780${m.backdrop_path}`
-      : `https://image.tmdb.org/t/p/w500${m.poster_path}`;
-    const year = m.release_date ? m.release_date.slice(0, 4) : '';
-    const rating = m.vote_average ? `★ ${m.vote_average.toFixed(1)}` : '';
-    // Remove skeleton, give panel the same hero-card structure as the game card
-    panel.style.cssText = 'flex:1;min-width:0;border-radius:var(--radius-xl);overflow:hidden;position:relative;min-height:220px;';
-    panel.innerHTML = `
-      <a href="movies.html?id=${m.id}" class="hero-card" style="max-height:none;min-height:220px;height:100%">
-        <img src="${VApp.esc(bg)}" alt="${VApp.esc(m.title||'')}" style="min-height:220px">
-        <div class="hero-card-content">
-          <div class="hero-badge">🎬 Now Playing${rating ? ' · ' + rating : ''}</div>
-          <div class="hero-title">${VApp.esc(m.title||'')}</div>
-          ${year ? `<div class="hero-author">${VApp.esc(year)}</div>` : ''}
-          <span class="btn btn-primary" style="display:inline-flex;width:fit-content;margin-top:2px">${VApp.IC.play} Watch Now</span>
-        </div>
-      </a>`;
-  } catch(e) { console.error(e); panel.innerHTML = ''; }
+    const data = await VMedia.tmdbFetch('/movie/now_playing', { page:1 });
+    const movies = (data.results || []).filter(m => m.backdrop_path);
+    if (movies.length) {
+      const top = movies.slice(0,10).sort((a,b) => b.vote_average - a.vote_average);
+      const m = top[Math.floor(Math.random() * Math.min(5, top.length))];
+      const rating = m.vote_average ? `★ ${m.vote_average.toFixed(1)}` : '';
+      items.push({
+        type:'movie', href:`media.html?type=movie&id=${m.id}`,
+        bg:`https://image.tmdb.org/t/p/w780${m.backdrop_path}`,
+        badge:`🎬 Now Playing${rating?' · '+rating:''}`,
+        title: m.title||'', sub: (m.release_date||'').slice(0,4), btnLabel:'Watch Now'
+      });
+    }
+  } catch {}
+  try {
+    const data = await VMedia.tmdbFetch('/tv/on_the_air', { page:1 });
+    const shows = (data.results||[]).filter(s => s.backdrop_path);
+    if (shows.length) {
+      const s = shows[Math.floor(Math.random() * Math.min(8, shows.length))];
+      const rating = s.vote_average ? `★ ${s.vote_average.toFixed(1)}` : '';
+      items.push({
+        type:'tv', href:`media.html?type=tv&id=${s.id}`,
+        bg:`https://image.tmdb.org/t/p/w780${s.backdrop_path}`,
+        badge:`📺 Now Airing${rating?' · '+rating:''}`,
+        title: s.name||'', sub:'', btnLabel:'Watch Now'
+      });
+    }
+  } catch {}
+  try {
+    const page = await VMedia.getAiringAnime(1);
+    const list = (page.media||[]).filter(a => a.bannerImage || a.coverImage?.extraLarge);
+    if (list.length) {
+      const a = list[Math.floor(Math.random() * Math.min(8, list.length))];
+      const bg = a.bannerImage || a.coverImage?.extraLarge || '';
+      const title = VMedia.animeTitle(a);
+      const score = a.averageScore ? `★ ${(a.averageScore/10).toFixed(1)}` : '';
+      items.push({
+        type:'anime', href:`media.html?type=anime&id=${a.id}`,
+        bg, badge:`🎌 Airing Anime${score?' · '+score:''}`,
+        title, sub:'', btnLabel:'Watch Now'
+      });
+    }
+  } catch {}
+
+  if (items.length) {
+    featCellMedia(items);
+  } else {
+    document.getElementById('feat-media').classList.remove('skeleton-cell');
+  }
+}
+
+/* ================================================================
+   Section renderers
+   ================================================================ */
+function renderDay() {
+  const wrap = document.getElementById('day-wrap');
+  if (!allGames.length) return;
+  const seed = new Date().getDate();
+  const shuffled = [...allGames].sort((a,b) => (((a.id*(seed+1)*1103)%997)-((b.id*(seed+1)*1103)%997)));
+  const row = document.createElement('div'); row.className = 'games-row';
+  row.innerHTML = shuffled.slice(1,12).map(g => VApp.makeCard(g)).join('');
+  wrap.innerHTML = ''; wrap.appendChild(row);
+  VApp.initStars(row);
 }
 
 function renderRecent() {
   const hist = VStorage.getHistory();
   const wrap = document.getElementById('recent-wrap');
   const va = document.getElementById('recent-va');
-  if (!hist.length) return;
+  if (!hist.length) {
+    wrap.innerHTML = `<div class="empty-state"><div class="empty-state-icon">🎮</div><div class="empty-state-title">Nothing played yet</div><p>Head to the <a href="games.html" style="color:var(--accent)">Games Library</a> to start!</p></div>`;
+    va.style.display = 'none'; return;
+  }
   va.style.display = hist.length > 8 ? '' : 'none';
   const row = document.createElement('div'); row.className = 'games-row';
-  row.innerHTML = hist.slice(0, 8).map(h => VApp.makeCard(h, { showRemove: true })).join('');
+  row.innerHTML = hist.slice(0,8).map(h => VApp.makeCard(h, { showRemove:true })).join('');
   wrap.innerHTML = ''; wrap.appendChild(row);
   VApp.initStars(row);
   row.addEventListener('click', async e => {
@@ -246,12 +475,12 @@ function renderRecent() {
     const id = Number(rb.dataset.id);
     const pt = VStorage.getPlaytime(id);
     const ptStr = VStorage.formatTime(pt);
-    const ok = await new Promise(resolve => {
+    const result = await new Promise(resolve => {
       const o = document.createElement('div'); o.className = 'modal-overlay'; o.style.zIndex = '30000';
       o.innerHTML = `<div class="modal" role="dialog" aria-modal="true">
         <h3>Remove from History</h3>
         <p>Remove this game from your recently played list?</p>
-        ${ptStr ? `<label style="display:flex;align-items:center;gap:8px;margin-top:8px;font-size:0.85rem;color:var(--text-2);cursor:pointer">
+        ${ptStr ? `<label style="display:flex;align-items:center;gap:8px;margin-top:8px;font-size:0.85rem;color:var(--text-secondary);cursor:pointer">
           <input type="checkbox" id="reset-pt-chk" style="accent-color:var(--accent)">
           Also reset playtime <span style="color:var(--accent);font-weight:600">(${ptStr})</span>
         </label>` : ''}
@@ -267,60 +496,54 @@ function renderRecent() {
       o.onclick = e => { if (e.target === o) { o.remove(); resolve(null); } };
       document.body.appendChild(o); o.querySelector('.modal-confirm').focus();
     });
-    if (ok !== null) {
+    if (result !== null) {
       VStorage.removeFromHistory(id);
-      if (ok) VStorage.resetPlaytime(id);
-      rb.closest('.game-card').remove();
-      VApp.showToast(ok ? 'Removed from history & playtime reset' : 'Removed from history');
+      if (result) VStorage.resetPlaytime(id);
+      VApp.showToast(result ? 'Removed & playtime reset' : 'Removed from history');
+      renderRecent();
     }
   });
-  va.addEventListener('click', e => { e.preventDefault(); showGameViewAll('Recent Games', hist); });
-}
-
-function renderDay() {
-  const wrap = document.getElementById('day-wrap');
-  if (!allGames.length) return;
-  const seed = new Date().getDate();
-  const shuffled = [...allGames].sort((a, b) => (((a.id * (seed + 1) * 1103) % 997) - ((b.id * (seed + 1) * 1103) % 997)));
-  const row = document.createElement('div'); row.className = 'games-row';
-  row.innerHTML = shuffled.slice(1, 12).map(g => VApp.makeCard(g)).join('');
-  wrap.innerHTML = ''; wrap.appendChild(row);
-  VApp.initStars(row);
+  va.onclick = e => { e.preventDefault(); showGameViewAll('Recent Games', hist); };
 }
 
 function renderFavs() {
   const ids = VStorage.getFavorites();
   const wrap = document.getElementById('fav-wrap');
   const va = document.getElementById('fav-va');
-  if (!ids.length) return;
+  if (!ids.length) {
+    wrap.innerHTML = `<div class="empty-state"><div class="empty-state-icon">⭐</div><div class="empty-state-title">No favorites yet</div><p>Star a game to see it here</p></div>`;
+    va.style.display = 'none'; return;
+  }
   const games = ids.map(id => allGames.find(g => g.id === id)).filter(Boolean);
   if (!games.length) return;
   va.style.display = '';
   const row = document.createElement('div'); row.className = 'games-row';
-  row.innerHTML = games.slice(0, 8).map(g => VApp.makeCard(g)).join('');
+  row.innerHTML = games.slice(0,8).map(g => VApp.makeCard(g)).join('');
   wrap.innerHTML = ''; wrap.appendChild(row);
   VApp.initStars(row);
-  va.addEventListener('click', e => { e.preventDefault(); showGameViewAll('Game Favorites', games); });
+  /* When star is clicked in main view, re-render favs */
+  row.addEventListener('vispora:game-favs-changed', renderFavs);
+  va.onclick = e => { e.preventDefault(); showGameViewAll('Game Favorites', games); };
 }
 
 async function renderPopularMovies() {
   const wrap = document.getElementById('movies-wrap');
   try {
-    const data = await VMedia.tmdbFetch('/movie/popular', { page: 1 });
-    const movies = (data.results || []).filter(m => m.poster_path).slice(0, 14);
+    const data = await VMedia.tmdbFetch('/movie/popular', { page:1 });
+    const movies = (data.results||[]).filter(m => m.poster_path).slice(0,14);
     if (!movies.length) { wrap.innerHTML = ''; return; }
     const row = document.createElement('div'); row.className = 'media-row';
-    row.innerHTML = movies.map(m => VMedia.makeMovieCard(m)).join('');
+    row.innerHTML = movies.map(m => makeMovieCardWithProgress(m)).join('');
     wrap.innerHTML = ''; wrap.appendChild(row);
     VMedia.initMediaStars(row);
   } catch (e) { console.error(e); wrap.innerHTML = ''; }
 }
 
-async function renderPopularTV() {
+async function renderAiringTV() {
   const wrap = document.getElementById('tv-wrap');
   try {
-    const data = await VMedia.tmdbFetch('/tv/popular', { page: 1 });
-    const shows = (data.results || []).filter(s => s.poster_path).slice(0, 14);
+    const data = await VMedia.tmdbFetch('/tv/on_the_air', { page:1 });
+    const shows = (data.results||[]).filter(s => s.poster_path).slice(0,14);
     if (!shows.length) { wrap.innerHTML = ''; return; }
     const row = document.createElement('div'); row.className = 'media-row';
     row.innerHTML = shows.map(s => VMedia.makeTVCard(s)).join('');
@@ -329,48 +552,110 @@ async function renderPopularTV() {
   } catch (e) { console.error(e); wrap.innerHTML = ''; }
 }
 
+async function renderAiringAnime() {
+  const wrap = document.getElementById('anime-wrap');
+  try {
+    const page = await VMedia.getAiringAnime(1);
+    const animes = (page.media||[]).filter(a => a.coverImage?.large).slice(0,14);
+    if (!animes.length) { wrap.innerHTML = ''; return; }
+    const row = document.createElement('div'); row.className = 'media-row';
+    row.innerHTML = animes.map(a => VMedia.makeAnimeCard(a)).join('');
+    wrap.innerHTML = ''; wrap.appendChild(row);
+    VMedia.initMediaStars(row);
+  } catch (e) { console.error(e); wrap.innerHTML = ''; }
+}
+
+/* Movie card with progress overlay */
+function makeMovieCardWithProgress(movie) {
+  const base = VMedia.makeMovieCard(movie);
+  const prog = VStorage.getMediaProgress(movie.id, 'movie');
+  if (!prog || !prog.percent) return base;
+  /* Inject progress bar before closing </a> */
+  return base.replace('</a>', `
+    <div class="media-card-progress-bar">
+      <div class="media-card-progress-fill" style="width:${prog.percent}%"></div>
+    </div>
+  </a>`);
+}
+
 function renderMediaHistory() {
   const hist = VStorage.getMediaHistory();
   const wrap = document.getElementById('media-hist-wrap');
   const va   = document.getElementById('media-hist-va');
-  if (!hist.length) return;
-  const shown = hist.slice(0, 14);
+  if (!hist.length) {
+    wrap.innerHTML = `<div class="empty-state"><div class="empty-state-icon">🍿</div><div class="empty-state-title">No media watched yet!</div><p>Browse <a href="movies.html" style="color:var(--accent)">Movies</a>, <a href="tv.html" style="color:var(--accent)">TV</a>, or <a href="anime.html" style="color:var(--accent)">Anime</a></p></div>`;
+    va.style.display = 'none'; return;
+  }
+  const shown = hist.slice(0,14);
   va.style.display = hist.length > 8 ? '' : 'none';
   const row = document.createElement('div'); row.className = 'media-row';
-  row.innerHTML = shown.map(entry => VMedia.makeHistoryMediaCard(entry)).join('');
+  row.innerHTML = shown.map(entry => {
+    const base = VMedia.makeHistoryMediaCard(entry, { showRemove:true });
+    const prog = VStorage.getMediaProgress(entry.id, entry.type);
+    if (!prog || !prog.percent) return base;
+    return base.replace('</a>', `
+      <div class="media-card-progress-bar">
+        <div class="media-card-progress-fill" style="width:${prog.percent}%"></div>
+      </div>
+    </a>`);
+  }).join('');
   wrap.innerHTML = ''; wrap.appendChild(row);
   VMedia.initMediaStars(row);
-  va.addEventListener('click', e => {
-    e.preventDefault();
-    showMediaViewAll('Recently Watched', hist);
-  });
+  VMedia.initMediaRemove(row);
+  va.onclick = e => { e.preventDefault(); showMediaViewAll('Recently Watched', hist); };
 }
 
 async function renderMediaFavs() {
   const favs = VStorage.getMediaFavorites();
   const wrap  = document.getElementById('media-fav-wrap');
   const va    = document.getElementById('media-fav-va');
-  if (!favs.length) return;
+  if (!favs.length) {
+    wrap.innerHTML = `<div class="empty-state"><div class="empty-state-icon">❤️</div><div class="empty-state-title">No media saved yet!</div><p>Star a movie, show, or anime to save it here</p></div>`;
+    va.style.display = 'none'; return;
+  }
   va.style.display = '';
   try {
-    const results = await Promise.all(favs.slice(0, 14).map(f =>
-      VMedia.tmdbFetch(`/${f.type === 'movie' ? 'movie' : 'tv'}/${f.id}`)
-        .then(d => ({ ...d, _type: f.type }))
-        .catch(() => null)
-    ));
+    const results = await Promise.all(favs.slice(0,14).map(async f => {
+      if (f.type === 'anime') {
+        const a = await VMedia.getAnimeById(f.id).catch(() => null);
+        if (a) return { ...a, _type:'anime' };
+        return null;
+      }
+      return VMedia.tmdbFetch(`/${f.type==='movie'?'movie':'tv'}/${f.id}`)
+        .then(d => ({ ...d, _type:f.type })).catch(() => null);
+    }));
     const valid = results.filter(Boolean);
     if (!valid.length) return;
     const row = document.createElement('div'); row.className = 'media-row';
-    row.innerHTML = valid.map(d => d._type === 'movie' ? VMedia.makeMovieCard(d) : VMedia.makeTVCard(d)).join('');
+    row.innerHTML = valid.map(d => {
+      if (d._type === 'anime') return VMedia.makeAnimeCard(d);
+      return d._type === 'movie' ? VMedia.makeMovieCard(d) : VMedia.makeTVCard(d);
+    }).join('');
     wrap.innerHTML = ''; wrap.appendChild(row);
     VMedia.initMediaStars(row);
-    va.addEventListener('click', e => {
-      e.preventDefault();
-      showMediaViewAll('Media Favorites', VStorage.getMediaHistory().filter(h => VStorage.isMediaFavorite(h.id, h.type)));
+    /* Handle unfavorite directly in the row — remove from DOM */
+    row.addEventListener('click', e => {
+      const btn = e.target.closest('.media-star');
+      if (!btn) return;
+      const id = Number(btn.dataset.id);
+      const type = btn.dataset.mediaType;
+      const isFav = VStorage.isMediaFavorite(id, type);
+      if (!isFav) {
+        /* Was just removed — remove card from row */
+        setTimeout(() => renderMediaFavs(), 50);
+      }
     });
+    va.onclick = e => {
+      e.preventDefault();
+      const favEntries = VStorage.getMediaHistory().filter(h => VStorage.isMediaFavorite(h.id, h.type));
+      showMediaViewAll('Media Favorites', favEntries.length ? favEntries : VStorage.getMediaFavorites().map(f => ({ id:f.id, type:f.type, title:'...', poster_path:null })));
+    };
   } catch (e) { console.error(e); }
 }
 
+/* ================================================================
+   View All Modals — fixed to handle remove/unfavorite properly
+   ================================================================ */
 function showGameViewAll(title, games) {
   const o = document.createElement('div'); o.className = 'modal-overlay';
   o.innerHTML = `<div class="modal" style="max-width:680px;width:100%">
@@ -378,11 +663,63 @@ function showGameViewAll(title, games) {
       <h3 style="margin:0">${VApp.esc(title)}</h3>
       <button class="btn-icon va-close" type="button">${VApp.IC.x}</button>
     </div>
-    <div class="view-all-grid">${games.map(g => VApp.makeCard(g)).join('')}</div>
+    <div class="view-all-grid" style="max-height:65vh;overflow-y:auto;margin-top:14px">
+      ${games.map(g => VApp.makeCard(g, { showRemove: title.includes('Recent') })).join('')}
+    </div>
   </div>`;
+  const grid = o.querySelector('.view-all-grid');
   o.querySelector('.va-close').onclick = () => o.remove();
   o.onclick = e => { if (e.target === o) o.remove(); };
-  VApp.initStars(o);
+
+  /* Star toggle — also re-render after change */
+  VApp.initStars(grid);
+  grid.addEventListener('vispora:game-favs-changed', () => {
+    /* For Favorites modal: remove unfavorited card from grid */
+    if (title.includes('Favorite')) {
+      grid.querySelectorAll('.game-card').forEach(card => {
+        const id = Number(card.dataset.id);
+        if (!VStorage.isFavorite(id)) card.remove();
+      });
+    }
+    renderFavs();
+  });
+
+  /* Remove button handler for recent games modal */
+  grid.addEventListener('click', async e => {
+    const rb = e.target.closest('.game-card-remove'); if (!rb) return;
+    e.preventDefault(); e.stopPropagation();
+    const id = Number(rb.dataset.id);
+    const pt = VStorage.getPlaytime(id);
+    const ptStr = VStorage.formatTime(pt);
+    const result = await new Promise(resolve => {
+      const m = document.createElement('div'); m.className = 'modal-overlay'; m.style.zIndex = '31000';
+      m.innerHTML = `<div class="modal" role="dialog" aria-modal="true">
+        <h3>Remove from History</h3><p>Remove this game from your recently played list?</p>
+        ${ptStr ? `<label style="display:flex;align-items:center;gap:8px;margin-top:8px;font-size:0.85rem;color:var(--text-secondary);cursor:pointer">
+          <input type="checkbox" id="reset-pt-chk2" style="accent-color:var(--accent)">
+          Also reset playtime <span style="color:var(--accent);font-weight:600">(${ptStr})</span>
+        </label>` : ''}
+        <div class="modal-actions">
+          <button class="btn btn-secondary modal-cancel">Cancel</button>
+          <button class="btn btn-danger modal-confirm">Remove</button>
+        </div></div>`;
+      m.querySelector('.modal-cancel').onclick = () => { m.remove(); resolve(null); };
+      m.querySelector('.modal-confirm').onclick = () => {
+        const resetPt = m.querySelector('#reset-pt-chk2')?.checked || false;
+        m.remove(); resolve(resetPt);
+      };
+      m.onclick = ev => { if (ev.target === m) { m.remove(); resolve(null); } };
+      document.body.appendChild(m); m.querySelector('.modal-confirm').focus();
+    });
+    if (result !== null) {
+      VStorage.removeFromHistory(id);
+      if (result) VStorage.resetPlaytime(id);
+      rb.closest('.game-card')?.remove();
+      VApp.showToast(result ? 'Removed & playtime reset' : 'Removed from history');
+      renderRecent();
+    }
+  });
+
   document.body.appendChild(o);
 }
 
@@ -394,12 +731,37 @@ function showMediaViewAll(title, entries) {
       <button class="btn-icon va-close" type="button">${VApp.IC.x}</button>
     </div>
     <div class="media-grid" style="margin-top:16px;max-height:60vh;overflow-y:auto">
-      ${entries.map(e => VMedia.makeHistoryMediaCard(e)).join('')}
+      ${entries.map(e => VMedia.makeHistoryMediaCard(e, { showRemove:true })).join('')}
     </div>
   </div>`;
   o.querySelector('.va-close').onclick = () => o.remove();
   o.onclick = e => { if (e.target === o) o.remove(); };
-  VMedia.initMediaStars(o);
+  const grid = o.querySelector('.media-grid');
+  VMedia.initMediaStars(grid);
+  /* When unfavorited in modal, remove card */
+  grid.addEventListener('click', e => {
+    const btn = e.target.closest('.media-star');
+    if (!btn || title.includes('Watched')) return;
+    const id = Number(btn.dataset.id);
+    const type = btn.dataset.mediaType;
+    setTimeout(() => {
+      if (!VStorage.isMediaFavorite(id, type)) {
+        btn.closest('.media-card')?.remove();
+        renderMediaFavs();
+      }
+    }, 50);
+  });
+  VMedia.initMediaRemove(grid, () => {
+    renderMediaHistory();
+    const updated = VStorage.getMediaHistory();
+    if (updated.length) {
+      grid.innerHTML = updated.map(e => VMedia.makeHistoryMediaCard(e,{showRemove:true})).join('');
+      VMedia.initMediaStars(grid);
+      VMedia.initMediaRemove(grid);
+    } else {
+      o.remove();
+    }
+  });
   document.body.appendChild(o);
 }
 

@@ -429,3 +429,37 @@
   .nav-logo { font-size: 0.88rem; }
   .nav-datetime { display: none; }
 }
+/* ── AI Chat markdown extras ── */
+.ai-inline-code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.85em;
+  background: rgba(var(--accent-rgb),0.08);
+  border: 1px solid rgba(var(--accent-rgb),0.15);
+  color: var(--accent);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+.ai-h1 { font-size: 1.35rem; font-weight: 800; margin: 14px 0 6px; color: var(--text); }
+.ai-h2 { font-size: 1.15rem; font-weight: 700; margin: 12px 0 5px; color: var(--text); }
+.ai-h3 { font-size: 1rem; font-weight: 700; margin: 10px 0 4px; color: var(--text); }
+.ai-ul, .ai-ol { margin: 6px 0 6px 18px; line-height: 1.7; }
+.ai-ul li, .ai-ol li { margin: 2px 0; }
+.ai-blockquote {
+  border-left: 3px solid var(--accent); padding: 6px 12px;
+  margin: 8px 0; color: var(--text-secondary); font-style: italic;
+  background: rgba(var(--accent-rgb),0.04); border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.ai-table-wrap { overflow-x: auto; margin: 10px 0; }
+.ai-table {
+  width: 100%; border-collapse: collapse; font-size: 0.85rem;
+}
+.ai-table th {
+  background: rgba(var(--accent-rgb),0.08); color: var(--accent);
+  font-weight: 700; font-size: 0.78rem; text-align: left;
+  padding: 8px 10px; border: 1px solid var(--card-border);
+}
+.ai-table td {
+  padding: 6px 10px; border: 1px solid var(--card-border);
+  color: var(--text); vertical-align: top; line-height: 1.45;
+}
+.ai-table tr:nth-child(even) td { background: rgba(255,255,255,0.02); }

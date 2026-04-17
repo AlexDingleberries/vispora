@@ -158,7 +158,7 @@
       <div class="settings-section-title">About</div>
       <div class="settings-row">
         <div><div class="settings-label">vispora</div><div class="settings-label-desc">Created by AlexDingleberries</div></div>
-        <span class="about-version">v1.0.0</span>
+        <span class="about-version">v3.5.1</span>
       </div>
     </div>
 
@@ -267,30 +267,72 @@ pkBtn.onclick=startListen;pkBtn.onkeydown=e=>{if(e.key==='Enter'||e.key===' ')st
 
 // Stats
 async function loadStats(){
-  const hist=VStorage.getHistory();const pt=VStorage.getAllPlaytime();
+  const hist=VStorage.getHistory();
+  const pt=VStorage.getAllPlaytime();
   const tot=Object.values(pt).reduce((a,b)=>a+b,0);
   document.getElementById('st-time').textContent=VStorage.formatTime(tot)||'0m';
   document.getElementById('st-played').textContent=hist.length;
   document.getElementById('st-favs').textContent=VStorage.getFavorites().length;
+
   const top=Object.entries(pt).sort((a,b)=>b[1]-a[1]).slice(0,5);
-  const allVisps=await VApp.loadVisps();
   const topEl=document.getElementById('top-visps');
-  if(!top.length){topEl.innerHTML='<p style="color:var(--text-secondary);font-size:0.85rem">Play some visps to see stats!</p>';return;}
-  topEl.innerHTML=top.map(([id,ms],i)=>{
-    const g=allVisps.find(x=>String(x.id)===id)||hist.find(x=>String(x.id)===id);
-    const name=g?(g.name||`Game ${id}`):`Game ${id}`;
-    const pct=Math.round(ms/(top[0][1]||1)*100);
-    return`<div style="display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid var(--card-border)">
-      <span style="font-size:0.72rem;color:var(--text-secondary);width:14px;text-align:right;flex-shrink:0">${i+1}</span>
-      <div style="flex:1;min-width:0">
-        <div style="font-size:0.86rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${VApp.esc(name)}</div>
-        <div style="height:3px;background:var(--bg5);border-radius:2px;margin-top:5px">
-          <div style="height:3px;width:${pct}%;background:var(--accent);border-radius:2px"></div>
+
+  if(!top.length){
+    topEl.innerHTML='<p style="color:var(--text-secondary);font-size:0.85rem">Play some games to see stats!</p>';
+    return;
+  }
+
+  // Load game names — fall back to history entries
+  let allGames=[];
+  try{ allGames=await VApp.loadGames(); }catch(e){}
+
+  function buildTopList(){
+    topEl.innerHTML=top.map(([id,ms],i)=>{
+      const g=allGames.find(x=>String(x.id)===id)||hist.find(x=>String(x.id)===id);
+      const name=g?(g.name||`Game ${id}`):`Game ${id}`;
+      const pct=Math.round(ms/(top[0][1]||1)*100);
+      return`<div style="display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid var(--card-border)">
+        <span style="font-size:0.72rem;color:var(--text-secondary);width:14px;text-align:right;flex-shrink:0">${i+1}</span>
+        <div style="flex:1;min-width:0">
+          <div style="font-size:0.86rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${VApp.esc(name)}</div>
+          <div style="height:3px;background:var(--bg5);border-radius:2px;margin-top:5px">
+            <div style="height:3px;width:${pct}%;background:var(--accent);border-radius:2px"></div>
+          </div>
         </div>
-      </div>
-      <span style="font-size:0.75rem;color:var(--accent);font-weight:600;flex-shrink:0">${VStorage.formatTime(ms)}</span>
-    </div>`;
-  }).join('');
+        <span style="font-size:0.75rem;color:var(--accent);font-weight:600;flex-shrink:0">${VStorage.formatTime(ms)}</span>
+        <button class="btn-icon del-pt" data-id="${id}" title="Reset this playtime" type="button"
+          style="opacity:0.5;transition:opacity 0.15s;flex-shrink:0" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.5">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
+        </button>
+      </div>`;
+    }).join('');
+
+    topEl.querySelectorAll('.del-pt').forEach(btn=>{
+      btn.addEventListener('click', async ()=>{
+        const id=btn.dataset.id;
+        const g=allGames.find(x=>String(x.id)===id)||hist.find(x=>String(x.id)===id);
+        const name=g?g.name:`Game ${id}`;
+        const confirmed=await VApp.showModal({
+          title:'Reset Playtime',
+          message:`Reset playtime for "${name}"? This cannot be undone.`,
+          confirmText:'Reset',
+          dangerous:true
+        });
+        if(!confirmed)return;
+        VStorage.resetPlaytime(id);
+        // Remove from local top array and rebuild
+        const idx=top.findIndex(([tid])=>tid===id);
+        if(idx!==-1)top.splice(idx,1);
+        buildTopList();
+        // Update stats numbers
+        const newTot=Object.values(VStorage.getAllPlaytime()).reduce((a,b)=>a+b,0);
+        document.getElementById('st-time').textContent=VStorage.formatTime(newTot)||'0m';
+        VApp.showToast('Playtime reset','success');
+      });
+    });
+  }
+
+  buildTopList();
 }
 loadStats();
 
@@ -309,7 +351,8 @@ document.getElementById('import-file').onchange=async e=>{
 };
 document.getElementById('btn-clear').onclick=async()=>{
   if(await VApp.showModal({title:'Clear History',message:'Remove all play history and playtime data? Favorites are kept.',confirmText:'Clear',dangerous:true})){
-    VStorage.set(VStorage.KEYS.HISTORY,[]);VStorage.set(VStorage.KEYS.PLAYTIME,{});VApp.showToast('History cleared','success');loadStats();
+    VStorage.set(VStorage.KEYS.HISTORY,[]);VStorage.set(VStorage.KEYS.PLAYTIME,{});
+    VApp.showToast('History cleared','success');loadStats();
   }
 };
 document.getElementById('btn-reset').onclick=async()=>{

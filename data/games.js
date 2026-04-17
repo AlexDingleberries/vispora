@@ -3,7 +3,7 @@ receiveGames([
     "id": 0,
     "name": "Bowmasters",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/0.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/0.html",
+    "url": "html/0.html",
     "author": "Azur Games, Playgendary",
     "genres": [
       "action",
@@ -18,7 +18,7 @@ receiveGames([
     "id": 1,
     "name": "OvO",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/1.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/1-fde.html",
+    "url": "html/1-fde.html",
     "author": "Dedra Games",
     "genres": [
       "action",
@@ -35,7 +35,7 @@ receiveGames([
     "id": 2,
     "name": "OvO 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/2.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/2e.html",
+    "url": "html/2e.html",
     "author": "Dedra Games",
     "genres": [
       "action",
@@ -52,7 +52,7 @@ receiveGames([
     "id": 3,
     "name": "OvO 3 Dimensions",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/3.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/3.html",
+    "url": "html/3.html",
     "author": "Dedra Games",
     "genres": [
       "action",
@@ -69,7 +69,7 @@ receiveGames([
     "id": 4,
     "name": "Gladihoppers",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/4.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/4.html",
+    "url": "html/4.html",
     "author": "Dreamon Studios",
     "genres": [
       "action",
@@ -83,7 +83,7 @@ receiveGames([
     "id": 5,
     "name": "Ice Dodo",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/5.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/5.html",
+    "url": "html/5.html",
     "author": "Onionfist Studio",
     "genres": [
       "action",
@@ -97,7 +97,7 @@ receiveGames([
     "id": 6,
     "name": "Block Blast",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/6.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/6.html",
+    "url": "html/6.html",
     "author": "reunbozdo",
     "genres": [
       "puzzle",
@@ -111,7 +111,7 @@ receiveGames([
     "id": 7,
     "name": "Jetpack Joyride",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/7.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/7.html",
+    "url": "html/7.html",
     "author": "Halfbrick Studios",
     "genres": [
       "action",
@@ -126,7 +126,7 @@ receiveGames([
     "id": 8,
     "name": "Friday Night Funkin",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/8.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/8-wow.html",
+    "url": "html/8-wow.html",
     "author": "ninja-muffin24",
     "genres": [
       "music",
@@ -140,7 +140,7 @@ receiveGames([
     "id": 9,
     "name": "Sprunki",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/9.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/9.html",
+    "url": "html/9.html",
     "author": "NyankoBfLol",
     "genres": [
       "music",
@@ -155,7 +155,7 @@ receiveGames([
     "id": 10,
     "name": "Temple Run 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/10.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/10.html",
+    "url": "html/10.html",
     "author": "Imangi STUDIOS",
     "genres": [
       "action",
@@ -171,7 +171,7 @@ receiveGames([
     "id": 11,
     "name": "Stickman Hook",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/11.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/11.html",
+    "url": "html/11.html",
     "author": "Madbox",
     "genres": [
       "action",
@@ -186,7 +186,7 @@ receiveGames([
     "id": 13,
     "name": "Attack Hole",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/13.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/13.html",
+    "url": "html/13.html",
     "author": "Homa Games",
     "genres": [
       "casual",
@@ -201,7 +201,7 @@ receiveGames([
     "id": 14,
     "name": "Bridge Race",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/14.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/14.html",
+    "url": "html/14.html",
     "author": "QubicGames",
     "genres": [
       "casual",
@@ -216,7 +216,7 @@ receiveGames([
     "id": 15,
     "name": "Color Water Sort 3D",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/15.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/15.html",
+    "url": "html/15.html",
     "author": "Tapnation",
     "genres": [
       "puzzle",
@@ -231,7 +231,7 @@ receiveGames([
     "id": 16,
     "name": "Hide N Seek",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/16.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/16.html",
+    "url": "html/16.html",
     "author": "Supersonic Studios LTD",
     "genres": [
       "casual",
@@ -246,7 +246,7 @@ receiveGames([
     "id": 17,
     "name": "Magic Tiles 3",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/17.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/17.html",
+    "url": "html/17.html",
     "author": "AmaNotes",
     "genres": [
       "music",
@@ -260,7 +260,7 @@ receiveGames([
     "id": 18,
     "name": "Stacky Dash",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/18.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/18.html",
+    "url": "html/18.html",
     "author": "Supersonic Studios LTD",
     "genres": [
       "casual",
@@ -274,7 +274,7 @@ receiveGames([
     "id": 19,
     "name": "Supreme Duelist",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/19.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/19.html",
+    "url": "html/19.html",
     "author": "Neron's Brother",
     "genres": [
       "action",
@@ -288,7 +288,7 @@ receiveGames([
     "id": 20,
     "name": "Tall Man Run",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/20.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/20a.html",
+    "url": "html/20a.html",
     "author": "Supersonic Studios LTD",
     "genres": [
       "casual",
@@ -302,7 +302,7 @@ receiveGames([
     "id": 21,
     "name": "Turbo Stars",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/21.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/21.html",
+    "url": "html/21.html",
     "author": "Unknown",
     "genres": [
       "racing",
@@ -317,7 +317,7 @@ receiveGames([
     "id": 22,
     "name": "Mob Control HTML5",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/22.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/22.html",
+    "url": "html/22.html",
     "author": "Voodoo",
     "genres": [
       "strategy",
@@ -331,7 +331,7 @@ receiveGames([
     "id": 23,
     "name": "Pou",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/23.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/23.html",
+    "url": "html/23.html",
     "author": "Zakeh",
     "genres": [
       "casual",
@@ -346,7 +346,7 @@ receiveGames([
     "id": 24,
     "name": "Crossy Road",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/24.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/24.html",
+    "url": "html/24.html",
     "author": "Hipster Whale",
     "genres": [
       "casual",
@@ -361,7 +361,7 @@ receiveGames([
     "id": 25,
     "name": "Basket Battle",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/25.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/25.html",
+    "url": "html/25.html",
     "author": "Supersonic Studios LTD",
     "genres": [
       "sports",
@@ -376,7 +376,7 @@ receiveGames([
     "id": 26,
     "name": "Amaze",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/26.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/26.html",
+    "url": "html/26.html",
     "author": "CrazyLabs",
     "genres": [
       "puzzle",
@@ -390,7 +390,7 @@ receiveGames([
     "id": 27,
     "name": "Geometry Dash Lite (REMAKE)",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/27.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/27-f.html",
+    "url": "html/27-f.html",
     "author": "RobTop Games",
     "genres": [
       "action",
@@ -406,7 +406,7 @@ receiveGames([
     "id": 28,
     "name": "Basketball Frvr",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/28.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/28.html",
+    "url": "html/28.html",
     "author": "FRVR",
     "genres": [
       "sports",
@@ -421,7 +421,7 @@ receiveGames([
     "id": 29,
     "name": "Bazooka Boy",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/29.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/29.html",
+    "url": "html/29.html",
     "author": "Supersonic Studios LTD",
     "genres": [
       "action",
@@ -436,7 +436,7 @@ receiveGames([
     "id": 30,
     "name": "Bottle Jump 3D",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/30.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/30.html",
+    "url": "html/30.html",
     "author": "CASUAL AZUR GAMES",
     "genres": [
       "casual",
@@ -451,7 +451,7 @@ receiveGames([
     "id": 31,
     "name": "Color Match",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/31.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/31.html",
+    "url": "html/31.html",
     "author": "Supersonic Studios LTD",
     "genres": [
       "3d",
@@ -466,7 +466,7 @@ receiveGames([
     "id": 32,
     "name": "Dig Deep",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/32.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/32.html",
+    "url": "html/32.html",
     "author": "CrazyLabs LTD",
     "genres": [
       "3d",
@@ -480,7 +480,7 @@ receiveGames([
     "id": 33,
     "name": "Retro Bowl",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/33.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/33.html",
+    "url": "html/33.html",
     "author": "New Star Games",
     "genres": [
       "strategy",
@@ -495,7 +495,7 @@ receiveGames([
     "id": 34,
     "name": "Retro Bowl College",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/34.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/34-fixed.html",
+    "url": "html/34-fixed.html",
     "author": "New Star Games",
     "genres": [
       "strategy",
@@ -510,7 +510,7 @@ receiveGames([
     "id": 36,
     "name": "Monster Tracks",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/36.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/36.html",
+    "url": "html/36.html",
     "author": "Fancade",
     "genres": [
       "3d",
@@ -525,7 +525,7 @@ receiveGames([
     "id": 37,
     "name": "Gobble",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/37.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/37.html",
+    "url": "html/37.html",
     "author": "Fancade",
     "genres": [
       "action",
@@ -540,7 +540,7 @@ receiveGames([
     "id": 38,
     "name": "Five Nights at Freddy's",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/38.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/38.html",
+    "url": "html/38.html",
     "author": "Scott Cawthon",
     "genres": [
       "3d",
@@ -555,7 +555,7 @@ receiveGames([
     "id": 39,
     "name": "Five Nights at Freddy's 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/39.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/39.html",
+    "url": "html/39.html",
     "author": "Scott Cawthon",
     "genres": [
       "3d",
@@ -570,7 +570,7 @@ receiveGames([
     "id": 40,
     "name": "Five Nights at Freddy's 3",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/40.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/40.html",
+    "url": "html/40.html",
     "author": "Scott Cawthon",
     "genres": [
       "3d",
@@ -585,7 +585,7 @@ receiveGames([
     "id": 41,
     "name": "Five Nights at Freddy's 4",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/41.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/41.html",
+    "url": "html/41.html",
     "author": "Scott Cawthon",
     "genres": [
       "3d",
@@ -600,7 +600,7 @@ receiveGames([
     "id": 42,
     "name": "Road of Fury",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/42.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/42.html",
+    "url": "html/42.html",
     "author": "IriySoft",
     "genres": [
       "action",
@@ -615,7 +615,7 @@ receiveGames([
     "id": 43,
     "name": "Driven Wild",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/43.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/43.html",
+    "url": "html/43.html",
     "author": "KilledByAPixel",
     "genres": [
       "3d",
@@ -630,7 +630,7 @@ receiveGames([
     "id": 44,
     "name": "Ragdoll Hit",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/44.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/44-fix.html",
+    "url": "html/44-fix.html",
     "author": "Kids Games LLC",
     "genres": [
       "action",
@@ -645,7 +645,7 @@ receiveGames([
     "id": 45,
     "name": "Vex 1",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/45.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/45.html",
+    "url": "html/45.html",
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
@@ -661,7 +661,7 @@ receiveGames([
     "id": 46,
     "name": "Vex 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/46.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/46.html",
+    "url": "html/46.html",
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
@@ -677,7 +677,7 @@ receiveGames([
     "id": 47,
     "name": "Vex 3",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/47.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/47.html",
+    "url": "html/47.html",
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
@@ -693,7 +693,7 @@ receiveGames([
     "id": 48,
     "name": "Vex 3 XMAS",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/48.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/48.html",
+    "url": "html/48.html",
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
@@ -709,7 +709,7 @@ receiveGames([
     "id": 49,
     "name": "Vex 4",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/49.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/49.html",
+    "url": "html/49.html",
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
@@ -725,7 +725,7 @@ receiveGames([
     "id": 50,
     "name": "Vex 5",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/50.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/50.html",
+    "url": "html/50.html",
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
@@ -741,7 +741,7 @@ receiveGames([
     "id": 51,
     "name": "Vex 6",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/51.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/51.html",
+    "url": "html/51.html",
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
@@ -757,7 +757,7 @@ receiveGames([
     "id": 52,
     "name": "Vex 7",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/52.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/52.html",
+    "url": "html/52.html",
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
@@ -773,7 +773,7 @@ receiveGames([
     "id": 53,
     "name": "Vex 8",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/53.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/53.html",
+    "url": "html/53.html",
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
@@ -789,7 +789,7 @@ receiveGames([
     "id": 54,
     "name": "Vex Challenges",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/54.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/54.html",
+    "url": "html/54.html",
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
@@ -805,7 +805,7 @@ receiveGames([
     "id": 55,
     "name": "Vex X3M",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/55.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/55.html",
+    "url": "html/55.html",
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
@@ -821,7 +821,7 @@ receiveGames([
     "id": 56,
     "name": "Vex X3M 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/56.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/56.html",
+    "url": "html/56.html",
     "author": "Lorenzo De Carlo",
     "genres": [
       "action",
@@ -837,7 +837,7 @@ receiveGames([
     "id": 58,
     "name": "1v1.LoL",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/58.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/58.html",
+    "url": "html/58.html",
     "author": "JustPlay.LOL",
     "genres": [
       "action",
@@ -852,7 +852,7 @@ receiveGames([
     "id": 59,
     "name": "A Dance of Fire and Ice",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/59.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/59.html",
+    "url": "html/59.html",
     "author": "fizzd",
     "genres": [
       "music",
@@ -867,7 +867,7 @@ receiveGames([
     "id": 60,
     "name": "Achievement Unlocked",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/60.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/60.html",
+    "url": "html/60.html",
     "author": "jmtb02",
     "genres": [
       "puzzle",
@@ -882,7 +882,7 @@ receiveGames([
     "id": 61,
     "name": "Achievement Unlocked 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/61.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/61.html",
+    "url": "html/61.html",
     "author": "jmtb02",
     "genres": [
       "puzzle",
@@ -897,7 +897,7 @@ receiveGames([
     "id": 62,
     "name": "Achievement Unlocked 3",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/62.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/62.html",
+    "url": "html/62.html",
     "author": "jmtb02",
     "genres": [
       "puzzle",
@@ -912,7 +912,7 @@ receiveGames([
     "id": 63,
     "name": "Angry Birds",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/63.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/63.html",
+    "url": "html/63.html",
     "author": "Rovio Entertainment",
     "genres": [
       "action",
@@ -927,7 +927,7 @@ receiveGames([
     "id": 64,
     "name": "Backrooms",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/64.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/64-fix.html",
+    "url": "html/64-fix.html",
     "author": "Esyverse",
     "genres": [
       "horror",
@@ -941,7 +941,7 @@ receiveGames([
     "id": 65,
     "name": "Baldi's Basics",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/65.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/65-fixed.html",
+    "url": "html/65-fixed.html",
     "author": "Basically Games",
     "genres": [
       "horror",
@@ -955,7 +955,7 @@ receiveGames([
     "id": 66,
     "name": "Basket Random",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/66.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/66.html",
+    "url": "html/66.html",
     "author": "RHM Interactive OÜ",
     "genres": [
       "sports",
@@ -969,7 +969,7 @@ receiveGames([
     "id": 67,
     "name": "Big Tower Tiny Square",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/67.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/67-f.html",
+    "url": "html/67-f.html",
     "author": "EvilObjective",
     "genres": [
       "action",
@@ -984,7 +984,7 @@ receiveGames([
     "id": 68,
     "name": "Big NEON Tower Tiny Square",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/68.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/68.html",
+    "url": "html/68.html",
     "author": "EvilObjective",
     "genres": [
       "action",
@@ -999,7 +999,7 @@ receiveGames([
     "id": 69,
     "name": "Big ICE Tower Tiny Square",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/69.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/69.html",
+    "url": "html/69.html",
     "author": "EvilObjective",
     "genres": [
       "action",
@@ -1014,7 +1014,7 @@ receiveGames([
     "id": 70,
     "name": "BitLife",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/70.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/70.html",
+    "url": "html/70.html",
     "author": "Candywriter",
     "genres": [
       "simulation",
@@ -1028,7 +1028,7 @@ receiveGames([
     "id": 71,
     "name": "Bloons TD",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/71.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/71.html",
+    "url": "html/71.html",
     "author": "Ninja Kiwi",
     "genres": [
       "strategy",
@@ -1042,7 +1042,7 @@ receiveGames([
     "id": 72,
     "name": "Bloons TD 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/72.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/72.html",
+    "url": "html/72.html",
     "author": "Ninja Kiwi",
     "genres": [
       "strategy",
@@ -1056,7 +1056,7 @@ receiveGames([
     "id": 73,
     "name": "Bloons TD 3",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/73.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/73.html",
+    "url": "html/73.html",
     "author": "Ninja Kiwi",
     "genres": [
       "strategy",
@@ -1070,7 +1070,7 @@ receiveGames([
     "id": 74,
     "name": "Bloons TD 4",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/74.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/74.html",
+    "url": "html/74.html",
     "author": "Ninja Kiwi",
     "genres": [
       "strategy",
@@ -1084,7 +1084,7 @@ receiveGames([
     "id": 75,
     "name": "Bloons TD 5",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/75.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/75-fix.html",
+    "url": "html/75-fix.html",
     "author": "Ninja Kiwi",
     "genres": [
       "strategy",
@@ -1098,7 +1098,7 @@ receiveGames([
     "id": 76,
     "name": "Bob The Robber 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/76.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/76-fix.html",
+    "url": "html/76-fix.html",
     "author": "Meow Beast",
     "genres": [
       "action",
@@ -1113,7 +1113,7 @@ receiveGames([
     "id": 77,
     "name": "Boxing Random",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/77.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/77.html",
+    "url": "html/77.html",
     "author": "RHM Interactive",
     "genres": [
       "sports",
@@ -1128,7 +1128,7 @@ receiveGames([
     "id": 78,
     "name": "Burrito Bison: Launcha Libre",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/78.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/78.html",
+    "url": "html/78.html",
     "author": "Juicy Beast",
     "genres": [
       "action",
@@ -1143,7 +1143,7 @@ receiveGames([
     "id": 79,
     "name": "Cannon Basketball",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/79.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/79.html",
+    "url": "html/79.html",
     "author": "Oleh \"qzix13\" Kuzyk",
     "genres": [
       "sports",
@@ -1158,7 +1158,7 @@ receiveGames([
     "id": 80,
     "name": "Cannon Basketball 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/80.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/80.html",
+    "url": "html/80.html",
     "author": "Oleh \"qzix13\" Kuzyk",
     "genres": [
       "sports",
@@ -1173,7 +1173,7 @@ receiveGames([
     "id": 81,
     "name": "Cluster Rush",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/81.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/81.html",
+    "url": "html/81.html",
     "author": "Landfall",
     "genres": [
       "action",
@@ -1188,7 +1188,7 @@ receiveGames([
     "id": 82,
     "name": "Cookie Clicker",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/82.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/82-u.html",
+    "url": "html/82-u.html",
     "author": "Orteil",
     "genres": [
       "idle"
@@ -1201,7 +1201,7 @@ receiveGames([
     "id": 83,
     "name": "Coreball",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/83.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/83.html",
+    "url": "html/83.html",
     "author": "Ben Vinegar",
     "genres": [
       "casual",
@@ -1215,7 +1215,7 @@ receiveGames([
     "id": 84,
     "name": "Cubefield",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/84.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/84.html",
+    "url": "html/84.html",
     "author": "Max Abernethy",
     "genres": [
       "action",
@@ -1230,7 +1230,7 @@ receiveGames([
     "id": 85,
     "name": "Cut the Rope",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/85.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/85-f.html",
+    "url": "html/85-f.html",
     "author": "ZeptoLab",
     "genres": [
       "strategy",
@@ -1244,7 +1244,7 @@ receiveGames([
     "id": 86,
     "name": "Draw Climber",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/86.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/86.html",
+    "url": "html/86.html",
     "author": "VOODOO",
     "genres": [
       "casual",
@@ -1258,7 +1258,7 @@ receiveGames([
     "id": 87,
     "name": "Emulator.JS",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/87.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/87.html",
+    "url": "html/87.html",
     "author": "Ethan O'Brien",
     "genres": [
       "casual",
@@ -1273,7 +1273,7 @@ receiveGames([
     "id": 88,
     "name": "Fireboy and Watergirl 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/88.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/88.html",
+    "url": "html/88.html",
     "author": "Oslo Albet",
     "genres": [
       "action",
@@ -1289,7 +1289,7 @@ receiveGames([
     "id": 89,
     "name": "Fireboy and Watergirl 3",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/89.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/89.html",
+    "url": "html/89.html",
     "author": "Oslo Albet",
     "genres": [
       "action",
@@ -1305,7 +1305,7 @@ receiveGames([
     "id": 90,
     "name": "Granny",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/90.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/90-fix2.html",
+    "url": "html/90-fix2.html",
     "author": "DVloper",
     "genres": [
       "horror",
@@ -1319,7 +1319,7 @@ receiveGames([
     "id": 91,
     "name": "Gunspin",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/91.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/91.html",
+    "url": "html/91.html",
     "author": "minijuegos.com",
     "genres": [
       "action",
@@ -1334,7 +1334,7 @@ receiveGames([
     "id": 92,
     "name": "Highway Racer 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/92.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/92.html",
+    "url": "html/92.html",
     "author": "Bone Cracker Games",
     "genres": [
       "action",
@@ -1349,7 +1349,7 @@ receiveGames([
     "id": 93,
     "name": "Johnny Trigger",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/93.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/93.html",
+    "url": "html/93.html",
     "author": "SayGames",
     "genres": [
       "action",
@@ -1364,7 +1364,7 @@ receiveGames([
     "id": 94,
     "name": "Journey Downhill",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/94.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/94.html",
+    "url": "html/94.html",
     "author": "Megagon Industries",
     "genres": [
       "action",
@@ -1379,7 +1379,7 @@ receiveGames([
     "id": 95,
     "name": "Line Rider",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/95.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/95.html",
+    "url": "html/95.html",
     "author": "Boštjan Čadež",
     "genres": [
       "casual",
@@ -1394,7 +1394,7 @@ receiveGames([
     "id": 96,
     "name": "Moto X3M",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/96.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/96.html",
+    "url": "html/96.html",
     "author": "MadPuffers",
     "genres": [
       "racing"
@@ -1407,7 +1407,7 @@ receiveGames([
     "id": 97,
     "name": "Moto X3M 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/97.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/97.html",
+    "url": "html/97.html",
     "author": "MadPuffers",
     "genres": [
       "racing"
@@ -1420,7 +1420,7 @@ receiveGames([
     "id": 98,
     "name": "Moto X3M 3",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/98.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/98.html",
+    "url": "html/98.html",
     "author": "MadPuffers",
     "genres": [
       "racing"
@@ -1433,7 +1433,7 @@ receiveGames([
     "id": 99,
     "name": "Moto X3M Spooky",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/99.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/99.html",
+    "url": "html/99.html",
     "author": "MadPuffers",
     "genres": [
       "racing"
@@ -1446,7 +1446,7 @@ receiveGames([
     "id": 100,
     "name": "Moto X3M Winter",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/100.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/100-f.html",
+    "url": "html/100-f.html",
     "author": "MadPuffers",
     "genres": [
       "racing"
@@ -1459,7 +1459,7 @@ receiveGames([
     "id": 101,
     "name": "Ninja vs EvilCorp",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/101.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/101.html",
+    "url": "html/101.html",
     "author": "Rémi Vansteelandt",
     "genres": [
       "action",
@@ -1473,7 +1473,7 @@ receiveGames([
     "id": 102,
     "name": "Paper.io 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/102.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/102.html",
+    "url": "html/102.html",
     "author": "VOODOO",
     "genres": [
       "casual",
@@ -1487,7 +1487,7 @@ receiveGames([
     "id": 103,
     "name": "The World's Hardest Game",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/103.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/103.html",
+    "url": "html/103.html",
     "author": "Stevie Critoph",
     "genres": [
       "action",
@@ -1502,7 +1502,7 @@ receiveGames([
     "id": 104,
     "name": "The World's Hardest Game 3",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/104.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/104.html",
+    "url": "html/104.html",
     "author": "Stevie Critoph",
     "genres": [
       "action",
@@ -1517,7 +1517,7 @@ receiveGames([
     "id": 105,
     "name": "The World's Hardest Game 4",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/105.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/105.html",
+    "url": "html/105.html",
     "author": "Stevie Critoph",
     "genres": [
       "action",
@@ -1532,7 +1532,7 @@ receiveGames([
     "id": 106,
     "name": "This Is The Only Level",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/106.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/106.html",
+    "url": "html/106.html",
     "author": "jmtb02",
     "genres": [
       "action",
@@ -1547,7 +1547,7 @@ receiveGames([
     "id": 107,
     "name": "This Is The Only Level 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/107.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/107.html",
+    "url": "html/107.html",
     "author": "jmtb02",
     "genres": [
       "action",
@@ -1562,7 +1562,7 @@ receiveGames([
     "id": 108,
     "name": "Tiny Fishing",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/108.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/108.html",
+    "url": "html/108.html",
     "author": "Winter Studio",
     "genres": [
       "casual",
@@ -1577,7 +1577,7 @@ receiveGames([
     "id": 109,
     "name": "Tomb Of The Mask",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/109.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/109.html",
+    "url": "html/109.html",
     "author": "Happymagenta UAB",
     "genres": [
       "action",
@@ -1592,7 +1592,7 @@ receiveGames([
     "id": 110,
     "name": "Toss The Turtle",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/110.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/110-f.html",
+    "url": "html/110-f.html",
     "author": "GonzoSSM",
     "genres": [
       "action",
@@ -1607,7 +1607,7 @@ receiveGames([
     "id": 111,
     "name": "Tube Jumpers",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/111.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/111.html",
+    "url": "html/111.html",
     "author": "New Eich Games",
     "genres": [
       "action",
@@ -1621,7 +1621,7 @@ receiveGames([
     "id": 112,
     "name": "Wordle",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/112.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/112-fix.html",
+    "url": "html/112-fix.html",
     "author": "New York Times",
     "genres": [
       "puzzle",
@@ -1635,7 +1635,7 @@ receiveGames([
     "id": 113,
     "name": "Ruffle",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/113.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/113.html",
+    "url": "html/113.html",
     "author": "Mike Welsh",
     "genres": [
       "casual",
@@ -1650,7 +1650,7 @@ receiveGames([
     "id": 114,
     "name": "2048",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/114.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/114-f.html",
+    "url": "html/114-f.html",
     "author": "Gabriele Cirulli",
     "genres": [
       "strategy",
@@ -1664,7 +1664,7 @@ receiveGames([
     "id": 115,
     "name": "8 Ball Pool",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/115.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/115.html",
+    "url": "html/115.html",
     "author": "Miniclip.com",
     "genres": [
       "sports",
@@ -1679,7 +1679,7 @@ receiveGames([
     "id": 116,
     "name": "Offroad Mountain Bike",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/116.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/116.html",
+    "url": "html/116.html",
     "author": "RHM Interactive OÜ",
     "genres": [
       "racing"
@@ -1692,7 +1692,7 @@ receiveGames([
     "id": 117,
     "name": "Space Waves",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/117.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/117-fix.html",
+    "url": "html/117-fix.html",
     "author": "do.games",
     "genres": [
       "action",
@@ -1707,7 +1707,7 @@ receiveGames([
     "id": 118,
     "name": "Solar Smash",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/118.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/118.html",
+    "url": "html/118.html",
     "author": "Paradyme Games",
     "genres": [
       "action",
@@ -1721,7 +1721,7 @@ receiveGames([
     "id": 119,
     "name": "Snow Rider 3D",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/119.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/119.html",
+    "url": "html/119.html",
     "author": "gamebiz",
     "genres": [
       "3d"
@@ -1734,7 +1734,7 @@ receiveGames([
     "id": 120,
     "name": "Fortzone Battle Royale",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/120.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/120.html",
+    "url": "html/120.html",
     "author": "Mirra Games",
     "genres": [
       "action",
@@ -1748,7 +1748,7 @@ receiveGames([
     "id": 121,
     "name": "Brawl Guys.io",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/121.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/121.html",
+    "url": "html/121.html",
     "author": "Lagged",
     "genres": [
       ".io"
@@ -1761,7 +1761,7 @@ receiveGames([
     "id": 122,
     "name": "Survival Race",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/122.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/122.html",
+    "url": "html/122.html",
     "author": "Brain Massage",
     "genres": [
       "action",
@@ -1775,7 +1775,7 @@ receiveGames([
     "id": 123,
     "name": "Poly Track",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/123.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/123-win.html",
+    "url": "html/123-win.html",
     "author": "Kodub",
     "genres": [
       "racing",
@@ -1789,7 +1789,7 @@ receiveGames([
     "id": 124,
     "name": "Moto X3M Pool Party",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/124.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/124.html",
+    "url": "html/124.html",
     "author": "MadPuffers",
     "genres": [
       "racing"
@@ -1802,7 +1802,7 @@ receiveGames([
     "id": 125,
     "name": "Granny 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/125.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/125.html",
+    "url": "html/125.html",
     "author": "DVloper",
     "genres": [
       "action",
@@ -1816,7 +1816,7 @@ receiveGames([
     "id": 126,
     "name": "Granny 3",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/126.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/126.html",
+    "url": "html/126.html",
     "author": "DVloper",
     "genres": [
       "action",
@@ -1830,7 +1830,7 @@ receiveGames([
     "id": 127,
     "name": "Fashion Battle",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/127.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/127.html",
+    "url": "html/127.html",
     "author": "Apps Mobile Games",
     "genres": [
       "action",
@@ -1844,7 +1844,7 @@ receiveGames([
     "id": 128,
     "name": "Slice it All",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/128.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/128.html",
+    "url": "html/128.html",
     "author": "VOODOO",
     "genres": [
       "action",
@@ -1859,7 +1859,7 @@ receiveGames([
     "id": 129,
     "name": "Flappy Bird",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/129.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/129.html",
+    "url": "html/129.html",
     "author": "Dong Nguyen",
     "genres": [
       "action",
@@ -1874,7 +1874,7 @@ receiveGames([
     "id": 130,
     "name": "osu!",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/130.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/130.html",
+    "url": "html/130.html",
     "author": "ppy",
     "genres": [
       "music",
@@ -1889,7 +1889,7 @@ receiveGames([
     "id": 146,
     "name": "8 Ball Classic",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/146.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/146.html",
+    "url": "html/146.html",
     "author": "Famobi",
     "genres": [
       "skill"
@@ -1902,7 +1902,7 @@ receiveGames([
     "id": 147,
     "name": "Angry Birds Showdown",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/147.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/147.html",
+    "url": "html/147.html",
     "author": "Rovio Entertainment",
     "genres": [
       "action",
@@ -1917,7 +1917,7 @@ receiveGames([
     "id": 148,
     "name": "Archery World Tour",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/148.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/148.html",
+    "url": "html/148.html",
     "author": "Famobi",
     "genres": [
       "sports",
@@ -1932,7 +1932,7 @@ receiveGames([
     "id": 149,
     "name": "Ball Blast",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/149.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/149.html",
+    "url": "html/149.html",
     "author": "Voodoo",
     "genres": [
       "action",
@@ -1947,7 +1947,7 @@ receiveGames([
     "id": 150,
     "name": "Cannon Balls 3D",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/150.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/150.html",
+    "url": "html/150.html",
     "author": "Famobi",
     "genres": [
       "3d"
@@ -1960,7 +1960,7 @@ receiveGames([
     "id": 151,
     "name": "Chess Classic",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/151.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/151.html",
+    "url": "html/151.html",
     "author": "Famobi",
     "genres": [
       "strategy",
@@ -1974,7 +1974,7 @@ receiveGames([
     "id": 152,
     "name": "Draw the Line",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/152.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/152.html",
+    "url": "html/152.html",
     "author": "Supersonic Studios LTD",
     "genres": [
       "puzzle",
@@ -1988,7 +1988,7 @@ receiveGames([
     "id": 153,
     "name": "Flappy Dunk",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/153.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/153.html",
+    "url": "html/153.html",
     "author": "Voodoo",
     "genres": [
       "action",
@@ -2004,7 +2004,7 @@ receiveGames([
     "id": 154,
     "name": "Fork n Sausage",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/154.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/154.html",
+    "url": "html/154.html",
     "author": "SayGames",
     "genres": [
       "action",
@@ -2019,7 +2019,7 @@ receiveGames([
     "id": 155,
     "name": "Guess Their Answer",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/155.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/155.html",
+    "url": "html/155.html",
     "author": "TapNation",
     "genres": [
       "puzzle",
@@ -2033,7 +2033,7 @@ receiveGames([
     "id": 156,
     "name": "Harvest.io",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/156.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/156.html",
+    "url": "html/156.html",
     "author": "CASUAL AZUR GAMES",
     "genres": [
       ".io"
@@ -2046,7 +2046,7 @@ receiveGames([
     "id": 157,
     "name": "Hill Climb Racing Lite",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/157.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/157.html",
+    "url": "html/157.html",
     "author": "Fingersoft",
     "genres": [
       "racing"
@@ -2059,7 +2059,7 @@ receiveGames([
     "id": 158,
     "name": "Pac-Man Superfast",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/158.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/158.html",
+    "url": "html/158.html",
     "author": "RedFox Games",
     "genres": [
       "action",
@@ -2074,7 +2074,7 @@ receiveGames([
     "id": 159,
     "name": "Parking Rush",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/159.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/159.html",
+    "url": "html/159.html",
     "author": "Nine&Nine",
     "genres": [
       "casual",
@@ -2088,7 +2088,7 @@ receiveGames([
     "id": 160,
     "name": "Race Master 3D",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/160.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/160.html",
+    "url": "html/160.html",
     "author": "Beresnev Games",
     "genres": [
       "3d"
@@ -2101,7 +2101,7 @@ receiveGames([
     "id": 161,
     "name": "State.io",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/161.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/161.html",
+    "url": "html/161.html",
     "author": "CASUAL AZUR GAMES",
     "genres": [
       ".io"
@@ -2114,7 +2114,7 @@ receiveGames([
     "id": 162,
     "name": "Tower Crash 3D",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/162.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/162.html",
+    "url": "html/162.html",
     "author": "Famobi",
     "genres": [
       "3d"
@@ -2127,7 +2127,7 @@ receiveGames([
     "id": 163,
     "name": "Trivia Crack",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/163.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/163.html",
+    "url": "html/163.html",
     "author": "etermax",
     "genres": [
       "strategy"
@@ -2140,7 +2140,7 @@ receiveGames([
     "id": 164,
     "name": "Crazy Cattle 3D",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/164.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/164-temp2.html",
+    "url": "html/164-temp2.html",
     "author": "4nn4t4t",
     "genres": [
       "3d"
@@ -2153,7 +2153,7 @@ receiveGames([
     "id": 165,
     "name": "Cheese Chompers 3D",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/165.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/165.html",
+    "url": "html/165.html",
     "author": "NavaNoid",
     "genres": [
       "3d"
@@ -2166,7 +2166,7 @@ receiveGames([
     "id": 166,
     "name": "Bad Parenting 1",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/166.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/166.html",
+    "url": "html/166.html",
     "author": "98corbins",
     "genres": [
       "action",
@@ -2181,7 +2181,7 @@ receiveGames([
     "id": 167,
     "name": "Blade Ball",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/167.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/167.html",
+    "url": "html/167.html",
     "author": "??",
     "genres": [
       "action",
@@ -2196,7 +2196,7 @@ receiveGames([
     "id": 168,
     "name": "Blocky Snakes",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/168.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/168.html",
+    "url": "html/168.html",
     "author": "Beedo Games",
     "genres": [
       "action",
@@ -2210,7 +2210,7 @@ receiveGames([
     "id": 169,
     "name": "Bloxorz",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/169.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/169.html",
+    "url": "html/169.html",
     "author": "Damien Clarke",
     "genres": [
       "puzzle",
@@ -2224,7 +2224,7 @@ receiveGames([
     "id": 170,
     "name": "Big Tower Tiny Square 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/170.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/170.html",
+    "url": "html/170.html",
     "author": "EO Interactive",
     "genres": [
       "tower-defense",
@@ -2239,7 +2239,7 @@ receiveGames([
     "id": 171,
     "name": "Candy Crush",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/171.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/171.html",
+    "url": "html/171.html",
     "author": "King.com",
     "genres": [
       "strategy",
@@ -2253,7 +2253,7 @@ receiveGames([
     "id": 172,
     "name": "Melon Playground",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/172.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/172.html",
+    "url": "html/172.html",
     "author": "playducky.com",
     "genres": [
       "action",
@@ -2268,7 +2268,7 @@ receiveGames([
     "id": 173,
     "name": "Drift Hunters",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/173.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/173.html",
+    "url": "html/173.html",
     "author": "Illia Kaminetskyi",
     "genres": [
       "racing",
@@ -2282,7 +2282,7 @@ receiveGames([
     "id": 174,
     "name": "World Box",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/174.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/174.html",
+    "url": "html/174.html",
     "author": "Kendja",
     "genres": [
       "strategy",
@@ -2297,7 +2297,7 @@ receiveGames([
     "id": 175,
     "name": "Run 1",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/175.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/175.html",
+    "url": "html/175.html",
     "author": "Joseph Cloutier",
     "genres": [
       "action",
@@ -2312,7 +2312,7 @@ receiveGames([
     "id": 176,
     "name": "Run 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/176.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/176.html",
+    "url": "html/176.html",
     "author": "Joseph Cloutier",
     "genres": [
       "action",
@@ -2327,7 +2327,7 @@ receiveGames([
     "id": 177,
     "name": "Run 3",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/177.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/177.html",
+    "url": "html/177.html",
     "author": "Joseph Cloutier",
     "genres": [
       "action",
@@ -2343,7 +2343,7 @@ receiveGames([
     "id": 178,
     "name": "Swords and Souls",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/178.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/178.html",
+    "url": "html/178.html",
     "author": "Armor Games",
     "genres": [
       "puzzle",
@@ -2357,7 +2357,7 @@ receiveGames([
     "id": 180,
     "name": "n-gon",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/180.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/180.html",
+    "url": "html/180.html",
     "author": "landgreen",
     "genres": [
       "action",
@@ -2372,7 +2372,7 @@ receiveGames([
     "id": 181,
     "name": "Minecraft 1.8.8",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/181.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/181.html",
+    "url": "html/181.html",
     "author": "lax1dude",
     "genres": [
       "adventure",
@@ -2388,7 +2388,7 @@ receiveGames([
     "id": 185,
     "name": "Five Nights at Freddy's: Sister Location",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/185.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/185.html",
+    "url": "html/185.html",
     "author": "Scott Cawthon",
     "genres": [
       "3d",
@@ -2403,7 +2403,7 @@ receiveGames([
     "id": 186,
     "name": "Ragdoll Archers",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/186.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/186.html",
+    "url": "html/186.html",
     "author": "Ericetto",
     "genres": [
       "action",
@@ -2418,7 +2418,7 @@ receiveGames([
     "id": 187,
     "name": "Papers, Please",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/187.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/187.html",
+    "url": "html/187.html",
     "author": "Lucas Pope",
     "genres": [
       "strategy",
@@ -2432,7 +2432,7 @@ receiveGames([
     "id": 188,
     "name": "Scrap Metal 3",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/188.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/188e.html",
+    "url": "html/188e.html",
     "author": "Ciorbyn",
     "genres": [
       "action",
@@ -2447,7 +2447,7 @@ receiveGames([
     "id": 190,
     "name": "Five Nights at Freddy's: World",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/190.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/190.html",
+    "url": "html/190.html",
     "author": "Scott Cawthon",
     "genres": [
       "3d",
@@ -2462,7 +2462,7 @@ receiveGames([
     "id": 191,
     "name": "Five Nights at Freddy's: Pizza Simulator",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/191.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/191.html",
+    "url": "html/191.html",
     "author": "Scott Cawthon",
     "genres": [
       "3d",
@@ -2477,7 +2477,7 @@ receiveGames([
     "id": 192,
     "name": "Five Nights at Freddy's: Ultimate Custom Night",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/192.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/192.html",
+    "url": "html/192.html",
     "author": "Scott Cawthon",
     "genres": [
       "3d",
@@ -2492,7 +2492,7 @@ receiveGames([
     "id": 193,
     "name": "Do NOT Take This Cat Home",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/193.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/193.html",
+    "url": "html/193.html",
     "author": "Pixelliminal",
     "genres": [
       "adventure",
@@ -2507,7 +2507,7 @@ receiveGames([
     "id": 194,
     "name": "People Playground",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/194-m.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/194-a.html",
+    "url": "html/194-a.html",
     "author": "Studio Minus, 98corbins",
     "genres": [
       "action",
@@ -2522,7 +2522,7 @@ receiveGames([
     "id": 195,
     "name": "R.E.P.O",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/195.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/195.html",
+    "url": "html/195.html",
     "author": "semiwork, 98corbins",
     "genres": [
       "action",
@@ -2537,7 +2537,7 @@ receiveGames([
     "id": 196,
     "name": "ULTRAKILL",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/196.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/196-fixed.html",
+    "url": "html/196-fixed.html",
     "author": "New Blood Interactive, Cake Logic",
     "genres": [
       "action",
@@ -2551,7 +2551,7 @@ receiveGames([
     "id": 197,
     "name": "Elastic Man",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/197.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/197.html",
+    "url": "html/197.html",
     "author": "David Li",
     "genres": [
       "casual",
@@ -2565,7 +2565,7 @@ receiveGames([
     "id": 198,
     "name": "Slope",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/198.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/198.html",
+    "url": "html/198.html",
     "author": "coweggs",
     "genres": [
       "action",
@@ -2580,7 +2580,7 @@ receiveGames([
     "id": 199,
     "name": "Time Shooter 1",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/199.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/199.html",
+    "url": "html/199.html",
     "author": "g80g",
     "genres": [
       "shooter"
@@ -2593,7 +2593,7 @@ receiveGames([
     "id": 200,
     "name": "Time Shooter 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/200.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/200.html",
+    "url": "html/200.html",
     "author": "g80g",
     "genres": [
       "shooter"
@@ -2606,7 +2606,7 @@ receiveGames([
     "id": 201,
     "name": "Time Shooter 3: SWAT",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/201.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/201.html",
+    "url": "html/201.html",
     "author": "g80g",
     "genres": [
       "shooter"
@@ -2619,7 +2619,7 @@ receiveGames([
     "id": 202,
     "name": "Carrom Clash",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/202.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/202.html",
+    "url": "html/202.html",
     "author": "GameSnacks",
     "genres": [
       "racing"
@@ -2632,7 +2632,7 @@ receiveGames([
     "id": 203,
     "name": "DOOM",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/203.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/203-a.html",
+    "url": "html/203-a.html",
     "author": "Id Software",
     "genres": [
       "action",
@@ -2646,7 +2646,7 @@ receiveGames([
     "id": 204,
     "name": "Five Nights at Winston's",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/204.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/204-a.html",
+    "url": "html/204-a.html",
     "author": "lax1dude",
     "genres": [
       "action",
@@ -2660,7 +2660,7 @@ receiveGames([
     "id": 205,
     "name": "Buckshot Roulette",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/205.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/205-f.html",
+    "url": "html/205-f.html",
     "author": "Mike Klubnika",
     "genres": [
       "action",
@@ -2676,7 +2676,7 @@ receiveGames([
     "id": 206,
     "name": "Tunnel Rush",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/206.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/206.html",
+    "url": "html/206.html",
     "author": "Deer Cat Games",
     "genres": [
       "action",
@@ -2691,7 +2691,7 @@ receiveGames([
     "id": 207,
     "name": "Snowbattle.io",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/207.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/207.html",
+    "url": "html/207.html",
     "author": "Royalec/Tokyo",
     "genres": [
       "action",
@@ -2705,7 +2705,7 @@ receiveGames([
     "id": 208,
     "name": "Rolly Vortex",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/208.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/208.html",
+    "url": "html/208.html",
     "author": "Voodoo",
     "genres": [
       "action",
@@ -2720,7 +2720,7 @@ receiveGames([
     "id": 209,
     "name": "Draw the Hill",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/209.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/209.html",
+    "url": "html/209.html",
     "author": "Stelennnn",
     "genres": [
       "action",
@@ -2734,7 +2734,7 @@ receiveGames([
     "id": 210,
     "name": "Dragon vs Bricks",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/210.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/210.html",
+    "url": "html/210.html",
     "author": "Voodoo",
     "genres": [
       "action",
@@ -2748,7 +2748,7 @@ receiveGames([
     "id": 211,
     "name": "Death Run 3D",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/211.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/211.html",
+    "url": "html/211.html",
     "author": "kevin.wang",
     "genres": [
       "action",
@@ -2764,7 +2764,7 @@ receiveGames([
     "id": 212,
     "name": "Cut the Rope",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/212.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/212-f.html",
+    "url": "html/212-f.html",
     "author": "ZeptoLab",
     "genres": [
       "strategy",
@@ -2778,7 +2778,7 @@ receiveGames([
     "id": 213,
     "name": "Cut the Rope: Time Travel",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/213.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/213-f.html",
+    "url": "html/213-f.html",
     "author": "ZeptoLab",
     "genres": [
       "strategy",
@@ -2792,7 +2792,7 @@ receiveGames([
     "id": 214,
     "name": "Cut the Rope: Holiday Gift",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/214.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/214-fi.html",
+    "url": "html/214-fi.html",
     "author": "ZeptoLab",
     "genres": [
       "strategy",
@@ -2806,7 +2806,7 @@ receiveGames([
     "id": 215,
     "name": "Bendy and the Ink Machine",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/215.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/215.html",
+    "url": "html/215.html",
     "author": "Joey Drew Studios",
     "genres": [
       "action",
@@ -2821,7 +2821,7 @@ receiveGames([
     "id": 216,
     "name": "That's Not My Neighbor",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/216.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/216.html",
+    "url": "html/216.html",
     "author": "Nacho Games",
     "genres": [
       "action",
@@ -2836,7 +2836,7 @@ receiveGames([
     "id": 217,
     "name": "Hotline Miami",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/217.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/217-c.html",
+    "url": "html/217-c.html",
     "author": "Dennaton Games",
     "genres": [
       "action",
@@ -2850,7 +2850,7 @@ receiveGames([
     "id": 218,
     "name": "Papa's Bakeria",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/218.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/218.html",
+    "url": "html/218.html",
     "author": "Flipline Studios",
     "genres": [
       "casual",
@@ -2865,7 +2865,7 @@ receiveGames([
     "id": 219,
     "name": "Papa's Burgeria",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/219.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/219.html",
+    "url": "html/219.html",
     "author": "Flipline Studios",
     "genres": [
       "casual",
@@ -2880,7 +2880,7 @@ receiveGames([
     "id": 220,
     "name": "Papa's Cheeseria",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/220.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/220.html",
+    "url": "html/220.html",
     "author": "Flipline Studios",
     "genres": [
       "action",
@@ -2894,7 +2894,7 @@ receiveGames([
     "id": 221,
     "name": "Papa's Cupcakeria",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/221.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/221.html",
+    "url": "html/221.html",
     "author": "Flipline Studios",
     "genres": [
       "casual",
@@ -2909,7 +2909,7 @@ receiveGames([
     "id": 222,
     "name": "Papa's Donuteria",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/222.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/222.html",
+    "url": "html/222.html",
     "author": "Flipline Studios",
     "genres": [
       "casual",
@@ -2924,7 +2924,7 @@ receiveGames([
     "id": 223,
     "name": "Papa's Freezeria",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/223.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/223.html",
+    "url": "html/223.html",
     "author": "Flipline Studios",
     "genres": [
       "casual",
@@ -2939,7 +2939,7 @@ receiveGames([
     "id": 224,
     "name": "Papa's Hot Doggeria",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/224.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/224.html",
+    "url": "html/224.html",
     "author": "Flipline Studios",
     "genres": [
       "casual",
@@ -2954,7 +2954,7 @@ receiveGames([
     "id": 225,
     "name": "Papa's Pancakeria",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/225.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/225.html",
+    "url": "html/225.html",
     "author": "Flipline Studios",
     "genres": [
       "casual",
@@ -2969,7 +2969,7 @@ receiveGames([
     "id": 226,
     "name": "Papa's Pastaria",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/226.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/226.html",
+    "url": "html/226.html",
     "author": "Flipline Studios",
     "genres": [
       "casual",
@@ -2984,7 +2984,7 @@ receiveGames([
     "id": 227,
     "name": "Papa's Pizeria",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/227.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/227.html",
+    "url": "html/227.html",
     "author": "Flipline Studios",
     "genres": [
       "casual",
@@ -2999,7 +2999,7 @@ receiveGames([
     "id": 228,
     "name": "Papa's Scooperia",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/228.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/228.html",
+    "url": "html/228.html",
     "author": "Flipline Studios",
     "genres": [
       "casual",
@@ -3014,7 +3014,7 @@ receiveGames([
     "id": 229,
     "name": "Papa's Sushiria",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/229.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/229.html",
+    "url": "html/229.html",
     "author": "Flipline Studios",
     "genres": [
       "casual",
@@ -3029,7 +3029,7 @@ receiveGames([
     "id": 230,
     "name": "Papa's Taco Mia",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/230.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/230.html",
+    "url": "html/230.html",
     "author": "Flipline Studios",
     "genres": [
       "casual",
@@ -3044,7 +3044,7 @@ receiveGames([
     "id": 231,
     "name": "Papa's Wingeria",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/231.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/231.html",
+    "url": "html/231.html",
     "author": "Flipline Studios",
     "genres": [
       "casual",
@@ -3059,7 +3059,7 @@ receiveGames([
     "id": 232,
     "name": "Plants vs Zombies",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/232.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/232.html",
+    "url": "html/232.html",
     "author": "PopCap Games",
     "genres": [
       "action",
@@ -3074,7 +3074,7 @@ receiveGames([
     "id": 233,
     "name": "Superhot",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/233.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/233.html",
+    "url": "html/233.html",
     "author": "Superhot Team",
     "genres": [
       "action",
@@ -3088,7 +3088,7 @@ receiveGames([
     "id": 234,
     "name": "Duck Life",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/234.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/234.html",
+    "url": "html/234.html",
     "author": "Mad.com",
     "genres": [
       "action",
@@ -3102,7 +3102,7 @@ receiveGames([
     "id": 235,
     "name": "Duck Life 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/235.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/235.html",
+    "url": "html/235.html",
     "author": "Mad.com",
     "genres": [
       "action",
@@ -3116,7 +3116,7 @@ receiveGames([
     "id": 236,
     "name": "Duck Life 3",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/236.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/236.html",
+    "url": "html/236.html",
     "author": "Mad.com",
     "genres": [
       "action",
@@ -3130,7 +3130,7 @@ receiveGames([
     "id": 237,
     "name": "Duck Life 4",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/237.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/237.html",
+    "url": "html/237.html",
     "author": "Mad.com",
     "genres": [
       "action",
@@ -3144,7 +3144,7 @@ receiveGames([
     "id": 238,
     "name": "Duck Life 5",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/238.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/238.html",
+    "url": "html/238.html",
     "author": "Mad.com",
     "genres": [
       "action",
@@ -3158,7 +3158,7 @@ receiveGames([
     "id": 239,
     "name": "Red Ball",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/239.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/239.html",
+    "url": "html/239.html",
     "author": "Yohoho Games",
     "genres": [
       "action",
@@ -3173,7 +3173,7 @@ receiveGames([
     "id": 240,
     "name": "Red Ball 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/240.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/240.html",
+    "url": "html/240.html",
     "author": "Yohoho Games",
     "genres": [
       "action",
@@ -3188,7 +3188,7 @@ receiveGames([
     "id": 241,
     "name": "Red Ball 3",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/241.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/241.html",
+    "url": "html/241.html",
     "author": "Yohoho Games",
     "genres": [
       "action",
@@ -3203,7 +3203,7 @@ receiveGames([
     "id": 242,
     "name": "Red Ball 4",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/242.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/242.html",
+    "url": "html/242.html",
     "author": "Yohoho Games",
     "genres": [
       "action",
@@ -3218,7 +3218,7 @@ receiveGames([
     "id": 243,
     "name": "Red Ball 4 Vol. 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/243.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/243.html",
+    "url": "html/243.html",
     "author": "Yohoho Games",
     "genres": [
       "action",
@@ -3233,7 +3233,7 @@ receiveGames([
     "id": 244,
     "name": "Red Ball 4 Vol. 3",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/244.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/244.html",
+    "url": "html/244.html",
     "author": "Yohoho Games",
     "genres": [
       "action",
@@ -3248,7 +3248,7 @@ receiveGames([
     "id": 245,
     "name": "Wheely",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/245.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/245.html",
+    "url": "html/245.html",
     "author": "Pegas Games",
     "genres": [
       "action",
@@ -3263,7 +3263,7 @@ receiveGames([
     "id": 246,
     "name": "Wheely 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/246.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/246.html",
+    "url": "html/246.html",
     "author": "Pegas Games",
     "genres": [
       "action",
@@ -3278,7 +3278,7 @@ receiveGames([
     "id": 247,
     "name": "Wheely 3",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/247.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/247.html",
+    "url": "html/247.html",
     "author": "Pegas Games",
     "genres": [
       "action",
@@ -3293,7 +3293,7 @@ receiveGames([
     "id": 248,
     "name": "Wheely 4",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/248.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/248.html",
+    "url": "html/248.html",
     "author": "Pegas Games",
     "genres": [
       "action",
@@ -3308,7 +3308,7 @@ receiveGames([
     "id": 249,
     "name": "Wheely 5",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/249.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/249.html",
+    "url": "html/249.html",
     "author": "Pegas Games",
     "genres": [
       "action",
@@ -3323,7 +3323,7 @@ receiveGames([
     "id": 250,
     "name": "Wheely 6",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/250.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/250.html",
+    "url": "html/250.html",
     "author": "Pegas Games",
     "genres": [
       "action",
@@ -3338,7 +3338,7 @@ receiveGames([
     "id": 251,
     "name": "Wheely 7",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/251.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/251.html",
+    "url": "html/251.html",
     "author": "Pegas Games",
     "genres": [
       "action",
@@ -3353,7 +3353,7 @@ receiveGames([
     "id": 252,
     "name": "Wheely 8",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/252.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/252.html",
+    "url": "html/252.html",
     "author": "Pegas Games",
     "genres": [
       "action",
@@ -3368,7 +3368,7 @@ receiveGames([
     "id": 255,
     "name": "Crazy Chicken 3D",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/255.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/255.html",
+    "url": "html/255.html",
     "author": "Teasle",
     "genres": [
       "3d"
@@ -3381,7 +3381,7 @@ receiveGames([
     "id": 256,
     "name": "Crazy Kitty 3D",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/256.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/256.html",
+    "url": "html/256.html",
     "author": "Teasle",
     "genres": [
       "3d"
@@ -3394,7 +3394,7 @@ receiveGames([
     "id": 257,
     "name": "Google Baseball",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/257.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/257.html",
+    "url": "html/257.html",
     "author": "Google",
     "genres": [
       "sports",
@@ -3409,7 +3409,7 @@ receiveGames([
     "id": 258,
     "name": "A Bite at Freddy's",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/258.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/258.html",
+    "url": "html/258.html",
     "author": "Garrett McKay",
     "genres": [
       "action",
@@ -3423,7 +3423,7 @@ receiveGames([
     "id": 259,
     "name": "Class of '09",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/259.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/259.html",
+    "url": "html/259.html",
     "author": "sbn3",
     "genres": [
       "adventure",
@@ -3437,7 +3437,7 @@ receiveGames([
     "id": 260,
     "name": "RE:RUN",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/260.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/260.html",
+    "url": "html/260.html",
     "author": "DaniDev",
     "genres": [
       "action",
@@ -3452,7 +3452,7 @@ receiveGames([
     "id": 261,
     "name": "Fruit Ninja",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/261.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/261.html",
+    "url": "html/261.html",
     "author": "Halfbrick Studios",
     "genres": [
       "action",
@@ -3467,7 +3467,7 @@ receiveGames([
     "id": 262,
     "name": "Half Life",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/262.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/262.html",
+    "url": "html/262.html",
     "author": "Valve",
     "genres": [
       "action",
@@ -3482,7 +3482,7 @@ receiveGames([
     "id": 263,
     "name": "Quake III Arena",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/263.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/263.html",
+    "url": "html/263.html",
     "author": "Id Software",
     "genres": [
       "action",
@@ -3496,7 +3496,7 @@ receiveGames([
     "id": 264,
     "name": "Escape Road",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/264.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/264.html",
+    "url": "html/264.html",
     "author": "AzGames",
     "genres": [
       "action",
@@ -3511,7 +3511,7 @@ receiveGames([
     "id": 265,
     "name": "Escape Road 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/265.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/265-fix.html",
+    "url": "html/265-fix.html",
     "author": "AzGames",
     "genres": [
       "action",
@@ -3526,7 +3526,7 @@ receiveGames([
     "id": 266,
     "name": "Speed Stars",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/266.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/266-a.html",
+    "url": "html/266-a.html",
     "author": "Luke Doukakis",
     "genres": [
       "sports",
@@ -3540,7 +3540,7 @@ receiveGames([
     "id": 267,
     "name": "Pizza Tower",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/267.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/267.html",
+    "url": "html/267.html",
     "author": "Tour De Pizza, BurnedPopcorn",
     "genres": [
       "tower-defense",
@@ -3554,7 +3554,7 @@ receiveGames([
     "id": 268,
     "name": "Bacon May Die",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/268.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/268.html",
+    "url": "html/268.html",
     "author": "SnoutUp",
     "genres": [
       "action",
@@ -3568,7 +3568,7 @@ receiveGames([
     "id": 269,
     "name": "Bad Ice Cream",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/269.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/269.html",
+    "url": "html/269.html",
     "author": "Nitrome",
     "genres": [
       "action",
@@ -3583,7 +3583,7 @@ receiveGames([
     "id": 270,
     "name": "Bad Ice Cream 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/270.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/270.html",
+    "url": "html/270.html",
     "author": "Nitrome",
     "genres": [
       "action",
@@ -3598,7 +3598,7 @@ receiveGames([
     "id": 271,
     "name": "Bad Ice Cream 3",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/271.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/271.html",
+    "url": "html/271.html",
     "author": "Nitrome",
     "genres": [
       "action",
@@ -3613,7 +3613,7 @@ receiveGames([
     "id": 272,
     "name": "Basketball Stars",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/272.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/272.html",
+    "url": "html/272.html",
     "author": "MadPuffers",
     "genres": [
       "sports",
@@ -3628,7 +3628,7 @@ receiveGames([
     "id": 273,
     "name": "BlockPost",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/273.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/273.html",
+    "url": "html/273.html",
     "author": "SkullCap Studios",
     "genres": [
       "action",
@@ -3642,7 +3642,7 @@ receiveGames([
     "id": 274,
     "name": "CircloO",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/274.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/274.html",
+    "url": "html/274.html",
     "author": "Florian van Strien",
     "genres": [
       "puzzle",
@@ -3656,7 +3656,7 @@ receiveGames([
     "id": 275,
     "name": "CircloO 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/275.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/275.html",
+    "url": "html/275.html",
     "author": "Florian van Strien",
     "genres": [
       "puzzle",
@@ -3670,7 +3670,7 @@ receiveGames([
     "id": 276,
     "name": "Drift Boss",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/276.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/276.html",
+    "url": "html/276.html",
     "author": "marketjs",
     "genres": [
       "racing",
@@ -3684,7 +3684,7 @@ receiveGames([
     "id": 277,
     "name": "Evil Glitch",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/277.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/277.html",
+    "url": "html/277.html",
     "author": "agar3s",
     "genres": [
       "action",
@@ -3699,7 +3699,7 @@ receiveGames([
     "id": 278,
     "name": "Madalin Stunt Cars 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/278.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/278.html",
+    "url": "html/278.html",
     "author": "Madalin Games",
     "genres": [
       "racing"
@@ -3712,7 +3712,7 @@ receiveGames([
     "id": 279,
     "name": "Madalin Stunt Cars 3",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/279.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/279.html",
+    "url": "html/279.html",
     "author": "Madalin Games",
     "genres": [
       "racing"
@@ -3725,7 +3725,7 @@ receiveGames([
     "id": 280,
     "name": "Papery Planes",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/280.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/280.html",
+    "url": "html/280.html",
     "author": "Akos Makovics",
     "genres": [
       "casual",
@@ -3739,7 +3739,7 @@ receiveGames([
     "id": 281,
     "name": "Pixel Gun Survival",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/281.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/281.html",
+    "url": "html/281.html",
     "author": "Mentolatux",
     "genres": [
       "action",
@@ -3753,7 +3753,7 @@ receiveGames([
     "id": 282,
     "name": "Protektor",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/282.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/282.html",
+    "url": "html/282.html",
     "author": "rujogames",
     "genres": [
       "action",
@@ -3768,7 +3768,7 @@ receiveGames([
     "id": 283,
     "name": "Rooftop Snipers",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/283.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/283.html",
+    "url": "html/283.html",
     "author": "New Eich Games",
     "genres": [
       "action",
@@ -3782,7 +3782,7 @@ receiveGames([
     "id": 284,
     "name": "War The Knights",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/284.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/284.html",
+    "url": "html/284.html",
     "author": "BANZAI",
     "genres": [
       "action",
@@ -3796,7 +3796,7 @@ receiveGames([
     "id": 285,
     "name": "Basket Bros",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/285.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/285.html",
+    "url": "html/285.html",
     "author": "Blue Wizard Digital",
     "genres": [
       "sports",
@@ -3811,7 +3811,7 @@ receiveGames([
     "id": 286,
     "name": "Endoparasitic",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/286.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/286.html",
+    "url": "html/286.html",
     "author": "Deep Root Interactive",
     "genres": [
       "action",
@@ -3825,7 +3825,7 @@ receiveGames([
     "id": 287,
     "name": "Riddle School",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/287.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/287.html",
+    "url": "html/287.html",
     "author": "JonBro",
     "genres": [
       "adventure",
@@ -3839,7 +3839,7 @@ receiveGames([
     "id": 288,
     "name": "Riddle School 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/288.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/288.html",
+    "url": "html/288.html",
     "author": "JonBro",
     "genres": [
       "adventure",
@@ -3853,7 +3853,7 @@ receiveGames([
     "id": 289,
     "name": "Riddle School 3",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/289.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/289.html",
+    "url": "html/289.html",
     "author": "JonBro",
     "genres": [
       "adventure",
@@ -3867,7 +3867,7 @@ receiveGames([
     "id": 290,
     "name": "Riddle School 4",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/290.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/290.html",
+    "url": "html/290.html",
     "author": "JonBro",
     "genres": [
       "adventure",
@@ -3881,7 +3881,7 @@ receiveGames([
     "id": 291,
     "name": "Riddle School 5",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/291.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/291.html",
+    "url": "html/291.html",
     "author": "JonBro",
     "genres": [
       "adventure",
@@ -3895,7 +3895,7 @@ receiveGames([
     "id": 292,
     "name": "Riddle Transfer",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/292.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/292.html",
+    "url": "html/292.html",
     "author": "JonBro",
     "genres": [
       "adventure",
@@ -3909,7 +3909,7 @@ receiveGames([
     "id": 293,
     "name": "Riddle Transfer 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/293.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/293.html",
+    "url": "html/293.html",
     "author": "JonBro",
     "genres": [
       "adventure",
@@ -3923,7 +3923,7 @@ receiveGames([
     "id": 294,
     "name": "Idle Dice",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/294.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/294.html",
+    "url": "html/294.html",
     "author": "Lutz Schönfelder",
     "genres": [
       "strategy",
@@ -3937,7 +3937,7 @@ receiveGames([
     "id": 295,
     "name": "12 Mini Battles",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/295.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/295.html",
+    "url": "html/295.html",
     "author": "Shared Dreams Studio",
     "genres": [
       "action",
@@ -3951,7 +3951,7 @@ receiveGames([
     "id": 297,
     "name": "Minecraft 1.5.2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/297.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/297.html",
+    "url": "html/297.html",
     "author": "lax1dude",
     "genres": [
       "adventure",
@@ -3966,7 +3966,7 @@ receiveGames([
     "id": 302,
     "name": "Little Runmo",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/302.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/302.html",
+    "url": "html/302.html",
     "author": "juhosprite, gooseworx",
     "genres": [
       "action",
@@ -3981,7 +3981,7 @@ receiveGames([
     "id": 303,
     "name": "Territorial.io",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/303.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/303.html",
+    "url": "html/303.html",
     "author": "TTCreator",
     "genres": [
       ".io"
@@ -3994,7 +3994,7 @@ receiveGames([
     "id": 304,
     "name": "Alien Hominid",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/304.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/304.html",
+    "url": "html/304.html",
     "author": "Tom Fulp, Dan Paladin",
     "genres": [
       "action",
@@ -4009,7 +4009,7 @@ receiveGames([
     "id": 305,
     "name": "Tanuki Sunset",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/305.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/305.html",
+    "url": "html/305.html",
     "author": "Rewind Games",
     "genres": [
       "racing",
@@ -4023,7 +4023,7 @@ receiveGames([
     "id": 306,
     "name": "Shipo.io",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/306.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/306.html",
+    "url": "html/306.html",
     "author": "OnRush Studio",
     "genres": [
       ".io"
@@ -4036,7 +4036,7 @@ receiveGames([
     "id": 307,
     "name": "Rainbow Obby",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/307.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/307.html",
+    "url": "html/307.html",
     "author": "emolingo games",
     "genres": [
       "action",
@@ -4051,7 +4051,7 @@ receiveGames([
     "id": 308,
     "name": "Nazi Zombies: Portable",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/308.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/308.html",
+    "url": "html/308.html",
     "author": "nzp team",
     "genres": [
       "action",
@@ -4065,7 +4065,7 @@ receiveGames([
     "id": 309,
     "name": "Sandboxels",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/309.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/309.html",
+    "url": "html/309.html",
     "author": "R74N",
     "genres": [
       "action",
@@ -4079,7 +4079,7 @@ receiveGames([
     "id": 310,
     "name": "Dreadhead Parkour",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/310.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/310.html",
+    "url": "html/310.html",
     "author": "GameTornado",
     "genres": [
       "action",
@@ -4094,7 +4094,7 @@ receiveGames([
     "id": 311,
     "name": "Sandtris",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/311.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/311.html",
+    "url": "html/311.html",
     "author": "FRANCO MIRANDA",
     "genres": [
       "puzzle",
@@ -4108,7 +4108,7 @@ receiveGames([
     "id": 312,
     "name": "BlackJack",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/312.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/312.html",
+    "url": "html/312.html",
     "author": "Synic-dx",
     "genres": [
       "strategy",
@@ -4122,7 +4122,7 @@ receiveGames([
     "id": 313,
     "name": "Minesweeper Mania",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/313.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/313.html",
+    "url": "html/313.html",
     "author": "gamesnacks",
     "genres": [
       "puzzle",
@@ -4137,7 +4137,7 @@ receiveGames([
     "id": 314,
     "name": "Super Mario 63",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/314.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/314.html",
+    "url": "html/314.html",
     "author": "Runouw",
     "genres": [
       "action",
@@ -4152,7 +4152,7 @@ receiveGames([
     "id": 315,
     "name": "Jelly Mario",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/315.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/315.html",
+    "url": "html/315.html",
     "author": "Schteppe",
     "genres": [
       "action",
@@ -4167,7 +4167,7 @@ receiveGames([
     "id": 316,
     "name": "Angry Birds Chrome",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/316.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/316.html",
+    "url": "html/316.html",
     "author": "Rovio",
     "genres": [
       "action",
@@ -4182,7 +4182,7 @@ receiveGames([
     "id": 317,
     "name": "sandspiel",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/317.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/317.html",
+    "url": "html/317.html",
     "author": "maxbittker",
     "genres": [
       "casual",
@@ -4196,7 +4196,7 @@ receiveGames([
     "id": 318,
     "name": "Side Effects",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/318.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/318.html",
+    "url": "html/318.html",
     "author": "hi rohun, Mr.Pootsley, Jaybooty",
     "genres": [
       "action",
@@ -4211,7 +4211,7 @@ receiveGames([
     "id": 319,
     "name": "Build a Queen",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/319.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/319.html",
+    "url": "html/319.html",
     "author": "Supersonic Studios LTD",
     "genres": [
       "action",
@@ -4225,7 +4225,7 @@ receiveGames([
     "id": 320,
     "name": "3D Bowling",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/320.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/320.html",
+    "url": "html/320.html",
     "author": "Italic Games",
     "genres": [
       "3d"
@@ -4238,7 +4238,7 @@ receiveGames([
     "id": 321,
     "name": "Room Sort",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/321.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/321.html",
+    "url": "html/321.html",
     "author": "Gamincat",
     "genres": [
       "puzzle",
@@ -4252,7 +4252,7 @@ receiveGames([
     "id": 322,
     "name": "Sushi Roll",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/322.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/322.html",
+    "url": "html/322.html",
     "author": "Famobi",
     "genres": [
       "casual",
@@ -4266,7 +4266,7 @@ receiveGames([
     "id": 323,
     "name": "Find the Alien",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/323.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/323.html",
+    "url": "html/323.html",
     "author": "MOONEE PUBLISHING LTD",
     "genres": [
       "puzzle",
@@ -4280,7 +4280,7 @@ receiveGames([
     "id": 324,
     "name": "Maze Speedrun",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/324.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/324.html",
+    "url": "html/324.html",
     "author": "Raval Matic",
     "genres": [
       "action",
@@ -4295,7 +4295,7 @@ receiveGames([
     "id": 325,
     "name": "Kitchen Bazar",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/325.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/325.html",
+    "url": "html/325.html",
     "author": "Gameloft",
     "genres": [
       "casual",
@@ -4309,7 +4309,7 @@ receiveGames([
     "id": 326,
     "name": "Pokey Ball",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/326.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/326.html",
+    "url": "html/326.html",
     "author": "Voodoo",
     "genres": [
       "action",
@@ -4324,7 +4324,7 @@ receiveGames([
     "id": 327,
     "name": "Slime.io",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/327.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/327.html",
+    "url": "html/327.html",
     "author": "GameSnacks",
     "genres": [
       ".io"
@@ -4337,7 +4337,7 @@ receiveGames([
     "id": 328,
     "name": "Om Nom Run",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/328.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/328.html",
+    "url": "html/328.html",
     "author": "ZeptoLab",
     "genres": [
       "action",
@@ -4352,7 +4352,7 @@ receiveGames([
     "id": 329,
     "name": "TileTopia",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/329.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/329a.html",
+    "url": "html/329a.html",
     "author": "GameSnacks",
     "genres": [
       "puzzle",
@@ -4366,7 +4366,7 @@ receiveGames([
     "id": 330,
     "name": "BitPlanes",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/330.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/330.html",
+    "url": "html/330.html",
     "author": "Anton Medvedev",
     "genres": [
       "action",
@@ -4381,7 +4381,7 @@ receiveGames([
     "id": 331,
     "name": "Crazy Cars",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/331.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/331.html",
+    "url": "html/331.html",
     "author": "No Pressure Studios",
     "genres": [
       "racing"
@@ -4394,7 +4394,7 @@ receiveGames([
     "id": 333,
     "name": "Fancy Pants Adventure",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/333.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/333.html",
+    "url": "html/333.html",
     "author": "Brad Borne",
     "genres": [
       "adventure"
@@ -4407,7 +4407,7 @@ receiveGames([
     "id": 334,
     "name": "Fancy Pants Adventure 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/334.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/334.html",
+    "url": "html/334.html",
     "author": "Brad Borne",
     "genres": [
       "adventure"
@@ -4420,7 +4420,7 @@ receiveGames([
     "id": 335,
     "name": "Fancy Pants Adventure 3",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/335.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/335.html",
+    "url": "html/335.html",
     "author": "Brad Borne",
     "genres": [
       "adventure"
@@ -4433,7 +4433,7 @@ receiveGames([
     "id": 336,
     "name": "Fancy Pants Adventure 4 Part 1",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/336.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/336.html",
+    "url": "html/336.html",
     "author": "Brad Borne",
     "genres": [
       "adventure"
@@ -4446,7 +4446,7 @@ receiveGames([
     "id": 337,
     "name": "Fancy Pants Adventure 4 Part 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/337.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/337.html",
+    "url": "html/337.html",
     "author": "Brad Borne",
     "genres": [
       "adventure"
@@ -4459,7 +4459,7 @@ receiveGames([
     "id": 338,
     "name": "Getaway Shootout",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/338.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/338.html",
+    "url": "html/338.html",
     "author": "New Eich Games",
     "genres": [
       "shooter"
@@ -4472,7 +4472,7 @@ receiveGames([
     "id": 339,
     "name": "House of Hazards",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/339.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/339.html",
+    "url": "html/339.html",
     "author": "New Eich Games",
     "genres": [
       "action",
@@ -4486,7 +4486,7 @@ receiveGames([
     "id": 340,
     "name": "Learn to Fly",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/340.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/340.html",
+    "url": "html/340.html",
     "author": "Light Bringer Games",
     "genres": [
       "action",
@@ -4501,7 +4501,7 @@ receiveGames([
     "id": 341,
     "name": "Learn to Fly 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/341.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/341.html",
+    "url": "html/341.html",
     "author": "Light Bringer Games",
     "genres": [
       "action",
@@ -4516,7 +4516,7 @@ receiveGames([
     "id": 342,
     "name": "Learn to Fly 3",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/342.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/342.html",
+    "url": "html/342.html",
     "author": "Light Bringer Games",
     "genres": [
       "action",
@@ -4531,7 +4531,7 @@ receiveGames([
     "id": 343,
     "name": "Learn to Fly Idle",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/343.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/343.html",
+    "url": "html/343.html",
     "author": "Light Bringer Games",
     "genres": [
       "idle"
@@ -4544,7 +4544,7 @@ receiveGames([
     "id": 344,
     "name": "Raft Wars",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/344.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/344.html",
+    "url": "html/344.html",
     "author": "GaZZer Game",
     "genres": [
       "action",
@@ -4558,7 +4558,7 @@ receiveGames([
     "id": 345,
     "name": "Raft Wars 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/345.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/345.html",
+    "url": "html/345.html",
     "author": "GaZZer Game",
     "genres": [
       "action",
@@ -4572,7 +4572,7 @@ receiveGames([
     "id": 346,
     "name": "Sort the Court",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/346.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/346.html",
+    "url": "html/346.html",
     "author": "graebor",
     "genres": [
       "puzzle",
@@ -4586,7 +4586,7 @@ receiveGames([
     "id": 347,
     "name": "SpiderDoll",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/347.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/347.html",
+    "url": "html/347.html",
     "author": "Ysopprod",
     "genres": [
       "action",
@@ -4601,7 +4601,7 @@ receiveGames([
     "id": 348,
     "name": "They Are Coming",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/348.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/348.html",
+    "url": "html/348.html",
     "author": "OnHit Developments",
     "genres": [
       "action",
@@ -4615,7 +4615,7 @@ receiveGames([
     "id": 349,
     "name": "Spiral Roll",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/349.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/349.html",
+    "url": "html/349.html",
     "author": "Voodoo",
     "genres": [
       "action",
@@ -4629,7 +4629,7 @@ receiveGames([
     "id": 350,
     "name": "Binding of Issac: Wrath of the Lamb",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/350.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/350.html",
+    "url": "html/350.html",
     "author": "Edmund McMillen",
     "genres": [
       "action",
@@ -4644,7 +4644,7 @@ receiveGames([
     "id": 351,
     "name": "Happy Sheepies",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/351.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/351.html",
+    "url": "html/351.html",
     "author": "Berker Games",
     "genres": [
       "casual",
@@ -4658,7 +4658,7 @@ receiveGames([
     "id": 353,
     "name": "Blumgi Rocket",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/353.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/353.html",
+    "url": "html/353.html",
     "author": "Blumgi",
     "genres": [
       "action",
@@ -4673,7 +4673,7 @@ receiveGames([
     "id": 354,
     "name": "Adventure Capatalist",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/354.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/354-a.html",
+    "url": "html/354-a.html",
     "author": "Hyper Hippo Games",
     "genres": [
       "adventure"
@@ -4686,7 +4686,7 @@ receiveGames([
     "id": 355,
     "name": "Dadish 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/355.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/355.html",
+    "url": "html/355.html",
     "author": "Thomas K. Young",
     "genres": [
       "action",
@@ -4701,7 +4701,7 @@ receiveGames([
     "id": 356,
     "name": "Dadish 3",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/356.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/356.html",
+    "url": "html/356.html",
     "author": "Thomas K. Young",
     "genres": [
       "action",
@@ -4716,7 +4716,7 @@ receiveGames([
     "id": 357,
     "name": "Dadish",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/357.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/357.html",
+    "url": "html/357.html",
     "author": "Thomas K. Young",
     "genres": [
       "action",
@@ -4731,7 +4731,7 @@ receiveGames([
     "id": 358,
     "name": "Dadish 3D",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/358.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/358.html",
+    "url": "html/358.html",
     "author": "Thomas K. Young",
     "genres": [
       "3d"
@@ -4744,7 +4744,7 @@ receiveGames([
     "id": 359,
     "name": "Daily Dadish",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/359.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/359.html",
+    "url": "html/359.html",
     "author": "Thomas K. Young",
     "genres": [
       "action",
@@ -4759,7 +4759,7 @@ receiveGames([
     "id": 360,
     "name": "EvoWars.io",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/360.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/360.html",
+    "url": "html/360.html",
     "author": "Night Steed S.C.",
     "genres": [
       "action",
@@ -4774,7 +4774,7 @@ receiveGames([
     "id": 361,
     "name": "Google Feud",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/361.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/361.html",
+    "url": "html/361.html",
     "author": "Justin Hook",
     "genres": [
       "puzzle",
@@ -4788,7 +4788,7 @@ receiveGames([
     "id": 362,
     "name": "Idle Breakout",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/362.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/362.html",
+    "url": "html/362.html",
     "author": "Kodiqi",
     "genres": [
       "idle"
@@ -4801,7 +4801,7 @@ receiveGames([
     "id": 363,
     "name": "Idle Lumber Inc",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/363.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/363.html",
+    "url": "html/363.html",
     "author": "NoPowerUp",
     "genres": [
       "idle"
@@ -4814,7 +4814,7 @@ receiveGames([
     "id": 364,
     "name": "Idle Mining Empire",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/364.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/364.html",
+    "url": "html/364.html",
     "author": "marketjs",
     "genres": [
       "idle"
@@ -4827,7 +4827,7 @@ receiveGames([
     "id": 365,
     "name": "JustFall.lol",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/365.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/365.html",
+    "url": "html/365.html",
     "author": "JustPlay.LOL",
     "genres": [
       "action",
@@ -4841,7 +4841,7 @@ receiveGames([
     "id": 366,
     "name": "Merge Harvest",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/366.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/366.html",
+    "url": "html/366.html",
     "author": "idfk",
     "genres": [
       "strategy",
@@ -4855,7 +4855,7 @@ receiveGames([
     "id": 367,
     "name": "Parking Fury 3D",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/367.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/367.html",
+    "url": "html/367.html",
     "author": "Brain Software",
     "genres": [
       "3d"
@@ -4868,7 +4868,7 @@ receiveGames([
     "id": 368,
     "name": "Slope 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/368.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/368.html",
+    "url": "html/368.html",
     "author": "idfk",
     "genres": [
       "action",
@@ -4883,7 +4883,7 @@ receiveGames([
     "id": 369,
     "name": "Slowroads",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/369.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/369.html",
+    "url": "html/369.html",
     "author": "Topograph Interactive",
     "genres": [
       "casual",
@@ -4897,7 +4897,7 @@ receiveGames([
     "id": 370,
     "name": "Smash Karts",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/370.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/370-f.html",
+    "url": "html/370-f.html",
     "author": "Tall Team",
     "genres": [
       "action",
@@ -4911,7 +4911,7 @@ receiveGames([
     "id": 371,
     "name": "Stickman Fight Ragdoll",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/371.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/371e.html",
+    "url": "html/371e.html",
     "author": "Vanorium",
     "genres": [
       "action",
@@ -4925,7 +4925,7 @@ receiveGames([
     "id": 372,
     "name": "Stickman Boost",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/372.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/372.html",
+    "url": "html/372.html",
     "author": "y8",
     "genres": [
       "action"
@@ -4938,7 +4938,7 @@ receiveGames([
     "id": 373,
     "name": "Stickman Climb",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/373.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/373.html",
+    "url": "html/373.html",
     "author": "No Pressure Studios",
     "genres": [
       "action"
@@ -4951,7 +4951,7 @@ receiveGames([
     "id": 374,
     "name": "Stickman Golf",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/374.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/374e.html",
+    "url": "html/374e.html",
     "author": "NoodleCake",
     "genres": [
       "action"
@@ -4964,7 +4964,7 @@ receiveGames([
     "id": 375,
     "name": "2048 Merge Run",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/375.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/375.html",
+    "url": "html/375.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -4980,7 +4980,7 @@ receiveGames([
     "id": 376,
     "name": "Build a Big Army",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/376.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/376.html",
+    "url": "html/376.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -4994,7 +4994,7 @@ receiveGames([
     "id": 377,
     "name": "Build a Plane",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/377.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/377.html",
+    "url": "html/377.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5008,7 +5008,7 @@ receiveGames([
     "id": 378,
     "name": "Camouflage and Sniper",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/378.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/378.html",
+    "url": "html/378.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5022,7 +5022,7 @@ receiveGames([
     "id": 379,
     "name": "Car Survival 3D",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/379.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/379.html",
+    "url": "html/379.html",
     "author": "Yandex",
     "genres": [
       "3d",
@@ -5036,7 +5036,7 @@ receiveGames([
     "id": 380,
     "name": "City Defense",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/380.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/380.html",
+    "url": "html/380.html",
     "author": "Yandex",
     "genres": [
       "tower-defense",
@@ -5051,7 +5051,7 @@ receiveGames([
     "id": 381,
     "name": "Clothing Shop 3D",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/381.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/381.html",
+    "url": "html/381.html",
     "author": "Yandex",
     "genres": [
       "3d"
@@ -5064,7 +5064,7 @@ receiveGames([
     "id": 382,
     "name": "Cool Cars Run 3D",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/382.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/382.html",
+    "url": "html/382.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5081,7 +5081,7 @@ receiveGames([
     "id": 383,
     "name": "Crush Cars 3D",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/383.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/383.html",
+    "url": "html/383.html",
     "author": "Yandex",
     "genres": [
       "3d",
@@ -5095,7 +5095,7 @@ receiveGames([
     "id": 384,
     "name": "Destiny Run 3D",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/384.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/384.html",
+    "url": "html/384.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5111,7 +5111,7 @@ receiveGames([
     "id": 385,
     "name": "Destroy The Car 3D",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/385.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/385.html",
+    "url": "html/385.html",
     "author": "Yandex",
     "genres": [
       "3d",
@@ -5125,7 +5125,7 @@ receiveGames([
     "id": 386,
     "name": "Diamond Seeker",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/386.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/386.html",
+    "url": "html/386.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5139,7 +5139,7 @@ receiveGames([
     "id": 387,
     "name": "Draw Joust",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/387.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/387.html",
+    "url": "html/387.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5154,7 +5154,7 @@ receiveGames([
     "id": 388,
     "name": "Evolving Bombs 3D",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/388.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/388.html",
+    "url": "html/388.html",
     "author": "Yandex",
     "genres": [
       "3d"
@@ -5167,7 +5167,7 @@ receiveGames([
     "id": 389,
     "name": "Fire and Frost Master",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/389.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/389.html",
+    "url": "html/389.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5181,7 +5181,7 @@ receiveGames([
     "id": 390,
     "name": "Fitness Empire",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/390.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/390.html",
+    "url": "html/390.html",
     "author": "Yandex",
     "genres": [
       "casual",
@@ -5195,7 +5195,7 @@ receiveGames([
     "id": 391,
     "name": "Flick Goal",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/391.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/391.html",
+    "url": "html/391.html",
     "author": "Yandex",
     "genres": [
       "sports",
@@ -5210,7 +5210,7 @@ receiveGames([
     "id": 392,
     "name": "Flip Master",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/392.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/392.html",
+    "url": "html/392.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5225,7 +5225,7 @@ receiveGames([
     "id": 393,
     "name": "Giant Wanted",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/393.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/393.html",
+    "url": "html/393.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5239,7 +5239,7 @@ receiveGames([
     "id": 394,
     "name": "Gun Clone",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/394.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/394.html",
+    "url": "html/394.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5253,7 +5253,7 @@ receiveGames([
     "id": 395,
     "name": "Gun Runner",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/395.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/395.html",
+    "url": "html/395.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5267,7 +5267,7 @@ receiveGames([
     "id": 396,
     "name": "Kaji Run",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/396.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/396.html",
+    "url": "html/396.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5281,7 +5281,7 @@ receiveGames([
     "id": 397,
     "name": "Make a SuperBoat",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/397.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/397.html",
+    "url": "html/397.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5295,7 +5295,7 @@ receiveGames([
     "id": 398,
     "name": "Makeover Run",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/398.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/398.html",
+    "url": "html/398.html",
     "author": "Yandex",
     "genres": [
       "casual"
@@ -5308,7 +5308,7 @@ receiveGames([
     "id": 399,
     "name": "Mega Car Jumps",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/399.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/399.html",
+    "url": "html/399.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5323,7 +5323,7 @@ receiveGames([
     "id": 400,
     "name": "Money Rush",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/400.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/400.html",
+    "url": "html/400.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5337,7 +5337,7 @@ receiveGames([
     "id": 401,
     "name": "Monster Box 3D",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/401.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/401.html",
+    "url": "html/401.html",
     "author": "Yandex",
     "genres": [
       "3d"
@@ -5350,7 +5350,7 @@ receiveGames([
     "id": 402,
     "name": "Office Fight",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/402.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/402.html",
+    "url": "html/402.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5364,7 +5364,7 @@ receiveGames([
     "id": 403,
     "name": "Robot Invasion",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/403.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/403.html",
+    "url": "html/403.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5378,7 +5378,7 @@ receiveGames([
     "id": 404,
     "name": "Seat Jam 3D",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/404.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/404.html",
+    "url": "html/404.html",
     "author": "Yandex",
     "genres": [
       "3d"
@@ -5391,7 +5391,7 @@ receiveGames([
     "id": 405,
     "name": "Shooting Master",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/405.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/405.html",
+    "url": "html/405.html",
     "author": "Yandex",
     "genres": [
       "shooter"
@@ -5404,7 +5404,7 @@ receiveGames([
     "id": 406,
     "name": "Supermarket 3D",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/406.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/406.html",
+    "url": "html/406.html",
     "author": "Yandex",
     "genres": [
       "3d"
@@ -5417,7 +5417,7 @@ receiveGames([
     "id": 407,
     "name": "Survive to Victory",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/407.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/407.html",
+    "url": "html/407.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5431,7 +5431,7 @@ receiveGames([
     "id": 408,
     "name": "Telekinesis Attack",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/408.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/408.html",
+    "url": "html/408.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5445,7 +5445,7 @@ receiveGames([
     "id": 409,
     "name": "Telekinesis Car",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/409.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/409.html",
+    "url": "html/409.html",
     "author": "Yandex",
     "genres": [
       "racing"
@@ -5458,7 +5458,7 @@ receiveGames([
     "id": 410,
     "name": "Telekinesis Drive",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/410.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/410.html",
+    "url": "html/410.html",
     "author": "Yandex",
     "genres": [
       "racing"
@@ -5471,7 +5471,7 @@ receiveGames([
     "id": 411,
     "name": "Telekinesis",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/411.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/411.html",
+    "url": "html/411.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5485,7 +5485,7 @@ receiveGames([
     "id": 413,
     "name": "Tug of War with Cars",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/413.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/413.html",
+    "url": "html/413.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5500,7 +5500,7 @@ receiveGames([
     "id": 414,
     "name": "Twerk Race 3D",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/414.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/414.html",
+    "url": "html/414.html",
     "author": "Yandex",
     "genres": [
       "3d"
@@ -5513,7 +5513,7 @@ receiveGames([
     "id": 415,
     "name": "Twisted Rope 3D",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/415.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/415.html",
+    "url": "html/415.html",
     "author": "Yandex",
     "genres": [
       "3d"
@@ -5526,7 +5526,7 @@ receiveGames([
     "id": 416,
     "name": "Wall Crawler",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/416.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/416.html",
+    "url": "html/416.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5541,7 +5541,7 @@ receiveGames([
     "id": 417,
     "name": "War Regions",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/417.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/417.html",
+    "url": "html/417.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5555,7 +5555,7 @@ receiveGames([
     "id": 418,
     "name": "Weapon Craft Run",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/418.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/418.html",
+    "url": "html/418.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5570,7 +5570,7 @@ receiveGames([
     "id": 419,
     "name": "Weapon Upgrade Rush",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/419.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/419.html",
+    "url": "html/419.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5584,7 +5584,7 @@ receiveGames([
     "id": 420,
     "name": "Weapon Scale",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/420.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/420.html",
+    "url": "html/420.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5598,7 +5598,7 @@ receiveGames([
     "id": 421,
     "name": "Rich Run 3D",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/421.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/421.html",
+    "url": "html/421.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5614,7 +5614,7 @@ receiveGames([
     "id": 422,
     "name": "High Heels",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/422.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/422.html",
+    "url": "html/422.html",
     "author": "Yandex",
     "genres": [
       "action",
@@ -5628,7 +5628,7 @@ receiveGames([
     "id": 423,
     "name": "WebFishing",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/423.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/423.html",
+    "url": "html/423.html",
     "author": "LameDev",
     "genres": [
       "casual",
@@ -5642,7 +5642,7 @@ receiveGames([
     "id": 426,
     "name": "Andy's Apple Farm",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/426.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/426.html",
+    "url": "html/426.html",
     "author": "M36games",
     "genres": [
       "action",
@@ -5656,7 +5656,7 @@ receiveGames([
     "id": 427,
     "name": "OMORI",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/427.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/427-z.html",
+    "url": "html/427-z.html",
     "author": "Omocat",
     "genres": [
       "rpg",
@@ -5670,7 +5670,7 @@ receiveGames([
     "id": 428,
     "name": "Five Nights at Freddy's 4: Halloween",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/428.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/428.html",
+    "url": "html/428.html",
     "author": "Scott Cawthon",
     "genres": [
       "3d",
@@ -5685,7 +5685,7 @@ receiveGames([
     "id": 430,
     "name": "10 Minutes Till Dawn",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/430.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/430.html",
+    "url": "html/430.html",
     "author": "flanne",
     "genres": [
       "action",
@@ -5699,7 +5699,7 @@ receiveGames([
     "id": 431,
     "name": "99 Balls",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/431.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/431.html",
+    "url": "html/431.html",
     "author": "Diamond Games",
     "genres": [
       "action",
@@ -5714,7 +5714,7 @@ receiveGames([
     "id": 432,
     "name": "Abandoned",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/432.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/432.html",
+    "url": "html/432.html",
     "author": "krutovig",
     "genres": [
       "horror",
@@ -5728,7 +5728,7 @@ receiveGames([
     "id": 433,
     "name": "Yume Nikki",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/433.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/433.html",
+    "url": "html/433.html",
     "author": "kikiyama",
     "genres": [
       "rpg",
@@ -5742,7 +5742,7 @@ receiveGames([
     "id": 434,
     "name": "God's Flesh",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/434.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/434.html",
+    "url": "html/434.html",
     "author": "Glompyy",
     "genres": [
       "action",
@@ -5756,7 +5756,7 @@ receiveGames([
     "id": 435,
     "name": "A Small World Cup",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/435.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/435.html",
+    "url": "html/435.html",
     "author": "rujogames",
     "genres": [
       "sports",
@@ -5771,7 +5771,7 @@ receiveGames([
     "id": 436,
     "name": "Awesome Tanks",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/436.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/436.html",
+    "url": "html/436.html",
     "author": "coolmathgames",
     "genres": [
       "action",
@@ -5785,7 +5785,7 @@ receiveGames([
     "id": 437,
     "name": "Bouncemasters",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/437.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/437.html",
+    "url": "html/437.html",
     "author": "Azur Games, Playgendary",
     "genres": [
       "action",
@@ -5800,7 +5800,7 @@ receiveGames([
     "id": 438,
     "name": "Awesome Tanks 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/438.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/438.html",
+    "url": "html/438.html",
     "author": "coolmathgames",
     "genres": [
       "action",
@@ -5814,7 +5814,7 @@ receiveGames([
     "id": 439,
     "name": "Bank Robbery 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/439.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/439.html",
+    "url": "html/439.html",
     "author": "justaliendev",
     "genres": [
       "action",
@@ -5828,7 +5828,7 @@ receiveGames([
     "id": 440,
     "name": "Celeste PICO",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/440.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/440.html",
+    "url": "html/440.html",
     "author": "Matt Thorson and Noel Berry",
     "genres": [
       "action",
@@ -5843,7 +5843,7 @@ receiveGames([
     "id": 441,
     "name": "Kitty Toy",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/441.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/441.html",
+    "url": "html/441.html",
     "author": "Rakqoi",
     "genres": [
       "casual",
@@ -5857,7 +5857,7 @@ receiveGames([
     "id": 442,
     "name": "Infinimoes",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/442.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/442.html",
+    "url": "html/442.html",
     "author": "Werxzy",
     "genres": [
       "puzzle",
@@ -5871,7 +5871,7 @@ receiveGames([
     "id": 443,
     "name": "Adventure Drivers",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/443.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/443.html",
+    "url": "html/443.html",
     "author": "Domas Kazragis",
     "genres": [
       "adventure",
@@ -5885,7 +5885,7 @@ receiveGames([
     "id": 444,
     "name": "Ages of Conflict",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/444.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/444.html",
+    "url": "html/444.html",
     "author": "JoySpark Games",
     "genres": [
       "strategy",
@@ -5899,7 +5899,7 @@ receiveGames([
     "id": 445,
     "name": "Kindergarten",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/445.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/445.html",
+    "url": "html/445.html",
     "author": "Con Man Games, SmashGames and Sean Young",
     "genres": [
       "adventure",
@@ -5913,7 +5913,7 @@ receiveGames([
     "id": 446,
     "name": "Kindergarten 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/446.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/446.html",
+    "url": "html/446.html",
     "author": "Con Man Games, SmashGames and Sean Young",
     "genres": [
       "adventure",
@@ -5927,7 +5927,7 @@ receiveGames([
     "id": 447,
     "name": "Nijika's Ahoge",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/447.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/447-e.html",
+    "url": "html/447-e.html",
     "author": "TamaniDamani",
     "genres": [
       "casual",
@@ -5941,7 +5941,7 @@ receiveGames([
     "id": 448,
     "name": "Aquapark.io",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/448.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/448.html",
+    "url": "html/448.html",
     "author": "Voodoo",
     "genres": [
       ".io"
@@ -5954,7 +5954,7 @@ receiveGames([
     "id": 449,
     "name": "City Smash",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/449.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/449.html",
+    "url": "html/449.html",
     "author": "Paradyme Games",
     "genres": [
       "action",
@@ -5969,7 +5969,7 @@ receiveGames([
     "id": 450,
     "name": "Amanda the Adventurer",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/450.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/450.html",
+    "url": "html/450.html",
     "author": "MANGLEDmaw Games, DreadXP",
     "genres": [
       "adventure"
@@ -5982,7 +5982,7 @@ receiveGames([
     "id": 451,
     "name": "Slender: The 8 Pages",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/451.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/451.html",
+    "url": "html/451.html",
     "author": "Parsec Productions",
     "genres": [
       "horror",
@@ -5996,7 +5996,7 @@ receiveGames([
     "id": 452,
     "name": "Station 141",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/452.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/452.html",
+    "url": "html/452.html",
     "author": "Maksim Chmutov",
     "genres": [
       "action",
@@ -6010,7 +6010,7 @@ receiveGames([
     "id": 453,
     "name": "Station Saturn",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/453.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/453.html",
+    "url": "html/453.html",
     "author": "Maksim Chmutov",
     "genres": [
       "action",
@@ -6024,7 +6024,7 @@ receiveGames([
     "id": 454,
     "name": "BLOODMONEY!",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/454.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/454.html",
+    "url": "html/454.html",
     "author": "SHROOMYCHRIST-STUDIOS",
     "genres": [
       "action",
@@ -6038,7 +6038,7 @@ receiveGames([
     "id": 455,
     "name": "BERGENTRUCK 201x",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/455.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/455.html",
+    "url": "html/455.html",
     "author": "Paledoptera",
     "genres": [
       "racing"
@@ -6051,7 +6051,7 @@ receiveGames([
     "id": 456,
     "name": "Undertale Yellow",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/456.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/456.html",
+    "url": "html/456.html",
     "author": "Team Undertale Yellow",
     "genres": [
       "action",
@@ -6066,7 +6066,7 @@ receiveGames([
     "id": 457,
     "name": "Raft",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/457.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/457.html",
+    "url": "html/457.html",
     "author": "Redbeet Interactive, Axolot Games, Ashen Arrow",
     "genres": [
       "action",
@@ -6081,7 +6081,7 @@ receiveGames([
     "id": 458,
     "name": "The Deadseat",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/458.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/458.html",
+    "url": "html/458.html",
     "author": "Curious Fox Sox",
     "genres": [
       "horror",
@@ -6095,7 +6095,7 @@ receiveGames([
     "id": 459,
     "name": "The Man In The Window",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/459.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/459.html",
+    "url": "html/459.html",
     "author": "Zed Technician",
     "genres": [
       "horror",
@@ -6109,7 +6109,7 @@ receiveGames([
     "id": 460,
     "name": "Fears to Fathom: Home Alone",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/460.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/460.html",
+    "url": "html/460.html",
     "author": "Rayll",
     "genres": [
       "horror",
@@ -6123,7 +6123,7 @@ receiveGames([
     "id": 461,
     "name": "Slither.io",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/461.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/461.html",
+    "url": "html/461.html",
     "author": "slither.io",
     "genres": [
       "casual",
@@ -6137,7 +6137,7 @@ receiveGames([
     "id": 462,
     "name": "DEAD PLATE",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/462.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/462.html",
+    "url": "html/462.html",
     "author": "racheldrawsthis",
     "genres": [
       "rpg",
@@ -6152,7 +6152,7 @@ receiveGames([
     "id": 463,
     "name": "Lacey's Flash Games",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/463.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/463.html",
+    "url": "html/463.html",
     "author": "ghosttundra, Euroclipse, Brand New Groove",
     "genres": [
       "action",
@@ -6166,7 +6166,7 @@ receiveGames([
     "id": 464,
     "name": "Choppy Orc",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/464.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/464.html",
+    "url": "html/464.html",
     "author": "eddynardo",
     "genres": [
       "action",
@@ -6180,7 +6180,7 @@ receiveGames([
     "id": 465,
     "name": "Cuphead",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/465.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/465.html",
+    "url": "html/465.html",
     "author": "Studio MDHR Entertainment Inc",
     "genres": [
       "action",
@@ -6195,7 +6195,7 @@ receiveGames([
     "id": 466,
     "name": "Baldi's Basics Classic Remastered",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/466.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/466.html",
+    "url": "html/466.html",
     "author": "Basically Games",
     "genres": [
       "horror"
@@ -6208,7 +6208,7 @@ receiveGames([
     "id": 467,
     "name": "Baldi's Basics Plus",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/467.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/467-updatee.html",
+    "url": "html/467-updatee.html",
     "author": "Basically Games",
     "genres": [
       "action",
@@ -6222,7 +6222,7 @@ receiveGames([
     "id": 468,
     "name": "Hollow Knight",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/468.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/468-f.html",
+    "url": "html/468-f.html",
     "author": "Team Cherry",
     "genres": [
       "action",
@@ -6237,7 +6237,7 @@ receiveGames([
     "id": 470,
     "name": "Doodle Jump",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/470.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/470.html",
+    "url": "html/470.html",
     "author": "Marko Pusenjak",
     "genres": [
       "action",
@@ -6252,7 +6252,7 @@ receiveGames([
     "id": 471,
     "name": "Madness Combat: Project Nexus (classic)",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/471.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/471.html",
+    "url": "html/471.html",
     "author": "Krinkels, The-Swain, cheshyre, Luis, Rebel666",
     "genres": [
       "skill"
@@ -6265,7 +6265,7 @@ receiveGames([
     "id": 472,
     "name": "Bad Time Simulator",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/472.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/472.html",
+    "url": "html/472.html",
     "author": "jcw87",
     "genres": [
       "3d"
@@ -6278,7 +6278,7 @@ receiveGames([
     "id": 473,
     "name": "Spacebar Clicker",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/473.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/473.html",
+    "url": "html/473.html",
     "author": "Bruno Croci",
     "genres": [
       "idle"
@@ -6291,7 +6291,7 @@ receiveGames([
     "id": 474,
     "name": "Friday Night Funkin': V.S. Whitty",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/474.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/474.html",
+    "url": "html/474.html",
     "author": "Nate Anim8",
     "genres": [
       "music",
@@ -6306,7 +6306,7 @@ receiveGames([
     "id": 475,
     "name": "Friday Night Funkin': B-Sides",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/475.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/475.html",
+    "url": "html/475.html",
     "author": "Rozebud",
     "genres": [
       "music",
@@ -6321,7 +6321,7 @@ receiveGames([
     "id": 476,
     "name": "Friday Night Funkin': Vs. Hex",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/476.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/476.html",
+    "url": "html/476.html",
     "author": "YingYang48 etc",
     "genres": [
       "music",
@@ -6337,7 +6337,7 @@ receiveGames([
     "id": 477,
     "name": "Friday Night Funkin': Vs. Hatsune Miku",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/477.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/477.html",
+    "url": "html/477.html",
     "author": "evidal etc",
     "genres": [
       "music",
@@ -6353,7 +6353,7 @@ receiveGames([
     "id": 478,
     "name": "Friday Night Funkin': Neo",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/478.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/478.html",
+    "url": "html/478.html",
     "author": "JellyFishedm etc",
     "genres": [
       "music",
@@ -6368,7 +6368,7 @@ receiveGames([
     "id": 479,
     "name": "Steal A Brainrot",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/479.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/479.html",
+    "url": "html/479.html",
     "author": "nagami games",
     "genres": [
       "strategy"
@@ -6381,7 +6381,7 @@ receiveGames([
     "id": 480,
     "name": "Friday Night Funkin': Sarvente's Mid-Fight Masses",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/480.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/480.html",
+    "url": "html/480.html",
     "author": "Dokki.doodlez etc",
     "genres": [
       "music",
@@ -6397,7 +6397,7 @@ receiveGames([
     "id": 481,
     "name": "Friday Night Funkin': vs. Tricky",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/481.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/481.html",
+    "url": "html/481.html",
     "author": "Banbuds etc",
     "genres": [
       "music",
@@ -6413,7 +6413,7 @@ receiveGames([
     "id": 482,
     "name": "Human Expenditure Program",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/482.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/482-2.html",
+    "url": "html/482-2.html",
     "author": "SHROOMYCHRIST-STUDIOS",
     "genres": [
       "action",
@@ -6427,7 +6427,7 @@ receiveGames([
     "id": 485,
     "name": "Friday Night Funkin': vs. Garcello",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/485.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/485.html",
+    "url": "html/485.html",
     "author": "atsuover etc",
     "genres": [
       "music",
@@ -6443,7 +6443,7 @@ receiveGames([
     "id": 486,
     "name": "Friday Night Funkin': Sonic Legacy",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/486.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/486.html",
+    "url": "html/486.html",
     "author": "JoeDoughBoi etc",
     "genres": [
       "action",
@@ -6458,7 +6458,7 @@ receiveGames([
     "id": 489,
     "name": "Friday Night Funkin': Indie Cross",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/489.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/489.html",
+    "url": "html/489.html",
     "author": "MORØ etc",
     "genres": [
       "music",
@@ -6473,7 +6473,7 @@ receiveGames([
     "id": 490,
     "name": "Rooftop Snipers 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/490.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/490.html",
+    "url": "html/490.html",
     "author": "Neweichgames",
     "genres": [
       "action",
@@ -6487,7 +6487,7 @@ receiveGames([
     "id": 491,
     "name": "I woke up next to you again.",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/491.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/491.html",
+    "url": "html/491.html",
     "author": "angela he",
     "genres": [
       "casual",
@@ -6502,7 +6502,7 @@ receiveGames([
     "id": 492,
     "name": "UNDERWHEELS",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/492.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/492.html",
+    "url": "html/492.html",
     "author": "LakenDaCoda",
     "genres": [
       "action",
@@ -6516,7 +6516,7 @@ receiveGames([
     "id": 493,
     "name": "RigBMX",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/493.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/493.html",
+    "url": "html/493.html",
     "author": "Cartoon Network",
     "genres": [
       "sports",
@@ -6531,7 +6531,7 @@ receiveGames([
     "id": 494,
     "name": "RigBMX 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/494.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/494.html",
+    "url": "html/494.html",
     "author": "Cartoon Network",
     "genres": [
       "sports",
@@ -6546,7 +6546,7 @@ receiveGames([
     "id": 495,
     "name": "groon groon, babey!",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/495.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/495.html",
+    "url": "html/495.html",
     "author": "tanner bananer",
     "genres": [
       "action",
@@ -6560,7 +6560,7 @@ receiveGames([
     "id": 501,
     "name": "Kindergarten 3",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/501.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/501.html",
+    "url": "html/501.html",
     "author": "Con Man Games, SmashGames and Sean Young",
     "genres": [
       "adventure",
@@ -6574,7 +6574,7 @@ receiveGames([
     "id": 502,
     "name": "Stick With It",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/502.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/502-fixed.html",
+    "url": "html/502-fixed.html",
     "author": "Sam Hogan",
     "genres": [
       "action",
@@ -6589,7 +6589,7 @@ receiveGames([
     "id": 503,
     "name": "Five Nights at Candy's",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/503.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/503.html",
+    "url": "html/503.html",
     "author": "Emil \"Ace\" Macko",
     "genres": [
       "action",
@@ -6603,7 +6603,7 @@ receiveGames([
     "id": 504,
     "name": "Five Nights at Candy's 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/504.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/504.html",
+    "url": "html/504.html",
     "author": "Emil \"Ace\" Macko",
     "genres": [
       "action",
@@ -6617,7 +6617,7 @@ receiveGames([
     "id": 505,
     "name": "Pokemon Red",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/505.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/505.html",
+    "url": "html/505.html",
     "author": "Nintendo",
     "genres": [
       "adventure",
@@ -6632,7 +6632,7 @@ receiveGames([
     "id": 506,
     "name": "Pokemon Emerald",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/506.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/506.html",
+    "url": "html/506.html",
     "author": "Nintendo",
     "genres": [
       "adventure",
@@ -6647,7 +6647,7 @@ receiveGames([
     "id": 507,
     "name": "The Impossible Quiz",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/507.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/507.html",
+    "url": "html/507.html",
     "author": "SPLAPP-ME-DO",
     "genres": [
       "strategy"
@@ -6660,7 +6660,7 @@ receiveGames([
     "id": 508,
     "name": "Super Mario Bros",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/508.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/508.html",
+    "url": "html/508.html",
     "author": "Nintendo",
     "genres": [
       "action",
@@ -6676,7 +6676,7 @@ receiveGames([
     "id": 510,
     "name": "Tomodachi Collection",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/510.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/510.html",
+    "url": "html/510.html",
     "author": "Nintendo",
     "genres": [
       "casual",
@@ -6691,7 +6691,7 @@ receiveGames([
     "id": 511,
     "name": "Doge Miner",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/511.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/511.html",
+    "url": "html/511.html",
     "author": "rkn",
     "genres": [
       "idle",
@@ -6705,7 +6705,7 @@ receiveGames([
     "id": 512,
     "name": "Final Earth 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/512.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/512.html",
+    "url": "html/512.html",
     "author": "flori9",
     "genres": [
       "strategy",
@@ -6719,7 +6719,7 @@ receiveGames([
     "id": 513,
     "name": "Swordfight!!",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/513.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/513.html",
+    "url": "html/513.html",
     "author": "Studio-19",
     "genres": [
       "puzzle",
@@ -6734,7 +6734,7 @@ receiveGames([
     "id": 514,
     "name": "PortaBoy+",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/514.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/514.html",
+    "url": "html/514.html",
     "author": "Enchae, Lumpy",
     "genres": [
       "action",
@@ -6748,7 +6748,7 @@ receiveGames([
     "id": 515,
     "name": "PacMan (Horror)",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/515.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/515.html",
+    "url": "html/515.html",
     "author": "BerickCook",
     "genres": [
       "action",
@@ -6763,7 +6763,7 @@ receiveGames([
     "id": 516,
     "name": "Oshi Oshi Punch!",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/516.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/516.html",
+    "url": "html/516.html",
     "author": "Empty House Games, Shuu",
     "genres": [
       "action",
@@ -6778,7 +6778,7 @@ receiveGames([
     "id": 517,
     "name": "Nubby's Number Factory",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/517.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/517.html",
+    "url": "html/517.html",
     "author": "MogDogBlog Productions",
     "genres": [
       "puzzle",
@@ -6792,7 +6792,7 @@ receiveGames([
     "id": 518,
     "name": "Touhou: Luminous Strike",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/518.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/518.html",
+    "url": "html/518.html",
     "author": "NitNitori, LadyEbony",
     "genres": [
       "action",
@@ -6806,7 +6806,7 @@ receiveGames([
     "id": 519,
     "name": "Generic Fighter Maybe",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/519.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/519.html",
+    "url": "html/519.html",
     "author": "Astrobard Games, Khao Mortadios",
     "genres": [
       "action",
@@ -6820,7 +6820,7 @@ receiveGames([
     "id": 520,
     "name": "Dan The Man",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/520.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/520-fix.html",
+    "url": "html/520-fix.html",
     "author": "Halfbrick Studios",
     "genres": [
       "action",
@@ -6835,7 +6835,7 @@ receiveGames([
     "id": 521,
     "name": "Bust a Loop",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/521.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/521.html",
+    "url": "html/521.html",
     "author": "PeachTreeOath",
     "genres": [
       "action",
@@ -6850,7 +6850,7 @@ receiveGames([
     "id": 522,
     "name": "Bad Monday Simulator",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/522.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/522.html",
+    "url": "html/522.html",
     "author": "Lumpy, Spasco",
     "genres": [
       "3d"
@@ -6863,7 +6863,7 @@ receiveGames([
     "id": 523,
     "name": "Touhou Mother",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/523.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/523-f.html",
+    "url": "html/523-f.html",
     "author": "vgperson",
     "genres": [
       "rpg",
@@ -6877,7 +6877,7 @@ receiveGames([
     "id": 524,
     "name": "Parappa The Rapper",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/524.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/524.html",
+    "url": "html/524.html",
     "author": "NanaOn-Sha",
     "genres": [
       "music",
@@ -6892,7 +6892,7 @@ receiveGames([
     "id": 526,
     "name": "SpongeBob SquarePants: Land Ho!",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/526.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/526.html",
+    "url": "html/526.html",
     "author": "Nickelodeon",
     "genres": [
       "action",
@@ -6906,7 +6906,7 @@ receiveGames([
     "id": 527,
     "name": "SpongeBob SquarePants: SpongeBob Run",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/527.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/527.html",
+    "url": "html/527.html",
     "author": "Nickelodeon",
     "genres": [
       "action",
@@ -6921,7 +6921,7 @@ receiveGames([
     "id": 528,
     "name": "SpongeBob SquarePants: Squidward's Sizzlin' Scare",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/528.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/528.html",
+    "url": "html/528.html",
     "author": "Nickelodeon",
     "genres": [
       "action",
@@ -6936,7 +6936,7 @@ receiveGames([
     "id": 529,
     "name": "SpongeBob SquarePants: Sandy's Sponge Stacker",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/529.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/529.html",
+    "url": "html/529.html",
     "author": "Nickelodeon",
     "genres": [
       "puzzle",
@@ -6950,7 +6950,7 @@ receiveGames([
     "id": 530,
     "name": "SpongeBob SquarePants: Tasty Pastry Party",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/530.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/530.html",
+    "url": "html/530.html",
     "author": "Nickelodeon",
     "genres": [
       "casual",
@@ -6964,7 +6964,7 @@ receiveGames([
     "id": 531,
     "name": "SpongeBob SquarePants: The Kah-Ray-Tay Squid",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/531.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/531.html",
+    "url": "html/531.html",
     "author": "Nickelodeon",
     "genres": [
       "action",
@@ -6979,7 +6979,7 @@ receiveGames([
     "id": 532,
     "name": "SpongeBob SquarePants: WereSquirrel",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/532.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/532.html",
+    "url": "html/532.html",
     "author": "Nickelodeon",
     "genres": [
       "action",
@@ -6994,7 +6994,7 @@ receiveGames([
     "id": 533,
     "name": "SpongeBob SquarePants: Krabby Katch",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/533.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/533.html",
+    "url": "html/533.html",
     "author": "Nickelodeon",
     "genres": [
       "casual",
@@ -7008,7 +7008,7 @@ receiveGames([
     "id": 534,
     "name": "Teen Titans GO!: Jump Jousts",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/534.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/534.html",
+    "url": "html/534.html",
     "author": "Cartoon Network",
     "genres": [
       "action",
@@ -7023,7 +7023,7 @@ receiveGames([
     "id": 535,
     "name": "Teen Titans GO!: Jump Jousts 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/535.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/535.html",
+    "url": "html/535.html",
     "author": "Cartoon Network",
     "genres": [
       "action",
@@ -7038,7 +7038,7 @@ receiveGames([
     "id": 536,
     "name": "Cat Connection",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/536.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/536.html",
+    "url": "html/536.html",
     "author": "MOSTLY MAD PRODUCTIONS",
     "genres": [
       "puzzle",
@@ -7052,7 +7052,7 @@ receiveGames([
     "id": 537,
     "name": "Cat Gunner: Super Zombie Shoot",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/537.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/537.html",
+    "url": "html/537.html",
     "author": "Poki",
     "genres": [
       "action",
@@ -7067,7 +7067,7 @@ receiveGames([
     "id": 538,
     "name": "Love Letters",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/538.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/538.html",
+    "url": "html/538.html",
     "author": "Nozomu Games",
     "genres": [
       "casual",
@@ -7081,7 +7081,7 @@ receiveGames([
     "id": 539,
     "name": "Chiikawa Puzzle",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/539.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/539.html",
+    "url": "html/539.html",
     "author": "emptygamer",
     "genres": [
       "strategy"
@@ -7094,7 +7094,7 @@ receiveGames([
     "id": 540,
     "name": "myTeardrop",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/540.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/540.html",
+    "url": "html/540.html",
     "author": "VENDORMINT",
     "genres": [
       "casual",
@@ -7108,7 +7108,7 @@ receiveGames([
     "id": 542,
     "name": "Karlson",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/542.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/542-a.html",
+    "url": "html/542-a.html",
     "author": "DaniDev",
     "genres": [
       "action",
@@ -7123,7 +7123,7 @@ receiveGames([
     "id": 543,
     "name": "Jelly Drift",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/543.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/543-a.html",
+    "url": "html/543-a.html",
     "author": "DaniDev",
     "genres": [
       "racing",
@@ -7137,7 +7137,7 @@ receiveGames([
     "id": 544,
     "name": "Plinko",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/544.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/544.html",
+    "url": "html/544.html",
     "author": "Anson Heung",
     "genres": [
       "casual",
@@ -7151,7 +7151,7 @@ receiveGames([
     "id": 545,
     "name": "Clash Of Vikings",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/545.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/545.html",
+    "url": "html/545.html",
     "author": "unknown",
     "genres": [
       "action",
@@ -7165,7 +7165,7 @@ receiveGames([
     "id": 546,
     "name": "Recoil",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/546.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/546.html",
+    "url": "html/546.html",
     "author": "Martin Magini",
     "genres": [
       "action",
@@ -7179,7 +7179,7 @@ receiveGames([
     "id": 547,
     "name": "Baseball Bros",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/547.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/547.html",
+    "url": "html/547.html",
     "author": "Blue Wizard",
     "genres": [
       "sports",
@@ -7194,7 +7194,7 @@ receiveGames([
     "id": 548,
     "name": "Football Bros",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/548.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/548.html",
+    "url": "html/548.html",
     "author": "Blue Wizard",
     "genres": [
       "sports",
@@ -7209,7 +7209,7 @@ receiveGames([
     "id": 549,
     "name": "Sonic the Hedgehog 2: Community's Cut",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/549.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/549.html",
+    "url": "html/549.html",
     "author": "heyjoeway and SEGA",
     "genres": [
       "action",
@@ -7224,7 +7224,7 @@ receiveGames([
     "id": 550,
     "name": "Sonic the Hedgehog 3: Angel Island Remastered",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/550.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/550.html",
+    "url": "html/550.html",
     "author": "Eukaryot3K and SEGA",
     "genres": [
       "action",
@@ -7239,7 +7239,7 @@ receiveGames([
     "id": 551,
     "name": "Hypper Sandbox",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/551.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/551.html",
+    "url": "html/551.html",
     "author": "VobbyGames, weirdnessworld",
     "genres": [
       "action",
@@ -7253,7 +7253,7 @@ receiveGames([
     "id": 552,
     "name": "Aviamasters",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/552.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/552.html",
+    "url": "html/552.html",
     "author": "BGaming",
     "genres": [
       "action",
@@ -7267,7 +7267,7 @@ receiveGames([
     "id": 553,
     "name": "Rolling Sky",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/553.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/553.html",
+    "url": "html/553.html",
     "author": "Dream Playz",
     "genres": [
       "action",
@@ -7282,7 +7282,7 @@ receiveGames([
     "id": 554,
     "name": "Yandere Simulator",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/554.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/554.html",
+    "url": "html/554.html",
     "author": "YandereDev",
     "genres": [
       "3d"
@@ -7295,7 +7295,7 @@ receiveGames([
     "id": 555,
     "name": "Friday Night Funkin VS. KAPI",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/555.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/555.html",
+    "url": "html/555.html",
     "author": "paperkitty etc",
     "genres": [
       "music",
@@ -7311,7 +7311,7 @@ receiveGames([
     "id": 556,
     "name": "Friday Night Funkin VS. Sky",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/556.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/556.html",
+    "url": "html/556.html",
     "author": "Alexander0110 etc",
     "genres": [
       "music",
@@ -7327,7 +7327,7 @@ receiveGames([
     "id": 557,
     "name": "Getting Over It with Bennett Foddy",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/557.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/557.html",
+    "url": "html/557.html",
     "author": "Bennett Foddy",
     "genres": [
       "action",
@@ -7342,7 +7342,7 @@ receiveGames([
     "id": 559,
     "name": "Friday Night Funkin vs Shaggy",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/559.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/559.html",
+    "url": "html/559.html",
     "author": "srPerez etc",
     "genres": [
       "music",
@@ -7358,7 +7358,7 @@ receiveGames([
     "id": 560,
     "name": "Deltatraveler",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/560.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/560.html",
+    "url": "html/560.html",
     "author": "VyletBunni",
     "genres": [
       "rpg",
@@ -7372,7 +7372,7 @@ receiveGames([
     "id": 561,
     "name": "BitGun.io",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/561.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/561.html",
+    "url": "html/561.html",
     "author": "Hazmob",
     "genres": [
       ".io"
@@ -7385,7 +7385,7 @@ receiveGames([
     "id": 562,
     "name": "Boom Slingers: Reboom",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/562.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/562.html",
+    "url": "html/562.html",
     "author": "Boom Corp",
     "genres": [
       "action",
@@ -7400,7 +7400,7 @@ receiveGames([
     "id": 563,
     "name": "CG FC 25",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/563.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/563.html",
+    "url": "html/563.html",
     "author": "Finz Games",
     "genres": [
       "sports",
@@ -7414,7 +7414,7 @@ receiveGames([
     "id": 564,
     "name": "Count Masters: Stickman Games",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/564.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/564.html",
+    "url": "html/564.html",
     "author": "FreePlay LLC",
     "genres": [
       "action"
@@ -7427,7 +7427,7 @@ receiveGames([
     "id": 565,
     "name": "Dalgona Candy Honeycomb Cookie",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/565.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/565.html",
+    "url": "html/565.html",
     "author": "CrazyGames",
     "genres": [
       "action",
@@ -7441,7 +7441,7 @@ receiveGames([
     "id": 567,
     "name": "Highway Racer",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/567.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/567.html",
+    "url": "html/567.html",
     "author": "CrazyGames",
     "genres": [
       "action",
@@ -7456,7 +7456,7 @@ receiveGames([
     "id": 568,
     "name": "Highway Racer 2 REMASTERED",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/568.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/568.html",
+    "url": "html/568.html",
     "author": "CrazyGames",
     "genres": [
       "action",
@@ -7471,7 +7471,7 @@ receiveGames([
     "id": 569,
     "name": "Hula Hoop Race",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/569.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/569.html",
+    "url": "html/569.html",
     "author": "CrazyGames",
     "genres": [
       "action",
@@ -7486,7 +7486,7 @@ receiveGames([
     "id": 570,
     "name": "Jelly Restaurant",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/570.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/570.html",
+    "url": "html/570.html",
     "author": "CrazyGames",
     "genres": [
       "casual",
@@ -7500,7 +7500,7 @@ receiveGames([
     "id": 571,
     "name": "Layers Roll",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/571.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/571.html",
+    "url": "html/571.html",
     "author": "CrazyGames",
     "genres": [
       "action",
@@ -7515,7 +7515,7 @@ receiveGames([
     "id": 572,
     "name": "Lazy Jumper",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/572.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/572.html",
+    "url": "html/572.html",
     "author": "CrazyGames",
     "genres": [
       "action",
@@ -7529,7 +7529,7 @@ receiveGames([
     "id": 573,
     "name": "Man Runner 2048",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/573.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/573.html",
+    "url": "html/573.html",
     "author": "CrazyGames",
     "genres": [
       "action",
@@ -7544,7 +7544,7 @@ receiveGames([
     "id": 574,
     "name": "Pottery Master",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/574.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/574.html",
+    "url": "html/574.html",
     "author": "CrazyGames",
     "genres": [
       "casual",
@@ -7558,7 +7558,7 @@ receiveGames([
     "id": 575,
     "name": "Shovel 3D",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/575.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/575.html",
+    "url": "html/575.html",
     "author": "CrazyGames",
     "genres": [
       "3d"
@@ -7571,7 +7571,7 @@ receiveGames([
     "id": 576,
     "name": "Sky Riders",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/576.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/576.html",
+    "url": "html/576.html",
     "author": "CrazyGames",
     "genres": [
       "action",
@@ -7585,7 +7585,7 @@ receiveGames([
     "id": 577,
     "name": "Steal Brainrot Online",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/577.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/577.html",
+    "url": "html/577.html",
     "author": "CrazyGames",
     "genres": [
       "strategy"
@@ -7598,7 +7598,7 @@ receiveGames([
     "id": 578,
     "name": "Stickman and Guns",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/578.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/578.html",
+    "url": "html/578.html",
     "author": "CrazyGames",
     "genres": [
       "action"
@@ -7611,7 +7611,7 @@ receiveGames([
     "id": 579,
     "name": "Super Star Car",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/579.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/579.html",
+    "url": "html/579.html",
     "author": "CrazyGames",
     "genres": [
       "racing"
@@ -7624,7 +7624,7 @@ receiveGames([
     "id": 580,
     "name": "Traffic Rider",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/580.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/580.html",
+    "url": "html/580.html",
     "author": "CrazyGames",
     "genres": [
       "action",
@@ -7639,7 +7639,7 @@ receiveGames([
     "id": 581,
     "name": "BuildNow.gg",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/581.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/581.html",
+    "url": "html/581.html",
     "author": "CrazyGames",
     "genres": [
       "action",
@@ -7653,7 +7653,7 @@ receiveGames([
     "id": 584,
     "name": "Stone Grass Mowing Simulator",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/584-a.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/584.html",
+    "url": "html/584.html",
     "author": "CrazyGames",
     "genres": [
       "3d"
@@ -7666,7 +7666,7 @@ receiveGames([
     "id": 585,
     "name": "Fallout",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/585.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/585.html",
+    "url": "html/585.html",
     "author": "Bethesda Softworks",
     "genres": [
       "action",
@@ -7681,7 +7681,7 @@ receiveGames([
     "id": 586,
     "name": "The Oregon Trail",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/586.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/586.html",
+    "url": "html/586.html",
     "author": "MECC",
     "genres": [
       "strategy",
@@ -7696,7 +7696,7 @@ receiveGames([
     "id": 587,
     "name": "Newgrounds Rumble",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/587.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/587.html",
+    "url": "html/587.html",
     "author": "NegativeONE, Luis, MindChamber",
     "genres": [
       "action",
@@ -7710,7 +7710,7 @@ receiveGames([
     "id": 588,
     "name": "Super Mario 64",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/588.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/588.html",
+    "url": "html/588.html",
     "author": "Nintendo",
     "genres": [
       "action",
@@ -7726,7 +7726,7 @@ receiveGames([
     "id": 589,
     "name": "Sonic CD",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/589.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/589-f.html",
+    "url": "html/589-f.html",
     "author": "SEGA",
     "genres": [
       "action",
@@ -7741,7 +7741,7 @@ receiveGames([
     "id": 590,
     "name": "Sonic Mania",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/590.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/590-f.html",
+    "url": "html/590-f.html",
     "author": "SEGA, crunch arcade",
     "genres": [
       "action",
@@ -7756,7 +7756,7 @@ receiveGames([
     "id": 591,
     "name": "Slime Rancher",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/591.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/591-awe.html",
+    "url": "html/591-awe.html",
     "author": "Monomi Park, Ported by Snubby.top",
     "genres": [
       "action",
@@ -7771,7 +7771,7 @@ receiveGames([
     "id": 592,
     "name": "Pac Man World",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/592.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/592.html",
+    "url": "html/592.html",
     "author": "Full Fat Games",
     "genres": [
       "action",
@@ -7787,7 +7787,7 @@ receiveGames([
     "id": 593,
     "name": "Pac Man World 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/593.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/593-f.html",
+    "url": "html/593-f.html",
     "author": "Full Fat Games",
     "genres": [
       "action",
@@ -7803,7 +7803,7 @@ receiveGames([
     "id": 594,
     "name": "Waterworks!",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/594.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/594.html",
+    "url": "html/594.html",
     "author": "scriptwelder",
     "genres": [
       "puzzle",
@@ -7817,7 +7817,7 @@ receiveGames([
     "id": 595,
     "name": "Shapez.io",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/595.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/595.html",
+    "url": "html/595.html",
     "author": "scriptwelder",
     "genres": [
       ".io"
@@ -7830,7 +7830,7 @@ receiveGames([
     "id": 597,
     "name": "Plants vs. Zombies 2 Gardenless",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/597.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/597-a.html",
+    "url": "html/597-a.html",
     "author": "Gzh0821",
     "genres": [
       "action",
@@ -7844,7 +7844,7 @@ receiveGames([
     "id": 598,
     "name": "Sonic.EXE",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/598.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/598.html",
+    "url": "html/598.html",
     "author": " Cinossu",
     "genres": [
       "action",
@@ -7860,7 +7860,7 @@ receiveGames([
     "id": 599,
     "name": "Metal Gear Solid",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/599.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/599.html",
+    "url": "html/599.html",
     "author": " Konami Computer Entertainment Japan",
     "genres": [
       "action",
@@ -7875,7 +7875,7 @@ receiveGames([
     "id": 602,
     "name": "Doom 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/602.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/602.html",
+    "url": "html/602.html",
     "author": "id Software",
     "genres": [
       "action",
@@ -7890,7 +7890,7 @@ receiveGames([
     "id": 603,
     "name": "Growden.io",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/603.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/603-aa.html",
+    "url": "html/603-aa.html",
     "author": "growden.io",
     "genres": [
       ".io"
@@ -7903,7 +7903,7 @@ receiveGames([
     "id": 604,
     "name": "Minesweeper Plus",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/604.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/604-a.html",
+    "url": "html/604-a.html",
     "author": "Jorel Simpson",
     "genres": [
       "puzzle",
@@ -7917,7 +7917,7 @@ receiveGames([
     "id": 605,
     "name": "Schoolboy Runaway",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/605.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/605-e.html",
+    "url": "html/605-e.html",
     "author": "Linked Squad",
     "genres": [
       "action",
@@ -7932,7 +7932,7 @@ receiveGames([
     "id": 606,
     "name": "Sonic.EXE (ORIGINAL)",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/606.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/606-e.html",
+    "url": "html/606-e.html",
     "author": "MY5TCrimson",
     "genres": [
       "action",
@@ -7947,7 +7947,7 @@ receiveGames([
     "id": 607,
     "name": "Tattletail",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/607.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/607-e.html",
+    "url": "html/607-e.html",
     "author": "Waygetter Electronics, Ported by Snubby.top",
     "genres": [
       "horror",
@@ -7961,7 +7961,7 @@ receiveGames([
     "id": 611,
     "name": "The Legend of Zelda Ocarina of Time",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/611.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/611.html",
+    "url": "html/611.html",
     "author": "Nintendo",
     "genres": [
       "racing"
@@ -7976,7 +7976,7 @@ receiveGames([
     "id": 612,
     "name": "The Legend of Zelda Majora's Mask",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/612.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/612.html",
+    "url": "html/612.html",
     "author": "Nintendo",
     "genres": [
       "action",
@@ -7993,7 +7993,7 @@ receiveGames([
     "id": 614,
     "name": "Toy Rider",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/614.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/614.html",
+    "url": "html/614.html",
     "author": "CrazyGames",
     "genres": [
       "action",
@@ -8008,7 +8008,7 @@ receiveGames([
     "id": 617,
     "name": "Postal",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/617.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/617-a.html",
+    "url": "html/617-a.html",
     "author": "Stinkalistic, Running With Scissors",
     "genres": [
       "action",
@@ -8022,7 +8022,7 @@ receiveGames([
     "id": 620,
     "name": "Three Goblets",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/620.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/620.html",
+    "url": "html/620.html",
     "author": "Adventale",
     "genres": [
       "adventure",
@@ -8036,7 +8036,7 @@ receiveGames([
     "id": 622,
     "name": "Oneshot (LEGACY)",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/622.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/622.html",
+    "url": "html/622.html",
     "author": "Future Cat LLC, ARandomPerson",
     "genres": [
       "adventure",
@@ -8051,7 +8051,7 @@ receiveGames([
     "id": 623,
     "name": "Celeste",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/623.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/623-work.html",
+    "url": "html/623-work.html",
     "author": "MaddyMakesGames, Mercury Workshop",
     "genres": [
       "action",
@@ -8066,7 +8066,7 @@ receiveGames([
     "id": 624,
     "name": "Happy Wheels",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/624.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/624.html",
+    "url": "html/624.html",
     "author": "Jim Bonacci",
     "genres": [
       "action",
@@ -8081,7 +8081,7 @@ receiveGames([
     "id": 625,
     "name": "Get Yoked",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/625.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/625.html",
+    "url": "html/625.html",
     "author": "gregs games",
     "genres": [
       "casual",
@@ -8095,7 +8095,7 @@ receiveGames([
     "id": 626,
     "name": "Doom 3",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/626.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/626-f.html",
+    "url": "html/626-f.html",
     "author": "id Software, 98corbins",
     "genres": [
       "action",
@@ -8110,7 +8110,7 @@ receiveGames([
     "id": 627,
     "name": "Tag",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/627.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/627.html",
+    "url": "html/627.html",
     "author": "WeLoPlay",
     "genres": [
       "action",
@@ -8124,7 +8124,7 @@ receiveGames([
     "id": 628,
     "name": "Pizza Tower: Scoutdigo",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/628.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/628-f.html",
+    "url": "html/628-f.html",
     "author": "only1indigo, burnedpopcorn",
     "genres": [
       "tower-defense",
@@ -8138,7 +8138,7 @@ receiveGames([
     "id": 629,
     "name": "Off",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/629.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/629.html",
+    "url": "html/629.html",
     "author": "Mortis Ghost, Fangamer",
     "genres": [
       "rpg",
@@ -8152,7 +8152,7 @@ receiveGames([
     "id": 630,
     "name": "Space Funeral",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/630.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/630.html",
+    "url": "html/630.html",
     "author": "Stephen Gillmurphy",
     "genres": [
       "rpg",
@@ -8166,7 +8166,7 @@ receiveGames([
     "id": 631,
     "name": "Endroll",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/631.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/631-a.html",
+    "url": "html/631-a.html",
     "author": " Segawa",
     "genres": [
       "rpg",
@@ -8180,7 +8180,7 @@ receiveGames([
     "id": 632,
     "name": "Cave Story",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/632.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/632-a.html",
+    "url": "html/632-a.html",
     "author": " Daisuke 'Pixel' Amaya",
     "genres": [
       "action",
@@ -8195,7 +8195,7 @@ receiveGames([
     "id": 635,
     "name": "Spelunky Classic HD",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/635.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/635.html",
+    "url": "html/635.html",
     "author": " nkrapivin",
     "genres": [
       "skill"
@@ -8208,7 +8208,7 @@ receiveGames([
     "id": 637,
     "name": "BFDIA 5b",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/637.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/637-f.html",
+    "url": "html/637-f.html",
     "author": "Cary Huang",
     "genres": [
       "action",
@@ -8223,7 +8223,7 @@ receiveGames([
     "id": 638,
     "name": "BFDIA 5b: 5*30",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/638.gif",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/638-f.html",
+    "url": "html/638-f.html",
     "author": "Mawilite, Cary Huang",
     "genres": [
       "action",
@@ -8238,7 +8238,7 @@ receiveGames([
     "id": 640,
     "name": "Mutilate a Doll 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/640.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/640.html",
+    "url": "html/640.html",
     "author": "SilverGames",
     "genres": [
       "action",
@@ -8253,7 +8253,7 @@ receiveGames([
     "id": 641,
     "name": "Godzilla Daikaiju Battle Royale",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/641.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/641.html",
+    "url": "html/641.html",
     "author": "AWM Studio Productions LLC",
     "genres": [
       "action",
@@ -8267,7 +8267,7 @@ receiveGames([
     "id": 643,
     "name": "Rio Rex",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/643.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/643.html",
+    "url": "html/643.html",
     "author": "Gametornado",
     "genres": [
       "action",
@@ -8281,7 +8281,7 @@ receiveGames([
     "id": 645,
     "name": "Arthur's Nightmare",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/645.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/645-e.html",
+    "url": "html/645-e.html",
     "author": "Varun R.",
     "genres": [
       "action",
@@ -8295,7 +8295,7 @@ receiveGames([
     "id": 646,
     "name": "Buster Jam",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/646.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/646-fixed.html",
+    "url": "html/646-fixed.html",
     "author": "TALL GLASS",
     "genres": [
       "music",
@@ -8309,7 +8309,7 @@ receiveGames([
     "id": 647,
     "name": "Super Smash Flash",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/647.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/647.html",
+    "url": "html/647.html",
     "author": "McLeodGaming",
     "genres": [
       "action",
@@ -8323,7 +8323,7 @@ receiveGames([
     "id": 648,
     "name": "Mindwave",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/648.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/648-el.html",
+    "url": "html/648-el.html",
     "author": "HoloHammer",
     "genres": [
       "puzzle",
@@ -8337,7 +8337,7 @@ receiveGames([
     "id": 649,
     "name": "Look Outside",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/649.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/649.html",
+    "url": "html/649.html",
     "author": "Francis Coulombe",
     "genres": [
       "rpg",
@@ -8352,7 +8352,7 @@ receiveGames([
     "id": 650,
     "name": "Milk Inside a Bag of Milk Inside a Bag of Milk",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/650.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/650-f.html",
+    "url": "html/650-f.html",
     "author": "Nikita Kryukov",
     "genres": [
       "adventure",
@@ -8366,7 +8366,7 @@ receiveGames([
     "id": 651,
     "name": "Milk Outside A Bag Of Milk Outside A Bag Of Milk",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/651.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/651.html",
+    "url": "html/651.html",
     "author": "Nikita Kryukov",
     "genres": [
       "adventure",
@@ -8380,7 +8380,7 @@ receiveGames([
     "id": 654,
     "name": "Final Fantasy VII",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/654.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/654.html",
+    "url": "html/654.html",
     "author": "Square Enix",
     "genres": [
       "action",
@@ -8395,7 +8395,7 @@ receiveGames([
     "id": 655,
     "name": "Goblin Goopmaxxing",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/655.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/655.html",
+    "url": "html/655.html",
     "author": "BugfightStudio",
     "genres": [
       "action",
@@ -8409,7 +8409,7 @@ receiveGames([
     "id": 656,
     "name": "Rogue Sergeant The Final Operation",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/656.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/656.html",
+    "url": "html/656.html",
     "author": "Studiohammergames",
     "genres": [
       "action",
@@ -8423,7 +8423,7 @@ receiveGames([
     "id": 657,
     "name": "Friday Night Funkin vs Undertale",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/657.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/657.html",
+    "url": "html/657.html",
     "author": "vs undertale team",
     "genres": [
       "music",
@@ -8439,7 +8439,7 @@ receiveGames([
     "id": 658,
     "name": "Midnight Shift",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/658.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/658.html",
+    "url": "html/658.html",
     "author": "Phantom GD",
     "genres": [
       "action",
@@ -8453,7 +8453,7 @@ receiveGames([
     "id": 659,
     "name": "Orange Roulette",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/659.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/659.html",
+    "url": "html/659.html",
     "author": "Matzerath",
     "genres": [
       "strategy",
@@ -8467,7 +8467,7 @@ receiveGames([
     "id": 660,
     "name": "Please Dont Touch Anything",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/660.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/660.html",
+    "url": "html/660.html",
     "author": "Four Quarters",
     "genres": [
       "puzzle",
@@ -8481,7 +8481,7 @@ receiveGames([
     "id": 661,
     "name": "Royal Towers: Medieval TD",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/661.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/661.html",
+    "url": "html/661.html",
     "author": "Superplus Games",
     "genres": [
       "tower-defense",
@@ -8495,7 +8495,7 @@ receiveGames([
     "id": 662,
     "name": "Going Balls",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/662.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/662.html",
+    "url": "html/662.html",
     "author": "Supersonic Studios LTD",
     "genres": [
       "action",
@@ -8510,7 +8510,7 @@ receiveGames([
     "id": 663,
     "name": "3D Bolt Master",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/663.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/663.html",
+    "url": "html/663.html",
     "author": "Joymaster Puzzle Game Studio",
     "genres": [
       "3d"
@@ -8523,7 +8523,7 @@ receiveGames([
     "id": 664,
     "name": "Tall.io",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/664.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/664.html",
+    "url": "html/664.html",
     "author": "Playgama",
     "genres": [
       ".io"
@@ -8536,7 +8536,7 @@ receiveGames([
     "id": 665,
     "name": "Match Triple 3D",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/665.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/665.html",
+    "url": "html/665.html",
     "author": "LIHUHU PTE. LTD.",
     "genres": [
       "3d",
@@ -8550,7 +8550,7 @@ receiveGames([
     "id": 666,
     "name": "Stick War: Legacy",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/666.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/666.html",
+    "url": "html/666.html",
     "author": "Max Games Studios",
     "genres": [
       "action",
@@ -8564,7 +8564,7 @@ receiveGames([
     "id": 667,
     "name": "In Stars and Time",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/667.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/667-fix.html",
+    "url": "html/667-fix.html",
     "author": "insertdisc5",
     "genres": [
       "rpg",
@@ -8578,7 +8578,7 @@ receiveGames([
     "id": 668,
     "name": "Gorilla Tag",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/668.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/668-fix2.html",
+    "url": "html/668-fix2.html",
     "author": "Another Axiom Inc, Boolonx",
     "genres": [
       "action",
@@ -8593,7 +8593,7 @@ receiveGames([
     "id": 669,
     "name": "Terraria",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/669.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/669.html",
+    "url": "html/669.html",
     "author": "Re-Logic, Mercury Workshop",
     "genres": [
       "action",
@@ -8608,7 +8608,7 @@ receiveGames([
     "id": 670,
     "name": "Raldi's Crackhouse",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/670.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/670.html",
+    "url": "html/670.html",
     "author": "RCHTeam, Grayson",
     "genres": [
       "action",
@@ -8623,7 +8623,7 @@ receiveGames([
     "id": 671,
     "name": "We Become What We Behold",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/671.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/671.html",
+    "url": "html/671.html",
     "author": "Ncase",
     "genres": [
       "casual",
@@ -8637,7 +8637,7 @@ receiveGames([
     "id": 672,
     "name": "A Difficult Game About Climbing",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/672.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/672-2.html",
+    "url": "html/672-2.html",
     "author": "Pontypants",
     "genres": [
       "action",
@@ -8652,7 +8652,7 @@ receiveGames([
     "id": 673,
     "name": "Hobo 1",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/673.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/673.html",
+    "url": "html/673.html",
     "author": "SeethingSwarm",
     "genres": [
       "action",
@@ -8666,7 +8666,7 @@ receiveGames([
     "id": 674,
     "name": "Hobo 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/674.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/674.html",
+    "url": "html/674.html",
     "author": "SeethingSwarm",
     "genres": [
       "action",
@@ -8680,7 +8680,7 @@ receiveGames([
     "id": 675,
     "name": "Hobo 3",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/675.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/675.html",
+    "url": "html/675.html",
     "author": "SeethingSwarm",
     "genres": [
       "action",
@@ -8694,7 +8694,7 @@ receiveGames([
     "id": 676,
     "name": "Hobo 4",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/676.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/676.html",
+    "url": "html/676.html",
     "author": "SeethingSwarm",
     "genres": [
       "action",
@@ -8708,7 +8708,7 @@ receiveGames([
     "id": 677,
     "name": "Hobo 5",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/677.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/677.html",
+    "url": "html/677.html",
     "author": "SeethingSwarm",
     "genres": [
       "action",
@@ -8722,7 +8722,7 @@ receiveGames([
     "id": 678,
     "name": "Hobo 6",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/678.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/678.html",
+    "url": "html/678.html",
     "author": "SeethingSwarm",
     "genres": [
       "action",
@@ -8736,7 +8736,7 @@ receiveGames([
     "id": 679,
     "name": "Hobo 7",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/679.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/679.html",
+    "url": "html/679.html",
     "author": "SeethingSwarm",
     "genres": [
       "action",
@@ -8750,7 +8750,7 @@ receiveGames([
     "id": 680,
     "name": "Kirby Super Star Ultra",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/680.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/680.html",
+    "url": "html/680.html",
     "author": "Nintendo",
     "genres": [
       "action",
@@ -8766,7 +8766,7 @@ receiveGames([
     "id": 685,
     "name": "FIFA 11",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/685.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/685.html",
+    "url": "html/685.html",
     "author": "EA Sports",
     "genres": [
       "sports",
@@ -8781,7 +8781,7 @@ receiveGames([
     "id": 686,
     "name": "FIFA 10",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/686.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/686.html",
+    "url": "html/686.html",
     "author": "EA Sports",
     "genres": [
       "sports",
@@ -8796,7 +8796,7 @@ receiveGames([
     "id": 687,
     "name": "Pico's School (1999)",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/687.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/687.html",
+    "url": "html/687.html",
     "author": "Tom Fulp",
     "genres": [
       "action",
@@ -8810,7 +8810,7 @@ receiveGames([
     "id": 688,
     "name": "Peggle",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/688.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/688.html",
+    "url": "html/688.html",
     "author": "PopCap Games",
     "genres": [
       "casual",
@@ -8825,7 +8825,7 @@ receiveGames([
     "id": 689,
     "name": "Meatboy",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/689.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/689.html",
+    "url": "html/689.html",
     "author": "Jonathan McEntee",
     "genres": [
       "action",
@@ -8840,7 +8840,7 @@ receiveGames([
     "id": 692,
     "name": "Kirby ~ Soft & Wet",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/692.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/692.html",
+    "url": "html/692.html",
     "author": "Strimp's Kitchen",
     "genres": [
       "action",
@@ -8855,7 +8855,7 @@ receiveGames([
     "id": 693,
     "name": "Half Life: Opposing Force",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/693.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/693.html",
+    "url": "html/693.html",
     "author": "Valve",
     "genres": [
       "action",
@@ -8869,7 +8869,7 @@ receiveGames([
     "id": 694,
     "name": "Pokemon Firered",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/694.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/694.html",
+    "url": "html/694.html",
     "author": "Nintendo",
     "genres": [
       "adventure",
@@ -8885,7 +8885,7 @@ receiveGames([
     "id": 695,
     "name": "Duck Life 8",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/695.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/695.html",
+    "url": "html/695.html",
     "author": "Wix Games",
     "genres": [
       "action",
@@ -8899,7 +8899,7 @@ receiveGames([
     "id": 696,
     "name": "Pokemon HeartGold",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/696.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/696.html",
+    "url": "html/696.html",
     "author": "Nintendo",
     "genres": [
       "adventure",
@@ -8915,7 +8915,7 @@ receiveGames([
     "id": 697,
     "name": "Bank Robbery",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/697.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/697.html",
+    "url": "html/697.html",
     "author": "justaliendev",
     "genres": [
       "action",
@@ -8929,7 +8929,7 @@ receiveGames([
     "id": 698,
     "name": "Bank Robbery 3",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/698.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/698.html",
+    "url": "html/698.html",
     "author": "justaliendev",
     "genres": [
       "action",
@@ -8943,7 +8943,7 @@ receiveGames([
     "id": 699,
     "name": "Stickman Destruction",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/699.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/699.html",
+    "url": "html/699.html",
     "author": "freezenova",
     "genres": [
       "action"
@@ -8956,7 +8956,7 @@ receiveGames([
     "id": 701,
     "name": "Real Flight Simulator",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/701.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/701.html",
+    "url": "html/701.html",
     "author": "freezenova",
     "genres": [
       "3d"
@@ -8969,7 +8969,7 @@ receiveGames([
     "id": 702,
     "name": "JavascriptPS1",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/702.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/702.html",
+    "url": "html/702.html",
     "author": "Alex Ashnov",
     "genres": [
       "casual",
@@ -8983,7 +8983,7 @@ receiveGames([
     "id": 704,
     "name": "Five Nights at Freddy's: World Refreshed",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/704.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/704-fix.html",
+    "url": "html/704-fix.html",
     "author": "Pyturret, Willowy (squall.cc)",
     "genres": [
       "3d",
@@ -8998,7 +8998,7 @@ receiveGames([
     "id": 705,
     "name": "Iron Lung",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/705.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/705-fix.html",
+    "url": "html/705-fix.html",
     "author": "David Szymanski, 98corbins",
     "genres": [
       "horror",
@@ -9013,7 +9013,7 @@ receiveGames([
     "id": 706,
     "name": "Fear & Hunger",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/706.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/706-fix.html",
+    "url": "html/706-fix.html",
     "author": "Miro Haverinen, Happy Paintings",
     "genres": [
       "rpg",
@@ -9028,7 +9028,7 @@ receiveGames([
     "id": 707,
     "name": "Traffic Racer",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/707.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/707-fix.html",
+    "url": "html/707-fix.html",
     "author": "skgames, madkidgames",
     "genres": [
       "action",
@@ -9042,7 +9042,7 @@ receiveGames([
     "id": 708,
     "name": "Needy Streamer Overload",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/708.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/708-fix.html",
+    "url": "html/708-fix.html",
     "author": "WSS playground, EDURocks",
     "genres": [
       "simulation",
@@ -9056,7 +9056,7 @@ receiveGames([
     "id": 709,
     "name": "Survivor.io",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/709.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/709-fixagain.html",
+    "url": "html/709-fixagain.html",
     "author": "Habby Pte. Ltd, madkidgames",
     "genres": [
       ".io"
@@ -9069,7 +9069,7 @@ receiveGames([
     "id": 711,
     "name": "Antonblast",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/711.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/711.html",
+    "url": "html/711.html",
     "author": "Summitsphere",
     "genres": [
       "action",
@@ -9084,7 +9084,7 @@ receiveGames([
     "id": 712,
     "name": "Jumbo Mario",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/712.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/712-f.html",
+    "url": "html/712-f.html",
     "author": "wik",
     "genres": [
       "action",
@@ -9099,7 +9099,7 @@ receiveGames([
     "id": 713,
     "name": "Silent Hill",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/713.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/713.html",
+    "url": "html/713.html",
     "author": "Konami, Team Silent",
     "genres": [
       "action",
@@ -9115,7 +9115,7 @@ receiveGames([
     "id": 716,
     "name": "Clover Pit",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/716.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/716-fix2.html",
+    "url": "html/716-fix2.html",
     "author": "Panik Arcade",
     "genres": [
       "action",
@@ -9129,7 +9129,7 @@ receiveGames([
     "id": 717,
     "name": "Peaks of Yore",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/717.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/717-fix2.html",
+    "url": "html/717-fix2.html",
     "author": "Anders Grube Jensen",
     "genres": [
       "action",
@@ -9144,7 +9144,7 @@ receiveGames([
     "id": 718,
     "name": "Untitled Goose Game",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/718.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/718.html",
+    "url": "html/718.html",
     "author": "House House",
     "genres": [
       "strategy",
@@ -9159,7 +9159,7 @@ receiveGames([
     "id": 719,
     "name": "A Game About Feeding A Black Hole",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/719.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/719.html",
+    "url": "html/719.html",
     "author": "Aarimous, Thornityco",
     "genres": [
       "action",
@@ -9173,7 +9173,7 @@ receiveGames([
     "id": 720,
     "name": "Roulette Hero",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/720.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/720.html",
+    "url": "html/720.html",
     "author": "vfqd, Mr.Pootsley, Jaybooty, Kane Forster, shxyder",
     "genres": [
       "action",
@@ -9188,7 +9188,7 @@ receiveGames([
     "id": 721,
     "name": "Shift at Midnight",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/721.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/721.html",
+    "url": "html/721.html",
     "author": "Bun Muen, Slqnt",
     "genres": [
       "action",
@@ -9202,7 +9202,7 @@ receiveGames([
     "id": 722,
     "name": "Fused 240",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/722.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/722.html",
+    "url": "html/722.html",
     "author": "Mike Klubnika, shxyder",
     "genres": [
       "action",
@@ -9216,7 +9216,7 @@ receiveGames([
     "id": 723,
     "name": "Brotato",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/723.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/723.html",
+    "url": "html/723.html",
     "author": "Blobfish, Individual/Stinkalistic",
     "genres": [
       "action",
@@ -9231,7 +9231,7 @@ receiveGames([
     "id": 724,
     "name": "Endoparasitic 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/724.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/724.html",
+    "url": "html/724.html",
     "author": "Miziziziz, Deep Root Interactive, Individual/Stinkalistic",
     "genres": [
       "action",
@@ -9245,7 +9245,7 @@ receiveGames([
     "id": 725,
     "name": "ShredSauce",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/725.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/725-ff.html",
+    "url": "html/725-ff.html",
     "author": "Shredsauce Team",
     "genres": [
       "sports",
@@ -9259,7 +9259,7 @@ receiveGames([
     "id": 727,
     "name": "Dimension Incident",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/727.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/727.html",
+    "url": "html/727.html",
     "author": "biznesbear",
     "genres": [
       "action",
@@ -9274,7 +9274,7 @@ receiveGames([
     "id": 728,
     "name": "Fear Assessment",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/728.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/728.html",
+    "url": "html/728.html",
     "author": "Alexander Wiseman",
     "genres": [
       "horror",
@@ -9288,7 +9288,7 @@ receiveGames([
     "id": 729,
     "name": "game inside a game inside a game inside a game inside a game inside a game",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/729.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/729.html",
+    "url": "html/729.html",
     "author": "Sam Hogan",
     "genres": [
       "puzzle",
@@ -9302,7 +9302,7 @@ receiveGames([
     "id": 730,
     "name": "Cell Machine",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/730.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/730.html",
+    "url": "html/730.html",
     "author": "Sam Hogan",
     "genres": [
       "puzzle",
@@ -9316,7 +9316,7 @@ receiveGames([
     "id": 731,
     "name": "Undertale: Last Breath",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/731.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/731.html",
+    "url": "html/731.html",
     "author": "caijiqaq",
     "genres": [
       "action",
@@ -9330,7 +9330,7 @@ receiveGames([
     "id": 732,
     "name": "64 in 1 NES",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/732.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/732.html",
+    "url": "html/732.html",
     "author": "idk",
     "genres": [
       "action",
@@ -9346,7 +9346,7 @@ receiveGames([
     "id": 733,
     "name": "Tetris",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/733.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/733.html",
+    "url": "html/733.html",
     "author": "Nintendo",
     "genres": [
       "strategy",
@@ -9362,7 +9362,7 @@ receiveGames([
     "id": 734,
     "name": "Christmas Massacre",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/734.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/734.html",
+    "url": "html/734.html",
     "author": "Puppet Combo",
     "genres": [
       "action",
@@ -9376,7 +9376,7 @@ receiveGames([
     "id": 735,
     "name": "Famidash",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/735.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/735.html",
+    "url": "html/735.html",
     "author": "Zephyrside",
     "genres": [
       "action",
@@ -9394,7 +9394,7 @@ receiveGames([
     "id": 736,
     "name": "Super Mario Bros. Remastered",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/736.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/736.html",
+    "url": "html/736.html",
     "author": "Zephyrside",
     "genres": [
       "action",
@@ -9409,7 +9409,7 @@ receiveGames([
     "id": 737,
     "name": "Saihate Station (さいはて駅)",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/737.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/737.html",
+    "url": "html/737.html",
     "author": "びぶ/viv",
     "genres": [
       "adventure",
@@ -9423,7 +9423,7 @@ receiveGames([
     "id": 738,
     "name": "Dumb Ways to Die",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/738.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/738-u.html",
+    "url": "html/738-u.html",
     "author": "PlaySide Studios Ltd, Metro Trains",
     "genres": [
       "action",
@@ -9437,7 +9437,7 @@ receiveGames([
     "id": 739,
     "name": "Soccer Random",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/739.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/739.html",
+    "url": "html/739.html",
     "author": "RHM Interactive OÜ",
     "genres": [
       "sports",
@@ -9452,7 +9452,7 @@ receiveGames([
     "id": 740,
     "name": "Bart Blast",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/740.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/740.html",
+    "url": "html/740.html",
     "author": "epickface",
     "genres": [
       "action",
@@ -9466,7 +9466,7 @@ receiveGames([
     "id": 741,
     "name": "Resident Evil",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/741.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/741.html",
+    "url": "html/741.html",
     "author": "Capcom",
     "genres": [
       "action",
@@ -9483,7 +9483,7 @@ receiveGames([
     "id": 742,
     "name": "Resident Evil 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/742.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/742.html",
+    "url": "html/742.html",
     "author": "Capcom",
     "genres": [
       "action",
@@ -9500,7 +9500,7 @@ receiveGames([
     "id": 743,
     "name": "Power Hover",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/743.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/743.html",
+    "url": "html/743.html",
     "author": "ODDROK",
     "genres": [
       "action",
@@ -9515,7 +9515,7 @@ receiveGames([
     "id": 744,
     "name": "Escape Road City 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/744.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/744-a.html",
+    "url": "html/744-a.html",
     "author": "AZ Games",
     "genres": [
       "action",
@@ -9529,7 +9529,7 @@ receiveGames([
     "id": 745,
     "name": "Tetris",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/745.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/745.html",
+    "url": "html/745.html",
     "author": "Nintendo",
     "genres": [
       "strategy",
@@ -9545,7 +9545,7 @@ receiveGames([
     "id": 746,
     "name": "Fundamental Paper Novel",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/746.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/746.html",
+    "url": "html/746.html",
     "author": "yakubell",
     "genres": [
       "adventure",
@@ -9559,7 +9559,7 @@ receiveGames([
     "id": 747,
     "name": "Worst Time Simulator",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/747.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/747.html",
+    "url": "html/747.html",
     "author": "omegafredo",
     "genres": [
       "3d"
@@ -9572,7 +9572,7 @@ receiveGames([
     "id": 748,
     "name": "Undertale Last Breath PHASE THREE",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/748.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/748.html",
+    "url": "html/748.html",
     "author": "mario1d240",
     "genres": [
       "action",
@@ -9586,7 +9586,7 @@ receiveGames([
     "id": 749,
     "name": "Super Monkey Ball 1&2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/749.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/749.html",
+    "url": "html/749.html",
     "author": "Amusement Vision, camthesaxman etc",
     "genres": [
       "action",
@@ -9601,7 +9601,7 @@ receiveGames([
     "id": 752,
     "name": "Bad Piggies",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/752.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/752.html",
+    "url": "html/752.html",
     "author": "Rovio Entertainment, EDURocks",
     "genres": [
       "puzzle",
@@ -9616,7 +9616,7 @@ receiveGames([
     "id": 753,
     "name": "Breaklock",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/753.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/753.html",
+    "url": "html/753.html",
     "author": "Print More India",
     "genres": [
       "puzzle",
@@ -9630,7 +9630,7 @@ receiveGames([
     "id": 755,
     "name": "Brawl Simulator 3D",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/755.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/755.html",
+    "url": "html/755.html",
     "author": "Fire Games, Supercell",
     "genres": [
       "action",
@@ -9645,7 +9645,7 @@ receiveGames([
     "id": 756,
     "name": "Witch's Heart",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/756.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/756-f.html",
+    "url": "html/756-f.html",
     "author": "IZ (BLUE STAR Entertainment)",
     "genres": [
       "adventure",
@@ -9659,7 +9659,7 @@ receiveGames([
     "id": 757,
     "name": "Ultrapool",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/757.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/757.html",
+    "url": "html/757.html",
     "author": "Icedrop Games, mysmic",
     "genres": [
       "sports",
@@ -9674,7 +9674,7 @@ receiveGames([
     "id": 758,
     "name": "CaseOh's Basics in Eating and Fast Food",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/758.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/758a.html",
+    "url": "html/758a.html",
     "author": "Ronezkj15",
     "genres": [
       "horror",
@@ -9688,7 +9688,7 @@ receiveGames([
     "id": 759,
     "name": "Dice a Million",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/759.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/759.html",
+    "url": "html/759.html",
     "author": "countlessnights, 2 Left Thumbs, NotRexed",
     "genres": [
       "strategy",
@@ -9702,7 +9702,7 @@ receiveGames([
     "id": 760,
     "name": "Overburden",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/760.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/760.html",
+    "url": "html/760.html",
     "author": "notsospecialgames, shxyder",
     "genres": [
       "strategy",
@@ -9716,7 +9716,7 @@ receiveGames([
     "id": 761,
     "name": "FISH",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/761.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/761.html",
+    "url": "html/761.html",
     "author": "dmcaguy",
     "genres": [
       "casual",
@@ -9730,7 +9730,7 @@ receiveGames([
     "id": 762,
     "name": "Cheese Rolling",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/762.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/762.html",
+    "url": "html/762.html",
     "author": "The Interviewed, wasm.com",
     "genres": [
       "casual",
@@ -9744,7 +9744,7 @@ receiveGames([
     "id": 763,
     "name": "Flying Gorilla 3D",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/763.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/763.html",
+    "url": "html/763.html",
     "author": "Pinbit LLC",
     "genres": [
       "action",
@@ -9759,7 +9759,7 @@ receiveGames([
     "id": 764,
     "name": "Five Night's at Shrek's Hotel",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/764.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/764.html",
+    "url": "html/764.html",
     "author": "rend-pii",
     "genres": [
       "horror",
@@ -9773,7 +9773,7 @@ receiveGames([
     "id": 765,
     "name": "Scary Shawarma Kiosk: the ANOMALY",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/765.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/765.html",
+    "url": "html/765.html",
     "author": "kharbor_ykt",
     "genres": [
       "horror",
@@ -9787,7 +9787,7 @@ receiveGames([
     "id": 766,
     "name": "Suika Game",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/766.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/766.html",
+    "url": "html/766.html",
     "author": "unknown",
     "genres": [
       "puzzle",
@@ -9801,7 +9801,7 @@ receiveGames([
     "id": 767,
     "name": "Stick Slasher",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/767.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/767.html",
+    "url": "html/767.html",
     "author": "Beruke Games",
     "genres": [
       "action",
@@ -9815,7 +9815,7 @@ receiveGames([
     "id": 768,
     "name": "Stickman Kombat 2D",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/768.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/768.html",
+    "url": "html/768.html",
     "author": "GamePush",
     "genres": [
       "action",
@@ -9829,7 +9829,7 @@ receiveGames([
     "id": 769,
     "name": "Stickman Duel",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/769.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/769.html",
+    "url": "html/769.html",
     "author": "unknown",
     "genres": [
       "action",
@@ -9843,7 +9843,7 @@ receiveGames([
     "id": 770,
     "name": "Sonic Robo Blast 2",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/770.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/770.html",
+    "url": "html/770.html",
     "author": "Sonic Team Junior, crunch, vinmannie",
     "genres": [
       "action",
@@ -9858,7 +9858,7 @@ receiveGames([
     "id": 771,
     "name": "Hollow Knight: Silksong",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/771.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/771-z.html",
+    "url": "html/771-z.html",
     "author": "Team Cherry, Edurocks",
     "genres": [
       "action",
@@ -9874,7 +9874,7 @@ receiveGames([
     "id": 772,
     "name": "Sam & Max Hit the Road",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/772.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/772.html",
+    "url": "html/772.html",
     "author": "Lucasfilm",
     "genres": [
       "adventure",
@@ -9889,7 +9889,7 @@ receiveGames([
     "id": 773,
     "name": "Command & Conquer",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/773.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/773.html",
+    "url": "html/773.html",
     "author": "Westwood Studios",
     "genres": [
       "strategy",
@@ -9904,7 +9904,7 @@ receiveGames([
     "id": 774,
     "name": "Mountain Bike Racer",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/774.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/774.html",
+    "url": "html/774.html",
     "author": "stefano1234",
     "genres": [
       "racing",
@@ -9918,7 +9918,7 @@ receiveGames([
     "id": 775,
     "name": "Bart Bash",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/775.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/775.html",
+    "url": "html/775.html",
     "author": "TeleSTOP",
     "genres": [
       "action",
@@ -9932,7 +9932,7 @@ receiveGames([
     "id": 776,
     "name": "Your Only Move Is HUSTLE",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/776.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/776.html",
+    "url": "html/776.html",
     "author": "ivysly",
     "genres": [
       "action",
@@ -9948,7 +9948,7 @@ receiveGames([
     "id": 777,
     "name": "Outhold",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/777.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/777.html",
+    "url": "html/777.html",
     "author": "tellusgames",
     "genres": [
       "strategy",
@@ -9962,7 +9962,7 @@ receiveGames([
     "id": 778,
     "name": "Serial Experiments Lain",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/778.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/778.html",
+    "url": "html/778.html",
     "author": "NBCUniversal Entertainment Japan, Pioneer Productions",
     "genres": [
       "adventure"
@@ -9975,7 +9975,7 @@ receiveGames([
     "id": 779,
     "name": "I Have No Mouth, and I Must Scream",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/779.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/779.html",
+    "url": "html/779.html",
     "author": "Cyberdreams",
     "genres": [
       "adventure",
@@ -9991,7 +9991,7 @@ receiveGames([
     "id": 780,
     "name": "Thing-Thing Arena 3",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/780.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/780.html",
+    "url": "html/780.html",
     "author": "Weasel",
     "genres": [
       "action",
@@ -10005,7 +10005,7 @@ receiveGames([
     "id": 781,
     "name": "Scratch Inc",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/781.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/781.html",
+    "url": "html/781.html",
     "author": "Makopaz",
     "genres": [
       "casual",
@@ -10019,7 +10019,7 @@ receiveGames([
     "id": 782,
     "name": "Um Jammer Lammy",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/782.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/782f.html",
+    "url": "html/782f.html",
     "author": "NanaOn-Sha",
     "genres": [
       "music",
@@ -10035,7 +10035,7 @@ receiveGames([
     "id": 783,
     "name": "Apes vs Helium",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/783.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/783.html",
+    "url": "html/783.html",
     "author": "mdtowerz",
     "genres": [
       "action",
@@ -10049,7 +10049,7 @@ receiveGames([
     "id": 784,
     "name": "Gabriel's Awesome Schoolhouse (GASH)",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/784.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/784.html",
+    "url": "html/784.html",
     "author": "Gabriel115GJ",
     "genres": [
       "action",
@@ -10064,7 +10064,7 @@ receiveGames([
     "id": 785,
     "name": "Geometry Dash",
     "cover": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/covers/785.png",
-    "url": "https://cdn.jsdelivr.net/gh/AlexDingleberries/visp-assets/html/785.html",
+    "url": "html/785.html",
     "author": "RobTop Games",
     "genres": [
       "action",

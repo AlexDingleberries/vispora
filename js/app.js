@@ -3,6 +3,7 @@ const IC = {
   grid: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>`,
   film: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/><line x1="17" y1="17" x2="22" y2="17"/></svg>`,
   tv: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>`,
+  anime: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7c4-1.5 14-1.5 18 0"/> <path d="M5 10h14"/><path d="M7 10v11"/><path d="M17 10v11"/> <path d="M3 5.5l1 .5M20 6l1-.5"/></svg>`,
   settings: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>`,
   star: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
   starFilled: `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
@@ -87,6 +88,7 @@ function initStars(container){
     btn.innerHTML=added?IC.starFilled:IC.star;
     btn.setAttribute('aria-label',`${added?'Unfavorite':'Favorite'} game`);
     showToast(added?'Added to favorites':'Removed from favorites');
+    document.dispatchEvent(new CustomEvent('vispora:game-favs-changed',{detail:{id,added}}));
   });
 }
 
@@ -108,8 +110,8 @@ async function loadGames(){
     };
     const script = document.createElement('script');
     script.src = 'data/games.js';
-        script.onerror = () => reject(new Error("Failed to load games data."));
-        document.body.appendChild(script);
+    script.onerror = () => reject(new Error("Failed to load games data."));
+    document.body.appendChild(script);
   });
 }
 
@@ -125,7 +127,9 @@ function navHTML(active){
         <span class="nav-icon">${IC.film}</span><span>Movies</span></a></li>
       <li><a href="tv.html" ${active==='tv'?'class="active"':''}>
         <span class="nav-icon">${IC.tv}</span><span>TV Shows</span></a></li>
-        <li><a href="ai.html" ${active==='ai'?'class="active"':''}>
+      <li><a href="anime.html" ${active==='anime'?'class="active"':''}>
+        <span class="nav-icon">${IC.anime}</span><span>Anime</span></a></li>
+      <li><a href="ai.html" ${active==='ai'?'class="active"':''}>
         <span class="nav-icon">${IC.brain}</span><span>AI Chat</span></a></li>
       <li><a href="settings.html" ${active==='settings'?'class="active"':''}>
         <span class="nav-icon">${IC.settings}</span><span>Settings</span></a></li>

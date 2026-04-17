@@ -13,40 +13,86 @@
 <style>
 /* ── Mic button ── */
 .ai-mic-btn {
-  position: absolute;
-  right: 48px;
-  bottom: 10px;
-  width: 32px; height: 32px;
-  border: none; border-radius: 50%;
-  background: transparent;
-  color: var(--text-secondary, #888);
-  cursor: pointer;
-  display: flex; align-items: center; justify-content: center;
-  transition: color .2s, background .2s;
-  flex-shrink: 0;
+  position: absolute; right: 48px; bottom: 10px;
+  width: 32px; height: 32px; border: none; border-radius: 50%;
+  background: transparent; color: var(--text-secondary);
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: color .2s, background .2s; flex-shrink: 0;
 }
-.ai-mic-btn:hover { color: var(--accent, #7c6fff); }
-.ai-mic-btn.recording {
-  color: #e85d5d;
-  animation: mic-pulse 1s ease-in-out infinite;
-}
+.ai-mic-btn:hover { color: var(--accent); }
+.ai-mic-btn.recording { color: #e85d5d; animation: mic-pulse 1s ease-in-out infinite; }
 @keyframes mic-pulse {
-  0%,100% { background: rgba(232,93,93,.08); }
-  50%      { background: rgba(232,93,93,.22); }
+  0%,100% { background: rgba(232,93,93,.08); } 50% { background: rgba(232,93,93,.22); }
 }
 .ai-mic-btn svg { pointer-events: none; }
-
-/* ── STT status pill ── */
 .stt-pill {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 3px 10px; border-radius: 99px;
-  background: rgba(232,93,93,.12);
-  color: #e85d5d; font-size: 0.72rem; font-style: italic;
+  display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px;
+  border-radius: 99px; background: rgba(232,93,93,.12); color: #e85d5d;
+  font-size: 0.72rem; font-style: italic;
 }
-.stt-dot {
-  width: 7px; height: 7px; border-radius: 50%;
-  background: #e85d5d;
-  animation: mic-pulse 1s ease-in-out infinite;
+.stt-dot { width: 7px; height: 7px; border-radius: 50%; background: #e85d5d; animation: mic-pulse 1s ease-in-out infinite; }
+
+/* ── Message action buttons ── */
+.ai-msg-actions {
+  display: flex; align-items: center; gap: 4px;
+  margin-top: 8px; opacity: 0; transition: opacity 0.18s;
+}
+.ai-msg:hover .ai-msg-actions { opacity: 1; }
+.ai-msg-action-btn {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 4px 9px; border-radius: var(--radius-sm);
+  font-size: 0.72rem; font-weight: 600; cursor: pointer; border: none;
+  background: var(--bg4); color: var(--text-secondary);
+  border: 1px solid var(--card-border); transition: all 0.15s;
+}
+.ai-msg-action-btn:hover { color: var(--accent); border-color: rgba(var(--accent-rgb),0.35); background: var(--accent-dim); }
+.ai-msg-action-btn.favorited { color: var(--accent); border-color: rgba(var(--accent-rgb),0.4); }
+.ai-msg-action-btn svg { width: 11px; height: 11px; pointer-events: none; }
+
+/* ── AI History sidebar section ── */
+.ai-history-list { display: flex; flex-direction: column; gap: 4px; max-height: 280px; overflow-y: auto; }
+.ai-hist-item {
+  display: flex; align-items: center; gap: 6px;
+  padding: 7px 9px; border-radius: var(--radius-sm);
+  border: 1px solid var(--card-border); background: var(--bg2);
+  cursor: pointer; transition: all 0.15s;
+}
+.ai-hist-item:hover { border-color: rgba(var(--accent-rgb),0.35); background: var(--accent-dim); }
+.ai-hist-item-info { flex: 1; min-width: 0; }
+.ai-hist-item-title { font-size: 0.78rem; font-weight: 600; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ai-hist-item-meta { font-size: 0.66rem; color: var(--text-secondary); margin-top: 1px; }
+.ai-hist-item-del {
+  width: 20px; height: 20px; border-radius: 4px; flex-shrink: 0;
+  background: none; border: none; color: var(--text-secondary);
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  opacity: 0; transition: opacity 0.15s, color 0.15s;
+}
+.ai-hist-item:hover .ai-hist-item-del { opacity: 1; }
+.ai-hist-item-del:hover { color: #e85d5d; }
+
+/* ── AI Favs sidebar section ── */
+.ai-fav-list { display: flex; flex-direction: column; gap: 4px; max-height: 200px; overflow-y: auto; }
+.ai-fav-item {
+  padding: 7px 9px; border-radius: var(--radius-sm);
+  border: 1px solid var(--card-border); background: var(--bg2);
+  font-size: 0.74rem; color: var(--text-secondary); line-height: 1.45;
+  display: flex; align-items: flex-start; gap: 6px; cursor: default;
+}
+.ai-fav-item-text { flex: 1; min-width: 0; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
+.ai-fav-item-del {
+  width: 18px; height: 18px; flex-shrink: 0; border: none; background: none;
+  color: var(--text-secondary); cursor: pointer; border-radius: 3px;
+  display: flex; align-items: center; justify-content: center; transition: color 0.15s; margin-top: 1px;
+}
+.ai-fav-item-del:hover { color: #e85d5d; }
+
+/* ── Session badge ── */
+.ai-session-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 0.68rem; font-weight: 600; padding: 2px 8px;
+  border-radius: 99px; background: rgba(var(--accent-rgb),0.1);
+  color: var(--accent); border: 1px solid rgba(var(--accent-rgb),0.2);
+  margin-left: auto;
 }
 </style>
 </head>
@@ -116,10 +162,29 @@
           </select>
         </div>
 
-        <div class="ai-sidebar-section" style="flex:1">
+        <div class="ai-sidebar-section">
           <div class="ai-sidebar-title">System Prompt</div>
           <textarea id="ai-system" class="ai-system-prompt"
-            placeholder="Custom instructions for this session…" style="resize: none;"></textarea>
+            placeholder="Custom instructions for this session…" style="resize:none;min-height:70px"></textarea>
+        </div>
+
+        <!-- Chat History -->
+        <div class="ai-sidebar-section">
+          <div class="ai-sidebar-title" style="display:flex;justify-content:space-between;align-items:center">
+            <span>Chat History</span>
+            <button id="ai-save-chat" class="btn btn-secondary" style="padding:3px 9px;font-size:0.7rem;height:auto" type="button" title="Save current chat">Save</button>
+          </div>
+          <div class="ai-history-list" id="ai-history-list">
+            <div style="font-size:0.72rem;color:var(--text-secondary);padding:6px 0">No saved chats yet</div>
+          </div>
+        </div>
+
+        <!-- Favorited Responses -->
+        <div class="ai-sidebar-section" style="flex:1">
+          <div class="ai-sidebar-title">Favorited Responses</div>
+          <div class="ai-fav-list" id="ai-fav-list">
+            <div style="font-size:0.72rem;color:var(--text-secondary);padding:6px 0">No favorites yet — star a response</div>
+          </div>
         </div>
 
         <div class="ai-sidebar-actions">
@@ -156,16 +221,13 @@
       <div class="ai-input-area">
         <div class="ai-input-wrap" style="position:relative">
           <textarea class="ai-textarea" id="ai-input" placeholder="Send a message… or click the microphone to speak" rows="1"></textarea>
-
-          <!-- Mic button (Speech-to-Text) -->
-          <button class="ai-mic-btn" id="ai-mic" title="Hold to record (Speech-to-Text)">
+          <button class="ai-mic-btn" id="ai-mic" title="Click to record (Speech-to-Text)">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 2a3 3 0 0 1 3 3v7a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3Z"/>
               <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
               <line x1="12" y1="19" x2="12" y2="22"/>
             </svg>
           </button>
-
           <button class="ai-stop-btn" id="ai-stop" style="display:none">⏹ Stop</button>
           <button class="ai-send-btn" id="ai-send" title="Send (Enter)">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
@@ -188,15 +250,9 @@ document.getElementById('nav-ph').innerHTML = VApp.navHTML('ai');
 VCloak.initCloak(); VApp.initPanic(); VApp.initParticles();
 const dtEl = document.getElementById('nav-datetime'); if (dtEl) VApp.startDatetime(dtEl);
 
-/* ── Groq config ── */
-const GROQ_KEY = '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';
-const GROQ_CHAT = 'https://api.groq.com/openai/v1/chat/completions';
-const GROQ_STT  = 'https://api.groq.com/openai/v1/audio/transcriptions';
-const GROQ_HDR  = { 'Authorization': `Bearer ${GROQ_KEY}`, 'Content-Type': 'application/json' };
+const WORKER_URL = "https://api-proxz.alexdingleberries.workers.dev/"
 
-/* Reasoning models that natively produce <think> blocks */
 const REASONING_MODELS = new Set(['deepseek-r1-distill-llama-70b','qwen-qwq-32b']);
-
 const MODES = {
   '':'You are a helpful, knowledgeable, and concise assistant. Use markdown when it aids clarity.',
   code:'You are an expert programmer. Write clean, efficient, well-commented code. Use fenced code blocks with the correct language tag. Briefly explain your approach.',
@@ -209,26 +265,20 @@ const MODES = {
 };
 
 let messages = [], isStreaming = false, abort = null;
+let currentChatId = null; // track if this was loaded from a saved chat
 
 /* ── Reasoning toggle ── */
 const reasonCb = document.getElementById('ai-reasoning');
 const modelSel  = document.getElementById('ai-model');
-
 reasonCb.addEventListener('change', () => {
-  if (reasonCb.checked) {
-    /* Switch to DeepSeek R1 if not already on a reasoning model */
-    if (!REASONING_MODELS.has(modelSel.value)) {
-      modelSel.value = 'deepseek-r1-distill-llama-70b';
-    }
-  }
+  if (reasonCb.checked && !REASONING_MODELS.has(modelSel.value))
+    modelSel.value = 'deepseek-r1-distill-llama-70b';
 });
 modelSel.addEventListener('change', () => {
-  /* Uncheck reasoning if user picks a non-reasoning model */
   if (!REASONING_MODELS.has(modelSel.value)) reasonCb.checked = false;
   else reasonCb.checked = true;
 });
 
-/* ── Controls ── */
 document.getElementById('ai-temp').addEventListener('input', e => {
   document.getElementById('temp-display').textContent = parseFloat(e.target.value).toFixed(2);
 });
@@ -258,15 +308,113 @@ bindHints(document);
 document.getElementById('ai-send').addEventListener('click', send);
 document.getElementById('ai-stop').addEventListener('click', () => { if (abort) abort.abort(); });
 
+/* ── History & Favorites Sidebar ── */
+function renderHistorySidebar() {
+  const list = document.getElementById('ai-history-list');
+  const chats = VStorage.getAIChats();
+  if (!chats.length) {
+    list.innerHTML = `<div style="font-size:0.72rem;color:var(--text-secondary);padding:6px 0">No saved chats yet</div>`;
+    return;
+  }
+  list.innerHTML = chats.map(c => {
+    const date = new Date(c.date).toLocaleDateString('en-US',{month:'short',day:'numeric'});
+    return `<div class="ai-hist-item" data-id="${VApp.esc(c.id)}">
+      <div class="ai-hist-item-info">
+        <div class="ai-hist-item-title">${VApp.esc(c.title)}</div>
+        <div class="ai-hist-item-meta">${date} · ${c.messageCount} msgs · ${VApp.esc(c.model.split('-').slice(0,2).join(' '))}</div>
+      </div>
+      <button class="ai-hist-item-del" data-id="${VApp.esc(c.id)}" title="Delete chat" type="button">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>`;
+  }).join('');
+
+  list.querySelectorAll('.ai-hist-item').forEach(item => {
+    item.addEventListener('click', e => {
+      if (e.target.closest('.ai-hist-item-del')) return;
+      const id = item.dataset.id;
+      loadChat(id);
+    });
+  });
+  list.querySelectorAll('.ai-hist-item-del').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      VStorage.deleteAIChat(btn.dataset.id);
+      if (currentChatId === btn.dataset.id) currentChatId = null;
+      renderHistorySidebar();
+      VApp.showToast('Chat deleted');
+    });
+  });
+}
+
+function renderFavsSidebar() {
+  const list = document.getElementById('ai-fav-list');
+  const favs = VStorage.getAIFavs();
+  if (!favs.length) {
+    list.innerHTML = `<div style="font-size:0.72rem;color:var(--text-secondary);padding:6px 0">No favorites yet — star a response</div>`;
+    return;
+  }
+  list.innerHTML = favs.map(f => `
+    <div class="ai-fav-item" data-id="${VApp.esc(f.id)}">
+      <div class="ai-fav-item-text">${VApp.esc(f.content.slice(0,120))}${f.content.length>120?'…':''}</div>
+      <button class="ai-fav-item-del" data-id="${VApp.esc(f.id)}" title="Remove favorite" type="button">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>`).join('');
+  list.querySelectorAll('.ai-fav-item-del').forEach(btn => {
+    btn.addEventListener('click', () => {
+      VStorage.removeAIFav(btn.dataset.id);
+      renderFavsSidebar();
+      /* update any star button in the chat */
+      document.querySelectorAll('.ai-msg-action-btn[data-fav-id="'+btn.dataset.id+'"]').forEach(b => {
+        b.classList.remove('favorited');
+        b.dataset.favId = '';
+        b.title = 'Save response';
+        b.querySelector('span').textContent = 'Save';
+      });
+      VApp.showToast('Removed from favorites');
+    });
+  });
+}
+
+function loadChat(id) {
+  const chat = VStorage.getAIChatById(id);
+  if (!chat) return;
+  messages = [...chat.messages];
+  currentChatId = id;
+  const w = document.getElementById('ai-messages');
+  document.getElementById('ai-welcome')?.remove();
+  w.innerHTML = '';
+  chat.messages.forEach(m => appendMsg(m.role, m.content));
+  modelSel.value = chat.model || modelSel.value;
+  setStatus(`Loaded: ${chat.title}`, false);
+  VApp.showToast('Chat loaded');
+  /* Close mobile sidebar */
+  document.getElementById('ai-sidebar').classList.remove('open');
+  document.getElementById('sidebar-overlay').classList.remove('open');
+}
+
+/* ── Save Chat button ── */
+document.getElementById('ai-save-chat').addEventListener('click', () => {
+  if (!messages.length) { VApp.showToast('Nothing to save', 'info'); return; }
+  const firstUser = messages.find(m => m.role === 'user');
+  const title = firstUser ? firstUser.content.slice(0, 50) : 'Chat';
+  const id = VStorage.saveAIChat(title, modelSel.value, messages);
+  currentChatId = id;
+  renderHistorySidebar();
+  VApp.showToast('Chat saved!', 'success');
+});
+
+/* ── Clear Chat ── */
 document.getElementById('ai-clear').addEventListener('click', async () => {
   if (!messages.length) return;
-  const ok = await VApp.showModal({ title: 'Clear Chat', message: 'Remove all messages from this session?', confirmText: 'Clear', dangerous: true });
+  const ok = await VApp.showModal({ title: 'Clear Chat', message: 'Remove all messages from this session? You can save first.', confirmText: 'Clear', dangerous: true });
   if (!ok) return;
-  messages = [];
+  messages = []; currentChatId = null;
   const w = document.getElementById('ai-messages');
   w.innerHTML = `<div class="ai-welcome" id="ai-welcome">
-    <div class="ai-welcome-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg></div><h2>ai chat</h2>
-    <p>Ask anything. Adjust model, temperature, and reasoning in the sidebar.</p>
+    <div class="ai-welcome-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg></div>
+    <h2>ai chat</h2><p>Ask anything. Adjust model, temperature, and reasoning in the sidebar.</p>
     <div class="ai-welcome-hints">
       <button class="ai-hint-chip" data-hint="Explain quantum computing in simple terms">Quantum computing</button>
       <button class="ai-hint-chip" data-hint="Write a Python function to merge two sorted lists">Merge sorted lists</button>
@@ -290,73 +438,48 @@ document.getElementById('sidebar-overlay').addEventListener('click', () => {
 /* ─────────────────────── Speech-to-Text ─────────────────────── */
 const micBtn = document.getElementById('ai-mic');
 let mediaRecorder = null, audioChunks = [], isRecording = false;
-
-micBtn.addEventListener('click', () => {
-  isRecording ? stopRecording() : startRecording();
-});
+micBtn.addEventListener('click', () => { isRecording ? stopRecording() : startRecording(); });
 
 async function startRecording() {
   try {
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
     audioChunks = [];
-
-    /* Pick best supported MIME type */
     const mime = ['audio/webm;codecs=opus','audio/webm','audio/ogg;codecs=opus','audio/mp4']
       .find(m => MediaRecorder.isTypeSupported(m)) || '';
-
     mediaRecorder = new MediaRecorder(stream, mime ? { mimeType: mime } : {});
     mediaRecorder.ondataavailable = e => { if (e.data.size > 0) audioChunks.push(e.data); };
     mediaRecorder.onstop = transcribeAudio;
-    mediaRecorder.start(250); /* collect in 250 ms chunks */
-
+    mediaRecorder.start(250);
     isRecording = true;
     micBtn.classList.add('recording');
     micBtn.title = 'Click to stop recording';
     setHint('<span class="stt-pill"><span class="stt-dot"></span>Recording… click 🎤 to stop</span>');
-  } catch (err) {
-    VApp.showToast('Microphone access denied: ' + err.message, 'error');
-  }
+  } catch (err) { VApp.showToast('Microphone access denied: ' + err.message, 'error'); }
 }
 
 function stopRecording() {
   if (!mediaRecorder) return;
-  mediaRecorder.stop();
-  mediaRecorder.stream.getTracks().forEach(t => t.stop());
-  mediaRecorder = null;
-  isRecording = false;
-  micBtn.classList.remove('recording');
-  micBtn.title = 'Click to record (Speech-to-Text)';
+  mediaRecorder.stop(); mediaRecorder.stream.getTracks().forEach(t => t.stop());
+  mediaRecorder = null; isRecording = false;
+  micBtn.classList.remove('recording'); micBtn.title = 'Click to record (Speech-to-Text)';
   setHint('Transcribing…');
 }
 
 async function transcribeAudio() {
   if (!audioChunks.length) { setHint(null); return; }
-
   const blob = new Blob(audioChunks, { type: audioChunks[0]?.type || 'audio/webm' });
-  const fd   = new FormData();
+  const fd = new FormData();
   fd.append('file', blob, 'recording.webm');
   fd.append('model', 'whisper-large-v3-turbo');
   fd.append('response_format', 'json');
-
   try {
-    const res  = await fetch(GROQ_STT, {
-      method: 'POST',
-      headers: { 'Authorization': `Bearer ${GROQ_KEY}` },
-      body: fd,
-    });
-    if (!res.ok) { const e = await res.json().catch(() => ({})); throw new Error(e.error?.message || `HTTP ${res.status}`); }
+    const res = await fetch(GROQ_STT, { method:'POST', headers:{ 'Authorization': `Bearer ${GROQ_KEY}` }, body: fd });
+    if (!res.ok) { const e = await res.json().catch(()=>({})); throw new Error(e.error?.message||`HTTP ${res.status}`); }
     const data = await res.json();
     const text = (data.text || '').trim();
-    if (text) {
-      ta.value += (ta.value && !ta.value.endsWith(' ') ? ' ' : '') + text;
-      rsz(); ta.focus();
-      VApp.showToast('Transcribed!', 'success');
-    } else {
-      VApp.showToast('No speech detected', 'info');
-    }
-  } catch (err) {
-    VApp.showToast('Transcription failed: ' + err.message, 'error');
-  }
+    if (text) { ta.value += (ta.value && !ta.value.endsWith(' ') ? ' ' : '') + text; rsz(); ta.focus(); VApp.showToast('Transcribed!','success'); }
+    else { VApp.showToast('No speech detected','info'); }
+  } catch (err) { VApp.showToast('Transcription failed: ' + err.message, 'error'); }
   setHint(null);
 }
 
@@ -369,34 +492,49 @@ function setHint(html) {
 function md(raw, streaming) {
   if (!raw) return streaming ? '<span class="ai-cursor"></span>' : '';
   let t = raw;
-
-  /* Strip <think>…</think> blocks from reasoning models — shown separately */
   t = t.replace(/<think>[\s\S]*?<\/think>/gi, '');
-
   if (streaming && (t.match(/```/g) || []).length % 2 !== 0) t += '\n```';
   t = t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   const cb = [];
   t = t.replace(/```(\w*)\n?([\s\S]*?)```/g, (_, l, c) => {
     const i = cb.length;
-    cb.push(`<pre class="ai-code-pre"><div class="ai-code-header"><span class="ai-code-lang">${l || 'text'}</span><button class="ai-copy-btn" onclick="cpb(this)">Copy</button></div><code>${c.trimEnd()}</code></pre>`);
+    cb.push(`<pre class="ai-code-pre"><div class="ai-code-header"><span class="ai-code-lang">${l||'text'}</span><button class="ai-copy-btn" onclick="cpb(this)">Copy</button></div><code>${c.trimEnd()}</code></pre>`);
     return `\x00${i}\x00`;
   });
-  t = t.replace(/`([^`\n]+)`/g,'<code>$1</code>');
+  /* Inline code */
+  t = t.replace(/`([^`\n]+)`/g,'<code class="ai-inline-code">$1</code>');
+  /* Bold/italic */
   t = t.replace(/\*\*\*([\s\S]*?)\*\*\*/g,'<strong><em>$1</em></strong>');
   t = t.replace(/\*\*([\s\S]*?)\*\*/g,'<strong>$1</strong>');
   t = t.replace(/\*((?!\s)[\s\S]*?(?<!\s))\*/g,'<em>$1</em>');
-  t = t.replace(/^&gt; (.+)$/gm,'<blockquote>$1</blockquote>');
-  t = t.replace(/^---+$/gm,'<hr>');
-  t = t.replace(/^### (.+)$/gm,'<h3>$1</h3>');
-  t = t.replace(/^## (.+)$/gm,'<h2>$1</h2>');
-  t = t.replace(/^# (.+)$/gm,'<h1>$1</h1>');
-  t = t.replace(/^[*-] (.+)$/gm,'<li>$1</li>');
-  t = t.replace(/(<li>[\s\S]*?<\/li>)+/g, m => `<ul>${m}</ul>`);
+  /* Blockquote */
+  t = t.replace(/^&gt; (.+)$/gm,'<blockquote class="ai-blockquote">$1</blockquote>');
+  /* Horizontal rule */
+  t = t.replace(/^---+$/gm,'<hr style="border:none;border-top:1px solid var(--card-border);margin:12px 0">');
+  /* Headings */
+  t = t.replace(/^### (.+)$/gm,'<h3 class="ai-h3">$1</h3>');
+  t = t.replace(/^## (.+)$/gm,'<h2 class="ai-h2">$1</h2>');
+  t = t.replace(/^# (.+)$/gm,'<h1 class="ai-h1">$1</h1>');
+  /* Tables */
+  t = t.replace(/^\|(.+)\|$/gm, (row) => `<tr>${row.slice(1,-1).split('|').map(cell=>`<td>${cell.trim()}</td>`).join('')}</tr>`);
+  t = t.replace(/(<tr>.*<\/tr>\n?)+/g, block => {
+    const rows = block.trim().split('\n').filter(r=>r.trim());
+    const filtered = rows.filter(r => !r.match(/^<tr>(<td>[-:\s|]+<\/td>)+<\/tr>$/));
+    if (!filtered.length) return block;
+    const [head,...body] = filtered;
+    const headRow = head.replace(/<td>/g,'<th>').replace(/<\/td>/g,'</th>');
+    return `<div class="ai-table-wrap"><table class="ai-table"><thead>${headRow}</thead><tbody>${body.join('')}</tbody></table></div>`;
+  });
+  /* Lists */
+  t = t.replace(/^[*\-] (.+)$/gm,'<li>$1</li>');
+  t = t.replace(/(<li>[\s\S]*?<\/li>)+/g, m => `<ul class="ai-ul">${m}</ul>`);
   t = t.replace(/^\d+\. (.+)$/gm,'<lo>$1</lo>');
-  t = t.replace(/(<lo>[\s\S]*?<\/lo>)+/g, m => `<ol>${m.replace(/<\/?lo>/g, s => s.replace('lo','li'))}</ol>`);
+  t = t.replace(/(<lo>[\s\S]*?<\/lo>)+/g, m => `<ol class="ai-ol">${m.replace(/<\/?lo>/g, s=>s.replace('lo','li'))}</ol>`);
+  /* Paragraphs */
   t = t.split(/\n\n+/).map(p => {
     p = p.trim(); if (!p) return '';
-    return /^<(h[1-3]|ul|ol|blockquote|hr|pre)/.test(p) ? p : `<p>${p.replace(/\n/g,'<br>')}</p>`;
+    if (/^<(h[1-3]|ul|ol|blockquote|hr|pre|div|table)/.test(p)) return p;
+    return `<p>${p.replace(/\n/g,'<br>')}</p>`;
   }).join('');
   cb.forEach((b, i) => { t = t.replace(`\x00${i}\x00`, b); });
   if (streaming) t += '<span class="ai-cursor"></span>';
@@ -405,13 +543,70 @@ function md(raw, streaming) {
 
 function cpb(btn) {
   navigator.clipboard.writeText(btn.closest('pre').querySelector('code').textContent)
-    .then(() => { btn.textContent = '✓ Copied'; setTimeout(() => { btn.textContent = 'Copy'; }, 1800); });
+    .then(() => { btn.textContent = '✓'; setTimeout(() => { btn.textContent = 'Copy'; }, 1800); });
 }
 
-/* Extract <think>…</think> content for display */
 function extractThink(raw) {
   const m = raw.match(/<think>([\s\S]*?)<\/think>/i);
   return m ? m[1].trim() : null;
+}
+
+/* ── Message action buttons ── */
+function makeActionButtons(role, content) {
+  if (role === 'user') {
+    return `<div class="ai-msg-actions">
+      <button class="ai-msg-action-btn" onclick="copyMsg(this)" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        <span>Copy</span>
+      </button>
+    </div>`;
+  }
+  const isFav = VStorage.isAIFavContent(content);
+  const favId = isFav ? (VStorage.getAIFavs().find(f=>f.content===content)?.id||'') : '';
+  return `<div class="ai-msg-actions">
+    <button class="ai-msg-action-btn" onclick="copyMsg(this)" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+      <span>Copy</span>
+    </button>
+    <button class="ai-msg-action-btn${isFav?' favorited':''}" onclick="toggleFavMsg(this)" data-fav-id="${VApp.esc(favId)}" type="button" title="${isFav?'Remove from favorites':'Save response'}">
+      <svg viewBox="0 0 24 24" fill="${isFav?'currentColor':'none'}" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      <span>${isFav?'Saved':'Save'}</span>
+    </button>
+  </div>`;
+}
+
+function copyMsg(btn) {
+  const bubble = btn.closest('.ai-msg-body').querySelector('.ai-msg-bubble');
+  const text = bubble ? bubble.innerText : '';
+  navigator.clipboard.writeText(text).then(() => {
+    const sp = btn.querySelector('span');
+    const old = sp.textContent; sp.textContent = '✓ Copied';
+    setTimeout(() => { sp.textContent = old; }, 1800);
+  });
+}
+
+function toggleFavMsg(btn) {
+  const bubble = btn.closest('.ai-msg-body').querySelector('.ai-msg-bubble');
+  const content = bubble ? bubble.innerText : '';
+  const existingId = btn.dataset.favId;
+  if (existingId) {
+    VStorage.removeAIFav(existingId);
+    btn.classList.remove('favorited');
+    btn.dataset.favId = '';
+    btn.querySelector('svg').setAttribute('fill','none');
+    btn.querySelector('span').textContent = 'Save';
+    btn.title = 'Save response';
+    VApp.showToast('Removed from favorites');
+  } else {
+    const id = VStorage.addAIFav(content, modelSel.value, currentChatId);
+    btn.classList.add('favorited');
+    btn.dataset.favId = id;
+    btn.querySelector('svg').setAttribute('fill','currentColor');
+    btn.querySelector('span').textContent = 'Saved';
+    btn.title = 'Remove from favorites';
+    VApp.showToast('Response saved!', 'success');
+  }
+  renderFavsSidebar();
 }
 
 function appendMsg(role, content) {
@@ -424,6 +619,7 @@ function appendMsg(role, content) {
     <div class="ai-msg-body">
       <div class="ai-msg-role">${role === 'user' ? 'You' : 'AI'}</div>
       <div class="ai-msg-bubble">${md(content, false)}</div>
+      ${makeActionButtons(role, content)}
     </div>`;
   w.appendChild(el); w.scrollTop = w.scrollHeight;
   return el;
@@ -442,7 +638,6 @@ async function send() {
 
   const model     = modelSel.value;
   const temp      = parseFloat(document.getElementById('ai-temp').value);
-  const reasoning = reasonCb.checked;
   const sysOvr   = document.getElementById('ai-system').value.trim();
   const mode      = document.getElementById('ai-mode').value;
 
@@ -450,7 +645,6 @@ async function send() {
   appendMsg('user', text);
   ta.value = ''; ta.style.height = 'auto';
 
-  /* Assistant placeholder */
   document.getElementById('ai-welcome')?.remove();
   const w = document.getElementById('ai-messages');
   const row = document.createElement('div');
@@ -470,11 +664,9 @@ async function send() {
   setStatus('Connecting…', true);
 
   const sys = sysOvr || MODES[mode] || MODES[''];
-
-  /* Groq doesn't use a "reasoning" field — reasoning comes from the model itself */
   const payload = {
     model,
-    messages: [{ role: 'system', content: sys }, ...messages.slice(-28)],
+    messages: [{ role:'system', content:sys }, ...messages.slice(-28)],
     temperature: temp,
     stream: true,
     max_tokens: 4096,
@@ -483,15 +675,22 @@ async function send() {
   let full = '', fullThink = '', thinkEl = null;
 
   try {
-    const res = await fetch(GROQ_CHAT, {
-      method: 'POST',
-      headers: GROQ_HDR,
-      body: JSON.stringify(payload),
+    const res = await fetch(WORKER_URL, {
+      method: 'POST', 
+      headers: { 'Content-Type': 'application/json' }, 
+      body: JSON.stringify(payload), 
       signal: abort.signal,
     });
-    if (!res.ok) { const e = await res.json().catch(() => ({})); throw new Error(e.error?.message || `HTTP ${res.status}`); }
 
-    const reader = res.body.getReader(); const dec = new TextDecoder(); let buf = '';
+    if (!res.ok) { 
+      const e = await res.json().catch(()=>({})); 
+      throw new Error(e.error?.message || `HTTP ${res.status}`); 
+    }
+
+    // The rest of your streaming logic (reader/decoder) stays exactly the same!
+    const reader = res.body.getReader(); 
+    const dec = new TextDecoder(); 
+    let buf = '';
     setStatus('Generating…', true);
 
     while (true) {
@@ -503,10 +702,7 @@ async function send() {
         const d = line.slice(6).trim(); if (d === '[DONE]') continue;
         try {
           const chunk = JSON.parse(d);
-          /* Groq streaming: reasoning_content vs content */
           const delta = chunk.choices?.[0]?.delta; if (!delta) continue;
-
-          /* Some Groq reasoning models emit reasoning_content */
           if (delta.reasoning_content) {
             fullThink += delta.reasoning_content;
             if (!thinkEl) {
@@ -516,21 +712,15 @@ async function send() {
             }
             if (thinkEl) thinkEl.innerHTML = VApp.esc(fullThink).replace(/\n/g,'<br>') + '<span class="ai-cursor"></span>';
           }
-
           if (delta.content) {
             full += delta.content;
-
-            /* For models that embed <think> inline, extract and display it */
             const thinkContent = extractThink(full);
             if (thinkContent && !thinkEl) {
               const rb = document.createElement('div'); rb.className = 'ai-reasoning-block';
               rb.innerHTML = `<button class="ai-reasoning-toggle" onclick="this.nextElementSibling.classList.toggle('open');this.querySelector('em').textContent=this.nextElementSibling.classList.contains('open')?'▲':'▼'">💭 Thinking <em>▼</em></button><div class="ai-reasoning-body open" id="rstream2"></div>`;
               bubble.before(rb); thinkEl = rb.querySelector('#rstream2');
             }
-            if (thinkEl && thinkContent) {
-              thinkEl.innerHTML = VApp.esc(thinkContent).replace(/\n/g,'<br>') + '<span class="ai-cursor"></span>';
-            }
-
+            if (thinkEl && thinkContent) thinkEl.innerHTML = VApp.esc(thinkContent).replace(/\n/g,'<br>') + '<span class="ai-cursor"></span>';
             bubble.innerHTML = md(full, true);
             w.scrollTop = w.scrollHeight;
           }
@@ -539,20 +729,24 @@ async function send() {
     }
 
     /* Finalise */
-    if (thinkEl) {
-      thinkEl.id = ''; thinkEl.classList.remove('open');
-      thinkEl.innerHTML = thinkEl.innerHTML.replace(/<span class="ai-cursor"><\/span>/g,'');
-    }
+    if (thinkEl) { thinkEl.id=''; thinkEl.classList.remove('open'); thinkEl.innerHTML=thinkEl.innerHTML.replace(/<span class="ai-cursor"><\/span>/g,''); }
     bubble.className = 'ai-msg-bubble'; bubble.innerHTML = md(full, false);
-    messages.push({ role: 'assistant', content: full });
-    setStatus(`${Math.ceil(messages.length / 2)} exchange${messages.length > 2 ? 's' : ''}`, false);
+    messages.push({ role:'assistant', content:full });
+
+    /* Add action buttons after streaming completes */
+    const actionsDiv = document.createElement('div');
+    actionsDiv.outerHTML = makeActionButtons('assistant', full);
+    row.querySelector('.ai-msg-body').insertAdjacentHTML('beforeend', makeActionButtons('assistant', full));
+
+    setStatus(`${Math.ceil(messages.length/2)} exchange${messages.length>2?'s':''}`, false);
 
   } catch (err) {
     if (err.name === 'AbortError') {
       bubble.className = 'ai-msg-bubble';
       if (full) {
-        bubble.innerHTML = md(full, false) + '<p style="color:var(--text-secondary);font-size:0.72rem;margin-top:6px;font-style:italic;margin-bottom:0">— stopped —</p>';
-        messages.push({ role: 'assistant', content: full });
+        bubble.innerHTML = md(full,false) + '<p style="color:var(--text-secondary);font-size:0.72rem;margin-top:6px;font-style:italic;margin-bottom:0">— stopped —</p>';
+        messages.push({ role:'assistant', content:full });
+        row.querySelector('.ai-msg-body').insertAdjacentHTML('beforeend', makeActionButtons('assistant', full));
       } else {
         bubble.innerHTML = '<p style="color:var(--text-secondary);font-style:italic;margin:0">Stopped.</p>';
         messages.pop();
@@ -561,7 +755,7 @@ async function send() {
     } else {
       bubble.className = 'ai-msg-bubble';
       bubble.innerHTML = `<p style="color:#e85d5d;margin:0">⚠ ${VApp.esc(err.message)}</p>`;
-      messages.pop(); VApp.showToast(err.message, 'error'); setStatus('Error', false);
+      messages.pop(); VApp.showToast(err.message,'error'); setStatus('Error',false);
     }
   }
 
@@ -571,6 +765,9 @@ async function send() {
   w.scrollTop = w.scrollHeight;
 }
 
+/* ── Init ── */
+renderHistorySidebar();
+renderFavsSidebar();
 ta.focus();
 </script>
 </body>
