@@ -734,8 +734,6 @@ async function send() {
     messages.push({ role:'assistant', content:full });
 
     /* Add action buttons after streaming completes */
-    const actionsDiv = document.createElement('div');
-    actionsDiv.outerHTML = makeActionButtons('assistant', full);
     row.querySelector('.ai-msg-body').insertAdjacentHTML('beforeend', makeActionButtons('assistant', full));
 
     setStatus(`${Math.ceil(messages.length/2)} exchange${messages.length>2?'s':''}`, false);
