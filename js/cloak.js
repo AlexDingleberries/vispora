@@ -16,6 +16,14 @@ function setFavicon(url) {
   link.href = url;
 }
 
+function navigateCloakTarget(url) {
+  if (window.location.protocol === 'file:') {
+    window.location.replace(url);
+    return;
+  }
+  window.top.location.replace(url);
+}
+
 function cloakTab(mode, customUrl) {
   const m = mode || VStorage.getCloakMode();
   const cu = customUrl || VStorage.getCloakUrl();
@@ -52,9 +60,9 @@ function initCloak() {
       const m = VStorage.getCloakMode();
       const cu = VStorage.getCloakUrl();
       if (m === 'google') {
-        window.top.location.replace(CLOAK_TARGETS.google.url);
+        navigateCloakTarget(CLOAK_TARGETS.google.url);
       } else if (m === 'custom' && cu) {
-        window.top.location.replace(cu);
+        navigateCloakTarget(cu);
       } else {
         // Just cloak tab title
         cloakTab('google');

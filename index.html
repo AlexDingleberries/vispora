@@ -62,6 +62,29 @@ function startListen(){
   function onKey(e){e.preventDefault();const key=e.code;VStorage.setPanicKey(key);pkBtn.classList.remove('listening');pkLbl.textContent=key.replace('Key','');listening=false;document.removeEventListener('keydown',onKey);}
   document.addEventListener('keydown',onKey);
 }
-document.getElementById('launch-btn').onclick=()=>{var win = window.open(); win.document.body.style.margin = '0';win.document.body.style.height = '100vh';var iframe = win.document.createElement('iframe');iframe.style.border = 'none';iframe.style.width = '100%'; iframe.style.height = '100%';iframe.style.margin = '0'; iframe.src = 'home.html';win.document.body.appendChild(iframe);;const m = VStorage.getCloakMode();const cu = VStorage.getCloakUrl();if (m === 'google') {window.location.replace(CLOAK_TARGETS.google.url);} else if (m === 'custom' && cu) {window.location.replace(cu);}};
+document.getElementById('launch-btn').onclick=()=>{
+  const isFile = window.location.protocol === 'file:';
+  if (isFile) {
+    window.open('home.html', '_blank');
+  } else {
+    var win = window.open();
+    win.document.body.style.margin = '0';
+    win.document.body.style.height = '100vh';
+    var iframe = win.document.createElement('iframe');
+    iframe.style.border = 'none';
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
+    iframe.style.margin = '0';
+    iframe.src = 'home.html';
+    win.document.body.appendChild(iframe);
+  }
+  const m = VStorage.getCloakMode();
+  const cu = VStorage.getCloakUrl();
+  if (m === 'google') {
+    window.location.replace(CLOAK_TARGETS.google.url);
+  } else if (m === 'custom' && cu) {
+    window.location.replace(cu);
+  }
+};
 </script>
 </body></html>

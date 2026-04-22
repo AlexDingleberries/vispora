@@ -145,11 +145,15 @@ function navHTML(active){
 }
 
 function initPanic(){
+  function panicNavigate(url){
+    if(window.location.protocol==='file:'){window.location.replace(url);return;}
+    window.top.location.replace(url);
+  }
   document.querySelectorAll('#nav-panic,.btn-panic').forEach(btn=>{
     btn.addEventListener('click',()=>{
       const m=VStorage.getCloakMode(),cu=VStorage.getCloakUrl();
-      if(m==='google')window.top.location.replace(VCloak.CLOAK_TARGETS.google.url);
-      else if(m==='custom'&&cu)window.top.location.replace(cu);
+      if(m==='google')panicNavigate(VCloak.CLOAK_TARGETS.google.url);
+      else if(m==='custom'&&cu)panicNavigate(cu);
       else{VCloak.cloakTab('google');showToast('Tab cloaked');}
     });
   });

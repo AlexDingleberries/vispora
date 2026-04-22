@@ -12,6 +12,10 @@ const KEYS = {
   AI_CHATS:'vispora_ai_chats',
   AI_FAVS:'vispora_ai_favs',
   MEDIA_PROG:'vispora_media_prog',
+  MUSIC_FAVS:'vispora_music_favs',
+  MUSIC_QUEUE:'vispora_music_queue',
+  MUSIC_PLAYLIST:'vispora_music_playlist',
+  MUSIC_STATE:'vispora_music_state',
 };
 
 function get(k,d=null){try{const v=localStorage.getItem(k);return v===null?d:JSON.parse(v);}catch{return d;}}
@@ -137,6 +141,21 @@ function addAIFav(content,model,chatId){
 function removeAIFav(id){set(KEYS.AI_FAVS,getAIFavs().filter(f=>f.id!==id));}
 function isAIFavContent(content){return getAIFavs().some(f=>f.content===content);}
 
+/* ---- Music ---- */
+function getMusicFavorites(){return get(KEYS.MUSIC_FAVS,[]);}
+function isMusicFavorite(id){return getMusicFavorites().some(x=>String(x)===String(id));}
+function toggleMusicFavorite(id){
+  const key=String(id);const favs=getMusicFavorites();const idx=favs.findIndex(x=>String(x)===key);
+  if(idx===-1)favs.unshift(key);else favs.splice(idx,1);
+  set(KEYS.MUSIC_FAVS,favs);return idx===-1;
+}
+function getMusicQueue(){return get(KEYS.MUSIC_QUEUE,[]);}
+function setMusicQueue(v){set(KEYS.MUSIC_QUEUE,Array.isArray(v)?v:[]);}
+function getMusicPlaylist(){return get(KEYS.MUSIC_PLAYLIST,[]);}
+function setMusicPlaylist(v){set(KEYS.MUSIC_PLAYLIST,Array.isArray(v)?v:[]);}
+function getMusicState(){return get(KEYS.MUSIC_STATE,{repeat:'off',volume:0.8,lastTrack:null,lastSource:'search'});}
+function setMusicState(v){set(KEYS.MUSIC_STATE,v||{});}
+
 /* ---- Utilities ---- */
 function formatTime(ms){
   if(!ms||ms<5000)return'';
@@ -172,4 +191,7 @@ window.VStorage={
   getAnimeProgress,setAnimeProgress,
   getAIChats,saveAIChat,deleteAIChat,getAIChatById,
   getAIFavs,addAIFav,removeAIFav,isAIFavContent,
+  getMusicFavorites,isMusicFavorite,toggleMusicFavorite,
+  getMusicQueue,setMusicQueue,getMusicPlaylist,setMusicPlaylist,
+  getMusicState,setMusicState,
 };
