@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Live TV — vispora</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/pages.css" />
+    <link rel="stylesheet" href="../css/chat.css" />
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="../js/firebase-config.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/cloak.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/chat.js"></script>
+  </head>
+  <body>
+    <div id="particles-js"></div>
+    <div id="nav-ph"></div>
+    <main class="live-page page-enter">
+      <div class="lv-toolbar">
+        <div class="lv-toolbar-row">
+          <div class="lv-search-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            <input
+              type="search"
+              class="lv-search-input"
+              id="lv-search"
+              placeholder="Search teams, events, sports…"
+              autocomplete="off"
+              spellcheck="false"
+              aria-label="Search live events"
+            />
+            <button class="lv-search-clear" id="lv-search-clear" type="button" aria-label="Clear search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+          </div>
+          <button class="lv-icon-btn" id="lv-refresh" type="button" title="Refresh" aria-label="Refresh">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" />
+              <path d="M21 3v5h-5" />
+              <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" />
+              <path d="M8 16H3v5" />
+            </svg>
+          </button>
+        </div>
+        <div class="lv-toolbar-row">
+          <div class="lv-tabs" id="lv-tabs" role="tablist"></div>
+        </div>
+        <div class="lv-toolbar-row">
+          <div class="lv-chips" id="lv-chips"></div>
+        </div>
+      </div>
+
+      <div class="lv-shell" id="lv-shell">
+        <aside class="lv-guide" id="lv-guide" aria-label="Event guide"></aside>
+        <section class="lv-stage" id="lv-stage" aria-label="Player">
+          <button class="lv-back-btn" id="lv-back" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+            Back to guide
+          </button>
+          <div class="lv-player-frame" id="lv-player-frame">
+            <div class="lv-placeholder" id="lv-placeholder">
+              <div class="lv-placeholder-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="2" />
+                  <path d="M7.76 16.24a6 6 0 0 1 0-8.49" />
+                  <path d="M16.24 7.76a6 6 0 0 1 0 8.49" />
+                  <path d="M4.93 19.07a10 10 0 0 1 0-14.14" />
+                  <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                </svg>
+              </div>
+              <div class="lv-placeholder-title">Nothing on deck</div>
+              <div class="lv-placeholder-sub">
+                Pick an event from the guide to load its streams.
+              </div>
+            </div>
+          </div>
+          <div class="lv-stage-panel" id="lv-stage-panel" style="display: none"></div>
+        </section>
+      </div>
+    </main>
+    <div id="toast-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+      document.getElementById("nav-ph").innerHTML = VApp.navHTML("live");
+      VCloak.initCloak();
+      VApp.initPanic();
+      VApp.initParticles();
+      VApp.initNavChat();
+      VApp.initNavProfile();
+      VApp.initVersionCheck();
+      const dtEl = document.getElementById("nav-datetime");
+      if (dtEl) VApp.startDatetime(dtEl);
+
+      const API_BASES = ["https://streamed.pk", "https://streamed.st"];
+      let apiBase = API_BASES[0];
+
+      async function apiFetch(path, timeoutMs = 12000) {
+        const order = [apiBase, ...API_BASES.filter((b) => b !== apiBase)];
+        let lastErr = null;
+        for (const base of order) {
+          try {
+            const ctrl = new AbortController();
+            const t = setTimeout(() => ctrl.abort(), timeoutMs);
+            const res = await fetch(base + path, { signal: ctrl.signal });
+            clearTimeout(t);
+            if (!res.ok) throw new Error("HTTP " + res.status);
+            const data = await res.json();
+            apiBase = base;
+            return data;
+          } catch (e) {
+            lastErr = e;
+          }
+        }
+        throw lastErr || new Error("API unreachable");
+      }
+
+      const imgBase = () => apiBase;
+      function badgeUrl(badge) {
+        return badge ? `${imgBase()}/api/images/badge/${badge}.webp` : null;
+      }
+      function posterUrl(poster) {
+        if (!poster) return null;
+        if (/^https?:\/\//.test(poster)) return poster;
+        if (poster.startsWith("/")) return imgBase() + poster;
+        return `${imgBase()}/api/images/proxy/${poster}.webp`;
+      }
+
+      const VIEWS = {
+        live: { label: "Live Now", path: "/api/matches/live", icon: "dot" },
+        today: { label: "Today", path: "/api/matches/all-today" },
+        all: { label: "All Events", path: "/api/matches/all" },
+        saved: { label: "Saved", icon: "star" },
+        recent: { label: "Recently Watched" },
+      };
+      const LIVE_WINDOW = 4 * 3600e3;
+      const STARTING_SOON = 15 * 60e3;
+      const CACHE_TTL = 60e3;
+
+      const state = {
+        view: "live",
+        sport: "all",
+        query: "",
+        matches: [],
+        sports: [],
+        loading: false,
+        selected: null,
+        streamMap: {},
+        activeSource: null,
+        activeStream: null,
+      };
+      const viewCache = new Map();
+
+      const guideEl = document.getElementById("lv-guide");
+      const stageEl = document.getElementById("lv-stage");
+      const frameEl = document.getElementById("lv-player-frame");
+      const panelEl = document.getElementById("lv-stage-panel");
+      const searchIn = document.getElementById("lv-search");
+      const searchClear = document.getElementById("lv-search-clear");
+      const refreshBtn = document.getElementById("lv-refresh");
+
+      function isLiveNow(m) {
+        const n = Date.now();
+        return m.date <= n && n - m.date < LIVE_WINDOW;
+      }
+      function isStartingSoon(m) {
+        const n = Date.now();
+        return m.date > n && m.date - n <= STARTING_SOON;
+      }
+      function isPast(m) {
+        return Date.now() - m.date >= LIVE_WINDOW;
+      }
+      function fmtClock(ts) {
+        return new Date(ts).toLocaleTimeString("en-US", {
+          hour: "numeric",
+          minute: "2-digit",
+        });
+      }
+      function fmtCountdown(ts) {
+        const diff = ts - Date.now();
+        if (diff <= 0) return "";
+        const h = Math.floor(diff / 3600e3),
+          m = Math.round((diff % 3600e3) / 60e3);
+        if (h > 24) return "";
+        if (h > 0) return `in ${h}h ${m}m`;
+        return `in ${m}m`;
+      }
+      function dayKey(ts) {
+        const d = new Date(ts);
+        return `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`;
+      }
+      function dayLabel(ts) {
+        const d = new Date(ts);
+        const today = new Date();
+        const tomorrow = new Date();
+        tomorrow.setDate(today.getDate() + 1);
+        const same = (a, b) =>
+          a.getFullYear() === b.getFullYear() &&
+          a.getMonth() === b.getMonth() &&
+          a.getDate() === b.getDate();
+        const time = fmtClock(ts);
+        if (same(d, today)) return `Today`;
+        if (same(d, tomorrow)) return `Tomorrow`;
+        return d.toLocaleDateString("en-US", {
+          weekday: "short",
+          month: "short",
+          day: "numeric",
+        });
+      }
+
+      async function fetchView(view, force = false) {
+        const cached = viewCache.get(view);
+        if (!force && cached && Date.now() - cached.ts < CACHE_TTL)
+          return cached.data;
+        const data = await apiFetch(VIEWS[view].path);
+        const list = (Array.isArray(data) ? data : []).filter(
+          (m) => m && m.id && m.title,
+        );
+        viewCache.set(view, { ts: Date.now(), data: list });
+        return list;
+      }
+
+      async function loadView(view, force = false) {
+        if (state.loading) return;
+        state.loading = true;
+        refreshBtn.classList.add("spinning");
+        if (!state.matches.length || force) renderGuideSkeleton();
+        try {
+          if (view === "saved") {
+            state.matches = VStorage.getLiveFavorites();
+          } else if (view === "recent") {
+            state.matches = VStorage.getLiveHistory();
+          } else {
+            state.matches = await fetchView(view, force);
+          }
+        } catch (e) {
+          console.error("[live] load failed:", e);
+          state.matches = [];
+          guideEl.innerHTML = emptyHTML(
+            "",
+            "Signal lost",
+            "Couldn't reach the stream service. Hit refresh to try again.",
+          );
+        } finally {
+          state.loading = false;
+          refreshBtn.classList.remove("spinning");
+        }
+        renderTabs();
+        renderGuide();
+      }
+
+      async function loadSports() {
+        try {
+          const sports = await apiFetch("/api/sports");
+          state.sports = Array.isArray(sports) ? sports : [];
+        } catch {
+          state.sports = [];
+        }
+        renderChips();
+      }
+
+      function matchText(m) {
+        return [
+          m.title,
+          m.category,
+          m.teams?.home?.name,
+          m.teams?.away?.name,
+        ]
+          .filter(Boolean)
+          .join(" ")
+          .toLowerCase();
+      }
+      function applyFilters(list) {
+        let out = list;
+        if (state.sport !== "all")
+          out = out.filter((m) => m.category === state.sport);
+        if (state.query) {
+          const q = state.query.toLowerCase();
+          out = out.filter((m) => matchText(m).includes(q));
+        }
+        return out;
+      }
+      function visibleMatches() {
+        let list = applyFilters(state.matches);
+        if (state.view === "recent")
+          return list.slice().sort((a, b) => (b.watchedAt || 0) - (a.watchedAt || 0));
+        if (state.view === "live") {
+          list = list
+            .filter((m) => !isPast(m))
+            .sort((a, b) => {
+              const la = isLiveNow(a) ? 0 : 1,
+                lb = isLiveNow(b) ? 0 : 1;
+              return la - lb || a.date - b.date;
+            });
+        } else {
+          list = list
+            .filter((m) => !isPast(m))
+            .sort((a, b) => a.date - b.date);
+        }
+        return list;
+      }
+
+      function renderTabs() {
+        const savedCount = VStorage.getLiveFavorites().length;
+        document.getElementById("lv-tabs").innerHTML = Object.entries(VIEWS)
+          .map(([key, v]) => {
+            const active = state.view === key && !state.query ? " active" : "";
+            let inner = "";
+            if (v.icon === "dot") inner = '<span class="lv-live-dot-inline"></span>';
+            if (v.icon === "star") inner = "";
+            const count =
+              key === "saved" && savedCount
+                ? `<span class="lv-tab-count">${savedCount}</span>`
+                : "";
+            return `<button class="lv-tab${active}" data-view="${key}" role="tab" type="button">${inner}${v.label}${count}</button>`;
+          })
+          .join("");
+      }
+      function renderChips() {
+        const chips = [{ id: "all", name: "All Sports" }, ...state.sports];
+        document.getElementById("lv-chips").innerHTML = chips
+          .map((s) => {
+            const active = state.sport === s.id ? " active" : "";
+            const label = s.name;
+            return `<button class="lv-chip${active}" data-sport="${VApp.esc(
+              s.id,
+            )}" type="button">${VApp.esc(label)}</button>`;
+          })
+          .join("");
+      }
+
+      function emptyHTML(icon, title, sub) {
+        return `<div class="lv-empty">
+          <div class="lv-empty-icon">${icon}</div>
+          <div class="lv-empty-title">${VApp.esc(title)}</div>
+          <div class="lv-empty-sub">${VApp.esc(sub)}</div>
+        </div>`;
+      }
+      function renderGuideSkeleton() {
+        guideEl.innerHTML = `<div class="lv-skeleton-rows">${Array(8)
+          .fill('<div class="skeleton lv-skeleton-row"></div>')
+          .join("")}</div>`;
+      }
+      function teamBadgesHTML(m, cls = "") {
+        const home = m.teams?.home,
+          away = m.teams?.away;
+        if (!home && !away) {
+          const emoji = (m.category || "live")[0].toUpperCase();
+          return `<div class="lv-match-teams ${cls}"><span class="lv-team-badge lv-team-badge-fallback" style="font-size:1rem">${emoji}</span></div>`;
+        }
+        const one = (t) => {
+          if (!t) return "";
+          const url = badgeUrl(t.badge);
+          const initial = VApp.esc((t.name || "?")[0].toUpperCase());
+          if (!url)
+            return `<span class="lv-team-badge lv-team-badge-fallback">${initial}</span>`;
+          return `<img class="lv-team-badge" src="${VApp.esc(
+            url,
+          )}" alt="${VApp.esc(t.name || "")}" loading="lazy" decoding="async"
+            onerror="this.outerHTML='<span class=\\'lv-team-badge lv-team-badge-fallback\\'>${initial}</span>'">`;
+        };
+        return `<div class="lv-match-teams ${cls}">${one(home)}${one(
+          away,
+        )}</div>`;
+      }
+      function starHTML(m) {
+        const fav = VStorage.isLiveFavorite(m.id);
+        return `<button class="lv-star${fav ? " favorited" : ""}" data-star="${
+          m.id
+        }" type="button" aria-label="${
+          fav ? "Remove from" : "Save to"
+        } My List" title="${fav ? "Remove from My List" : "Save to My List"}">${
+          fav ? VApp.IC.starFilled : VApp.IC.star
+        }</button>`;
+      }
+      function matchRowHTML(m, i) {
+        const live = isLiveNow(m);
+        const soon = !live && isStartingSoon(m);
+        const countdown = fmtCountdown(m.date);
+        const timeCell = live
+          ? `<span class="lv-badge-live">LIVE</span>`
+          : `<span class="lv-match-clock">${fmtClock(m.date)}</span>${
+              soon
+                ? '<span class="lv-badge-soon" style="color:#e85d5d;font-weight:800">SOON</span>'
+                : countdown
+                ? `<span class="lv-badge-soon">${VApp.esc(countdown)}</span>`
+                : ""
+            }`;
+        const metaBits = [
+          `<span class="lv-cat-pill">${VApp.esc(m.category || "other")}</span>`,
+        ];
+        if (m.popular) metaBits.push('<span class="lv-popular-tag">★ Popular</span>');
+        if (m.sources?.length)
+          metaBits.push(
+            `<span>${m.sources.length} source${m.sources.length > 1 ? "s" : ""}</span>`,
+          );
+        const selected = state.selected && state.selected.id === m.id;
+        return `<div class="lv-match${selected ? " selected" : ""}" data-match="${
+          m.id
+        }" role="button" tabindex="0" style="animation-delay:${Math.min(i * 20, 240)}ms">
+          <div class="lv-match-time">${timeCell}</div>
+          ${teamBadgesHTML(m)}
+          <div class="lv-match-info">
+            <div class="lv-match-title">${VApp.esc(m.title)}</div>
+            <div class="lv-match-meta">${metaBits.join("")}</div>
+          </div>
+          ${starHTML(m)}
+        </div>`;
+      }
+      function renderGuide() {
+        const list = visibleMatches();
+        if (!list.length) {
+          if (state.loading) return;
+          if (state.query)
+            guideEl.innerHTML = emptyHTML(
+              "",
+              "No matches found",
+              `Nothing matches "${state.query}". Try another team, event, or sport.`,
+            );
+          else if (state.view === "recent")
+            guideEl.innerHTML = emptyHTML("", "Nothing watched yet", "Events you open will show up here.");
+          else if (state.view === "saved")
+            guideEl.innerHTML = emptyHTML(
+              "",
+              "No saved events",
+              "Star any event and it will wait for you here and in My List.",
+            );
+          else if (state.view === "live")
+            guideEl.innerHTML = emptyHTML(
+              "",
+              "Nothing live right now",
+              "Check the Today tab for the upcoming schedule.",
+            );
+          else
+            guideEl.innerHTML = emptyHTML(
+              "",
+              "No events found",
+              "Try another sport or check back later.",
+            );
+          return;
+        }
+        if (state.view === "live" && !state.query) {
+          guideEl.innerHTML = `<div class="lv-day-label">${
+            state.sport === "all" ? "Happening now" : "Filtered"
+          } · ${list.length} event${list.length > 1 ? "s" : ""}</div>` +
+            list.map(matchRowHTML).join("");
+          return;
+        }
+        if (state.view === "recent" && !state.query) {
+          guideEl.innerHTML =
+            `<div class="lv-day-label"><span>Recently watched · ${list.length}</span><button class="lv-clear-hist" data-clear-hist type="button">Clear</button></div>` +
+            list.map(matchRowHTML).join("");
+          return;
+        }
+        const groups = new Map();
+        list.forEach((m) => {
+          const k = dayKey(m.date);
+          if (!groups.has(k)) groups.set(k, []);
+          groups.get(k).push(m);
+        });
+        let html = state.query
+          ? `<div class="lv-day-label">${list.length} result${
+              list.length > 1 ? "s" : ""
+            } for “${VApp.esc(state.query)}”</div>`
+          : "";
+        let i = 0;
+        groups.forEach((items) => {
+          html += `<div class="lv-day-label">${dayLabel(items[0].date)}</div>`;
+          html += items.map((m) => matchRowHTML(m, i++)).join("");
+        });
+        guideEl.innerHTML = html;
+      }
+
+      function stageHeadHTML(m) {
+        const live = isLiveNow(m);
+        const fav = VStorage.isLiveFavorite(m.id);
+        const when = live
+          ? '<span class="lv-badge-live">LIVE</span>'
+          : `<span>${dayLabel(m.date)} · ${fmtClock(m.date)}${
+              fmtCountdown(m.date) ? ` (${fmtCountdown(m.date)})` : ""
+            }</span>`;
+        return `<div class="lv-stage-head">
+          ${teamBadgesHTML(m, "lv-stage-teams")}
+          <div class="lv-stage-info">
+            <div class="lv-stage-title">${VApp.esc(m.title)}</div>
+            <div class="lv-stage-meta">
+              ${when}
+              <span class="lv-cat-pill">${VApp.esc(m.category || "other")}</span>
+            </div>
+          </div>
+          <div class="lv-stage-actions">
+            <button class="lv-icon-btn lv-star${fav ? " favorited" : ""}" data-star="${
+              m.id
+            }" type="button" title="${
+              fav ? "Remove from My List" : "Save to My List"
+            }" style="opacity:1">${fav ? VApp.IC.starFilled : VApp.IC.star}</button>
+            <button class="lv-icon-btn" id="lv-reload-stream" type="button" title="Reload stream">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>
+            </button>
+            <button class="lv-icon-btn" id="lv-popout" type="button" title="Open stream in new tab">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </button>
+          </div>
+        </div>`;
+      }
+      function renderStageShell(m) {
+        panelEl.style.display = "";
+        panelEl.innerHTML =
+          stageHeadHTML(m) +
+          `<div class="lv-streams-label">Streams</div>
+           <div class="lv-source-tabs" id="lv-source-tabs"></div>
+           <div class="lv-stream-pills" id="lv-stream-pills">
+             <div class="skeleton" style="height:36px;width:220px;border-radius:10px"></div>
+           </div>
+           <div class="lv-stream-note">If a stream stutters or dies, change to another source.</div>`;
+      }
+      function renderSourceTabs() {
+        const tabsEl = document.getElementById("lv-source-tabs");
+        if (!tabsEl || !state.selected) return;
+        const sources = state.selected.sources || [];
+        if (!sources.length) {
+          tabsEl.innerHTML = `<div class="lv-stream-note">No stream sources listed for this event yet. Check back later.</div>`;
+          return;
+        }
+        tabsEl.innerHTML = sources
+          .map((s) => {
+            const streams = state.streamMap[s.source];
+            const ok = Array.isArray(streams) && streams.length > 0;
+            const active = state.activeSource === s.source;
+            return `<button class="lv-source-tab${active ? " active" : ""}" data-source="${VApp.esc(
+              s.source,
+            )}" type="button" ${ok ? "" : "disabled"}>${VApp.esc(s.source)}${
+              ok ? ` · ${streams.length}` : ""
+            }</button>`;
+          })
+          .join("");
+      }
+      function renderStreamPills() {
+        const pillsEl = document.getElementById("lv-stream-pills");
+        if (!pillsEl) return;
+        const streams = state.streamMap[state.activeSource] || [];
+        if (!streams.length) {
+          pillsEl.innerHTML = `<div class="lv-stream-note">No streams available from this source.</div>`;
+          return;
+        }
+        pillsEl.innerHTML = streams
+          .map((s) => {
+            const active =
+              state.activeStream && state.activeStream.embedUrl === s.embedUrl;
+            const viewers = s.viewers
+              ? `<span class="lv-pill-viewers">Viewers ${
+                  s.viewers >= 1000
+                    ? (s.viewers / 1000).toFixed(1).replace(/\.0$/, "") + "k"
+                    : s.viewers
+                }</span>`
+              : "";
+            return `<button class="lv-stream-pill${active ? " active" : ""}" data-embed="${VApp.esc(
+              s.embedUrl,
+            )}" type="button">
+              <span>#${s.streamNo || 1}</span>
+              <span>${VApp.esc(s.language || "Unknown")}</span>
+              <span class="${s.hd ? "lv-pill-hd" : "lv-pill-sd"}">${
+                s.hd ? "HD" : "SD"
+              }</span>
+              ${viewers}
+            </button>`;
+          })
+          .join("");
+      }
+      function playStream(stream) {
+        if (!stream) return;
+        state.activeStream = stream;
+        document.getElementById("lv-placeholder")?.remove();
+        let iframe = frameEl.querySelector("iframe");
+        if (!iframe) {
+          iframe = document.createElement("iframe");
+          iframe.setAttribute("allowfullscreen", "");
+          iframe.setAttribute(
+            "allow",
+            "autoplay; fullscreen; encrypted-media; picture-in-picture",
+          );
+          frameEl.appendChild(iframe);
+        }
+        if (iframe.src !== stream.embedUrl) iframe.src = stream.embedUrl;
+        renderStreamPills();
+      }
+
+      let selectToken = 0;
+      async function selectMatch(m, { scroll = false } = {}) {
+        if (!m) return;
+        const token = ++selectToken;
+        state.selected = m;
+        window.VLiveActivity = { id: m.id, title: m.title };
+        try { VStorage.addToLiveHistory(m); } catch {}
+        try { history.replaceState(null, "", location.pathname + "?watch=" + encodeURIComponent(m.id)); } catch {}
+        if (window.VChat && VChat.refreshActivity) VChat.refreshActivity();
+        state.streamMap = {};
+        state.activeSource = null;
+        state.activeStream = null;
+        guideEl
+          .querySelectorAll(".lv-match.selected")
+          .forEach((el) => el.classList.remove("selected"));
+        guideEl
+          .querySelector(`[data-match="${CSS.escape(m.id)}"]`)
+          ?.classList.add("selected");
+        renderStageShell(m);
+        stageEl.classList.add("open");
+        if (scroll)
+          stageEl.scrollIntoView({ behavior: "smooth", block: "start" });
+
+        const sources = m.sources || [];
+        const results = await Promise.allSettled(
+          sources.map((s) =>
+            apiFetch(`/api/stream/${s.source}/${s.id}`, 9000),
+          ),
+        );
+        if (token !== selectToken) return; 
+        results.forEach((r, i) => {
+          const src = sources[i].source;
+          state.streamMap[src] =
+            r.status === "fulfilled" && Array.isArray(r.value) ? r.value : [];
+        });
+        const firstOk = sources.find(
+          (s) => state.streamMap[s.source]?.length,
+        );
+        state.activeSource = firstOk ? firstOk.source : sources[0]?.source;
+        renderSourceTabs();
+        if (firstOk) {
+          const streams = state.streamMap[firstOk.source];
+          playStream(streams.find((s) => s.hd) || streams[0]);
+        } else {
+          renderStreamPills();
+        }
+      }
+
+      function closeStage() {
+        stageEl.classList.remove("open");
+        const iframe = frameEl.querySelector("iframe");
+        if (iframe) iframe.remove();
+        window.VLiveActivity = null;
+        state.selected = null;
+        try { history.replaceState(null, "", location.pathname); } catch {}
+        if (window.VChat && VChat.refreshActivity) VChat.refreshActivity();
+        if (!document.getElementById("lv-placeholder") && !state.selected) {
+        }
+      }
+
+      function toggleStar(matchId) {
+        const favs = VStorage.getLiveFavorites();
+        const existing = favs.find((f) => f.id === String(matchId));
+        const m =
+          (state.selected && state.selected.id === matchId
+            ? state.selected
+            : null) ||
+          state.matches.find((x) => x.id === matchId) ||
+          existing;
+        if (!m) return;
+        const added = VStorage.toggleLiveFavorite(m);
+        VApp.showToast(added ? "Saved to My List" : "Removed from My List");
+        document.dispatchEvent(
+          new CustomEvent("vispora:live-favs-changed", {
+            detail: { id: String(matchId), added },
+          }),
+        );
+        document
+          .querySelectorAll(`[data-star="${CSS.escape(matchId)}"]`)
+          .forEach((btn) => {
+            btn.classList.toggle("favorited", added);
+            btn.innerHTML = added ? VApp.IC.starFilled : VApp.IC.star;
+          });
+        renderTabs();
+        if (state.view === "saved" && !added) {
+          state.matches = VStorage.getLiveFavorites();
+          renderGuide();
+        }
+      }
+
+      let searchTimer = null;
+      searchIn.addEventListener("input", () => {
+        searchClear.classList.toggle("visible", !!searchIn.value);
+        clearTimeout(searchTimer);
+        searchTimer = setTimeout(async () => {
+          state.query = searchIn.value.trim();
+          if (state.query && state.view !== "saved" && state.view !== "recent") {
+            try {
+              state.matches = await fetchView("all");
+            } catch {}
+          } else if (state.query) {
+            state.matches =
+              state.view === "saved" ? VStorage.getLiveFavorites() : VStorage.getLiveHistory();
+          } else if (!state.query) {
+            loadView(state.view);
+            return;
+          }
+          renderTabs();
+          renderGuide();
+        }, 280);
+      });
+      searchClear.addEventListener("click", () => {
+        searchIn.value = "";
+        searchClear.classList.remove("visible");
+        state.query = "";
+        searchIn.focus();
+        loadView(state.view);
+      });
+      document.addEventListener("keydown", (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key === "k") {
+          e.preventDefault();
+          searchIn.focus();
+        }
+        if (e.key === "Escape") {
+          if (stageEl.classList.contains("open")) closeStage();
+          else if (searchIn.value) searchClear.click();
+        }
+      });
+
+      document.getElementById("lv-tabs").addEventListener("click", (e) => {
+        const btn = e.target.closest("[data-view]");
+        if (!btn) return;
+        state.view = btn.dataset.view;
+        state.query = "";
+        searchIn.value = "";
+        searchClear.classList.remove("visible");
+        loadView(state.view);
+      });
+      document.getElementById("lv-chips").addEventListener("click", (e) => {
+        const btn = e.target.closest("[data-sport]");
+        if (!btn) return;
+        state.sport = btn.dataset.sport;
+        renderChips();
+        renderGuide();
+      });
+      guideEl.addEventListener("keydown", (e) => {
+        if (e.key !== "Enter" && e.key !== " ") return;
+        const row = e.target.closest("[data-match]");
+        if (!row || e.target.closest("[data-star]")) return;
+        e.preventDefault();
+        const m = state.matches.find((x) => x.id === row.dataset.match);
+        selectMatch(m, { scroll: window.innerWidth > 1023 });
+      });
+      guideEl.addEventListener("click", (e) => {
+        if (e.target.closest("[data-clear-hist]")) {
+          VStorage.clearLiveHistory();
+          state.matches = [];
+          renderGuide();
+          return;
+        }
+        const star = e.target.closest("[data-star]");
+        if (star) {
+          e.stopPropagation();
+          toggleStar(star.dataset.star);
+          return;
+        }
+        const row = e.target.closest("[data-match]");
+        if (!row) return;
+        const m = state.matches.find((x) => x.id === row.dataset.match);
+        selectMatch(m, { scroll: window.innerWidth > 1023 });
+      });
+      panelEl.addEventListener("click", (e) => {
+        const star = e.target.closest("[data-star]");
+        if (star) {
+          toggleStar(star.dataset.star);
+          return;
+        }
+        if (e.target.closest("#lv-reload-stream")) {
+          const iframe = frameEl.querySelector("iframe");
+          if (iframe && state.activeStream) {
+            iframe.src = state.activeStream.embedUrl;
+            VApp.showToast("Stream reloaded");
+          }
+          return;
+        }
+        if (e.target.closest("#lv-popout")) {
+          if (state.activeStream) {
+            const win = window.open();
+          win.document.body.style.cssText =
+            "margin:0;height:100vh;overflow:hidden";
+          const iframe = win.document.createElement("iframe");
+          iframe.style.cssText =
+            "border:none;width:100%;height:100%;display:block";
+          iframe.src = state.activeStream.embedUrl;
+          win.document.body.appendChild(iframe); }
+          else VApp.showToast("Pick a stream first", "error");
+          return;
+        }
+        const srcTab = e.target.closest("[data-source]");
+        if (srcTab) {
+          state.activeSource = srcTab.dataset.source;
+          renderSourceTabs();
+          const streams = state.streamMap[state.activeSource] || [];
+          renderStreamPills();
+          if (streams.length)
+            playStream(streams.find((s) => s.hd) || streams[0]);
+          return;
+        }
+        const pill = e.target.closest("[data-embed]");
+        if (pill) {
+          const streams = state.streamMap[state.activeSource] || [];
+          playStream(streams.find((s) => s.embedUrl === pill.dataset.embed));
+        }
+      });
+      document.getElementById("lv-back").addEventListener("click", closeStage);
+      refreshBtn.addEventListener("click", () => {
+        viewCache.delete(state.view);
+        loadView(state.view, true);
+      });
+      document.addEventListener("vispora:live-favs-changed", renderTabs);
+
+      setInterval(() => {
+        if (document.hidden || state.query) return;
+        if (state.view === "saved") {
+          state.matches = VStorage.getLiveFavorites();
+          renderTabs();
+          renderGuide();
+          return;
+        }
+        if (state.view === "recent") return;
+        viewCache.delete(state.view);
+        fetchView(state.view, true)
+          .then((list) => {
+            state.matches = list;
+            renderGuide();
+          })
+          .catch(() => {});
+      }, 60e3);
+
+      async function openById(id) {
+        let m = VStorage.getLiveFavorites().find((f) => f.id === id);
+        if (!m) {
+          for (const v of ["live", "today", "all"]) {
+            try {
+              const list = await fetchView(v);
+              m = list.find((x) => x.id === id);
+              if (m) break;
+            } catch {}
+          }
+        }
+        if (m) selectMatch(m, { scroll: true });
+        else VApp.showToast("That event isn't available anymore", "error");
+      }
+      (async function init() {
+        renderTabs();
+        renderGuideSkeleton();
+        loadSports();
+        await loadView("live");
+        const want = new URLSearchParams(location.search).get("watch");
+        if (want) openById(want);
+      })();
+    </script>
+  </body>
+</html>

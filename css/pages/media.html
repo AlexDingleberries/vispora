@@ -1,0 +1,1584 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Playing — vispora</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/pages.css" />
+    <link rel="stylesheet" href="../css/chat.css" />
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="../js/firebase-config.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/cloak.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/media.js"></script>
+    <script src="../js/chat.js"></script>
+    <script src="../js/tutorial.js"></script>
+    <style>
+      .watch-time-bar {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.8rem;
+        color: var(--text-secondary);
+        margin-top: 2px;
+      }
+      .watch-time-bar span.wt-val {
+        color: var(--accent);
+        font-weight: 700;
+      }
+      .ep-current-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        background: rgba(var(--accent-rgb), 0.12);
+        border: 1px solid rgba(var(--accent-rgb), 0.25);
+        color: var(--accent);
+        padding: 3px 10px;
+        border-radius: 100px;
+        margin-bottom: 4px;
+      }
+      .subdub-picker {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-top: 8px;
+      }
+      .subdub-btn {
+        padding: 5px 14px;
+        border-radius: var(--radius-sm);
+        font-size: 0.78rem;
+        font-weight: 700;
+        border: 1px solid var(--card-border);
+        background: var(--bg4);
+        color: var(--text-secondary);
+        cursor: pointer;
+        transition: all 0.15s;
+      }
+      .subdub-btn.active {
+        background: var(--accent);
+        color: var(--text-inv);
+        border-color: var(--accent);
+        box-shadow: 0 0 12px rgba(var(--accent-rgb), 0.25);
+      }
+      .subdub-btn:not(.active):hover {
+        border-color: rgba(var(--accent-rgb), 0.4);
+        color: var(--accent);
+      }
+      .subdub-label {
+        font-size: 0.72rem;
+        color: var(--text-secondary);
+        font-weight: 600;
+      }
+      .related-section {
+        margin-top: 32px;
+      }
+      .related-section .section-title {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 14px;
+      }
+      .related-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 14px;
+      }
+      .related-card {
+        position: relative;
+        border-radius: var(--radius);
+        overflow: hidden;
+        border: 1px solid var(--card-border);
+        background: var(--card-bg);
+        transition: transform 0.18s, border-color 0.18s;
+        cursor: pointer;
+        text-decoration: none;
+        display: block;
+      }
+      .related-card:hover {
+        transform: translateY(-3px);
+        border-color: rgba(var(--accent-rgb), 0.4);
+      }
+      .related-card img {
+        width: 100%;
+        aspect-ratio: 2/3;
+        object-fit: cover;
+        display: block;
+      }
+      .related-card-body {
+        padding: 8px 10px;
+      }
+      .related-card-type {
+        font-size: 0.64rem;
+        font-weight: 700;
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin-bottom: 2px;
+      }
+      .related-card-title {
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: var(--text);
+        line-height: 1.3;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .server-dropdown-wrap {
+        position: relative;
+      }
+      .server-dropdown-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        padding: 7px 13px;
+        border-radius: var(--radius-sm);
+        background: var(--bg4);
+        border: 1px solid var(--card-border);
+        color: var(--text-secondary);
+        font-size: 0.8rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.15s;
+        white-space: nowrap;
+        font-family: inherit;
+        letter-spacing: 0.01em;
+      }
+      .server-dropdown-btn:hover {
+        border-color: rgba(var(--accent-rgb), 0.45);
+        color: var(--accent);
+        background: rgba(var(--accent-rgb), 0.06);
+      }
+      .server-dropdown-btn.open {
+        border-color: rgba(var(--accent-rgb), 0.55);
+        color: var(--accent);
+        background: rgba(var(--accent-rgb), 0.08);
+      }
+      .server-dropdown-btn svg {
+        flex-shrink: 0;
+        transition: transform 0.2s;
+      }
+      .server-dropdown-btn.open .srv-chev {
+        transform: rotate(180deg);
+      }
+      .server-dropdown-menu {
+        position: fixed;
+        min-width: 200px;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        scrollbar-width: thin;
+        background: color-mix(in srgb, var(--bg2) 92%, transparent);
+        border: 1px solid rgba(var(--accent-rgb), 0.18);
+        border-radius: var(--radius);
+        padding: 5px;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4),
+          0 0 0 1px rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(18px);
+        opacity: 0;
+        transform: translateY(8px) scale(0.97);
+        pointer-events: none;
+        transition: opacity 0.18s var(--ease), transform 0.18s var(--ease);
+        z-index: 25000;
+      }
+      .server-dropdown-menu.open {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        pointer-events: all;
+      }
+      .server-dropdown-divider {
+        height: 1px;
+        background: rgba(var(--accent-rgb), 0.1);
+        margin: 4px 6px;
+      }
+      .server-dropdown-header {
+        padding: 6px 10px 4px;
+        font-size: 0.65rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--text-secondary);
+        opacity: 0.7;
+      }
+      .server-option {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 10px;
+        border-radius: calc(var(--radius) - 4px);
+        font-size: 0.82rem;
+        font-weight: 600;
+        cursor: pointer;
+        color: var(--text-secondary);
+        transition: all 0.12s;
+        user-select: none;
+      }
+      .server-option:hover {
+        background: rgba(var(--accent-rgb), 0.09);
+        color: var(--text);
+      }
+      .server-option.active {
+        color: var(--accent);
+        background: rgba(var(--accent-rgb), 0.08);
+      }
+      .server-option-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        background: var(--card-border);
+        transition: background 0.15s;
+      }
+      .server-option.active .server-option-dot {
+        background: var(--accent);
+        box-shadow: 0 0 6px rgba(var(--accent-rgb), 0.6);
+      }
+      .server-option-name {
+        flex: 1;
+      }
+      .server-option-check {
+        opacity: 0;
+        color: var(--accent);
+        transition: opacity 0.15s;
+      }
+      .server-option.active .server-option-check {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="particles-js"></div>
+    <div id="nav-ph"></div>
+    <main class="media-player-page page-enter container">
+      <nav class="breadcrumb">
+        <a href="home.html">Home</a><span class="breadcrumb-sep">›</span>
+        <a href="#" id="bc-type">Media</a><span class="breadcrumb-sep">›</span>
+        <span id="bc-title">Loading…</span>
+      </nav>
+      <div class="media-player-area" id="player-area">
+        <div class="player-iframe-wrap" id="iframe-wrap">
+          <div class="player-error" id="player-error" style="display: none">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              width="40"
+              height="40"
+            >
+              <path
+                d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+              />
+              <line x1="12" y1="9" x2="12" y2="13" />
+              <line x1="12" y1="17" x2="12.01" y2="17" />
+            </svg>
+            <strong>Failed to load</strong>
+            <p id="error-link"></p>
+          </div>
+          <div class="player-loading" id="player-loading">
+            <div class="player-loading-spinner"></div>
+            <div class="player-loading-title" id="pl-title">Loading…</div>
+            <div class="player-loading-sub" id="pl-sub">Preparing player</div>
+            <div class="player-loading-bar"><span></span></div>
+          </div>
+          <iframe
+            id="media-frame"
+            title="Media Player"
+            allowfullscreen
+            allow="autoplay; fullscreen; pointer-lock"
+          ></iframe>
+          <button
+            class="player-theater-btn"
+            id="btn-theater"
+            title="Theater Mode"
+            type="button"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="2" y="5" width="20" height="14" rx="2" />
+              <line x1="7" y1="19" x2="7" y2="21" />
+              <line x1="17" y1="19" x2="17" y2="21" />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="tv-episode-picker"
+          id="episode-picker"
+          style="display: none"
+        >
+          <div class="episode-picker-header">
+            <div class="episode-picker-header-label" id="ep-picker-label">
+              Episodes
+            </div>
+            <select
+              id="season-select"
+              aria-label="Select season"
+              style="display: none"
+            ></select>
+          </div>
+          <div class="episode-picker-list" id="episode-list">
+            <div
+              style="
+                padding: 24px;
+                text-align: center;
+                color: var(--text-secondary);
+                font-size: 0.8rem;
+              "
+            >
+              Loading…
+            </div>
+          </div>
+        </div>
+      </div>
+      <br /><br />
+      <div class="media-hero" id="media-hero">
+        <div class="media-hero-backdrop" id="hero-backdrop"></div>
+        <div class="media-hero-backdrop-gradient"></div>
+        <div class="media-hero-content">
+          <div class="media-hero-poster" id="hero-poster-wrap">
+            <div class="media-hero-poster-placeholder"></div>
+          </div>
+          <div class="media-hero-info">
+            <div class="media-hero-badge" id="hero-badge">Loading…</div>
+            <h1 class="media-hero-title" id="media-title">Loading…</h1>
+            <div class="media-hero-tagline" id="media-tagline"></div>
+            <div id="ep-current-display"></div>
+            <div class="subdub-picker" id="subdub-picker" style="display: none">
+              <span class="subdub-label">Audio:</span>
+              <button class="subdub-btn active" id="btn-sub" type="button">
+                SUB
+              </button>
+              <button class="subdub-btn" id="btn-dub" type="button">DUB</button>
+            </div>
+            <div class="media-hero-meta" id="media-meta"></div>
+            <div class="media-hero-genres" id="media-genres"></div>
+            <div
+              class="watch-time-bar"
+              id="watch-time-bar"
+              style="display: none"
+            >
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              Total watched: <span class="wt-val" id="watch-time-val">—</span>
+            </div>
+            <p class="media-hero-overview" id="media-overview"></p>
+            <button
+              class="media-hero-more"
+              id="overview-more"
+              type="button"
+              style="display: none"
+            >
+              See more
+            </button>
+            <div class="media-hero-cast" id="cast-row"></div>
+            <div class="media-hero-actions">
+              <span
+                id="est-done-display"
+                style="
+                  display: none;
+                  font-size: 0.78rem;
+                  font-weight: 600;
+                  color: var(--accent);
+                "
+              ></span>
+              <button
+                class="btn btn-primary"
+                id="btn-play-scroll"
+                type="button"
+              >
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <polygon points="5 3 19 12 5 21 5 3" />
+                </svg>
+                Play
+              </button>
+              <button
+                class="btn-icon"
+                id="btn-fav"
+                title="Favorite"
+                type="button"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="16"
+                  height="16"
+                >
+                  <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+                </svg>
+              </button>
+              <button
+                class="btn-icon"
+                id="btn-reload-hero"
+                title="Reload"
+                type="button"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  width="16"
+                  height="16"
+                >
+                  <path
+                    d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"
+                  />
+                  <path d="M21 3v5h-5" />
+                  <path
+                    d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"
+                  />
+                  <path d="M8 16H3v5" />
+                </svg>
+              </button>
+              <div
+                class="server-dropdown-wrap"
+                id="server-dropdown-wrap"
+                style="display: none"
+              >
+                <button
+                  class="server-dropdown-btn"
+                  id="server-dropdown-btn"
+                  type="button"
+                  aria-haspopup="listbox"
+                  aria-expanded="false"
+                >
+                  <svg
+                    width="13"
+                    height="13"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect x="2" y="2" width="20" height="8" rx="2" />
+                    <rect x="2" y="14" width="20" height="8" rx="2" />
+                    <line x1="6" y1="6" x2="6.01" y2="6" />
+                    <line x1="6" y1="18" x2="6.01" y2="18" />
+                  </svg>
+                  <span id="server-dropdown-label">Alpha</span>
+                  <svg
+                    class="srv-chev"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="18 15 12 9 6 15" />
+                  </svg>
+                </button>
+                <div
+                  class="server-dropdown-menu"
+                  id="server-dropdown-menu"
+                  role="listbox"
+                >
+                  <div class="server-dropdown-header">Stream Server</div>
+                  <div class="server-dropdown-divider"></div>
+                </div>
+              </div>
+              <button class="btn btn-secondary" id="back-btn" type="button">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="15 18 9 12 15 6" />
+                </svg>
+                Return
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="recs-section" id="recs-section" style="display: none">
+        <div class="section-header">
+          <h2 class="section-title">Recommended</h2>
+        </div>
+        <div class="media-row" id="recs-row"></div>
+      </section>
+      <section
+        class="related-section"
+        id="related-section"
+        style="display: none"
+      >
+        <div class="section-header">
+          <h2 class="section-title" id="related-title">Related</h2>
+        </div>
+        <div class="related-grid" id="related-grid"></div>
+      </section>
+    </main>
+    <div id="toast-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+      document.getElementById("nav-ph").innerHTML = VApp.navHTML("");
+      VCloak.initCloak();
+      VApp.initPanic();
+      VApp.initParticles();
+      VApp.initNavChat();
+      VApp.initNavProfile();
+      VApp.initVersionCheck();
+      const dtEl = document.getElementById("nav-datetime");
+      if (dtEl) VApp.startDatetime(dtEl);
+      const params = new URLSearchParams(location.search);
+      const mediaType = params.get("type");
+      const mediaId = params.get("id");
+      const mediaKid = params.get("kid") ? Number(params.get("kid")) : null;
+      if (!mediaType || !mediaId) {
+        location.href = "home.html";
+      }
+      const DEFAULT_MOVIE_TEMPLATES = [
+        {
+          name: "Alpha",
+          movie: "https://player.videasy.net/movie/{id}?color={color}",
+        },
+        { name: "Bravo", movie: "https://vidfast.pro/movie/{id}" },
+        { name: "Charlie", movie: "https://peachify.top/embed/movie/{id}" },
+        { name: "Delta", movie: "https://vidcore.net/movie/{id}" },
+        { name: "Echo", movie: "https://vidplays.fun/embed/movie/{id}" },
+        { name: "Golf", movie: "https://www.vidking.net/embed/movie/{id}" },
+      ];
+      const DEFAULT_TV_TEMPLATES = [
+        {
+          name: "Alpha",
+          tv: "https://player.videasy.net/tv/{id}/{season}/{episode}?color={color}",
+        },
+        { name: "Bravo", tv: "https://vidfast.pro/tv/{id}/{season}/{episode}" },
+        {
+          name: "Charlie",
+          tv: "https://peachify.top/embed/tv/{id}/{season}/{episode}",
+        },
+        { name: "Delta", tv: "https://vidcore.net/tv/{id}/{season}/{episode}" },
+        {
+          name: "Echo",
+          tv: "https://vidplays.fun/embed/tv/{id}/{season}/{episode}",
+        },
+        {
+          name: "Golf",
+          tv: "https://www.vidking.net/embed/tv/{id}/{season}/{episode}",
+        },
+      ];
+      const DEFAULT_ANIME_TEMPLATES = [
+        {
+          name: "Alpha",
+          anime:
+            "https://divine-dew-518d.alexdingleberries.workers.dev/stream/ani/{id}/{episode}/{dub}",
+        },
+        {
+          name: "Bravo",
+          anime: "https://anixo.buzz/embed/ani/{id}/{episode}/{dub}",
+        },
+        {
+          name: "Charlie",
+          anime: "https://vidnest.fun/animepahe/{id}/{episode}/{dub}",
+        },
+        {
+          name: "Delta",
+          anime: "https://vidnest.fun/anime/{id}/{episode}/{dub}",
+        },
+      ];
+      function fillTemplate(tpl, vars) {
+        const all = Object.assign({ color: VMedia.getAccentHex() }, vars);
+        return tpl.replace(/\{(\w+)\}/g, (_, k) => all[k] ?? "");
+      }
+      function buildMovieServer(entry) {
+        return {
+          name: entry.name,
+          movie: (id) => fillTemplate(entry.movie, { id }),
+        };
+      }
+      function buildTvServer(entry) {
+        return {
+          name: entry.name,
+          tv: (id, s, e) =>
+            fillTemplate(entry.tv, { id, season: s, episode: e }),
+        };
+      }
+      function mergeMovieTv(movieList, tvList) {
+        return movieList.map((m) => {
+          const t = tvList.find((x) => x.name === m.name);
+          return {
+            name: m.name,
+            movie: buildMovieServer(m).movie,
+            tv: t
+              ? buildTvServer(t).tv
+              : (id, s, e) => buildMovieServer(m).movie(id),
+          };
+        });
+      }
+      function buildAnimeServer(entry) {
+        return {
+          name: entry.name,
+          url: (id, ep, dubbed) =>
+            fillTemplate(entry.anime, {
+              id,
+              episode: ep,
+              dub: dubbed ? "dub" : "sub",
+            }),
+        };
+      }
+      let MEDIA_SERVERS = mergeMovieTv(
+        DEFAULT_MOVIE_TEMPLATES,
+        DEFAULT_TV_TEMPLATES,
+      );
+      let ANIME_SERVERS = DEFAULT_ANIME_TEMPLATES.map(buildAnimeServer);
+      let _linksConfigLoaded = false;
+      async function loadServerConfig() {
+        if (_linksConfigLoaded) return;
+        _linksConfigLoaded = true;
+        try {
+          const cfg = await VMedia.getServerConfig();
+          if (cfg) applyServerConfig(cfg);
+        } catch (e) {
+          console.warn(
+            "[links-worker] fetch failed, using built-in defaults:",
+            e,
+          );
+        }
+      }
+      function applyServerConfig(cfg) {
+        if (cfg.movie?.length) {
+          MEDIA_SERVERS = mergeMovieTv(
+            cfg.movie,
+            cfg.tv || DEFAULT_TV_TEMPLATES,
+          );
+          if (currentServerIdx >= MEDIA_SERVERS.length) currentServerIdx = 0;
+        }
+        if (cfg.anime?.length) {
+          ANIME_SERVERS = cfg.anime.map(buildAnimeServer);
+          if (currentAnimeServerIdx >= ANIME_SERVERS.length)
+            currentAnimeServerIdx = 0;
+        }
+      }
+      let currentServerIdx =
+        parseInt(localStorage.getItem("vispora_media_server") || "0") || 0;
+      if (currentServerIdx >= MEDIA_SERVERS.length) currentServerIdx = 0;
+      let currentAnimeServerIdx =
+        parseInt(localStorage.getItem("vispora_anime_server") || "0") || 0;
+      if (currentAnimeServerIdx >= ANIME_SERVERS.length)
+        currentAnimeServerIdx = 0;
+      function getMovieUrl(id) {
+        return MEDIA_SERVERS[currentServerIdx].movie(id);
+      }
+      function getTvUrl(id, season, episode) {
+        return MEDIA_SERVERS[currentServerIdx].tv(id, season, episode);
+      }
+      function renderServerDropdown(type) {
+        const wrap = document.getElementById("server-dropdown-wrap");
+        const btn = document.getElementById("server-dropdown-btn");
+        const menu = document.getElementById("server-dropdown-menu");
+        const label = document.getElementById("server-dropdown-label");
+        wrap.style.display = "";
+        if (menu.parentElement !== document.body)
+          document.body.appendChild(menu);
+        const isAnime = type === "anime";
+        const pool = isAnime ? ANIME_SERVERS : MEDIA_SERVERS;
+        const activeIdx = isAnime ? currentAnimeServerIdx : currentServerIdx;
+        label.textContent = pool[activeIdx].name;
+        const existingOpts = menu.querySelectorAll(".server-option");
+        existingOpts.forEach((o) => o.remove());
+        pool.forEach((srv, i) => {
+          const opt = document.createElement("div");
+          opt.className =
+            "server-option" +
+            (i === (isAnime ? currentAnimeServerIdx : currentServerIdx)
+              ? " active"
+              : "");
+          opt.setAttribute("role", "option");
+          opt.setAttribute(
+            "aria-selected",
+            i === (isAnime ? currentAnimeServerIdx : currentServerIdx),
+          );
+          opt.dataset.idx = i;
+          opt.innerHTML = `
+      <span class="server-option-dot"></span>
+      <span class="server-option-name">${srv.name}</span>
+      <svg class="server-option-check" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>`;
+          opt.addEventListener("click", () => {
+            const curIdx = isAnime ? currentAnimeServerIdx : currentServerIdx;
+            if (parseInt(opt.dataset.idx) === curIdx) {
+              closeServerDropdown();
+              return;
+            }
+            if (isAnime) {
+              currentAnimeServerIdx = i;
+              localStorage.setItem("vispora_anime_server", i);
+            } else {
+              currentServerIdx = i;
+              localStorage.setItem("vispora_media_server", i);
+            }
+            label.textContent = srv.name;
+            menu.querySelectorAll(".server-option").forEach((o, j) => {
+              o.classList.toggle("active", j === i);
+              o.setAttribute("aria-selected", j === i);
+            });
+            if (mediaType === "movie") setPlayerSrc(getMovieUrl(mediaId));
+            else if (mediaType === "tv")
+              setPlayerSrc(getTvUrl(mediaId, currentSeason, currentEpisode));
+            else if (mediaType === "anime")
+              setPlayerSrc(
+                animePlayerUrlWithDub(
+                  mediaData.anilistId || mediaData.id,
+                  currentEpisode,
+                ),
+              );
+            VApp.showToast(`Switched to ${srv.name}`);
+            closeServerDropdown();
+          });
+          menu.appendChild(opt);
+        });
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const isOpen = menu.classList.contains("open");
+          isOpen ? closeServerDropdown() : openServerDropdown();
+        });
+        document.addEventListener("click", (e) => {
+          if (!wrap.contains(e.target) && !menu.contains(e.target))
+            closeServerDropdown();
+        });
+        function positionServerMenu() {
+          const r = btn.getBoundingClientRect();
+          const gap = 8;
+          const above = r.top - gap - 12;
+          const below = window.innerHeight - r.bottom - gap - 12;
+          const up = above >= Math.min(menu.scrollHeight, 260) || above > below;
+          menu.style.maxHeight =
+            Math.max(120, Math.min(340, up ? above : below)) + "px";
+          menu.style.left =
+            Math.max(
+              8,
+              Math.min(r.left, window.innerWidth - menu.offsetWidth - 8),
+            ) + "px";
+          if (up) {
+            menu.style.top = "";
+            menu.style.bottom = window.innerHeight - r.top + gap + "px";
+          } else {
+            menu.style.bottom = "";
+            menu.style.top = r.bottom + gap + "px";
+          }
+        }
+        const repositionIfOpen = () => {
+          if (menu.classList.contains("open")) positionServerMenu();
+        };
+        window.addEventListener("scroll", repositionIfOpen, true);
+        window.addEventListener("resize", repositionIfOpen);
+        function openServerDropdown() {
+          positionServerMenu();
+          menu.classList.add("open");
+          btn.classList.add("open");
+          btn.setAttribute("aria-expanded", "true");
+        }
+        function closeServerDropdown() {
+          menu.classList.remove("open");
+          btn.classList.remove("open");
+          btn.setAttribute("aria-expanded", "false");
+        }
+      }
+      let mediaData = null;
+      let sessionStart = null,
+        sessionMs = 0;
+      let isFs = false;
+      let currentSeason = 1,
+        currentEpisode = 1;
+      const seasonCache = {};
+      let isDubbed = false;
+      let _lastCt = 0,
+        _lastDur = 0;
+      window.addEventListener("message", function (event) {
+        let data = null;
+        try {
+          data =
+            typeof event.data === "string"
+              ? JSON.parse(event.data)
+              : event.data;
+        } catch {
+          return;
+        }
+        if (!data) return;
+      });
+      const mFrame = document.getElementById("media-frame");
+      const mLoading = document.getElementById("player-loading");
+      let mLoadTimer = null;
+      function showPlayerLoading(sub) {
+        const t = mediaData && (mediaData.title || mediaData.name);
+        document.getElementById("pl-title").textContent = t
+          ? `Loading ${t}`
+          : "Loading…";
+        document.getElementById("pl-sub").textContent = sub;
+        mLoading.classList.remove("done");
+        clearTimeout(mLoadTimer);
+        mLoadTimer = setTimeout(() => {
+          document.getElementById("pl-sub").textContent =
+            "Taking a while? Try another server from the Server menu";
+        }, 15000);
+      }
+      function hidePlayerLoading() {
+        clearTimeout(mLoadTimer);
+        mLoading.classList.add("done");
+      }
+      function setPlayerSrc(url, sub) {
+        showPlayerLoading(sub || "Connecting to server…");
+        mFrame.style.display = "block";
+        mFrame.src = url;
+      }
+      mFrame.addEventListener("load", () => {
+        if (mFrame.getAttribute("src")) hidePlayerLoading();
+      });
+      let fullOverview = "";
+      function checkOverview() {
+        const el = document.getElementById("media-overview");
+        const more = document.getElementById("overview-more");
+        more.style.display =
+          el.scrollHeight > el.clientHeight + 1 ? "" : "none";
+      }
+      function setOverview(text) {
+        fullOverview = text;
+        document.getElementById("media-overview").textContent = text;
+        document.getElementById("overview-more").style.display = "none";
+        requestAnimationFrame(checkOverview);
+      }
+      function openOverview() {
+        const title =
+          (mediaData && (mediaData.title || mediaData.name)) || "Overview";
+        const o = document.createElement("div");
+        o.className = "modal-overlay";
+        o.style.zIndex = "31000";
+        o.innerHTML = `<div class="modal overview-modal" role="dialog" aria-modal="true">
+          <h3>${VApp.esc(title)}</h3>
+          <div class="overview-modal-text">${VApp.esc(fullOverview)}</div>
+          <div class="modal-actions"><button class="btn btn-secondary" type="button">Close</button></div>
+        </div>`;
+        function onEsc(e) {
+          if (e.key === "Escape") close();
+        }
+        function close() {
+          document.removeEventListener("keydown", onEsc);
+          o.remove();
+        }
+        document.addEventListener("keydown", onEsc);
+        o.addEventListener("click", (e) => {
+          if (e.target === o) close();
+        });
+        o.querySelector("button").onclick = close;
+        document.body.appendChild(o);
+      }
+      document.getElementById("overview-more").onclick = openOverview;
+      window.addEventListener("resize", checkOverview);
+      document.getElementById("cast-row").addEventListener(
+        "wheel",
+        (e) => {
+          const el = e.currentTarget;
+          const max = el.scrollWidth - el.clientWidth;
+          if (max <= 0 || Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
+          if (
+            (e.deltaY < 0 && el.scrollLeft <= 0) ||
+            (e.deltaY > 0 && el.scrollLeft >= max)
+          )
+            return;
+          el.scrollLeft += e.deltaY;
+          e.preventDefault();
+        },
+        { passive: false },
+      );
+      function fmtSecs(s) {
+        const h = Math.floor(s / 3600),
+          m = Math.floor((s % 3600) / 60),
+          sec = Math.floor(s % 60);
+        if (h > 0)
+          return `${h}:${String(m).padStart(2, "0")}:${String(sec).padStart(
+            2,
+            "0",
+          )}`;
+        return `${m}:${String(sec).padStart(2, "0")}`;
+      }
+      function updateWatchTimeDisplay() {
+        const total = VStorage.getMediaWatchTime(mediaId, mediaType);
+        const formatted = VStorage.formatTime(total);
+        const bar = document.getElementById("watch-time-bar");
+        const val = document.getElementById("watch-time-val");
+        if (formatted) {
+          bar.style.display = "";
+          val.textContent = formatted;
+        }
+      }
+      function updateEstFinish() {
+        const el = document.getElementById("est-done-display");
+        if (!el) return;
+        if (!_lastDur) {
+          el.style.display = "none";
+          return;
+        }
+        const remainingMs = (_lastDur - _lastCt) * 1000;
+        if (remainingMs > 0) {
+          const estEnd = new Date(Date.now() + remainingMs);
+          el.textContent =
+            "Est. Finish: " +
+            estEnd.toLocaleTimeString("en-US", {
+              hour: "2-digit",
+              minute: "2-digit",
+            });
+          el.style.display = "";
+        } else {
+          el.style.display = "none";
+        }
+      }
+      function resetEstFinish() {
+        _lastCt = 0;
+        _lastDur = 0;
+        const el = document.getElementById("est-done-display");
+        if (el) el.style.display = "none";
+      }
+      function startSession() {
+        if (sessionStart) return;
+        sessionStart = Date.now();
+      }
+      function saveSession() {
+        if (!sessionStart) return;
+        const e = Date.now() - sessionStart;
+        sessionMs += e;
+        sessionStart = null;
+        if (e > 2000 && mediaData) {
+          VStorage.addToMediaHistory(mediaData, mediaType);
+          VStorage.addMediaWatchTime(mediaId, mediaType, e);
+          updateWatchTimeDisplay();
+        }
+      }
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden) {
+          saveSession();
+        } else if (mediaData) {
+          sessionStart = Date.now();
+        }
+      });
+      window.addEventListener("beforeunload", saveSession);
+      window.addEventListener("pagehide", saveSession);
+      function updateFavBtn() {
+        if (!mediaData) return;
+        const btn = document.getElementById("btn-fav");
+        const isFav = VStorage.isMediaFavorite(mediaData.id, mediaType);
+        btn.style.color = isFav ? "var(--accent)" : "";
+        btn.title = isFav ? "Remove from favorites" : "Add to favorites";
+        btn.innerHTML = isFav
+          ? `<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>`
+          : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>`;
+      }
+      document.getElementById("btn-fav").onclick = () => {
+        if (!mediaData) return;
+        const added = VStorage.toggleMediaFavorite(mediaData.id, mediaType);
+        updateFavBtn();
+        VApp.showToast(added ? "Added to favorites" : "Removed from favorites");
+      };
+      document.getElementById("btn-reload-hero").onclick = () => {
+        const f = document.getElementById("media-frame");
+        if (f.getAttribute("src")) setPlayerSrc(f.src, "Reloading…");
+        VApp.showToast("Reloaded");
+      };
+      document.getElementById("btn-play-scroll").onclick = () => {
+        document
+          .getElementById("iframe-wrap")
+          .scrollIntoView({ behavior: "smooth", block: "start" });
+      };
+      document.getElementById("back-btn").onclick = () => {
+        saveSession();
+        const backMap = {
+          movie: "movies.html",
+          tv: "tv.html",
+          anime: "anime.html",
+        };
+        window.location.href = backMap[mediaType] || "home.html";
+      };
+      const theaterBtn = document.getElementById("btn-theater");
+      function setTheaterMode(on) {
+        document.body.classList.toggle("theater-mode", on);
+        theaterBtn.classList.toggle("active", on);
+        theaterBtn.title = on ? "Exit Theater Mode" : "Theater Mode";
+        localStorage.setItem("vispora_theater_mode", on ? "1" : "0");
+      }
+      theaterBtn.onclick = () =>
+        setTheaterMode(!document.body.classList.contains("theater-mode"));
+      if (localStorage.getItem("vispora_theater_mode") === "1")
+        setTheaterMode(true);
+      document.getElementById("btn-sub").onclick = () => {
+        if (isDubbed) {
+          isDubbed = false;
+          applySubDub();
+        }
+      };
+      document.getElementById("btn-dub").onclick = () => {
+        if (!isDubbed) {
+          isDubbed = true;
+          applySubDub();
+        }
+      };
+      function applySubDub() {
+        document
+          .getElementById("btn-sub")
+          .classList.toggle("active", !isDubbed);
+        document.getElementById("btn-dub").classList.toggle("active", isDubbed);
+        if (mediaData && mediaType === "anime") {
+          loadAnimeEpisodeIntoFrame(mediaData.id, currentEpisode);
+          VApp.showToast(isDubbed ? "Switched to Dub" : "Switched to Sub");
+        }
+      }
+      function animePlayerUrlWithDub(id, ep) {
+        return ANIME_SERVERS[currentAnimeServerIdx].url(id, ep, isDubbed);
+      }
+      function setHeroVisuals(posterSrc, backdropSrc) {
+        if (backdropSrc)
+          document.getElementById(
+            "hero-backdrop",
+          ).style.backgroundImage = `url(${backdropSrc})`;
+        const pw = document.getElementById("hero-poster-wrap");
+        if (posterSrc)
+          pw.innerHTML = `<img src="${VApp.esc(
+            posterSrc,
+          )}" alt="poster" style="width:100%;display:block;">`;
+      }
+      function populateHero(data, type) {
+        const title = data.title || data.name;
+        document.title = `${title} — vispora`;
+        document.getElementById("bc-title").textContent = title;
+        document.getElementById("media-title").textContent = title;
+        document.getElementById("hero-badge").textContent =
+          type === "movie" ? "Movie" : "TV Show";
+        if (data.tagline)
+          document.getElementById("media-tagline").textContent = data.tagline;
+        const year = (data.release_date || data.first_air_date || "").slice(
+          0,
+          4,
+        );
+        const rating = data.vote_average
+          ? Number(data.vote_average).toFixed(1)
+          : "";
+        const runtime = data.runtime
+          ? `${data.runtime}m`
+          : data.episode_run_time?.length
+          ? `${data.episode_run_time[0]}m/ep`
+          : "";
+        const seasons = data.number_of_seasons;
+        const chips = [];
+        if (year)
+          chips.push(
+            `<span class="media-hero-meta-chip">${VApp.esc(year)}</span>`,
+          );
+        if (rating)
+          chips.push(
+            `<span class="media-hero-rating">★ ${VApp.esc(rating)}</span>`,
+          );
+        if (runtime)
+          chips.push(
+            `<span class="media-hero-meta-chip">${VApp.esc(runtime)}</span>`,
+          );
+        if (seasons)
+          chips.push(
+            `<span class="media-hero-meta-chip">${seasons} season${
+              seasons > 1 ? "s" : ""
+            }</span>`,
+          );
+        document.getElementById("media-meta").innerHTML = chips.join("");
+        const genres = data.genres || [];
+        document.getElementById("media-genres").innerHTML = genres
+          .slice(0, 5)
+          .map(
+            (g) => `<span class="media-hero-genre">${VApp.esc(g.name)}</span>`,
+          )
+          .join("");
+        setOverview(data.overview || "No description available.");
+        const posterSrc = data.poster_path
+          ? VMedia.posterUrl(data.poster_path, "w342")
+          : "";
+        const backSrc = data.backdrop_path
+          ? VMedia.backdropUrl(data.backdrop_path, "w1280")
+          : "";
+        setHeroVisuals(posterSrc, backSrc);
+        updateFavBtn();
+        updateWatchTimeDisplay();
+        startSession();
+      }
+      function populateAnimeHero(data) {
+        const title = VMedia.animeTitle(data);
+        document.title = `${title} — vispora`;
+        document.getElementById("bc-title").textContent = title;
+        document.getElementById("media-title").textContent = title;
+        document.getElementById("hero-badge").textContent = "Anime";
+        const studio = data.studios?.nodes?.[0]?.name || "";
+        if (studio)
+          document.getElementById("media-tagline").textContent = studio;
+        const year = data.seasonYear || "";
+        const score = data.averageScore
+          ? (data.averageScore / 10).toFixed(1)
+          : "";
+        const epCount = data.episodes ? `${data.episodes} eps` : "";
+        const status =
+          data.status === "RELEASING"
+            ? "Airing"
+            : data.status === "FINISHED"
+            ? "Finished"
+            : data.status || "";
+        const chips = [];
+        if (year)
+          chips.push(
+            `<span class="media-hero-meta-chip">${VApp.esc(
+              String(year),
+            )}</span>`,
+          );
+        if (score)
+          chips.push(
+            `<span class="media-hero-rating">★ ${VApp.esc(score)}</span>`,
+          );
+        if (epCount)
+          chips.push(
+            `<span class="media-hero-meta-chip">${VApp.esc(epCount)}</span>`,
+          );
+        if (status)
+          chips.push(
+            `<span class="media-hero-meta-chip">${VApp.esc(status)}</span>`,
+          );
+        document.getElementById("media-meta").innerHTML = chips.join("");
+        const genres = data.genres || [];
+        document.getElementById("media-genres").innerHTML = genres
+          .slice(0, 5)
+          .map((g) => `<span class="media-hero-genre">${VApp.esc(g)}</span>`)
+          .join("");
+        const rawDesc = data.description || "No description available.";
+        setOverview(rawDesc.replace(/<[^>]+>/g, "").replace(/&[a-z]+;/gi, " "));
+        const posterSrc =
+          data.coverImage?.extraLarge || data.coverImage?.large || "";
+        const backSrc = data.bannerImage || "";
+        setHeroVisuals(posterSrc, backSrc);
+        updateFavBtn();
+        updateWatchTimeDisplay();
+        document.getElementById("subdub-picker").style.display = "";
+        startSession();
+      }
+      async function populateCast(idOrData, type) {
+        try {
+          if (type === "anime") {
+            const data =
+              typeof idOrData === "object"
+                ? idOrData
+                : await VMedia.getAnimeById(idOrData);
+            const edges = (data.characters?.edges || []).slice(0, 10);
+            if (!edges.length) return;
+            document.getElementById("cast-row").innerHTML = edges
+              .map((e) => {
+                const va = e.voiceActors?.[0];
+                const charName = e.node?.name?.full || "";
+                const name = va?.name?.full || charName;
+                const photo = va?.image?.medium || e.node?.image?.medium || "";
+                const role = va ? charName : "Character";
+                return `<div class="cast-member">
+          <img class="cast-photo" src="${VApp.esc(photo)}" alt="${VApp.esc(
+                  name,
+                )}" loading="lazy" onerror="this.style.display='none'">
+          <div class="cast-name">${VApp.esc(name)}</div>
+          <div class="cast-char">${VApp.esc(role)}</div>
+        </div>`;
+              })
+              .join("");
+            return;
+          }
+          const endpoint =
+            type === "movie"
+              ? `/movie/${idOrData}/credits`
+              : `/tv/${idOrData}/credits`;
+          const data = await VMedia.tmdbFetch(endpoint);
+          const cast = (data.cast || [])
+            .filter((c) => c.profile_path)
+            .slice(0, 10);
+          if (!cast.length) return;
+          document.getElementById("cast-row").innerHTML = cast
+            .map(
+              (c) => `
+      <div class="cast-member">
+        <img class="cast-photo" src="${VMedia.posterUrl(
+          c.profile_path,
+          "w185",
+        )}" alt="${VApp.esc(
+                c.name,
+              )}" loading="lazy" onerror="this.style.display='none'">
+        <div class="cast-name">${VApp.esc(c.name)}</div>
+        <div class="cast-char">${VApp.esc(c.character || "")}</div>
+      </div>`,
+            )
+            .join("");
+        } catch (e) {
+          console.warn("Cast fetch failed:", e);
+        }
+      }
+      async function loadRecs(idOrData, type) {
+        try {
+          if (type === "anime") {
+            const data =
+              typeof idOrData === "object"
+                ? idOrData
+                : await VMedia.getAnimeById(idOrData);
+            const recs = (data.recommendations?.nodes || [])
+              .map((n) => n.mediaRecommendation)
+              .filter(Boolean)
+              .filter((a) => a.coverImage?.large)
+              .slice(0, 14);
+            if (!recs.length) return;
+            document.getElementById("recs-section").style.display = "";
+            const row = document.getElementById("recs-row");
+            row.innerHTML = recs.map((a) => VMedia.makeAnimeCard(a)).join("");
+            VMedia.initMediaStars(row);
+            VMedia.initGridInfoBtns(row);
+            return;
+          }
+          const endpoint =
+            type === "movie"
+              ? `/movie/${idOrData}/recommendations`
+              : `/tv/${idOrData}/recommendations`;
+          const data = await VMedia.tmdbFetch(endpoint, { page: 1 });
+          const results = (data.results || [])
+            .filter((r) => r.poster_path)
+            .slice(0, 14);
+          if (!results.length) return;
+          document.getElementById("recs-section").style.display = "";
+          const row = document.getElementById("recs-row");
+          row.innerHTML =
+            type === "movie"
+              ? results.map((m) => VMedia.makeMovieCard(m)).join("")
+              : results.map((s) => VMedia.makeTVCard(s)).join("");
+          VMedia.initMediaStars(row);
+          VMedia.initGridInfoBtns(row);
+        } catch (e) {
+          console.warn("Recs failed:", e);
+        }
+      }
+      async function loadAnimeRelated(id, kitsuId) {
+        try {
+          const related = await VMedia.getAnimeRelations(id, kitsuId);
+          if (!related.length) return;
+          const section = document.getElementById("related-section");
+          const grid = document.getElementById("related-grid");
+          section.style.display = "";
+          grid.innerHTML = related
+            .map((n) => {
+              const title = n.title || "Unknown";
+              const year = n.seasonYear || "";
+              const statusLine = n.averageScore
+                ? `<div class="related-card-score">★ ${(
+                    n.averageScore / 10
+                  ).toFixed(1)}</div>`
+                : "";
+              const kidParam = n.kitsuId ? `&kid=${n.kitsuId}` : "";
+              return `<a href="media.html?type=anime&id=${
+                n.id
+              }${kidParam}" class="related-card">
+      <img src="${VApp.esc(n.coverImage.large)}" alt="${VApp.esc(
+                title,
+              )}" loading="lazy" onerror="this.style.display='none'">
+      <div class="related-card-body">
+        <div class="related-card-type">${VApp.esc(n.relationType)}</div>
+        <div class="related-card-title">${VApp.esc(title)} ${VApp.esc(
+                String(year),
+              )}</div>
+        ${statusLine}
+      </div>
+    </a>`;
+            })
+            .join("");
+        } catch (e) {
+          console.warn("Related fetch failed:", e);
+        }
+      }
+      function updateEpBadge(season, episode, epTitle) {
+        document.getElementById(
+          "ep-current-display",
+        ).innerHTML = `<div class="ep-current-badge">Season ${season} · Episode ${episode}${
+          epTitle ? `: ${VApp.esc(epTitle)}` : ""
+        }</div>`;
+        const suffix = ` — S${season}E${episode}`;
+        document.title = `${
+          mediaData?.name || mediaData?.title || "Show"
+        }${suffix} — vispora`;
+        document.getElementById("bc-title").textContent = `${
+          mediaData?.name || mediaData?.title || "Show"
+        }${suffix}`;
+      }
+      function loadEpisodeIntoFrame(showId, season, episode) {
+        const frame = document.getElementById("media-frame");
+        const url = getTvUrl(showId, season, episode);
+        setPlayerSrc(url);
+        currentSeason = season;
+        currentEpisode = episode;
+        VStorage.setTVProgress(showId, season, episode);
+        VStorage.addToMediaHistory(mediaData, "tv");
+        resetEstFinish();
+        const cachedEp = seasonCache[season]?.find(
+          (e) => e.episode_number === episode,
+        );
+        updateEpBadge(season, episode, cachedEp?.name);
+        document.getElementById("season-select").value = season;
+        document.querySelectorAll(".episode-btn").forEach((b) => {
+          b.classList.toggle(
+            "active",
+            parseInt(b.dataset.season) === season &&
+              parseInt(b.dataset.ep) === episode,
+          );
+        });
+      }
+      async function loadSeasonEpisodes(showId, seasonNum, activeEp) {
+        const list = document.getElementById("episode-list");
+        list.innerHTML = `<div style="padding:24px;text-align:center;color:var(--text-secondary);font-size:0.8rem">Loading…</div>`;
+        try {
+          if (!seasonCache[seasonNum]) {
+            const d = await VMedia.tmdbFetch(
+              `/tv/${showId}/season/${seasonNum}`,
+            );
+            seasonCache[seasonNum] = d.episodes || [];
+          }
+          const eps = seasonCache[seasonNum];
+          if (!eps.length) {
+            list.innerHTML = `<div style="padding:20px;text-align:center;color:var(--text-secondary);font-size:0.8rem">No episodes</div>`;
+            return;
+          }
+          list.innerHTML = eps
+            .map(
+              (ep) => `
+      <button class="episode-btn${
+        ep.episode_number === activeEp ? " active" : ""
+      }"
+        data-ep="${ep.episode_number}" data-season="${seasonNum}" type="button">
+        <span class="ep-number">E${ep.episode_number}</span>
+        <span class="ep-title">${VApp.esc(
+          ep.name || `Episode ${ep.episode_number}`,
+        )}</span>
+      </button>`,
+            )
+            .join("");
+          setTimeout(() => {
+            const active = list.querySelector(".episode-btn.active");
+            if (active)
+              active.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          }, 100);
+          loadEpisodeIntoFrame(showId, seasonNum, activeEp);
+        } catch (e) {
+          list.innerHTML = `<div style="padding:20px;text-align:center;color:var(--text-secondary);font-size:0.8rem">Failed to load episodes</div>`;
+        }
+      }
+      document.getElementById("episode-list").addEventListener("click", (e) => {
+        const btn = e.target.closest(".episode-btn");
+        if (!btn || !mediaData) return;
+        if (mediaType === "tv") {
+          loadEpisodeIntoFrame(
+            mediaData.id,
+            parseInt(btn.dataset.season),
+            parseInt(btn.dataset.ep),
+          );
+        } else if (mediaType === "anime") {
+          loadAnimeEpisodeIntoFrame(mediaData.id, parseInt(btn.dataset.ep));
+        }
+      });
+      function loadAnimeEpisodeIntoFrame(animeId, episode) {
+        const frame = document.getElementById("media-frame");
+        currentEpisode = episode;
+        VStorage.setAnimeProgress(animeId, episode);
+        VStorage.addToMediaHistory(mediaData, "anime");
+        resetEstFinish();
+        setPlayerSrc(
+          animePlayerUrlWithDub(mediaData?.anilistId || animeId, episode),
+        );
+        document.getElementById(
+          "ep-current-display",
+        ).innerHTML = `<div class="ep-current-badge">Episode ${episode}${
+          isDubbed ? " · DUB" : " · SUB"
+        }</div>`;
+        const title = mediaData?.title || "Anime";
+        document.title = `${title} — Ep ${episode} — vispora`;
+        document.getElementById(
+          "bc-title",
+        ).textContent = `${title} — Ep ${episode}`;
+        document.querySelectorAll(".episode-btn").forEach((b) => {
+          b.classList.toggle("active", parseInt(b.dataset.ep) === episode);
+        });
+        const activeBtn = document.querySelector(
+          `.episode-btn[data-ep="${episode}"]`,
+        );
+        if (activeBtn)
+          activeBtn.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
+      function buildAnimeEpisodePicker(animeId, totalEps, startEp) {
+        if (!totalEps || totalEps < 1) return;
+        const list = document.getElementById("episode-list");
+        list.innerHTML = Array.from({ length: totalEps }, (_, i) => {
+          const ep = i + 1;
+          return `<button class="episode-btn${
+            ep === startEp ? " active" : ""
+          }" data-ep="${ep}" type="button">
+      <span class="ep-number">E${ep}</span>
+      <span class="ep-title">Episode ${ep}</span>
+    </button>`;
+        }).join("");
+        setTimeout(() => {
+          const active = list.querySelector(".episode-btn.active");
+          if (active)
+            active.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }, 100);
+      }
+      async function initMovie(id) {
+        document.getElementById("bc-type").textContent = "Movies";
+        document.getElementById("bc-type").href = "movies.html";
+        const frame = document.getElementById("media-frame");
+        const err = document.getElementById("player-error");
+        const configPromise = loadServerConfig();
+        try {
+          mediaData = await VMedia.tmdbFetch(`/movie/${id}`, {
+            append_to_response: "release_dates",
+          });
+          populateHero(mediaData, "movie");
+          populateCast(id, "movie");
+          loadRecs(id, "movie");
+          VStorage.addToMediaHistory(mediaData, "movie");
+          await configPromise;
+          renderServerDropdown("movie");
+          const url = getMovieUrl(id);
+          setPlayerSrc(url);
+          frame.onerror = () => {
+            frame.style.display = "none";
+            err.style.display = "flex";
+            document.getElementById(
+              "error-link",
+            ).innerHTML = `<a href="${VApp.esc(
+              url,
+            )}" target="_blank" style="color:var(--accent)">Open directly ↗</a>`;
+          };
+        } catch (e) {
+          console.error(e);
+          VApp.showToast("Movie not found", "error");
+          setTimeout(() => (location.href = "movies.html"), 1500);
+        }
+      }
+      async function initTV(id) {
+        document.getElementById("bc-type").textContent = "TV Shows";
+        document.getElementById("bc-type").href = "tv.html";
+        const configPromise = loadServerConfig();
+        try {
+          mediaData = await VMedia.tmdbFetch(`/tv/${id}`);
+          populateHero(mediaData, "tv");
+          populateCast(id, "tv");
+          loadRecs(id, "tv");
+          VStorage.addToMediaHistory(mediaData, "tv");
+          await configPromise;
+          renderServerDropdown("tv");
+          const validSeasons = (mediaData.seasons || []).filter(
+            (s) => s.season_number > 0,
+          );
+          const seasonSel = document.getElementById("season-select");
+          seasonSel.style.display = "";
+          validSeasons.forEach((s) => {
+            const o = document.createElement("option");
+            o.value = s.season_number;
+            o.textContent = `Season ${s.season_number}`;
+            seasonSel.appendChild(o);
+          });
+          const prog = VStorage.getTVProgress(id);
+          const startSeason = prog.season || 1;
+          const startEp = prog.episode || 1;
+          seasonSel.value = startSeason;
+          updateEpBadge(startSeason, startEp);
+          document.getElementById("player-area").classList.add("tv-mode");
+          document.getElementById("episode-picker").style.display = "";
+          await loadSeasonEpisodes(id, startSeason, startEp);
+          seasonSel.addEventListener("change", async () => {
+            const s = parseInt(seasonSel.value);
+            await loadSeasonEpisodes(id, s, 1);
+          });
+        } catch (e) {
+          console.error(e);
+          VApp.showToast("Show not found", "error");
+          setTimeout(() => (location.href = "tv.html"), 1500);
+        }
+      }
+      async function initAnime(id, kitsuId) {
+        document.getElementById("bc-type").textContent = "Anime";
+        document.getElementById("bc-type").href = "anime.html";
+        const configPromise = loadServerConfig();
+        try {
+          const raw = await VMedia.getAnimeById(id, kitsuId);
+          mediaData = {
+            id: raw.id,
+            kitsuId: raw.kitsuId || kitsuId || null,
+            title: VMedia.animeTitle(raw),
+            _cover: raw.coverImage?.large || raw.coverImage?.extraLarge || null,
+            _backdrop: raw.bannerImage || raw.coverImage?.extraLarge || null,
+          };
+          const anilistPromise = VMedia.getAnilistIdForMal(id);
+          populateAnimeHero(raw);
+          await configPromise;
+          renderServerDropdown("anime");
+          populateCast(raw, "anime");
+          loadRecs(raw, "anime");
+          loadAnimeRelated(id, raw.kitsuId || kitsuId);
+          VStorage.addToMediaHistory(mediaData, "anime");
+          const prog = VStorage.getAnimeProgress(id);
+          const startEp = prog.episode || 1;
+          const totalEps = raw.episodes || 0;
+          document.getElementById("player-area").classList.add("tv-mode");
+          document.getElementById("episode-picker").style.display = "";
+          document.getElementById("ep-picker-label").textContent = "Episodes";
+          if (totalEps > 0) buildAnimeEpisodePicker(id, totalEps, startEp);
+          else document.getElementById("episode-list").innerHTML = "";
+          mediaData.anilistId = await anilistPromise;
+          loadAnimeEpisodeIntoFrame(id, startEp);
+        } catch (e) {
+          console.error(e);
+          VApp.showToast("Anime not found", "error");
+          setTimeout(() => (location.href = "anime.html"), 1500);
+        }
+      }
+      if (mediaType === "movie") initMovie(mediaId);
+      else if (mediaType === "tv") initTV(mediaId);
+      else if (mediaType === "anime") initAnime(mediaId, mediaKid);
+      else location.href = "home.html";
+      VTutorial.autoStart("media", {
+        force: params.get("tour") === "1",
+        ready: () => {
+          const w = document.getElementById("server-dropdown-wrap");
+          return w && w.style.display !== "none";
+        },
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Home — vispora</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/pages.css" />
+    <link rel="stylesheet" href="../css/pages-additions.css" />
+    <link rel="stylesheet" href="../css/chat.css" />
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="../js/firebase-config.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/cloak.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/media.js"></script>
+    <script src="../js/chat.js"></script>
+    <script src="../js/tutorial.js"></script>
+  </head>
+  <body>
+    <div class="welcome-screen hidden" id="welcome-screen">
+      <div class="welcome-greeting" id="welcome-greeting"></div>
+      <div class="welcome-logo-wrap">
+        <div class="welcome-logo">vispora</div>
+      </div>
+      <div class="welcome-hint">Click anywhere to continue</div>
+    </div>
+    <div id="particles-js"></div>
+    <div id="nav-ph"></div>
+    <main class="home-page page-enter container">
+      <h1 class="home-title">
+        <span class="char">v</span><span class="char">i</span
+        ><span class="char">s</span><span class="char">p</span
+        ><span class="char">o</span><span class="char">r</span
+        ><span class="char">a</span>
+      </h1>
+      <h2 clas="home-subtitle"></h2>
+      <div class="home-grid">
+        <section id="jump-section" style="display: none">
+          <div class="section-header">
+            <h2 class="section-title">Jump Back In</h2>
+            <a href="my-list.html" class="section-viewall">See All</a>
+          </div>
+          <div class="home-jump-row" id="jump-row"></div>
+        </section>
+        <section>
+          <div class="section-header">
+            <h2 class="section-title">Browse</h2>
+          </div>
+          <div class="browse-grid">
+            <a href="games.html" class="browse-card browse-card-sq">
+              <div class="browse-card-icon-wrap">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--accent)"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="3" width="7" height="7" rx="1" />
+                  <rect x="14" y="3" width="7" height="7" rx="1" />
+                  <rect x="14" y="14" width="7" height="7" rx="1" />
+                  <rect x="3" y="14" width="7" height="7" rx="1" />
+                </svg>
+              </div>
+              <div class="browse-card-label">Games</div>
+              <div class="browse-card-sub">Browser games</div>
+            </a>
+            <a href="movies.html" class="browse-card browse-card-sq">
+              <div class="browse-card-icon-wrap">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--accent)"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="2.18" />
+                  <line x1="7" y1="2" x2="7" y2="22" />
+                  <line x1="17" y1="2" x2="17" y2="22" />
+                  <line x1="2" y1="12" x2="22" y2="12" />
+                  <line x1="2" y1="7" x2="7" y2="7" />
+                  <line x1="2" y1="17" x2="7" y2="17" />
+                  <line x1="17" y1="7" x2="22" y2="7" />
+                  <line x1="17" y1="17" x2="22" y2="17" />
+                </svg>
+              </div>
+              <div class="browse-card-label">Movies</div>
+              <div class="browse-card-sub">Stream films</div>
+            </a>
+            <a href="tv.html" class="browse-card browse-card-sq">
+              <div class="browse-card-icon-wrap">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--accent)"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="7" width="20" height="15" rx="2" />
+                  <polyline points="17 2 12 7 7 2" />
+                </svg>
+              </div>
+              <div class="browse-card-label">TV Shows</div>
+              <div class="browse-card-sub">Watch series</div>
+            </a>
+            <a href="anime.html" class="browse-card browse-card-sq">
+              <div class="browse-card-icon-wrap">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--accent)"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M3 7c4-1.5 14-1.5 18 0" />
+                  <path d="M5 10h14" />
+                  <path d="M7 10v11" />
+                  <path d="M17 10v11" />
+                  <path d="M3 5.5l1 .5M20 6l1-.5" />
+                </svg>
+              </div>
+              <div class="browse-card-label">Anime</div>
+              <div class="browse-card-sub">Watch anime</div>
+            </a>
+            <a href="live.html" class="browse-card browse-card-sq">
+              <div class="browse-card-icon-wrap">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--accent)"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="2" />
+                  <path d="M7.76 16.24a6 6 0 0 1 0-8.49" />
+                  <path d="M16.24 7.76a6 6 0 0 1 0 8.49" />
+                  <path d="M4.93 19.07a10 10 0 0 1 0-14.14" />
+                  <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                </svg>
+              </div>
+              <div class="browse-card-label">Live TV</div>
+              <div class="browse-card-sub">Sports &amp; events</div>
+            </a>
+            <a href="ai.html" class="browse-card browse-card-sq">
+              <div class="browse-card-icon-wrap">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--accent)"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"
+                  />
+                  <path
+                    d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"
+                  />
+                </svg>
+              </div>
+              <div class="browse-card-label">AI Chat</div>
+              <div class="browse-card-sub">Ask anything</div>
+            </a>
+            <a href="my-list.html" class="browse-card browse-card-sq">
+              <div class="browse-card-icon-wrap">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--accent)"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+              </div>
+              <div class="browse-card-label">My List</div>
+              <div class="browse-card-sub">History &amp; lists</div>
+            </a>
+          </div>
+        </section>
+        <section>
+          <div class="section-header">
+            <h2 class="section-title">Featured</h2>
+          </div>
+          <div class="featured-grid-2">
+            <div class="featured-cell-hero skeleton-cell" id="feat-game"></div>
+            <div
+              class="featured-cell-media skeleton-cell"
+              id="feat-media"
+            ></div>
+          </div>
+        </section>
+        <section id="rec-section">
+          <div class="section-header">
+            <h2 class="section-title">Pick Something to Watch</h2>
+            <button
+              class="section-viewall"
+              id="rec-refresh"
+              type="button"
+              style="
+                background: none;
+                border: none;
+                cursor: pointer;
+                color: var(--text-secondary);
+                font-size: 0.82rem;
+                font-weight: 600;
+                font-family: inherit;
+                padding: 0;
+              "
+            >
+              ↺ Shuffle
+            </button>
+          </div>
+          <div id="rec-wrap">
+            <div
+              class="home-rec-hero skeleton-cell"
+              style="min-height: 340px"
+            ></div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <div id="toast-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+      document.getElementById("nav-ph").innerHTML = VApp.navHTML("home");
+      VCloak.initCloak();
+      VApp.initPanic();
+      VApp.initParticles();
+      VApp.initNavChat();
+      VApp.initNavProfile();
+      VApp.initVersionCheck();
+      const dtEl = document.getElementById("nav-datetime");
+      if (dtEl) VApp.startDatetime(dtEl);
+      let allGames = [];
+      window.addEventListener("message", (ev) => {
+        let data = null;
+        try {
+          data = typeof ev.data === "string" ? JSON.parse(ev.data) : ev.data;
+        } catch {
+          return;
+        }
+        if (!data) return;
+        const ct = data.currentTime ?? data.current_time ?? null,
+          dur = data.duration ?? null;
+        if (ct !== null && dur && dur > 0) {
+          const id = document.body.dataset.activeMediaId,
+            t = document.body.dataset.activeMediaType;
+          if (id && t) VStorage.setMediaProgress(id, t, ct, dur);
+        }
+      });
+      document.addEventListener("vispora:media-hist-changed", () =>
+        renderJumpBackIn(),
+      );
+      document.addEventListener("vispora:game-history-changed", () =>
+        renderJumpBackIn(),
+      );
+      function renderJumpBackIn() {
+        const mediaHist = VStorage.getMediaHistory().slice(0, 8);
+        const gameHist = VStorage.getHistory().slice(0, 4);
+        const combined = [
+          ...mediaHist.map((h) => ({
+            ...h,
+            _kind: "media",
+            _ts: h.lastPlayed || 0,
+          })),
+          ...gameHist.map((h) => ({
+            ...h,
+            _kind: "game",
+            _ts: h.lastPlayed || 0,
+          })),
+        ]
+          .sort((a, b) => b._ts - a._ts)
+          .slice(0, 8);
+        const section = document.getElementById("jump-section"),
+          row = document.getElementById("jump-row");
+        if (!combined.length) {
+          section.style.display = "none";
+          return;
+        }
+        section.style.display = "";
+        row.innerHTML = combined
+          .map((item) => {
+            if (item._kind === "media")
+              return VMedia.makeContinueWatchingCard(item);
+            const g = allGames.find((x) => x.id === item.id) || {
+              id: item.id,
+              name: item.name,
+              cover: item.cover,
+            };
+            return VApp.makeContinuePlayingCard(g);
+          })
+          .join("");
+        VMedia.initMediaStars(row);
+      }
+      let _recPool = null,
+        _usedRecIds = new Set();
+      async function fetchRecPool() {
+        if (_recPool) return _recPool;
+        const res = await Promise.allSettled([
+          VMedia.tmdbFetch("/movie/popular", { page: 1 }),
+          VMedia.tmdbFetch("/tv/popular", { page: 1 }),
+          VMedia.getPopularAnime(1),
+        ]);
+        _recPool = [];
+        if (res[0].status === "fulfilled")
+          (res[0].value.results || [])
+            .filter((m) => m.backdrop_path && m.overview)
+            .forEach((m) =>
+              _recPool.push({
+                type: "movie",
+                id: m.id,
+                title: m.title || "",
+                year: (m.release_date || "").slice(0, 4),
+                score: m.vote_average ? Number(m.vote_average).toFixed(1) : "",
+                backdrop: `https://image.tmdb.org/t/p/w1280${m.backdrop_path}`,
+                poster: `https://image.tmdb.org/t/p/w342${m.poster_path}`,
+                overview: m.overview || "",
+                href: `media.html?type=movie&id=${m.id}`,
+              }),
+            );
+        if (res[1].status === "fulfilled")
+          (res[1].value.results || [])
+            .filter((s) => s.backdrop_path && s.overview)
+            .forEach((s) =>
+              _recPool.push({
+                type: "tv",
+                id: s.id,
+                title: s.name || "",
+                year: (s.first_air_date || "").slice(0, 4),
+                score: s.vote_average ? Number(s.vote_average).toFixed(1) : "",
+                backdrop: `https://image.tmdb.org/t/p/w1280${s.backdrop_path}`,
+                poster: `https://image.tmdb.org/t/p/w342${s.poster_path}`,
+                overview: s.overview || "",
+                href: `media.html?type=tv&id=${s.id}`,
+              }),
+            );
+        if (res[2].status === "fulfilled")
+          (res[2].value.media || [])
+            .filter(
+              (a) =>
+                (a.bannerImage || a.coverImage?.extraLarge) && a.description,
+            )
+            .forEach((a) =>
+              _recPool.push({
+                type: "anime",
+                id: a.kitsuId,
+                title: VMedia.animeTitle(a),
+                year: String(a.seasonYear || ""),
+                score: a.averageScore ? (a.averageScore / 10).toFixed(1) : "",
+                backdrop: a.bannerImage || a.coverImage?.extraLarge || "",
+                poster: a.coverImage?.large || "",
+                overview: (a.description || "").replace(/<[^>]*>/g, ""),
+                href: `media.html?type=anime&id=${a.id}${
+                  a.kitsuId ? `&kid=${a.kitsuId}` : ""
+                }`,
+              }),
+            );
+        return _recPool;
+      }
+      async function renderRecommendation() {
+        const wrap = document.getElementById("rec-wrap");
+        try {
+          const pool = await fetchRecPool();
+          if (!pool.length) {
+            wrap.innerHTML = "";
+            return;
+          }
+          let avail = pool.filter((x) => !_usedRecIds.has(x.id));
+          if (!avail.length) {
+            _usedRecIds.clear();
+            avail = pool;
+          }
+          const item = avail[Math.floor(Math.random() * avail.length)];
+          _usedRecIds.add(item.id);
+          const typeLabel =
+            item.type === "movie"
+              ? "Movie"
+              : item.type === "tv"
+              ? "TV Show"
+              : "Anime";
+          wrap.innerHTML = `<div class="home-rec-hero">
+      <img class="home-rec-bg" src="${VApp.esc(item.backdrop)}" alt="${VApp.esc(
+            item.title,
+          )}">
+      <div class="home-rec-gradient"></div>
+      <div class="home-rec-content">
+        <div class="home-rec-badge">${typeLabel}</div>
+        <div class="home-rec-title">${VApp.esc(item.title)}</div>
+        <div class="home-rec-meta">
+          ${item.year ? `<span>${VApp.esc(item.year)}</span>` : ""}
+          ${
+            item.score
+              ? `<span class="home-rec-score">★ ${VApp.esc(item.score)}</span>`
+              : ""
+          }
+        </div>
+        <p class="home-rec-overview">${VApp.esc(item.overview)}</p>
+        <div class="home-rec-actions">
+          <a href="${VApp.esc(
+            item.href,
+          )}" class="home-rec-btn home-rec-btn-watch">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="5 3 19 12 5 21 5 3"/></svg> Watch Now
+          </a>
+        </div>
+      </div>
+      ${
+        item.poster
+          ? `<div class="home-rec-poster-wrap"><img class="home-rec-poster" src="${VApp.esc(
+              item.poster,
+            )}" alt="${VApp.esc(item.title)}" loading="lazy"></div>`
+          : ""
+      }
+    </div>`;
+          wrap
+            .querySelector(".rec-info-btn")
+            ?.addEventListener("click", (e) => {
+              e.preventDefault();
+              VMedia.showInfoModal(
+                Number(e.currentTarget.dataset.id),
+                e.currentTarget.dataset.type,
+              );
+            });
+        } catch (e) {
+          console.error(e);
+          wrap.innerHTML = "";
+        }
+      }
+      document.getElementById("rec-refresh").addEventListener("click", () => {
+        document.getElementById("rec-wrap").innerHTML =
+          '<div class="home-rec-hero skeleton-cell" style="min-height:340px"></div>';
+        renderRecommendation();
+      });
+      function featCellGame(imgSrc, href, badge, title, sub) {
+        const el = document.getElementById("feat-game");
+        el.classList.remove("skeleton-cell");
+        el.innerHTML = `<a href="${VApp.esc(
+          href,
+        )}" style="position:absolute;inset:0;display:block;text-decoration:none">
+    <img class="feat-bg" src="${VApp.esc(imgSrc)}" alt="${VApp.esc(
+          title,
+        )}" onerror="this.style.display='none'">
+    <div class="feat-gradient"></div>
+    <div class="feat-content">
+      <div class="feat-badge">${badge}</div>
+      <div class="feat-title">${VApp.esc(title)}</div>
+      ${sub ? `<div class="feat-sub">${VApp.esc(sub)}</div>` : ""}
+      <div class="feat-btn-row">
+        <div class="feat-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Play Now
+        </div>
+      </div>
+    </div>
+  </a>`;
+      }
+      let _featMediaItems = [],
+        _featMediaIdx = 0,
+        _featMediaTimer = null;
+      function featCellMedia(items) {
+        if (!items.length) return;
+        _featMediaItems = items;
+        _featMediaIdx = 0;
+        const el = document.getElementById("feat-media");
+        el.classList.remove("skeleton-cell");
+        renderFeatMediaSlide(el);
+        clearInterval(_featMediaTimer);
+        _featMediaTimer = setInterval(() => {
+          _featMediaIdx = (_featMediaIdx + 1) % _featMediaItems.length;
+          renderFeatMediaSlide(el);
+        }, 6000);
+      }
+      function renderFeatMediaSlide(el) {
+        const item = _featMediaItems[_featMediaIdx];
+        if (!item) return;
+        const labels = { movie: "Movie", tv: "TV", anime: "Anime", live: "Live" };
+        const tabsHtml = _featMediaItems
+          .map((it, i) => `<button class="feat-media-tab${i === _featMediaIdx ? " active" : ""}" data-idx="${i}" type="button">${labels[it.type] || it.type}</button>`)
+          .join("");
+        el.innerHTML = `<div class="feat-media-tabs">${tabsHtml}</div>
+    <a href="${VApp.esc(item.href)}" style="position:absolute;inset:0;display:block;text-decoration:none">
+      ${item.bg ? `<img class="feat-bg" src="${VApp.esc(item.bg)}" alt="${VApp.esc(item.title)}" onerror="this.style.display='none'">` : ""}
+      <div class="feat-gradient"></div>
+      <div class="feat-content"><div class="feat-badge">${VApp.esc(item.badge)}</div><div class="feat-title">${VApp.esc(item.title)}</div>${item.sub ? `<div class="feat-sub">${VApp.esc(item.sub)}</div>` : ""}<div class="feat-btn-row"><div class="feat-btn"><svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><polygon points="5 3 19 12 5 21 5 3"/></svg> ${VApp.esc(item.btnLabel)}</div></div></div>
+    </a>`;
+        el.querySelectorAll(".feat-media-tab").forEach((btn) =>
+          btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            _featMediaIdx = parseInt(btn.dataset.idx);
+            clearInterval(_featMediaTimer);
+            _featMediaTimer = setInterval(() => {
+              _featMediaIdx = (_featMediaIdx + 1) % _featMediaItems.length;
+              renderFeatMediaSlide(el);
+            }, 6000);
+            renderFeatMediaSlide(el);
+          }),
+        );
+      }
+      function renderFeaturedGame() {
+        if (!allGames.length) return;
+        const pool = allGames.filter((g) => g.featured).length
+          ? allGames.filter((g) => g.featured)
+          : allGames.slice(0, 50);
+        const g = pool[Math.floor(Math.random() * pool.length)];
+        featCellGame(
+          g.cover || "",
+          `player.html?id=${g.id}`,
+          "Featured Game",
+          g.name,
+          g.author ? `by ${g.author}` : "",
+        );
+      }
+      const LIVE_BASES = ["https://streamed.pk", "https://streamed.st"];
+      async function fetchRandomLive() {
+        let found = null;
+        for (const base of LIVE_BASES) {
+          try {
+            const ctrl = new AbortController();
+            const t = setTimeout(() => ctrl.abort(), 8000);
+            const res = await fetch(base + "/api/matches/live", { signal: ctrl.signal });
+            clearTimeout(t);
+            if (!res.ok) throw new Error("HTTP " + res.status);
+            const data = await res.json();
+            if (Array.isArray(data)) { found = { base, data }; break; }
+          } catch {}
+        }
+        if (!found) return null;
+        const now = Date.now();
+        const valid = found.data.filter((m) => m && m.id && m.title);
+        const onNow = valid.filter((m) => m.date <= now && now - m.date < 4 * 3600e3);
+        const pool = onNow.length ? onNow : valid;
+        if (!pool.length) return null;
+        const popular = pool.filter((m) => m.popular);
+        const src = popular.length ? popular : pool;
+        const m = src[Math.floor(Math.random() * src.length)];
+        let bg = "";
+        if (m.poster)
+          bg = /^https?:\/\//.test(m.poster)
+            ? m.poster
+            : found.base + (m.poster.startsWith("/") ? m.poster : "/api/images/proxy/" + m.poster + ".webp");
+        const cat = m.category ? m.category.charAt(0).toUpperCase() + m.category.slice(1) : "";
+        return {
+          type: "live",
+          href: `live.html?watch=${encodeURIComponent(m.id)}`,
+          bg,
+          badge: "Live Now" + (cat ? ` · ${cat}` : ""),
+          title: m.title,
+          sub: m.date ? "Started " + new Date(m.date).toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" }) : "",
+          btnLabel: "Watch Live",
+        };
+      }
+      async function renderFeaturedMedia() {
+        const items = [];
+        const randPage = () => Math.floor(Math.random() * 3) + 1;
+        try {
+          const d = await VMedia.tmdbFetch("/movie/now_playing", {
+            page: randPage(),
+          });
+          const ms = (d.results || []).filter((m) => m.backdrop_path);
+          if (ms.length) {
+            const m = ms.slice(0, 15)[
+              Math.floor(Math.random() * Math.min(15, ms.length))
+            ];
+            items.push({
+              type: "movie",
+              href: `media.html?type=movie&id=${m.id}`,
+              bg: `https://image.tmdb.org/t/p/w780${m.backdrop_path}`,
+              badge: `Now Playing${
+                m.vote_average ? ` · ★ ${m.vote_average.toFixed(1)}` : ""
+              }`,
+              title: m.title || "",
+              sub: (m.release_date || "").slice(0, 4),
+              btnLabel: "Watch Now",
+            });
+          }
+        } catch {}
+        try {
+          const d = await VMedia.tmdbFetch("/tv/on_the_air", {
+            page: randPage(),
+          });
+          const ss = (d.results || []).filter((s) => s.backdrop_path);
+          if (ss.length) {
+            const s = ss[Math.floor(Math.random() * Math.min(15, ss.length))];
+            items.push({
+              type: "tv",
+              href: `media.html?type=tv&id=${s.id}`,
+              bg: `https://image.tmdb.org/t/p/w780${s.backdrop_path}`,
+              badge: `On Air${
+                s.vote_average ? ` · ★ ${s.vote_average.toFixed(1)}` : ""
+              }`,
+              title: s.name || "",
+              sub: "",
+              btnLabel: "Watch Now",
+            });
+          }
+        } catch {}
+        try {
+          const animeSortModes = ["airing", "bypopularity", "favorite"];
+          const pickedSort =
+            animeSortModes[Math.floor(Math.random() * animeSortModes.length)];
+          const p = await VMedia.getTopAnime(randPage(), pickedSort);
+          const al = (p.media || []).filter(
+            (a) => a.bannerImage || a.coverImage?.extraLarge,
+          );
+          if (al.length) {
+            const a = al[Math.floor(Math.random() * al.length)];
+            const badgeLabel =
+              pickedSort === "airing"
+                ? "Airing"
+                : pickedSort === "favorite"
+                ? "Fan Favorite"
+                : "Anime";
+            items.push({
+              type: "anime",
+              href: `media.html?type=anime&id=${a.id}${
+                a.kitsuId ? `&kid=${a.kitsuId}` : ""
+              }`,
+              bg: a.bannerImage || a.coverImage?.extraLarge || "",
+              badge: `${badgeLabel}${
+                a.averageScore ? ` · ★ ${(a.averageScore / 10).toFixed(1)}` : ""
+              }`,
+              title: VMedia.animeTitle(a),
+              sub: "",
+              btnLabel: "Watch Now",
+            });
+          }
+        } catch {}
+        try {
+          const live = await fetchRandomLive();
+          if (live) items.push(live);
+        } catch {}
+        if (items.length) featCellMedia(items);
+        else
+          document
+            .getElementById("feat-media")
+            .classList.remove("skeleton-cell");
+      }
+      async function init() {
+        allGames = await VApp.loadGames().catch(() => []);
+        renderJumpBackIn();
+        renderFeaturedGame();
+        renderFeaturedMedia();
+        renderRecommendation();
+      }
+      init();
+      (function initWelcome() {
+        const screen = document.getElementById("welcome-screen");
+        let seen = false;
+        try {
+          seen = sessionStorage.getItem("vispora_welcomed") === "1";
+        } catch {}
+        if (seen) {
+          screen.remove();
+          return;
+        }
+        const hour = new Date().getHours();
+        const part =
+          hour < 12 ? "morning" : hour < 18 ? "afternoon" : "evening";
+        const GREETINGS = [
+          "Welcome back, {name}, to",
+          "Hey {name}, welcome to",
+          "Good " + part + ", {name}. Welcome to",
+          "Glad you're here, {name}. This is",
+          "Look who's back, {name}! Welcome to",
+          "Good to see you, {name}. Welcome to",
+          "What's up, {name}. Welcome to",
+          "Ayeeee {name}, welcome to",
+          "What's up, {name}? Welcome to",
+          "Had a nice " + part + " so far? Welcome to",
+          "Yo {name}, welcome to",
+          "Alright {name}, welcome to",        
+        ];
+        const pick = (list) => list[Math.floor(Math.random() * list.length)];
+        function userName() {
+          const profile = VStorage.getUserProfile();
+          const user = window.VCurrentUser;
+          return (
+            profile.displayName ||
+            (user &&
+              (user.displayName ||
+                (user.email || "").replace("@vispora.app", ""))) ||
+            "friend"
+          );
+        }
+        function show() {
+          document.getElementById("welcome-greeting").textContent = pick(
+            GREETINGS,
+          ).replace("{name}", userName());
+          screen.classList.remove("hidden");
+          try {
+            sessionStorage.setItem("vispora_welcomed", "1");
+          } catch {}
+          let closed = false;
+          const timer = setTimeout(close, 3500);
+          function close() {
+            if (closed) return;
+            closed = true;
+            clearTimeout(timer);
+            document.removeEventListener("keydown", close);
+            screen.classList.add("leaving");
+            setTimeout(() => screen.remove(), 500);
+          }
+          screen.addEventListener("click", close);
+          document.addEventListener("keydown", close);
+        }
+        if (window.VCurrentUser) show();
+        else
+          document.addEventListener("vispora:auth-ready", show, { once: true });
+      })();
+      VTutorial.autoStart("home", {
+        ready: () =>
+          document.querySelector(".browse-grid") &&
+          !document.getElementById("welcome-screen"),
+      });
+    </script>
+  </body>
+</html>

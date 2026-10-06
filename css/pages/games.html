@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Games — vispora</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/pages.css" />
+    <link rel="stylesheet" href="../css/chat.css" />
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="../js/firebase-config.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/cloak.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/media.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/chat.js"></script>
+    <script src="../js/tutorial.js"></script>
+  </head>
+
+  <body>
+    <div id="particles-js"></div>
+    <div id="nav-ph"></div>
+    <main class="nf-page">
+      <div class="nf-top-bar" id="nf-top-bar">
+        <div class="nf-search-inner">
+          <div class="nf-search-input-wrap">
+            <span class="nf-search-icon"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" /></svg
+            ></span>
+            <input
+              type="search"
+              class="nf-search-input"
+              id="search-input"
+              placeholder="Search games, genres, authors…"
+              autocomplete="off"
+              spellcheck="false"
+            />
+            <button
+              class="nf-search-clear"
+              id="search-clear"
+              type="button"
+              aria-label="Clear search"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+          </div>
+          <button class="nf-filter-btn" id="filter-btn" type="button">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
+            </svg>
+            <span>Filters</span>
+          </button>
+        </div>
+      </div>
+
+      <section class="nf-games-hero" id="nf-hero">
+        <div class="nf-games-hero-blur" id="hero-blur"></div>
+        <div class="nf-games-hero-gradient"></div>
+        <img class="nf-games-hero-cover" id="hero-cover" src="" alt="" />
+        <div class="nf-games-hero-content">
+          <div class="nf-hero-badge" id="hero-badge">Featured Game</div>
+          <h2
+            class="nf-hero-title"
+            id="hero-title"
+            style="min-height: 2.4rem"
+          ></h2>
+          <div class="nf-hero-meta" id="hero-meta"></div>
+          <div
+            class="nf-hero-btns"
+            style="opacity: 1; transform: translateY(0)"
+          >
+            <a href="#" class="nf-hero-btn nf-hero-btn-watch" id="hero-play">
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="16"
+                height="16"
+              >
+                <polygon points="5 3 19 12 5 21 5 3" />
+              </svg>
+              Play Now
+            </a>
+            <button
+              class="nf-hero-btn nf-hero-btn-info"
+              id="hero-fav"
+              type="button"
+              style="display: flex; align-items: center; gap: 7px"
+            ></button>
+          </div>
+        </div>
+        <div class="nf-hero-dots" id="nf-hero-dots"></div>
+      </section>
+
+      <div class="nf-browse" id="browse-content"></div>
+
+      <div class="nf-search-mode" id="search-mode">
+        <div class="nf-filter-panel" id="filter-panel"></div>
+        <div
+          class="games-count"
+          id="result-count"
+          style="
+            margin-bottom: 16px;
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+          "
+        ></div>
+        <div class="game-grid" id="search-grid"></div>
+      </div>
+    </main>
+    <div id="toast-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+      document.getElementById("nav-ph").innerHTML = VApp.navHTML("games");
+      VCloak.initCloak();
+      VApp.initPanic();
+      VApp.initParticles();
+      VApp.initNavChat();
+      VApp.initNavProfile();
+      VApp.initVersionCheck();
+      const dtEl = document.getElementById("nav-datetime");
+      if (dtEl) VApp.startDatetime(dtEl);
+
+      const topBar = document.getElementById("nf-top-bar"),
+        heroEl = document.getElementById("nf-hero");
+      const browseEl = document.getElementById("browse-content"),
+        searchMode = document.getElementById("search-mode");
+      const searchIn = document.getElementById("search-input"),
+        filterBtn = document.getElementById("filter-btn");
+      const filterPanel = document.getElementById("filter-panel"),
+        searchGrid = document.getElementById("search-grid");
+      const countEl = document.getElementById("result-count");
+
+      let allGames = [],
+        heroItems = [],
+        heroIdx = 0,
+        heroTimer = null;
+      let isSearchMode = false,
+        srchState = { query: "", category: "all", genre: "all" },
+        srchTimer = null;
+      let allGenres = [];
+
+      function isWebGame(g) {
+        const sp = g.special || [];
+        return sp.includes("web") || sp.length === 0;
+      }
+      function makeNFGameCard(g) {
+        const isFav = VStorage.isFavorite(g.id);
+        const pt = VStorage.formatTime(VStorage.getPlaytime(g.id));
+        const meta = [g.genre || "", g.author ? `by ${g.author}` : ""]
+          .filter(Boolean)
+          .join(" · ");
+        return `<div class="nf-card nf-game-card"
+    data-id="${g.id}" data-type="game"
+    data-title="${VApp.esc(g.name || "")}"
+    data-backdrop="${VApp.esc(g.cover || "")}"
+    data-poster="${VApp.esc(g.cover || "")}"
+    data-overview="${VApp.esc(g.description || g.genre || "")}"
+    data-meta="${VApp.esc(meta)}">
+    <a href="player.html?id=${
+      g.id
+    }" class="nf-card-link" tabindex="0" aria-label="${VApp.esc(
+          g.name || "",
+        )}" draggable="false">
+      ${
+        g.cover
+          ? `<img class="nf-card-poster" src="${VApp.esc(
+              g.cover,
+            )}" alt="${VApp.esc(
+              g.name || "",
+            )}" loading="lazy" decoding="async">`
+          : `<div class="nf-card-noposter"></div>`
+      }
+      <div class="nf-card-overlay">
+        <div class="nf-card-title-text">${VApp.esc(g.name || "")}</div>
+        <div class="nf-card-meta-text">${
+          pt ? VApp.esc(pt) : g.genre ? VApp.esc(g.genre) : ""
+        }</div>
+      </div>
+    </a>
+    <button class="nf-card-star${isFav ? " favorited" : ""}" data-id="${
+          g.id
+        }" data-media-type="game"
+      aria-label="${isFav ? "In My List" : "Add to My List"}" type="button">
+      ${isFav ? VApp.IC.starFilled : VApp.IC.star}
+    </button>
+  </div>`;
+      }
+
+      function initHero(games) {
+        const pool = [
+          ...games.filter((g) => g.featured && g.cover),
+          ...games.filter((g) => !g.featured && g.cover),
+        ];
+        if (!pool.length) {
+          heroEl.style.display = "none";
+          return;
+        }
+        heroItems = pool.sort(() => Math.random() - 0.5).slice(0, 5);
+        renderHeroSlide(0);
+        const dotsEl = document.getElementById("nf-hero-dots");
+        dotsEl.innerHTML = heroItems
+          .map(
+            (_, i) =>
+              `<button class="nf-hero-dot${
+                i === 0 ? " active" : ""
+              }" data-idx="${i}"></button>`,
+          )
+          .join("");
+        dotsEl.addEventListener("click", (e) => {
+          const d = e.target.closest(".nf-hero-dot");
+          if (d) {
+            goHero(Number(d.dataset.idx));
+            resetTimer();
+          }
+        });
+        startTimer();
+      }
+      function renderHeroSlide(idx) {
+        const g = heroItems[idx];
+        if (!g) return;
+        document.getElementById(
+          "hero-blur",
+        ).style.backgroundImage = `url('${VApp.esc(g.cover || "")}')`;
+        const c = document.getElementById("hero-cover");
+        c.src = g.cover || "";
+        c.alt = g.name || "";
+        document.getElementById("hero-title").textContent = g.name || "";
+        document.getElementById("hero-meta").textContent = [
+          g.genre || "",
+          g.author ? `by ${g.author}` : "",
+        ]
+          .filter(Boolean)
+          .join(" · ");
+        document.getElementById("hero-play").href = `player.html?id=${g.id}`;
+        const favBtn = document.getElementById("hero-fav");
+        const setFav = () => {
+          const f = VStorage.isFavorite(g.id);
+          favBtn.innerHTML = `${f ? VApp.IC.starFilled : VApp.IC.star} ${
+            f ? "In My List" : "My List"
+          }`;
+        };
+        setFav();
+        favBtn.onclick = () => {
+          VStorage.toggleFavorite(g.id);
+          setFav();
+          VApp.showToast(
+            VStorage.isFavorite(g.id)
+              ? "Added to My List"
+              : "Removed from My List",
+          );
+        };
+        document
+          .querySelectorAll(".nf-hero-dot")
+          .forEach((el, i) => el.classList.toggle("active", i === idx));
+      }
+      function goHero(idx) {
+        heroIdx = idx;
+        renderHeroSlide(idx);
+      }
+      function startTimer() {
+        heroTimer = setInterval(
+          () => goHero((heroIdx + 1) % heroItems.length),
+          7000,
+        );
+      }
+      function resetTimer() {
+        clearInterval(heroTimer);
+        startTimer();
+      }
+      heroEl.addEventListener("mouseenter", () => clearInterval(heroTimer));
+      heroEl.addEventListener("mouseleave", () => {
+        if (heroItems.length > 1) startTimer();
+      });
+
+      function buildRows(games) {
+        const shuffle = (a) => [...a].sort(() => Math.random() - 0.5);
+        const bySpecial = (s) =>
+          shuffle(games.filter((g) => (g.special || []).includes(s)));
+        const byGenre = (gn) =>
+          shuffle(games.filter((g) => (g.genres || []).includes(gn)));
+        const counts = {};
+        games.forEach((g) =>
+          (g.genres || []).forEach((x) => (counts[x] = (counts[x] || 0) + 1)),
+        );
+        const topGenres = Object.keys(counts)
+          .filter((x) => /^[a-z]/i.test(x))
+          .sort((a, b) => counts[b] - counts[a])
+          .slice(0, 6);
+        const favGames = VStorage.getFavorites()
+          .map((id) => allGames.find((g) => g.id === id))
+          .filter(Boolean);
+        const histGames = VStorage.getHistory()
+          .slice(0, 12)
+          .map((h) => allGames.find((g) => g.id === h.id))
+          .filter(Boolean);
+
+        const rows = [
+          { label: "Popular Now", items: shuffle(games).slice(0, 20) },
+          favGames.length ? { label: "My List", items: favGames } : null,
+          histGames.length
+            ? { label: "Recently Played", items: histGames }
+            : null,
+          { label: "Ports", items: bySpecial("port").slice(0, 20) },
+          { label: "Flash Games", items: bySpecial("flash").slice(0, 20) },
+          { label: "Emulator", items: bySpecial("emulator").slice(0, 20) },
+          {
+            label: "Friday Night Funkin'",
+            items: bySpecial("fnf").slice(0, 20),
+          },
+          ...topGenres.map((gn) => ({
+            label: `${gn.charAt(0).toUpperCase() + gn.slice(1)}`,
+            items: byGenre(gn).slice(0, 20),
+          })),
+        ].filter((r) => r && r.items.length > 0);
+
+        browseEl.innerHTML = rows
+          .map(
+            (r, i) => `
+    <section class="nf-row-section">
+      <h2 class="nf-row-label">${r.label}</h2>
+      <div class="nf-row-scroll-outer"><div class="nf-row" id="gr-${i}"></div></div>
+    </section>`,
+          )
+          .join("");
+
+        rows.forEach((r, i) => {
+          const el = document.getElementById(`gr-${i}`);
+          el.innerHTML = r.items.map((g) => makeNFGameCard(g)).join("");
+          VMedia.initNFRowCards(el);
+        });
+      }
+
+      function enterSearchMode() {
+        if (isSearchMode) return;
+        isSearchMode = true;
+        heroEl.style.display = "none";
+        browseEl.style.display = "none";
+        searchMode.classList.add("active");
+        topBar.classList.add("search-focused");
+        filterBtn.classList.add("active");
+        renderFilterPanel();
+        runFilter(); // ← show all games immediately
+      }
+      function exitSearchMode() {
+        isSearchMode = false;
+        heroEl.style.display = "";
+        browseEl.style.display = "";
+        searchMode.classList.remove("active");
+        topBar.classList.remove("search-focused");
+        filterBtn.classList.remove("active");
+        searchIn.value = "";
+        srchState.query = "";
+        countEl.innerHTML = "";
+        searchGrid.innerHTML = "";
+      }
+
+      function renderFilterPanel() {
+        filterPanel.innerHTML = `
+    <div class="nf-filter-group">
+      <div class="nf-filter-group-label">Type</div>
+      <div class="nf-filter-chips" id="chips-cat">
+        ${[
+          { v: "all", l: "All" },
+          { v: "web", l: "Web" },
+          { v: "ports", l: "Ports" },
+          { v: "flash", l: "Flash" },
+          { v: "emulator", l: "Emulator" },
+          { v: "fnf", l: "FNF" },
+        ]
+          .map(
+            (c) =>
+              `<button class="nf-filter-chip${
+                srchState.category === c.v ? " active" : ""
+              }" data-filter-cat="${c.v}">${c.l}</button>`,
+          )
+          .join("")}
+      </div>
+    </div>
+    <div class="nf-filter-group">
+      <div class="nf-filter-group-label">Genre</div>
+      <div class="nf-filter-chips" id="chips-genre">
+        <button class="nf-filter-chip${
+          srchState.genre === "all" ? " active" : ""
+        }" data-filter-genre="all">All</button>
+        ${allGenres
+          .map(
+            (gn) =>
+              `<button class="nf-filter-chip${
+                srchState.genre === gn ? " active" : ""
+              }" data-filter-genre="${VApp.esc(gn)}">${VApp.esc(
+                gn.charAt(0).toUpperCase() + gn.slice(1),
+              )}</button>`,
+          )
+          .join("")}
+      </div>
+    </div>`;
+        filterPanel
+          .querySelector("#chips-cat")
+          .addEventListener("click", (e) => {
+            const b = e.target.closest("[data-filter-cat]");
+            if (!b) return;
+            srchState.category = b.dataset.filterCat;
+            filterPanel
+              .querySelectorAll("[data-filter-cat]")
+              .forEach((x) => x.classList.toggle("active", x === b));
+            runFilter();
+          });
+        filterPanel
+          .querySelector("#chips-genre")
+          .addEventListener("click", (e) => {
+            const b = e.target.closest("[data-filter-genre]");
+            if (!b) return;
+            srchState.genre = b.dataset.filterGenre;
+            filterPanel
+              .querySelectorAll("[data-filter-genre]")
+              .forEach((x) => x.classList.toggle("active", x === b));
+            runFilter();
+          });
+      }
+
+      function runFilter() {
+        VSearch.search(srchState.query);
+        VSearch.setCategory(srchState.category);
+        VSearch.setGenre(srchState.genre);
+        const results = VSearch.getFiltered().sort((a, b) =>
+          a.name.localeCompare(b.name),
+        );
+        const filterLabel = srchState.query
+          ? ` for "<b>${VApp.esc(srchState.query)}</b>"`
+          : "";
+        countEl.innerHTML = `Showing <span style="color:var(--accent);font-weight:700">${results.length.toLocaleString()}</span> game${
+          results.length !== 1 ? "s" : ""
+        }${filterLabel}`;
+        if (!results.length) {
+          searchGrid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:80px 20px">
+      <div style="font-size:2.5rem;margin-bottom:12px"></div>
+      <div class="no-results-title">No games found</div>
+      <p style="color:var(--text-secondary);margin-top:6px;font-size:.875rem">Try adjusting your filters</p>
+    </div>`;
+          return;
+        }
+        searchGrid.innerHTML = results
+          .map(
+            (g, i) =>
+              `<div style="animation-delay:${Math.min(
+                i * 15,
+                400,
+              )}ms;animation:cardIn .3s ease both">${VApp.makeCard(g)}</div>`,
+          )
+          .join("");
+        VApp.initStars(searchGrid);
+      }
+
+      const searchClear = document.getElementById("search-clear");
+      function updateSearchClear() {
+        searchClear.classList.toggle("visible", !!searchIn.value);
+      }
+      searchClear.addEventListener("click", () => {
+        searchIn.value = "";
+        updateSearchClear();
+        searchIn.dispatchEvent(new Event("input"));
+        searchIn.focus();
+      });
+      searchIn.addEventListener("focus", () => {
+        if (!isSearchMode) enterSearchMode();
+      });
+      searchIn.addEventListener("input", () => {
+        updateSearchClear();
+        clearTimeout(srchTimer);
+        srchTimer = setTimeout(() => {
+          srchState.query = searchIn.value.trim();
+          if (!isSearchMode) enterSearchMode();
+          runFilter();
+        }, 160);
+      });
+      filterBtn.addEventListener("click", () => {
+        if (isSearchMode) exitSearchMode();
+        else enterSearchMode();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && isSearchMode && !searchIn.value)
+          exitSearchMode();
+        if ((e.ctrlKey || e.metaKey) && e.key === "k") {
+          e.preventDefault();
+          searchIn.focus();
+        }
+      });
+
+      async function init() {
+        allGames = await VApp.loadGames().catch(() => []);
+        VSearch.setGames(allGames);
+        allGenres = VSearch.getAllGenres(allGames);
+        const mainGames = allGames.filter((g) => !isWebGame(g));
+        initHero(mainGames);
+        buildRows(mainGames);
+      }
+
+      function showGameInfoModal(gameId) {
+        const g = allGames.find((x) => x.id == gameId);
+        if (!g) return;
+        let overlay = document.getElementById("game-info-overlay");
+        if (overlay) overlay.remove();
+        overlay = document.createElement("div");
+        overlay.id = "game-info-overlay";
+        overlay.className = "nf-info-overlay";
+        overlay.style.display = "flex";
+        const isFav = VStorage.isFavorite(g.id);
+        overlay.innerHTML = `
+    <div class="nf-info-modal">
+      <button class="nf-info-close" id="gi-close" aria-label="Close">✕</button>
+      ${
+        g.cover
+          ? `<img class="nf-info-backdrop" src="${VApp.esc(
+              g.cover,
+            )}" alt="${VApp.esc(
+              g.name || "",
+            )}" style="aspect-ratio:16/9;object-position:center">`
+          : `<div class="nf-info-backdrop-fallback"></div>`
+      }
+      <div class="nf-info-body">
+        <div class="nf-info-title">${VApp.esc(g.name || "")}</div>
+        <div class="nf-info-chips">
+          ${
+            g.genre
+              ? `<span class="nf-info-chip">${VApp.esc(g.genre)}</span>`
+              : ""
+          }
+          ${
+            g.author
+              ? `<span class="nf-info-chip">${VApp.esc(g.author)}</span>`
+              : ""
+          }
+          ${
+            g.type
+              ? `<span class="nf-info-chip">${VApp.esc(g.type)}</span>`
+              : ""
+          }
+        </div>
+        ${
+          g.description
+            ? `<p class="nf-info-overview">${VApp.esc(g.description)}</p>`
+            : ""
+        }
+        <div class="nf-info-actions">
+          <a href="player.html?id=${
+            g.id
+          }" class="btn btn-primary" style="display:inline-flex;align-items:center;gap:8px;">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Play Now
+          </a>
+          <button class="btn btn-secondary nf-modal-fav-btn${
+            isFav ? " favorited" : ""
+          }"
+            data-gid="${g.id}" type="button">
+            ${isFav ? VApp.IC.starFilled : VApp.IC.star}
+            <span>${isFav ? "In My List" : "Add to My List"}</span>
+          </button>
+        </div>
+      </div>
+    </div>`;
+        document.getElementById("gi-close").onclick = () => overlay.remove();
+        overlay.addEventListener("click", (e) => {
+          if (e.target === overlay) overlay.remove();
+        });
+        document.addEventListener("keydown", function esc(e) {
+          if (e.key === "Escape") {
+            overlay.remove();
+            document.removeEventListener("keydown", esc);
+          }
+        });
+        overlay
+          .querySelector(".nf-modal-fav-btn")
+          ?.addEventListener("click", function () {
+            const gid = Number(this.dataset.gid);
+            const added = VStorage.toggleFavorite(gid);
+            this.classList.toggle("favorited", added);
+            this.innerHTML = `${
+              added ? VApp.IC.starFilled : VApp.IC.star
+            }<span>${added ? "In My List" : "Add to My List"}</span>`;
+            VApp.showToast(added ? "Added to My List" : "Removed from My List");
+          });
+        document.body.appendChild(overlay);
+      }
+      init().then(() =>
+        VTutorial.autoStart("games", {
+          ready: () => document.querySelector("#browse-content .nf-card"),
+        }),
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>AI Chat — vispora</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/pages.css" />
+    <link rel="stylesheet" href="../css/chat.css" />
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="../js/firebase-config.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/cloak.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/ai-source.js"></script>
+    <script src="../js/chat.js"></script>
+    <script src="../js/tutorial.js"></script>
+  </head>
+
+  <body>
+    <div id="particles-js"></div>
+    <div id="nav-ph"></div>
+    <main class="ai-page">
+      <div class="ai-layout">
+        <aside class="ai-sidebar" id="ai-sidebar">
+          <div class="ai-sidebar-inner">
+            <div class="ai-sidebar-section">
+              <div class="ai-sidebar-title">Model</div>
+              <select class="ai-select" id="ai-model"></select>
+            </div>
+            <div class="ai-sidebar-section">
+              <div class="ai-sidebar-title">Temperature</div>
+              <div class="ai-ctrl-label">
+                Creativity <span class="val" id="temp-display">0.70</span>
+              </div>
+              <input
+                type="range"
+                class="range-slider"
+                id="ai-temp"
+                min="0"
+                max="2"
+                step="0.05"
+                value="0.7"
+              />
+              <div class="ai-ctrl-sub">
+                0 = precise &nbsp;·&nbsp; 2 = creative
+              </div>
+            </div>
+            <div class="ai-sidebar-section">
+              <div class="ai-sidebar-title">Effort</div>
+              <div class="ai-ctrl-label">
+                Reasoning: <span class="val" id="effort-display">low</span>
+              </div>
+              <input
+                type="range"
+                class="range-slider"
+                id="ai-effort"
+                min="1"
+                max="3"
+                step="1"
+                value="1"
+              />
+              <div class="ai-ctrl-sub">
+                Higher reasoning lengthens responses and can deal with more complex problems. Takes more credits
+              </div>
+            </div>
+            <div class="ai-sidebar-section">
+              <div class="ai-sidebar-title">Mode &amp; Tools</div>
+              <select class="ai-select" id="ai-mode">
+                <option value="">General Assistant</option>
+                <option value="code">Code Helper</option>
+                <option value="debug">Debugger</option>
+                <option value="creative">Creative Writing</option>
+                <option value="analysis">Data Analysis</option>
+                <option value="research">Research</option>
+                <option value="math">Math &amp; Logic</option>
+                <option value="tutor">Tutor</option>
+              </select>
+            </div>
+            <div class="ai-sidebar-section">
+              <div class="ai-sidebar-title">System Prompt</div>
+              <textarea
+                id="ai-system"
+                class="ai-system-prompt"
+                placeholder="Custom instructions for this session…"
+                style="resize: none; min-height: 70px"
+              ></textarea>
+            </div>
+            <div class="ai-sidebar-section">
+              <div
+                class="ai-sidebar-title"
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <span>Chat History</span>
+                <button
+                  id="ai-save-chat"
+                  class="btn btn-secondary"
+                  style="padding: 3px 9px; font-size: 0.7rem; height: auto"
+                  type="button"
+                  title="Save current chat"
+                >
+                  Save
+                </button>
+              </div>
+              <div class="ai-history-list" id="ai-history-list">
+                <div
+                  style="
+                    font-size: 0.72rem;
+                    color: var(--text-secondary);
+                    padding: 6px 0;
+                  "
+                >
+                  No saved chats yet
+                </div>
+              </div>
+            </div>
+            <div class="ai-sidebar-section" style="flex: 1">
+              <div class="ai-sidebar-title">Favorited Responses</div>
+              <div class="ai-fav-list" id="ai-fav-list">
+                <div
+                  style="
+                    font-size: 0.72rem;
+                    color: var(--text-secondary);
+                    padding: 6px 0;
+                  "
+                >
+                  No favorites yet
+                </div>
+              </div>
+            </div>
+            <div class="ai-sidebar-actions">
+              <button
+                id="ai-clear"
+                class="btn btn-secondary"
+                style="width: 100%; font-size: 0.82rem"
+              >
+                Clear Chat
+              </button>
+            </div>
+          </div>
+        </aside>
+        <div class="ai-chat-area">
+          <button class="ai-sidebar-toggle" id="sidebar-toggle">
+            <svg
+              width="13"
+              height="13"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"
+              />
+              <path
+                d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"
+              />
+            </svg>
+            Controls
+          </button>
+          <div class="ai-sidebar-overlay" id="sidebar-overlay"></div>
+          <div class="ai-messages" id="ai-messages">
+            <div class="ai-welcome" id="ai-welcome">
+              <div class="ai-welcome-icon">
+                <svg
+                  width="38"
+                  height="38"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--accent)"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"
+                  />
+                  <path
+                    d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"
+                  />
+                </svg>
+              </div>
+              <h2>AI Chat</h2>
+              <p>
+                Ask anything. Pick a mode in the sidebar, or just start typing.
+              </p>
+              <div class="ai-welcome-hints" id="hint-container">
+                <button
+                  class="ai-hint-chip"
+                  data-hint="Explain quantum computing in simple terms"
+                >
+                  Quantum computing
+                </button>
+                <button
+                  class="ai-hint-chip"
+                  data-hint="Write a Python function to merge two sorted lists"
+                >
+                  Merge sorted lists
+                </button>
+                <button
+                  class="ai-hint-chip"
+                  data-hint="What are best practices for REST API design?"
+                >
+                  REST API design
+                </button>
+                <button
+                  class="ai-hint-chip"
+                  data-hint="Write a short sci-fi story about time travel"
+                >
+                  Sci-fi story
+                </button>
+                <button
+                  class="ai-hint-chip"
+                  data-hint="Explain how neural networks learn"
+                >
+                  Neural networks
+                </button>
+                <button
+                  class="ai-hint-chip"
+                  data-hint="What are some tips for better sleep?"
+                >
+                  Sleep tips
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="ai-input-area">
+            <div class="ai-attach-strip" id="ai-attach-strip"></div>
+            <div class="ai-input-wrap" style="position: relative">
+              <textarea
+                class="ai-textarea"
+                id="ai-input"
+                placeholder="Send a message…"
+                rows="1"
+              ></textarea>
+              <button
+                class="ai-mic-btn"
+                id="ai-attach"
+                type="button"
+                title="Attach image (Qwen)"
+                style="display: none"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="2" />
+                  <circle cx="8.5" cy="8.5" r="1.5" />
+                  <polyline points="21 15 16 10 5 21" />
+                </svg>
+              </button>
+              <input
+                type="file"
+                id="ai-file"
+                accept="image/*"
+                multiple
+                style="display: none"
+              />
+              <button class="ai-stop-btn" id="ai-stop" style="display: none">
+                Stop
+              </button>
+              <button class="ai-send-btn" id="ai-send" title="Send (Enter)">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="22" y1="2" x2="11" y2="13" />
+                  <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                </svg>
+              </button>
+            </div>
+            <div class="ai-input-meta">
+              <div class="ai-input-hint" id="ai-input-hint">
+                Enter to send &nbsp;·&nbsp; Shift+Enter for newline
+              </div>
+              <div class="ai-status" id="ai-status"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div id="toast-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+      document.getElementById("nav-ph").innerHTML = VApp.navHTML("ai");
+      VCloak.initCloak();
+      VApp.initPanic();
+      VApp.initParticles();
+      VApp.initNavChat();
+      VApp.initNavProfile();
+      VApp.initVersionCheck();
+      const dtEl = document.getElementById("nav-datetime");
+      if (dtEl) VApp.startDatetime(dtEl);
+      const WORKER_URL = "https://api-proxz.alexdingleberries.workers.dev/";
+      const GROQ_DIRECT = "https://api.groq.com/openai/v1/chat/completions";
+      const MODES = {
+        "": "You are a helpful, knowledgeable, and concise assistant. Use markdown when it aids clarity.",
+        code: "You are an expert programmer. Write clean, efficient, well-commented code. Use fenced code blocks with the correct language tag. Briefly explain your approach.",
+        debug:
+          "You are a debugging expert. Identify the root cause, explain why it occurs, then provide a corrected version.",
+        creative:
+          "You are a creative writing assistant. Be expressive, original, and craft compelling narratives, poetry, or dialogue.",
+        analysis:
+          "You are a data and business analyst. Provide structured, insight-driven analysis using markdown tables and headers.",
+        research:
+          "You are a research assistant. Provide accurate, structured information. Acknowledge uncertainty where it exists.",
+        math: "You are a mathematics and logic expert. Work through problems step-by-step showing all work clearly.",
+        tutor:
+          "You are a patient, encouraging tutor. Explain concepts with analogies scaled to the student's level.",
+      };
+      let messages = [],
+        isStreaming = false,
+        abort = null;
+      let currentChatId = null;
+      const modelSel = document.getElementById("ai-model");
+      let VISION_MODEL = "qwen/qwen3.6-27b";
+      const model = modelSel.value;
+        const temp = parseFloat(document.getElementById("ai-temp").value);
+        const sysOvr = document.getElementById("ai-system").value.trim();
+        const mode = document.getElementById("ai-mode").value;
+      function mapReasoning(value) {
+        effort = value == 1 ? "low" : value == 2 ? "medium" : value == 3 ? "high" : "low";
+        return effort
+      }
+      function renderModels(models) {
+        const prev = modelSel.value;
+        const groups = new Map();
+        models.forEach((m) => {
+          const label = (m.group || "Models").replace(/[\u{1F000}-\u{1FAFF}\u2600-\u27BF\uFE0F]/gu, "").trim() || "Models";
+          if (!groups.has(label)) groups.set(label, []);
+          groups.get(label).push(m);
+        });
+        modelSel.innerHTML = [...groups]
+          .map(
+            ([label, list]) =>
+              `<optgroup label="${VApp.esc(label)}">${list
+                .map(
+                  (m) =>
+                    `<option value="${VApp.esc(m.id)}">${VApp.esc(
+                      m.name,
+                    )}</option>`,
+                )
+                .join("")}</optgroup>`,
+          )
+          .join("");
+        modelSel.value = models.some((m) => m.id === prev)
+          ? prev
+          : (models.find((m) => m.default) || models[0]).id;
+        const vision = models.find((m) => m.vision);
+        if (vision) VISION_MODEL = vision.id;
+      }
+      renderModels(VAI.cachedModels());
+      VAI.getModels().then(renderModels);
+      document.getElementById("ai-temp").addEventListener("input", (e) => {
+        document.getElementById("temp-display").textContent = parseFloat(
+          e.target.value,
+        ).toFixed(2);
+      });
+      document.getElementById("ai-effort").addEventListener("input", (e) => {
+        document.getElementById("effort-display").textContent = mapReasoning(e.target.value)
+      });
+      document.getElementById("ai-mode").addEventListener("change", (e) => {
+        const s = document.getElementById("ai-system");
+        if (!s.dataset.edited) s.value = MODES[e.target.value] || "";
+      });
+      document.getElementById("ai-system").addEventListener("input", (e) => {
+        e.target.dataset.edited = e.target.value ? "1" : "";
+      });
+      document.getElementById("ai-system").value = MODES[""];
+      const ta = document.getElementById("ai-input");
+      function rsz() {
+        ta.style.height = "auto";
+        ta.style.height = Math.min(ta.scrollHeight, 160) + "px";
+      }
+      ta.addEventListener("input", rsz);
+      ta.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" && !e.shiftKey) {
+          e.preventDefault();
+          send();
+        }
+      });
+      function bindHints(root) {
+        root.querySelectorAll(".ai-hint-chip").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            ta.value = btn.dataset.hint;
+            rsz();
+            send();
+          });
+        });
+      }
+      bindHints(document);
+      const WELCOME_HTML = document.getElementById("ai-welcome").outerHTML;
+      document.getElementById("ai-send").addEventListener("click", send);
+      document.getElementById("ai-stop").addEventListener("click", () => {
+        if (abort) abort.abort();
+      });
+      function renderHistorySidebar() {
+        const list = document.getElementById("ai-history-list");
+        const chats = VStorage.getAIChats();
+        if (!chats.length) {
+          list.innerHTML = `<div style="font-size:0.72rem;color:var(--text-secondary);padding:6px 0">No saved chats yet</div>`;
+          return;
+        }
+        list.innerHTML = chats
+          .map((c) => {
+            const date = new Date(c.date).toLocaleDateString("en-US", {
+              month: "short",
+              day: "numeric",
+            });
+            return `<div class="ai-hist-item" data-id="${VApp.esc(c.id)}">
+      <div class="ai-hist-item-info">
+        <div class="ai-hist-item-title">${VApp.esc(c.title)}</div>
+        <div class="ai-hist-item-meta">${date} · ${
+              c.messageCount
+            } msgs · ${VApp.esc(c.model.split("-").slice(0, 2).join(" "))}</div>
+      </div>
+      <button class="ai-hist-item-del" data-id="${VApp.esc(
+        c.id,
+      )}" title="Delete chat" type="button">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>`;
+          })
+          .join("");
+        list.querySelectorAll(".ai-hist-item").forEach((item) => {
+          item.addEventListener("click", (e) => {
+            if (e.target.closest(".ai-hist-item-del")) return;
+            const id = item.dataset.id;
+            loadChat(id);
+          });
+        });
+        list.querySelectorAll(".ai-hist-item-del").forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            VStorage.deleteAIChat(btn.dataset.id);
+            if (currentChatId === btn.dataset.id) currentChatId = null;
+            renderHistorySidebar();
+            VApp.showToast("Chat deleted");
+          });
+        });
+      }
+      function renderFavsSidebar() {
+        const list = document.getElementById("ai-fav-list");
+        const favs = VStorage.getAIFavs();
+        if (!favs.length) {
+          list.innerHTML = `<div style="font-size:0.72rem;color:var(--text-secondary);padding:6px 0">No favorites yet</div>`;
+          return;
+        }
+        list.innerHTML = favs
+          .map(
+            (f) => `
+    <div class="ai-fav-item" data-id="${VApp.esc(f.id)}">
+      <div class="ai-fav-item-text">${VApp.esc(f.content.slice(0, 120))}${
+              f.content.length > 120 ? "…" : ""
+            }</div>
+      <button class="ai-fav-item-del" data-id="${VApp.esc(
+        f.id,
+      )}" title="Remove favorite" type="button">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>`,
+          )
+          .join("");
+        list.querySelectorAll(".ai-fav-item-del").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            VStorage.removeAIFav(btn.dataset.id);
+            renderFavsSidebar();
+            document
+              .querySelectorAll(
+                '.ai-msg-action-btn[data-fav-id="' + btn.dataset.id + '"]',
+              )
+              .forEach((b) => {
+                b.classList.remove("favorited");
+                b.dataset.favId = "";
+                b.title = "Save response";
+                b.querySelector("span").textContent = "Save";
+              });
+            VApp.showToast("Removed from favorites");
+          });
+        });
+      }
+      function loadChat(id) {
+        const chat = VStorage.getAIChatById(id);
+        if (!chat) return;
+        messages = [...chat.messages];
+        currentChatId = id;
+        const w = document.getElementById("ai-messages");
+        document.getElementById("ai-welcome")?.remove();
+        w.innerHTML = "";
+        chat.messages.forEach((m) => appendMsg(m.role, m.content));
+        if ([...modelSel.options].some((o) => o.value === chat.model))
+          modelSel.value = chat.model;
+        setStatus(`Loaded: ${chat.title}`, false);
+        VApp.showToast("Chat loaded");
+        document.getElementById("ai-sidebar").classList.remove("open");
+        document.getElementById("sidebar-overlay").classList.remove("open");
+      }
+      document.getElementById("ai-save-chat").addEventListener("click", () => {
+        if (!messages.length) {
+          VApp.showToast("Nothing to save", "info");
+          return;
+        }
+        const plain = messages.map((m) => ({
+          role: m.role,
+          content:
+            typeof m.content === "string"
+              ? m.content
+              : contentText(m.content) + " [image]",
+        }));
+        const firstUser = plain.find((m) => m.role === "user");
+        const title = firstUser ? firstUser.content.slice(0, 50) : "Chat";
+        const id = VStorage.saveAIChat(title, modelSel.value, plain);
+        currentChatId = id;
+        renderHistorySidebar();
+        VApp.showToast("Chat saved!", "success");
+      });
+      document
+        .getElementById("ai-clear")
+        .addEventListener("click", async () => {
+          if (!messages.length) return;
+          const ok = await VApp.showModal({
+            title: "Clear Chat",
+            message:
+              "Remove all messages from this session? You can save first.",
+            confirmText: "Clear",
+            dangerous: true,
+          });
+          if (!ok) return;
+          messages = [];
+          currentChatId = null;
+          const w = document.getElementById("ai-messages");
+          w.innerHTML = WELCOME_HTML;
+          bindHints(w);
+          document.getElementById("ai-status").textContent = "";
+        });
+      document
+        .getElementById("sidebar-toggle")
+        .addEventListener("click", () => {
+          document.getElementById("ai-sidebar").classList.toggle("open");
+          document.getElementById("sidebar-overlay").classList.toggle("open");
+        });
+      document
+        .getElementById("sidebar-overlay")
+        .addEventListener("click", () => {
+          document.getElementById("ai-sidebar").classList.remove("open");
+          document.getElementById("sidebar-overlay").classList.remove("open");
+        });
+      const attachBtn = document.getElementById("ai-attach");
+      const attachIn = document.getElementById("ai-file");
+      const attachStrip = document.getElementById("ai-attach-strip");
+      const hintEl = document.getElementById("ai-input-hint");
+      let attachments = [];
+      function contentText(c) {
+        return typeof c === "string"
+          ? c
+          : c
+              .filter((p) => p.type === "text")
+              .map((p) => p.text)
+              .join("\n");
+      }
+      function contentImages(c) {
+        return typeof c === "string"
+          ? []
+          : c.filter((p) => p.type === "image_url").map((p) => p.image_url.url);
+      }
+      function apiMessages() {
+        const recent = messages.slice(-28);
+        return recent.map((m, i) =>
+          typeof m.content === "string" || i === recent.length - 1
+            ? { role: m.role, content: m.content }
+            : { role: m.role, content: contentText(m.content) + " [image]" },
+        );
+      }
+      function compressImage(file) {
+        return new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onerror = reject;
+          reader.onload = (e) => {
+            const img = new Image();
+            img.onerror = reject;
+            img.onload = () => {
+              const max = 1024;
+              let w = img.width,
+                h = img.height;
+              if (w > max || h > max) {
+                if (w > h) {
+                  h = Math.round((h * max) / w);
+                  w = max;
+                } else {
+                  w = Math.round((w * max) / h);
+                  h = max;
+                }
+              }
+              const c = document.createElement("canvas");
+              c.width = w;
+              c.height = h;
+              const ctx = c.getContext("2d");
+              ctx.fillStyle = "#fff";
+              ctx.fillRect(0, 0, w, h);
+              ctx.drawImage(img, 0, 0, w, h);
+              resolve(c.toDataURL("image/jpeg", 0.8));
+            };
+            img.src = e.target.result;
+          };
+          reader.readAsDataURL(file);
+        });
+      }
+      function renderStrip() {
+        attachStrip.innerHTML = attachments
+          .map(
+            (u, i) =>
+              `<div class="ai-attach-thumb"><img src="${u}" alt="attachment"><button type="button" data-i="${i}" aria-label="Remove image">✕</button></div>`,
+          )
+          .join("");
+        attachStrip.querySelectorAll("button").forEach((b) => {
+          b.onclick = () => {
+            attachments.splice(Number(b.dataset.i), 1);
+            renderStrip();
+          };
+        });
+      }
+      function refreshAttach() {
+        const on = !!VStorage.getGroqKey();
+        attachBtn.style.display = on ? "" : "none";
+        if (!on && attachments.length) {
+          attachments = [];
+          renderStrip();
+        }
+        hintEl.innerHTML =
+          "Enter to send &nbsp;·&nbsp; Shift+Enter for newline" +
+          (on ? " &nbsp;·&nbsp; attach images (Qwen)" : "");
+      }
+      async function addFiles(files) {
+        if (!VStorage.getGroqKey()) return;
+        for (const f of files) {
+          if (!f.type.startsWith("image/")) continue;
+          if (attachments.length >= 4) {
+            VApp.showToast("Up to 4 images per message", "info");
+            break;
+          }
+          try {
+            attachments.push(await compressImage(f));
+          } catch (e) {
+            VApp.showToast("Could not read that image", "error");
+          }
+        }
+        renderStrip();
+      }
+      attachBtn.onclick = () => attachIn.click();
+      attachIn.onchange = async () => {
+        await addFiles([...attachIn.files]);
+        attachIn.value = "";
+      };
+      ta.addEventListener("paste", (e) => {
+        const files = [...(e.clipboardData?.files || [])].filter((f) =>
+          f.type.startsWith("image/"),
+        );
+        if (files.length && VStorage.getGroqKey()) {
+          e.preventDefault();
+          addFiles(files);
+        }
+      });
+      window.addEventListener("focus", refreshAttach);
+      refreshAttach();
+      function md(raw, streaming) {
+        if (!raw) return streaming ? '<span class="ai-cursor"></span>' : "";
+        let t = raw;
+        t = t.replace(/<think>[\s\S]*?<\/think>/gi, "");
+        if (streaming && (t.match(/```/g) || []).length % 2 !== 0) t += "\n```";
+        t = t
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;");
+        const cb = [];
+        t = t.replace(/```(\w*)\n?([\s\S]*?)```/g, (_, l, c) => {
+          const i = cb.length;
+          cb.push(
+            `<pre class="ai-code-pre"><div class="ai-code-header"><span class="ai-code-lang">${
+              l || "text"
+            }</span><button class="ai-copy-btn" onclick="cpb(this)">Copy</button></div><code>${c.trimEnd()}</code></pre>`,
+          );
+          return `\x00${i}\x00`;
+        });
+        t = t.replace(/`([^`\n]+)`/g, '<code class="ai-inline-code">$1</code>');
+        t = t.replace(
+          /\*\*\*([\s\S]*?)\*\*\*/g,
+          "<strong><em>$1</em></strong>",
+        );
+        t = t.replace(/\*\*([\s\S]*?)\*\*/g, "<strong>$1</strong>");
+        t = t.replace(/\*((?!\s)[\s\S]*?(?<!\s))\*/g, "<em>$1</em>");
+        t = t.replace(
+          /^&gt; (.+)$/gm,
+          '<blockquote class="ai-blockquote">$1</blockquote>',
+        );
+        t = t.replace(
+          /^---+$/gm,
+          '<hr style="border:none;border-top:1px solid var(--card-border);margin:12px 0">',
+        );
+        t = t.replace(/^### (.+)$/gm, '<h3 class="ai-h3">$1</h3>');
+        t = t.replace(/^## (.+)$/gm, '<h2 class="ai-h2">$1</h2>');
+        t = t.replace(/^# (.+)$/gm, '<h1 class="ai-h1">$1</h1>');
+        t = t.replace(
+          /^\|(.+)\|$/gm,
+          (row) =>
+            `<tr>${row
+              .slice(1, -1)
+              .split("|")
+              .map((cell) => `<td>${cell.trim()}</td>`)
+              .join("")}</tr>`,
+        );
+        t = t.replace(/(<tr>.*<\/tr>\n?)+/g, (block) => {
+          const rows = block
+            .trim()
+            .split("\n")
+            .filter((r) => r.trim());
+          const filtered = rows.filter(
+            (r) => !r.match(/^<tr>(<td>[-:\s|]+<\/td>)+<\/tr>$/),
+          );
+          if (!filtered.length) return block;
+          const [head, ...body] = filtered;
+          const headRow = head
+            .replace(/<td>/g, "<th>")
+            .replace(/<\/td>/g, "</th>");
+          return `<div class="ai-table-wrap"><table class="ai-table"><thead>${headRow}</thead><tbody>${body.join(
+            "",
+          )}</tbody></table></div>`;
+        });
+        t = t.replace(/^[*\-] (.+)$/gm, "<li>$1</li>");
+        t = t.replace(
+          /(<li>[\s\S]*?<\/li>)+/g,
+          (m) => `<ul class="ai-ul">${m}</ul>`,
+        );
+        t = t.replace(/^\d+\. (.+)$/gm, "<lo>$1</lo>");
+        t = t.replace(
+          /(<lo>[\s\S]*?<\/lo>)+/g,
+          (m) =>
+            `<ol class="ai-ol">${m.replace(/<\/?lo>/g, (s) =>
+              s.replace("lo", "li"),
+            )}</ol>`,
+        );
+        t = t
+          .split(/\n\n+/)
+          .map((p) => {
+            p = p.trim();
+            if (!p) return "";
+            if (/^<(h[1-3]|ul|ol|blockquote|hr|pre|div|table)/.test(p))
+              return p;
+            return `<p>${p.replace(/\n/g, "<br>")}</p>`;
+          })
+          .join("");
+        cb.forEach((b, i) => {
+          t = t.replace(`\x00${i}\x00`, b);
+        });
+        if (streaming) t += '<span class="ai-cursor"></span>';
+        return t;
+      }
+      function cpb(btn) {
+        navigator.clipboard
+          .writeText(btn.closest("pre").querySelector("code").textContent)
+          .then(() => {
+            btn.textContent = "✓";
+            setTimeout(() => {
+              btn.textContent = "Copy";
+            }, 1800);
+          });
+      }
+      function extractThink(raw) {
+        const m = raw.match(/<think>([\s\S]*?)<\/think>/i);
+        return m ? m[1].trim() : null;
+      }
+      function makeActionButtons(role, content) {
+        if (role === "user") {
+          return `<div class="ai-msg-actions">
+      <button class="ai-msg-action-btn" onclick="copyMsg(this)" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        <span>Copy</span>
+      </button>
+    </div>`;
+        }
+        const isFav = VStorage.isAIFavContent(content);
+        const favId = isFav
+          ? VStorage.getAIFavs().find((f) => f.content === content)?.id || ""
+          : "";
+        return `<div class="ai-msg-actions">
+    <button class="ai-msg-action-btn" onclick="copyMsg(this)" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+      <span>Copy</span>
+    </button>
+    <button class="ai-msg-action-btn${
+      isFav ? " favorited" : ""
+    }" onclick="toggleFavMsg(this)" data-fav-id="${VApp.esc(
+          favId,
+        )}" type="button" title="${
+          isFav ? "Remove from favorites" : "Save response"
+        }">
+      <svg viewBox="0 0 24 24" fill="${
+        isFav ? "currentColor" : "none"
+      }" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      <span>${isFav ? "Saved" : "Save"}</span>
+    </button>
+  </div>`;
+      }
+      function copyMsg(btn) {
+        const bubble = btn
+          .closest(".ai-msg-body")
+          .querySelector(".ai-msg-bubble");
+        const text = bubble ? bubble.innerText : "";
+        navigator.clipboard.writeText(text).then(() => {
+          const sp = btn.querySelector("span");
+          const old = sp.textContent;
+          sp.textContent = "✓ Copied";
+          setTimeout(() => {
+            sp.textContent = old;
+          }, 1800);
+        });
+      }
+      function toggleFavMsg(btn) {
+        const bubble = btn
+          .closest(".ai-msg-body")
+          .querySelector(".ai-msg-bubble");
+        const content = bubble ? bubble.innerText : "";
+        const existingId = btn.dataset.favId;
+        if (existingId) {
+          VStorage.removeAIFav(existingId);
+          btn.classList.remove("favorited");
+          btn.dataset.favId = "";
+          btn.querySelector("svg").setAttribute("fill", "none");
+          btn.querySelector("span").textContent = "Save";
+          btn.title = "Save response";
+          VApp.showToast("Removed from favorites");
+        } else {
+          const id = VStorage.addAIFav(content, modelSel.value, currentChatId);
+          btn.classList.add("favorited");
+          btn.dataset.favId = id;
+          btn.querySelector("svg").setAttribute("fill", "currentColor");
+          btn.querySelector("span").textContent = "Saved";
+          btn.title = "Remove from favorites";
+          VApp.showToast("Response saved!", "success");
+        }
+        renderFavsSidebar();
+      }
+      function appendMsg(role, content) {
+        document.getElementById("ai-welcome")?.remove();
+        const w = document.getElementById("ai-messages");
+        const el = document.createElement("div");
+        el.className = `ai-msg ai-msg-${role}`;
+        el.innerHTML = `
+    <div class="ai-msg-avatar">${
+      role === "user" ? VApp.userAvatarHTML("ai-msg-avatar-inner") : "AI"
+    }</div>
+    <div class="ai-msg-body">
+      <div class="ai-msg-role">${role === "user" ? "You" : "AI"}</div>
+      <div class="ai-msg-bubble">${contentImages(content)
+        .map((u) => `<img class="ai-msg-img" src="${u}" alt="attachment">`)
+        .join("")}${md(contentText(content), false)}</div>
+      ${makeActionButtons(role, contentText(content))}
+    </div>`;
+        w.appendChild(el);
+        w.scrollTop = w.scrollHeight;
+        return el;
+      }
+      function setStatus(t, active) {
+        const el = document.getElementById("ai-status");
+        el.textContent = t;
+        el.className = "ai-status" + (active ? " streaming" : "");
+      }
+      async function send() {
+        const text = ta.value.trim();
+        if ((!text && !attachments.length) || isStreaming) return;
+        const imgs = VStorage.getGroqKey() ? attachments.slice() : [];
+        attachments = [];
+        renderStrip();
+        if (imgs.length && modelSel.value !== VISION_MODEL) {
+          modelSel.value = VISION_MODEL;
+          VApp.showToast("Switched to Qwen for image input");
+        }
+        const userContent = imgs.length
+          ? [
+              { type: "text", text: text || "Describe this image." },
+              ...imgs.map((u) => ({
+                type: "image_url",
+                image_url: { url: u },
+              })),
+            ]
+          : text;
+        messages.push({ role: "user", content: userContent });
+        appendMsg("user", userContent);
+        ta.value = "";
+        ta.style.height = "auto";
+        document.getElementById("ai-welcome")?.remove();
+        const w = document.getElementById("ai-messages");
+        const row = document.createElement("div");
+        row.className = "ai-msg ai-msg-assistant";
+        row.innerHTML = `
+    <div class="ai-msg-avatar">AI</div>
+    <div class="ai-msg-body">
+      <div class="ai-msg-role">AI</div>
+      <div class="ai-msg-bubble ai-bubble-stream"><span class="ai-cursor"></span></div>
+    </div>`;
+        w.appendChild(row);
+        w.scrollTop = w.scrollHeight;
+        const bubble = row.querySelector(".ai-bubble-stream");
+        isStreaming = true;
+        abort = new AbortController();
+        document.getElementById("ai-send").style.display = "none";
+        document.getElementById("ai-stop").style.display = "";
+        setStatus("Connecting…", true);
+        const sys = sysOvr || MODES[mode] || MODES[""];
+        const payload = {
+          model,
+          messages: [{ role: "system", content: sys }, ...apiMessages()],
+          temperature: temp,
+          reasoning_effort: mapReasoning(document.getElementById("ai-effort").value),
+          stream: true,
+          max_tokens: 4096,
+        };
+        let full = "",
+          fullThink = "",
+          thinkEl = null;
+        try {
+          const userKey = VStorage.getGroqKey();
+          const apiUrl = userKey ? GROQ_DIRECT : WORKER_URL;
+          const headers = { "Content-Type": "application/json" };
+          if (userKey) headers["Authorization"] = `Bearer ${userKey}`;
+          const res = await fetch(apiUrl, {
+            method: "POST",
+            headers,
+            body: JSON.stringify(payload),
+            signal: abort.signal,
+          });
+          if (!res.ok) {
+            const e = await res.json().catch(() => ({}));
+            throw new Error(e.error?.message || `HTTP ${res.status}`);
+          }
+          const reader = res.body.getReader();
+          const dec = new TextDecoder();
+          let buf = "";
+          setStatus("Generating…", true);
+          while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            buf += dec.decode(value, { stream: true });
+            const lines = buf.split("\n");
+            buf = lines.pop();
+            for (const line of lines) {
+              if (!line.startsWith("data: ")) continue;
+              const d = line.slice(6).trim();
+              if (d === "[DONE]") continue;
+              try {
+                const chunk = JSON.parse(d);
+                const delta = chunk.choices?.[0]?.delta;
+                if (!delta) continue;
+                if (delta.reasoning_content) {
+                  fullThink += delta.reasoning_content;
+                  if (!thinkEl) {
+                    const rb = document.createElement("div");
+                    rb.className = "ai-reasoning-block";
+                    rb.innerHTML = `<button class="ai-reasoning-toggle" onclick="this.nextElementSibling.classList.toggle('open');this.querySelector('em').textContent=this.nextElementSibling.classList.contains('open')?'▲':'▼'">Thinking <em>▼</em></button><div class="ai-reasoning-body open" id="rstream"></div>`;
+                    bubble.before(rb);
+                    thinkEl = rb.querySelector("#rstream");
+                  }
+                  if (thinkEl)
+                    thinkEl.innerHTML =
+                      VApp.esc(fullThink).replace(/\n/g, "<br>") +
+                      '<span class="ai-cursor"></span>';
+                }
+                if (delta.content) {
+                  full += delta.content;
+                  const thinkContent = extractThink(full);
+                  if (thinkContent && !thinkEl) {
+                    const rb = document.createElement("div");
+                    rb.className = "ai-reasoning-block";
+                    rb.innerHTML = `<button class="ai-reasoning-toggle" onclick="this.nextElementSibling.classList.toggle('open');this.querySelector('em').textContent=this.nextElementSibling.classList.contains('open')?'▲':'▼'">Thinking <em>▼</em></button><div class="ai-reasoning-body open" id="rstream2"></div>`;
+                    bubble.before(rb);
+                    thinkEl = rb.querySelector("#rstream2");
+                  }
+                  if (thinkEl && thinkContent)
+                    thinkEl.innerHTML =
+                      VApp.esc(thinkContent).replace(/\n/g, "<br>") +
+                      '<span class="ai-cursor"></span>';
+                  bubble.innerHTML = md(full, true);
+                  w.scrollTop = w.scrollHeight;
+                }
+              } catch {}
+            }
+          }
+          if (thinkEl) {
+            thinkEl.id = "";
+            thinkEl.classList.remove("open");
+            thinkEl.innerHTML = thinkEl.innerHTML.replace(
+              /<span class="ai-cursor"><\/span>/g,
+              "",
+            );
+          }
+          bubble.className = "ai-msg-bubble";
+          bubble.innerHTML = md(full, false);
+          messages.push({ role: "assistant", content: full });
+          row
+            .querySelector(".ai-msg-body")
+            .insertAdjacentHTML(
+              "beforeend",
+              makeActionButtons("assistant", full),
+            );
+          setStatus(
+            `${Math.ceil(messages.length / 2)} exchange${
+              messages.length > 2 ? "s" : ""
+            }`,
+            false,
+          );
+        } catch (err) {
+          if (err.name === "AbortError") {
+            bubble.className = "ai-msg-bubble";
+            if (full) {
+              bubble.innerHTML =
+                md(full, false) +
+                '<p style="color:var(--text-secondary);font-size:0.72rem;margin-top:6px;font-style:italic;margin-bottom:0">— stopped —</p>';
+              messages.push({ role: "assistant", content: full });
+              row
+                .querySelector(".ai-msg-body")
+                .insertAdjacentHTML(
+                  "beforeend",
+                  makeActionButtons("assistant", full),
+                );
+            } else {
+              bubble.innerHTML =
+                '<p style="color:var(--text-secondary);font-style:italic;margin:0">Stopped.</p>';
+              messages.pop();
+            }
+            setStatus("Stopped", false);
+          } else {
+            bubble.className = "ai-msg-bubble";
+            const msg = err.message || "Unknown error";
+            const isQuota =
+              msg.includes("429") || /rate.?limit|quota|too many/i.test(msg);
+            const isAuth =
+              msg.includes("401") ||
+              msg.includes("403") ||
+              /invalid.?key|auth/i.test(msg);
+            const hasKey = !!VStorage.getGroqKey();
+            const keyHint =
+              !hasKey && (isQuota || isAuth)
+                ? `<p style="margin:8px 0 0;padding:7px 10px;background:rgba(var(--accent-rgb),.08);border:1px solid rgba(var(--accent-rgb),.2);border-radius:var(--radius-sm);font-size:0.75rem;color:var(--text-secondary)"><strong style="color:var(--text)">Out of tokens?</strong> Add your own free Groq API key in <a href="settings.html" style="color:var(--accent);text-decoration:none;font-weight:600">Settings → AI Settings</a> to bypass shared limits.</p>`
+                : hasKey && isAuth
+                ? `<p style="margin:8px 0 0;padding:7px 10px;background:rgba(232,93,93,.08);border:1px solid rgba(232,93,93,.2);border-radius:var(--radius-sm);font-size:0.75rem;color:var(--text-secondary)">Your API key may be invalid. Update it in <a href="settings.html" style="color:var(--accent);text-decoration:none;font-weight:600">Settings → AI Settings</a>.</p>`
+                : "";
+            bubble.innerHTML = `<p style="color:#e85d5d;margin:0">${VApp.esc(
+              msg,
+            )}</p>${keyHint}`;
+            messages.pop();
+            VApp.showToast(msg, "error");
+            setStatus("Error", false);
+          }
+        }
+        isStreaming = false;
+        abort = null;
+        document.getElementById("ai-send").style.display = "";
+        document.getElementById("ai-stop").style.display = "none";
+        w.scrollTop = w.scrollHeight;
+      }
+      renderHistorySidebar();
+      renderFavsSidebar();
+      ta.focus();
+      VTutorial.autoStart("ai");
+    </script>
+  </body>
+</html>

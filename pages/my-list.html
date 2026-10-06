@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>My List — vispora</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/pages.css" />
+    <link rel="stylesheet" href="../css/chat.css" />
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="../js/firebase-config.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/cloak.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/media.js"></script>
+    <script src="../js/chat.js"></script>
+  </head>
+  <body>
+    <div id="particles-js"></div>
+    <div id="nav-ph"></div>
+    <main class="recent-page page-enter container">
+      <div class="recent-header">
+        <div>
+          <h1>My List</h1>
+          <p>Everything you've played, watched, and saved</p>
+        </div>
+      </div>
+      <div class="recent-tabs" id="recent-tabs">
+        <button class="recent-tab active" data-tab="all">All</button>
+        <button class="recent-tab" data-tab="games">Games</button>
+        <button class="recent-tab" data-tab="movies">Movies</button>
+        <button class="recent-tab" data-tab="tv">TV</button>
+        <button class="recent-tab" data-tab="anime">Anime</button>
+        <button class="recent-tab" data-tab="live">Live TV</button>
+        <button class="recent-tab" data-tab="mylist">My List</button>
+      </div>
+      <div id="all-sections">
+        <section class="recent-section" id="sec-games">
+          <div class="section-header">
+            <h2 class="section-title">Recently Played</h2>
+            <div style="display: flex; gap: 8px; align-items: center">
+              <button
+                class="section-viewall"
+                id="clear-game-hist"
+                type="button"
+                style="color: #e85d5d"
+              >
+                Clear All
+              </button>
+              <a href="games.html" class="section-viewall">Browse</a>
+            </div>
+          </div>
+          <div id="rg-row" class="recent-section-row">
+            <div class="recent-section-inner" id="rg-inner"></div>
+          </div>
+          <div id="rg-empty" class="recent-empty" style="display: none">
+            <div class="recent-empty-icon"></div>
+            <div class="recent-empty-title">No games played yet</div>
+            <p>
+              Head to
+              <a href="games.html" style="color: var(--accent)">Games</a> to
+              start playing!
+            </p>
+          </div>
+        </section>
+        <section class="recent-section" id="sec-movies">
+          <div class="section-header">
+            <h2 class="section-title">Recently Watched Movies</h2>
+            <div style="display: flex; gap: 8px; align-items: center">
+              <button
+                class="section-viewall"
+                id="clear-movie-hist"
+                type="button"
+                style="color: #e85d5d"
+              >
+                Clear All
+              </button>
+              <a href="movies.html" class="section-viewall">Browse</a>
+            </div>
+          </div>
+          <div id="rm-row" class="recent-section-row">
+            <div class="recent-section-inner" id="rm-inner"></div>
+          </div>
+          <div id="rm-empty" class="recent-empty" style="display: none">
+            <div class="recent-empty-icon"></div>
+            <div class="recent-empty-title">No movies watched yet</div>
+            <p>
+              Browse
+              <a href="movies.html" style="color: var(--accent)">Movies</a>
+            </p>
+          </div>
+        </section>
+        <section class="recent-section" id="sec-tv">
+          <div class="section-header">
+            <h2 class="section-title">Recently Watched TV</h2>
+            <div style="display: flex; gap: 8px; align-items: center">
+              <button
+                class="section-viewall"
+                id="clear-tv-hist"
+                type="button"
+                style="color: #e85d5d"
+              >
+                Clear All
+              </button>
+              <a href="tv.html" class="section-viewall">Browse</a>
+            </div>
+          </div>
+          <div id="rt-row" class="recent-section-row">
+            <div class="recent-section-inner" id="rt-inner"></div>
+          </div>
+          <div id="rt-empty" class="recent-empty" style="display: none">
+            <div class="recent-empty-icon"></div>
+            <div class="recent-empty-title">No TV shows watched yet</div>
+            <p>
+              Browse <a href="tv.html" style="color: var(--accent)">TV Shows</a>
+            </p>
+          </div>
+        </section>
+        <section class="recent-section" id="sec-anime">
+          <div class="section-header">
+            <h2 class="section-title">Recently Watched Anime</h2>
+            <div style="display: flex; gap: 8px; align-items: center">
+              <button
+                class="section-viewall"
+                id="clear-anime-hist"
+                type="button"
+                style="color: #e85d5d"
+              >
+                Clear All
+              </button>
+              <a href="anime.html" class="section-viewall">Browse</a>
+            </div>
+          </div>
+          <div id="ra-row" class="recent-section-row">
+            <div class="recent-section-inner" id="ra-inner"></div>
+          </div>
+          <div id="ra-empty" class="recent-empty" style="display: none">
+            <div class="recent-empty-icon"></div>
+            <div class="recent-empty-title">No anime watched yet</div>
+            <p>
+              Browse <a href="anime.html" style="color: var(--accent)">Anime</a>
+            </p>
+          </div>
+        </section>
+        <section class="recent-section" id="sec-livelist">
+          <div class="section-header">
+            <h2 class="section-title">Saved Live Events</h2>
+            <a href="live.html" class="section-viewall">Open Live TV</a>
+          </div>
+          <div id="lv-row" class="recent-section-row">
+            <div class="recent-section-inner" id="lv-inner"></div>
+          </div>
+          <div id="lv-empty" class="recent-empty" style="display: none">
+            <div class="recent-empty-icon"></div>
+            <div class="recent-empty-title">No saved live events</div>
+            <p>
+              Star events in
+              <a href="live.html" style="color: var(--accent)">Live TV</a> to
+              add them here
+            </p>
+          </div>
+        </section>
+        <hr
+          style="
+            border: none;
+            border-top: 1px solid var(--card-border);
+            margin: 8px 0 40px;
+          "
+          id="list-divider"
+        />
+        <section class="recent-section" id="sec-gamelist">
+          <div class="section-header">
+            <h2 class="section-title">My Game List</h2>
+            <a href="games.html" class="section-viewall">Browse Games</a>
+          </div>
+          <div id="gl-row" class="recent-section-row">
+            <div class="recent-section-inner" id="gl-inner"></div>
+          </div>
+          <div id="gl-empty" class="recent-empty" style="display: none">
+            <div class="recent-empty-icon"></div>
+            <div class="recent-empty-title">No games in your list</div>
+            <p>Star a game to add it here</p>
+          </div>
+        </section>
+        <section class="recent-section" id="sec-medialist">
+          <div class="section-header">
+            <h2 class="section-title">My Media List</h2>
+          </div>
+          <div id="ml-row" class="recent-section-row">
+            <div class="recent-section-inner" id="ml-inner"></div>
+          </div>
+          <div id="ml-empty" class="recent-empty" style="display: none">
+            <div class="recent-empty-icon"></div>
+            <div class="recent-empty-title">No media in your list</div>
+            <p>Star movies, shows, or anime to add them here</p>
+          </div>
+        </section>
+      </div>
+    </main>
+    <div id="toast-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+      document.getElementById("nav-ph").innerHTML = VApp.navHTML("mylist");
+      VCloak.initCloak();
+      VApp.initPanic();
+      VApp.initParticles();
+      VApp.initNavChat();
+      VApp.initNavProfile();
+      VApp.initVersionCheck();
+      const dtEl = document.getElementById("nav-datetime");
+      if (dtEl) VApp.startDatetime(dtEl);
+      let allGames = [];
+      const TAB_SECTIONS = {
+        all: [
+          "sec-games",
+          "sec-movies",
+          "sec-tv",
+          "sec-anime",
+          "sec-livelist",
+          "sec-gamelist",
+          "sec-medialist",
+        ],
+        games: ["sec-games", "sec-gamelist"],
+        movies: ["sec-movies"],
+        tv: ["sec-tv"],
+        anime: ["sec-anime"],
+        live: ["sec-livelist"],
+        mylist: ["sec-gamelist", "sec-medialist", "sec-livelist"],
+      };
+      const ALL_SEC_IDS = [
+        "sec-games",
+        "sec-movies",
+        "sec-tv",
+        "sec-anime",
+        "sec-livelist",
+        "sec-gamelist",
+        "sec-medialist",
+      ];
+      document.getElementById("recent-tabs").addEventListener("click", (e) => {
+        const btn = e.target.closest(".recent-tab");
+        if (!btn) return;
+        document
+          .querySelectorAll(".recent-tab")
+          .forEach((b) => b.classList.toggle("active", b === btn));
+        const tab = btn.dataset.tab;
+        const show = new Set(TAB_SECTIONS[tab] || TAB_SECTIONS.all);
+        ALL_SEC_IDS.forEach((id) => {
+          const el = document.getElementById(id);
+          if (el) el.style.display = show.has(id) ? "" : "none";
+        });
+        const hr = document.getElementById("list-divider");
+        if (hr) hr.style.display = tab === "mylist" ? "none" : "";
+      });
+      document.addEventListener("click", async (e) => {
+        const btn = e.target.closest(".game-card-remove");
+        if (!btn) return;
+        e.preventDefault();
+        e.stopPropagation();
+        const mode = btn.dataset.removeMode;
+        const id = Number(btn.dataset.id);
+        const type = btn.dataset.mediaType;
+        if (mode === "game-hist") {
+          const ok = await VApp.showModal({
+            title: "Remove Game",
+            message: "Remove from play history?",
+            confirmText: "Remove",
+            dangerous: true,
+          });
+          if (!ok) return;
+          VStorage.removeFromHistory(id);
+          VApp.showToast("Removed from history");
+        } else if (mode === "game-list") {
+          VStorage.toggleFavorite(id);
+          VApp.showToast("Removed from My List");
+          document.dispatchEvent(new CustomEvent("vispora:game-favs-changed"));
+        } else if (mode === "media-hist") {
+          const ok = await VApp.showModal({
+            title: "Remove from History",
+            message: "Remove from watch history?",
+            confirmText: "Remove",
+            dangerous: true,
+          });
+          if (!ok) return;
+          VStorage.removeFromMediaHistory(id, type);
+          VApp.showToast("Removed from history");
+          document.dispatchEvent(new CustomEvent("vispora:media-hist-changed"));
+        } else if (mode === "media-list") {
+          VStorage.toggleMediaFavorite(id, type);
+          VApp.showToast("Removed from My List");
+          document.dispatchEvent(new CustomEvent("vispora:media-favs-changed"));
+        } else if (mode === "live-list") {
+          VStorage.toggleLiveFavorite({ id: btn.dataset.id });
+          VApp.showToast("Removed from My List");
+          document.dispatchEvent(new CustomEvent("vispora:live-favs-changed"));
+        }
+        renderAll();
+      });
+      function setSection(innerId, rowId, emptyId, items, renderFn) {
+        const inner = document.getElementById(innerId);
+        const row = document.getElementById(rowId);
+        const empty = document.getElementById(emptyId);
+        if (!items.length) {
+          if (row) row.style.display = "none";
+          if (empty) empty.style.display = "";
+          return false;
+        }
+        if (row) row.style.display = "";
+        if (empty) empty.style.display = "none";
+        if (inner) {
+          inner.innerHTML = items.map(renderFn).join("");
+          VMedia.initMediaStars(inner);
+        }
+        return true;
+      }
+      async function setupClearBtn(btnId, label, clearFn) {
+        const btn = document.getElementById(btnId);
+        if (!btn) return;
+        btn.addEventListener("click", async () => {
+          const ok = await VApp.showModal({
+            title: `Clear ${label}`,
+            message: `Remove all items from your ${label}?`,
+            confirmText: "Clear All",
+            dangerous: true,
+          });
+          if (!ok) return;
+          clearFn();
+          VApp.showToast(`${label} cleared`);
+          renderAll();
+        });
+      }
+      setupClearBtn("clear-game-hist", "Game History", () => {
+        VStorage.set(VStorage.KEYS.HISTORY, []);
+        VStorage.set(VStorage.KEYS.PLAYTIME, {});
+      });
+      setupClearBtn("clear-movie-hist", "Movie History", () => {
+        VStorage.set(
+          VStorage.KEYS.MEDIA_HIST,
+          VStorage.getMediaHistory().filter((x) => x.type !== "movie"),
+        );
+      });
+      setupClearBtn("clear-tv-hist", "TV History", () => {
+        VStorage.set(
+          VStorage.KEYS.MEDIA_HIST,
+          VStorage.getMediaHistory().filter((x) => x.type !== "tv"),
+        );
+      });
+      setupClearBtn("clear-anime-hist", "Anime History", () => {
+        VStorage.set(
+          VStorage.KEYS.MEDIA_HIST,
+          VStorage.getMediaHistory().filter((x) => x.type !== "anime"),
+        );
+      });
+      function makeLiveCard(m) {
+        const now = Date.now();
+        const live = m.date && m.date <= now && now - m.date < 4 * 3600e3;
+        let poster = "";
+        if (m.poster) {
+          poster = /^https?:\/\//.test(m.poster)
+            ? m.poster
+            : "https://streamed.pk" +
+              (m.poster.startsWith("/")
+                ? m.poster
+                : "/api/images/proxy/" + m.poster + ".webp");
+        }
+        const when = m.date
+          ? new Date(m.date).toLocaleString("en-US", {
+              month: "short",
+              day: "numeric",
+              hour: "numeric",
+              minute: "2-digit",
+            })
+          : "";
+        return `<a href="live.html?watch=${encodeURIComponent(
+          m.id,
+        )}" class="lv-mini-card">
+          <div class="lv-mini-bg"${
+            poster ? ` style="background-image:url('${VApp.esc(poster)}')"` : ""
+          }>${live ? '<span class="lv-badge-live">LIVE</span>' : ""}<button class="game-card-remove" data-id="${VApp.esc(
+            m.id,
+          )}" data-media-type="live" data-remove-mode="live-list" aria-label="Remove from My List" type="button">${VApp.IC.x}</button></div>
+          <div class="lv-mini-body">
+            <div class="lv-mini-title">${VApp.esc(m.title || "Live Event")}</div>
+            <div class="lv-mini-meta">
+              ${when ? `<span>${VApp.esc(when)}</span>` : ""}
+              ${
+                m.category
+                  ? `<span class="lv-cat-pill">${VApp.esc(m.category)}</span>`
+                  : ""
+              }
+            </div>
+          </div>
+        </a>`;
+      }
+      async function renderAll() {
+        const mediaHist = VStorage.getMediaHistory();
+        const gameHist = VStorage.getHistory();
+        const movies = mediaHist.filter((h) => h.type === "movie");
+        const tvs = mediaHist.filter((h) => h.type === "tv");
+        const anime = mediaHist.filter((h) => h.type === "anime");
+        const favGameIds = VStorage.getFavorites();
+        const favGames = favGameIds
+          .map((id) => allGames.find((g) => g.id === id))
+          .filter(Boolean);
+        const favMedia = VStorage.getMediaFavorites();
+        setSection(
+          "lv-inner",
+          "lv-row",
+          "lv-empty",
+          VStorage.getLiveFavorites(),
+          makeLiveCard,
+        );
+        const rgItems = gameHist
+          .map(
+            (h) =>
+              allGames.find((g) => g.id === h.id) || {
+                id: h.id,
+                name: h.name,
+                cover: h.cover,
+                genre: "",
+              },
+          )
+          .filter(Boolean);
+        setSection("rg-inner", "rg-row", "rg-empty", rgItems, (g) =>
+          VApp.makeCard(g, {
+            compact: true,
+            showRemove: true,
+            removeMode: "game-hist",
+          }),
+        );
+        setSection("rm-inner", "rm-row", "rm-empty", movies.slice(0, 20), (e) =>
+          VMedia.makeHistoryMediaCard(e, {
+            compact: true,
+            showRemove: true,
+            removeMode: "media-hist",
+          }),
+        );
+        setSection("rt-inner", "rt-row", "rt-empty", tvs.slice(0, 20), (e) =>
+          VMedia.makeHistoryMediaCard(e, {
+            compact: true,
+            showRemove: true,
+            removeMode: "media-hist",
+          }),
+        );
+        setSection("ra-inner", "ra-row", "ra-empty", anime.slice(0, 20), (e) =>
+          VMedia.makeHistoryMediaCard(e, {
+            compact: true,
+            showRemove: true,
+            removeMode: "media-hist",
+          }),
+        );
+        setSection("gl-inner", "gl-row", "gl-empty", favGames, (g) =>
+          VApp.makeCard(g, {
+            compact: true,
+            showRemove: false,
+            removeMode: "game-list",
+          }),
+        );
+        if (!favMedia.length) {
+          const mlRow = document.getElementById("ml-row"),
+            mlEmpty = document.getElementById("ml-empty");
+          if (mlRow) mlRow.style.display = "none";
+          if (mlEmpty) mlEmpty.style.display = "";
+        } else {
+          const mlRow = document.getElementById("ml-row"),
+            mlEmpty = document.getElementById("ml-empty");
+          const mlInner = document.getElementById("ml-inner");
+          if (mlRow) mlRow.style.display = "";
+          if (mlEmpty) mlEmpty.style.display = "none";
+          const histMap = {};
+          mediaHist.forEach((h) => {
+            histMap[`${h.type}_${h.id}`] = h;
+          });
+          const matched = favMedia.map(
+            (f) =>
+              histMap[`${f.type}_${f.id}`] || {
+                id: f.id,
+                type: f.type,
+                title: "Loading…",
+                poster_path: null,
+              },
+          );
+          if (mlInner) {
+            mlInner.innerHTML = matched
+              .map((e) =>
+                VMedia.makeHistoryMediaCard(e, {
+                  compact: true,
+                  showRemove: false,
+                  removeMode: "media-list",
+                }),
+              )
+              .join("");
+            VMedia.initMediaStars(mlInner);
+          }
+          const missing = favMedia.filter((f) => !histMap[`${f.type}_${f.id}`]);
+          if (missing.length && mlInner) {
+            Promise.allSettled(
+              missing.map(async (f) => {
+                try {
+                  if (f.type === "anime") {
+                    const a = await VMedia.getAnimeById(f.id);
+                    return {
+                      id: f.id,
+                      type: "anime",
+                      title: VMedia.animeTitle(a),
+                      poster_path: a.coverImage?.large || null,
+                    };
+                  }
+                  const d = await VMedia.tmdbFetch(
+                    `/${f.type === "movie" ? "movie" : "tv"}/${f.id}`,
+                  );
+                  return {
+                    id: f.id,
+                    type: f.type,
+                    title: d.title || d.name || "?",
+                    poster_path: d.poster_path || null,
+                  };
+                } catch {
+                  return null;
+                }
+              }),
+            ).then((results) => {
+              const enriched = {};
+              results
+                .filter((r) => r.status === "fulfilled" && r.value)
+                .forEach((r) => {
+                  enriched[`${r.value.type}_${r.value.id}`] = r.value;
+                });
+              const updated = favMedia.map(
+                (f) =>
+                  enriched[`${f.type}_${f.id}`] ||
+                  histMap[`${f.type}_${f.id}`] || {
+                    id: f.id,
+                    type: f.type,
+                    title: "?",
+                    poster_path: null,
+                  },
+              );
+              if (mlInner) {
+                mlInner.innerHTML = updated
+                  .map((e) =>
+                    VMedia.makeHistoryMediaCard(e, {
+                      compact: true,
+                      showRemove: false,
+                      removeMode: "media-list",
+                    }),
+                  )
+                  .join("");
+                VMedia.initMediaStars(mlInner);
+              }
+            });
+          }
+        }
+      }
+      document.addEventListener("vispora:game-favs-changed", renderAll);
+      document.addEventListener("vispora:media-favs-changed", renderAll);
+      document.addEventListener("vispora:media-hist-changed", renderAll);
+      document.addEventListener("vispora:live-favs-changed", renderAll);
+      async function init() {
+        allGames = await VApp.loadGames().catch(() => []);
+        await renderAll();
+      }
+      init();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Playing — vispora</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/pages.css" />
+    <link rel="stylesheet" href="../css/chat.css" />
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="../js/firebase-config.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/cloak.js"></script>
+    <script src="../js/app.js"></script>
+    <script>
+      (function () {
+        const LINKS_URL = "https://vispora-links.alexdingleberries.workers.dev";
+
+        const CACHE_KEY = "vispora_games_config_v1";
+        const TTL_MS = 24 * 60 * 60 * 1000;
+
+        function readCache() {
+          try {
+            const c = JSON.parse(localStorage.getItem(CACHE_KEY));
+            return c && Array.isArray(c.games) && c.games.length ? c : null;
+          } catch {
+            return null;
+          }
+        }
+
+        function writeCache(games) {
+          try {
+            localStorage.setItem(
+              CACHE_KEY,
+              JSON.stringify({ games, fetched: Date.now() }),
+            );
+          } catch (e) {
+            console.warn("[VGames] cache write failed:", e);
+          }
+        }
+
+        function isValid(list) {
+          return (
+            Array.isArray(list) &&
+            list.length > 0 &&
+            list.every((g) => g && g.id !== undefined && g.name && g.url)
+          );
+        }
+
+        function diffGames(oldList, newList) {
+          const oldMap = new Map((oldList || []).map((g) => [g.id, g]));
+          const newMap = new Map(newList.map((g) => [g.id, g]));
+          let added = 0,
+            removed = 0,
+            updated = 0;
+          newMap.forEach((g, id) => {
+            const o = oldMap.get(id);
+            if (!o) added++;
+            else if (
+              o.name !== g.name ||
+              o.url !== g.url ||
+              o.cover !== g.cover
+            )
+              updated++;
+          });
+          oldMap.forEach((_, id) => {
+            if (!newMap.has(id)) removed++;
+          });
+          return { added, removed, updated };
+        }
+
+        function describeGamesDiff(d) {
+          const parts = [];
+          if (d.added) parts.push(`${d.added} added`);
+          if (d.removed) parts.push(`${d.removed} removed`);
+          if (d.updated) parts.push(`${d.updated} updated`);
+          return parts.length ? parts.join(", ") : "no changes";
+        }
+
+        async function fetchGamesConfig(force) {
+          const cached = readCache();
+          if (!force && cached && Date.now() - cached.fetched < TTL_MS) {
+            return {
+              games: cached.games,
+              first: false,
+              changed: false,
+              diff: { added: 0, removed: 0, updated: 0 },
+              cached: true,
+            };
+          }
+          const res = await fetch(`${LINKS_URL}/?type=games`, {
+            cache: force ? "reload" : "default",
+          });
+          if (!res.ok) throw new Error("games fetch failed: " + res.status);
+          const data = await res.json();
+          if (!isValid(data.games)) throw new Error("games response invalid");
+
+          const diff = diffGames(cached && cached.games, data.games);
+          const changed =
+            !cached || diff.added + diff.removed + diff.updated > 0;
+          writeCache(data.games);
+          return {
+            games: data.games,
+            first: !cached,
+            changed,
+            diff,
+            cached: false,
+          };
+        }
+
+        async function getGames() {
+          try {
+            return (await fetchGamesConfig(false)).games;
+          } catch (e) {
+            console.warn("[VGames] using fallback:", e);
+            const cached = readCache();
+            return cached ? cached.games : null;
+          }
+        }
+
+        window.VGames = {
+          fetchGamesConfig,
+          describeGamesDiff,
+          getGames,
+          CACHE_KEY,
+        };
+      })();
+    </script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/chat.js"></script>
+    <script src="../js/tutorial.js"></script>
+    <style>
+      .game-vol-wrap {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px 8px;
+        background: rgba(var(--accent-rgb), 0.06);
+        border: 1px solid rgba(var(--accent-rgb), 0.15);
+        border-radius: var(--radius-sm);
+      }
+      .vol-slider {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 80px;
+        height: 3px;
+        border-radius: 2px;
+        background: var(--bg5);
+        outline: none;
+        cursor: pointer;
+      }
+      .vol-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background: var(--accent);
+        cursor: pointer;
+        border: 2px solid var(--bg);
+      }
+      .vol-slider::-moz-range-thumb {
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background: var(--accent);
+        cursor: pointer;
+        border: 2px solid var(--bg);
+      }
+      .player-slow-banner {
+        position: absolute;
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        z-index: 5;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: wrap;
+        padding: 10px 14px;
+        background: rgba(13, 13, 13, 0.92);
+        backdrop-filter: blur(8px);
+        border: 1px solid var(--card-border);
+        border-radius: var(--radius);
+        color: var(--text);
+        font-size: 0.8rem;
+      }
+      .player-slow-banner-actions {
+        display: flex;
+        gap: 8px;
+        flex-shrink: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="particles-js"></div>
+    <div id="nav-ph"></div>
+    <main class="player-page page-enter container">
+      <nav class="breadcrumb">
+        <a href="home.html">Home</a><span class="breadcrumb-sep">›</span>
+        <a href="games.html">Games</a><span class="breadcrumb-sep">›</span>
+        <span id="bc-game">Loading…</span>
+      </nav>
+      <div class="game-ctrl-bar">
+        <div class="game-ctrl-info">
+          <h1 class="game-ctrl-title" id="game-title">Loading…</h1>
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              flex-wrap: wrap;
+            "
+          >
+            <span class="game-ctrl-author" id="game-author"></span>
+            <div class="game-ctrl-tags" id="game-tags"></div>
+          </div>
+        </div>
+        <div class="game-ctrl-stats">
+          <div class="game-stat-cell">
+            <span class="game-stat-label">Session</span>
+            <span class="game-stat-value" id="session-time">—</span>
+          </div>
+          <div class="game-stat-cell">
+            <span class="game-stat-label">Total</span>
+            <span class="game-stat-value" id="total-time">—</span>
+          </div>
+        </div>
+        <div class="game-ctrl-actions">
+          <div
+            class="game-vol-wrap"
+            title="Volume (works if game supports postMessage)"
+          >
+            <svg
+              id="vol-icon"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="flex-shrink: 0; opacity: 0.7"
+            >
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+            </svg>
+            <input
+              type="range"
+              id="vol-slider"
+              min="0"
+              max="1"
+              step="0.05"
+              value="1"
+              class="vol-slider"
+            />
+          </div>
+          <button
+            class="btn-icon"
+            id="btn-popout"
+            title="Pop out to new tab (about:blank)"
+            type="button"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+              />
+              <polyline points="15 3 21 3 21 9" />
+              <line x1="10" y1="14" x2="21" y2="3" />
+            </svg>
+          </button>
+          <button
+            class="btn-icon"
+            id="btn-fav"
+            title="Add to My List"
+            type="button"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+            </svg>
+          </button>
+          <button class="btn-icon" id="btn-reload" title="Reload" type="button">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" />
+              <path d="M21 3v5h-5" />
+              <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" />
+              <path d="M8 16H3v5" />
+            </svg>
+          </button>
+          <button class="btn-icon" id="btn-fs" title="Fullscreen" type="button">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M8 3H5a2 2 0 0 0-2 2v3" />
+              <path d="M21 8V5a2 2 0 0 0-2-2h-3" />
+              <path d="M3 16v3a2 2 0 0 0 2 2h3" />
+              <path d="M16 21h3a2 2 0 0 0 2-2v-3" />
+            </svg>
+          </button>
+          <button class="btn btn-secondary" id="back-btn" type="button">
+            <svg
+              width="13"
+              height="13"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+            Return
+          </button>
+        </div>
+      </div>
+      <div class="player-iframe-wrap" id="iframe-wrap">
+        <div class="player-error" id="player-error" style="display: none">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            width="40"
+            height="40"
+          >
+            <path
+              d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+            />
+            <line x1="12" y1="9" x2="12" y2="13" />
+            <line x1="12" y1="17" x2="12.01" y2="17" />
+          </svg>
+          <strong>Game failed to load</strong>
+          <p id="error-link"></p>
+        </div>
+        <div
+          class="player-slow-banner"
+          id="player-slow-banner"
+          style="display: none"
+        >
+          <span
+            >Still loading… some games take a moment, or the host may be slow to
+            respond.</span
+          >
+          <div class="player-slow-banner-actions">
+            <button class="btn btn-secondary" id="slow-open-tab" type="button">
+              Open in New Tab
+            </button>
+            <button class="btn btn-secondary" id="slow-dismiss" type="button">
+              Keep Waiting
+            </button>
+          </div>
+        </div>
+        <div class="player-loading" id="player-loading">
+          <div class="player-loading-spinner"></div>
+          <div class="player-loading-title" id="pl-title">Loading…</div>
+          <div class="player-loading-sub" id="pl-sub">Preparing player</div>
+          <div class="player-loading-bar"><span></span></div>
+        </div>
+        <iframe
+          id="game-frame"
+          title="Game"
+          allowfullscreen
+          allow="autoplay; fullscreen; pointer-lock"
+          sandbox="allow-scripts allow-same-origin allow-forms allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-presentation allow-downloads"
+        ></iframe>
+      </div>
+    </main>
+    <div id="toast-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+      document.getElementById("nav-ph").innerHTML = VApp.navHTML("games");
+      VCloak.initCloak();
+      VApp.initPanic();
+      VApp.initParticles();
+      VApp.initNavChat();
+      VApp.initNavProfile();
+      VApp.initVersionCheck();
+      const dtEl = document.getElementById("nav-datetime");
+      if (dtEl) VApp.startDatetime(dtEl);
+      const params = new URLSearchParams(location.search);
+      const gameId = params.get("id");
+      if (!gameId) location.href = "games.html";
+      let game = null;
+      let sessionStartTs = null;
+      let accumulatedMs = 0;
+      let sessionTimer = null;
+      let isFs = false;
+      function liveSessionMs() {
+        if (!sessionStartTs) return accumulatedMs;
+        return accumulatedMs + (Date.now() - sessionStartTs);
+      }
+      function formatShort(ms) {
+        if (ms < 1000) return "0s";
+        if (ms < 60000) return `${Math.floor(ms / 1000)}s`;
+        return VStorage.formatTime(ms) || "0m";
+      }
+      function tickDisplay() {
+        const sessMs = liveSessionMs();
+        document.getElementById("session-time").textContent =
+          formatShort(sessMs);
+        if (game) {
+          const stored = VStorage.getPlaytime(game.id);
+          document.getElementById("total-time").textContent = formatShort(
+            stored + sessMs,
+          );
+        }
+      }
+      function startSegment() {
+        if (sessionStartTs) return;
+        sessionStartTs = Date.now();
+        if (!sessionTimer) {
+          sessionTimer = setInterval(tickDisplay, 1000);
+          tickDisplay();
+        }
+      }
+      function saveSegment() {
+        if (!game || !sessionStartTs) return;
+        const segMs = Date.now() - sessionStartTs;
+        sessionStartTs = null;
+        accumulatedMs += segMs;
+        if (segMs > 1500) {
+          VStorage.addPlaytime(game.id, segMs);
+          VStorage.addToHistory(game);
+        }
+      }
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden) {
+          saveSegment();
+        } else if (game) {
+          startSegment();
+        }
+      });
+      window.addEventListener("beforeunload", saveSegment);
+      window.addEventListener("pagehide", saveSegment);
+      const frame = document.getElementById("game-frame");
+      const loadingEl = document.getElementById("player-loading");
+      const errEl = document.getElementById("player-error");
+      const slowBanner = document.getElementById("player-slow-banner");
+      let slowTimer = null;
+      let reloadPending = false;
+      function showLoading(sub) {
+        document.getElementById("pl-title").textContent = game
+          ? `Loading ${game.name}`
+          : "Loading…";
+        document.getElementById("pl-sub").textContent = sub;
+        loadingEl.classList.remove("done");
+      }
+      function hideLoading() {
+        loadingEl.classList.add("done");
+      }
+      function showGameError(msg) {
+        clearTimeout(slowTimer);
+        hideLoading();
+        slowBanner.style.display = "none";
+        frame.style.display = "none";
+        errEl.style.display = "flex";
+        errEl.querySelector("strong").textContent = msg;
+        document.getElementById("error-link").innerHTML =
+          game && game.url
+            ? `<a href="${VApp.esc(
+                game.url,
+              )}" target="_blank" style="color:var(--accent)">Open directly ↗</a>`
+            : "";
+        document
+          .getElementById("error-link")
+          .insertAdjacentHTML(
+            "beforeend",
+            ' · <a href="#" onclick="location.reload();return false" style="color:var(--accent)">Retry</a>',
+          );
+      }
+      function armSlowTimer(ms) {
+        clearTimeout(slowTimer);
+        slowTimer = setTimeout(() => {
+          slowBanner.style.display = "flex";
+          document.getElementById("pl-sub").textContent =
+            "Still loading... big games can take a while";
+        }, ms);
+      }
+      let gameSrc = null;
+      function withBase(html, url) {
+        const tag = `<base href="${new URL(".", url).href}">`;
+        if (/<head(\s[^>]*)?>/i.test(html))
+          return html.replace(/<head(\s[^>]*)?>/i, (m) => m + tag);
+        if (/<html(\s[^>]*)?>/i.test(html))
+          return html.replace(
+            /<html(\s[^>]*)?>/i,
+            (m) => m + "<head>" + tag + "</head>",
+          );
+        return "<!DOCTYPE html><head>" + tag + "</head>" + html;
+      }
+      const USE_BLOB_FALLBACK = false;
+      async function resolveGameSrc() {
+        if (gameSrc) return gameSrc;
+        if (!USE_BLOB_FALLBACK || !/^https?:\/\//i.test(game.url)) {
+          gameSrc = game.url;
+          return gameSrc;
+        }
+        const r = await fetch(game.url, { cache: "force-cache" });
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        const html = await r.text();
+        gameSrc = URL.createObjectURL(
+          new Blob([withBase(html, game.url)], { type: "text/html" }),
+        );
+        return gameSrc;
+      }
+      function waitForIdle() {
+        return new Promise((resolve) => {
+          if (window.requestIdleCallback)
+            requestIdleCallback(resolve, { timeout: 800 });
+          else setTimeout(resolve, 150);
+        });
+      }
+      async function launchGame() {
+        showLoading("Downloading game…");
+        let src;
+        try {
+          src = await resolveGameSrc();
+        } catch (e) {
+          showGameError("Couldn't download the game");
+          return;
+        }
+        showLoading("Starting game…");
+        await waitForIdle();
+        frame.style.display = "block";
+        armSlowTimer(12000);
+        frame.src = src;
+      }
+      frame.onload = () => {
+        if (reloadPending) {
+          reloadPending = false;
+          frame.src = gameSrc || game.url;
+          return;
+        }
+        if (!frame.getAttribute("src") || !game) return;
+        clearTimeout(slowTimer);
+        slowBanner.style.display = "none";
+        hideLoading();
+        startSegment();
+        VStorage.addToHistory(game);
+        applyVolume(parseFloat(volSlider.value));
+      };
+      async function initPlayer() {
+        const games = await VApp.loadGames();
+        game = games.find((g) => String(g.id) === String(gameId));
+        if (!game) {
+          VApp.showToast("Game not found", "error");
+          setTimeout(() => (location.href = "games.html"), 1500);
+          return;
+        }
+        document.title = `${game.name} — vispora`;
+        document.getElementById("game-title").textContent = game.name;
+        document.getElementById("bc-game").textContent = game.name;
+        document.getElementById("game-author").textContent = game.author
+          ? `by ${game.author}`
+          : "";
+        const tags = [...(game.special || []), ...(game.genres || [])].slice(
+          0,
+          4,
+        );
+        document.getElementById("game-tags").innerHTML = tags
+          .map((t) => `<span class="tag tag-accent">${VApp.esc(t)}</span>`)
+          .join("");
+        document.getElementById("total-time").textContent = formatShort(
+          VStorage.getPlaytime(game.id),
+        );
+        updateFavBtn();
+        if (!game.url) {
+          showGameError("This game has no link");
+          return;
+        }
+        try {
+          const particlesEl = document.getElementById("particles-js");
+          if (particlesEl) particlesEl.style.display = "none";
+          if (window.pJSDom && window.pJSDom.length) {
+            window.pJSDom.forEach((p) => {
+              try {
+                p.pJS.fn.vendors.destroypJS();
+              } catch (e) {}
+            });
+            window.pJSDom = [];
+          }
+        } catch (e) {}
+        document.getElementById("slow-open-tab").onclick = popoutGame;
+        document.getElementById("slow-dismiss").onclick = () => {
+          slowBanner.style.display = "none";
+          armSlowTimer(20000);
+        };
+        await launchGame();
+      }
+      function updateFavBtn() {
+        if (!game) return;
+        const btn = document.getElementById("btn-fav");
+        const isFav = VStorage.isFavorite(game.id);
+        btn.style.color = isFav ? "var(--accent)" : "";
+        btn.title = isFav ? "In My List" : "Add to My List";
+        btn.innerHTML = isFav
+          ? `<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>`
+          : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>`;
+      }
+      document.getElementById("btn-fav").onclick = () => {
+        if (!game) return;
+        const added = VStorage.toggleFavorite(game.id);
+        updateFavBtn();
+        VApp.showToast(added ? "Added to My List" : "Removed from My List");
+      };
+      async function popoutGame() {
+        if (!game?.url) {
+          VApp.showToast("No game URL", "error");
+          return;
+        }
+        const win = window.open("", "_blank");
+        if (!win) {
+          VApp.showToast("Popup blocked — allow popups for this site", "error");
+          return;
+        }
+        const iframe = win.document.createElement("iframe");
+        iframe.src = await resolveGameSrc().catch(() => game.url);
+        iframe.style.cssText =
+          "width:100%;height:100%;border:none;margin:0;display:block;";
+        win.document.body.style.cssText = "margin:0;overflow:hidden";
+        win.document.body.appendChild(iframe);
+        VApp.showToast("Opened in new tab!", "success");
+      }
+      document.getElementById("btn-popout").onclick = popoutGame;
+      document.getElementById("btn-reload").onclick = () => {
+        if (!game || !game.url) return;
+        armSlowTimer(12000);
+        showLoading("Reloading…");
+        reloadPending = true;
+        frame.src = "about:blank";
+        setTimeout(() => {
+          if (!reloadPending) return;
+          reloadPending = false;
+          frame.src = gameSrc || game.url;
+        }, 1500);
+        VApp.showToast("Reloaded");
+      };
+      document.getElementById("back-btn").onclick = () => {
+        saveSegment();
+        try {
+          frame.src = "about:blank";
+        } catch (e) {}
+        clearInterval(sessionTimer);
+        window.location.href = "games.html";
+      };
+      const wrap = document.getElementById("iframe-wrap");
+      const btnFs = document.getElementById("btn-fs");
+      const FS_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>`;
+      const FS_EXIT = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v3a2 2 0 0 1-2 2H3"/><path d="M21 8h-3a2 2 0 0 1-2-2V3"/><path d="M3 16h3a2 2 0 0 1 2 2v3"/><path d="M16 21v-3a2 2 0 0 1 2-2h3"/></svg>`;
+      btnFs.onclick = () => {
+        isFs = !isFs;
+        wrap.classList.toggle("fullscreen-mode", isFs);
+        btnFs.innerHTML = isFs ? FS_EXIT : FS_ICON;
+        document.getElementById("game-frame").focus();
+        if (isFs) wrap.requestFullscreen?.().catch(() => {});
+        else if (document.fullscreenElement) document.exitFullscreen?.();
+      };
+      document.addEventListener("fullscreenchange", () => {
+        if (!document.fullscreenElement && isFs) {
+          isFs = false;
+          wrap.classList.remove("fullscreen-mode");
+          btnFs.innerHTML = FS_ICON;
+        }
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && isFs) {
+          isFs = false;
+          wrap.classList.remove("fullscreen-mode");
+          btnFs.innerHTML = FS_ICON;
+          if (document.fullscreenElement) document.exitFullscreen?.();
+        }
+      });
+      const volSlider = document.getElementById("vol-slider");
+      const volIcon = document.getElementById("vol-icon");
+      volSlider.value = parseFloat(
+        localStorage.getItem("vispora_game_vol") ?? "1",
+      );
+      setVolIcon(parseFloat(volSlider.value));
+      function setVolIcon(v) {
+        if (v === 0)
+          volIcon.innerHTML =
+            '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/>';
+        else if (v < 0.5)
+          volIcon.innerHTML =
+            '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>';
+        else
+          volIcon.innerHTML =
+            '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>';
+      }
+      function applyVolume(v) {
+        const frame = document.getElementById("game-frame");
+        if (!frame) return;
+        try {
+          const doc = frame.contentDocument || frame.contentWindow?.document;
+          if (doc)
+            doc.querySelectorAll("audio, video").forEach((el) => {
+              el.volume = v;
+            });
+        } catch {}
+        try {
+          frame.contentWindow.postMessage(
+            { type: "setVolume", volume: v },
+            "*",
+          );
+        } catch {}
+      }
+      volSlider.oninput = () => {
+        const v = parseFloat(volSlider.value);
+        localStorage.setItem("vispora_game_vol", v);
+        setVolIcon(v);
+        applyVolume(v);
+      };
+      initPlayer().catch((e) => {
+        console.error(e);
+        showGameError("Something went wrong loading this game");
+      });
+      VTutorial.autoStart("player", {
+        ready: () =>
+          document.getElementById("game-title").textContent !== "Loading…",
+      });
+    </script>
+  </body>
+</html>

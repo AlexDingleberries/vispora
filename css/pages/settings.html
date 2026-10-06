@@ -1,0 +1,2647 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Settings — vispora</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/pages.css" />
+    <link rel="stylesheet" href="../css/chat.css" />
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="../js/firebase-config.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/cloak.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/media.js"></script>
+    <script src="../js/games-source.js"></script>
+    <script src="../js/ai-source.js"></script>
+    <script src="../js/chat.js"></script>
+    <script src="../js/tutorial.js"></script>
+  </head>
+
+  <body>
+    <div id="particles-js"></div>
+    <div id="nav-ph"></div>
+
+    <main class="settings-page page-enter container">
+      <div class="settings-page-header">
+        <h1>Settings</h1>
+        <p>Customize vispora to your liking</p>
+      </div>
+
+      <div class="settings-layout">
+        <nav class="settings-sidebar" aria-label="Settings sections">
+          <a href="#sec-account" class="settings-nav-link" data-nav="account">
+            Account
+          </a>
+          <a
+            href="#sec-display"
+            class="settings-nav-link active"
+            data-nav="display"
+          >
+            Display
+          </a>
+          <a
+            href="#sec-particles"
+            class="settings-nav-link"
+            data-nav="particles"
+          >
+            Particles
+          </a>
+          <a href="#sec-bgimage" class="settings-nav-link" data-nav="bgimage">
+            Background Image
+          </a>
+          <a href="#sec-chat" class="settings-nav-link" data-nav="chat">
+            Chat
+          </a>
+          <a href="#sec-privacy" class="settings-nav-link" data-nav="privacy">
+            Privacy
+          </a>
+          <a href="#sec-stats" class="settings-nav-link" data-nav="stats">
+            Statistics
+          </a>
+          <a href="#sec-data" class="settings-nav-link" data-nav="data">
+            Data
+          </a>
+          <a href="#sec-ai" class="settings-nav-link" data-nav="ai">
+            AI
+          </a>
+          <a href="#sec-launcher" class="settings-nav-link" data-nav="launcher">
+            Launcher
+          </a>
+          <a href="#sec-about" class="settings-nav-link" data-nav="about">
+            <span class="settings-nav-icon">ℹ</span> About
+          </a>
+        </nav>
+
+        <div class="settings-content">
+          <div id="sec-account">
+            <span class="settings-section-anchor"></span>
+            <div class="settings-section">
+              <div class="settings-section-title">
+                Account
+              </div>
+              <div class="settings-row">
+                <div style="flex: 1">
+                  <div class="settings-label">Display Name</div>
+                  <div class="settings-label-desc">
+                    Shown in the nav and launcher
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      gap: 8px;
+                      margin-top: 10px;
+                      align-items: center;
+                    "
+                  >
+                    <input
+                      type="text"
+                      class="settings-input"
+                      id="acct-display-name"
+                      placeholder="Your name"
+                      maxlength="40"
+                      style="flex: 1"
+                    />
+                    <button
+                      class="btn btn-secondary"
+                      id="btn-save-name"
+                      type="button"
+                    >
+                      Save
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="settings-row">
+                <div>
+                  <div class="settings-label">Change Password</div>
+                  <div class="settings-label-desc">
+                    Update the password you use to sign in
+                  </div>
+                </div>
+                <button
+                  class="btn btn-secondary"
+                  id="btn-chpass-open"
+                  type="button"
+                >
+                  Change Password
+                </button>
+              </div>
+              <div class="settings-row">
+                <div>
+                  <div class="settings-label" style="color: #e85d5d">
+                    Sign Out
+                  </div>
+                  <div class="settings-label-desc">
+                    Sign out of vispora on this device
+                  </div>
+                </div>
+                <button class="btn btn-danger" id="btn-signout" type="button">
+                  Sign Out
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div id="sec-display">
+            <span class="settings-section-anchor"></span>
+            <div class="settings-section">
+              <div class="settings-section-title">
+                Display
+              </div>
+              <div
+                class="settings-row"
+                style="flex-direction: column; align-items: stretch; gap: 14px"
+              >
+                <div class="settings-label">Theme</div>
+                <div style="display: flex; flex-direction: column; gap: 10px">
+                  <div class="theme-group-label">Dark</div>
+                  <div class="theme-grid" id="theme-grid-dark"></div>
+                  <div class="theme-group-label" style="margin-top: 6px">
+                    Light
+                  </div>
+                  <div class="theme-grid" id="theme-grid-light"></div>
+                  <div
+                    class="theme-group-label"
+                    style="margin-top: 6px"
+                    id="theme-group-custom-label"
+                  >
+                    Custom
+                  </div>
+                  <div class="theme-grid" id="theme-grid-custom"></div>
+                  <button
+                    class="btn btn-secondary"
+                    id="btn-make-theme"
+                    type="button"
+                    style="align-self: flex-start; margin-top: 4px"
+                  >
+                    Create Theme
+                  </button>
+                </div>
+              </div>
+              <div class="settings-row">
+                <div>
+                  <div class="settings-label">Font Size</div>
+                  <div class="settings-label-desc">
+                    Adjust text size across the app
+                  </div>
+                </div>
+                <div class="fontsize-controls">
+                  <button class="fontsize-btn" data-size="small">S</button>
+                  <button class="fontsize-btn" data-size="medium">M</button>
+                  <button class="fontsize-btn" data-size="large">L</button>
+                </div>
+              </div>
+              <div class="settings-row">
+                <div>
+                  <div class="settings-label">Navigation Style</div>
+                  <div class="settings-label-desc">
+                    Show the nav as a top bar or a collapsible sidebar
+                  </div>
+                </div>
+                <div class="fontsize-controls" id="navstyle-controls">
+                  <button class="fontsize-btn" data-navstyle="topbar">
+                    Topbar
+                  </button>
+                  <button class="fontsize-btn" data-navstyle="sidebar">
+                    Sidebar
+                  </button>
+                </div>
+              </div>
+              <div
+                class="settings-row"
+                style="flex-direction: column; align-items: stretch; gap: 12px"
+              >
+                <div>
+                  <div class="settings-label">Font</div>
+                  <div class="settings-label-desc">
+                    Choose the typeface used across the app
+                  </div>
+                </div>
+                <div class="font-picker-grid" id="font-picker-grid"></div>
+              </div>
+            </div>
+          </div>
+
+          <div id="sec-particles">
+            <span class="settings-section-anchor"></span>
+            <div class="settings-section">
+              <div class="settings-section-title">
+                Background
+                Particles
+              </div>
+              <div class="settings-row">
+                <div>
+                  <div class="settings-label">Enable Particles</div>
+                  <div class="settings-label-desc">
+                    Animated background effect
+                  </div>
+                </div>
+                <label class="toggle-wrap"
+                  ><input
+                    type="checkbox"
+                    class="toggle-input"
+                    id="particles-enabled" /><span class="toggle-slider"></span
+                ></label>
+              </div>
+              <div id="particles-controls">
+                <div
+                  class="settings-row"
+                  style="
+                    flex-direction: column;
+                    align-items: stretch;
+                    gap: 10px;
+                  "
+                >
+                  <div class="settings-label" style="font-size: 0.78rem">
+                    Presets
+                  </div>
+                  <div
+                    class="fontsize-controls"
+                    id="particle-presets"
+                    style="flex-wrap: wrap"
+                  >
+                    <button class="fontsize-btn" data-preset="dots">
+                      Dots
+                    </button>
+                    <button class="fontsize-btn" data-preset="snow">
+                      Snow
+                    </button>
+                    <button class="fontsize-btn" data-preset="stars">
+                      Stars
+                    </button>
+                    <button class="fontsize-btn" data-preset="network">
+                      Network
+                    </button>
+                    <button class="fontsize-btn" data-preset="bubbles">
+                      Bubbles
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="settings-row"
+                  style="
+                    flex-direction: column;
+                    align-items: stretch;
+                    gap: 16px;
+                  "
+                >
+                  <div class="range-group">
+                    <div class="range-row">
+                      <div class="range-label">
+                        <span>Particle Count</span
+                        ><span id="lbl-count">40</span>
+                      </div>
+                      <input
+                        type="range"
+                        class="range-slider"
+                        id="p-count"
+                        min="10"
+                        max="150"
+                        step="5"
+                      />
+                    </div>
+                    <div class="range-row">
+                      <div class="range-label">
+                        <span>Speed</span><span id="lbl-speed">0.6</span>
+                      </div>
+                      <input
+                        type="range"
+                        class="range-slider"
+                        id="p-speed"
+                        min="0.1"
+                        max="3"
+                        step="0.1"
+                      />
+                    </div>
+                    <div class="range-row">
+                      <div class="range-label">
+                        <span>Size</span><span id="lbl-size">1.5</span>
+                      </div>
+                      <input
+                        type="range"
+                        class="range-slider"
+                        id="p-size"
+                        min="0.5"
+                        max="5"
+                        step="0.5"
+                      />
+                    </div>
+                    <div class="range-row">
+                      <div class="range-label">
+                        <span>Opacity</span><span id="lbl-opacity">0.25</span>
+                      </div>
+                      <input
+                        type="range"
+                        class="range-slider"
+                        id="p-opacity"
+                        min="0.05"
+                        max="0.8"
+                        step="0.05"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="settings-row">
+                  <div>
+                    <div class="settings-label">Shape</div>
+                    <div class="settings-label-desc">Particle silhouette</div>
+                  </div>
+                  <select class="settings-select" id="p-shape">
+                    <option value="circle">Circle</option>
+                    <option value="edge">Square</option>
+                    <option value="triangle">Triangle</option>
+                    <option value="polygon">Polygon</option>
+                    <option value="star">Star</option>
+                  </select>
+                </div>
+                <div class="settings-row">
+                  <div>
+                    <div class="settings-label">Direction</div>
+                    <div class="settings-label-desc">
+                      Which way particles drift
+                    </div>
+                  </div>
+                  <select class="settings-select" id="p-direction">
+                    <option value="none">Random</option>
+                    <option value="top">Upward</option>
+                    <option value="bottom">Downward</option>
+                    <option value="left">Left</option>
+                    <option value="right">Right</option>
+                  </select>
+                </div>
+                <div class="settings-row">
+                  <div>
+                    <div class="settings-label">Link Particles</div>
+                    <div class="settings-label-desc">
+                      Show connecting lines between particles
+                    </div>
+                  </div>
+                  <label class="toggle-wrap"
+                    ><input
+                      type="checkbox"
+                      class="toggle-input"
+                      id="p-linked" /><span class="toggle-slider"></span
+                  ></label>
+                </div>
+                <div class="settings-row">
+                  <div>
+                    <div class="settings-label">Particle Color</div>
+                    <div class="settings-label-desc">
+                      Use accent color or fixed white
+                    </div>
+                  </div>
+                  <select class="settings-select" id="p-color">
+                    <option value="accent">Accent Color</option>
+                    <option value="white">White</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="sec-bgimage">
+            <span class="settings-section-anchor"></span>
+            <div class="settings-section">
+              <div class="settings-section-title">
+                Background Image
+              </div>
+              <div class="settings-row">
+                <div>
+                  <div class="settings-label">Enable Background Image</div>
+                  <div class="settings-label-desc">
+                    Stored on this device only
+                  </div>
+                </div>
+                <label class="toggle-wrap"
+                  ><input
+                    type="checkbox"
+                    class="toggle-input"
+                    id="bg-enabled" /><span class="toggle-slider"></span
+                ></label>
+              </div>
+              <div id="bgimage-controls">
+                <div
+                  class="settings-row"
+                  style="
+                    flex-direction: column;
+                    align-items: stretch;
+                    gap: 12px;
+                  "
+                >
+                  <div id="bg-preview-wrap" style="display: none">
+                    <img
+                      id="bg-preview"
+                      style="
+                        width: 100%;
+                        max-height: 160px;
+                        object-fit: cover;
+                        border-radius: var(--radius);
+                        border: 1px solid var(--card-border);
+                      "
+                    />
+                  </div>
+                  <div style="display: flex; gap: 8px">
+                    <button
+                      class="btn btn-secondary"
+                      id="btn-bg-choose"
+                      type="button"
+                    >
+                      Choose Image…
+                    </button>
+                    <button
+                      class="btn btn-secondary"
+                      id="btn-bg-remove"
+                      type="button"
+                      style="display: none; color: #e85d5d"
+                    >
+                      Remove
+                    </button>
+                  </div>
+                  <input
+                    type="file"
+                    id="bg-file-input"
+                    accept="image/*"
+                    style="display: none"
+                  />
+                </div>
+                <div
+                  class="settings-row"
+                  style="
+                    flex-direction: column;
+                    align-items: stretch;
+                    gap: 16px;
+                  "
+                >
+                  <div class="range-group">
+                    <div class="range-row">
+                      <div class="range-label">
+                        <span>Opacity</span
+                        ><span id="lbl-bg-opacity">0.35</span>
+                      </div>
+                      <input
+                        type="range"
+                        class="range-slider"
+                        id="bg-opacity"
+                        min="0.05"
+                        max="1"
+                        step="0.05"
+                      />
+                    </div>
+                    <div class="range-row">
+                      <div class="range-label">
+                        <span>Blur</span><span id="lbl-bg-blur">0px</span>
+                      </div>
+                      <input
+                        type="range"
+                        class="range-slider"
+                        id="bg-blur"
+                        min="0"
+                        max="20"
+                        step="1"
+                      />
+                    </div>
+                    <div class="range-row">
+                      <div class="range-label">
+                        <span>Darken Overlay</span
+                        ><span id="lbl-bg-darken">0.35</span>
+                      </div>
+                      <input
+                        type="range"
+                        class="range-slider"
+                        id="bg-darken"
+                        min="0"
+                        max="0.9"
+                        step="0.05"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="settings-row">
+                  <div>
+                    <div class="settings-label">Fit</div>
+                    <div class="settings-label-desc">
+                      How the image scales to fill the screen
+                    </div>
+                  </div>
+                  <select class="settings-select" id="bg-size">
+                    <option value="cover">Cover (fill, crop edges)</option>
+                    <option value="contain">Contain (fit whole image)</option>
+                    <option value="auto">Original Size</option>
+                  </select>
+                </div>
+                <div class="settings-row">
+                  <div>
+                    <div class="settings-label">Position</div>
+                    <div class="settings-label-desc">
+                      Where the image anchors
+                    </div>
+                  </div>
+                  <select class="settings-select" id="bg-position">
+                    <option value="center">Center</option>
+                    <option value="top">Top</option>
+                    <option value="bottom">Bottom</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="sec-chat">
+            <span class="settings-section-anchor"></span>
+            <div class="settings-section">
+              <div class="settings-section-title">
+                Chat &amp; Friends
+              </div>
+
+              <div class="settings-row">
+                <div>
+                  <div class="settings-label">Profanity Filter</div>
+                  <div class="settings-label-desc">
+                    Censor common swear words in messages you receive
+                  </div>
+                </div>
+                <label class="toggle-wrap"
+                  ><input
+                    type="checkbox"
+                    class="toggle-input"
+                    id="chat-profanity" /><span class="toggle-slider"></span
+                ></label>
+              </div>
+
+              <div class="settings-row">
+                <div>
+                  <div class="settings-label">Link Previews</div>
+                  <div class="settings-label-desc">
+                    Show a clickable card when a URL is shared
+                  </div>
+                </div>
+                <label class="toggle-wrap"
+                  ><input
+                    type="checkbox"
+                    class="toggle-input"
+                    id="chat-link-preview" /><span class="toggle-slider"></span
+                ></label>
+              </div>
+
+              <div class="settings-row">
+                <div>
+                  <div class="settings-label">Show my activity to friends</div>
+                  <div class="settings-label-desc">
+                    Friends can see what game, show, or movie you're in
+                  </div>
+                </div>
+                <label class="toggle-wrap"
+                  ><input
+                    type="checkbox"
+                    class="toggle-input"
+                    id="chat-show-activity" /><span class="toggle-slider"></span
+                ></label>
+              </div>
+
+              <div
+                class="settings-row"
+                style="flex-direction: column; align-items: stretch; gap: 16px"
+              >
+                <div class="settings-label">Sound Effects</div>
+                <div class="range-group">
+                  <div class="range-row">
+                    <div class="range-label">
+                      <span>Send Message</span
+                      ><span id="lbl-snd-send">30%</span>
+                    </div>
+                    <input
+                      type="range"
+                      class="range-slider"
+                      id="snd-send"
+                      min="0"
+                      max="100"
+                      step="5"
+                      value="30"
+                    />
+                  </div>
+                  <div class="range-row">
+                    <div class="range-label">
+                      <span>Receive Message</span
+                      ><span id="lbl-snd-recv">40%</span>
+                    </div>
+                    <input
+                      type="range"
+                      class="range-slider"
+                      id="snd-recv"
+                      min="0"
+                      max="100"
+                      step="5"
+                      value="40"
+                    />
+                  </div>
+                  <div class="range-row">
+                    <div class="range-label">
+                      <span>Friend Requests</span
+                      ><span id="lbl-snd-req">50%</span>
+                    </div>
+                    <input
+                      type="range"
+                      class="range-slider"
+                      id="snd-req"
+                      min="0"
+                      max="100"
+                      step="5"
+                      value="50"
+                    />
+                  </div>
+                </div>
+                <div style="font-size: 0.75rem; color: var(--text-secondary)">
+                  Set to 0 to disable that sound entirely.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="sec-privacy">
+            <span class="settings-section-anchor"></span>
+            <div class="settings-section">
+              <div class="settings-section-title">
+                Privacy &amp;
+                Security
+              </div>
+              <div class="settings-row">
+                <div>
+                  <div class="settings-label">Cloaking Mode</div>
+                  <div class="settings-label-desc">
+                    How to disguise this tab
+                  </div>
+                </div>
+                <select class="settings-select" id="cloak-mode">
+                  <option value="none">None</option>
+                  <option value="google">Google Drive</option>
+                  <option value="about-blank">About Blank</option>
+                  <option value="custom">Custom URL</option>
+                </select>
+              </div>
+              <div
+                class="settings-row"
+                id="custom-url-row"
+                style="display: none"
+              >
+                <div style="flex: 1">
+                  <div class="settings-label">Custom URL</div>
+                  <div class="settings-label-desc">
+                    Tab will appear as this site
+                  </div>
+                  <input
+                    type="url"
+                    class="settings-input"
+                    id="custom-url"
+                    placeholder="https://classroom.google.com"
+                  />
+                </div>
+              </div>
+              <div class="settings-row">
+                <div style="flex: 1">
+                  <div class="settings-label">Preview</div>
+                  <div class="cloak-preview">
+                    <div class="cloak-preview-favicon" id="prev-fav">G</div>
+                    <span id="prev-title">My Drive – Google Drive</span>
+                  </div>
+                </div>
+              </div>
+              <div class="settings-row">
+                <div>
+                  <div class="settings-label">Auto-Cloak on Load</div>
+                  <div class="settings-label-desc">
+                    Apply cloaking when page opens
+                  </div>
+                </div>
+                <label class="toggle-wrap"
+                  ><input
+                    type="checkbox"
+                    class="toggle-input"
+                    id="auto-cloak" /><span class="toggle-slider"></span
+                ></label>
+              </div>
+              <div class="settings-row">
+                <div>
+                  <div class="settings-label">Panic Key</div>
+                  <div class="settings-label-desc">
+                    Alt + this key instantly redirects or cloaks the tab
+                  </div>
+                </div>
+                <div
+                  class="panic-key-display"
+                  id="panic-key-btn"
+                  tabindex="0"
+                  role="button"
+                >
+                  <svg
+                    width="13"
+                    height="13"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <rect x="2" y="7" width="20" height="15" rx="2" />
+                    <polyline points="17 2 12 7 7 2" />
+                  </svg>
+                  Alt + <span id="panic-key-lbl">—</span>
+                </div>
+              </div>
+              <div class="settings-row">
+                <div>
+                  <div class="settings-label">Leave Site Prevention</div>
+                  <div class="settings-label-desc">
+                    Show a "Leave site?" confirmation when closing or navigating
+                    away
+                  </div>
+                </div>
+                <label class="toggle-wrap"
+                  ><input
+                    type="checkbox"
+                    class="toggle-input"
+                    id="leave-prevention" /><span class="toggle-slider"></span
+                ></label>
+              </div>
+            </div>
+          </div>
+
+          <div id="sec-stats">
+            <span class="settings-section-anchor"></span>
+            <div class="settings-section">
+              <div class="settings-section-title">
+                Statistics
+              </div>
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: repeat(3, 1fr);
+                  gap: 12px;
+                  margin-bottom: 20px;
+                "
+              >
+                <div class="stat-card">
+                  <div class="stat-value" id="st-time">—</div>
+                  <div class="stat-label">Playtime</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-value" id="st-played">—</div>
+                  <div class="stat-label">Played</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-value" id="st-favs">—</div>
+                  <div class="stat-label">My List</div>
+                </div>
+              </div>
+              <div
+                class="settings-section-title"
+                style="margin-bottom: 12px; font-size: 0.68rem"
+              >
+                Top by Playtime
+              </div>
+              <div id="top-visps"></div>
+            </div>
+          </div>
+
+          <div id="sec-data">
+            <span class="settings-section-anchor"></span>
+            <div class="settings-section">
+              <div class="settings-section-title">
+                Data Management
+              </div>
+              <div class="settings-row">
+                <div>
+                  <div class="settings-label">Export Data</div>
+                  <div class="settings-label-desc">
+                    Download all settings, history &amp; favorites as JSON
+                  </div>
+                </div>
+                <button class="btn btn-secondary" id="btn-export" type="button">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Export
+                </button>
+              </div>
+              <div class="settings-row">
+                <div>
+                  <div class="settings-label">Import Data</div>
+                  <div class="settings-label-desc">
+                    Restore from a previously exported JSON file
+                  </div>
+                </div>
+                <button class="btn btn-secondary" id="btn-import" type="button">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="17 8 12 3 7 8" />
+                    <line x1="12" y1="3" x2="12" y2="15" />
+                  </svg>
+                  Import
+                </button>
+                <input
+                  type="file"
+                  id="import-file"
+                  accept=".json"
+                  style="display: none"
+                />
+              </div>
+              <div class="settings-row">
+                <div>
+                  <div class="settings-label">Refresh Servers</div>
+                  <div class="settings-label-desc">
+                    Streaming server links refresh automatically once a day but
+                    you can fetch the latest now.
+                  </div>
+                </div>
+                <button
+                  class="btn btn-secondary"
+                  id="btn-refresh-servers"
+                  type="button"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="23 4 23 10 17 10" />
+                    <polyline points="1 20 1 14 7 14" />
+                    <path
+                      d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"
+                    />
+                  </svg>
+                  Refresh
+                </button>
+              </div>
+              <div class="settings-row">
+                <div>
+                  <div class="settings-label">Refresh Games</div>
+                  <div class="settings-label-desc">
+                    The games library refreshes automatically once a day but you
+                    can fetch the latest list now.
+                  </div>
+                </div>
+                <button
+                  class="btn btn-secondary"
+                  id="btn-refresh-games"
+                  type="button"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="23 4 23 10 17 10" />
+                    <polyline points="1 20 1 14 7 14" />
+                    <path
+                      d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"
+                    />
+                  </svg>
+                  Refresh
+                </button>
+              </div>
+              <div class="settings-row">
+                <div>
+                  <div class="settings-label">Refresh AI Models</div>
+                  <div class="settings-label-desc">
+                    The AI model list refreshes automatically once a day but you
+                    can fetch the latest list now.
+                  </div>
+                </div>
+                <button
+                  class="btn btn-secondary"
+                  id="btn-refresh-ai"
+                  type="button"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="23 4 23 10 17 10" />
+                    <polyline points="1 20 1 14 7 14" />
+                    <path
+                      d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"
+                    />
+                  </svg>
+                  Refresh
+                </button>
+              </div>
+              <div class="settings-row">
+                <div>
+                  <div class="settings-label">Clear Game History</div>
+                  <div class="settings-label-desc">
+                    Remove all play history and timers (favorites kept)
+                  </div>
+                </div>
+                <button class="btn btn-danger" id="btn-clear" type="button">
+                  Clear
+                </button>
+              </div>
+              <div class="settings-row">
+                <div>
+                  <div class="settings-label">Clear Media History</div>
+                  <div class="settings-label-desc">
+                    Remove all watched movies, TV shows, and anime history
+                  </div>
+                </div>
+                <button
+                  class="btn btn-danger"
+                  id="btn-clear-media"
+                  type="button"
+                >
+                  Clear
+                </button>
+              </div>
+              <div class="settings-row">
+                <div>
+                  <div class="settings-label">Reset Everything</div>
+                  <div class="settings-label-desc">
+                    Permanently wipe all data and settings (CANNOT BE UNDONE)
+                  </div>
+                </div>
+                <button class="btn btn-danger" id="btn-reset" type="button">
+                  Reset
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div id="sec-ai">
+            <span class="settings-section-anchor"></span>
+            <div class="settings-section">
+              <div class="settings-section-title">
+                AI Settings
+              </div>
+              <div class="settings-row">
+                <div style="flex: 1">
+                  <div class="settings-label">Groq API Key</div>
+                  <div class="settings-label-desc">
+                    Use your own key for unlimited AI chat and image uploads
+                    (Qwen). Get one free at
+                    <strong>console.groq.com</strong>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      gap: 8px;
+                      margin-top: 10px;
+                      align-items: center;
+                    "
+                  >
+                    <input
+                      type="password"
+                      class="settings-input"
+                      id="groq-key"
+                      placeholder="gsk_…"
+                      style="
+                        flex: 1;
+                        font-family: monospace;
+                        font-size: 0.82rem;
+                        letter-spacing: 0.04em;
+                      "
+                    />
+                    <button
+                      class="btn btn-secondary"
+                      id="btn-groq-save"
+                      type="button"
+                    >
+                      Save
+                    </button>
+                    <button
+                      class="btn btn-danger"
+                      id="btn-groq-clear"
+                      type="button"
+                    >
+                      Clear
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="settings-row">
+                <div
+                  style="
+                    font-size: 0.75rem;
+                    color: var(--text-secondary);
+                    padding: 8px 12px;
+                    background: var(--bg2);
+                    border-radius: var(--radius);
+                    border: 1px solid var(--card-border);
+                    width: 100%;
+                    line-height: 1.6;
+                  "
+                >
+                  Your key is stored locally in your browser only and never
+                  sent to vispora servers.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="sec-launcher">
+            <span class="settings-section-anchor"></span>
+            <div class="settings-section">
+              <div class="settings-section-title">
+                About:Blank
+                Launcher
+              </div>
+              <div class="settings-row">
+                <div style="flex: 1">
+                  <div class="settings-label">Open Site in About:Blank</div>
+                  <div class="settings-label-desc">
+                    Paste any URL and it shows
+                    <code
+                      style="
+                        font-size: 0.75rem;
+                        padding: 1px 5px;
+                        background: var(--bg4);
+                        border-radius: 3px;
+                      "
+                      >about:blank</code
+                    >
+                    in address bar
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      gap: 8px;
+                      margin-top: 10px;
+                      align-items: center;
+                    "
+                  >
+                    <input
+                      type="url"
+                      class="settings-input"
+                      id="ab-url"
+                      placeholder="https://example.com"
+                      style="flex: 1"
+                    />
+                    <button
+                      class="btn btn-secondary"
+                      id="btn-ab-launch"
+                      type="button"
+                    >
+                      <svg
+                        width="13"
+                        height="13"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        style="margin-right: 4px"
+                      >
+                        <path
+                          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        />
+                        <polyline points="15 3 21 3 21 9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
+                      </svg>
+                      Launch
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="settings-row">
+                <div
+                  style="
+                    font-size: 0.75rem;
+                    color: var(--text-secondary);
+                    padding: 8px 12px;
+                    background: var(--bg2);
+                    border-radius: var(--radius);
+                    border: 1px solid var(--card-border);
+                    width: 100%;
+                    line-height: 1.6;
+                  "
+                >
+                  Allow popups for this site if your browser blocks it.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="sec-about">
+            <span class="settings-section-anchor"></span>
+            <div class="settings-section">
+              <div class="settings-section-title">
+                <span class="settings-section-icon">ℹ</span> About vispora
+              </div>
+              <div class="settings-row">
+                <div>
+                  <div class="settings-label">vispora</div>
+                  <div class="settings-label-desc">
+                    A browser-based entertainment hub built by a student, for
+                    students.
+                  </div>
+                </div>
+                <span class="about-version"></span>
+              </div>
+              <div class="settings-row">
+                <div>
+                  <div class="settings-label">Tutorial</div>
+                  <div class="settings-label-desc">
+                    Reset and replay the guided tours (each page's tour shows
+                    again)
+                  </div>
+                </div>
+                <button
+                  class="btn btn-secondary"
+                  id="btn-replay-tour"
+                  type="button"
+                >
+                  Replay Tour
+                </button>
+              </div>
+              <div
+                class="settings-row"
+                style="
+                  flex-direction: column;
+                  align-items: flex-start;
+                  gap: 12px;
+                "
+              >
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    width: 100%;
+                  "
+                >
+                  <div
+                    style="
+                      font-size: 0.8rem;
+                      font-weight: 700;
+                      color: var(--text-secondary);
+                      text-transform: uppercase;
+                      letter-spacing: 0.08em;
+                    "
+                  >
+                    Built By
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 10px;
+                      padding: 10px 14px;
+                      background: var(--bg2);
+                      border-radius: var(--radius);
+                      border: 1px solid var(--card-border);
+                    "
+                  >
+                    <span style="font-size: 1.4rem"></span>
+                    <div>
+                      <div style="font-size: 0.9rem; font-weight: 700">
+                        alexdingleberries
+                      </div>
+                      <div
+                        style="font-size: 0.72rem; color: var(--text-secondary)"
+                      >
+                        Developer &amp; Designer
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    width: 100%;
+                  "
+                >
+                  <div
+                    style="
+                      font-size: 0.8rem;
+                      font-weight: 700;
+                      color: var(--text-secondary);
+                      text-transform: uppercase;
+                      letter-spacing: 0.08em;
+                    "
+                  >
+                    Powered By
+                  </div>
+                  <div
+                    style="
+                      display: grid;
+                      grid-template-columns: 1fr 1fr;
+                      gap: 8px;
+                    "
+                  >
+                    <div
+                      style="
+                        padding: 9px 12px;
+                        background: var(--bg2);
+                        border: 1px solid var(--card-border);
+                        border-radius: var(--radius);
+                        font-size: 0.78rem;
+                      "
+                    >
+                      <div style="font-weight: 700; margin-bottom: 2px">
+                        Groq
+                      </div>
+                      <div
+                        style="color: var(--text-secondary); font-size: 0.68rem"
+                      >
+                        AI Chatbots
+                      </div>
+                    </div>
+                    <div
+                      style="
+                        padding: 9px 12px;
+                        background: var(--bg2);
+                        border: 1px solid var(--card-border);
+                        border-radius: var(--radius);
+                        font-size: 0.78rem;
+                      "
+                    >
+                      <div style="font-weight: 700; margin-bottom: 2px">
+                        gn-math
+                      </div>
+                      <div
+                        style="color: var(--text-secondary); font-size: 0.68rem"
+                      >
+                        Game Collection
+                      </div>
+                    </div>
+                    <div
+                      style="
+                        padding: 9px 12px;
+                        background: var(--bg2);
+                        border: 1px solid var(--card-border);
+                        border-radius: var(--radius);
+                        font-size: 0.78rem;
+                      "
+                    >
+                      <div style="font-weight: 700; margin-bottom: 2px">
+                        TMDB
+                      </div>
+                      <div
+                        style="color: var(--text-secondary); font-size: 0.68rem"
+                      >
+                        Movie &amp; TV data
+                      </div>
+                    </div>
+                    <div
+                      style="
+                        padding: 9px 12px;
+                        background: var(--bg2);
+                        border: 1px solid var(--card-border);
+                        border-radius: var(--radius);
+                        font-size: 0.78rem;
+                      "
+                    >
+                      <div style="font-weight: 700; margin-bottom: 2px">
+                        Kitsu
+                      </div>
+                      <div
+                        style="color: var(--text-secondary); font-size: 0.68rem"
+                      >
+                        Anime data
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  style="
+                    font-size: 0.72rem;
+                    color: var(--text-secondary);
+                    line-height: 1.6;
+                    padding: 10px 14px;
+                    background: var(--bg2);
+                    border-radius: var(--radius);
+                    border: 1px solid var(--card-border);
+                    width: 100%;
+                  "
+                >
+                  <strong>Ad Notice:</strong> Some streaming content may
+                  display ads from third-party providers. Press
+                  <kbd
+                    style="
+                      padding: 1px 5px;
+                      border-radius: 3px;
+                      background: var(--bg4);
+                      border: 1px solid var(--card-border);
+                      font-size: 0.68rem;
+                    "
+                    >Ctrl + W</kbd
+                  >
+                  immediately if an unwanted tab opens.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div id="toast-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+      (function () {
+        "use strict";
+
+        const DOMAIN = "@vispora.app";
+        const SECTIONS = [
+          "account",
+          "display",
+          "particles",
+          "bgimage",
+          "chat",
+          "privacy",
+          "stats",
+          "data",
+          "ai",
+          "launcher",
+          "about",
+        ];
+
+        document.getElementById("nav-ph").innerHTML = VApp.navHTML("settings");
+        VCloak.initCloak();
+        VApp.initPanic();
+        VApp.initNavProfile();
+        VApp.initNavChat();
+        VApp.initParticles();
+        VApp.initVersionCheck();
+        const dtEl = document.getElementById("nav-datetime");
+        if (dtEl) VApp.startDatetime(dtEl);
+
+        const navLinks = document.querySelectorAll(
+          ".settings-nav-link[data-nav]",
+        );
+        function updateActiveNav() {
+          let current = SECTIONS[0];
+          SECTIONS.forEach((id) => {
+            const el = document.getElementById("sec-" + id);
+            if (!el) return;
+            if (el.getBoundingClientRect().top <= 120) current = id;
+          });
+          navLinks.forEach((l) =>
+            l.classList.toggle("active", l.dataset.nav === current),
+          );
+        }
+        window.addEventListener("scroll", updateActiveNav, { passive: true });
+        navLinks.forEach((l) =>
+          l.addEventListener("click", (e) => {
+            e.preventDefault();
+            const target = document.getElementById("sec-" + l.dataset.nav);
+            if (target)
+              target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }),
+        );
+        const initHash = location.hash.replace("#sec-", "").replace("#", "");
+        if (initHash) {
+          const el = document.getElementById("sec-" + initHash);
+          if (el) setTimeout(() => el.scrollIntoView({ block: "start" }), 100);
+        }
+
+        (function initAccount() {
+          const fbUser = window.VCurrentUser;
+          const profile = VStorage.getUserProfile();
+          const username = fbUser
+            ? (fbUser.email || "").replace(DOMAIN, "")
+            : (profile.email || "").replace(DOMAIN, "");
+          const displayName =
+            fbUser?.displayName || profile.displayName || username;
+
+          document.getElementById("acct-display-name").value = displayName;
+
+          document.getElementById("btn-save-name").onclick = async () => {
+            const name = document
+              .getElementById("acct-display-name")
+              .value.trim();
+            if (!name) {
+              VApp.showToast("Name cannot be empty", "error");
+              return;
+            }
+            try {
+              await VStorage.saveUserProfile({ displayName: name });
+              if (fbUser) await fbUser.updateProfile({ displayName: name });
+              VApp.showToast("Display name saved", "success");
+            } catch (e) {
+              VApp.showToast("Failed to save name", "error");
+            }
+          };
+          document
+            .getElementById("acct-display-name")
+            .addEventListener("keydown", (e) => {
+              if (e.key === "Enter") {
+                e.preventDefault();
+                document.getElementById("btn-save-name").click();
+              }
+            });
+
+          function openChangePasswordModal() {
+            const o = document.createElement("div");
+            o.className = "modal-overlay";
+            o.innerHTML = `<div class="modal" role="dialog" aria-modal="true" style="max-width:380px">
+      <h3>Change Password</h3>
+      <p>Enter your current password and choose a new one.</p>
+      <div id="chpass-form-wrap" style="display:flex;flex-direction:column;gap:14px">
+        <div class="login-field">
+          <label class="login-label" for="cp-old">Current password</label>
+          <input type="password" class="login-input" id="cp-old" placeholder="Current password" autocomplete="current-password">
+        </div>
+        <div class="login-field">
+          <label class="login-label" for="cp-new">New password</label>
+          <input type="password" class="login-input" id="cp-new" placeholder="At least 6 characters" autocomplete="new-password" minlength="6">
+        </div>
+        <div class="login-field">
+          <label class="login-label" for="cp-new2">Confirm new password</label>
+          <input type="password" class="login-input" id="cp-new2" placeholder="Re-enter new password" autocomplete="new-password" minlength="6">
+        </div>
+        <div class="login-error" id="cp-error" role="alert" style="display:none"></div>
+      </div>
+      <div class="modal-actions" style="margin-top:18px">
+        <button class="btn btn-secondary" id="cp-cancel" type="button">Cancel</button>
+        <button class="btn btn-primary" id="btn-chpass" type="button">Update Password</button>
+      </div>
+    </div>`;
+            document.body.appendChild(o);
+
+            const close = () => {
+              document.removeEventListener("keydown", onEsc);
+              o.remove();
+            };
+            function onEsc(e) {
+              if (e.key === "Escape") close();
+            }
+            document.addEventListener("keydown", onEsc);
+            o.addEventListener("click", (e) => {
+              if (e.target === o) close();
+            });
+            o.querySelector("#cp-cancel").onclick = close;
+
+            function _cpErr(msg) {
+              const el = o.querySelector("#cp-error");
+              el.textContent = msg;
+              el.style.display = msg ? "block" : "none";
+            }
+            o.querySelector("#btn-chpass").onclick = async () => {
+              _cpErr("");
+              const oldPass = o.querySelector("#cp-old").value;
+              const newPass = o.querySelector("#cp-new").value;
+              const newPass2 = o.querySelector("#cp-new2").value;
+              if (!oldPass) {
+                _cpErr("Enter your current password.");
+                return;
+              }
+              if (newPass.length < 6) {
+                _cpErr("New password must be at least 6 characters.");
+                return;
+              }
+              if (newPass !== newPass2) {
+                _cpErr("New passwords do not match.");
+                return;
+              }
+              const btn = o.querySelector("#btn-chpass");
+              btn.disabled = true;
+              btn.textContent = "Updating…";
+              try {
+                const cred = firebase.auth.EmailAuthProvider.credential(
+                  fbUser.email,
+                  oldPass,
+                );
+                await fbUser.reauthenticateWithCredential(cred);
+                await fbUser.updatePassword(newPass);
+                VApp.showToast("Password updated!", "success");
+                close();
+              } catch (e) {
+                const msgs = {
+                  "auth/wrong-password": "Current password is incorrect.",
+                  "auth/too-many-requests":
+                    "Too many attempts; try again later.",
+                  "auth/requires-recent-login":
+                    "Session expired. Sign out and back in, then try again.",
+                };
+                _cpErr(msgs[e.code] || "Failed to update password.");
+                btn.disabled = false;
+                btn.textContent = "Update Password";
+              }
+            };
+            o.querySelector("#cp-old").focus();
+            o.querySelectorAll("#cp-old, #cp-new, #cp-new2").forEach((inp) => {
+              inp.addEventListener("keydown", (e) => {
+                if (e.key === "Enter") {
+                  e.preventDefault();
+                  o.querySelector("#btn-chpass").click();
+                }
+              });
+            });
+          }
+          document.getElementById("btn-chpass-open").onclick =
+            openChangePasswordModal;
+
+          document.getElementById("btn-signout").onclick = async () => {
+            const ok = await VApp.showModal({
+              title: "Sign Out",
+              message: "Sign out of vispora?",
+              confirmText: "Sign Out",
+              dangerous: true,
+            });
+            if (ok) {
+              try {
+                await VStorage.syncToCloud();
+              } catch (e) {}
+              await VFirebase.auth.signOut();
+              VStorage.resetCloudSync();
+              window.top.location.replace("../index.html");
+            }
+          };
+        })();
+
+        (function initDisplay() {
+          function renderThemeGrid() {
+            const currentId = VTheme.normaliseThemeId(VStorage.getTheme());
+            ["dark", "light"].forEach((group) => {
+              const container = document.getElementById("theme-grid-" + group);
+              const themes = VTheme.THEME_PRESETS.filter(
+                (t) => t.dark === (group === "dark"),
+              );
+              container.innerHTML = "";
+              themes.forEach((theme) => {
+                const isActive = theme.id === currentId;
+                const card = document.createElement("button");
+                card.type = "button";
+                card.className = "theme-card" + (isActive ? " active" : "");
+                card.innerHTML = `
+          <div class="theme-card-preview" style="background:${
+            theme.preview.bg
+          };position:relative">
+            <div style="background:${
+              theme.preview.surface
+            }20;border:1px solid ${
+                  theme.preview.accent
+                }22;border-radius:5px;padding:4px 6px;display:flex;align-items:center;gap:5px">
+              <div style="width:7px;height:7px;border-radius:50%;background:${
+                theme.preview.accent
+              };flex-shrink:0"></div>
+              <div style="flex:1;height:2px;background:${
+                theme.preview.text
+              };opacity:.25;border-radius:2px"></div>
+            </div>
+            <div style="padding:0 2px;margin-top:5px;display:flex;flex-direction:column;gap:3px">
+              <div style="height:3px;border-radius:2px;width:75%;background:${
+                theme.preview.text
+              };opacity:.5"></div>
+              <div style="height:2px;border-radius:2px;width:50%;background:${
+                theme.preview.text
+              };opacity:.25"></div>
+              <div style="height:2px;border-radius:2px;width:62%;background:${
+                theme.preview.accent
+              };opacity:.6;margin-top:2px"></div>
+            </div>
+            ${
+              isActive
+                ? `<div class="theme-card-check" style="background:${theme.preview.accent};color:${theme.preview.bg}">✓</div>`
+                : ""
+            }
+          </div>
+          <div class="theme-card-name" style="${
+            isActive ? "color:" + theme.preview.accent : ""
+          }">${theme.label}</div>`;
+                card.onclick = () => {
+                  VTheme.switchTheme(theme.id);
+                  renderThemeGrid();
+                  if (VStorage.getParticlesConfig().color === "accent")
+                    VApp.reloadParticles();
+                  VApp.showToast("Theme: " + theme.label, "success");
+                };
+                container.appendChild(card);
+              });
+            });
+
+            const customThemes = VStorage.getCustomThemes();
+            const customLabel = document.getElementById(
+              "theme-group-custom-label",
+            );
+            const customGrid = document.getElementById("theme-grid-custom");
+            customLabel.style.display = customThemes.length ? "" : "none";
+            customGrid.style.display = customThemes.length ? "" : "none";
+            customGrid.innerHTML = "";
+            customThemes.forEach((theme) => {
+              const isActive = theme.id === currentId;
+              const v = theme.vars || {};
+              const card = document.createElement("button");
+              card.type = "button";
+              card.className = "theme-card" + (isActive ? " active" : "");
+              card.innerHTML = `
+        <div class="theme-card-preview" style="background:${
+          v.bg || "#111"
+        };position:relative">
+          <div style="background:${
+            v.cardBg || v.bg3 || "#222"
+          }20;border:1px solid ${
+                v.accent || "#888"
+              }22;border-radius:5px;padding:4px 6px;display:flex;align-items:center;gap:5px">
+            <div style="width:7px;height:7px;border-radius:50%;background:${
+              v.accent || "#888"
+            };flex-shrink:0"></div>
+            <div style="flex:1;height:2px;background:${
+              v.text || "#fff"
+            };opacity:.25;border-radius:2px"></div>
+          </div>
+          <div style="padding:0 2px;margin-top:5px;display:flex;flex-direction:column;gap:3px">
+            <div style="height:3px;border-radius:2px;width:75%;background:${
+              v.text || "#fff"
+            };opacity:.5"></div>
+            <div style="height:2px;border-radius:2px;width:50%;background:${
+              v.text || "#fff"
+            };opacity:.25"></div>
+            <div style="height:2px;border-radius:2px;width:62%;background:${
+              v.accent || "#888"
+            };opacity:.6;margin-top:2px"></div>
+          </div>
+          ${
+            isActive
+              ? `<div class="theme-card-check" style="background:${
+                  v.accent || "#888"
+                };color:${v.bg || "#111"}">✓</div>`
+              : ""
+          }
+          <button class="theme-card-delete" type="button" title="Delete theme" data-theme-id="${
+            theme.id
+          }">×</button>
+        </div>
+        <div class="theme-card-name" style="${
+          isActive ? "color:" + (v.accent || "#888") : ""
+        }">${VApp.esc(theme.label)}</div>`;
+              card.onclick = (e) => {
+                if (e.target.closest(".theme-card-delete")) return;
+                VTheme.switchTheme(theme.id);
+                renderThemeGrid();
+                if (VStorage.getParticlesConfig().color === "accent")
+                  VApp.reloadParticles();
+                VApp.showToast("Theme: " + theme.label, "success");
+              };
+              card.querySelector(".theme-card-delete").onclick = async (e) => {
+                e.stopPropagation();
+                const ok = await VApp.showModal({
+                  title: "Delete Theme",
+                  message: `Delete "${theme.label}"? This can't be undone.`,
+                  confirmText: "Delete",
+                  dangerous: true,
+                });
+                if (!ok) return;
+                VStorage.deleteCustomTheme(theme.id);
+                if (theme.id === currentId) VTheme.switchTheme("void");
+                renderThemeGrid();
+              };
+              customGrid.appendChild(card);
+            });
+          }
+          renderThemeGrid();
+
+          const ADV_FIELDS = [
+            { key: "accent", label: "Accent" },
+            { key: "bg", label: "Background" },
+            { key: "bg2", label: "Background 2" },
+            { key: "bg3", label: "Background 3" },
+            { key: "bg4", label: "Background 4" },
+            { key: "bg5", label: "Background 5" },
+            { key: "cardBg", label: "Card Background" },
+            { key: "text", label: "Text" },
+            { key: "textSecondary", label: "Text Secondary" },
+            { key: "textDim", label: "Text Dim" },
+            { key: "textInv", label: "Text (on Accent)" },
+          ];
+          function openThemeMaker(existing) {
+            let mode = "simple";
+            const isDark = existing ? existing.dark : true;
+            const simpleSeed = existing?.vars?.accent || "#7c3aed";
+            const advSeed = existing
+              ? { ...existing.vars }
+              : VTheme.generateThemeFromColor(simpleSeed, true);
+
+            const o = document.createElement("div");
+            o.className = "modal-overlay";
+            o.innerHTML = `<div class="modal theme-maker-modal" role="dialog" aria-modal="true">
+      <h3>${existing ? "Edit Theme" : "Create Theme"}</h3>
+      <p>Make a simple theme from one color, or set every variable yourself.</p>
+      <div class="login-field" style="margin-bottom:12px">
+        <label class="login-label" for="tm-name">Name</label>
+        <input type="text" class="login-input" id="tm-name" placeholder="My Theme" value="${VApp.esc(
+          existing?.label || "",
+        )}" maxlength="24">
+      </div>
+      <div style="display:flex;gap:16px;align-items:center;margin-bottom:14px">
+        <label class="login-check-label"><input type="radio" name="tm-brightness" id="tm-dark" ${
+          isDark ? "checked" : ""
+        }> Dark</label>
+        <label class="login-check-label"><input type="radio" name="tm-brightness" id="tm-light" ${
+          !isDark ? "checked" : ""
+        }> Light</label>
+      </div>
+      <div class="theme-maker-tabs">
+        <button class="theme-maker-tab active" data-tm-mode="simple" type="button">Simple</button>
+        <button class="theme-maker-tab" data-tm-mode="advanced" type="button">Advanced</button>
+      </div>
+      <div id="tm-simple-panel" class="theme-maker-panel">
+        <div class="login-field">
+          <label class="login-label" for="tm-simple-color">Base color</label>
+          <input type="color" class="theme-maker-color-lg" id="tm-simple-color" value="${simpleSeed}">
+        </div>
+        <p style="font-size:.75rem;color:var(--text-secondary);margin-top:6px">Everything else (backgrounds, text, borders) is generated automatically from this color.</p>
+      </div>
+      <div id="tm-adv-panel" class="theme-maker-panel" style="display:none">
+        <div class="theme-maker-adv-grid">
+          ${ADV_FIELDS.map(
+            (f) => `
+            <div class="theme-maker-adv-field">
+              <label for="tm-adv-${f.key}">${f.label}</label>
+              <input type="color" id="tm-adv-${f.key}" data-key="${
+              f.key
+            }" value="${advSeed[f.key] || "#888888"}">
+            </div>`,
+          ).join("")}
+        </div>
+      </div>
+      <div class="theme-maker-preview" id="tm-preview">
+        <div class="theme-maker-preview-card">
+          <div class="theme-maker-preview-dot"></div>
+          <div class="theme-maker-preview-line"></div>
+        </div>
+        <div class="theme-maker-preview-line" style="width:70%"></div>
+        <div class="theme-maker-preview-line" style="width:45%;opacity:.5"></div>
+        <div class="theme-maker-preview-btn">Button</div>
+      </div>
+      <div class="modal-actions" style="margin-top:16px">
+        <button class="btn btn-secondary" id="tm-cancel" type="button">Cancel</button>
+        <button class="btn btn-primary" id="tm-save" type="button">${
+          existing ? "Save Changes" : "Save Theme"
+        }</button>
+      </div>
+    </div>`;
+            document.body.appendChild(o);
+
+            const close = () => {
+              document.removeEventListener("keydown", onEsc);
+              o.remove();
+            };
+            function onEsc(e) {
+              if (e.key === "Escape") close();
+            }
+            document.addEventListener("keydown", onEsc);
+            o.addEventListener("click", (e) => {
+              if (e.target === o) close();
+            });
+            o.querySelector("#tm-cancel").onclick = close;
+
+            function currentVars() {
+              if (mode === "simple") {
+                const hex = o.querySelector("#tm-simple-color").value;
+                return VTheme.generateThemeFromColor(
+                  hex,
+                  o.querySelector("#tm-dark").checked,
+                );
+              }
+              const v = {};
+              o.querySelectorAll("#tm-adv-panel input[type=color]").forEach(
+                (inp) => {
+                  v[inp.dataset.key] = inp.value;
+                },
+              );
+              return v;
+            }
+            function updatePreview() {
+              const v = currentVars();
+              const p = o.querySelector("#tm-preview");
+              p.style.background = v.bg;
+              p.querySelector(".theme-maker-preview-card").style.background =
+                v.cardBg || v.bg3;
+              p.querySelector(".theme-maker-preview-card").style.borderColor =
+                (v.accent || "#888") + "33";
+              p.querySelector(".theme-maker-preview-dot").style.background =
+                v.accent;
+              p.querySelectorAll(".theme-maker-preview-line").forEach(
+                (el) => (el.style.background = v.text),
+              );
+              p.querySelector(".theme-maker-preview-btn").style.background =
+                v.accent;
+              p.querySelector(".theme-maker-preview-btn").style.color =
+                v.textInv;
+            }
+            o.querySelectorAll(".theme-maker-tab").forEach((tab) => {
+              tab.onclick = () => {
+                mode = tab.dataset.tmMode;
+                o.querySelectorAll(".theme-maker-tab").forEach((t) =>
+                  t.classList.toggle("active", t === tab),
+                );
+                o.querySelector("#tm-simple-panel").style.display =
+                  mode === "simple" ? "" : "none";
+                o.querySelector("#tm-adv-panel").style.display =
+                  mode === "advanced" ? "" : "none";
+                if (mode === "advanced") {
+                  const generated = VTheme.generateThemeFromColor(
+                    o.querySelector("#tm-simple-color").value,
+                    o.querySelector("#tm-dark").checked,
+                  );
+                  ADV_FIELDS.forEach((f) => {
+                    const inp = o.querySelector(`#tm-adv-${f.key}`);
+                    if (inp) inp.value = generated[f.key] || inp.value;
+                  });
+                }
+                updatePreview();
+              };
+            });
+            o.querySelector("#tm-simple-color").addEventListener(
+              "input",
+              updatePreview,
+            );
+            o.querySelectorAll("input[name=tm-brightness]").forEach((r) =>
+              r.addEventListener("change", updatePreview),
+            );
+            o.querySelectorAll("#tm-adv-panel input[type=color]").forEach(
+              (inp) => inp.addEventListener("input", updatePreview),
+            );
+            updatePreview();
+
+            o.querySelector("#tm-save").onclick = () => {
+              const name = o.querySelector("#tm-name").value.trim();
+              if (!name) {
+                VApp.showToast("Give your theme a name", "error");
+                return;
+              }
+              const vars = currentVars();
+              const dark = o.querySelector("#tm-dark").checked;
+              const id = VStorage.saveCustomTheme({
+                id: existing?.id,
+                label: name,
+                dark,
+                vars,
+              });
+              VTheme.switchTheme(id);
+              renderThemeGrid();
+              if (VStorage.getParticlesConfig().color === "accent")
+                VApp.reloadParticles();
+              VApp.showToast(
+                existing ? "Theme updated!" : "Theme created!",
+                "success",
+              );
+              close();
+            };
+          }
+          document.getElementById("btn-make-theme").onclick = () =>
+            openThemeMaker();
+
+          const curFs = VStorage.getFontSize();
+          document.querySelectorAll(".fontsize-btn").forEach((b) => {
+            b.classList.toggle("active", b.dataset.size === curFs);
+            b.onclick = () => {
+              document
+                .querySelectorAll(".fontsize-btn")
+                .forEach((x) => x.classList.remove("active"));
+              b.classList.add("active");
+              VStorage.setFontSize(b.dataset.size);
+              VTheme.applyFontSize(b.dataset.size);
+            };
+          });
+
+          const curNavStyle = VStorage.getNavStyle();
+          document
+            .querySelectorAll("#navstyle-controls .fontsize-btn")
+            .forEach((b) => {
+              b.classList.toggle("active", b.dataset.navstyle === curNavStyle);
+              b.onclick = () => {
+                document
+                  .querySelectorAll("#navstyle-controls .fontsize-btn")
+                  .forEach((x) => x.classList.remove("active"));
+                b.classList.add("active");
+                VStorage.setNavStyle(b.dataset.navstyle);
+                document.getElementById("nav-ph").innerHTML =
+                  VApp.navHTML("settings");
+                VApp.initPanic();
+                VApp.initNavProfile();
+                VApp.initNavChat();
+                VApp.initVersionCheck();
+                const dtEl2 = document.getElementById("nav-datetime");
+                if (dtEl2) VApp.startDatetime(dtEl2);
+              };
+            });
+
+          const curFont = VStorage.getFontFamily();
+          const fontGrid = document.getElementById("font-picker-grid");
+          fontGrid.innerHTML = VTheme.FONT_PRESETS.map(
+            (f) => `
+    <button class="font-picker-card${
+      f.id === curFont ? " active" : ""
+    }" data-font="${f.id}" style="font-family:${f.stack}" type="button">
+      <span class="font-picker-preview">${f.preview}</span>
+      <span class="font-picker-label">${f.label}</span>
+    </button>`,
+          ).join("");
+          fontGrid.addEventListener("click", (e) => {
+            const btn = e.target.closest(".font-picker-card");
+            if (!btn) return;
+            fontGrid
+              .querySelectorAll(".font-picker-card")
+              .forEach((x) => x.classList.remove("active"));
+            btn.classList.add("active");
+            VStorage.setFontFamily(btn.dataset.font);
+            VTheme.applyFontFamily(btn.dataset.font);
+          });
+        })();
+
+        (function initParticlesSettings() {
+          let pcfg = VStorage.getParticlesConfig();
+          function applyPCfg() {
+            VStorage.setParticlesConfig(pcfg);
+            VApp.reloadParticles();
+          }
+          const pEnabled = document.getElementById("particles-enabled");
+          const pControls = document.getElementById("particles-controls");
+          pEnabled.checked = pcfg.enabled;
+          pControls.style.display = pcfg.enabled ? "" : "none";
+          pEnabled.onchange = () => {
+            pcfg.enabled = pEnabled.checked;
+            pControls.style.display = pEnabled.checked ? "" : "none";
+            applyPCfg();
+          };
+          function linkRange(id, lblId, key, decimals) {
+            const inp = document.getElementById(id),
+              lbl = document.getElementById(lblId);
+            inp.value = pcfg[key];
+            lbl.textContent = parseFloat(pcfg[key]).toFixed(decimals || 0);
+            inp.oninput = () => {
+              pcfg[key] = parseFloat(inp.value);
+              lbl.textContent = parseFloat(inp.value).toFixed(decimals || 0);
+            };
+            inp.onchange = () => applyPCfg();
+          }
+          function refreshControls() {
+            document.getElementById("p-count").value = pcfg.count;
+            document.getElementById("lbl-count").textContent = pcfg.count;
+            document.getElementById("p-speed").value = pcfg.speed;
+            document.getElementById("lbl-speed").textContent = parseFloat(
+              pcfg.speed,
+            ).toFixed(1);
+            document.getElementById("p-size").value = pcfg.size;
+            document.getElementById("lbl-size").textContent = parseFloat(
+              pcfg.size,
+            ).toFixed(1);
+            document.getElementById("p-opacity").value = pcfg.opacity;
+            document.getElementById("lbl-opacity").textContent = parseFloat(
+              pcfg.opacity,
+            ).toFixed(2);
+            document.getElementById("p-shape").value = pcfg.shape || "circle";
+            document.getElementById("p-direction").value =
+              pcfg.direction || "none";
+            document.getElementById("p-linked").checked = !!pcfg.linked;
+            document.getElementById("p-color").value = pcfg.color || "accent";
+          }
+          linkRange("p-count", "lbl-count", "count");
+          linkRange("p-speed", "lbl-speed", "speed", 1);
+          linkRange("p-size", "lbl-size", "size", 1);
+          linkRange("p-opacity", "lbl-opacity", "opacity", 2);
+          const pLinked = document.getElementById("p-linked");
+          pLinked.checked = pcfg.linked;
+          pLinked.onchange = () => {
+            pcfg.linked = pLinked.checked;
+            applyPCfg();
+          };
+          const pColor = document.getElementById("p-color");
+          pColor.value = pcfg.color || "accent";
+          pColor.onchange = () => {
+            pcfg.color = pColor.value;
+            applyPCfg();
+          };
+          const pShape = document.getElementById("p-shape");
+          pShape.value = pcfg.shape || "circle";
+          pShape.onchange = () => {
+            pcfg.shape = pShape.value;
+            applyPCfg();
+          };
+          const pDirection = document.getElementById("p-direction");
+          pDirection.value = pcfg.direction || "none";
+          pDirection.onchange = () => {
+            pcfg.direction = pDirection.value;
+            applyPCfg();
+          };
+          const PRESETS = {
+            dots: {
+              count: 40,
+              speed: 0.6,
+              size: 1.5,
+              opacity: 0.25,
+              linked: true,
+              shape: "circle",
+              direction: "none",
+            },
+            snow: {
+              count: 70,
+              speed: 1.2,
+              size: 2.5,
+              opacity: 0.5,
+              linked: false,
+              shape: "circle",
+              direction: "bottom",
+            },
+            stars: {
+              count: 90,
+              speed: 0.15,
+              size: 1.2,
+              opacity: 0.6,
+              linked: false,
+              shape: "star",
+              direction: "none",
+            },
+            network: {
+              count: 55,
+              speed: 0.8,
+              size: 2,
+              opacity: 0.4,
+              linked: true,
+              shape: "circle",
+              direction: "none",
+            },
+            bubbles: {
+              count: 25,
+              speed: 1.5,
+              size: 4,
+              opacity: 0.3,
+              linked: false,
+              shape: "circle",
+              direction: "top",
+            },
+          };
+          document
+            .getElementById("particle-presets")
+            .addEventListener("click", (e) => {
+              const btn = e.target.closest("[data-preset]");
+              if (!btn) return;
+              Object.assign(pcfg, PRESETS[btn.dataset.preset]);
+              document
+                .querySelectorAll("#particle-presets .fontsize-btn")
+                .forEach((b) => b.classList.toggle("active", b === btn));
+              refreshControls();
+              applyPCfg();
+            });
+        })();
+
+        (function initBgImageSettings() {
+          let bcfg = VStorage.getBgImageConfig();
+          const bEnabled = document.getElementById("bg-enabled");
+          const bControls = document.getElementById("bgimage-controls");
+          const previewWrap = document.getElementById("bg-preview-wrap");
+          const preview = document.getElementById("bg-preview");
+          const removeBtn = document.getElementById("btn-bg-remove");
+          const MAX_MB = 8;
+
+          async function refreshPreview() {
+            try {
+              const blob = await VStorage.getBackgroundImage();
+              if (blob) {
+                const url = URL.createObjectURL(blob);
+                preview.src = url;
+                previewWrap.style.display = "";
+                removeBtn.style.display = "";
+              } else {
+                previewWrap.style.display = "none";
+                removeBtn.style.display = "none";
+              }
+            } catch {
+              previewWrap.style.display = "none";
+              removeBtn.style.display = "none";
+            }
+          }
+          function applyAndSave() {
+            VStorage.setBgImageConfig(bcfg);
+            VApp.initBackgroundImage();
+          }
+
+          bEnabled.checked = bcfg.enabled;
+          bControls.style.display = bcfg.enabled ? "" : "none";
+          bEnabled.onchange = () => {
+            bcfg.enabled = bEnabled.checked;
+            bControls.style.display = bcfg.enabled ? "" : "none";
+            applyAndSave();
+          };
+
+          document.getElementById("btn-bg-choose").onclick = () =>
+            document.getElementById("bg-file-input").click();
+          document
+            .getElementById("bg-file-input")
+            .addEventListener("change", async (e) => {
+              const file = e.target.files[0];
+              if (!file) return;
+              if (!file.type.startsWith("image/")) {
+                VApp.showToast("Please choose an image file", "error");
+                return;
+              }
+              if (file.size > MAX_MB * 1024 * 1024) {
+                VApp.showToast(`Image must be under ${MAX_MB}MB`, "error");
+                return;
+              }
+              try {
+                await VStorage.saveBackgroundImage(file);
+                await refreshPreview();
+                bcfg.enabled = true;
+                bEnabled.checked = true;
+                bControls.style.display = "";
+                applyAndSave();
+                VApp.showToast("Background image set!", "success");
+              } catch (err) {
+                VApp.showToast(
+                  "Failed to save image. Try a smaller file",
+                  "error",
+                );
+              }
+              e.target.value = "";
+            });
+          removeBtn.onclick = async () => {
+            const ok = await VApp.showModal({
+              title: "Remove Background Image",
+              message: "Remove your background image?",
+              confirmText: "Remove",
+              dangerous: true,
+            });
+            if (!ok) return;
+            await VStorage.deleteBackgroundImage();
+            await refreshPreview();
+            bcfg.enabled = false;
+            bEnabled.checked = false;
+            bControls.style.display = "none";
+            applyAndSave();
+          };
+
+          function linkRange(id, lblId, key, suffix, decimals) {
+            const inp = document.getElementById(id),
+              lbl = document.getElementById(lblId);
+            inp.value = bcfg[key];
+            lbl.textContent =
+              parseFloat(bcfg[key]).toFixed(decimals ?? 2) + (suffix || "");
+            inp.oninput = () => {
+              bcfg[key] = parseFloat(inp.value);
+              lbl.textContent =
+                parseFloat(inp.value).toFixed(decimals ?? 2) + (suffix || "");
+            };
+            inp.onchange = () => applyAndSave();
+          }
+          linkRange("bg-opacity", "lbl-bg-opacity", "opacity", "", 2);
+          linkRange("bg-blur", "lbl-bg-blur", "blur", "px", 0);
+          linkRange("bg-darken", "lbl-bg-darken", "darken", "", 2);
+          const bSize = document.getElementById("bg-size");
+          bSize.value = bcfg.size || "cover";
+          bSize.onchange = () => {
+            bcfg.size = bSize.value;
+            applyAndSave();
+          };
+          const bPos = document.getElementById("bg-position");
+          bPos.value = bcfg.position || "center";
+          bPos.onchange = () => {
+            bcfg.position = bPos.value;
+            applyAndSave();
+          };
+
+          refreshPreview();
+        })();
+
+        (function initChatSettings() {
+          const profEl = document.getElementById("chat-profanity");
+          profEl.checked = VStorage.get("vispora_profanity_filter", false);
+          profEl.onchange = () =>
+            VStorage.set("vispora_profanity_filter", profEl.checked);
+
+          const linkEl = document.getElementById("chat-link-preview");
+          linkEl.checked = VStorage.get("vispora_link_previews", true);
+          linkEl.onchange = () =>
+            VStorage.set("vispora_link_previews", linkEl.checked);
+
+          const actEl = document.getElementById("chat-show-activity");
+          actEl.checked = VStorage.get("vispora_show_activity", true);
+          actEl.onchange = () =>
+            VStorage.set("vispora_show_activity", actEl.checked);
+
+          const levels = window.VChat
+            ? VChat.getAudioLevels()
+            : VStorage.get("vispora_audio_levels", {
+                message: 0.3,
+                receive: 0.4,
+                request: 0.5,
+              });
+          function linkAudio(id, lblId, key) {
+            const inp = document.getElementById(id),
+              lbl = document.getElementById(lblId);
+            const pct = Math.round((levels[key] || 0) * 100);
+            inp.value = pct;
+            lbl.textContent = pct + "%";
+            inp.oninput = () => {
+              lbl.textContent = inp.value + "%";
+            };
+            inp.onchange = () => {
+              levels[key] = parseInt(inp.value) / 100;
+              if (window.VChat) VChat.setAudioLevels(levels);
+              else VStorage.set("vispora_audio_levels", levels);
+            };
+          }
+          linkAudio("snd-send", "lbl-snd-send", "message");
+          linkAudio("snd-recv", "lbl-snd-recv", "receive");
+          linkAudio("snd-req", "lbl-snd-req", "request");
+        })();
+
+        (function initPrivacy() {
+          const cloakMode = document.getElementById("cloak-mode");
+          const customRow = document.getElementById("custom-url-row");
+          const customUrl = document.getElementById("custom-url");
+          const autoCloak = document.getElementById("auto-cloak");
+          const prevTitle = document.getElementById("prev-title");
+          const prevFav = document.getElementById("prev-fav");
+          cloakMode.value = VStorage.getCloakMode();
+          customUrl.value = VStorage.getCloakUrl() || "";
+          autoCloak.checked = VStorage.getAutoCloak();
+          updatePreview();
+          cloakMode.onchange = () => {
+            VStorage.setCloakMode(cloakMode.value);
+            customRow.style.display =
+              cloakMode.value === "custom" ? "" : "none";
+            updatePreview();
+          };
+          customUrl.oninput = () => {
+            VStorage.setCloakUrl(customUrl.value);
+            updatePreview();
+          };
+          autoCloak.onchange = () => VStorage.setAutoCloak(autoCloak.checked);
+          function updatePreview() {
+            const m = cloakMode.value;
+            customRow.style.display = m === "custom" ? "" : "none";
+            if (m === "google") {
+              prevTitle.textContent = "My Drive – Google Drive";
+              prevFav.textContent = "G";
+              prevFav.style.background = "#4285f4";
+            } else if (m === "about-blank") {
+              prevTitle.textContent = "about:blank";
+              prevFav.textContent = "";
+              prevFav.style.background = "var(--bg5)";
+            } else if (m === "custom" && customUrl.value) {
+              try {
+                const u = new URL(customUrl.value);
+                prevTitle.textContent = u.hostname.replace("www.", "");
+                prevFav.textContent = u.hostname[0].toUpperCase();
+                prevFav.style.background = "var(--bg5)";
+              } catch {
+                prevTitle.textContent = customUrl.value || "—";
+              }
+            } else {
+              prevTitle.textContent = "No cloaking active";
+              prevFav.textContent = "V";
+              prevFav.style.background = "var(--accent)";
+            }
+          }
+          const leavePrevToggle = document.getElementById("leave-prevention");
+          leavePrevToggle.checked = VStorage.getLeavePrevention();
+          leavePrevToggle.onchange = () => {
+            VCloak.toggleLeavePrevention(leavePrevToggle.checked);
+            VApp.showToast(
+              leavePrevToggle.checked
+                ? "Leave prevention enabled"
+                : "Leave prevention disabled",
+            );
+          };
+          const pkBtn = document.getElementById("panic-key-btn"),
+            pkLbl = document.getElementById("panic-key-lbl");
+          const sk = VStorage.getPanicKey();
+          pkLbl.textContent = sk === "Escape" ? "ESC" : sk.replace("Key", "");
+          let listening = false;
+          function startListen() {
+            if (listening) return;
+            listening = true;
+            pkBtn.classList.add("listening");
+            pkLbl.textContent = "Press key…";
+            function ok(e) {
+              e.preventDefault();
+              const k = e.code;
+              VStorage.setPanicKey(k);
+              pkBtn.classList.remove("listening");
+              pkLbl.textContent = k.replace("Key", "");
+              listening = false;
+              document.removeEventListener("keydown", ok);
+              VApp.showToast(`Panic key set: Alt + ${k.replace("Key", "")}`);
+            }
+            document.addEventListener("keydown", ok);
+          }
+          pkBtn.onclick = startListen;
+          pkBtn.onkeydown = (e) => {
+            if (e.key === "Enter" || e.key === " ") startListen();
+          };
+        })();
+
+        (function loadStats() {
+          const hist = VStorage.getHistory(),
+            pt = VStorage.getAllPlaytime(),
+            tot = Object.values(pt).reduce((a, b) => a + b, 0);
+          document.getElementById("st-time").textContent =
+            VStorage.formatTime(tot) || "0m";
+          document.getElementById("st-played").textContent = hist.length;
+          document.getElementById("st-favs").textContent =
+            VStorage.getFavorites().length +
+            VStorage.getMediaFavorites().length;
+          const top = Object.entries(pt)
+            .sort((a, b) => b[1] - a[1])
+            .slice(0, 5);
+          const topEl = document.getElementById("top-visps");
+          if (!top.length) {
+            topEl.innerHTML =
+              '<p style="color:var(--text-secondary);font-size:.85rem">Play some games to see stats!</p>';
+            return;
+          }
+          topEl.innerHTML = top
+            .map(([id, ms], i) => {
+              const g = hist.find((x) => String(x.id) === id),
+                name = g ? g.name || `Game ${id}` : `Game ${id}`,
+                pct = Math.round((ms / (top[0][1] || 1)) * 100);
+              return `<div style="display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid var(--card-border)">
+      <span style="font-size:.72rem;color:var(--text-secondary);width:14px;text-align:right;flex-shrink:0">${
+        i + 1
+      }</span>
+      <div style="flex:1;min-width:0"><div style="font-size:.86rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${VApp.esc(
+        name,
+      )}</div>
+        <div style="height:3px;background:var(--bg5);border-radius:2px;margin-top:5px"><div style="height:3px;width:${pct}%;background:var(--accent);border-radius:2px"></div></div>
+      </div>
+      <span style="font-size:.75rem;color:var(--accent);font-weight:600;flex-shrink:0">${VStorage.formatTime(
+        ms,
+      )}</span>
+    </div>`;
+            })
+            .join("");
+        })();
+
+        document.getElementById("btn-export").onclick = () => {
+          const b = new Blob([VStorage.exportData()], {
+              type: "application/json",
+            }),
+            u = URL.createObjectURL(b),
+            a = document.createElement("a");
+          a.href = u;
+          a.download = `vispora-${Date.now()}.json`;
+          a.click();
+          URL.revokeObjectURL(u);
+          VApp.showToast("Data exported!", "success");
+        };
+        document.getElementById("btn-import").onclick = () =>
+          document.getElementById("import-file").click();
+        document.getElementById("import-file").onchange = async (e) => {
+          const f = e.target.files[0];
+          if (!f) return;
+          try {
+            VStorage.importData(await f.text());
+            VTheme.initTheme();
+            VApp.showToast("Imported! Reloading…", "success");
+            setTimeout(() => location.reload(), 1000);
+          } catch {
+            VApp.showToast("Import failed: invalid file", "error");
+          }
+          e.target.value = "";
+        };
+        document.getElementById("btn-refresh-servers").onclick = async () => {
+          const btn = document.getElementById("btn-refresh-servers");
+          const originalHTML = btn.innerHTML;
+          btn.disabled = true;
+          btn.textContent = "Refreshing…";
+          try {
+            const res = await VMedia.fetchServerConfig(true);
+            VApp.showToast(
+              res.first
+                ? "Servers refreshed"
+                : `Servers refreshed: ${VMedia.describeServerDiff(res.diff)}`,
+              res.changed ? "success" : "info",
+              7000,
+            );
+          } catch (e) {
+            console.warn("[settings] server refresh failed:", e);
+            VApp.showToast("Failed to refresh servers", "error");
+          } finally {
+            btn.disabled = false;
+            btn.innerHTML = originalHTML;
+          }
+        };
+        document.getElementById("btn-refresh-games").onclick = async () => {
+          const btn = document.getElementById("btn-refresh-games");
+          const originalHTML = btn.innerHTML;
+          btn.disabled = true;
+          btn.textContent = "Refreshing…";
+          try {
+            const res = await VGames.fetchGamesConfig(true);
+            VApp.showToast(
+              res.first
+                ? `Games refreshed: ${res.games.length} games`
+                : `Games refreshed: ${VGames.describeGamesDiff(res.diff)}`,
+              res.changed ? "success" : "info",
+              7000,
+            );
+          } catch (e) {
+            console.warn("[settings] games refresh failed:", e);
+            VApp.showToast("Failed to refresh games", "error");
+          } finally {
+            btn.disabled = false;
+            btn.innerHTML = originalHTML;
+          }
+        };
+        document.getElementById("btn-refresh-ai").onclick = async () => {
+          const btn = document.getElementById("btn-refresh-ai");
+          const originalHTML = btn.innerHTML;
+          btn.disabled = true;
+          btn.textContent = "Refreshing…";
+          try {
+            const res = await VAI.fetchModelsConfig(true);
+            VApp.showToast(
+              res.first
+                ? `AI models refreshed: ${res.models.length} models`
+                : `AI models refreshed: ${VAI.describeModelsDiff(res.diff)}`,
+              res.changed ? "success" : "info",
+              7000,
+            );
+          } catch (e) {
+            console.warn("[settings] ai models refresh failed:", e);
+            VApp.showToast("Failed to refresh AI models", "error");
+          } finally {
+            btn.disabled = false;
+            btn.innerHTML = originalHTML;
+          }
+        };
+        document.getElementById("btn-clear").onclick = async () => {
+          if (
+            await VApp.showModal({
+              title: "Clear Game History",
+              message:
+                "Remove all play history and playtime data? Favorites are kept.",
+              confirmText: "Clear",
+              dangerous: true,
+            })
+          ) {
+            VStorage.set(VStorage.KEYS.HISTORY, []);
+            VStorage.set(VStorage.KEYS.PLAYTIME, {});
+            VApp.showToast("Game history cleared", "success");
+          }
+        };
+        document.getElementById("btn-clear-media").onclick = async () => {
+          if (
+            await VApp.showModal({
+              title: "Clear Media History",
+              message:
+                "Remove all watched movies, TV shows, and anime? Your list is kept.",
+              confirmText: "Clear",
+              dangerous: true,
+            })
+          ) {
+            VStorage.set(VStorage.KEYS.MEDIA_HIST, []);
+            VStorage.set(VStorage.KEYS.MEDIA_PROG, {});
+            VApp.showToast("Media history cleared", "success");
+          }
+        };
+        document.getElementById("btn-reset").onclick = async () => {
+          if (
+            await VApp.showModal({
+              title: "Reset Everything",
+              message:
+                "This permanently deletes ALL your data: settings, favorites, history, playtime. You will be signed out. Cannot be undone.",
+              confirmText: "Reset Everything",
+              dangerous: true,
+            })
+          ) {
+            try {
+              await VStorage.resetAll();
+            } catch (e) {
+              console.warn("[settings] reset failed:", e);
+            }
+            try {
+              await VFirebase.auth.signOut();
+            } catch (e) {}
+            window.top.location.replace("../index.html");
+          }
+        };
+
+        const groqKeyInput = document.getElementById("groq-key");
+        groqKeyInput.addEventListener("keydown", (e) => {
+          if (e.key === "Enter") {
+            e.preventDefault();
+            document.getElementById("btn-groq-save").click();
+          }
+        });
+        const savedKey = VStorage.getGroqKey();
+        if (savedKey) groqKeyInput.value = savedKey;
+        document.getElementById("btn-groq-save").onclick = () => {
+          const k = groqKeyInput.value.trim();
+          if (!k) {
+            VApp.showToast("Enter a key first", "error");
+            return;
+          }
+          if (!k.startsWith("gsk_")) {
+            VApp.showToast("Key should start with gsk_", "error");
+            return;
+          }
+          VStorage.setGroqKey(k);
+          VApp.showToast("API key saved!", "success");
+        };
+        document.getElementById("btn-groq-clear").onclick = async () => {
+          if (
+            await VApp.showModal({
+              title: "Clear API Key",
+              message:
+                "Remove your saved Groq API key? The shared proxy will be used instead.",
+              confirmText: "Clear",
+              dangerous: true,
+            })
+          ) {
+            VStorage.setGroqKey(null);
+            groqKeyInput.value = "";
+            VApp.showToast("API key cleared");
+          }
+        };
+
+        document.getElementById("btn-new-client").onclick = () => {
+          const win = window.open();
+          if (!win) {
+            VApp.showToast(
+              "Popup blocked — allow popups for this page",
+              "error",
+            );
+            return;
+          }
+          win.document.body.style.cssText =
+            "margin:0;height:100vh;overflow:hidden";
+          const iframe = win.document.createElement("iframe");
+          iframe.style.cssText =
+            "border:none;width:100%;height:100%;display:block";
+          iframe.src = new URL("home.html", location.href).href;
+          win.document.body.appendChild(iframe);
+          VApp.showToast("Opened in about:blank!", "success");
+        };
+        document.getElementById("btn-ab-launch").onclick = () => {
+          const url = document.getElementById("ab-url").value;
+          if (!url) {
+            VApp.showToast("Enter a URL first", "error");
+            return;
+          }
+          try {
+            new URL(url);
+          } catch {
+            VApp.showToast("Invalid URL — include https://", "error");
+            return;
+          }
+          var win = window.open();
+          if (!win) {
+            VApp.showToast(
+              "Popup blocked — allow popups for this page",
+              "error",
+            );
+            return;
+          }
+          var iframe = win.document.createElement("iframe");
+          iframe.style.cssText = "width:100%;height:100%;border:none";
+          iframe.src = url;
+          win.document.body.appendChild(iframe);
+          win.document.body.style.margin = "0";
+          VApp.showToast("Opened in about:blank!", "success");
+        };
+        document.querySelector(".about-version").textContent = VApp.VERSION;
+        document.getElementById("btn-replay-tour").onclick = () => {
+          VStorage.set(VStorage.KEYS.TOUR, {});
+          VTutorial.start("settings", { force: true });
+        };
+        VTutorial.autoStart("settings");
+      })();
+    </script>
+  </body>
+</html>

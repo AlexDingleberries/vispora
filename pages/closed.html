@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="void">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tab closed — vispora</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/pages.css">
+    <script>
+      try {
+        var t = JSON.parse(localStorage.getItem("vispora_theme"));
+        if (t === "dark") t = "void";
+        if (t === "light") t = "pearl";
+        if (t && String(t).indexOf("custom:") !== 0)
+          document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    </script>
+    <style>
+      .closed-page {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        text-align: center;
+        padding: 24px;
+      }
+      .closed-page h1 {
+        font-size: 1.6rem;
+        font-weight: 800;
+      }
+      .closed-page p {
+        color: var(--text-secondary);
+        max-width: 380px;
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="closed-page">
+      <h1>This tab has been closed</h1>
+      <p>
+        vispora is open in another tab, so this one was cleared to keep your
+        playtime, chat and settings in sync. You can close it now.
+      </p>
+      <a class="btn btn-secondary" href="../index.html">Use this tab instead</a>
+    </main>
+  </body>
+</html>

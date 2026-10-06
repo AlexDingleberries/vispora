@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>TV Shows — vispora</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/pages.css" />
+    <link rel="stylesheet" href="../css/chat.css" />
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="../js/firebase-config.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/cloak.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/media.js"></script>
+    <script src="../js/chat.js"></script>
+    <script src="../js/tutorial.js"></script>
+  </head>
+
+  <body>
+    <div id="particles-js"></div>
+    <div id="nav-ph"></div>
+
+    <main class="nf-page">
+      <div class="nf-top-bar" id="nf-top-bar">
+        <div class="nf-search-inner">
+          <div class="nf-search-input-wrap">
+            <span class="nf-search-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+            </span>
+            <input
+              type="search"
+              class="nf-search-input"
+              id="search-input"
+              placeholder="Search TV shows…"
+              autocomplete="off"
+              spellcheck="false"
+              aria-label="Search TV shows"
+            />
+            <button
+              class="nf-search-clear"
+              id="search-clear"
+              type="button"
+              aria-label="Clear search"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+          </div>
+          <button class="nf-filter-btn" id="filter-btn" type="button">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
+            </svg>
+            <span>Filters</span>
+          </button>
+        </div>
+      </div>
+
+      <section class="nf-hero" id="nf-hero">
+        <div class="nf-hero-slides" id="nf-hero-slides">
+          <div class="nf-hero-slide active">
+            <div
+              class="nf-hero-bg skeleton"
+              style="position: absolute; inset: 0; border-radius: 0"
+            ></div>
+            <div class="nf-hero-gradient"></div>
+          </div>
+        </div>
+        <div class="nf-hero-dots" id="nf-hero-dots"></div>
+      </section>
+
+      <div class="nf-browse" id="browse-content"></div>
+
+      <div class="nf-search-mode" id="search-mode">
+        <div class="nf-filter-panel" id="filter-panel"></div>
+        <div
+          class="games-count"
+          id="result-count"
+          style="
+            margin-bottom: 16px;
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+          "
+        ></div>
+        <div class="media-grid" id="search-grid"></div>
+        <div
+          id="load-more-wrap"
+          style="text-align: center; margin-top: 32px; display: none"
+        >
+          <button class="btn btn-secondary" id="load-more-btn" type="button">
+            Load More
+          </button>
+        </div>
+      </div>
+    </main>
+    <div id="toast-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+      document.getElementById("nav-ph").innerHTML = VApp.navHTML("tv");
+      VCloak.initCloak();
+      VApp.initPanic();
+      VApp.initParticles();
+      VApp.initNavChat();
+      VApp.initNavProfile();
+      VApp.initVersionCheck();
+      const dtEl = document.getElementById("nav-datetime");
+      if (dtEl) VApp.startDatetime(dtEl);
+
+      const topBar = document.getElementById("nf-top-bar");
+      const heroEl = document.getElementById("nf-hero");
+      const browseEl = document.getElementById("browse-content");
+      const searchMode = document.getElementById("search-mode");
+      const searchIn = document.getElementById("search-input");
+      const filterBtn = document.getElementById("filter-btn");
+      const filterPanel = document.getElementById("filter-panel");
+      const searchGrid = document.getElementById("search-grid");
+      const countEl = document.getElementById("result-count");
+      const loadMoreWrap = document.getElementById("load-more-wrap");
+      const loadMoreBtn = document.getElementById("load-more-btn");
+
+      let heroItems = [],
+        heroIdx = 0,
+        heroTimer = null;
+      let isSearchMode = false;
+      let srchState = {
+        query: "",
+        sort: "popular",
+        genres: new Set(),
+        year: "",
+        page: 1,
+        totalPages: 1,
+        results: [],
+        loading: false,
+      };
+      let srchTimer = null;
+
+      async function initHero() {
+        try {
+          const data = await VMedia.tmdbFetch("/trending/tv/week", { page: 1 });
+          heroItems = (data.results || [])
+            .filter((s) => s.backdrop_path && s.overview)
+            .slice(0, 5);
+          if (!heroItems.length) throw new Error("no items");
+          renderHero();
+          startHeroTimer();
+        } catch (e) {
+          heroEl.style.display = "none";
+        }
+      }
+
+      function renderHero() {
+        const slidesEl = document.getElementById("nf-hero-slides");
+        const dotsEl = document.getElementById("nf-hero-dots");
+        slidesEl.innerHTML = heroItems
+          .map((s, i) => {
+            const year = (s.first_air_date || "").slice(0, 4);
+            const score = s.vote_average
+              ? Number(s.vote_average).toFixed(1)
+              : "";
+            return `<div class="nf-hero-slide${
+              i === 0 ? " active" : ""
+            }" data-idx="${i}">
+      <div class="nf-hero-bg" style="background-image:url('${VMedia.backdropUrl(
+        s.backdrop_path,
+        "w1280",
+      )}')"></div>
+      <div class="nf-hero-gradient"></div>
+      <div class="nf-hero-content">
+        <div class="nf-hero-badge">Featured Series</div>
+        <h2 class="nf-hero-title">${VApp.esc(s.name || "")}</h2>
+        <div class="nf-hero-meta">
+          ${year ? `<span>${VApp.esc(year)}</span>` : ""}
+          ${
+            score
+              ? `<span class="nf-hero-score">★ ${VApp.esc(score)}</span>`
+              : ""
+          }
+        </div>
+        <p class="nf-hero-overview">${VApp.esc(s.overview || "")}</p>
+        <div class="nf-hero-btns">
+          <a href="media.html?type=tv&id=${
+            s.id
+          }" class="nf-hero-btn nf-hero-btn-watch">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Watch Now
+          </a>
+          <button class="nf-hero-btn nf-hero-btn-info" data-id="${
+            s.id
+          }" data-type="tv" type="button">ⓘ More Details</button>
+        </div>
+      </div>
+    </div>`;
+          })
+          .join("");
+        dotsEl.innerHTML = heroItems
+          .map(
+            (_, i) =>
+              `<button class="nf-hero-dot${
+                i === 0 ? " active" : ""
+              }" data-idx="${i}" aria-label="Slide ${i + 1}"></button>`,
+          )
+          .join("");
+        dotsEl.addEventListener("click", (e) => {
+          const d = e.target.closest(".nf-hero-dot");
+          if (d) {
+            goToSlide(Number(d.dataset.idx));
+            resetHeroTimer();
+          }
+        });
+        slidesEl.addEventListener("click", (e) => {
+          const b = e.target.closest(".nf-hero-btn-info");
+          if (b) VMedia.showInfoModal(Number(b.dataset.id), b.dataset.type);
+        });
+      }
+      function goToSlide(idx) {
+        heroIdx = idx;
+        document
+          .querySelectorAll(".nf-hero-slide")
+          .forEach((el, i) => el.classList.toggle("active", i === idx));
+        document
+          .querySelectorAll(".nf-hero-dot")
+          .forEach((el, i) => el.classList.toggle("active", i === idx));
+      }
+      function startHeroTimer() {
+        heroTimer = setInterval(
+          () => goToSlide((heroIdx + 1) % heroItems.length),
+          6000,
+        );
+      }
+      function resetHeroTimer() {
+        clearInterval(heroTimer);
+        startHeroTimer();
+      }
+      heroEl.addEventListener("mouseenter", () => clearInterval(heroTimer));
+      heroEl.addEventListener("mouseleave", () => {
+        if (heroItems.length) startHeroTimer();
+      });
+
+      const ROWS = [
+        { label: "Trending This Week", endpoint: "/trending/tv/week" },
+        { label: "Popular Shows", endpoint: "/tv/popular" },
+        { label: "Top Rated", endpoint: "/tv/top_rated" },
+        { label: "On The Air", endpoint: "/tv/on_the_air" },
+        { label: "Airing Today", endpoint: "/tv/airing_today" },
+      ];
+
+      async function initRows() {
+        browseEl.innerHTML = ROWS.map((r) => {
+          const rowId = "row-" + r.endpoint.replace(/\W+/g, "-");
+          return `<section class="nf-row-section">
+      <h2 class="nf-row-label">${r.label}</h2>
+      <div class="nf-row-scroll-outer">
+        <div class="nf-row" id="${rowId}">
+          ${Array(12)
+            .fill('<div class="nf-card-skeleton skeleton"></div>')
+            .join("")}
+        </div>
+      </div>
+    </section>`;
+        }).join("");
+
+        await Promise.allSettled(
+          ROWS.map(async (r) => {
+            try {
+              const rowId = "row-" + r.endpoint.replace(/\W+/g, "-");
+              const data = await VMedia.tmdbFetch(r.endpoint, { page: 1 });
+              const shows = (data.results || [])
+                .filter((s) => s.poster_path)
+                .slice(0, 18);
+              const rowEl = document.getElementById(rowId);
+              if (!rowEl) return;
+              rowEl.innerHTML = shows
+                .map((s) => VMedia.makeNFRowCard(s, "tv"))
+                .join("");
+              VMedia.initNFRowCards(rowEl);
+            } catch (e) {
+              console.error(e);
+            }
+          }),
+        );
+      }
+
+      function enterSearchMode() {
+        if (isSearchMode) return;
+        isSearchMode = true;
+        heroEl.style.display = "none";
+        browseEl.style.display = "none";
+        searchMode.classList.add("active");
+        topBar.classList.add("search-focused");
+        filterBtn.classList.add("active");
+        renderFilterPanel();
+        showSearchPrompt();
+      }
+      function exitSearchMode() {
+        isSearchMode = false;
+        heroEl.style.display = "";
+        browseEl.style.display = "";
+        searchMode.classList.remove("active");
+        topBar.classList.remove("search-focused");
+        filterBtn.classList.remove("active");
+        searchIn.value = "";
+        srchState.query = "";
+        countEl.innerHTML = "";
+        searchGrid.innerHTML = "";
+        loadMoreWrap.style.display = "none";
+      }
+      function showSearchPrompt() {
+        countEl.innerHTML = "";
+        searchGrid.innerHTML = `<div class="nf-search-prompt" style="grid-column:1/-1">
+    <div class="nf-search-prompt-icon"></div>
+    <div class="nf-search-prompt-title">Search or pick a genre</div>
+    <p style="font-size:0.82rem;color:var(--text-secondary);margin-top:6px">Type above to search, or select filters to browse</p>
+  </div>`;
+        loadMoreWrap.style.display = "none";
+      }
+
+      async function renderFilterPanel() {
+        const genres = await VMedia.getTVGenres();
+        const sorts = [
+          { v: "popular", l: "Popular" },
+          { v: "top_rated", l: "Top Rated" },
+          { v: "on_the_air", l: "On Air" },
+          { v: "airing_today", l: "Airing Today" },
+        ];
+        const thisYear = new Date().getFullYear();
+        const years = Array.from(
+          { length: thisYear - 1969 },
+          (_, i) => thisYear - i,
+        );
+        filterPanel.innerHTML = `
+    <div class="nf-filter-group">
+      <div class="nf-filter-group-label">Sort</div>
+      <div class="nf-filter-chips" id="chips-sort">
+        ${sorts
+          .map(
+            (c) =>
+              `<button class="nf-filter-chip${
+                srchState.sort === c.v ? " active" : ""
+              }" data-filter-sort="${c.v}">${c.l}</button>`,
+          )
+          .join("")}
+      </div>
+    </div>
+    <div class="nf-filter-group">
+      <div class="nf-filter-group-label">Genre <span style="font-weight:400;text-transform:none;letter-spacing:0">(pick any number)</span></div>
+      <div class="nf-filter-chips" id="chips-genre">
+        ${genres
+          .map(
+            (g) =>
+              `<button class="nf-filter-chip${
+                srchState.genres.has(String(g.id)) ? " active" : ""
+              }" data-filter-genre="${g.id}">${g.name}</button>`,
+          )
+          .join("")}
+      </div>
+    </div>
+    <div class="nf-filter-group">
+      <div class="nf-filter-group-label">Year</div>
+      <select class="ai-select nf-filter-select" id="filter-year">
+        <option value="">Any Year</option>
+        ${years
+          .map(
+            (y) =>
+              `<option value="${y}"${
+                srchState.year === String(y) ? " selected" : ""
+              }>${y}</option>`,
+          )
+          .join("")}
+      </select>
+      ${
+        srchState.genres.size || srchState.year
+          ? `<button class="nf-filter-clear-btn" id="filter-clear-all" type="button">Clear filters</button>`
+          : ""
+      }
+    </div>`;
+        filterPanel
+          .querySelector("#chips-sort")
+          .addEventListener("click", (e) => {
+            const b = e.target.closest("[data-filter-sort]");
+            if (!b) return;
+            srchState.sort = b.dataset.filterSort;
+            filterPanel
+              .querySelectorAll("[data-filter-sort]")
+              .forEach((x) => x.classList.toggle("active", x === b));
+            srchState.page = 1;
+            srchState.results = [];
+            if (srchState.query) doSearch();
+            else loadBrowseGrid();
+          });
+        filterPanel
+          .querySelector("#chips-genre")
+          .addEventListener("click", (e) => {
+            const b = e.target.closest("[data-filter-genre]");
+            if (!b) return;
+            const id = b.dataset.filterGenre;
+            if (srchState.genres.has(id)) srchState.genres.delete(id);
+            else srchState.genres.add(id);
+            b.classList.toggle("active");
+            renderFilterClearBtn();
+            srchState.page = 1;
+            srchState.results = [];
+            if (srchState.query) doSearch();
+            else loadBrowseGrid();
+          });
+        filterPanel
+          .querySelector("#filter-year")
+          .addEventListener("change", (e) => {
+            srchState.year = e.target.value;
+            renderFilterClearBtn();
+            srchState.page = 1;
+            srchState.results = [];
+            if (srchState.query) doSearch();
+            else loadBrowseGrid();
+          });
+        filterPanel
+          .querySelector("#filter-clear-all")
+          ?.addEventListener("click", () => {
+            srchState.genres.clear();
+            srchState.year = "";
+            renderFilterPanel();
+            srchState.page = 1;
+            srchState.results = [];
+            if (srchState.query) doSearch();
+            else loadBrowseGrid();
+          });
+      }
+      function renderFilterClearBtn() {
+        const has = srchState.genres.size || srchState.year;
+        const existing = filterPanel.querySelector("#filter-clear-all");
+        if (has && !existing) {
+          const btn = document.createElement("button");
+          btn.className = "nf-filter-clear-btn";
+          btn.id = "filter-clear-all";
+          btn.type = "button";
+          btn.textContent = "Clear filters";
+          btn.addEventListener("click", () => {
+            srchState.genres.clear();
+            srchState.year = "";
+            renderFilterPanel();
+            srchState.page = 1;
+            srchState.results = [];
+            if (srchState.query) doSearch();
+            else loadBrowseGrid();
+          });
+          filterPanel
+            .querySelector(".nf-filter-group:last-child")
+            .appendChild(btn);
+        } else if (!has && existing) existing.remove();
+      }
+
+      async function loadBrowseGrid() {
+        if (srchState.loading) return;
+        srchState.loading = true;
+        searchGrid.innerHTML = Array(12)
+          .fill('<div class="skeleton media-card-skeleton"></div>')
+          .join("");
+        countEl.innerHTML = "";
+        loadMoreWrap.style.display = "none";
+        try {
+          const sortMap = {
+            popular: "popularity.desc",
+            top_rated: "vote_average.desc",
+            on_the_air: "first_air_date.desc",
+            airing_today: "first_air_date.desc",
+          };
+          let data;
+          if (srchState.genres.size || srchState.year) {
+            data = await VMedia.tmdbFetch("/discover/tv", {
+              page: srchState.page,
+              with_genres: [...srchState.genres].join(","),
+              first_air_date_year: srchState.year || undefined,
+              sort_by: sortMap[srchState.sort] || "popularity.desc",
+            });
+          } else {
+            data = await VMedia.tmdbFetch(`/tv/${srchState.sort}`, {
+              page: srchState.page,
+            });
+          }
+          const shows = (data.results || []).filter((s) => s.poster_path);
+          srchState.totalPages = Math.min(data.total_pages || 1, 500);
+          srchState.results =
+            srchState.page > 1 ? [...srchState.results, ...shows] : shows;
+          renderGridResults(shows, false);
+        } catch (e) {
+          searchGrid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:60px;color:var(--text-secondary)">Failed to load.</div>`;
+        } finally {
+          srchState.loading = false;
+        }
+      }
+
+      async function doSearch(append = false) {
+        if (!srchState.query) {
+          showSearchPrompt();
+          return;
+        }
+        if (srchState.loading) return;
+        srchState.loading = true;
+        if (!append) {
+          searchGrid.innerHTML = Array(12)
+            .fill('<div class="skeleton media-card-skeleton"></div>')
+            .join("");
+          srchState.results = [];
+        }
+        try {
+          const data = await VMedia.tmdbFetch("/search/tv", {
+            query: srchState.query,
+            page: srchState.page,
+            first_air_date_year: srchState.year || undefined,
+          });
+          let shows = (data.results || []).filter((s) => s.poster_path);
+          if (srchState.genres.size) {
+            const wanted = [...srchState.genres].map(Number);
+            shows = shows.filter((s) =>
+              (s.genre_ids || []).some((g) => wanted.includes(g)),
+            );
+          }
+          srchState.totalPages = Math.min(data.total_pages || 1, 500);
+          srchState.results = append ? [...srchState.results, ...shows] : shows;
+          renderGridResults(shows, append);
+        } catch (e) {
+          console.error(e);
+        } finally {
+          srchState.loading = false;
+        }
+      }
+
+      function renderGridResults(newItems, append) {
+        countEl.innerHTML = srchState.results.length
+          ? `Showing <span style="color:var(--accent);font-weight:700">${srchState.results.length.toLocaleString()}</span>${
+              srchState.query
+                ? ` results for "<b>${VApp.esc(srchState.query)}</b>"`
+                : "  shows"
+            }`
+          : "";
+        if (!srchState.results.length) {
+          searchGrid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:80px 20px">
+      <div style="font-size:2.5rem;margin-bottom:12px"></div>
+      <div class="no-results-title">No shows found</div>
+      <p style="color:var(--text-secondary);margin-top:6px;font-size:0.875rem">Try a different search or filter</p>
+    </div>`;
+          loadMoreWrap.style.display = "none";
+          return;
+        }
+        if (append) {
+          const frag = document.createDocumentFragment();
+          newItems.forEach((s, i) => {
+            const d = document.createElement("div");
+            d.style.cssText = `animation-delay:${Math.min(
+              i * 25,
+              300,
+            )}ms;animation:cardIn 0.3s ease both`;
+            d.innerHTML = VMedia.makeTVCard(s);
+            frag.appendChild(d);
+          });
+          searchGrid.appendChild(frag);
+        } else {
+          searchGrid.innerHTML = srchState.results
+            .map(
+              (s, i) =>
+                `<div style="animation-delay:${Math.min(
+                  i * 25,
+                  300,
+                )}ms;animation:cardIn 0.3s ease both">${VMedia.makeTVCard(
+                  s,
+                )}</div>`,
+            )
+            .join("");
+        }
+        VMedia.initMediaStars(searchGrid);
+        VMedia.initGridInfoBtns(searchGrid);
+        loadMoreWrap.style.display =
+          srchState.page < srchState.totalPages ? "" : "none";
+        loadMoreBtn.disabled = false;
+        loadMoreBtn.textContent = "Load More";
+      }
+
+      const searchClear = document.getElementById("search-clear");
+      function updateSearchClear() {
+        searchClear.classList.toggle("visible", !!searchIn.value);
+      }
+      searchClear.addEventListener("click", () => {
+        searchIn.value = "";
+        updateSearchClear();
+        searchIn.dispatchEvent(new Event("input"));
+        searchIn.focus();
+      });
+      searchIn.addEventListener("focus", () => {
+        if (!isSearchMode) enterSearchMode();
+      });
+      searchIn.addEventListener("input", () => {
+        updateSearchClear();
+        clearTimeout(srchTimer);
+        srchTimer = setTimeout(() => {
+          srchState.query = searchIn.value.trim();
+          srchState.page = 1;
+          if (!isSearchMode) enterSearchMode();
+          if (srchState.query) doSearch();
+          else showSearchPrompt();
+        }, 280);
+      });
+      filterBtn.addEventListener("click", () => {
+        if (isSearchMode) exitSearchMode();
+        else enterSearchMode();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && isSearchMode && !searchIn.value)
+          exitSearchMode();
+        if ((e.ctrlKey || e.metaKey) && e.key === "k") {
+          e.preventDefault();
+          searchIn.focus();
+        }
+      });
+      loadMoreBtn.addEventListener("click", async () => {
+        loadMoreBtn.disabled = true;
+        loadMoreBtn.textContent = "Loading…";
+        srchState.page++;
+        if (srchState.query) await doSearch(true);
+        else await loadBrowseGrid();
+      });
+
+      (async () => {
+        await Promise.allSettled([initHero(), initRows()]);
+        VMedia.initNFPopupSystem();
+        VTutorial.autoStart("browse", {
+          ready: () => document.querySelector("#browse-content .nf-card"),
+        });
+      })();
+    </script>
+  </body>
+</html>
